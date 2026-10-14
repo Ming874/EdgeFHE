@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "source_workspace": "NCUE_Project",
+  "selection": "II1 N4096 / ii1-guarded-v3 accepted functional research snapshot",
+  "copies": [
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_onthefly.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_onthefly.hpp",
+      "sha256": "d2c0150555f2ca61b9cf00880960bc0ad82cf5c68b4f983bc6ce5c276e589d60",
+      "bytes": 118,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_onthefly_constants.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_onthefly_constants.hpp",
+      "sha256": "4a65fb60dbe3ebd2a63a739f3541d10bd843389438b9630bf24b38dbfd0694b3",
+      "bytes": 56,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel.cpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel.cpp",
+      "sha256": "909cc65b75add48d6e8d8b1421f00bbd2ac5e990685cbe37a701163742d27039",
+      "bytes": 14306,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel.hpp",
+      "sha256": "74fff2a34bf3132d7487033b29e7be96456426e334070037fcd11354e24f19d9",
+      "bytes": 718,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel_constants.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel_constants.hpp",
+      "sha256": "9cc71c077ae3e666861daf547b78ea59355ee0c3ddef6e3c4253c3fd9ec3a477",
+      "bytes": 2265,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel_core.cpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel_core.cpp",
+      "sha256": "cd1121254f3e1ee2419c6817a6c8b367d8a75edb9c417ffcd222e727b8bcae7c",
+      "bytes": 23788,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel_core.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel_core.hpp",
+      "sha256": "f189e30ca70e2fd552c4e5edb8d0502c055ac7879a8c62426610873b3e4e06a2",
+      "bytes": 1325,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel_rns3.cpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel_rns3.cpp",
+      "sha256": "07086a23fb21f771b23591e08990ba968d3ceee845b45750a7eeb9ca1739bb2d",
+      "bytes": 3276,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/src/rns_ntt_parallel_rns3.hpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/src/rns_ntt_parallel_rns3.hpp",
+      "sha256": "48cf2a68a1b356e51ebec7a976a542515911f2234aae543960c99ac668b98fdc",
+      "bytes": 258,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/hls_source/testbench/tb_rns_ntt_parallel.cpp",
+      "source": "h/4/fixed-bank-20261003/hls_source/testbench/tb_rns_ntt_parallel.cpp",
+      "sha256": "789bccd8e9ee7ed68cc28a03792be111a9cd44b80c5e2181a94641ddf0a2b6ec",
+      "bytes": 7577,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/tb_fixed_bank.cpp",
+      "source": "h/4/fixed-bank-20261003/tb_fixed_bank.cpp",
+      "sha256": "5c946054b4b8ad717f9e3c02c13f49b98ae036843853488b3cee466eb190aae7",
+      "bytes": 11253,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/rns3_n4096/audit_addresses.py",
+      "source": "h/4/fixed-bank-20261003/audit_addresses.py",
+      "sha256": "b8d1f4033036ef0a7bfc9d45d98d558425dd7beeee7138a9fab8ad217ee83ab6",
+      "bytes": 5363,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/vectors.bin",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/vectors.bin",
+      "sha256": "e193e385bd57a67f643fcadcc45254c638058d844422caf9c3a5f13c6255849f",
+      "bytes": 2359408,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/vector_manifest.json",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/vector_manifest.json",
+      "sha256": "404b899106ec3fd22286cf98a713d04a07539dbcf97eb89a3976c91c34040276",
+      "bytes": 1258,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/verify_vectors.py",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/verify_vectors.py",
+      "sha256": "92567ba87202d9468dee1a0c545f111787a6c63eeb68885b3142b7b547ae43b2",
+      "bytes": 3816,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/export_vectors.cpp",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/export_vectors.cpp",
+      "sha256": "3213fdf6bfe0a3490b322c8fd20643e7b879435bc448f92cf51ada6329d06263",
+      "bytes": 5795,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/CMakeLists.txt",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/CMakeLists.txt",
+      "sha256": "6302ab75ca266a6717c8a038b8a667abd23b9a63c9d2af1acbba6da628ab8b2a",
+      "bytes": 600,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/openfhe_revision.txt",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/openfhe_revision.txt",
+      "sha256": "cd2b05d326f75350c74f27fd9610061af7417b119bf84f25c866a994cfaa1391",
+      "bytes": 41,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/library_binary_sha256.txt",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/library_binary_sha256.txt",
+      "sha256": "2c0d1df12681b1cf18e5255bbdcd4d58c23ff3aeb26cd9e19c791c058ac64ac9",
+      "bytes": 278,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/hls/tb_openfhe_vectors.cpp",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/tb_openfhe_vectors.cpp",
+      "kind": "path-only-adapter",
+      "source_sha256": "5ca3e3f762c8a86fb1cf928e9b90ddf89fd6e302e7add2d419bf3cbe0f0c4f4f",
+      "sha256": "c2f7fd08e89c1e237ec50cbe7459f3a6896687a0553ee6e0950bdfb597a75e32",
+      "bytes": 3239,
+      "change": "cstdlib + required EDGEFHE_VECTOR_FILE; arithmetic/sidebands unchanged"
+    },
+    {
+      "package_path": "hardware/ip/edgefhe_local_hls_rns3_ntt_parallel_accel_n4096_1_1.zip",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/openfhe_csim_project/solution1/impl/ip/edgefhe_local_hls_rns3_ntt_parallel_accel_n4096_1_1.zip",
+      "sha256": "36fb648997e37aa5817b79ef55746080e9c33ad4c709a4e1efd661ce7eca8947",
+      "bytes": 324812,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "hardware/vivado/recreate_bd.tcl",
+      "source": "vivado/ii1-20261003/bd_v3/recreate_bd.tcl",
+      "sha256": "cbcd6d773b72c0459a03ebd18d5edb9231625dc56318e57a91c5899f3e308a52",
+      "bytes": 48436,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/edgefhe-ii1-n4096-kv260.bit.bin",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/edgefhe-ii1-n4096-kv260.bit.bin",
+      "sha256": "cb4c231b1191eed08b9ed1d793d7af34699df8b5a806562990601d9023923267",
+      "bytes": 7797692,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/edgefhe-ii1-n4096-kv260.dtbo",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/edgefhe-ii1-n4096-kv260.dtbo",
+      "sha256": "f0303b12d27daecd88356aab879fc88a5cc16e17d3e28e228d82dd3835ff456d",
+      "bytes": 2529,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/edgefhe-ii1-n4096-kv260.dts",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/edgefhe-ii1-n4096-kv260.dts",
+      "sha256": "a0f5bf97b1c25179a29eafea1ec7852cfad98cbf01ed06b9bb8d9ac502c8f72c",
+      "bytes": 2635,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/edgefhe-runtime-contract.txt",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/edgefhe-runtime-contract.txt",
+      "sha256": "213049894cb3a5f4e61369a1711eeb36af12a457de379a4845de6befe85330ea",
+      "bytes": 877,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/shell.json",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/shell.json",
+      "sha256": "802dbc8b3f118313a5a74df46f56dc550a61b687dfd484fc6a8fd5ac7895c344",
+      "bytes": 51,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/engineering_export_manifest.json",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/engineering_export_manifest.json",
+      "sha256": "b00a228bd6317336695a6bedffd65eeff219d9bea60a50825d656c2e024fcf2a",
+      "bytes": 3607,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/candidate_manifest.json",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/candidate_manifest.json",
+      "sha256": "64b90e89ca74f3cdf3f54de5b6ff72e00a14e0e7691bd0f9c493ddea0edaf652",
+      "bytes": 1479,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "firmware/ii1_n4096/runtime_contract_v3.json",
+      "source": "development_records/board_packages/ii1-v3-parity-20261004/runtime_contract_v3.json",
+      "sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+      "bytes": 1216,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/driver/Makefile",
+      "source": "development_records/board_packages/ii1-mask32-runtime-20261004/runtime/Makefile",
+      "sha256": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "bytes": 191,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/driver/edgefhe_rns3_n4096_dma_proxy.c",
+      "source": "development_records/board_packages/ii1-mask32-runtime-20261004/runtime/edgefhe_rns3_n4096_dma_proxy.c",
+      "sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "bytes": 13451,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/reference/paired_public_vectors.cpp",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/paired_public_vectors.cpp",
+      "sha256": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+      "bytes": 7980,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/paired_public_vectors.cpp",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/paired_public_vectors.cpp",
+      "sha256": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+      "bytes": 7980,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/board_tests/paired_public_vectors.cpp",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/paired_public_vectors.cpp",
+      "sha256": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+      "bytes": 7980,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/reference/mixed_runner.cpp",
+      "source": "development_records/board_packages/ii1-v3-mixed-stress-20261005-v2/mixed_runner.cpp",
+      "sha256": "32e1d49c47dc44d84e6deb209f931c6f207cd15cbd1db902cab3c266e4a30b94",
+      "bytes": 8241,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "validation/vectors/mixed_vectors.bin",
+      "source": "development_records/board_packages/ii1-v3-mixed-stress-20261005-v2/mixed_vectors.bin",
+      "sha256": "b2029683cf687954b03e6d5340f2fbdf86ccfc191bb94d1f4819380065482d19",
+      "bytes": 4260072,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/board_tests/soak_mixed_support.hpp",
+      "source": "development_records/board_packages/ii1-v3-normal-soak-20261005/soak_mixed_support.hpp",
+      "sha256": "d69c44fc769c08f39274fb12b4e3d505ffb4d332e633e6282f41872d2476068c",
+      "bytes": 8261,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/board_tests/soak_runner.cpp",
+      "source": "development_records/board_packages/ii1-v3-normal-soak-20261005/soak_runner.cpp",
+      "sha256": "039adec1ba6cc59ba08a74a5cd2295eb43b5de20d3713a7449d09af475cc5967",
+      "bytes": 4432,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/board_tests/concurrent_runner.cpp",
+      "source": "development_records/board_packages/ii1-v3-concurrency-20261005/concurrent_runner.cpp",
+      "sha256": "59a9ce29659fdc591d4638b1a337a9aa12582b10bb69d22ab0b44a2aa8c3fa3c",
+      "bytes": 7221,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/board_tests/usercopy_runner.cpp",
+      "source": "development_records/board_packages/ii1-v3-usercopy-faults-20261005-v2/usercopy_runner.cpp",
+      "sha256": "caa428fdcfc94c95dfb0ae8459bf540f3d86ae00859d3fff8f97dc4eb6eaecc0",
+      "bytes": 8001,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/profile.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/profile.py",
+      "sha256": "80aac82530112b1f63b7b2623c8ae9113094adf4d2a79e0d8b725bc92b94cd46",
+      "bytes": 5148,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/ckks_canonical.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/ckks_canonical.py",
+      "sha256": "6103f56948537c97924c4e7028a585b70a9bbe23ade762937d70d53910286980",
+      "bytes": 6594,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/experiment.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/experiment.py",
+      "sha256": "1cbd57b80c2cfd8906ef6ff4ac1565645cac013d7bd0e7ef079a70f9ac778a98",
+      "bytes": 7531,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/packets.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/packets.py",
+      "sha256": "498f83a97b62df81ef49031c72750d93eac998f5ad620980f2e764ff15c770a6",
+      "bytes": 4024,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/cloud.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/cloud.py",
+      "sha256": "fa7c64584746efe89771f36e9f46ee70377afe797696e7a45723a6e4eaa5d608",
+      "bytes": 1266,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/pc_server.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/pc_server.py",
+      "sha256": "328b12cc83c35aa5eaa0813cd1a46037bdf13162125ea60aa530fd1742d931f1",
+      "bytes": 5143,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/transport.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/transport.py",
+      "sha256": "e6cea9de78f204237e920c7f857248d01dbc41c026f4629e421308a879d929a2",
+      "bytes": 2363,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/ntt_ref.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/ntt_ref.py",
+      "sha256": "4ac0e8d2edb994c4ccf5db9142154115931176d56ecb3484ac2d41b431ba216c",
+      "bytes": 6162,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/native.py",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/native.py",
+      "sha256": "efe738e2b5eef655e6b2f098f02526cd09353e7d052cf2f431580882300fcd48",
+      "bytes": 2699,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/ckks/backend.cpp",
+      "source": "development_records/board_packages/ii1-v3-ckks-affine-wifi-20261004-v2/backend.cpp",
+      "sha256": "8c9df84cdc001a76e2d79fe8ebbc8733da6fea4641d75ab996e51efaf50b4b0b",
+      "bytes": 3250,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "LICENSE",
+      "source": "D:/EdgeFHE-KV260-GitHub/LICENSE",
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "bytes": 11601,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json",
+      "source": "development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json",
+      "sha256": "35f04a8b15b60b8c48500f16625f4020f22c8b513fc08bc2166a9b90ae37a494",
+      "bytes": 9867,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/assessment.json",
+      "source": "h/4/fixed-bank-20261003/assessment.json",
+      "sha256": "c4863b19e2c7fbab20cc1f8fb17fef7a15a85e128c86898d31d4c6769c0ba799",
+      "bytes": 4506,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/openfhe_validation/interop_acceptance.json",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/interop_acceptance.json",
+      "sha256": "69b8470c6aa52ef6340dd74b88f731fd55c74b68a0191a73721226088cc59677",
+      "bytes": 3585,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/routed_report_review.json",
+      "source": "vivado/ii1-20261003/impl_v2/routed_report_review.json",
+      "sha256": "c85e92004fb07130b9a61f537b6a3d2410bd24bc25d610b9e989fe790d0bba9f",
+      "bytes": 7729,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board_packages/ii1-preflight-20261003-v2/engineering_export_manifest.json",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/engineering_export_manifest.json",
+      "sha256": "b00a228bd6317336695a6bedffd65eeff219d9bea60a50825d656c2e024fcf2a",
+      "bytes": 3607,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_benchmark_acceptance_20261004/ORIGINAL_BENCHMARK_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_benchmark_acceptance_20261004/ORIGINAL_BENCHMARK_ACCEPTANCE.json",
+      "sha256": "4e31a47a838ae8607a074bb3e7a17880d8168f005e390fe5d0e118c584cea9ab",
+      "bytes": 31373,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_benchmark_acceptance_20261004/TIMING_BOUNDARY_SOURCE_AUDIT.json",
+      "source": "development_records/ii1_delivery/v3_benchmark_acceptance_20261004/TIMING_BOUNDARY_SOURCE_AUDIT.json",
+      "sha256": "2b3ca805acb01003e9422175c9b3b640d62a1589d1d6aa29ce937b4e7546e0e4",
+      "bytes": 2343,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_ckks_acceptance_20261005/RETURNED_NETWORK_AND_CKKS_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_ckks_acceptance_20261005/RETURNED_NETWORK_AND_CKKS_ACCEPTANCE.json",
+      "sha256": "a29838a91c5a0bb69c2c32f92918e1a1805769fdaa0a1766bd71aed602eca2af",
+      "bytes": 12042,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/ACTUAL_CKKS_STAGE_TIMINGS.json",
+      "source": "development_records/ii1_delivery/v3_completion_20261005/ACTUAL_CKKS_STAGE_TIMINGS.json",
+      "sha256": "ae500c976189f917574efee427e1de886aab7859d5039fc124e0866da49cc88f",
+      "bytes": 7199,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/RETURNED_STRESS_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_completion_20261005/RETURNED_STRESS_ACCEPTANCE.json",
+      "sha256": "8019016a98dc88090052613a8e225fe4b367bcddcbac8485b73fb38d25faf315",
+      "bytes": 2765,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_soak_acceptance_20261005/RETURNED_SOAK_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_soak_acceptance_20261005/RETURNED_SOAK_ACCEPTANCE.json",
+      "sha256": "018d2ad7f41d4008b3a8d13c9341bed26cfb90c16c922be4b1abe3481116b691",
+      "bytes": 2286,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_soak_acceptance_20261005/ACCEPTED_SOAK_STATISTICS.json",
+      "source": "development_records/ii1_delivery/v3_soak_acceptance_20261005/ACCEPTED_SOAK_STATISTICS.json",
+      "sha256": "95cc6e4c42e97bc9a341b13050737bad842a7624170f7ea2b600d362393ebbb1",
+      "bytes": 397474,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json",
+      "sha256": "f05564552e46c655d8839c2529432615ae891da8425e310fbfa3a3aa5bb86136",
+      "bytes": 3147,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json",
+      "sha256": "2e291ed4297653f05fb144251f039656145a75f2e11a46848f68d698379a148e",
+      "bytes": 10229,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261005/full_dma_ntt_validation_v3/acceptance.json",
+      "source": "vivado/ii1-20261005/full_dma_ntt_validation_v3/acceptance.json",
+      "sha256": "d15286868fc62c4d8edbee965a2af76f2b0a11cb6de708bb71b9d12b3654edbd",
+      "bytes": 26914,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261005/three_routed_fifo_slow_validation_v1/acceptance.json",
+      "source": "vivado/ii1-20261005/three_routed_fifo_slow_validation_v1/acceptance.json",
+      "sha256": "681eae93370c194af47461c9f86d1773d95c3df7d98a97a427d3c988b08a8886",
+      "bytes": 6913,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261005/three_routed_fifo_fast_validation_v1/acceptance.json",
+      "source": "vivado/ii1-20261005/three_routed_fifo_fast_validation_v1/acceptance.json",
+      "sha256": "650140db4dce6faa85651ea7232b8d887b31685a63c6fcbec3afa9002a87b2fc",
+      "bytes": 6925,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json",
+      "sha256": "8298b11a5854807d8f641ce753fd810520ad24d57ca5ba97966323e787c9884c",
+      "bytes": 2135,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/DRIVER_FAULT_SHIM_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_completion_20261005/DRIVER_FAULT_SHIM_ACCEPTANCE.json",
+      "sha256": "3e1d0b9c4fd4b68a91af124e50d6e40f0431ca777c4a9a2116a7e30c363983e0",
+      "bytes": 1910,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/CONNECTED_FAULT_BATCH_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/CONNECTED_FAULT_BATCH_ACCEPTANCE.json",
+      "sha256": "0611970b13bbd1b92f786b268f3473959c10ae0826c05ec9c42fb8c7352b16fe",
+      "bytes": 3288,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-parity.WWK3zv/board_report.json",
+      "source": "development_records/board/edgefhe-ii1-v3-parity.WWK3zv/board_report.json",
+      "sha256": "0f41dd83a9cb3bb47a6466c24413d83939ba1a87b8ab2c9d17f7304d66fa28aa",
+      "bytes": 20349,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/address_math_audit.json",
+      "source": "h/4/fixed-bank-20261003/address_math_audit.json",
+      "sha256": "e59c108ab1b0301c9d4f05e6ab7041b35283f37bd2689f1ef864cf7d03054464",
+      "bytes": 964,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_SENSOR_ACCEPTANCE.json",
+      "source": "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_SENSOR_ACCEPTANCE.json",
+      "sha256": "c12c24487e2564deb4d24bc4b9b473aebd8a868a9d96aab6ac7559731272f264",
+      "bytes": 7889,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json",
+      "sha256": "708ade22df6c4d76c5e35a0eba887dfbb2c053e1cc395f334267789d5130d143",
+      "bytes": 968,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json",
+      "sha256": "3fd9f7f9df42c92efc35b39b15a588d78a397d936db09bc3f962fe520e048f1d",
+      "bytes": 1461,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json",
+      "source": "development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json",
+      "sha256": "365dfe987954b0ee01e6eb09363b92be5a3b8a408fc49a88041cf7a4a97db83d",
+      "bytes": 2506,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-benchmark.p0A5a6/benchmark_report.json",
+      "source": "development_records/board/edgefhe-ii1-v3-benchmark.p0A5a6/benchmark_report.json",
+      "sha256": "c87aa7991e8b08c54004241439679433520449b8f0268fff11186450385b1328",
+      "bytes": 41446,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-ckks-affine.3UOdaj/experiment_report.json",
+      "source": "development_records/board/edgefhe-ii1-v3-ckks-affine.3UOdaj/experiment_report.json",
+      "sha256": "b2d165a3e3d7863ae54f1413c3cc72bad4558a59e6529230cc8c657ba9656f9c",
+      "bytes": 562708,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-normal-soak.BoReKV/soak_report.json",
+      "source": "development_records/board/edgefhe-ii1-normal-soak.BoReKV/soak_report.json",
+      "sha256": "35c5d7606a509e8a6650ac0244cad234f46f3504205c01a0a403ae78a7b49b81",
+      "bytes": 12066,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-concurrency.uC6vdy/concurrency_report.json",
+      "source": "development_records/board/edgefhe-ii1-concurrency.uC6vdy/concurrency_report.json",
+      "sha256": "501dac458e705f92e1369f2c1b311ff7b12fdab55700b03e8edc2cc810d9e469",
+      "bytes": 13680,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/development_records/ii1_delivery/runtime_contract_review.json",
+      "source": "development_records/ii1_delivery/runtime_contract_review.json",
+      "sha256": "6347239344489d527735c4e48bdb351d45fcacdb4b49740c9732c09b1b144ff1",
+      "bytes": 3364,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/ACCEPTANCE_MATRIX.json",
+      "source": "development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json",
+      "sha256": "35f04a8b15b60b8c48500f16625f4020f22c8b513fc08bc2166a9b90ae37a494",
+      "bytes": 9867,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/check_timing_routed_verbose.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/check_timing_routed_verbose.rpt",
+      "sha256": "3db62af8ff3905438b6517da43d97c440c7ac8b58f26225989004df9b79dc93a",
+      "bytes": 3240,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/clocks_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/clocks_routed.rpt",
+      "sha256": "c1dc5ad91aaad9badec42040268205bb0bc406603be9192f91771c80e5cbc00d",
+      "bytes": 1488,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/drc_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/drc_routed.rpt",
+      "sha256": "e80a9cd78525d1379689fad30996f126634fe576fa137f08fa5e19f50f7985e9",
+      "bytes": 1910047,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/full_precision_timing_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/full_precision_timing_routed.rpt",
+      "sha256": "06765aa612ac1a962303f90217463a1c207efae67e3d778953b6370e9d57d672",
+      "bytes": 838,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/methodology_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/methodology_routed.rpt",
+      "sha256": "458babb10badfebdf7339104eb968be7fb7f1beda4382de126121b18dd0c4423",
+      "bytes": 14717,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/route_status.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/route_status.rpt",
+      "sha256": "9f3176b24169e767ce9ba6916b582d0ecb7a8ae567aa7df53e6b0753862ddfed",
+      "bytes": 651,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/timing_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/timing_routed.rpt",
+      "sha256": "e2507199c220ff0f0e0977c84fae9c1923ff3440cddf51a6c062ba5e3542f3c5",
+      "bytes": 797732,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/unused_ps_clock_connectivity_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/unused_ps_clock_connectivity_routed.rpt",
+      "sha256": "524d98f8f84e891af420c6df990142f2d760f72173f80ed78e98e031496e0d18",
+      "bytes": 890,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/utilization_hierarchical_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/utilization_hierarchical_routed.rpt",
+      "sha256": "aa88c4ac6352222b5ed03138a2fd719a9e093cd6cb7fefb760cf01889e8cb283",
+      "bytes": 282990,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/reports/utilization_routed.rpt",
+      "source": "vivado/ii1-20261003/impl_v2/reports/utilization_routed.rpt",
+      "sha256": "6accfeb61f34ceeabf06ef325e59bd020f71dd5b51ae549b453695c1e07af8cb",
+      "bytes": 12923,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/openfhe_validation/ip_export_acceptance.json",
+      "source": "h/4/fixed-bank-20261003/openfhe_validation/ip_export_acceptance.json",
+      "sha256": "0eb1f80a3a7406375fec1b3170b9de10cc65887441798f7da14627f2f978912a",
+      "bytes": 8839,
+      "kind": "byte-exact"
+    },
+    {
+      "package_path": "software/kv260/fdt_contract.py",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/fdt_contract.py",
+      "sha256": "0b19916887450801dbac7feeeef2e9b94a3c36a7e2f28a64c3a68dcbdec8d885",
+      "bytes": 5800,
+      "kind": "byte-exact-portable-file-parser"
+    },
+    {
+      "package_path": "software/kv260/verify_merged_fdt.py",
+      "source": "development_records/board_packages/ii1-preflight-20261003-v2/verify_merged_fdt.py",
+      "sha256": "530afb3d86978d41f7cef6812cc164d3908578d4c23a2178a32a33f6937fe43d",
+      "bytes": 1819,
+      "kind": "byte-exact-portable-file-parser"
+    },
+    {
+      "package_path": "software/kv260/semantic_load_gate.py",
+      "source": "development_records/board_packages/ii1-mask32-runtime-20261004/semantic_load_gate.py",
+      "sha256": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "bytes": 2716,
+      "kind": "byte-exact-portable-file-parser"
+    },
+    {
+      "source": "development_records/board/edgefhe-ii1-mask32-runtime.fB8Bex/driver/edgefhe_rns3_n4096_dma_proxy.ko",
+      "package_path": "firmware/prebuilt/ubuntu-22.04-5.15.0-1027-xilinx-zynqmp/edgefhe_rns3_n4096_dma_proxy.ko",
+      "bytes": 452472,
+      "sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e"
+    },
+    {
+      "source": "development_records/board/edgefhe-ii1-mask32-runtime.fB8Bex/driver_identity.json",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-mask32-runtime.fB8Bex/driver_identity.json",
+      "bytes": 907,
+      "sha256": "ca1716831e2b83dfa4c68b281924fc032534aad79b6a145be358efe56c144887"
+    },
+    {
+      "source": "development_records/board/edgefhe-ii1-mask32-runtime.fB8Bex/runtime_report.json",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-mask32-runtime.fB8Bex/runtime_report.json",
+      "bytes": 13498,
+      "sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b"
+    }
+  ],
+  "new_files": "Other manifest files are packaging documentation, relative build adapters or offline verification tools; not frozen board sources."
+}

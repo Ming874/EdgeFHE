@@ -1,0 +1,24 @@
+{
+  "model_id": "v5-sample-lr4",
+  "features": [
+    "x0",
+    "x1",
+    "x2",
+    "x3"
+  ],
+  "mean": [
+    2.5,
+    0.43,
+    28.4,
+    8.0
+  ],
+  "std": [
+    1.07,
+    0.49,
+    6.6,
+    3.05
+  ],
+  "clip": 16.0,
+  "label": "y",
+  "decision": "class 1 when logit > 0 (probability > 0.5)"
+}

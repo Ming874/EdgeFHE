@@ -1,0 +1,960 @@
+{
+  "status": "PASS_LOCAL_REVALIDATED_USER_RETURNED_V3_NATIVE_PAIRED_PUBLIC_BENCHMARK",
+  "source_directory": "D:\\NCUE_Project\\development_records\\board\\edgefhe-ii1-v3-benchmark.p0A5a6",
+  "all_original_files_sha256": {
+    "benchmark_report.json": "c87aa7991e8b08c54004241439679433520449b8f0268fff11186450385b1328",
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiler_version.txt": "2492f521845dd536aad96475a9c2fd8299b960a29d0821dcab0bbe0e1668717b",
+    "console.log": "5f3b6a9cd1aadf458bf8b0f0622896a32a35eb74aa46927d4c89a2cddfead6cf",
+    "cpu_check.log": "c76e34868d71d8740abb01bc1f88a6304a74f96b0d4a13f591710ace4a0dd47b",
+    "dmesg_after.log": "cef2dc062f734e0f187df1c71780a7bfa7abc9499d944fe5c98cf9a12c1dec66",
+    "dmesg_before.log": "cef2dc062f734e0f187df1c71780a7bfa7abc9499d944fe5c98cf9a12c1dec66",
+    "dmesg_final.log": "f15e113ce118221a280119b4caafd02dec84c580c6a2f259ff1411dc8ce4cb07",
+    "environment_after.json": "fcfd899b57743696c5a2013c745a2570f40686acc17e95cbdca986cffd2398c7",
+    "environment_before.json": "91b653690f8241aaae22f2b56267b2c3d6b4189efb975631fef4611f558a8d3f",
+    "interrupts_after.txt": "c3f58c9edb61b7c710093888e24b4cceb707b34025360c097a1a2d5a625d46c5",
+    "interrupts_before.txt": "e9edf9b496d63a5c8464e98a508c2fe7d1fc454559535a9218576378a3d77582",
+    "interrupts_final.txt": "9a959565298476d271b39b929e25743ae49dc307dec8ce32249e2b633eab8465",
+    "native_console.log": "2eadeb99fbb2af107e0237af8225a12dc5f493167c59bd12e8c06d8f54768cbc",
+    "paired_public_vectors": "7b5ced96ec0b66950c96f0b23be381309b9b6eb706c72bd4251b52e7a08894e7",
+    "samples.tsv": "4a3d92cd149634a9584d7dcb45a4ab2022a9a8609b701d5df15a45a949776b75"
+  },
+  "package_SHA256SUMS_sha256": "1cb04738a222859473c77f605e3d9e839f0fc302acf25c10f7092c3397c1f823",
+  "candidate_identity": {
+    "status": "PASS_CURRENT_V3_IDENTITY_BEFORE_DEVICE_OPEN",
+    "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "module_version": "ii1-guarded-v3",
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+    "runtime_package_sha256": {
+      "README_zh-TW.md": "feacda07bb1d2cf114c18642cc3a47982ed2a65b65a434d5e100b4ec05c4ce76",
+      "compile_load_user_only.sh": "52ff0bdf17861483063136107076d44b2a98b985fd406058fc04974adcc39841",
+      "elf_identity.py": "341a69126befef21ae75020250c7f49b35fa04608c8462ba518e00b27b3b16d1",
+      "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "runtime/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "runtime_guard.py": "3e1349c7a715afcd16d33f80623b81d58be0e58d62cf86410c8d690521af0f7b",
+      "runtime_manifest.json": "1edfddc7c0c025a371dcf2c92767c19323d934243a129bc0d188d929707be8f7",
+      "semantic_load_gate.py": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "snapshot_probe.py": "ee41e469aa187dcab00c474a8b74c8cb29021d4494961e92482a1feffecce709"
+    },
+    "effective_runtime_contract_sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "negotiated_dma_mask_bits": 32,
+    "actual_buffer_end_exclusive_max": "0x80000000",
+    "buffer_addresses": {
+      "tx": "0x379c0000",
+      "tx_end_exclusive": "0x379f0000",
+      "rx": "0x379f0000",
+      "rx_end_exclusive": "0x37a00000"
+    },
+    "pl0_hz": 99999999,
+    "live_contract": {
+      "status": "PASS_LIVE_DT_AND_AFI_DMA_PROXY_BINDINGS",
+      "base_symbols": {
+        "amba": "/axi",
+        "gic": "/axi/interrupt-controller@f9010000",
+        "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+        "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+      },
+      "provider_bindings": {
+        "afi": {
+          "device": "axi:edgefhe-ii1-afi",
+          "driver": "afi-fpga",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-afi"
+        },
+        "dma": {
+          "device": "a0000000.dma",
+          "driver": "xilinx-vdma",
+          "of_node": "/sys/firmware/devicetree/base/axi/dma@a0000000"
+        },
+        "proxy": {
+          "device": "a0010000.edgefhe-ii1-proxy",
+          "driver": "edgefhe-rns3-n4096-dma-proxy",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-proxy@a0010000"
+        }
+      },
+      "dma_channels": [
+        {
+          "name": "dma17chan1",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan1"
+        },
+        {
+          "name": "dma17chan0",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan0"
+        }
+      ],
+      "afi_config_cells": [
+        4,
+        0,
+        5,
+        0,
+        14,
+        512
+      ],
+      "limits": [
+        "AFI DT plus successful driver binding/probe; not direct AFI register readback",
+        "No physical reset waveform or DMA transfer proof"
+      ]
+    },
+    "apps_stdout": "                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot\n\n         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,\n                  kv260-smartcam            XRT_FLAT                  kv260-smartcam            XRT_FLAT               (0+0)                  -1\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\n        edgefhe-full-n4096-kv260            XRT_FLAT        edgefhe-full-n4096-kv260            XRT_FLAT               (0+0)                  -1\n",
+    "limits": [
+      "Installed firmware/current metadata are checked; no configured-PL readback"
+    ]
+  },
+  "statistics": {
+    "status": "RAW_FIXED_MATRIX_AND_NATIVE_EXACT_PASS_PARSED_REQUIRES_RUNTIME_IRQ_KERNEL_GATES",
+    "rounds": 50,
+    "warmup_rounds_excluded_from_samples": 3,
+    "measured_pairs": 800,
+    "dma_jobs_including_warmups": 848,
+    "native_paired_coefficient_comparisons": 10420224,
+    "fpga_padding_words_checked_including_warmups": 3473408,
+    "by_case": {
+      "0": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1440.54,
+          "max": 1525.7,
+          "mean": 1459.7466,
+          "p50": 1458.09,
+          "p95": 1481.96,
+          "p99": 1525.7,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2652.96,
+          "max": 2747.6,
+          "mean": 2702.8422,
+          "p50": 2707.05,
+          "p95": 2746.39,
+          "p99": 2747.6,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 220.0,
+          "max": 310.0,
+          "mean": 254.96,
+          "p50": 263.0,
+          "p95": 268.0,
+          "p99": 310.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.5292764594555248,
+          "max": 0.5624762670186214,
+          "mean": 0.5401209383468563,
+          "p50": 0.537574428078972,
+          "p95": 0.5555572273294916,
+          "p99": 0.5624762670186214,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.5386269186014295
+      },
+      "1": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1582.97,
+          "max": 1697.78,
+          "mean": 1600.5973999999999,
+          "p50": 1596.09,
+          "p95": 1639.47,
+          "p99": 1697.78,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2640.67,
+          "max": 2801.34,
+          "mean": 2697.345,
+          "p50": 2695.22,
+          "p95": 2765.75,
+          "p99": 2801.34,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 301.0,
+          "mean": 244.44,
+          "p50": 253.0,
+          "p95": 299.0,
+          "p99": 301.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.5717835036089871,
+          "max": 0.6158026991394756,
+          "mean": 0.5934863401874794,
+          "p50": 0.592496346228413,
+          "p95": 0.614120821682938,
+          "p99": 0.6158026991394756,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.5921928451109743
+      },
+      "2": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1510.62,
+          "max": 1581.94,
+          "mean": 1528.1716000000001,
+          "p50": 1526.48,
+          "p95": 1550.5,
+          "p99": 1581.94,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2643.04,
+          "max": 2791.01,
+          "mean": 2702.1336,
+          "p50": 2699.25,
+          "p95": 2761.48,
+          "p99": 2791.01,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 219.0,
+          "max": 320.0,
+          "mean": 252.62,
+          "p50": 261.0,
+          "p95": 308.0,
+          "p99": 320.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.5482101461478103,
+          "max": 0.5887931515771844,
+          "mean": 0.5656100074573411,
+          "p50": 0.5659302611298501,
+          "p95": 0.5778536820806031,
+          "p99": 0.5887931515771844,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.5655200518662592
+      },
+      "3": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1651.48,
+          "max": 1718.94,
+          "mean": 1667.0556,
+          "p50": 1665.7,
+          "p95": 1682.33,
+          "p99": 1718.94,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2633.18,
+          "max": 2778.19,
+          "mean": 2693.4082,
+          "p50": 2691.84,
+          "p95": 2743.81,
+          "p99": 2778.19,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 302.0,
+          "mean": 243.56,
+          "p50": 253.0,
+          "p95": 299.0,
+          "p99": 302.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.5995882211079876,
+          "max": 0.6421310979368158,
+          "mean": 0.6190409269647875,
+          "p50": 0.6164631050855556,
+          "p95": 0.6338013224956895,
+          "p99": 0.6421310979368158,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.6187960651450309
+      },
+      "4": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2065.78,
+          "max": 2114.69,
+          "mean": 2085.3156,
+          "p50": 2084.81,
+          "p95": 2103.5,
+          "p99": 2114.69,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2639.7,
+          "max": 2766.17,
+          "mean": 2699.3518,
+          "p50": 2699.95,
+          "p95": 2741.89,
+          "p99": 2766.17,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 219.0,
+          "max": 306.0,
+          "mean": 250.84,
+          "p50": 261.0,
+          "p95": 265.0,
+          "p99": 306.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.7542682021206072,
+          "max": 0.79131686074032,
+          "mean": 0.7725968049501263,
+          "p50": 0.7727203992136701,
+          "p95": 0.7878564237648644,
+          "p99": 0.79131686074032,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.7721661512250227
+      },
+      "5": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2258.72,
+          "max": 2304.3,
+          "mean": 2279.246,
+          "p50": 2279.2,
+          "p95": 2295.49,
+          "p99": 2304.3,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2631.69,
+          "max": 2736.53,
+          "mean": 2688.1874,
+          "p50": 2688.66,
+          "p95": 2722.29,
+          "p99": 2736.53,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 296.0,
+          "mean": 243.2,
+          "p50": 253.0,
+          "p95": 258.0,
+          "p99": 296.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.8343376465816198,
+          "max": 0.8736086257620335,
+          "mean": 0.8479454091777446,
+          "p50": 0.8466052900341914,
+          "p95": 0.8673484112035968,
+          "p99": 0.8736086257620335,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.8477085239487328
+      },
+      "6": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1766.35,
+          "max": 1852.14,
+          "mean": 1783.5198,
+          "p50": 1781.16,
+          "p95": 1800.71,
+          "p99": 1852.14,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2640.39,
+          "max": 2764.01,
+          "mean": 2693.7074,
+          "p50": 2695.84,
+          "p95": 2722.86,
+          "p99": 2764.01,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 219.0,
+          "max": 304.0,
+          "mean": 249.8,
+          "p50": 261.0,
+          "p95": 269.0,
+          "p99": 304.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.6444115614632364,
+          "max": 0.6892998390953248,
+          "mean": 0.662169347112024,
+          "p50": 0.6602915166504136,
+          "p95": 0.6772469145150299,
+          "p99": 0.6892998390953248,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.6607068668763725
+      },
+      "7": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 1953.23,
+          "max": 2013.67,
+          "mean": 1971.1368,
+          "p50": 1969.45,
+          "p95": 2000.24,
+          "p99": 2013.67,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2633.35,
+          "max": 2765.04,
+          "mean": 2693.4188,
+          "p50": 2694.86,
+          "p95": 2737.72,
+          "p99": 2765.04,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 212.0,
+          "max": 257.0,
+          "mean": 240.48,
+          "p50": 253.0,
+          "p95": 257.0,
+          "p99": 257.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.717345090074953,
+          "max": 0.760458780601477,
+          "mean": 0.7319205306375822,
+          "p50": 0.7294724753758042,
+          "p95": 0.752364858450263,
+          "p99": 0.760458780601477,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.7308171853083277
+      },
+      "8": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2066.29,
+          "max": 2144.19,
+          "mean": 2087.401,
+          "p50": 2084.67,
+          "p95": 2128.7,
+          "p99": 2144.19,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2648.27,
+          "max": 2781.94,
+          "mean": 2702.456,
+          "p50": 2702.15,
+          "p95": 2740.17,
+          "p99": 2781.94,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 219.0,
+          "max": 315.0,
+          "mean": 249.98,
+          "p50": 261.0,
+          "p95": 263.0,
+          "p99": 315.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.7523311070691676,
+          "max": 0.793603002626552,
+          "mean": 0.7724720011299606,
+          "p50": 0.7722194646733292,
+          "p95": 0.7870751204309292,
+          "p99": 0.793603002626552,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.7714856688192735
+      },
+      "9": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2264.54,
+          "max": 2336.25,
+          "mean": 2283.7464,
+          "p50": 2280.49,
+          "p95": 2299.6,
+          "p99": 2336.25,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2635.23,
+          "max": 2916.98,
+          "mean": 2693.2172,
+          "p50": 2692.14,
+          "p95": 2726.42,
+          "p99": 2916.98,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 256.0,
+          "mean": 239.9,
+          "p50": 253.0,
+          "p95": 256.0,
+          "p99": 256.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.7842323224705003,
+          "max": 0.8728521951602237,
+          "mean": 0.8481429415715127,
+          "p50": 0.8475964751008774,
+          "p95": 0.8653476167165673,
+          "p99": 0.8728521951602237,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.8470919045814853
+      },
+      "10": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2068.11,
+          "max": 2180.91,
+          "mean": 2085.3146,
+          "p50": 2083.26,
+          "p95": 2098.24,
+          "p99": 2180.91,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2636.19,
+          "max": 2738.89,
+          "mean": 2691.7856,
+          "p50": 2695.56,
+          "p95": 2721.2,
+          "p99": 2738.89,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 220.0,
+          "max": 269.0,
+          "mean": 249.04,
+          "p50": 261.0,
+          "p95": 262.0,
+          "p99": 269.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.758518962061273,
+          "max": 0.8101298267119852,
+          "mean": 0.7747650518071719,
+          "p50": 0.7724056690594514,
+          "p95": 0.7905846799389531,
+          "p99": 0.8101298267119852,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.7728486845034057
+      },
+      "11": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2262.18,
+          "max": 2336.64,
+          "mean": 2278.7734,
+          "p50": 2277.09,
+          "p95": 2291.03,
+          "p99": 2336.64,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2636.46,
+          "max": 2742.06,
+          "mean": 2689.8636,
+          "p50": 2692.58,
+          "p95": 2720.56,
+          "p99": 2742.06,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 257.0,
+          "mean": 241.3,
+          "p50": 253.0,
+          "p95": 256.0,
+          "p99": 257.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.8261526005995493,
+          "max": 0.8738859696692035,
+          "mean": 0.8472454841315414,
+          "p50": 0.8455428001919456,
+          "p95": 0.8640918193140049,
+          "p99": 0.8738859696692035,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.8456907501355578
+      },
+      "12": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 2261.57,
+          "max": 2307.95,
+          "mean": 2275.9702,
+          "p50": 2275.13,
+          "p95": 2292.65,
+          "p99": 2307.95,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 2631.45,
+          "max": 2762.13,
+          "mean": 2686.2122,
+          "p50": 2688.91,
+          "p95": 2716.64,
+          "p99": 2762.13,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 211.0,
+          "max": 258.0,
+          "mean": 238.84,
+          "p50": 253.0,
+          "p95": 256.0,
+          "p99": 258.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.8269596289819813,
+          "max": 0.865476939879106,
+          "mean": 0.8473476826084018,
+          "p50": 0.8467265496485372,
+          "p95": 0.8653062000038003,
+          "p99": 0.865476939879106,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.846116084212562
+      },
+      "13": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 4877.51,
+          "max": 4957.32,
+          "mean": 4899.7822,
+          "p50": 4894.66,
+          "p95": 4927.82,
+          "p99": 4957.32,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 4978.46,
+          "max": 5133.25,
+          "mean": 5035.4044,
+          "p50": 5028.95,
+          "p95": 5074.55,
+          "p99": 5133.25,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 505.0,
+          "max": 595.0,
+          "mean": 540.62,
+          "p50": 548.0,
+          "p95": 553.0,
+          "p99": 595.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 0.956797350606341,
+          "max": 0.9890829694323143,
+          "mean": 0.973094944422556,
+          "p50": 0.9741950380585368,
+          "p95": 0.9827584137500601,
+          "p99": 0.9890829694323143,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.973296612612971
+      },
+      "14": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 6579.25,
+          "max": 6794.03,
+          "mean": 6604.1078,
+          "p50": 6595.82,
+          "p95": 6676.52,
+          "p99": 6794.03,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 4955.83,
+          "max": 5110.23,
+          "mean": 5018.443,
+          "p50": 5025.85,
+          "p95": 5082.0,
+          "p99": 5110.23,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 506.0,
+          "max": 601.0,
+          "mean": 542.7,
+          "p50": 549.0,
+          "p95": 558.0,
+          "p99": 601.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 1.2920651320977725,
+          "max": 1.336788874334785,
+          "mean": 1.3160045574574861,
+          "p50": 1.3131267917216245,
+          "p95": 1.3341273129647775,
+          "p99": 1.336788874334785,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 1.3123790005670681
+      },
+      "15": {
+        "cpu_wall_us": {
+          "n": 50,
+          "min": 6582.33,
+          "max": 6767.15,
+          "mean": 6607.8836,
+          "p50": 6596.61,
+          "p95": 6700.24,
+          "p99": 6767.15,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 50,
+          "min": 4940.02,
+          "max": 5526.87,
+          "mean": 5022.2164,
+          "p50": 5009.32,
+          "p95": 5055.55,
+          "p99": 5526.87,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 50,
+          "min": 506.0,
+          "max": 558.0,
+          "mean": 541.24,
+          "p50": 549.0,
+          "p95": 555.0,
+          "p99": 558.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 50,
+          "min": 1.2244091140193274,
+          "max": 1.3349175026812388,
+          "mean": 1.3159663832827255,
+          "p50": 1.3191500856397367,
+          "p95": 1.3331626187748227,
+          "p99": 1.3349175026812388,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 1.3168673592423723
+      }
+    },
+    "by_operation_pooled_across_public_patterns": {
+      "0": {
+        "cpu_wall_us": {
+          "n": 300,
+          "min": 1440.54,
+          "max": 2180.91,
+          "mean": 1838.2448666666667,
+          "p50": 1852.14,
+          "p95": 2098.24,
+          "p99": 2128.7,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 300,
+          "min": 2636.19,
+          "max": 2791.01,
+          "mean": 2698.7127666666665,
+          "p50": 2701.12,
+          "p95": 2741.13,
+          "p99": 2766.17,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 300,
+          "min": 219.0,
+          "max": 320.0,
+          "mean": 251.20666666666668,
+          "p50": 261.0,
+          "p95": 268.0,
+          "p99": 310.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 300,
+          "min": 0.5292764594555248,
+          "max": 0.8101298267119852,
+          "mean": 0.6812890251339134,
+          "p50": 0.6892998390953248,
+          "p95": 0.7855149846933588,
+          "p99": 0.79131686074032,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.6856933420210876
+      },
+      "1": {
+        "cpu_wall_us": {
+          "n": 350,
+          "min": 1582.97,
+          "max": 2336.64,
+          "mean": 2050.932257142857,
+          "p50": 2265.55,
+          "p95": 2292.65,
+          "p99": 2329.97,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 350,
+          "min": 2631.45,
+          "max": 2916.98,
+          "mean": 2691.6646285714287,
+          "p50": 2692.52,
+          "p95": 2736.53,
+          "p99": 2778.19,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 350,
+          "min": 211.0,
+          "max": 302.0,
+          "mean": 241.6742857142857,
+          "p50": 253.0,
+          "p95": 257.0,
+          "p99": 300.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 350,
+          "min": 0.5717835036089871,
+          "max": 0.8738859696692035,
+          "mean": 0.7621613307541499,
+          "p50": 0.8387302711938212,
+          "p95": 0.8606537232735316,
+          "p99": 0.8711601160564728,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 0.8414236477352073
+      },
+      "2": {
+        "cpu_wall_us": {
+          "n": 150,
+          "min": 4877.51,
+          "max": 6794.03,
+          "mean": 6037.257866666667,
+          "p50": 6590.73,
+          "p95": 6654.64,
+          "p99": 6767.15,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "fpga_wall_us": {
+          "n": 150,
+          "min": 4940.02,
+          "max": 5526.87,
+          "mean": 5025.3546,
+          "p50": 5025.85,
+          "p95": 5068.1,
+          "p99": 5133.25,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "driver_us": {
+          "n": 150,
+          "min": 505.0,
+          "max": 601.0,
+          "mean": 541.52,
+          "p50": 549.0,
+          "p95": 556.0,
+          "p99": 597.0,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "paired_cpu_over_fpga_wall_ratio": {
+          "n": 150,
+          "min": 0.956797350606341,
+          "max": 1.336788874334785,
+          "mean": 1.2016886283875892,
+          "p50": 1.3095136370410851,
+          "p95": 1.3303939807433776,
+          "p99": 1.3349175026812388,
+          "quantile_method": "nearest-rank ceil(p*n)"
+        },
+        "ratio_of_p50_cpu_to_p50_fpga_wall": 1.311366236557
+      }
+    },
+    "limits": [
+      "Portable scalar single-core uint64 modulo ARM reference, not fastest OpenFHE/NEON implementation",
+      "Only public NTT/INTT/polynomial-multiply ops 0..2; ALU speed not measured",
+      "50 points per case: p99 is observed maximum, not a population confidence bound",
+      "Frequency/temperature snapshots are observations, not a continuously controlled thermal experiment",
+      "FPGA wall includes allocation, packing, ioctl, unpacking/padding check; excludes exact gold comparison",
+      "Driver us excludes copies/validation/descriptor prep/wipe; includes DMA, IP and IRQ wait",
+      "No CKKS encoding/encryption/network/inference/decryption or E2E speedup claim"
+    ]
+  },
+  "dma_jobs": 848,
+  "coefficient_comparisons": 10420224,
+  "irq_delta": {
+    "121": 848,
+    "136": 848
+  },
+  "limits": [
+    "Portable scalar single-core uint64 modulo ARM reference, not fastest OpenFHE/NEON implementation",
+    "Only public NTT/INTT/polynomial-multiply ops 0..2; ALU speed not measured",
+    "50 points per case: p99 is observed maximum, not a population confidence bound",
+    "Frequency/temperature snapshots are observations, not a continuously controlled thermal experiment",
+    "FPGA wall includes allocation, packing, ioctl, unpacking/padding check; excludes exact gold comparison",
+    "Driver us excludes copies/validation/descriptor prep/wipe; includes DMA, IP and IRQ wait",
+    "No CKKS encoding/encryption/network/inference/decryption or E2E speedup claim",
+    "User-returned artifact lineage is not signed remote attestation; no configured-PL readback"
+  ]
+}

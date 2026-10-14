@@ -1,0 +1,5184 @@
+{
+  "schema": "edgefhe-v5-e2e-1",
+  "tool": "v5_e2e",
+  "label": "stage2 kv260-board-2026-10-14",
+  "environment": {
+    "system": "Linux",
+    "release": "5.15.0-1027-xilinx-zynqmp",
+    "machine": "aarch64",
+    "cpu_model": "ARM implementer 0x41 part 0xd03 (Cortex-A53)",
+    "online_cpus": 4,
+    "affinity": "0-3",
+    "pinned": true,
+    "compiler": "11.4.0",
+    "cpufreq": [
+      {
+        "cpu": 0,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 1,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 2,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 3,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      }
+    ],
+    "power_sensors": [
+      "ina260_u14/power1"
+    ]
+  },
+  "inputs": {
+    "data": "../data/cdc_diabetes/splits/test.csv",
+    "data_sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304",
+    "model": "../training/outputs/model.json",
+    "model_sha256": "3c33518d11529b78eef7ee8009a10b9f9446235254fe58c510abcb659a03b3d9",
+    "preprocess": "../training/outputs/edge_preprocess.json",
+    "preprocess_sha256": "0ac7d30c5f6009a42ab91c15d614da3378748e480624fe6442018f1540781731",
+    "model_id": "cdc-diabetes-lr4-v1",
+    "records": 38052,
+    "limit": 0,
+    "labelled": true,
+    "features": [
+      "GenHlth",
+      "HighBP",
+      "BMI",
+      "Age"
+    ]
+  },
+  "profile": {
+    "degree": 4096,
+    "slots": 2048,
+    "primes": [
+      998244353,
+      1004535809,
+      469762049
+    ],
+    "input_scale_bits": 29,
+    "output_scale_bits": 58,
+    "sampler": "fixed-weight-ternary-s64-u64-e16",
+    "security_bits": null,
+    "error_bound": 0.00026168289717225511
+  },
+  "device": {
+    "name": "linux-dma",
+    "device_times_are_fpga": true,
+    "opened_by_tool": false
+  },
+  "randomness": "os-getrandom",
+  "settings": {
+    "backends": "cpu-w1,cpu-w2,cpu-w3,cpu-w4,fpga-serial,fpga-overlap",
+    "modes": "correctness,latency,throughput",
+    "batch_records": 2048,
+    "rounds": 30,
+    "warmup": 3,
+    "repeats": 3,
+    "cloud_workers": 1,
+    "cloud": "in-process CPU (V4 Engine::affine); identical for every backend",
+    "power_interval_ms": 20
+  },
+  "keygen": [
+    {
+      "backend": "cpu-w1",
+      "keygen_ms": 7.403854,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    },
+    {
+      "backend": "cpu-w2",
+      "keygen_ms": 4.632936,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    },
+    {
+      "backend": "cpu-w3",
+      "keygen_ms": 3.710047,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    },
+    {
+      "backend": "cpu-w4",
+      "keygen_ms": 3.218672,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    },
+    {
+      "backend": "fpga-serial",
+      "keygen_ms": 5.805418,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    },
+    {
+      "backend": "fpga-overlap",
+      "keygen_ms": 5.787118,
+      "public_key_sha256": "6d55e1adab733243443caff360228d49e1e35a607fea21619e24ecdf329a7567"
+    }
+  ],
+  "correctness": {
+    "backends": [
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "records": 38052,
+        "max_abs_logit_diff": 3.9330572076945458e-07,
+        "mean_abs_logit_diff": 5.9792011993370552e-08,
+        "all_within_bound": true,
+        "decisions": {
+          "agree": 38051,
+          "disagree": 0,
+          "uncertain": 1
+        },
+        "labels": {
+          "auc_ckks": 0.80714716324820535,
+          "auc_plain": 0.80714397562780571,
+          "accuracy_certain": 0.71903497936979321,
+          "confusion": {
+            "tn": 23388,
+            "fp": 9361,
+            "fn": 1330,
+            "tp": 3972
+          }
+        },
+        "cipher_sha256": "39b881dcd3cc052dd7634498f0a5072d777c9fabdc4aa9c5982d51effddd5aee",
+        "decrypted_sha256": "a828e90d0696eb08fa0163b87a9a241739371ff7be1e150f6a03f4afd77840f8",
+        "pass": true
+      }
+    ],
+    "batches": 19,
+    "bit_exact_across_backends": true
+  },
+  "latency": {
+    "records_per_batch": 2048,
+    "timed_region": "steps 1-10 for one batch; keygen excluded; cloud in-process",
+    "results": [
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 430.164,
+              "p95_us": 456.615,
+              "mean_us": 435.41216666666668
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31399.554,
+              "p95_us": 31505.315,
+              "mean_us": 31404.491033333336
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.762,
+              "p95_us": 112.711,
+              "mean_us": 107.47176666666667
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 38343.104,
+              "p95_us": 38527.726,
+              "mean_us": 38338.53306666667
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4561.885,
+              "p95_us": 4627.566,
+              "mean_us": 4568.3296666666665
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 7861.989,
+              "p95_us": 7892.129,
+              "mean_us": 7866.078
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8628.956,
+              "p95_us": 8699.567,
+              "mean_us": 8636.5877333333319
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 91373.014,
+          "p95_us": 91774.428,
+          "mean_us": 91407.5873
+        },
+        "edge_only": {
+          "p50_us": 86759.769,
+          "p95_us": 87086.382,
+          "mean_us": 86788.573766666668
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 1101.958024,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 720,
+          "inverse_transforms": 810
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 429.544,
+              "p95_us": 444.274,
+              "mean_us": 436.4906666666667
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31401.094,
+              "p95_us": 31572.735,
+              "mean_us": 31410.129
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.861,
+              "p95_us": 110.641,
+              "mean_us": 105.4021
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 23365.514,
+              "p95_us": 23471.535,
+              "mean_us": 23362.435566666667
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4566.675,
+              "p95_us": 4643.166,
+              "mean_us": 4572.819066666666
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 5173.822,
+              "p95_us": 5212.382,
+              "mean_us": 5167.5858333333326
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8624.106,
+              "p95_us": 8659.756,
+              "mean_us": 8627.3625
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 73705.747,
+          "p95_us": 73905.899,
+          "mean_us": 73732.0493
+        },
+        "edge_only": {
+          "p50_us": 69081.32,
+          "p95_us": 69276.383,
+          "mean_us": 69109.405666666673
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 571.587294,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 720,
+          "inverse_transforms": 810
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 429.764,
+              "p95_us": 441.055,
+              "mean_us": 432.2594
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31343.743,
+              "p95_us": 31483.005,
+              "mean_us": 31360.841633333333
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.752,
+              "p95_us": 111.971,
+              "mean_us": 104.9974
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 18481.325,
+              "p95_us": 18643.536,
+              "mean_us": 18490.172233333335
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4576.626,
+              "p95_us": 4694.087,
+              "mean_us": 4595.3150666666661
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 3834.408,
+              "p95_us": 3988.48,
+              "mean_us": 3850.0804333333331
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8636.876,
+              "p95_us": 8694.717,
+              "mean_us": 8645.0994333333329
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 67547.486,
+          "p95_us": 67707.557,
+          "mean_us": 67529.426066666667
+        },
+        "edge_only": {
+          "p50_us": 62903.669,
+          "p95_us": 63094.761,
+          "mean_us": 62883.450533333329
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 384.900929,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 720,
+          "inverse_transforms": 810
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 430.425,
+              "p95_us": 440.965,
+              "mean_us": 433.0394
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31357.824,
+              "p95_us": 31530.816,
+              "mean_us": 31365.579733333336
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.921,
+              "p95_us": 112.611,
+              "mean_us": 105.13736666666667
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 16172.242,
+              "p95_us": 18608.916,
+              "mean_us": 16379.269166666667
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4579.386,
+              "p95_us": 4605.866,
+              "mean_us": 4577.5076666666673
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 3754.667,
+              "p95_us": 3810.468,
+              "mean_us": 3773.8397333333332
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8637.556,
+              "p95_us": 8704.387,
+              "mean_us": 8646.9062333333331
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 65080.821,
+          "p95_us": 67681.957,
+          "mean_us": 65331.667166666666
+        },
+        "edge_only": {
+          "p50_us": 60454.565,
+          "p95_us": 63037.45,
+          "mean_us": 60703.77163333333
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 319.749266,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 720,
+          "inverse_transforms": 810
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 429.924,
+              "p95_us": 444.915,
+              "mean_us": 432.6756
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31405.214,
+              "p95_us": 31503.305,
+              "mean_us": 31410.053566666666
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.011,
+              "p95_us": 112.431,
+              "mean_us": 105.50436666666667
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 47351.884,
+              "p95_us": 47563.485,
+              "mean_us": 47348.169333333339
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4585.545,
+              "p95_us": 4620.106,
+              "mean_us": 4588.0992666666662
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 6447.094,
+              "p95_us": 6588.986,
+              "mean_us": 6453.9461333333338
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8634.406,
+              "p95_us": 8696.477,
+              "mean_us": 8641.9552333333322
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 99023.48,
+          "p95_us": 99179.712,
+          "mean_us": 99032.084766666667
+        },
+        "edge_only": {
+          "p50_us": 94382.224,
+          "p95_us": 94515.715,
+          "mean_us": 94392.304233333329
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 1329.42407,
+          "pack_ms": 17.835921,
+          "device_ms": 1261.97442,
+          "unpack_ms": 49.499018,
+          "driver_reported_ms": 146.55,
+          "bytes_to_device": 35389440,
+          "bytes_from_device": 17694720,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 430.245,
+              "p95_us": 441.445,
+              "mean_us": 432.8534
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31383.364,
+              "p95_us": 31427.994,
+              "mean_us": 31367.1565
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 105.581,
+              "p95_us": 121.552,
+              "mean_us": 107.71383333333333
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 46002.551,
+              "p95_us": 46269.502,
+              "mean_us": 46046.495466666667
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 4581.836,
+              "p95_us": 4664.796,
+              "mean_us": 4593.0712666666668
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 6440.754,
+              "p95_us": 6514.265,
+              "mean_us": 6449.176433333334
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8648.607,
+              "p95_us": 8703.477,
+              "mean_us": 8652.4502666666667
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 97670.697,
+          "p95_us": 98393.754,
+          "mean_us": 97700.67836666666
+        },
+        "edge_only": {
+          "p50_us": 93038.862,
+          "p95_us": 93548.196,
+          "mean_us": 93055.8459
+        },
+        "backend_stats": {
+          "batches": 60,
+          "jobs": 270,
+          "wall_ms": 1290.395557,
+          "pack_ms": 20.16799,
+          "device_ms": 1274.160056,
+          "unpack_ms": 49.69392,
+          "driver_reported_ms": 147.207,
+          "bytes_to_device": 35389440,
+          "bytes_from_device": 17694720,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      }
+    ]
+  },
+  "throughput": {
+    "batch_records": 2048,
+    "cpus_for_utilization": 4,
+    "power_available": true,
+    "results": [
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          91.398664,
+          91.470275,
+          91.626586
+        ],
+        "wall_ms": 91.470275,
+        "records_per_s": 22389.787283355166,
+        "batches_per_s": 10.932513321950765,
+        "cpu_utilization": 0.25273784297685781,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.91391,
+            "work_ms": 31.91292,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 38.390854,
+            "work_ms": 38.363993,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.580135,
+            "work_ms": 4.579315,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.95228,
+            "work_ms": 7.94932,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.621186,
+            "work_ms": 8.620566
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.345,
+            "min_w": 3.31,
+            "max_w": 3.42,
+            "energy_j": 0.305968069875,
+            "records_per_j": 6693.5089038430988
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 36.790368,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          182.927609,
+          183.007171,
+          183.020451
+        ],
+        "wall_ms": 183.007171,
+        "records_per_s": 22381.636619037185,
+        "batches_per_s": 10.92853350538925,
+        "cpu_utilization": 0.25266906071128764,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 63.94988,
+            "work_ms": 63.9479,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 76.917359,
+            "work_ms": 76.858958,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.133541,
+            "work_ms": 9.131631,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 15.731197,
+            "work_ms": 15.726507,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.260874,
+            "work_ms": 17.259734
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 10,
+            "mean_w": 3.336,
+            "min_w": 3.3,
+            "max_w": 3.39,
+            "energy_j": 0.610511922456,
+            "records_per_j": 6709.1236867617472
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 73.595987,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          365.565946,
+          365.863979,
+          366.321394
+        ],
+        "wall_ms": 365.86397900000003,
+        "records_per_s": 22390.8350376302,
+        "batches_per_s": 10.933024920717871,
+        "cpu_utilization": 0.25252622642033856,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 127.861359,
+            "work_ms": 127.856859,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 153.546365,
+            "work_ms": 153.438155,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.409005,
+            "work_ms": 18.405425,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 31.430365,
+            "work_ms": 31.419864,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.599395,
+            "work_ms": 34.597245
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 19,
+            "mean_w": 3.3310526315789475,
+            "min_w": 3.3,
+            "max_w": 3.39,
+            "energy_j": 1.2187121700478949,
+            "records_per_j": 6721.849671590674
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 146.980811,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          731.382985,
+          731.690608,
+          731.745499
+        ],
+        "wall_ms": 731.690608,
+        "records_per_s": 22391.978003905169,
+        "batches_per_s": 10.933583009719321,
+        "cpu_utilization": 0.2526692948886396,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 255.948251,
+            "work_ms": 255.940001,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 307.086348,
+            "work_ms": 306.831108,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 36.580976,
+            "work_ms": 36.573365,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 62.948662,
+            "work_ms": 62.930142,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.10395,
+            "work_ms": 69.09955
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 37,
+            "mean_w": 3.3370270270270264,
+            "min_w": 3.29,
+            "max_w": 3.41,
+            "energy_j": 2.4416713343178373,
+            "records_per_j": 6710.1578208835463
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 293.967962,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1736.751011,
+          1736.980752,
+          1738.101664
+        ],
+        "wall_ms": 1736.980752,
+        "records_per_s": 21906.978506345589,
+        "batches_per_s": 10.938520751092353,
+        "cpu_utilization": 0.25262182640467162,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 606.946559,
+            "work_ms": 606.927119,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 729.643899,
+            "work_ms": 729.0697,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 86.996921,
+            "work_ms": 86.977521,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 149.407395,
+            "work_ms": 149.363365,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 163.947208,
+            "work_ms": 163.936788
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 86,
+            "mean_w": 3.3379069767441876,
+            "min_w": 3.29,
+            "max_w": 3.47,
+            "energy_j": 5.7978801705711653,
+            "records_per_j": 6563.0883841208106
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 698.046932,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          91.761528,
+          91.791168,
+          94.484355
+        ],
+        "wall_ms": 91.791168000000013,
+        "records_per_s": 22311.51476359904,
+        "batches_per_s": 10.894294318163594,
+        "cpu_utilization": 0.25428100010667692,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.899059,
+            "work_ms": 31.897459,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 38.347013,
+            "work_ms": 38.321103,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.585736,
+            "work_ms": 4.584486,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.919539,
+            "work_ms": 7.917029,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.719587,
+            "work_ms": 8.718337
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.3466666666666671,
+            "min_w": 3.31,
+            "max_w": 3.42,
+            "energy_j": 0.30719444224000009,
+            "records_per_j": 6666.7872799598717
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 36.715448,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          134.801259,
+          136.0322,
+          137.596046
+        ],
+        "wall_ms": 136.0322,
+        "records_per_s": 30110.517950896923,
+        "batches_per_s": 14.702401343211388,
+        "cpu_utilization": 0.34510027772836138,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 63.93698,
+            "work_ms": 63.93445,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 78.646966,
+            "work_ms": 78.557696,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.407684,
+            "work_ms": 9.405504,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 49.98737,
+            "work_ms": 15.724947,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.325933,
+            "work_ms": 17.324893
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 8,
+            "mean_w": 3.4475,
+            "min_w": 3.31,
+            "max_w": 3.58,
+            "energy_j": 0.46897100949999992,
+            "records_per_j": 8734.0153592159313
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 74.837167,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          227.229973,
+          229.238783,
+          232.352884
+        ],
+        "wall_ms": 229.238783,
+        "records_per_s": 35735.663454468784,
+        "batches_per_s": 17.449054421127336,
+        "cpu_utilization": 0.40806685839018786,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.649576,
+            "work_ms": 128.643606,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 171.539415,
+            "work_ms": 155.02584,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.821378,
+            "work_ms": 18.816297,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 100.283024,
+            "work_ms": 32.187023,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.791569,
+            "work_ms": 34.788849
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 13,
+            "mean_w": 3.4761538461538466,
+            "min_w": 3.31,
+            "max_w": 3.78,
+            "energy_j": 0.796869277213077,
+            "records_per_j": 10280.230690597347
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 148.627908,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          415.861619,
+          420.358804,
+          420.675037
+        ],
+        "wall_ms": 420.35880399999996,
+        "records_per_s": 38976.226604736461,
+        "batches_per_s": 19.031360646843975,
+        "cpu_utilization": 0.44523332976273289,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 257.312204,
+            "work_ms": 257.300514,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 336.449345,
+            "work_ms": 311.846709,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 38.905667,
+            "work_ms": 38.897527,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 273.452096,
+            "work_ms": 63.094412,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.382715,
+            "work_ms": 69.378535
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 22,
+            "mean_w": 3.4977272727272717,
+            "min_w": 3.31,
+            "max_w": 3.82,
+            "energy_j": 1.4703004530818176,
+            "records_per_j": 11143.30065372583
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 297.326014,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w1",
+        "name": "cpu-w1",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          936.315235,
+          936.336775,
+          939.8032
+        ],
+        "wall_ms": 936.336775,
+        "records_per_s": 40639.224065507842,
+        "batches_per_s": 20.29184424589112,
+        "cpu_utilization": 0.47613317334460137,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 616.693048,
+            "work_ms": 616.657396,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 860.537599,
+            "work_ms": 739.295954,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 92.289055,
+            "work_ms": 92.270725,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 584.774597,
+            "work_ms": 151.566194,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 166.205943,
+            "work_ms": 166.194293
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 47,
+            "mean_w": 3.5291489361702131,
+            "min_w": 3.3,
+            "max_w": 3.83,
+            "energy_j": 3.3044719333882981,
+            "records_per_j": 11515.304341224262
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 706.498256,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          73.636697,
+          73.774818,
+          73.802598
+        ],
+        "wall_ms": 73.77481800000001,
+        "records_per_s": 27760.149811552226,
+        "batches_per_s": 13.554760650171986,
+        "cpu_utilization": 0.31445350363317737,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 32.016641,
+            "work_ms": 32.015041,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 23.351673,
+            "work_ms": 23.322253,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.602526,
+            "work_ms": 4.601756,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 5.171112,
+            "work_ms": 5.168842,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.618666,
+            "work_ms": 8.618156
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.408,
+            "min_w": 3.32,
+            "max_w": 3.49,
+            "energy_j": 0.251424579744,
+            "records_per_j": 8145.5838648920853
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 19.00895,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          147.377404,
+          147.532705,
+          147.741498
+        ],
+        "wall_ms": 147.532705,
+        "records_per_s": 27763.335593962034,
+        "batches_per_s": 13.556316207989275,
+        "cpu_utilization": 0.31394055982366759,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.081901,
+            "work_ms": 64.079891,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 46.727986,
+            "work_ms": 46.669916,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.128502,
+            "work_ms": 9.126792,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 10.335724,
+            "work_ms": 10.331394,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.243572,
+            "work_ms": 17.242412
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 9,
+            "mean_w": 3.3811111111111107,
+            "min_w": 3.31,
+            "max_w": 3.5,
+            "energy_j": 0.4988244681277777,
+            "records_per_j": 8211.3053021905453
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 38.059962,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          295.065461,
+          295.182122,
+          295.506326
+        ],
+        "wall_ms": 295.182122,
+        "records_per_s": 27752.358254271239,
+        "batches_per_s": 13.550956178843379,
+        "cpu_utilization": 0.313660594932643,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 127.831049,
+            "work_ms": 127.826559,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 93.589135,
+            "work_ms": 93.470175,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.397384,
+            "work_ms": 18.392744,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 20.835249,
+            "work_ms": 20.826229,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.511485,
+            "work_ms": 34.508765
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 16,
+            "mean_w": 3.3756250000000003,
+            "min_w": 3.29,
+            "max_w": 3.53,
+            "energy_j": 0.99642415057625011,
+            "records_per_j": 8221.3984830279533
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 76.306784,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          589.940101,
+          589.999631,
+          590.237373
+        ],
+        "wall_ms": 589.999631,
+        "records_per_s": 27769.50889313353,
+        "batches_per_s": 13.559330514225357,
+        "cpu_utilization": 0.313731128418282,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 255.90739,
+            "work_ms": 255.89749,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 186.822168,
+            "work_ms": 186.566457,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 37.080132,
+            "work_ms": 37.072442,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 41.018199,
+            "work_ms": 41.000439,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.144001,
+            "work_ms": 69.139211
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 30,
+            "mean_w": 3.3920000000000003,
+            "min_w": 3.29,
+            "max_w": 3.53,
+            "energy_j": 2.001278748352,
+            "records_per_j": 8186.7655934945542
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 151.716976,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1400.005062,
+          1400.215655,
+          1401.169483
+        ],
+        "wall_ms": 1400.215655,
+        "records_per_s": 27175.813857044755,
+        "batches_per_s": 13.569338360239945,
+        "cpu_utilization": 0.31367989525870571,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 606.91655,
+            "work_ms": 606.89554,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 443.824998,
+            "work_ms": 443.253081,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 87.837741,
+            "work_ms": 87.814101,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 97.472436,
+            "work_ms": 97.431794,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 164.117489,
+            "work_ms": 164.106329
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 70,
+            "mean_w": 3.3890000000000007,
+            "min_w": 3.29,
+            "max_w": 3.55,
+            "energy_j": 4.7453308547950011,
+            "records_per_j": 8018.8297011049717
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 360.304682,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          74.080301,
+          74.086201,
+          74.587386
+        ],
+        "wall_ms": 74.086201,
+        "records_per_s": 27643.474390055442,
+        "batches_per_s": 13.497790229519259,
+        "cpu_utilization": 0.31499793058629094,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.967279,
+            "work_ms": 31.965939,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 23.300573,
+            "work_ms": 23.273863,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.583996,
+            "work_ms": 4.582666,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 5.130801,
+            "work_ms": 5.128691,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.663757,
+            "work_ms": 8.663127
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.3760000000000003,
+            "min_w": 3.32,
+            "max_w": 3.47,
+            "energy_j": 0.25011501457600005,
+            "records_per_j": 8188.2329354429612
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 18.917489,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          107.544445,
+          107.876208,
+          108.478605
+        ],
+        "wall_ms": 107.876208,
+        "records_per_s": 37969.447350244271,
+        "batches_per_s": 18.53976921398646,
+        "cpu_utilization": 0.43315158055982095,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 63.99988,
+            "work_ms": 63.99743,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 48.452584,
+            "work_ms": 46.855229,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.567587,
+            "work_ms": 9.564657,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 10.441954,
+            "work_ms": 10.433444,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.398973,
+            "work_ms": 17.396943
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 7,
+            "mean_w": 3.4485714285714288,
+            "min_w": 3.32,
+            "max_w": 3.64,
+            "energy_j": 0.37201880873142862,
+            "records_per_j": 11010.196000485083
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 38.130372,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          174.407394,
+          175.010611,
+          175.256453
+        ],
+        "wall_ms": 175.010611,
+        "records_per_s": 46808.590365986434,
+        "batches_per_s": 22.855757014641814,
+        "cpu_utilization": 0.53279198025312879,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.250793,
+            "work_ms": 128.244833,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 102.908831,
+            "work_ms": 94.449224,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.410314,
+            "work_ms": 18.404114,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 20.519896,
+            "work_ms": 20.498275,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 35.147861,
+            "work_ms": 35.143821
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 10,
+            "mean_w": 3.5370000000000004,
+            "min_w": 3.32,
+            "max_w": 3.86,
+            "energy_j": 0.619012531107,
+            "records_per_j": 13233.980878141485
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 76.221923,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          303.826618,
+          303.858609,
+          305.471926
+        ],
+        "wall_ms": 303.858609,
+        "records_per_s": 53919.8150545078,
+        "batches_per_s": 26.328034694583888,
+        "cpu_utilization": 0.616140186437831,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 257.06213,
+            "work_ms": 257.04938,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 210.218902,
+            "work_ms": 191.504345,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 38.350124,
+            "work_ms": 38.340174,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 114.746706,
+            "work_ms": 49.491953,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.627176,
+            "work_ms": 69.621156
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 16,
+            "mean_w": 3.6556249999999997,
+            "min_w": 3.32,
+            "max_w": 3.86,
+            "energy_j": 1.1107931275256249,
+            "records_per_j": 14749.821180921952
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 162.332924,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w2",
+        "name": "cpu-w2",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          660.732519,
+          661.448876,
+          664.958671
+        ],
+        "wall_ms": 661.448876,
+        "records_per_s": 57528.255592651425,
+        "batches_per_s": 28.724820147702541,
+        "cpu_utilization": 0.67249150484609788,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 614.423417,
+            "work_ms": 614.394605,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 490.79933,
+            "work_ms": 452.6588,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 88.294083,
+            "work_ms": 88.268883,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 219.531717,
+            "work_ms": 103.027121,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 167.906437,
+            "work_ms": 167.892087
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 34,
+            "mean_w": 3.7076470588235306,
+            "min_w": 3.31,
+            "max_w": 3.92,
+            "energy_j": 2.4524189796635305,
+            "records_per_j": 15516.108917580103
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 367.903698,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          67.452965,
+          67.492325,
+          67.870459
+        ],
+        "wall_ms": 67.492325000000008,
+        "records_per_s": 30344.190987641927,
+        "batches_per_s": 14.816499505684535,
+        "cpu_utilization": 0.34390947415132017,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.998511,
+            "work_ms": 31.997481,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 18.439814,
+            "work_ms": 18.412164,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.556806,
+            "work_ms": 4.555886,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 3.827288,
+            "work_ms": 3.824678,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.656396,
+            "work_ms": 8.655716
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.4159999999999995,
+            "min_w": 3.3,
+            "max_w": 3.5,
+            "energy_j": 0.23055378219999997,
+            "records_per_j": 8882.9598909958822
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 12.744238,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          134.906169,
+          134.94835,
+          134.96338
+        ],
+        "wall_ms": 134.94835,
+        "records_per_s": 30352.353326291133,
+        "batches_per_s": 14.820485022603092,
+        "cpu_utilization": 0.34372224632609438,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.048451,
+            "work_ms": 64.045941,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 36.826788,
+            "work_ms": 36.769207,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.155491,
+            "work_ms": 9.154171,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.577666,
+            "work_ms": 7.572665,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.324714,
+            "work_ms": 17.323324
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 8,
+            "mean_w": 3.4074999999999998,
+            "min_w": 3.31,
+            "max_w": 3.64,
+            "energy_j": 0.45983650262499992,
+            "records_per_j": 8907.51381549263
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 25.294851,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          269.97098,
+          270.088442,
+          270.871499
+        ],
+        "wall_ms": 270.088442,
+        "records_per_s": 30330.805492224656,
+        "batches_per_s": 14.80996361925032,
+        "cpu_utilization": 0.3438818015026352,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 127.99086,
+            "work_ms": 127.98625,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 73.882938,
+            "work_ms": 73.762127,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.282824,
+            "work_ms": 18.278894,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 15.330132,
+            "work_ms": 15.319752,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.581348,
+            "work_ms": 34.578688
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 15,
+            "mean_w": 3.4226666666666667,
+            "min_w": 3.31,
+            "max_w": 3.69,
+            "energy_j": 0.92442270748533328,
+            "records_per_j": 8861.7468325549253
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 51.014729,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          540.86646,
+          540.87344,
+          544.564937
+        ],
+        "wall_ms": 540.87344000000007,
+        "records_per_s": 30291.744405123682,
+        "batches_per_s": 14.790890822814298,
+        "cpu_utilization": 0.34353323025068488,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 256.241964,
+            "work_ms": 256.232004,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 147.93806,
+            "work_ms": 147.701917,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 36.962359,
+            "work_ms": 36.952889,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 30.433324,
+            "work_ms": 30.412324,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.272543,
+            "work_ms": 69.267053
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 28,
+            "mean_w": 3.4160714285714286,
+            "min_w": 3.3,
+            "max_w": 3.76,
+            "energy_j": 1.847662304857143,
+            "records_per_j": 8867.4212581647989
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 101.891249,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1281.850501,
+          1281.993652,
+          1283.144334
+        ],
+        "wall_ms": 1281.9936519999999,
+        "records_per_s": 29681.894243888193,
+        "batches_per_s": 14.820666210287913,
+        "cpu_utilization": 0.34355415825413149,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 607.06926,
+            "work_ms": 607.04732,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 350.484528,
+            "work_ms": 349.960952,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 87.663295,
+            "work_ms": 87.642945,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 72.349724,
+            "work_ms": 72.301003,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 164.384473,
+            "work_ms": 164.372473
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 64,
+            "mean_w": 3.4176562500000003,
+            "min_w": 3.29,
+            "max_w": 3.73,
+            "energy_j": 4.3814136172181248,
+            "records_per_j": 8684.8682467372746
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 241.666011,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          67.782858,
+          67.91661,
+          68.185172
+        ],
+        "wall_ms": 67.91661,
+        "records_per_s": 30154.626386682139,
+        "batches_per_s": 14.723938665372138,
+        "cpu_utilization": 0.34473525695702423,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 32.00355,
+            "work_ms": 32.00188,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 18.515135,
+            "work_ms": 18.487985,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.573056,
+            "work_ms": 4.571776,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 3.772188,
+            "work_ms": 3.769378,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.707917,
+            "work_ms": 8.707057
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.432,
+            "min_w": 3.33,
+            "max_w": 3.54,
+            "energy_j": 0.23308980552,
+            "records_per_j": 8786.3130497325583
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 12.742937,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          99.797409,
+          100.072791,
+          100.341364
+        ],
+        "wall_ms": 100.072791,
+        "records_per_s": 40930.2064933914,
+        "batches_per_s": 19.98545238935127,
+        "cpu_utilization": 0.46708500415462578,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.247213,
+            "work_ms": 64.244203,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 37.776497,
+            "work_ms": 37.706227,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.205762,
+            "work_ms": 9.202842,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.570726,
+            "work_ms": 7.565206,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.397154,
+            "work_ms": 17.395154
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.5333333333333332,
+            "min_w": 3.32,
+            "max_w": 3.79,
+            "energy_j": 0.3535905282,
+            "records_per_j": 11584.02070567681
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 26.090961,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          164.416554,
+          164.800269,
+          165.369333
+        ],
+        "wall_ms": 164.800269,
+        "records_per_s": 49708.656725554254,
+        "batches_per_s": 24.271805041774538,
+        "cpu_utilization": 0.56694689011703,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.849098,
+            "work_ms": 128.843728,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 75.019,
+            "work_ms": 74.87343,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.442854,
+            "work_ms": 18.437544,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 15.260524,
+            "work_ms": 15.249884,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.846629,
+            "work_ms": 34.841989
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 9,
+            "mean_w": 3.6555555555555554,
+            "min_w": 3.3,
+            "max_w": 3.96,
+            "energy_j": 0.60243653889999993,
+            "records_per_j": 13598.112782066515
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 52.044241,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          293.705808,
+          294.638397,
+          294.95758
+        ],
+        "wall_ms": 294.638397,
+        "records_per_s": 55607.144780929557,
+        "batches_per_s": 27.15192616256326,
+        "cpu_utilization": 0.6349427023253863,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 258.412404,
+            "work_ms": 258.400714,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 151.916298,
+            "work_ms": 151.612846,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 36.967,
+            "work_ms": 36.95539,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 30.757526,
+            "work_ms": 30.735796,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 70.797117,
+            "work_ms": 70.786417
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 16,
+            "mean_w": 3.6599999999999997,
+            "min_w": 3.3,
+            "max_w": 3.97,
+            "energy_j": 1.07837653302,
+            "records_per_j": 15193.20895653813
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 105.132272,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w3",
+        "name": "cpu-w3",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          652.241904,
+          652.320665,
+          653.082442
+        ],
+        "wall_ms": 652.320665,
+        "records_per_s": 58333.273866159063,
+        "batches_per_s": 29.126779235178763,
+        "cpu_utilization": 0.68355530328017433,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 615.081672,
+            "work_ms": 615.054582,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 366.357015,
+            "work_ms": 365.581108,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 90.783155,
+            "work_ms": 90.758545,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 73.712239,
+            "work_ms": 73.667589,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 166.269544,
+            "work_ms": 166.247904
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 33,
+            "mean_w": 3.7318181818181819,
+            "min_w": 3.31,
+            "max_w": 3.93,
+            "energy_j": 2.4343421180227272,
+            "records_per_j": 15631.327954390979
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 252.691298,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          65.205112,
+          65.241272,
+          67.481565
+        ],
+        "wall_ms": 65.241272000000009,
+        "records_per_s": 31391.172140236627,
+        "batches_per_s": 15.327720771599916,
+        "cpu_utilization": 0.356258381964104,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 32.06539,
+            "work_ms": 32.06424,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 16.182232,
+            "work_ms": 16.153762,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.570316,
+            "work_ms": 4.569236,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 3.750047,
+            "work_ms": 3.747407,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.658587,
+            "work_ms": 8.658057
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.406,
+            "min_w": 3.3,
+            "max_w": 3.53,
+            "energy_j": 0.22221177243200002,
+            "records_per_j": 9216.4333940800425
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 10.344813,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          130.216382,
+          130.720427,
+          130.736607
+        ],
+        "wall_ms": 130.720427,
+        "records_per_s": 31334.046973393073,
+        "batches_per_s": 15.299827623727086,
+        "cpu_utilization": 0.35641330945162841,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.314803,
+            "work_ms": 64.312583,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 32.326103,
+            "work_ms": 32.261232,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.176672,
+            "work_ms": 9.174862,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.511146,
+            "work_ms": 7.506756,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.376113,
+            "work_ms": 17.374893
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 8,
+            "mean_w": 3.4362500000000002,
+            "min_w": 3.31,
+            "max_w": 3.76,
+            "energy_j": 0.44918806727875005,
+            "records_per_j": 9118.6750013512028
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 20.735538,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          261.012341,
+          261.561616,
+          263.690967
+        ],
+        "wall_ms": 261.561616,
+        "records_per_s": 31319.580163474751,
+        "batches_per_s": 15.292763751696656,
+        "cpu_utilization": 0.35563035365250228,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.151462,
+            "work_ms": 128.146962,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 65.420015,
+            "work_ms": 65.297354,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.395044,
+            "work_ms": 18.391114,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 14.940979,
+            "work_ms": 14.932029,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.634966,
+            "work_ms": 34.632406
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 14,
+            "mean_w": 3.4585714285714291,
+            "min_w": 3.29,
+            "max_w": 3.84,
+            "energy_j": 0.90462953190857154,
+            "records_per_j": 9055.6406916283868
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 42.164491,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          522.391185,
+          522.650847,
+          523.138152
+        ],
+        "wall_ms": 522.650847,
+        "records_per_s": 31347.8875889012,
+        "batches_per_s": 15.306585736768165,
+        "cpu_utilization": 0.35627226296258158,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 256.301874,
+            "work_ms": 256.292544,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 130.243131,
+            "work_ms": 129.973589,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 36.84399,
+            "work_ms": 36.83666,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 29.880798,
+            "work_ms": 29.862548,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.355994,
+            "work_ms": 69.350554
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 27,
+            "mean_w": 3.4122222222222214,
+            "min_w": 3.3,
+            "max_w": 3.77,
+            "energy_j": 1.7834008345966661,
+            "records_per_j": 9186.9419830710158
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 83.693135,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1238.450917,
+          1242.125983,
+          1244.209804
+        ],
+        "wall_ms": 1242.125983,
+        "records_per_s": 30634.573723428824,
+        "batches_per_s": 15.296355007493633,
+        "cpu_utilization": 0.35552210970857695,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 607.02014,
+            "work_ms": 606.99856,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 312.280694,
+            "work_ms": 311.739288,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 87.545455,
+            "work_ms": 87.527265,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 71.031271,
+            "work_ms": 70.987471,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 164.204963,
+            "work_ms": 164.193313
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 62,
+            "mean_w": 3.4190322580645156,
+            "min_w": 3.29,
+            "max_w": 3.86,
+            "energy_j": 4.2468688044570957,
+            "records_per_j": 8960.0130712925165
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 202.114072,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          65.513966,
+          66.01398,
+          66.901099
+        ],
+        "wall_ms": 66.01398,
+        "records_per_s": 31023.731639873859,
+        "batches_per_s": 15.148306464782157,
+        "cpu_utilization": 0.35612153668056373,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 32.04594,
+            "work_ms": 32.04454,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 16.584986,
+            "work_ms": 16.558745,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.634086,
+            "work_ms": 4.633296,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 3.725877,
+            "work_ms": 3.723187,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.717938,
+            "work_ms": 8.716848
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 5,
+            "mean_w": 3.432,
+            "min_w": 3.31,
+            "max_w": 3.51,
+            "energy_j": 0.22655997936,
+            "records_per_j": 9039.5488461170917
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 10.729097,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 24,
+          "inverse_transforms": 27
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          97.96737,
+          98.944979,
+          101.129312
+        ],
+        "wall_ms": 98.944979,
+        "records_per_s": 41396.744346168387,
+        "batches_per_s": 20.213254075277533,
+        "cpu_utilization": 0.47768214696371808,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.608706,
+            "work_ms": 64.605706,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 36.504205,
+            "work_ms": 36.434844,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.168382,
+            "work_ms": 9.165732,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 7.438405,
+            "work_ms": 7.433255,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.525275,
+            "work_ms": 17.523135
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.5116666666666667,
+            "min_w": 3.33,
+            "max_w": 3.74,
+            "energy_j": 0.34746178458833332,
+            "records_per_j": 11788.346752587107
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 23.731108,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 48,
+          "inverse_transforms": 54
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          162.226242,
+          162.853719,
+          163.888959
+        ],
+        "wall_ms": 162.853719,
+        "records_per_s": 50302.811936397964,
+        "batches_per_s": 24.561919890819318,
+        "cpu_utilization": 0.57501450120399156,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.846889,
+            "work_ms": 128.841419,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 73.480876,
+            "work_ms": 73.333642,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.519765,
+            "work_ms": 18.514685,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 14.915521,
+            "work_ms": 14.906,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.890018,
+            "work_ms": 34.885558
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 9,
+            "mean_w": 3.5933333333333337,
+            "min_w": 3.31,
+            "max_w": 3.89,
+            "energy_j": 0.58518769694000006,
+            "records_per_j": 13998.927255027262
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 49.496287,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 96,
+          "inverse_transforms": 108
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          291.93398,
+          292.219303,
+          295.543156
+        ],
+        "wall_ms": 292.21930299999997,
+        "records_per_s": 56067.480251296067,
+        "batches_per_s": 27.376699341453158,
+        "cpu_utilization": 0.64090649754236118,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 258.1595,
+            "work_ms": 258.14982,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 148.85164,
+            "work_ms": 148.549475,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 37.01027,
+            "work_ms": 36.99964,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 30.466825,
+            "work_ms": 30.449184,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.726517,
+            "work_ms": 69.717557
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 16,
+            "mean_w": 3.6837500000000003,
+            "min_w": 3.34,
+            "max_w": 3.94,
+            "energy_j": 1.07646285742625,
+            "records_per_j": 15220.218595533372
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 101.254795,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 192,
+          "inverse_transforms": 216
+        }
+      },
+      {
+        "backend": "cpu-w4",
+        "name": "cpu-w4",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          648.111622,
+          649.815299,
+          651.589597
+        ],
+        "wall_ms": 649.815299,
+        "records_per_s": 58558.178083154053,
+        "batches_per_s": 29.239077672130954,
+        "cpu_utilization": 0.68644197926155626,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 614.676168,
+            "work_ms": 614.649548,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 362.993961,
+            "work_ms": 362.217771,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 90.484626,
+            "work_ms": 90.459686,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 73.867497,
+            "work_ms": 73.822855,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 173.579616,
+            "work_ms": 173.555825
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 32,
+            "mean_w": 3.7196875,
+            "min_w": 3.31,
+            "max_w": 3.93,
+            "energy_j": 2.4171098449990627,
+            "records_per_j": 15742.768198445179
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 248.89287,
+          "pack_ms": 0,
+          "device_ms": 0,
+          "unpack_ms": 0,
+          "driver_reported_ms": 0,
+          "bytes_to_device": 0,
+          "bytes_from_device": 0,
+          "forward_transforms": 456,
+          "inverse_transforms": 513
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          98.818808,
+          98.849779,
+          98.894359
+        ],
+        "wall_ms": 98.849779,
+        "records_per_s": 20718.306310022203,
+        "batches_per_s": 10.116360502940529,
+        "cpu_utilization": 0.24093377082815734,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.93819,
+            "work_ms": 31.93697,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 47.263983,
+            "work_ms": 47.236943,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.617326,
+            "work_ms": 4.616306,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 6.386704,
+            "work_ms": 6.384064,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.629366,
+            "work_ms": 8.628846
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.375,
+            "min_w": 3.33,
+            "max_w": 3.42,
+            "energy_j": 0.333618004125,
+            "records_per_j": 6138.7574251917631
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 44.150252,
+          "pack_ms": 0.640457,
+          "device_ms": 41.860647,
+          "unpack_ms": 1.645028,
+          "driver_reported_ms": 4.567,
+          "bytes_to_device": 1179648,
+          "bytes_from_device": 589824,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          197.573386,
+          197.789618,
+          197.96022
+        ],
+        "wall_ms": 197.789618,
+        "records_per_s": 20708.872596133937,
+        "batches_per_s": 10.111754197331024,
+        "cpu_utilization": 0.23508311745665034,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 63.872899,
+            "work_ms": 63.870059,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 94.606786,
+            "work_ms": 94.550115,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.185642,
+            "work_ms": 9.183212,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 12.821658,
+            "work_ms": 12.816048,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.286013,
+            "work_ms": 17.284653
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 11,
+            "mean_w": 3.38,
+            "min_w": 3.3,
+            "max_w": 3.43,
+            "energy_j": 0.66852890883999994,
+            "records_per_j": 6126.88538347158
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 88.479345,
+          "pack_ms": 1.259222,
+          "device_ms": 83.915928,
+          "unpack_ms": 3.296045,
+          "driver_reported_ms": 9.435,
+          "bytes_to_device": 2359296,
+          "bytes_from_device": 1179648,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          395.723308,
+          395.736638,
+          396.348674
+        ],
+        "wall_ms": 395.73663799999997,
+        "records_per_s": 20700.6357596842,
+        "batches_per_s": 10.1077323045333,
+        "cpu_utilization": 0.23987480785137716,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.083902,
+            "work_ms": 128.079442,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 188.822519,
+            "work_ms": 188.697948,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.506745,
+            "work_ms": 18.502525,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 25.601325,
+            "work_ms": 25.590965,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.702097,
+            "work_ms": 34.699897
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 21,
+            "mean_w": 3.3800000000000003,
+            "min_w": 3.31,
+            "max_w": 3.47,
+            "energy_j": 1.33758983644,
+            "records_per_j": 6124.4484496107088
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 176.446733,
+          "pack_ms": 2.626305,
+          "device_ms": 167.215743,
+          "unpack_ms": 6.590105,
+          "driver_reported_ms": 18.288,
+          "bytes_to_device": 4718592,
+          "bytes_from_device": 2359296,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          791.189884,
+          791.901211,
+          793.850339
+        ],
+        "wall_ms": 791.901211,
+        "records_per_s": 20689.449356076311,
+        "batches_per_s": 10.102270193396636,
+        "cpu_utilization": 0.24027870819861646,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 255.8268,
+            "work_ms": 255.818099,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 378.394535,
+            "work_ms": 378.148042,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 37.197173,
+            "work_ms": 37.189083,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 51.223252,
+            "work_ms": 51.200922,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.230621,
+            "work_ms": 69.225751
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 40,
+            "mean_w": 3.373,
+            "min_w": 3.3,
+            "max_w": 3.48,
+            "energy_j": 2.671082784703,
+            "records_per_j": 6133.8420859994985
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 353.364523,
+          "pack_ms": 5.292655,
+          "device_ms": 334.875181,
+          "unpack_ms": 13.167176,
+          "driver_reported_ms": 37.079,
+          "bytes_to_device": 9437184,
+          "bytes_from_device": 4718592,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1879.7521,
+          1881.044863,
+          1886.002883
+        ],
+        "wall_ms": 1881.044863,
+        "records_per_s": 20229.182593397825,
+        "batches_per_s": 10.100769191489507,
+        "cpu_utilization": 0.24054822343702922,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 607.998322,
+            "work_ms": 607.978492,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 899.133743,
+            "work_ms": 898.590008,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 88.042691,
+            "work_ms": 88.020191,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 121.526315,
+            "work_ms": 121.471705,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 164.295891,
+            "work_ms": 164.284751
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 94,
+            "mean_w": 3.3724468085106389,
+            "min_w": 3.28,
+            "max_w": 3.49,
+            "energy_j": 6.3437237448896822,
+            "records_per_j": 5998.3696532582426
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 839.519829,
+          "pack_ms": 12.837983,
+          "device_ms": 795.306425,
+          "unpack_ms": 31.303401,
+          "driver_reported_ms": 87.223,
+          "bytes_to_device": 22413312,
+          "bytes_from_device": 11206656,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          99.104612,
+          99.297983,
+          99.91635
+        ],
+        "wall_ms": 99.297983,
+        "records_per_s": 20624.789528705733,
+        "batches_per_s": 10.070698012063346,
+        "cpu_utilization": 0.24214741602556017,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.95336,
+            "work_ms": 31.95184,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 47.323624,
+            "work_ms": 47.297853,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.593236,
+            "work_ms": 4.591946,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 6.376243,
+            "work_ms": 6.374433,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.670506,
+            "work_ms": 8.669926
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.3633333333333333,
+            "min_w": 3.32,
+            "max_w": 3.43,
+            "energy_j": 0.33397221615666667,
+            "records_per_j": 6132.2466388619623
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 44.115102,
+          "pack_ms": 0.681058,
+          "device_ms": 41.799248,
+          "unpack_ms": 1.630326,
+          "driver_reported_ms": 4.572,
+          "bytes_to_device": 1179648,
+          "bytes_from_device": 589824,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          151.038501,
+          151.260153,
+          152.545935
+        ],
+        "wall_ms": 151.260153,
+        "records_per_s": 27079.173984439905,
+        "batches_per_s": 13.222252922089798,
+        "cpu_utilization": 0.3122517666632269,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.483034,
+            "work_ms": 64.479834,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 95.095891,
+            "work_ms": 95.007801,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.872348,
+            "work_ms": 9.869688,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 55.284832,
+            "work_ms": 12.919858,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.291803,
+            "work_ms": 17.290683
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 9,
+            "mean_w": 3.4455555555555559,
+            "min_w": 3.33,
+            "max_w": 3.57,
+            "energy_j": 0.5211752605033334,
+            "records_per_j": 7859.1604598503427
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 88.685576,
+          "pack_ms": 1.568372,
+          "device_ms": 83.826022,
+          "unpack_ms": 3.283592,
+          "driver_reported_ms": 9.137,
+          "bytes_to_device": 2359296,
+          "bytes_from_device": 1179648,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          260.116672,
+          260.168882,
+          263.643527
+        ],
+        "wall_ms": 260.168882,
+        "records_per_s": 31487.239892125148,
+        "batches_per_s": 15.374628853576732,
+        "cpu_utilization": 0.36826079761529668,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.116142,
+            "work_ms": 128.110032,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 203.90993,
+            "work_ms": 190.756718,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.721967,
+            "work_ms": 18.718407,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 111.642967,
+            "work_ms": 25.96373,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.747157,
+            "work_ms": 34.744757
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 14,
+            "mean_w": 3.4785714285714282,
+            "min_w": 3.3,
+            "max_w": 3.62,
+            "energy_j": 0.90501603952857135,
+            "records_per_j": 9051.7732749435745
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 178.693286,
+          "pack_ms": 3.306022,
+          "device_ms": 168.77948,
+          "unpack_ms": 6.592524,
+          "driver_reported_ms": 19.196,
+          "bytes_to_device": 4718592,
+          "bytes_from_device": 2359296,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          479.93539,
+          482.007031,
+          483.723898
+        ],
+        "wall_ms": 482.007031,
+        "records_per_s": 33991.20541044556,
+        "batches_per_s": 16.597268266819121,
+        "cpu_utilization": 0.39415763211138721,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 257.634557,
+            "work_ms": 257.621727,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 417.02225,
+            "work_ms": 383.675918,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 37.468806,
+            "work_ms": 37.460966,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 383.468116,
+            "work_ms": 52.179203,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.824208,
+            "work_ms": 69.819498
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 25,
+            "mean_w": 3.5416,
+            "min_w": 3.3,
+            "max_w": 3.86,
+            "energy_j": 1.7070761009895998,
+            "records_per_j": 9597.697484313745
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 357.848188,
+          "pack_ms": 7.164137,
+          "device_ms": 337.483639,
+          "unpack_ms": 13.168452,
+          "driver_reported_ms": 37.944,
+          "bytes_to_device": 9437184,
+          "bytes_from_device": 4718592,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1083.807089,
+          1084.461837,
+          1085.779469
+        ],
+        "wall_ms": 1084.461837,
+        "records_per_s": 35088.371671302986,
+        "batches_per_s": 17.520210810332092,
+        "cpu_utilization": 0.42098231069425823,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 615.585379,
+            "work_ms": 615.551629,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 1027.586958,
+            "work_ms": 913.790109,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 91.633338,
+            "work_ms": 91.615798,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 669.137552,
+            "work_ms": 125.719596,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 165.383854,
+            "work_ms": 165.371933
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 54,
+            "mean_w": 3.5885185185185184,
+            "min_w": 3.31,
+            "max_w": 3.88,
+            "energy_j": 3.8916113847011116,
+            "records_per_j": 9777.9547437834717
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 849.333795,
+          "pack_ms": 16.512705,
+          "device_ms": 801.424142,
+          "unpack_ms": 31.320017,
+          "driver_reported_ms": 89.625,
+          "bytes_to_device": 22413312,
+          "bytes_from_device": 11206656,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          97.391694,
+          97.443325,
+          97.512105
+        ],
+        "wall_ms": 97.443325,
+        "records_per_s": 21017.345210664764,
+        "batches_per_s": 10.262375591144904,
+        "cpu_utilization": 0.24645094982134486,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 31.99902,
+            "work_ms": 31.99807,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 45.752148,
+            "work_ms": 45.721987,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.616316,
+            "work_ms": 4.615006,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 6.386494,
+            "work_ms": 6.383664,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.674007,
+            "work_ms": 8.673617
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.385,
+            "min_w": 3.31,
+            "max_w": 3.47,
+            "energy_j": 0.32984565512499997,
+            "records_per_j": 6208.9646117178036
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 42.621696,
+          "pack_ms": 0.667265,
+          "device_ms": 42.080471,
+          "unpack_ms": 1.666195,
+          "driver_reported_ms": 4.558,
+          "bytes_to_device": 1179648,
+          "bytes_from_device": 589824,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          194.877079,
+          195.046161,
+          195.238492
+        ],
+        "wall_ms": 195.04616099999998,
+        "records_per_s": 21000.15698335124,
+        "batches_per_s": 10.253982902026973,
+        "cpu_utilization": 0.24225162780824996,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.190362,
+            "work_ms": 64.188532,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 91.457404,
+            "work_ms": 91.399724,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.296354,
+            "work_ms": 9.294344,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 12.805558,
+            "work_ms": 12.799438,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.281263,
+            "work_ms": 17.280063
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 11,
+            "mean_w": 3.377272727272727,
+            "min_w": 3.31,
+            "max_w": 3.47,
+            "energy_j": 0.65872408010454542,
+            "records_per_j": 6218.0814755548754
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 85.253464,
+          "pack_ms": 1.319826,
+          "device_ms": 84.185951,
+          "unpack_ms": 3.298733,
+          "driver_reported_ms": 9.138,
+          "bytes_to_device": 2359296,
+          "bytes_from_device": 1179648,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          389.625607,
+          389.833569,
+          390.307844
+        ],
+        "wall_ms": 389.833569,
+        "records_per_s": 21014.0958897257,
+        "batches_per_s": 10.260789008655127,
+        "cpu_utilization": 0.24297291852770125,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 127.933059,
+            "work_ms": 127.928839,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 183.04676,
+            "work_ms": 182.928679,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.606207,
+            "work_ms": 18.602127,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 25.576346,
+            "work_ms": 25.564806,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.653387,
+            "work_ms": 34.650637
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 21,
+            "mean_w": 3.387142857142857,
+            "min_w": 3.3,
+            "max_w": 3.51,
+            "energy_j": 1.320421988712857,
+            "records_per_j": 6204.0772344192292
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 170.558595,
+          "pack_ms": 2.870082,
+          "device_ms": 168.397796,
+          "unpack_ms": 6.643895,
+          "driver_reported_ms": 18.224,
+          "bytes_to_device": 4718592,
+          "bytes_from_device": 2359296,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          779.87484,
+          780.198183,
+          780.945451
+        ],
+        "wall_ms": 780.198183,
+        "records_per_s": 20999.792561680446,
+        "batches_per_s": 10.25380496175803,
+        "cpu_utilization": 0.24544148419274131,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 256.373523,
+            "work_ms": 256.363753,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 366.698066,
+            "work_ms": 366.436114,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 36.681357,
+            "work_ms": 36.671857,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 51.190352,
+            "work_ms": 51.166972,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.225513,
+            "work_ms": 69.220212
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 40,
+            "mean_w": 3.3822500000000004,
+            "min_w": 3.31,
+            "max_w": 3.49,
+            "energy_j": 2.6388253044517502,
+            "records_per_j": 6208.823286770772
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 341.628297,
+          "pack_ms": 5.562175,
+          "device_ms": 337.336925,
+          "unpack_ms": 13.203154,
+          "driver_reported_ms": 37.21,
+          "bytes_to_device": 9437184,
+          "bytes_from_device": 4718592,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "serial",
+        "capacity": 0,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1850.70314,
+          1852.544928,
+          1853.354896
+        ],
+        "wall_ms": 1852.544928,
+        "records_per_s": 20540.3925296866,
+        "batches_per_s": 10.256161517503559,
+        "cpu_utilization": 0.24282960332069203,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 607.104181,
+            "work_ms": 607.08236,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 871.569128,
+            "work_ms": 870.972112,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 87.637277,
+            "work_ms": 87.615367,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 121.99653,
+            "work_ms": 121.94056,
+            "queue_high_water_after": 0
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 164.189891,
+            "work_ms": 164.178751
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 92,
+            "mean_w": 3.3821739130434771,
+            "min_w": 3.29,
+            "max_w": 3.51,
+            "energy_j": 6.2656291282226064,
+            "records_per_j": 6073.1331557114281
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 812.647371,
+          "pack_ms": 13.722569,
+          "device_ms": 802.303472,
+          "unpack_ms": 31.553586,
+          "driver_reported_ms": 89.549,
+          "bytes_to_device": 22413312,
+          "bytes_from_device": 11206656,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 1,
+        "records": 2048,
+        "wall_ms_repeats": [
+          97.870759,
+          98.071311,
+          98.149192
+        ],
+        "wall_ms": 98.071311,
+        "records_per_s": 20882.763563750057,
+        "batches_per_s": 10.196661896362333,
+        "cpu_utilization": 0.24285389638566166,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 32.012281,
+            "work_ms": 32.010881,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 46.06217,
+            "work_ms": 46.02986,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 4.621736,
+            "work_ms": 4.620226,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 6.386924,
+            "work_ms": 6.384144,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 8.640136,
+            "work_ms": 8.639496
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 6,
+            "mean_w": 3.3949999999999996,
+            "min_w": 3.31,
+            "max_w": 3.46,
+            "energy_j": 0.33295210084499993,
+            "records_per_j": 6151.0349230486181
+          }
+        ],
+        "backend_stats": {
+          "batches": 2,
+          "jobs": 9,
+          "wall_ms": 42.923949,
+          "pack_ms": 0.74475,
+          "device_ms": 42.377803,
+          "unpack_ms": 1.649377,
+          "driver_reported_ms": 4.862,
+          "bytes_to_device": 1179648,
+          "bytes_from_device": 589824,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 2,
+        "records": 4096,
+        "wall_ms_repeats": [
+          148.106182,
+          148.525996,
+          149.788318
+        ],
+        "wall_ms": 148.525996,
+        "records_per_s": 27577.663912787364,
+        "batches_per_s": 13.465656207415705,
+        "cpu_utilization": 0.32413012736167746,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 64.207582,
+            "work_ms": 64.204402,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 92.346864,
+            "work_ms": 92.258773,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 9.848579,
+            "work_ms": 9.846119,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 53.894139,
+            "work_ms": 12.935319,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 17.423595,
+            "work_ms": 17.422825
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 9,
+            "mean_w": 3.45,
+            "min_w": 3.33,
+            "max_w": 3.61,
+            "energy_j": 0.5124146862,
+            "records_per_j": 7993.5257718224238
+          }
+        ],
+        "backend_stats": {
+          "batches": 4,
+          "jobs": 18,
+          "wall_ms": 85.908999,
+          "pack_ms": 1.793626,
+          "device_ms": 84.818239,
+          "unpack_ms": 3.300893,
+          "driver_reported_ms": 9.388,
+          "bytes_to_device": 2359296,
+          "bytes_from_device": 1179648,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 4,
+        "records": 8192,
+        "wall_ms_repeats": [
+          254.92067,
+          257.096001,
+          257.500196
+        ],
+        "wall_ms": 257.096001,
+        "records_per_s": 31863.583906931322,
+        "batches_per_s": 15.55839057955631,
+        "cpu_utilization": 0.37244453288870877,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 128.743028,
+            "work_ms": 128.738137,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 205.059011,
+            "work_ms": 185.221413,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 18.620275,
+            "work_ms": 18.616215,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 113.88481,
+            "work_ms": 26.018051,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 34.751667,
+            "work_ms": 34.749037
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 14,
+            "mean_w": 3.5235714285714281,
+            "min_w": 3.32,
+            "max_w": 3.77,
+            "energy_j": 0.90589612352357141,
+            "records_per_j": 9042.9794181439
+          }
+        ],
+        "backend_stats": {
+          "batches": 8,
+          "jobs": 36,
+          "wall_ms": 172.178133,
+          "pack_ms": 3.521469,
+          "device_ms": 169.973099,
+          "unpack_ms": 6.648516,
+          "driver_reported_ms": 18.919,
+          "bytes_to_device": 4718592,
+          "bytes_from_device": 2359296,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 8,
+        "records": 16384,
+        "wall_ms_repeats": [
+          466.837399,
+          466.91203,
+          467.822369
+        ],
+        "wall_ms": 466.91202999999996,
+        "records_per_s": 35090.121794463084,
+        "batches_per_s": 17.133848532452678,
+        "cpu_utilization": 0.40701778448501313,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 256.710304,
+            "work_ms": 256.698124,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 410.583986,
+            "work_ms": 370.755958,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 37.369985,
+            "work_ms": 37.362355,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 321.223452,
+            "work_ms": 52.394743,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 69.625586,
+            "work_ms": 69.620456
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 24,
+            "mean_w": 3.5712500000000005,
+            "min_w": 3.32,
+            "max_w": 3.91,
+            "energy_j": 1.6674595871375002,
+            "records_per_j": 9825.7253887190982
+          }
+        ],
+        "backend_stats": {
+          "batches": 16,
+          "jobs": 72,
+          "wall_ms": 345.025893,
+          "pack_ms": 6.975609,
+          "device_ms": 340.699753,
+          "unpack_ms": 13.254274,
+          "driver_reported_ms": 38.143,
+          "bytes_to_device": 9437184,
+          "bytes_from_device": 4718592,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      },
+      {
+        "backend": "fpga-overlap",
+        "name": "fpga-linux-dma-overlap",
+        "pipeline": "pipelined",
+        "capacity": 2,
+        "batches": 19,
+        "records": 38052,
+        "wall_ms_repeats": [
+          1048.681918,
+          1052.967512,
+          1056.247614
+        ],
+        "wall_ms": 1052.967512,
+        "records_per_s": 36137.867091192842,
+        "batches_per_s": 18.044241425750656,
+        "cpu_utilization": 0.43741686685581238,
+        "stages": [
+          {
+            "stage": "prepare",
+            "busy_ms": 613.656966,
+            "work_ms": 613.624186,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "encrypt",
+            "busy_ms": 987.415504,
+            "work_ms": 880.06384,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "cloud",
+            "busy_ms": 90.133362,
+            "work_ms": 90.114842,
+            "queue_high_water_after": 2
+          },
+          {
+            "stage": "decrypt",
+            "busy_ms": 751.026589,
+            "work_ms": 125.580215,
+            "queue_high_water_after": 1
+          },
+          {
+            "stage": "finish",
+            "busy_ms": 165.725138,
+            "work_ms": 165.713828
+          }
+        ],
+        "power": [
+          {
+            "sensor": "ina260_u14/power1",
+            "samples": 53,
+            "mean_w": 3.5847169811320736,
+            "min_w": 3.32,
+            "max_w": 3.88,
+            "energy_j": 3.7745905208467905,
+            "records_per_j": 10081.093509306918
+          }
+        ],
+        "backend_stats": {
+          "batches": 38,
+          "jobs": 171,
+          "wall_ms": 817.738792,
+          "pack_ms": 17.983147,
+          "device_ms": 807.410614,
+          "unpack_ms": 31.647857,
+          "driver_reported_ms": 88.946,
+          "bytes_to_device": 22413312,
+          "bytes_from_device": 11206656,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      }
+    ]
+  },
+  "notes": [],
+  "final_status": "V5_E2E_PASS"
+}

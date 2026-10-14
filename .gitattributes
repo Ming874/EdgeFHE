@@ -1,0 +1,6 @@
+# Preserve byte identities of the frozen sources and evidence (including CRLF).
+* -text
+*.bin binary
+*.dtbo binary
+*.zip binary
+*.pdf binary

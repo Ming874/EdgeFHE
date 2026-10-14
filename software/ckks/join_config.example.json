@@ -1,0 +1,7 @@
+{
+  "protocol": "edgefhe-ii1-affine-tls-v1",
+  "server_id": "<generate-and-review-locally>",
+  "server_url": "https://<your-server-IP>:18086",
+  "certificate_der_sha256": "<derive-from-your-new-server-certificate>",
+  "token": "<generate-new-64-hex-characters-locally>"
+}

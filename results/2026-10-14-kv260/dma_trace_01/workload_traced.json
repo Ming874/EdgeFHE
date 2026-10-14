@@ -1,0 +1,203 @@
+{
+  "schema": "edgefhe-v5-e2e-1",
+  "tool": "v5_e2e",
+  "label": "dma trace traced",
+  "environment": {
+    "system": "Linux",
+    "release": "5.15.0-1027-xilinx-zynqmp",
+    "machine": "aarch64",
+    "cpu_model": "ARM implementer 0x41 part 0xd03 (Cortex-A53)",
+    "online_cpus": 4,
+    "affinity": "0-3",
+    "pinned": true,
+    "compiler": "11.4.0",
+    "cpufreq": [
+      {
+        "cpu": 0,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 1,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 2,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 3,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      }
+    ],
+    "power_sensors": []
+  },
+  "inputs": {
+    "data": "../data/cdc_diabetes/splits/test.csv",
+    "data_sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304",
+    "model": "../training/outputs/model.json",
+    "model_sha256": "3c33518d11529b78eef7ee8009a10b9f9446235254fe58c510abcb659a03b3d9",
+    "preprocess": "../training/outputs/edge_preprocess.json",
+    "preprocess_sha256": "0ac7d30c5f6009a42ab91c15d614da3378748e480624fe6442018f1540781731",
+    "model_id": "cdc-diabetes-lr4-v1",
+    "records": 38052,
+    "limit": 0,
+    "labelled": true,
+    "features": [
+      "GenHlth",
+      "HighBP",
+      "BMI",
+      "Age"
+    ]
+  },
+  "profile": {
+    "degree": 4096,
+    "slots": 2048,
+    "primes": [
+      998244353,
+      1004535809,
+      469762049
+    ],
+    "input_scale_bits": 29,
+    "output_scale_bits": 58,
+    "sampler": "fixed-weight-ternary-s64-u64-e16",
+    "security_bits": null,
+    "error_bound": 0.00026168289717225511
+  },
+  "device": {
+    "name": "linux-dma",
+    "device_times_are_fpga": true,
+    "opened_by_tool": false
+  },
+  "randomness": "os-getrandom",
+  "settings": {
+    "backends": "fpga-serial",
+    "modes": "latency",
+    "batch_records": 2048,
+    "rounds": 10,
+    "warmup": 2,
+    "repeats": 3,
+    "cloud_workers": 1,
+    "encode_workers": 1,
+    "cloud": "in-process CPU (V4 Engine::affine); identical for every backend",
+    "power_interval_ms": 20
+  },
+  "keygen": [
+    {
+      "backend": "fpga-serial",
+      "keygen_ms": 5.896859,
+      "public_key_sha256": "da74c46d837aadaddfa5a8698b728fdf93b6f13e1623234c0c250c185db16e0e"
+    }
+  ],
+  "latency": {
+    "records_per_batch": 2048,
+    "timed_region": "steps 1-10 for one batch; keygen excluded; cloud in-process",
+    "results": [
+      {
+        "backend": "fpga-serial",
+        "name": "fpga-linux-dma-serial",
+        "steps": [
+          {
+            "step": "standardize",
+            "slide": "1",
+            "time": {
+              "p50_us": 426.224,
+              "p95_us": 451.495,
+              "mean_us": 428.63009999999997
+            }
+          },
+          {
+            "step": "encode",
+            "slide": "2",
+            "time": {
+              "p50_us": 31378.764,
+              "p95_us": 31448.785,
+              "mean_us": 31372.7159
+            }
+          },
+          {
+            "step": "sample",
+            "slide": "3",
+            "time": {
+              "p50_us": 92.921,
+              "p95_us": 94.211,
+              "mean_us": 92.4889
+            }
+          },
+          {
+            "step": "encrypt",
+            "slide": "4-5",
+            "time": {
+              "p50_us": 47896.229,
+              "p95_us": 48103.211,
+              "mean_us": 47842.134399999995
+            }
+          },
+          {
+            "step": "cloud",
+            "slide": "6-8",
+            "time": {
+              "p50_us": 5642.036,
+              "p95_us": 5732.338,
+              "mean_us": 5152.2756
+            }
+          },
+          {
+            "step": "decrypt",
+            "slide": "9",
+            "time": {
+              "p50_us": 6524.606,
+              "p95_us": 6602.566,
+              "mean_us": 6523.9625
+            }
+          },
+          {
+            "step": "decode",
+            "slide": "10",
+            "time": {
+              "p50_us": 8633.146,
+              "p95_us": 8646.617,
+              "mean_us": 8628.8272
+            }
+          }
+        ],
+        "total": {
+          "p50_us": 100240.903,
+          "p95_us": 100743.017,
+          "mean_us": 100084.7359
+        },
+        "edge_only": {
+          "p50_us": 95010.06,
+          "p95_us": 95147.722,
+          "mean_us": 94888.759
+        },
+        "backend_stats": {
+          "batches": 20,
+          "jobs": 90,
+          "wall_ms": 448.912499,
+          "pack_ms": 6.257246,
+          "device_ms": 426.105927,
+          "unpack_ms": 16.512426,
+          "driver_reported_ms": 50.577,
+          "bytes_to_device": 11796480,
+          "bytes_from_device": 5898240,
+          "forward_transforms": 0,
+          "inverse_transforms": 0
+        }
+      }
+    ]
+  },
+  "notes": [],
+  "final_status": "V5_E2E_PASS"
+}

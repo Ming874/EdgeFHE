@@ -1,0 +1,53 @@
+           CPU0       CPU1       CPU2       CPU3       
+  9:          0          0          0          0     GICv2  25 Level     vgic
+ 11:     565926     840735     571241     580342     GICv2  30 Level     arch_timer
+ 12:          0          0          0          0     GICv2  27 Level     kvm guest vtimer
+ 14:          0          0          0          0     GICv2  67 Level     zynqmp-ipi
+ 15:          0          0          0          0     GICv2 175 Level     arm-pmu
+ 16:          0          0          0          0     GICv2 176 Level     arm-pmu
+ 17:          0          0          0          0     GICv2 177 Level     arm-pmu
+ 18:          0          0          0          0     GICv2 178 Level     arm-pmu
+ 19:          0          0          0          0     GICv2 156 Level     zynqmp-dma
+ 20:          0          0          0          0     GICv2 157 Level     zynqmp-dma
+ 21:          0          0          0          0     GICv2 158 Level     zynqmp-dma
+ 22:          0          0          0          0     GICv2 159 Level     zynqmp-dma
+ 23:          0          0          0          0     GICv2 160 Level     zynqmp-dma
+ 24:          0          0          0          0     GICv2 161 Level     zynqmp-dma
+ 25:          0          0          0          0     GICv2 162 Level     zynqmp-dma
+ 26:          0          0          0          0     GICv2 163 Level     zynqmp-dma
+ 27:       3939          0          0          0     GICv2 164 Level     Mali_GP_MMU, Mali_GP, Mali_PP0_MMU, Mali_PP0, Mali_PP1_MMU, Mali_PP1
+ 28:          0          0          0          0     GICv2 109 Level     zynqmp-dma
+ 29:          0          0          0          0     GICv2 110 Level     zynqmp-dma
+ 30:          0          0          0          0     GICv2 111 Level     zynqmp-dma
+ 31:          0          0          0          0     GICv2 112 Level     zynqmp-dma
+ 32:          0          0          0          0     GICv2 113 Level     zynqmp-dma
+ 33:          0          0          0          0     GICv2 114 Level     zynqmp-dma
+ 34:          0          0          0          0     GICv2 115 Level     zynqmp-dma
+ 35:          0          0          0          0     GICv2 116 Level     zynqmp-dma
+ 37:          0          0          0          0     GICv2  95 Level     eth0, eth0
+ 39:        754          0          0          0     GICv2  50 Level     cdns-i2c
+ 40:          0          0          0          0     GICv2  42 Level     ff960000.memory-controller
+ 41:          0          0          0          0     GICv2  57 Level     axi-pmon, axi-pmon
+ 42:          0          0          0          0     GICv2 155 Level     axi-pmon, axi-pmon
+ 43:     279971          0          0          0     GICv2  47 Level     ff0f0000.spi
+ 44:          0          0          0          0     GICv2  58 Level     ffa60000.rtc
+ 45:          0          0          0          0     GICv2  59 Level     ffa60000.rtc
+ 46:     118199          0          0          0     GICv2  81 Level     mmc1
+ 47:        344          0          0          0     GICv2  52 Level     ff050000.spi
+ 51:      46428          0          0          0     GICv2  54 Level     xuartps
+ 53:          0          0          0          0     GICv2  84 Edge      ff150000.watchdog
+ 54:          0          0          0          0     GICv2  88 Level     ams-irq
+ 55:      45610          0          0          0     GICv2 154 Level     fd4c0000.dma-controller
+ 56:    3485417          0          0          0     GICv2 151 Level     fd4a0000.display
+ 57:         79          0          0          0     GICv2  97 Level     xhci-hcd:usb1
+ 60:          0          0          0          0  zynq-gpio  12 Edge      fwuen
+ 61:          0          0          0          0     GICv2 121 Level     xilinx-dma-controller
+ 62:          0          0          0          0     GICv2 136 Level     xilinx-dma-controller
+IPI0:     18192      39005      51878      41407       Rescheduling interrupts
+IPI1:     92763     167404     183359     163072       Function call interrupts
+IPI2:         0          0          0          0       CPU stop interrupts
+IPI3:         0          0          0          0       CPU stop (for crash dump) interrupts
+IPI4:    145525     112962     140518     144919       Timer broadcast interrupts
+IPI5:         0          0          0          0       IRQ work interrupts
+IPI6:         0          0          0          0       CPU wake-up interrupts
+Err:          0

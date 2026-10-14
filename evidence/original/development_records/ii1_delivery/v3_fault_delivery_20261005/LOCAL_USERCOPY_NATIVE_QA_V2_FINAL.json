@@ -1,0 +1,37 @@
+{
+  "status": "PASS_LOCAL_USERCOPY_NATIVE_MMAP_MOCK_NOT_BOARD",
+  "CPU_cases": 25,
+  "CPU_coefficients": 307200,
+  "real_mmap_mprotect": true,
+  "simulated_kernel_copy": "process_vm_readv/writev on same process",
+  "positive": {
+    "ioctls": 24,
+    "expected_EFAULT": 12,
+    "input_fault_zero_DMA": 6,
+    "descriptor_fault_completed_DMA": 6,
+    "normal_recovery_probes": 12,
+    "DMA": 18,
+    "coefficients": 221184,
+    "padding": 73728,
+    "raw_RX_bytes": 1179648,
+    "independently_compared_RX_packets": 18,
+    "IRQ_before": {
+      "rx": 5802805,
+      "tx": 5802805
+    },
+    "IRQ_after": {
+      "rx": 5802823,
+      "tx": 5802823
+    },
+    "linux_IRQ_ids": {
+      "rx": 62,
+      "tx": 61
+    }
+  },
+  "negative_wrong_errno_row": 7,
+  "ASAN_UBSAN": "no diagnostic",
+  "architecture_rejected_before_device_open": true,
+  "limitations": [
+    "Fake ioctl models usercopy and returns frozen gold; not real kernel, FPGA, DMA or board fault proof"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS_LOCAL_CONNECTED_CONCURRENCY_ACCEPTANCE_USERCOPY_TOOL_AND_CONDITIONAL_LIFECYCLE_BATCH_NOT_RELEASE",
+  "formal_concurrency_jobs": 2000,
+  "accepted_history": 5802783,
+  "accepted_IRQ_totals": {
+    "121": 5802805,
+    "136": 5802805
+  },
+  "local_protocol_guards": 31,
+  "local_failure_flows": 8,
+  "lifecycle_scenarios": 4,
+  "lifecycle_negative_counterexamples": 2,
+  "usercopy_board_status": "PENDING_USER_RUN_24_IOCTL_18_DMA",
+  "usercopy_package_SHA256SUMS_sha256": "d19feba9d4170ba4bbb342b15ff801914cd3cea8d9656c84d7f600127bfcc531",
+  "checked_run_markers": {
+    "20261006-usercopy-final-irq-native-qa": "LOCAL_USERCOPY_NATIVE_QA_PASS",
+    "20261006-usercopy-final-irq-protocol-qa": "LOCAL_USERCOPY_PROTOCOL_QA_PASS guards=31",
+    "20261006-usercopy-final-irq-eight-failure-flows": "LOCAL_USERCOPY_FAILURE_FLOWS_QA_PASS cases=8",
+    "20261006-usercopy-final-irq-clean-zip-cpu-reproduction": "CLEAN_USERCOPY_REPRODUCTION_PASS",
+    "20261006-usercopy-final-irq-windows-package-qa": "FINAL_WINDOWS_USERCOPY_V2_QA_PASS",
+    "20261005-lifecycle-exact-c-host-model-v1": "FROZEN_LIFECYCLE_MODEL_ACCEPTED_PASS"
+  },
+  "artifacts_sha256": {
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json": "f05564552e46c655d8839c2529432615ae891da8425e310fbfa3a3aa5bb86136",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json": "2e291ed4297653f05fb144251f039656145a75f2e11a46848f68d698379a148e",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json": "708ade22df6c4d76c5e35a0eba887dfbb2c053e1cc395f334267789d5130d143",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json": "3fd9f7f9df42c92efc35b39b15a588d78a397d936db09bc3f962fe520e048f1d",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_FAILURE_FLOWS_QA_V2_FINAL.json": "a82a40e9731abaefd89459301d1d9c7bf0eff2fefd5903ba6f9c66b641715f1a",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json": "8298b11a5854807d8f641ce753fd810520ad24d57ca5ba97966323e787c9884c",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json": "365dfe987954b0ee01e6eb09363b92be5a3b8a408fc49a88041cf7a4a97db83d",
+    "development_records/board_packages/ii1-v3-usercopy-faults-20261005-v2/SHA256SUMS": "d19feba9d4170ba4bbb342b15ff801914cd3cea8d9656c84d7f600127bfcc531",
+    "development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json": "35f04a8b15b60b8c48500f16625f4020f22c8b513fc08bc2166a9b90ae37a494",
+    "development_records/PROGRESS_AND_HANDOFF_zh-TW.md": "9ef05ad8db68a2cad4bc48a35cc59af23ccc13b38cb116521fea12b800826560",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RELEASE_READINESS_zh-TW.md": "e5ec3cfc2ea92ae27650d7eee61704a2d48f10a661e0b24b93de652ea53dcebb",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/FAULT_LIFECYCLE_AND_BATCH_REPORT_zh-TW.md": "c475c1540e4725dabd03fac91589c15733637ce95dac624301413e5f053b0af0"
+  },
+  "assistant_board_operations": 0,
+  "subagents": 0,
+  "formal_release_accepted": false
+}

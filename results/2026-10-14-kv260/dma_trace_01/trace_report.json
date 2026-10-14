@@ -1,0 +1,135 @@
+{
+  "schema": "edgefhe-dma-trace-1",
+  "status": "DMA_TRACE_COMPLETE mode=fine calls=109",
+  "device": "/dev/edgefhe_rns3_n4096_dma",
+  "device_opened_by_tool": false,
+  "started_utc": "2026-10-14T04:26:21Z",
+  "workload": {
+    "backend": "fpga-serial",
+    "rounds": 10,
+    "warmup": 2,
+    "cpus": "0-3",
+    "v5_e2e_sha256": "67299b0f1add9375e2340d8075c5782e6b6b4d41940f3f29de58137c9e352283"
+  },
+  "module": {
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "loaded": true,
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko": "/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/firmware/prebuilt/ubuntu-22.04-5.15.0-1027-xilinx-zynqmp/edgefhe_rns3_n4096_dma_proxy.ko",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "kallsyms": {
+      "$x": "0xffffdd5e06891230",
+      "arch_local_irq_save": "0xffffdd5e06890000",
+      "$d": "0xffffdd5e06892524",
+      "edgefhe_dma_callback": "0xffffdd5e06890034",
+      "edgefhe_wipe_buffers": "0xffffdd5e06890070",
+      "edgefhe_probe": "0xffffdd5e068900c4",
+      "edgefhe_release": "0xffffdd5e06890530",
+      "edgefhe_open": "0xffffdd5e068905e0",
+      "edgefhe_remove": "0xffffdd5e068906a4",
+      "_copy_from_user": "0xffffdd5e06890870",
+      "edgefhe_submit_transfer": "0xffffdd5e06890a10",
+      "edgefhe_ioctl": "0xffffdd5e06891000",
+      "edgefhe_driver_exit": "0xffffdd5e06891230",
+      "edgefhe_of_match": "0xffffdd5e06892350",
+      "edgefhe_fops": "0xffffdd5e06892248",
+      "edgefhe_driver": "0xffffdd5e06894048",
+      "__key.4": "0xffffdd5e068944c0",
+      "__key.5": "0xffffdd5e068944c0",
+      "_note_9": "0xffffdd5e06892524",
+      "_note_8": "0xffffdd5e0689253c",
+      "__this_module": "0xffffdd5e06894140",
+      "__mod_of__edgefhe_of_match_device_table": "0xffffdd5e06892350",
+      "cleanup_module": "0xffffdd5e06891230"
+    }
+  },
+  "marks_used": true,
+  "marks_skipped_because": [],
+  "dma_policy": {
+    "retry": false,
+    "reset": false,
+    "stop_on_first_failure": true,
+    "requests_in_flight": 1
+  },
+  "tracefs": "/sys/kernel/tracing",
+  "baseline": {
+    "json": "workload_baseline.json",
+    "seconds": 2.0,
+    "calls_measured": 90,
+    "device_ms_per_call": 4.6768,
+    "driver_reported_ms_per_call": 0.5457,
+    "pack_ms_per_call": 0.0692,
+    "unpack_ms_per_call": 0.183
+  },
+  "tracing_before": {
+    "tracing_on": "1",
+    "current_tracer": "nop",
+    "max_graph_depth": "0",
+    "buffer_size_kb": "1408",
+    "trace_clock": "local",
+    "options": {
+      "funcgraph-abstime": "0",
+      "funcgraph-tail": "0",
+      "funcgraph-irqs": "1",
+      "funcgraph-proc": "0",
+      "funcgraph-cpu": "1",
+      "funcgraph-duration": "1",
+      "funcgraph-overhead": "1",
+      "sleep-time": "1"
+    }
+  },
+  "tracing": {
+    "filter": [
+      "edgefhe_ioctl",
+      "edgefhe_submit_transfer",
+      "edgefhe_wipe_buffers",
+      "mutex_lock",
+      "mutex_unlock",
+      "__check_object_size",
+      "__init_swait_queue_head",
+      "__msecs_to_jiffies",
+      "ktime_get",
+      "wait_for_completion_timeout",
+      "completion_done",
+      "xilinx_dma_*"
+    ],
+    "options": {
+      "funcgraph-abstime": "1",
+      "funcgraph-tail": "1",
+      "funcgraph-irqs": "0",
+      "funcgraph-proc": "1",
+      "funcgraph-cpu": "1",
+      "funcgraph-duration": "1",
+      "funcgraph-overhead": "1",
+      "sleep-time": "1"
+    },
+    "graph_function": "edgefhe_ioctl",
+    "max_graph_depth": 3,
+    "trace_clock": "mono",
+    "buffer_size_kb": 4096,
+    "kprobes": [
+      "p:edgefhe_trace/copied_in edgefhe_rns3_n4096_dma_proxy:edgefhe_submit_transfer+0xf0  # ldr w0, [x20, #0x8]: _copy_from_user returned",
+      "p:edgefhe_trace/validated edgefhe_rns3_n4096_dma_proxy:edgefhe_submit_transfer+0x1b8  # ldr x0, [x23, #0xb0]: canonical-residue loop done",
+      "p:edgefhe_trace/cleared edgefhe_rns3_n4096_dma_proxy:edgefhe_submit_transfer+0x1cc  # ldr x0, [x23, #0xa0]: memset of the RX buffer returned",
+      "p:edgefhe_trace/copied_out edgefhe_rns3_n4096_dma_proxy:edgefhe_submit_transfer+0x52c  # mov x21, x0: __arch_copy_to_user returned"
+    ]
+  },
+  "traced": {
+    "json": "workload_traced.json",
+    "seconds": 2.0,
+    "calls_measured": 90,
+    "device_ms_per_call": 4.7345,
+    "driver_reported_ms_per_call": 0.562,
+    "pack_ms_per_call": 0.0695,
+    "unpack_ms_per_call": 0.1835
+  },
+  "overrun_events": 0,
+  "restore_errors": [],
+  "breakdown": {
+    "mode": "fine",
+    "calls": 109,
+    "complete_calls": 109,
+    "skipped": {}
+  },
+  "finished_utc": "2026-10-14T04:26:28Z"
+}

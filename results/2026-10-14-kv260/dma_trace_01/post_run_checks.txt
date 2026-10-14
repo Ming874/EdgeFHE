@@ -1,0 +1,31 @@
+Wed Oct 14 04:27:12 UTC 2026
+current_tracer: nop
+tracing_on: 1
+trace_clock: [local] global counter uptime perf mono mono_raw boot
+buffer_size_kb: 1408
+max_graph_depth: 0
+kprobe_events lines: 0
+set_ftrace_filter: #### all functions enabled ####
+set_graph_function: #### all functions enabled ####
+events dir: ls: cannot access '/sys/kernel/tracing/events/edgefhe_trace': Permission denied
+--- dmesg tail
+[  297.073625] audit: type=1400 audit(1791944737.840:47): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=2120 comm="cupsd" capability=12  capname="net_admin"
+[  297.134554] audit: type=1400 audit(1791944737.900:48): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=2122 comm="cups-browsed" capability=23  capname="sys_nice"
+[  455.704350] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[  455.714493] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[  455.724175] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_afi
+[  455.734629] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_dma
+[  455.745077] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_proxy
+[  455.759607] xilinx-vdma a0000000.dma: Please ensure that IP supports buffer length > 23 bits
+[  455.759916] xilinx-vdma a0000000.dma: Xilinx AXI DMA Engine Driver Probed!!
+[  456.463988] edgefhe_rns3_n4096_dma_proxy: loading out-of-tree module taints kernel.
+[  456.464127] edgefhe_rns3_n4096_dma_proxy: module verification failed: signature and/or required key missing - tainting kernel
+[  456.466433] edgefhe-rns3-n4096-dma-proxy a0010000.edgefhe-ii1-proxy: EdgeFHE RNS3 parallel N=4096 DMA proxy ready: mode=dmaengine-irq ii1-guarded-v3 tx=0x00000000361c0000 rx=0x00000000361f0000
+--- trace_report
+DMA_TRACE_COMPLETE mode=fine calls=109 restore_errors [] overrun 0
+before {'tracing_on': '1', 'current_tracer': 'nop', 'max_graph_depth': '0', 'buffer_size_kb': '1408', 'trace_clock': 'local', 'options': {'funcgraph-abstime': '0', 'funcgraph-tail': '0', 'funcgraph-irqs': '1', 'funcgraph-proc': '0', 'funcgraph-cpu': '1', 'funcgraph-duration': '1', 'funcgraph-overhead': '1', 'sleep-time': '1'}}
+- Records: 38,052 (../data/cdc_diabetes/splits/test.csv), model `cdc-diabetes-lr4-v1`
+- Machine: aarch64, ARM implementer 0x41 part 0xd03 (Cortex-A53), 4 CPUs, affinity 0-3 (pinned), cpufreq governor userspace
+- Randomness: os-getrandom; cloud: in-process CPU (V4 Engine::affine); identical for every backend; step 2 encode threads: 4
+- Files: stage2_03/e2e_all.json
+- Fairness checks: pass

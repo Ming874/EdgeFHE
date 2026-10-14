@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "packaging_revision": "native-v4-candidate-20261007",
+  "python_minimum": "3.10",
+  "pip_dependencies": [],
+  "native_os": "Linux (including WSL)",
+  "cxx_standard": "C++17",
+  "cmake_minimum": "3.20",
+  "validated_host": {
+    "Windows_Python": "3.12.14",
+    "WSL_distribution": "Ubuntu-24.04",
+    "WSL_GCC": "13.3.0",
+    "WSL_CMake": "3.28.3"
+  },
+  "historical_board": {
+    "architecture": "aarch64",
+    "Ubuntu": "22.04.4",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "compiler": "GCC 11.4.0"
+  },
+  "hardware_tools": {
+    "Vitis_HLS": "2022.1",
+    "Vivado": "2022.1",
+    "part": "xck26-sfvc784-2LV-c"
+  },
+  "kernel_module": "Optional exact accepted V3 binary for its original kernel only; otherwise build against matching headers and preserve new identities. V4 fault draft must not be deployed.",
+  "not_in_repository": [
+    "Ubuntu image",
+    "kernel headers",
+    "AMD tool installations/licenses",
+    "OpenFHE source/libraries",
+    "deployment secrets",
+    "boot firmware",
+    "cross-kernel or V4 prebuilt kernel module"
+  ],
+  "acceptance": "Portable source entry points do not establish all developer environments or new board acceptance."
+}

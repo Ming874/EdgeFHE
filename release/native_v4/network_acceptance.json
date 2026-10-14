@@ -1,0 +1,48 @@
+{
+  "status": "DYNAMIC_PRIVATE_INPUT_LOCAL_MTLS_PASS",
+  "board_operations": 0,
+  "network_scope": "127.0.0.1 only",
+  "failures": [],
+  "dynamic_batches": [
+    {
+      "records": 1,
+      "max_logit_error": 5.781971168516975e-08,
+      "bound": 0.0002685752525828072,
+      "port": 49223
+    },
+    {
+      "records": 17,
+      "max_logit_error": 1.9132605189042806e-07,
+      "bound": 0.0002685752525828072,
+      "port": 49223
+    },
+    {
+      "records": 2048,
+      "max_logit_error": 4.7007688053213315e-07,
+      "bound": 0.0002685752525828072,
+      "port": 49223
+    },
+    {
+      "records": 1,
+      "max_logit_error": 2.1784396508905957e-08,
+      "bound": 0.0002685752525828072,
+      "port": 44217
+    },
+    {
+      "records": 17,
+      "max_logit_error": 1.872261988777879e-07,
+      "bound": 0.0002685752525828072,
+      "port": 44217
+    },
+    {
+      "records": 2048,
+      "max_logit_error": 7.606456122744021e-07,
+      "bound": 0.0002685752525828072,
+      "port": 44217
+    }
+  ],
+  "checks": 29,
+  "fixture_dependency": false,
+  "private_server_body_logging": false,
+  "role_key_isolation": "process/code/API boundary; same-host loopback QA only"
+}

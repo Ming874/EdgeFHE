@@ -1,0 +1,2 @@
+OPENFHE_STANDARD_PROFILE N=4096 batch=2048 configured_security=HEStd_128_classic secret=UNIFORM_TERNARY scale_bits=29 moduli=1073692673,536813569,536903681, threads=4 omp_max=4
+OPENFHE_STANDARD_CLIENT_BENCHMARK_PASS rounds=30 threads=4 slots=2048 max_error=0.000254537 board=0

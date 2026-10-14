@@ -1,0 +1,20 @@
+{
+  "status": "PASS_KO_MOD_C_MODINFO_EXACT_IDENTITY",
+  "srcversion": "6BDCA74AD872B2765D36882",
+  "srcversion_characters": 23,
+  "version": "ii1-guarded-v3",
+  "vermagic": "5.15.0-1027-xilinx-zynqmp SMP mod_unload modversions aarch64",
+  "elf_class": 64,
+  "elf_endianness": "little",
+  "elf_machine": "AArch64",
+  "elf_type": "ET_REL",
+  "limits": [
+    "srcversion is metadata; SHA256 records exact bytes; no signature/source-build attestation"
+  ],
+  "sha256": {
+    "driver/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+    "driver/edgefhe_rns3_n4096_dma_proxy.ko": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "driver/edgefhe_rns3_n4096_dma_proxy.mod.c": "b8efa3d277b88b31ae3c4e5a35d5cc0d55bf5b0f88dbbe9b8bb67ef219776fa7",
+    "driver/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84"
+  }
+}

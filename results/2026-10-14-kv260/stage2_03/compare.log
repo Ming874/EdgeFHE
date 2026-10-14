@@ -1,0 +1,141 @@
+# A/B comparison: pure software (A) vs hardware/software (B)
+
+- Records: 38,052 (../data/cdc_diabetes/splits/test.csv), model `cdc-diabetes-lr4-v1`
+- Machine: aarch64, ARM implementer 0x41 part 0xd03 (Cortex-A53), 4 CPUs, affinity 0-3 (pinned), cpufreq governor userspace
+- Randomness: os-getrandom; cloud: in-process CPU (V4 Engine::affine); identical for every backend; step 2 encode threads: 4
+- Files: stage2_03/e2e_all.json
+- Fairness checks: pass
+
+## 1. Correctness (gate)
+
+| Backend | Group | Pass | Max logit diff | Disagree | Uncertain | Cipher SHA-256 | File |
+|---|---|---|---|---|---|---|---|
+| cpu-w1 | A | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+| cpu-w2 | A | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+| cpu-w3 | A | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+| cpu-w4 | A | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+| fpga-serial | B | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+| fpga-overlap | B | yes | 4.47e-07 | 0 | 1 | e078ae62e2acc35c | stage2_03/e2e_all.json |
+
+Bit-exact across all backends within each run: **yes** (different runs use fresh OS randomness, so their digests differ by design).
+
+## 2. Latency of one batch (ms, p50 unless noted)
+
+Edge = steps 1-5 and 9-10 on the board; the in-process cloud step is shown separately.
+
+| Backend | Group | Edge p50 | Edge p95 | Encrypt | Decrypt | Cloud | Total | Speedup vs cpu-w1 (same file) |
+|---|---|---|---|---|---|---|---|---|
+| cpu-w1 | A | 63.77 | 63.86 | 38.38 | 7.86 | 4.54 | 68.37 | 1.00 |
+| cpu-w2 | A | 46.02 | 46.18 | 23.33 | 5.18 | 4.54 | 50.63 | 1.39 |
+| cpu-w3 | A | 39.74 | 43.31 | 18.41 | 3.82 | 4.55 | 44.33 | 1.60 |
+| cpu-w4 | A | 37.40 | 42.75 | 16.17 | 3.74 | 4.53 | 42.00 | 1.70 |
+| fpga-serial | B | 71.26 | 73.03 | 47.27 | 6.46 | 4.58 | 75.91 | 0.89 |
+| fpga-overlap | B | 69.91 | 70.18 | 45.98 | 6.45 | 4.53 | 74.51 | 0.91 |
+
+### Group A scaling, encrypt step (stage2_03/e2e_all.json)
+
+| Workers | Encrypt p50 ms | Speedup | Efficiency |
+|---|---|---|---|
+| 1 | 38.38 | 1.00 | 1.00 |
+| 2 | 23.33 | 1.64 | 0.82 |
+| 3 | 18.41 | 2.08 | 0.69 |
+| 4 | 16.17 | 2.37 | 0.59 |
+
+### Group B breakdown per product (ms)
+
+Device call = the whole ioctl seen by the program; driver-reported = the driver's own DMA+PL window.
+
+| Backend | Pack | Device call | Unpack | Driver-reported | KiB moved |
+|---|---|---|---|---|---|
+| fpga-serial | 0.07 | 4.67 | 0.18 | 0.53 | 192.00 |
+| fpga-overlap | 0.08 | 4.70 | 0.18 | 0.53 | 192.00 |
+
+**Latency, best A vs best B:** cpu-w4 37.40 ms vs fpga-overlap 69.91 ms → B/A speed = **0.54×** (B is slower).
+
+## 3. Throughput (stream of batches)
+
+| Backend | Group | Pipeline | Batches | Records/s | Gain vs serial | CPU util | Mean W | Records/J |
+|---|---|---|---|---|---|---|---|---|
+| cpu-w1 | A | serial | 1 | 26,906.08 | – | 0.31 | 3.40 | 7,904.25 |
+| cpu-w1 | A | serial | 2 | 29,919.37 | – | 0.34 | 3.43 | 8,726.03 |
+| cpu-w1 | A | serial | 4 | 29,870.62 | – | 0.34 | 3.39 | 8,818.33 |
+| cpu-w1 | A | serial | 8 | 29,881.28 | – | 0.34 | 3.41 | 8,761.92 |
+| cpu-w1 | A | serial | 19 | 29,007.81 | – | 0.34 | 3.41 | 8,503.29 |
+| cpu-w1 | A | pipelined (2) | 1 | 28,748.79 | 1.07 | 0.34 | 3.42 | 8,401.17 |
+| cpu-w1 | A | pipelined (2) | 2 | 35,530.20 | 1.19 | 0.41 | 3.47 | 10,243.47 |
+| cpu-w1 | A | pipelined (2) | 4 | 39,086.85 | 1.31 | 0.45 | 3.48 | 11,239.93 |
+| cpu-w1 | A | pipelined (2) | 8 | 40,865.85 | 1.37 | 0.47 | 3.53 | 11,586.11 |
+| cpu-w1 | A | pipelined (2) | 19 | 41,058.14 | 1.42 | 0.48 | 3.53 | 11,618.32 |
+| cpu-w2 | A | serial | 1 | 40,487.91 | – | 0.46 | – | – |
+| cpu-w2 | A | serial | 2 | 40,398.79 | – | 0.46 | 3.44 | 11,743.83 |
+| cpu-w2 | A | serial | 4 | 40,371.20 | – | 0.46 | 3.47 | 11,631.31 |
+| cpu-w2 | A | serial | 8 | 40,041.56 | – | 0.46 | 3.50 | 11,428.01 |
+| cpu-w2 | A | serial | 19 | 38,831.26 | – | 0.45 | 3.52 | 11,019.47 |
+| cpu-w2 | A | pipelined (2) | 1 | 40,178.37 | 0.99 | 0.46 | – | – |
+| cpu-w2 | A | pipelined (2) | 2 | 48,480.88 | 1.20 | 0.56 | 3.48 | 13,944.64 |
+| cpu-w2 | A | pipelined (2) | 4 | 54,710.99 | 1.36 | 0.63 | 3.64 | 15,021.32 |
+| cpu-w2 | A | pipelined (2) | 8 | 55,615.97 | 1.39 | 0.64 | 3.62 | 15,347.63 |
+| cpu-w2 | A | pipelined (2) | 19 | 58,081.05 | 1.50 | 0.68 | 3.71 | 15,665.51 |
+| cpu-w3 | A | serial | 1 | 46,149.67 | – | 0.53 | – | – |
+| cpu-w3 | A | serial | 2 | 46,305.85 | – | 0.53 | 3.55 | 13,031.67 |
+| cpu-w3 | A | serial | 4 | 46,140.95 | – | 0.53 | 3.62 | 12,732.05 |
+| cpu-w3 | A | serial | 8 | 46,110.66 | – | 0.53 | 3.59 | 12,827.27 |
+| cpu-w3 | A | serial | 19 | 43,968.70 | – | 0.51 | 3.53 | 12,443.71 |
+| cpu-w3 | A | pipelined (2) | 1 | 45,835.46 | 0.99 | 0.53 | – | – |
+| cpu-w3 | A | pipelined (2) | 2 | 56,831.14 | 1.23 | 0.65 | 3.59 | 15,812.78 |
+| cpu-w3 | A | pipelined (2) | 4 | 61,947.46 | 1.34 | 0.71 | 3.66 | 16,908.21 |
+| cpu-w3 | A | pipelined (2) | 8 | 65,344.02 | 1.42 | 0.75 | 3.71 | 17,612.94 |
+| cpu-w3 | A | pipelined (2) | 19 | 65,525.23 | 1.49 | 0.77 | 3.76 | 17,412.55 |
+| cpu-w4 | A | serial | 1 | 48,717.72 | – | 0.56 | – | – |
+| cpu-w4 | A | serial | 2 | 44,636.01 | – | 0.51 | 3.49 | 12,789.69 |
+| cpu-w4 | A | serial | 4 | 48,369.00 | – | 0.55 | 3.54 | 13,659.70 |
+| cpu-w4 | A | serial | 8 | 48,187.02 | – | 0.55 | 3.62 | 13,323.60 |
+| cpu-w4 | A | serial | 19 | 46,844.47 | – | 0.55 | 3.60 | 13,025.92 |
+| cpu-w4 | A | pipelined (2) | 1 | 48,062.18 | 0.99 | 0.56 | – | – |
+| cpu-w4 | A | pipelined (2) | 2 | 55,376.67 | 1.24 | 0.64 | 3.59 | 15,442.46 |
+| cpu-w4 | A | pipelined (2) | 4 | 66,239.38 | 1.37 | 0.76 | 3.72 | 17,813.13 |
+| cpu-w4 | A | pipelined (2) | 8 | 68,383.94 | 1.42 | 0.79 | 3.77 | 18,153.79 |
+| cpu-w4 | A | pipelined (2) | 19 | 66,748.43 | 1.42 | 0.79 | 3.79 | 17,623.78 |
+| fpga-serial | B | serial | 1 | 27,034.78 | – | 0.32 | 3.39 | 7,979.57 |
+| fpga-serial | B | serial | 2 | 26,976.52 | – | 0.32 | 3.42 | 7,898.14 |
+| fpga-serial | B | serial | 4 | 26,943.05 | – | 0.31 | 3.41 | 7,899.74 |
+| fpga-serial | B | serial | 8 | 26,606.84 | – | 0.31 | 3.45 | 7,709.33 |
+| fpga-serial | B | serial | 19 | 26,090.94 | – | 0.31 | 3.45 | 7,558.94 |
+| fpga-serial | B | pipelined (2) | 1 | 26,775.07 | 0.99 | 0.32 | 3.40 | 7,884.30 |
+| fpga-serial | B | pipelined (2) | 2 | 31,909.66 | 1.18 | 0.37 | 3.49 | 9,143.17 |
+| fpga-serial | B | pipelined (2) | 4 | 33,249.35 | 1.23 | 0.39 | 3.51 | 9,463.12 |
+| fpga-serial | B | pipelined (2) | 8 | 35,212.06 | 1.32 | 0.41 | 3.57 | 9,862.17 |
+| fpga-serial | B | pipelined (2) | 19 | 34,812.29 | 1.33 | 0.42 | 3.56 | 9,770.75 |
+| fpga-overlap | B | serial | 1 | 27,495.69 | – | 0.33 | 3.46 | 7,955.93 |
+| fpga-overlap | B | serial | 2 | 27,404.76 | – | 0.32 | 3.43 | 7,987.14 |
+| fpga-overlap | B | serial | 4 | 27,456.93 | – | 0.32 | 3.42 | 8,019.55 |
+| fpga-overlap | B | serial | 8 | 27,458.00 | – | 0.32 | 3.47 | 7,924.02 |
+| fpga-overlap | B | serial | 19 | 26,509.48 | – | 0.32 | 3.46 | 7,656.48 |
+| fpga-overlap | B | pipelined (2) | 1 | 27,070.13 | 0.98 | 0.32 | 3.41 | 7,933.80 |
+| fpga-overlap | B | pipelined (2) | 2 | 32,419.75 | 1.18 | 0.39 | 3.50 | 9,252.87 |
+| fpga-overlap | B | pipelined (2) | 4 | 33,846.56 | 1.23 | 0.40 | 3.52 | 9,613.40 |
+| fpga-overlap | B | pipelined (2) | 8 | 35,225.81 | 1.28 | 0.42 | 3.59 | 9,820.18 |
+| fpga-overlap | B | pipelined (2) | 19 | 36,080.03 | 1.36 | 0.44 | 3.60 | 10,034.02 |
+
+**Throughput, best A vs best B (19 batches):** cpu-w4 pipelined 66,748 vs fpga-overlap pipelined 36,080 records/s → B/A = **0.54×**.
+
+**Energy:** A 17,623.8 vs B 10,034.0 records/J (sensor ina260_u14/power1; hwmon power of that rail or the whole board, not only the CPU or FPGA).
+
+### Stream length (when does pipelining pay off?)
+
+| Backend | Pipeline | 1 batches | 2 batches | 4 batches | 8 batches | 19 batches |
+|---|---|---|---|---|---|---|
+| cpu-w1 | serial | 26,906.08 | 29,919.37 | 29,870.62 | 29,881.28 | 29,007.81 |
+| cpu-w1 | pipelined (2) | 28,748.79 | 35,530.20 | 39,086.85 | 40,865.85 | 41,058.14 |
+| cpu-w2 | serial | 40,487.91 | 40,398.79 | 40,371.20 | 40,041.56 | 38,831.26 |
+| cpu-w2 | pipelined (2) | 40,178.37 | 48,480.88 | 54,710.99 | 55,615.97 | 58,081.05 |
+| cpu-w3 | serial | 46,149.67 | 46,305.85 | 46,140.95 | 46,110.66 | 43,968.70 |
+| cpu-w3 | pipelined (2) | 45,835.46 | 56,831.14 | 61,947.46 | 65,344.02 | 65,525.23 |
+| cpu-w4 | serial | 48,717.72 | 44,636.01 | 48,369.00 | 48,187.02 | 46,844.47 |
+| cpu-w4 | pipelined (2) | 48,062.18 | 55,376.67 | 66,239.38 | 68,383.94 | 66,748.43 |
+| fpga-serial | serial | 27,034.78 | 26,976.52 | 26,943.05 | 26,606.84 | 26,090.94 |
+| fpga-serial | pipelined (2) | 26,775.07 | 31,909.66 | 33,249.35 | 35,212.06 | 34,812.29 |
+| fpga-overlap | serial | 27,495.69 | 27,404.76 | 27,456.93 | 27,458.00 | 26,509.48 |
+| fpga-overlap | pipelined (2) | 27,070.13 | 32,419.75 | 33,846.56 | 35,225.81 | 36,080.03 |
+
+COMPARISON_WRITTEN /home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_03/comparison.md /home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_03/comparison.json

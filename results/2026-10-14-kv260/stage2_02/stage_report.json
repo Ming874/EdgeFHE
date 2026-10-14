@@ -1,0 +1,116 @@
+{
+  "schema": "edgefhe-v5-stage-1",
+  "stage": 2,
+  "label": "kv260-board-2026-10-14",
+  "status": "V5_STAGE2_COMPLETE",
+  "started_utc": "2026-10-14T02:28:28Z",
+  "device": "/dev/edgefhe_rns3_n4096_dma",
+  "device_opened_by_script": false,
+  "inputs": {
+    "data": {
+      "path": "/home/ubuntu/Grad/data/cdc_diabetes/splits/test.csv",
+      "sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304"
+    },
+    "model": {
+      "path": "/home/ubuntu/Grad/training/outputs/model.json",
+      "sha256": "3c33518d11529b78eef7ee8009a10b9f9446235254fe58c510abcb659a03b3d9"
+    },
+    "preprocess": {
+      "path": "/home/ubuntu/Grad/training/outputs/edge_preprocess.json",
+      "sha256": "0ac7d30c5f6009a42ab91c15d614da3378748e480624fe6442018f1540781731"
+    }
+  },
+  "settings": {
+    "cpus": "0-3",
+    "rounds": 30,
+    "warmup": 3,
+    "repeats": 3,
+    "capacity": "0,2",
+    "stream_batches": "1,2,4,8,all",
+    "limit": 0,
+    "cxxflags": "-O2",
+    "no_werror": false
+  },
+  "source_sha256": {
+    "software/native_ckks/c_api.cpp": "7b91b2deb121be63ff312bb1b45da7d654a286a44defe9a7f2a8dc50542b6bfc",
+    "software/native_ckks/core.cpp": "13d739e29b8ad563f184ab1f0b7322f76de2836d85c689cbcfa02a7ce7ba4ec4",
+    "software/native_v5/backend/backend.cpp": "d7c71ff6033566178212a1861fb37c44e4521f455da23a915641e387edac8141",
+    "software/native_v5/backend/cpu/cpu_backend.cpp": "5e663b2b6da5a157a301d47e67c9b61aae82ccfc62cf6abcd1a8add93603067a",
+    "software/native_v5/backend/factory.cpp": "612c25e12755e9d1a87352fb811ae23f71e94bc1db878e0cfb5858bb9b7a01a3",
+    "software/native_v5/backend/fpga/device.cpp": "77fc6a91c22cc3c81412c8625165b1e9dab9b9e0a1828be07c5fc152bf5c9148",
+    "software/native_v5/backend/fpga/fpga_backend.cpp": "1ad8d5d8910c36e67deebea4c0eb6f127129dcc58e033e1ff949282f27c45d5b",
+    "software/native_v5/capi/c_api.cpp": "eaea5d5d0dd5fb8ac25c648ad115e8c4b0d2a9991707b6a37537a5b9e40f3d53",
+    "software/native_v5/ckks/client.cpp": "a4d32c1d2ee3a0fa3f345e14adbe3f094ffb2218dbcaa152d73961b1b9fa4724",
+    "software/native_v5/ckks/cloud.cpp": "e1adbecbc26aa0adb6985dc92c4753687a7e227a4400611d42122cb982b0049c",
+    "software/native_v5/ckks/model.cpp": "b3dc6bfdf49387aedb3caca89dbb4b502d046d6f017ed92a3afb797565fe7a10",
+    "software/native_v5/common/json.cpp": "b798cd9b683fe495a61af3dfdbd44a7848fbd55a44183ed2a64420e652157326",
+    "software/native_v5/common/platform.cpp": "10b2496aef525485ea769b70df772d80d64c7cec13e893923d14d895f2c7488d",
+    "software/native_v5/common/sha256.cpp": "a0436aec942ef1cddef9114df44202348eed8faf23ab2074ff7e71c8e9b9821f",
+    "software/native_v5/edge/dataset.cpp": "ddce3ca88b7eaccd440bc1e0e40b60a016b865a1081b70740f42b65b0e27cdc4",
+    "software/native_v5/edge/qa_random.cpp": "0e7913ece1eb9d3060e80f76757da55dc64349101fb85a8e6c777dd74f58fb57",
+    "software/native_v5/edge/runner.cpp": "b5bb6116f56511a0c26f1fd7c80bd636e1d6acb4a97d551a38c513ef1b6a19b3",
+    "software/native_v5/edge/session.cpp": "a6300956a24acc9d5872fc9930e6f8e6e4d1dfa5e8420b413adc2dd781f2a16b",
+    "software/native_v5/runtime/thread_pool.cpp": "4d4717780d948ccf4d315d33a0d34dfd8651e702d36bdd052edd9e494aef06e9",
+    "software/native_v5/tests/v5_tests.cpp": "9fe48a90b32256652d4b94cc8a6cd28b3156e154972084ab1fa5664c4b151481",
+    "software/native_v5/tools/v5_bench.cpp": "a1beef0b0327db901bf7d9c94f89ad84a360a8514f3d0db1a228e61b8ffda0c4",
+    "software/native_v5/tools/v5_e2e.cpp": "95ca741fc400e158818e779df2dfc6daf2154a1f1f29a35dade851d2dec23235",
+    "software/native_v5/tools/v5_parity.cpp": "a17ffc18f79948bbc9936faa1f2678cd2e628e1e91704885a6e5e86f228f5def"
+  },
+  "dma_policy": {
+    "timeout_ms_per_request": 5000,
+    "retry": false,
+    "reset": false,
+    "stop_on_first_failure": true,
+    "requests_in_flight": 1
+  },
+  "steps": [
+    {
+      "name": "unit_tests",
+      "exit": 0,
+      "marker": "V5_TESTS_PASS",
+      "pass": true,
+      "seconds": 5.4
+    },
+    {
+      "name": "parity_simulated",
+      "exit": 0,
+      "marker": "V5_PARITY_PASS device=simulated-dma",
+      "pass": true,
+      "seconds": 0.5
+    },
+    {
+      "name": "parity_board",
+      "exit": 0,
+      "marker": "V5_PARITY_PASS device=linux-dma",
+      "pass": true,
+      "seconds": 1.0
+    },
+    {
+      "name": "e2e",
+      "exit": 0,
+      "marker": "V5_E2E_PASS",
+      "pass": true,
+      "seconds": 111.1
+    },
+    {
+      "name": "compare",
+      "exit": 0,
+      "marker": "COMPARISON_WRITTEN",
+      "pass": true,
+      "seconds": 0.3
+    }
+  ],
+  "binaries_sha256": {
+    "v5_tests": "3a39b56365dc5128c6db461810110a48ab17fb63d7b1235e106cbb8fe6b23c18",
+    "v5_parity": "b92ee9a741102a4c01135725d9bc371c7c3ad4f10abfad22dd4adef94ea6e675",
+    "v5_bench": "f9b118b1151c3b9641582ba3e980d547105f8d1d18e2420e19d538a1e5db70ef",
+    "v5_e2e": "353b99e59144287cf3f6f469288884873ee6c4edc8ad0d94889f1801c810304d",
+    "capi": "bfbe30cc9a70bb7c621f87866795649fdaef019b924ffa7225f9eb9f7d57b859",
+    "v4_capi": "5f358fa33fb500ea70f7a0d6ea2327512414171987f5c1c53bba0a7b4f36ca44"
+  },
+  "results": {
+    "e2e": "/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_02/e2e_all.json",
+    "comparison": "/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_02/comparison.md"
+  },
+  "finished_utc": "2026-10-14T02:32:40Z"
+}

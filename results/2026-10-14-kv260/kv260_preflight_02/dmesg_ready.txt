@@ -1,0 +1,2 @@
+[  455.759916] xilinx-vdma a0000000.dma: Xilinx AXI DMA Engine Driver Probed!!
+[  456.466433] edgefhe-rns3-n4096-dma-proxy a0010000.edgefhe-ii1-proxy: EdgeFHE RNS3 parallel N=4096 DMA proxy ready: mode=dmaengine-irq ii1-guarded-v3 tx=0x00000000361c0000 rx=0x00000000361f0000

@@ -1,0 +1,117 @@
+{
+  "status": "LOCAL_SOURCE_PRESERVATION_CPU_CSIM_II1_EXPORT_AND_BD_PASS",
+  "date": "2026-10-07",
+  "source_originals_unchanged": 95,
+  "Python_Windows": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "native_compiler": "g++ 13.3.0 Ubuntu-24.04; original accepted board g++11.4 distinct",
+  "native_compile": "CPU oracle + mixed/soak/concurrency/usercopy + shared backend",
+  "CPU_checks": {
+    "OpenFHE_cases": 16,
+    "OpenFHE_coefficients": 196608,
+    "mixed_cases": 25,
+    "mixed_coefficients": 307200,
+    "CKKS_cases": 6
+  },
+  "HLS": {
+    "tool": "2022.1",
+    "public_CSim_cases": 16,
+    "coefficients": 196608,
+    "AXI_sidebands_checked": true,
+    "butterfly": {
+      "TripCount": 512,
+      "Latency": 515,
+      "PipelineII": 1,
+      "PipelineDepth": 5
+    },
+    "resources_estimate": {
+      "BRAM_18K": 126,
+      "DSP": 639,
+      "FF": 23573,
+      "LUT": 43886,
+      "URAM": 0
+    },
+    "verilog_files_checked_for_runtime_division_remainder": 53,
+    "excluded_constant_forms": [
+      "timescale time-unit separator",
+      "parameter/localparam elaboration declarations including WSTRB_WIDTH=C_S_AXI_DATA_WIDTH/8"
+    ],
+    "new_IP_export": true,
+    "new_RTL_cosim": false,
+    "new_route": false,
+    "new_board_acceptance": false
+  },
+  "BD": {
+    "tool": "2022.1",
+    "parameters_old_values_preserved": true,
+    "nets_and_interface_endpoints_preserved": true,
+    "enabled_address_contract_and_exclusion_state_preserved": true,
+    "extra_PS_defaults": {},
+    "excluded_DDR_HIGH_metadata_changes": [
+      {
+        "space": "Data_MM2S",
+        "original": {
+          "address_block": "/ps/SAXIGP2/HP0_DDR_HIGH",
+          "offset": "0x00000000",
+          "range": "1",
+          "is_excluded": "TRUE"
+        },
+        "recreated": {
+          "address_block": "/ps/SAXIGP2/HP0_DDR_HIGH",
+          "offset": "0x800000000",
+          "range": "4G",
+          "is_excluded": "TRUE"
+        },
+        "enabled": false
+      },
+      {
+        "space": "Data_S2MM",
+        "original": {
+          "address_block": "/ps/SAXIGP2/HP0_DDR_HIGH",
+          "offset": "0x00000000",
+          "range": "1",
+          "is_excluded": "TRUE"
+        },
+        "recreated": {
+          "address_block": "/ps/SAXIGP2/HP0_DDR_HIGH",
+          "offset": "0x800000000",
+          "range": "4G",
+          "is_excluded": "TRUE"
+        },
+        "enabled": false
+      }
+    ],
+    "warnings_retained": [
+      "WARNING: [BD 41-1629] Slave segment </ps/SAXIGP2/HP0_DDR_HIGH> is excluded from all addressing paths.",
+      "WARNING: [BD 41-1629] Slave segment </ps/SAXIGP2/HP0_LPS_OCM> is excluded from all addressing paths.",
+      "WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps/S_AXI_HP0_FPD(1) and /axi_mem_intercon/xbar/M00_AXI(0)",
+      "WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /ps/M_AXI_HPM0_FPD(16)",
+      "WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps/S_AXI_HP0_FPD(1) and /axi_mem_intercon/xbar/M00_AXI(0)",
+      "WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /ps/M_AXI_HPM0_FPD(16)",
+      "WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.",
+      "WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.",
+      "WARNING: [BD 41-2384] Width mismatch when connecting pin: '/ps/saxigp2_arid'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.",
+      "WARNING: [BD 41-2384] Width mismatch when connecting pin: '/ps/saxigp2_awid'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.",
+      "WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ps/SAXIGP2/HP0_DDR_HIGH'",
+      "WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /ps/SAXIGP2/HP0_LPS_OCM'"
+    ]
+  },
+  "reports_sha256": {
+    "butterfly_stage_Pipeline_butterfly_batch_csynth.xml": "f89d96f5bd83f9b6abb2e424749f5b09ea6d24b60f1d54ca1c81d09db77ac026",
+    "rns3_ntt_parallel_accel_n4096_csynth.rpt": "a94b141e20670e122dda189a650dd9d0825e30da0cf83be36e3830e3090f8d80",
+    "rns3_ntt_parallel_accel_n4096_csynth.xml": "ab73f05e40b734f76295c7241311ee9f2e077e1674dc1f14b1aaad869df6546f"
+  },
+  "log_sha256": {
+    "native": "f672855e8c05df86808a5836f1ecc561565031f926c4a3dbda236b0aac314c00",
+    "HLS": "ea336dc6a20b4206a49a421aa6d95b13bd364de3b1f977873e261b941593f4e5",
+    "Vivado": "d667b922d52c98eea5f126e13a2d8052f086cc5e420d5d36575e116428b42a95"
+  },
+  "GitHub_CI_executed": false,
+  "board_operations": 0,
+  "formal_release_accepted": false,
+  "limits": [
+    "No fresh full implementation or kernel module build",
+    "No deployment or live private-input isolation",
+    "Packaging PASS does not upgrade G07/G08/G12",
+    "Raw local logs/generated projects retained in development journal workspace"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS_LOCAL_RETURNED_USER_SHORT_MIXED_STRESS_ORIGINALS",
+  "original_files_sha256": {
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "console.log": "77b4e123ce4439661c2c565afd585b3a4794d68ff5ddc8a25277b8bf8cf28a86",
+    "cpu_check.log": "66c6f3be1434c5b166c5a4544075791f3dbd26a9b927eee354b90d345e18e483",
+    "dmesg_after.log": "fb3400f0d2341b652a8df9af61ce91d20e11f9f626bd0b41848a8653b7239b8e",
+    "dmesg_final.log": "b5cb544f012438dba6ad1e8b877669797b86eb38851513226d98deb377bd1905",
+    "interrupts_after.txt": "ff46a366c147f0c6039c39212d5a50151ba4b96103d3bd5a11b26aba3af862df",
+    "interrupts_before.txt": "8d390b458c95e38999daeeea75e62ee3bd529db73e74d558ee6df725de18f8b7",
+    "interrupts_final.txt": "1a8ce8225acdc776569863f1429e555195a168858833352a16e8464b4ea205aa",
+    "mixed_runner": "86bda2c4e6977a49fbaf1c955d70fdcd7d6eaf982a26626468918be9a19ddc35",
+    "native_console.log": "ad1fd1ec64e0a1db857a459b155a8451111d9009883097fa833479e8c160e725",
+    "reject_interrupts_after.txt": "bfea191a5c53b0abc2a84477cb74dd614b45c11a19fa1d6f820dfb0efcabfea3",
+    "reject_interrupts_before.txt": "49a6b023b7f5d0e973bc2116aa7478e00a49aa215307cdbf6810811f210f6c0e",
+    "stress_report.json": "270a73608c735e1104287b5289b1c7c67640e5126e0af5e55c29bac2e4ee8d0e",
+    "transactions.tsv": "4a4c075ab92988af0f3d6c5503584612254c6ac7b06555538d2c79571dea9607"
+  },
+  "jobs": 1004,
+  "rejected_without_DMA": 19,
+  "open_close_cycles": 4,
+  "coefficient_comparisons": 12337152,
+  "padding_words_checked": 4112384,
+  "per_operation_timings": {
+    "0": {
+      "samples": 240,
+      "native_ioctl_and_compare_p50_us": 2608.3010000000004,
+      "driver_p50_us": 240.0
+    },
+    "1": {
+      "samples": 280,
+      "native_ioctl_and_compare_p50_us": 2598.6054999999997,
+      "driver_p50_us": 214.0
+    },
+    "2": {
+      "samples": 120,
+      "native_ioctl_and_compare_p50_us": 4706.227000000001,
+      "driver_p50_us": 507.0
+    },
+    "3": {
+      "samples": 120,
+      "native_ioctl_and_compare_p50_us": 4343.114,
+      "driver_p50_us": 180.0
+    },
+    "4": {
+      "samples": 120,
+      "native_ioctl_and_compare_p50_us": 6229.1990000000005,
+      "driver_p50_us": 240.0
+    },
+    "5": {
+      "samples": 120,
+      "native_ioctl_and_compare_p50_us": 4349.755,
+      "driver_p50_us": 180.0
+    }
+  },
+  "assistant_board_operations": 0,
+  "limits": [
+    "Native compiled-source receipt checks each exact gold; all 1004 output arrays were not archived for independent local replay",
+    "New timing definition excludes pack/allocation/zeroing; cannot call ratio vs old full FPGA wall an apples-to-apples speedup",
+    "Short open/close stress only; physical DMA reset/fault/LUTAR and long soak still pending"
+  ]
+}

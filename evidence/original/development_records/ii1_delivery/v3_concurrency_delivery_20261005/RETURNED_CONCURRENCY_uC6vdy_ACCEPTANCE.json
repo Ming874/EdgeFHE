@@ -1,0 +1,76 @@
+{
+  "status": "PASS_LOCAL_RETURNED_USER_NORMAL_CONCURRENCY_ORIGINALS",
+  "original_files_sha256": {
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "concurrency_report.json": "501dac458e705f92e1369f2c1b311ff7b12fdab55700b03e8edc2cc810d9e469",
+    "concurrent_runner": "a47c09576e6eca26e117ac2bca99822feadad10b69a4a905b948721ecd8aa996",
+    "console.log": "6379f6fcb2a391744a35e68f1e93fc47fc8331a2089d3789a0505dbd925cb85a",
+    "cpu_check.log": "0d3bf49e58b6f68e384edc71409da0f626baf6bee2e2ce3080532ad944162830",
+    "dmesg_after.log": "55cff560270181e8daa295343c13b973e6588aa8e78f6c311b77b9d665abf4d0",
+    "EVIDENCE_SHA256SUMS": "87c8fc0949a9299094643248087fa61950e854583f380de8e5ecf39d75f14145",
+    "interrupts_after.txt": "619e26f997cbef662ee87bc90b9bcc445d8a80a56d625678361f30a929a82b53",
+    "interrupts_before.txt": "e302bc6cd4bb43ce044cda0a401443a7bdd6fb034d8b65f0031e5ea1bc57807d",
+    "memory_after.json": "9bc38fdf2c96a67a0ac6d38a69e46dd40beaf26fad762a0dd51ced3efde4d749",
+    "memory_before.json": "b8ba9178bb40fa70b4dac326ad73ef8592ab9b9736ba0d67b2717090ef84924f",
+    "native_console.log": "c94c9361d69065a0579321495e99f6c422f7d830988194f5409f5dc034c8e6e0",
+    "native_report.json": "0786c56a4d662a842da602e91f5727eb511cab333f12b1ba47f6b113bf9f3600",
+    "telemetry.jsonl": "dc9ac081ab8f1a1f1c34f712ed81a9c9115cad66446c3bcd84dfed2884b3f77d",
+    "transactions.tsv": "4e0cfcf50fd1ae5b641b300921a67a4f54bcafd6639eebbb6f1d85694d737aa5"
+  },
+  "row_check": {
+    "jobs": 2000,
+    "workers": 4,
+    "modes": [
+      "shared_fd",
+      "separate_fd"
+    ],
+    "jobs_per_mode": 1000,
+    "per_case_per_mode": 40,
+    "coefficients": 24576000,
+    "padding": 8192000,
+    "entry_peaks": [
+      4,
+      4
+    ],
+    "interval_peaks": [
+      4,
+      4
+    ]
+  },
+  "telemetry": {
+    "samples": 9,
+    "span_ns": 7647507827,
+    "temperature_celsius": {
+      "ps_temp": {
+        "min": "34.614327328968",
+        "max": "35.780054562768",
+        "samples": 9
+      },
+      "remote_temp": {
+        "min": "35.018446103352",
+        "max": "36.945781796568",
+        "samples": 9
+      },
+      "pl_temp": {
+        "min": "33.518543729196",
+        "max": "34.047006741852",
+        "samples": 9
+      }
+    },
+    "unavailable_optional_cpu_fields": {},
+    "scope": "Short concurrent run observations; no six-hour thermal reconstruction or driver leak attribution"
+  },
+  "IRQ_delta": {
+    "121": 2000,
+    "136": 2000
+  },
+  "load_relative_history_after": 5802783,
+  "assistant_board_operations": 0,
+  "limits": [
+    "Same process four threads; shared fd and four separate fds; not multiple-process or fault/remove coverage",
+    "Driver serializes PL work; overlap means host call windows, not parallel PL transfers",
+    "Short temperature/global CMA observations; not thermal certification or attribution of a driver leak",
+    "Exact comparisons recorded in-run; full RX arrays are not archived; no E2E speedup claim"
+  ],
+  "source_attribution": "Frozen package, compiler log, ARM ELF and in-run receipts; not signed attestation or independent reconstruction of every RX array"
+}

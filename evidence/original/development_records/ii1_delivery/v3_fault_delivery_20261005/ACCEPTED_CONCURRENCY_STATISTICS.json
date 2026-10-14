@@ -1,0 +1,398 @@
+{
+  "status": "PASS_DESCRIPTIVE_ANALYSIS_ALL_ACCEPTED_2000_ROWS_NOT_SPEEDUP",
+  "source_acceptance_sha256": "f05564552e46c655d8839c2529432615ae891da8425e310fbfa3a3aa5bb86136",
+  "phases": [
+    {
+      "mode": "shared_fd",
+      "jobs": 1000,
+      "duration_ns": 3692798995,
+      "observed_jobs_per_second": 270.79730073420905,
+      "host_interval_peak": 4,
+      "operation_statistics": {
+        "0": {
+          "wall_us": {
+            "n": 240,
+            "p50": 14119.559000000001,
+            "p95": 16234.4367,
+            "min": 7457.468,
+            "max": 17666.033
+          },
+          "driver_us": {
+            "n": 240,
+            "p50": 220.0,
+            "p95": 266.04999999999995,
+            "min": 218,
+            "max": 305
+          },
+          "wall_minus_driver_us": {
+            "n": 240,
+            "p50": 13883.3225,
+            "p95": 15949.2093,
+            "min": 7152.468,
+            "max": 17447.033
+          }
+        },
+        "1": {
+          "wall_us": {
+            "n": 280,
+            "p50": 14121.226999999999,
+            "p95": 17509.143500000002,
+            "min": 6434.283,
+            "max": 17857.128
+          },
+          "driver_us": {
+            "n": 280,
+            "p50": 213.0,
+            "p95": 259.05,
+            "min": 210,
+            "max": 299
+          },
+          "wall_minus_driver_us": {
+            "n": 280,
+            "p50": 13895.828,
+            "p95": 17295.893500000002,
+            "min": 6137.283,
+            "max": 17625.038
+          }
+        },
+        "2": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14227.4025,
+            "p95": 17836.418700000002,
+            "min": 4784.261,
+            "max": 17909.107
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 506.0,
+            "p95": 552.1,
+            "min": 504,
+            "max": 592
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13688.628499999999,
+            "p95": 17290.02265,
+            "min": 4229.261,
+            "max": 17370.435
+          }
+        },
+        "3": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14112.02,
+            "p95": 15740.21415,
+            "min": 11875.43,
+            "max": 15926.752
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 142.0,
+            "p95": 188.05,
+            "min": 139,
+            "max": 226
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13965.563,
+            "p95": 15588.60985,
+            "min": 11733.43,
+            "max": 15738.752
+          }
+        },
+        "4": {
+          "wall_us": {
+            "n": 120,
+            "p50": 15907.7085,
+            "p95": 17708.4469,
+            "min": 6248.336,
+            "max": 17894.525
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 201.0,
+            "p95": 249.05,
+            "min": 198,
+            "max": 285
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 15697.753,
+            "p95": 17504.78295,
+            "min": 6044.336,
+            "max": 17651.525
+          }
+        },
+        "5": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14107.6865,
+            "p95": 15887.82655,
+            "min": 10714.593,
+            "max": 15993.307
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 143.0,
+            "p95": 189.05,
+            "min": 139,
+            "max": 227
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13927.5485,
+            "p95": 15743.92655,
+            "min": 10532.593,
+            "max": 15807.307
+          }
+        }
+      }
+    },
+    {
+      "mode": "separate_fd",
+      "jobs": 1000,
+      "duration_ns": 3692123940,
+      "observed_jobs_per_second": 270.8468123635091,
+      "host_interval_peak": 4,
+      "operation_statistics": {
+        "0": {
+          "wall_us": {
+            "n": 240,
+            "p50": 14134.4795,
+            "p95": 16221.2721,
+            "min": 7240.35,
+            "max": 17707.71
+          },
+          "driver_us": {
+            "n": 240,
+            "p50": 220.0,
+            "p95": 272.04999999999995,
+            "min": 218,
+            "max": 305
+          },
+          "wall_minus_driver_us": {
+            "n": 240,
+            "p50": 13899.695,
+            "p95": 15963.122099999999,
+            "min": 7022.35,
+            "max": 17416.653
+          }
+        },
+        "1": {
+          "wall_us": {
+            "n": 280,
+            "p50": 14123.106500000002,
+            "p95": 17594.9393,
+            "min": 9799.146,
+            "max": 18245.914
+          },
+          "driver_us": {
+            "n": 280,
+            "p50": 213.0,
+            "p95": 258.15000000000003,
+            "min": 210,
+            "max": 322
+          },
+          "wall_minus_driver_us": {
+            "n": 280,
+            "p50": 13896.889,
+            "p95": 17341.989299999997,
+            "min": 9587.146,
+            "max": 18032.914
+          }
+        },
+        "2": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14206.21,
+            "p95": 17807.46745,
+            "min": 4713.595,
+            "max": 18461.352
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 506.0,
+            "p95": 562.4499999999999,
+            "min": 504,
+            "max": 592
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13668.146499999999,
+            "p95": 17287.9652,
+            "min": 4206.595,
+            "max": 17955.352
+          }
+        },
+        "3": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14141.913,
+            "p95": 15788.1163,
+            "min": 11876.555,
+            "max": 16112.735
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 143.0,
+            "p95": 192.14999999999998,
+            "min": 138,
+            "max": 236
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13964.5355,
+            "p95": 15607.734250000001,
+            "min": 11737.555,
+            "max": 15971.735
+          }
+        },
+        "4": {
+          "wall_us": {
+            "n": 120,
+            "p50": 15939.7515,
+            "p95": 17742.61615,
+            "min": 13787.406,
+            "max": 18439.514
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 206.5,
+            "p95": 251.05,
+            "min": 198,
+            "max": 286
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 15732.66,
+            "p95": 17537.671850000002,
+            "min": 13587.406,
+            "max": 18218.514
+          }
+        },
+        "5": {
+          "wall_us": {
+            "n": 120,
+            "p50": 14095.1145,
+            "p95": 15923.40815,
+            "min": 10435.459,
+            "max": 16456.968
+          },
+          "driver_us": {
+            "n": 120,
+            "p50": 142.5,
+            "p95": 189.0,
+            "min": 139,
+            "max": 227
+          },
+          "wall_minus_driver_us": {
+            "n": 120,
+            "p50": 13934.949,
+            "p95": 15761.597099999999,
+            "min": 10294.459,
+            "max": 16303.968
+          }
+        }
+      }
+    }
+  ],
+  "telemetry": {
+    "samples": 9,
+    "span_ns": 7647507827,
+    "temperature_celsius": {
+      "ps_temp": {
+        "min": "34.614327328968",
+        "max": "35.780054562768",
+        "samples": 9
+      },
+      "remote_temp": {
+        "min": "35.018446103352",
+        "max": "36.945781796568",
+        "samples": 9
+      },
+      "pl_temp": {
+        "min": "33.518543729196",
+        "max": "34.047006741852",
+        "samples": 9
+      }
+    },
+    "unavailable_optional_cpu_fields": {},
+    "scope": "Short concurrent run observations; no six-hour thermal reconstruction or driver leak attribution"
+  },
+  "memory_kB": {
+    "MemAvailable": {
+      "before_kB": 3249556,
+      "after_kB": 3248904,
+      "delta_kB": -652
+    },
+    "MemFree": {
+      "before_kB": 702216,
+      "after_kB": 701324,
+      "delta_kB": -892
+    },
+    "Cached": {
+      "before_kB": 2511992,
+      "after_kB": 2512236,
+      "delta_kB": 244
+    },
+    "AnonPages": {
+      "before_kB": 331836,
+      "after_kB": 332328,
+      "delta_kB": 492
+    },
+    "SUnreclaim": {
+      "before_kB": 119512,
+      "after_kB": 119512,
+      "delta_kB": 0
+    },
+    "CmaTotal": {
+      "before_kB": 1024000,
+      "after_kB": 1024000,
+      "delta_kB": 0
+    },
+    "CmaFree": {
+      "before_kB": 336684,
+      "after_kB": 336108,
+      "delta_kB": -576
+    }
+  },
+  "vmstat": {
+    "cma_alloc_success": {
+      "before": 24,
+      "after": 24,
+      "delta": 0
+    },
+    "cma_alloc_fail": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "nr_free_cma": {
+      "before": 84171,
+      "after": 84027,
+      "delta": -144
+    },
+    "oom_kill": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "compact_stall": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    }
+  },
+  "page_size_bytes": 4096,
+  "new_kernel_messages": [],
+  "quantiles": "Exact all-row sorted values with linear interpolation at (n-1)*p",
+  "timer_scope": "Wall is ioctl plus exact comparison; driver excludes mutex queue wait, input preparation, copyback and wiping",
+  "limits": [
+    "Host call windows, not simultaneous PL work",
+    "Two phase durations descriptive, not a paired performance experiment",
+    "Nine short temperature samples, not thermal certification or six-hour reconstruction",
+    "Global memory counters do not attribute driver pages"
+  ],
+  "assistant_board_operations": 0
+}

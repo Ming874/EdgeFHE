@@ -1,0 +1,147 @@
+{
+  "status": "NATIVE_V4_PACKAGE_CLEAN_LOCAL_PORTABILITY_PASS",
+  "board_operations": 0,
+  "network_scope": "loopback only",
+  "commands": [
+    {
+      "name": "environment",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/check_environment.py",
+        "--target",
+        "host",
+        "--output",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/environment.json"
+      ]
+    },
+    {
+      "name": "root_configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub",
+        "-B",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build",
+        "-DCMAKE_BUILD_TYPE=Release"
+      ]
+    },
+    {
+      "name": "root_build",
+      "command": [
+        "cmake",
+        "--build",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build",
+        "-j",
+        "4"
+      ]
+    },
+    {
+      "name": "root_ctest",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build",
+        "--output-on-failure"
+      ]
+    },
+    {
+      "name": "operator_batch",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/run_native_cpu_acceptance.py",
+        "--output",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator",
+        "--rounds",
+        "10",
+        "--dense-cases",
+        "1000"
+      ]
+    },
+    {
+      "name": "portable_mTLS",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/software/native_ckks/tests/local_network_test.py",
+        "--library",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build/libedgefhe_native.so",
+        "--output",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/loopback"
+      ]
+    },
+    {
+      "name": "v3_original_guards",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/github_team_readiness_20261007/tool_guard_tests.py",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa"
+      ]
+    },
+    {
+      "name": "prebuilt_positive",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/inspect_prebuilt.py"
+      ]
+    },
+    {
+      "name": "cpp_dynamic_stdin",
+      "command": [
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build/software/native_ckks/edgefhe_native_demo"
+      ]
+    },
+    {
+      "name": "final_manifest",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/verify_repository.py"
+      ]
+    }
+  ],
+  "source_inventory_sha256": "b7030b836c6b959b77f6f21cfe4078b19a1f1611db59a94d00fe135e49905421",
+  "additional_negative_checks": 8,
+  "bash_blocks_syntax_only": 31,
+  "root_CTest": 5,
+  "operator_CTest": 2,
+  "operator_dense_cases": 1000,
+  "operator_benchmark_rounds": 10,
+  "loopback_dynamic_batches": 6,
+  "original_negative_gates": 12,
+  "aarch64_or_board_acceptance": false,
+  "full_kernel_compile": false,
+  "log_sha256": {
+    "cpp_dynamic_stdin.log": "566408a9ac95d6c57a24e340aba7601b7883e48e1585aa6c218466077b323ed5",
+    "cpp_reject_fifth.log": "5a3361a1e56465313d56dfe098ec82dffb0020f4ef23d88954a705dc2bfe71e9",
+    "cpp_reject_nonfinite.log": "e952e8d39cfa3c9b50771db420411572cd8672d99e9ef49a9aa1036ec4e346c8",
+    "cpp_reject_out_of_range.log": "132d4ca1186a7070fb3d263ac1bb6a8abee32b9c40ccce655bbc0fc72838b2e2",
+    "environment.log": "53e626a5c30a742d54e64c1bc9c798f5389e84e78904b3e3ef93fcc6d878ee84",
+    "expected_x86_driver_rejection.log": "c7d51c505a1a9c137a403d666b85a166ae28ee19ee0b0dce28b9b15dc4a89740",
+    "final_manifest.log": "04de2424bac48da4dda613010240b193b1752cbcd8e7f598dad7ff656cf56f4a",
+    "operator_batch.log": "3d535b48b100375dfe7c5d349433026b1f873decde09d8864cdfdc59dd262980",
+    "portable_mTLS.log": "8454f81914a2140f52cd80dff28c9b06bff814bfbd1a03d70cf75a144dfe27cb",
+    "prebuilt_positive.log": "65976b44073cd12d99a5cba6b41d491acf8b1786434af70d856b52da70968dc3",
+    "prebuilt_x86_rejection.log": "8a271cdb185743b61034739bfdd4134b24ac9f4974fbc72cb422e0667eac70ef",
+    "root_build.log": "acfbcc2bcb38e4a91faf60ea4c14300e35a7d1fd1b93bb21d9e4366804045611",
+    "root_configure.log": "03babb7e4d159f31bc2e5496f8dff31de037611de3027242e52e72bad9a7c7f1",
+    "root_ctest.log": "55fdbea40af47bc9250ce8779e3c74de5620011ba893cddecaab4af4a99f48ba",
+    "too_few_dense.log": "9316ea5e0a0af618462ab941e184beb135a600a91ef78e53b3f4c93f389fe739",
+    "too_few_rounds.log": "9316ea5e0a0af618462ab941e184beb135a600a91ef78e53b3f4c93f389fe739",
+    "v3_original_guards.log": "0636cebe9863efd3800e43b351150193a0e5a10a530e459790381e2bc592a535"
+  },
+  "validation_input_zip_sha256": "1390dd9090c4edf67ec89602cf973f841580e048dd7f0c1c61550666e37e3d4c",
+  "final_packaging_only_additions": [
+    "Historical baseline/draft README boundaries",
+    "Portability receipt and public QA logs"
+  ],
+  "new_arithmetic_after_clean_test": false,
+  "public_receipt_sha256": {
+    "clean_root_ctest.log": "55fdbea40af47bc9250ce8779e3c74de5620011ba893cddecaab4af4a99f48ba",
+    "clean_operator_batch.log": "3d535b48b100375dfe7c5d349433026b1f873decde09d8864cdfdc59dd262980",
+    "clean_operator_report.json": "7232ea2a124e507d2e40f59a60e6fd822e59191754bdbb820841a8506f9e710f",
+    "clean_network_acceptance.json": "30e53f697287a131a8dd60e2eb920d9ae2ec5527450ec9ea8c8ba05a2c8562f8",
+    "clean_original_guards.log": "0636cebe9863efd3800e43b351150193a0e5a10a530e459790381e2bc592a535",
+    "clean_x86_module_rejected.log": "8a271cdb185743b61034739bfdd4134b24ac9f4974fbc72cb422e0667eac70ef"
+  },
+  "preserved_failures": true,
+  "private_credentials_included": false
+}

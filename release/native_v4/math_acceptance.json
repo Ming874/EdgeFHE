@@ -1,0 +1,49 @@
+{
+  "status": "NATIVE_LOCAL_MATHEMATICAL_ACCEPTANCE_PASS",
+  "board_operations": 0,
+  "architecture": "x86_64",
+  "profile_security_accepted": false,
+  "failures": [],
+  "encoder": {
+    "cases": 24,
+    "exact_coefficients": 98304,
+    "coefficient_max_delta": 0,
+    "max_slot_error": 1.6320811990767195e-07,
+    "ties": 8
+  },
+  "dense": {
+    "distinct_cases": 1000,
+    "exact_coefficients": 12288000,
+    "independent_oracle": "exact integer Kronecker convolution + frozen uint64-modulo NTT vs new Shoup NTT",
+    "seconds": 41.762961964,
+    "stream_sha256": "8e5af515fe202aed6a7cfbb4618d1cda7fae8d0e2d83e438ccd9359ff767e5af",
+    "negacyclic_boundary": true
+  },
+  "pipeline": {
+    "cases": 12,
+    "exact_integer_and_RNS_comparisons": 1867776,
+    "max_affine_slot_error": 6.669274223452283e-07,
+    "independent_sparse_noise": true
+  },
+  "negative_tests": 5,
+  "os_sampling_structure_and_freshness": true,
+  "duration_ns": 44932740101,
+  "source_identities": {
+    "software/native_ckks/CMakeLists.txt": "b63017ee04c8715ff5d5c1f1bd9f7a11a312ed05fc15f183e74c20765c013b43",
+    "software/native_ckks/benchmark.py": "e521db649e2eed3ec51a98b87dc8ebd69367d125be93dea3418c342284f56ace",
+    "software/native_ckks/c_api.cpp": "7b91b2deb121be63ff312bb1b45da7d654a286a44defe9a7f2a8dc50542b6bfc",
+    "software/native_ckks/core.cpp": "13d739e29b8ad563f184ab1f0b7322f76de2836d85c689cbcfa02a7ce7ba4ec4",
+    "software/native_ckks/core.hpp": "6894ad0dff440a32918706261ecd3c72af900d92be67f830a394814cfc0bdf46",
+    "software/native_ckks/dynamic_client.py": "432d62d56d3d65ef8332359bbf3bf6f39e5686bb63fd72d765311805c32a2866",
+    "software/native_ckks/interactive.cpp": "69f8c756b8fb3fbc4d46ebb16cc90e681777a7b04f8467abed0268a5dfbc33e3",
+    "software/native_ckks/model.example.json": "c64d3e543816f785b0c7e44a45599ad9367f99aec04d61ac9dc48a978bdad220",
+    "software/native_ckks/model.py": "46c0202869afb326f243499d1f7502f75647e78776b492104a56bef3804cc967",
+    "software/native_ckks/native_api.py": "4f5a408143bea22f078230e5be40e067b957c8cb413516e59c8bec76ac4162d4",
+    "software/native_ckks/net_config.py": "02b2bd3bf02c2c1650e6f1b2904169a6d27548c5bfdbbbd4b78cbf9306ea2574",
+    "software/native_ckks/pc_server.py": "47e12de19fdc8ec0a3e0bdb7ce60044d4238bb381f374b84188a3dbb36c5e304",
+    "software/native_ckks/protocol.py": "20ed84302fb2b1dc74d1e849999e26b858a6c78f1c80b7ac760da592ffeb70fc",
+    "software/native_ckks/python_baseline.py": "48c398f1bb7fb016ff93db1647c41a237e19cd8cba89896838ae15fb1eee977c",
+    "software/native_ckks/selftest.cpp": "8fade8e5803025410c25e8fde88d92091279f6cd0b5aad48b457caefc8274375",
+    "software/native_ckks/transport.py": "cc439ccda7d112ecd065eda12e11c791edd938b8de5b888831e2a8f3ab84dd16"
+  }
+}

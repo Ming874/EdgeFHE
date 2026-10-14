@@ -1,0 +1,9 @@
+nohup: ignoring input
+building V5 tools ...
+PASS unit_tests
+PASS parity_simulated
+PASS parity_board
+PASS e2e
+PASS compare
+V5_STAGE2_COMPLETE output=/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_02
+STAGE2_EXIT=0

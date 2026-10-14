@@ -1,0 +1,3 @@
+latency: 2+10 rounds
+  fpga-serial: total p50 100.241 ms, encrypt p50 47.8962 ms
+V5_E2E_PASS output=/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/trace/dma_trace_01/workload_traced.json

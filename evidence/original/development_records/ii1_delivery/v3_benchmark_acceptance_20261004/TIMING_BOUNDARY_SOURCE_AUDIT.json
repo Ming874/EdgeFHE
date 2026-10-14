@@ -1,0 +1,56 @@
+{
+  "status": "PASS_LOCAL_FROZEN_SOURCE_TIMING_BOUNDARY_REVIEW_NOT_PHASE_PROFILING",
+  "driver_source": "D:\\NCUE_Project\\development_records\\board_packages\\ii1-mask32-runtime-20261004\\runtime\\edgefhe_rns3_n4096_dma_proxy.c",
+  "driver_sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+  "driver_line_anchors": {
+    "copy_input": 156,
+    "canonical_input_validation": 162,
+    "clear_output_before_DMA": 171,
+    "prepare_RX_descriptor": 185,
+    "timer_start": 217,
+    "issue_RX": 218,
+    "timer_end": 241,
+    "copy_output": 243,
+    "wipe_full_TX": 71,
+    "wipe_full_RX": 72
+  },
+  "native_source": "D:\\NCUE_Project\\development_records\\board_packages\\ii1-v3-benchmark-20261004\\paired_public_vectors.cpp",
+  "native_sha256": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+  "native_line_anchors": {
+    "hardware_timer_begin": 91,
+    "hardware_timer_end": 100
+  },
+  "excluded_from_driver_timer": [
+    "copy_from_user bulk input",
+    "canonical input/padding validation",
+    "RX memset",
+    "MMIO idle check/configuration and DMA descriptor prep/submit",
+    "copy_to_user bulk output",
+    "full TX/RX memzero_explicit",
+    "ioctl request copies/locking"
+  ],
+  "native_wall_includes": [
+    "input/output allocations",
+    "RNS pack",
+    "complete ioctl",
+    "RNS unpack/padding check"
+  ],
+  "native_wall_excludes": [
+    "device open",
+    "NTT plan/golden precheck",
+    "external exact golden comparison",
+    "input/output Beat-vector destruction after sampled timer"
+  ],
+  "full_wipe_bytes_each_successful_call": 262144,
+  "limits": [
+    "Source boundaries establish which work is excluded; they do not measure per-phase costs",
+    "No evidence yet that any particular copy/validation/wipe/allocation dominates wall time",
+    "Coherent buffer cache mapping/performance not inferred from function names",
+    "Preserve canonical/padding validation, buffer wiping, coherent DMA API, bounds and IRQ/failure guards"
+  ],
+  "next_measurement_options": [
+    "Analyze actual rowwise wall-driver interval distribution after raw archive review",
+    "If needed, isolate userspace allocation/packing/ioctl/unpacking phase timestamps on a separate candidate",
+    "Kernel phase attribution requires separate reviewed instrumentation and new artifact acceptance"
+  ]
+}

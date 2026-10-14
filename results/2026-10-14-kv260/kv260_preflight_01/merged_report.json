@@ -1,0 +1,13 @@
+{
+  "status": "PASS_BOOT_FDT_FILE_MERGE_ONLY",
+  "base_symbols": {
+    "amba": "/axi",
+    "gic": "/axi/interrupt-controller@f9010000",
+    "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+    "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+  },
+  "limits": [
+    "fdtoverlay operates on saved files; no kernel overlay or FPGA programming",
+    "Not AFI/clock provider probe, reset or DMA acceptance"
+  ]
+}

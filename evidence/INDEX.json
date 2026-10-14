@@ -1,0 +1,229 @@
+{
+  "scope": "Original fixed-version acceptance and reports; historical paths are reference data",
+  "included": [
+    {
+      "id": "S01",
+      "path": "development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json",
+      "bytes": 9867,
+      "sha256": "35f04a8b15b60b8c48500f16625f4020f22c8b513fc08bc2166a9b90ae37a494",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/ACCEPTANCE_MATRIX_20261005.json"
+    },
+    {
+      "id": "S02",
+      "path": "h/4/fixed-bank-20261003/assessment.json",
+      "bytes": 4506,
+      "sha256": "c4863b19e2c7fbab20cc1f8fb17fef7a15a85e128c86898d31d4c6769c0ba799",
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/assessment.json"
+    },
+    {
+      "id": "S03",
+      "path": "h/4/fixed-bank-20261003/openfhe_validation/interop_acceptance.json",
+      "bytes": 3585,
+      "sha256": "69b8470c6aa52ef6340dd74b88f731fd55c74b68a0191a73721226088cc59677",
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/openfhe_validation/interop_acceptance.json"
+    },
+    {
+      "id": "S04",
+      "path": "vivado/ii1-20261003/impl_v2/routed_report_review.json",
+      "bytes": 7729,
+      "sha256": "c85e92004fb07130b9a61f537b6a3d2410bd24bc25d610b9e989fe790d0bba9f",
+      "package_path": "evidence/original/vivado/ii1-20261003/impl_v2/routed_report_review.json"
+    },
+    {
+      "id": "S05",
+      "path": "development_records/board_packages/ii1-preflight-20261003-v2/engineering_export_manifest.json",
+      "bytes": 3607,
+      "sha256": "b00a228bd6317336695a6bedffd65eeff219d9bea60a50825d656c2e024fcf2a",
+      "package_path": "evidence/original/development_records/board_packages/ii1-preflight-20261003-v2/engineering_export_manifest.json"
+    },
+    {
+      "id": "S06",
+      "path": "development_records/ii1_delivery/v3_benchmark_acceptance_20261004/ORIGINAL_BENCHMARK_ACCEPTANCE.json",
+      "bytes": 31373,
+      "sha256": "4e31a47a838ae8607a074bb3e7a17880d8168f005e390fe5d0e118c584cea9ab",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_benchmark_acceptance_20261004/ORIGINAL_BENCHMARK_ACCEPTANCE.json"
+    },
+    {
+      "id": "S07",
+      "path": "development_records/ii1_delivery/v3_benchmark_acceptance_20261004/TIMING_BOUNDARY_SOURCE_AUDIT.json",
+      "bytes": 2343,
+      "sha256": "2b3ca805acb01003e9422175c9b3b640d62a1589d1d6aa29ce937b4e7546e0e4",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_benchmark_acceptance_20261004/TIMING_BOUNDARY_SOURCE_AUDIT.json"
+    },
+    {
+      "id": "S08",
+      "path": "development_records/ii1_delivery/v3_ckks_acceptance_20261005/RETURNED_NETWORK_AND_CKKS_ACCEPTANCE.json",
+      "bytes": 12042,
+      "sha256": "a29838a91c5a0bb69c2c32f92918e1a1805769fdaa0a1766bd71aed602eca2af",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_ckks_acceptance_20261005/RETURNED_NETWORK_AND_CKKS_ACCEPTANCE.json"
+    },
+    {
+      "id": "S09",
+      "path": "development_records/ii1_delivery/v3_completion_20261005/ACTUAL_CKKS_STAGE_TIMINGS.json",
+      "bytes": 7199,
+      "sha256": "ae500c976189f917574efee427e1de886aab7859d5039fc124e0866da49cc88f",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/ACTUAL_CKKS_STAGE_TIMINGS.json"
+    },
+    {
+      "id": "S10",
+      "path": "development_records/ii1_delivery/v3_completion_20261005/RETURNED_STRESS_ACCEPTANCE.json",
+      "bytes": 2765,
+      "sha256": "8019016a98dc88090052613a8e225fe4b367bcddcbac8485b73fb38d25faf315",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/RETURNED_STRESS_ACCEPTANCE.json"
+    },
+    {
+      "id": "S11",
+      "path": "development_records/ii1_delivery/v3_soak_acceptance_20261005/RETURNED_SOAK_ACCEPTANCE.json",
+      "bytes": 2286,
+      "sha256": "018d2ad7f41d4008b3a8d13c9341bed26cfb90c16c922be4b1abe3481116b691",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_soak_acceptance_20261005/RETURNED_SOAK_ACCEPTANCE.json"
+    },
+    {
+      "id": "S12",
+      "path": "development_records/ii1_delivery/v3_soak_acceptance_20261005/ACCEPTED_SOAK_STATISTICS.json",
+      "bytes": 397474,
+      "sha256": "95cc6e4c42e97bc9a341b13050737bad842a7624170f7ea2b600d362393ebbb1",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_soak_acceptance_20261005/ACCEPTED_SOAK_STATISTICS.json"
+    },
+    {
+      "id": "S13",
+      "path": "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json",
+      "bytes": 3147,
+      "sha256": "f05564552e46c655d8839c2529432615ae891da8425e310fbfa3a3aa5bb86136",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json"
+    },
+    {
+      "id": "S14",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json",
+      "bytes": 10229,
+      "sha256": "2e291ed4297653f05fb144251f039656145a75f2e11a46848f68d698379a148e",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json"
+    },
+    {
+      "id": "S15",
+      "path": "vivado/ii1-20261005/full_dma_ntt_validation_v3/acceptance.json",
+      "bytes": 26914,
+      "sha256": "d15286868fc62c4d8edbee965a2af76f2b0a11cb6de708bb71b9d12b3654edbd",
+      "package_path": "evidence/original/vivado/ii1-20261005/full_dma_ntt_validation_v3/acceptance.json"
+    },
+    {
+      "id": "S16",
+      "path": "vivado/ii1-20261005/three_routed_fifo_slow_validation_v1/acceptance.json",
+      "bytes": 6913,
+      "sha256": "681eae93370c194af47461c9f86d1773d95c3df7d98a97a427d3c988b08a8886",
+      "package_path": "evidence/original/vivado/ii1-20261005/three_routed_fifo_slow_validation_v1/acceptance.json"
+    },
+    {
+      "id": "S17",
+      "path": "vivado/ii1-20261005/three_routed_fifo_fast_validation_v1/acceptance.json",
+      "bytes": 6925,
+      "sha256": "650140db4dce6faa85651ea7232b8d887b31685a63c6fcbec3afa9002a87b2fc",
+      "package_path": "evidence/original/vivado/ii1-20261005/three_routed_fifo_fast_validation_v1/acceptance.json"
+    },
+    {
+      "id": "S18",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json",
+      "bytes": 2135,
+      "sha256": "8298b11a5854807d8f641ce753fd810520ad24d57ca5ba97966323e787c9884c",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json"
+    },
+    {
+      "id": "S19",
+      "path": "development_records/ii1_delivery/v3_completion_20261005/DRIVER_FAULT_SHIM_ACCEPTANCE.json",
+      "bytes": 1910,
+      "sha256": "3e1d0b9c4fd4b68a91af124e50d6e40f0431ca777c4a9a2116a7e30c363983e0",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_completion_20261005/DRIVER_FAULT_SHIM_ACCEPTANCE.json"
+    },
+    {
+      "id": "S20",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/CONNECTED_FAULT_BATCH_ACCEPTANCE.json",
+      "bytes": 3288,
+      "sha256": "0611970b13bbd1b92f786b268f3473959c10ae0826c05ec9c42fb8c7352b16fe",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/CONNECTED_FAULT_BATCH_ACCEPTANCE.json"
+    },
+    {
+      "id": "S23",
+      "path": "development_records/board/edgefhe-ii1-v3-parity.WWK3zv/board_report.json",
+      "bytes": 20349,
+      "sha256": "0f41dd83a9cb3bb47a6466c24413d83939ba1a87b8ab2c9d17f7304d66fa28aa",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-parity.WWK3zv/board_report.json"
+    },
+    {
+      "id": "S25",
+      "path": "h/4/fixed-bank-20261003/address_math_audit.json",
+      "bytes": 964,
+      "sha256": "e59c108ab1b0301c9d4f05e6ab7041b35283f37bd2689f1ef864cf7d03054464",
+      "package_path": "evidence/original/h/4/fixed-bank-20261003/address_math_audit.json"
+    },
+    {
+      "id": "S27",
+      "path": "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_SENSOR_ACCEPTANCE.json",
+      "bytes": 7889,
+      "sha256": "c12c24487e2564deb4d24bc4b9b473aebd8a868a9d96aab6ac7559731272f264",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_SENSOR_ACCEPTANCE.json"
+    },
+    {
+      "id": "S28",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json",
+      "bytes": 968,
+      "sha256": "708ade22df6c4d76c5e35a0eba887dfbb2c053e1cc395f334267789d5130d143",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json"
+    },
+    {
+      "id": "S29",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json",
+      "bytes": 1461,
+      "sha256": "3fd9f7f9df42c92efc35b39b15a588d78a397d936db09bc3f962fe520e048f1d",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json"
+    },
+    {
+      "id": "S30",
+      "path": "development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json",
+      "bytes": 2506,
+      "sha256": "365dfe987954b0ee01e6eb09363b92be5a3b8a408fc49a88041cf7a4a97db83d",
+      "package_path": "evidence/original/development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json"
+    },
+    {
+      "id": "S31",
+      "path": "development_records/board/edgefhe-ii1-v3-benchmark.p0A5a6/benchmark_report.json",
+      "bytes": 41446,
+      "sha256": "c87aa7991e8b08c54004241439679433520449b8f0268fff11186450385b1328",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-benchmark.p0A5a6/benchmark_report.json"
+    },
+    {
+      "id": "S32",
+      "path": "development_records/board/edgefhe-ii1-v3-ckks-affine.3UOdaj/experiment_report.json",
+      "bytes": 562708,
+      "sha256": "b2d165a3e3d7863ae54f1413c3cc72bad4558a59e6529230cc8c657ba9656f9c",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-v3-ckks-affine.3UOdaj/experiment_report.json"
+    },
+    {
+      "id": "S33",
+      "path": "development_records/board/edgefhe-ii1-normal-soak.BoReKV/soak_report.json",
+      "bytes": 12066,
+      "sha256": "35c5d7606a509e8a6650ac0244cad234f46f3504205c01a0a403ae78a7b49b81",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-normal-soak.BoReKV/soak_report.json"
+    },
+    {
+      "id": "S34",
+      "path": "development_records/board/edgefhe-ii1-concurrency.uC6vdy/concurrency_report.json",
+      "bytes": 13680,
+      "sha256": "501dac458e705f92e1369f2c1b311ff7b12fdab55700b03e8edc2cc810d9e469",
+      "package_path": "evidence/original/development_records/board/edgefhe-ii1-concurrency.uC6vdy/concurrency_report.json"
+    },
+    {
+      "id": "S36",
+      "path": "development_records/ii1_delivery/runtime_contract_review.json",
+      "bytes": 3364,
+      "sha256": "6347239344489d527735c4e48bdb351d45fcacdb4b49740c9732c09b1b144ff1",
+      "package_path": "evidence/original/development_records/ii1_delivery/runtime_contract_review.json"
+    }
+  ],
+  "excluded": [
+    "private Proposal text",
+    "duplicate source copies",
+    "286MB soak transactions",
+    "kernel modules and full tool workspaces"
+  ],
+  "original_records_can_reference_nonincluded_workspace_files": true
+}

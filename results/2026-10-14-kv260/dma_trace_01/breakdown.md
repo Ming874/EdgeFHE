@@ -1,0 +1,23 @@
+# One FPGA product call, split
+
+- Workload: v5_e2e latency, fpga-serial, 2+10 rounds, CPUs 0-3; module 6BDCA74AD872B2765D36882, kprobe marks on
+- Per call as the program sees it (ioctl time): untraced 4.677 ms, traced 4.734 ms (tracer cost 58 us per call)
+- Driver-reported elapsed_us per call: 0.546 ms untraced, 0.562 ms traced
+- Calls in the trace: 109; complete and used: 109 (mode fine)
+- Skipped: none; unfinished at the end: 0
+- Kernel time per call (edgefhe_ioctl): median 4,705.0 us, p10–p90 4,659.0–4,804.0 us; outside the DMA window: median 4,141.9 us
+
+| Part | What happens | Median us | p10–p90 us | Share | Bytes | MB/s |
+|---|---|---|---|---|---|---|
+| enter | copy the 48-byte request in, take the driver mutex | 3.1 | 2.1–8.9 | 0.1% |  |  |
+| checks | request checks, hardened-usercopy object check | 2.9 | 2.8–5.1 | 0.1% |  |  |
+| copy_in | copy_from_user: 128 KiB into the uncached TX buffer | 28.0 | 27.6–82.2 | 0.9% | 131072 | 4676.1 |
+| validate | canonical-residue check: 32,768 uncached 32-bit loads (109.5 ns per load) | 3,589.0 | 3,579.0–3,605.0 | 76.0% | 131072 | 36.5 |
+| clear_out | memset: 64 KiB of the uncached RX buffer | 10.0 | 9.0–12.0 | 0.2% | 65536 | 6553.6 |
+| dma_setup | AXI-Lite registers, two descriptors prepared and submitted | 18.0 | 16.9–25.9 | 0.4% |  |  |
+| dma_wait | DMA both ways + PL compute (the driver's elapsed_us window) | 563.0 | 518.1–591.0 | 11.9% | 196608 | 349.2 |
+| copy_out | copy_to_user: 64 KiB from the uncached RX buffer | 450.0 | 449.0–464.0 | 9.6% | 65536 | 145.6 |
+| wipe | memzero_explicit: 192 KiB TX + 64 KiB RX, uncached | 34.5 | 34.4–35.7 | 0.7% | 262144 | 7596.2 |
+| leave | mutex unlock, copy the request back | 3.6 | 3.5–4.6 | 0.1% |  |  |
+
+Share = mean of the part / mean of the whole call, so the column adds up to 100%. Times include the tracer's own cost; the untraced baseline above shows how much that is.

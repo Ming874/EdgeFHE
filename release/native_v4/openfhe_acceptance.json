@@ -1,0 +1,150 @@
+{
+  "status": "OPENFHE_STANDARD_CPU_1_3_4_WORKER_ACCEPTANCE_PASS",
+  "scope": "standard OpenFHE CPU profile, separate from custom FPGA profile",
+  "board_operations": 0,
+  "openfhe_dir": "/home/gwu60/.local/openfhe-v1.5.1/lib/OpenFHE",
+  "build_command": [
+    "cmake",
+    "-S",
+    "/mnt/d/NCUE_Project/github_update/EdgeFHE-KV260-GitHub/validation/openfhe_client",
+    "-B",
+    "/mnt/d/NCUE_Project/development_records/native_client_20261007/openfhe_standard_v6_s29/build",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DOpenFHE_DIR=/home/gwu60/.local/openfhe-v1.5.1/lib/OpenFHE"
+  ],
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "benchmark": {
+    "1": {
+      "encode_us": {
+        "n": 30,
+        "p50_us": 968.2985000000001,
+        "p95_us": 1478.628
+      },
+      "encrypt_us": {
+        "n": 30,
+        "p50_us": 4646.6815,
+        "p95_us": 5522.734
+      },
+      "cloud_affine_us": {
+        "n": 30,
+        "p50_us": 497.938,
+        "p95_us": 1613.817
+      },
+      "decrypt_decode_us": {
+        "n": 30,
+        "p50_us": 1312.5225,
+        "p95_us": 1753.739
+      },
+      "hot_path_us": {
+        "n": 30,
+        "p50_us": 7759.5665,
+        "p95_us": 9373.348
+      },
+      "keygen_us": {
+        "n": 30,
+        "p50_us": 1048.6895,
+        "p95_us": 1838.033
+      },
+      "max_slot_error": 0.000242753663719,
+      "profile_stdout": "OPENFHE_STANDARD_PROFILE N=4096 batch=2048 configured_security=HEStd_128_classic secret=UNIFORM_TERNARY scale_bits=29 moduli=1073692673,536813569,536903681, threads=1 omp_max=1"
+    },
+    "3": {
+      "encode_us": {
+        "n": 30,
+        "p50_us": 745.7925,
+        "p95_us": 1044.468
+      },
+      "encrypt_us": {
+        "n": 30,
+        "p50_us": 4346.039,
+        "p95_us": 6937.386
+      },
+      "cloud_affine_us": {
+        "n": 30,
+        "p50_us": 482.86400000000003,
+        "p95_us": 1225.886
+      },
+      "decrypt_decode_us": {
+        "n": 30,
+        "p50_us": 1303.1689999999999,
+        "p95_us": 2446.674
+      },
+      "hot_path_us": {
+        "n": 30,
+        "p50_us": 6979.762500000001,
+        "p95_us": 10942.455
+      },
+      "keygen_us": {
+        "n": 30,
+        "p50_us": 1023.289,
+        "p95_us": 1655.007
+      },
+      "max_slot_error": 0.000274565159133,
+      "profile_stdout": "OPENFHE_STANDARD_PROFILE N=4096 batch=2048 configured_security=HEStd_128_classic secret=UNIFORM_TERNARY scale_bits=29 moduli=1073692673,536813569,536903681, threads=3 omp_max=3"
+    },
+    "4": {
+      "encode_us": {
+        "n": 30,
+        "p50_us": 865.2964999999999,
+        "p95_us": 1734.933
+      },
+      "encrypt_us": {
+        "n": 30,
+        "p50_us": 4422.43,
+        "p95_us": 5162.66
+      },
+      "cloud_affine_us": {
+        "n": 30,
+        "p50_us": 456.2435,
+        "p95_us": 1268.348
+      },
+      "decrypt_decode_us": {
+        "n": 30,
+        "p50_us": 1250.0475000000001,
+        "p95_us": 2512.556
+      },
+      "hot_path_us": {
+        "n": 30,
+        "p50_us": 7268.7845,
+        "p95_us": 9506.08
+      },
+      "keygen_us": {
+        "n": 30,
+        "p50_us": 1081.5885,
+        "p95_us": 1604.872
+      },
+      "max_slot_error": 0.000254536905874,
+      "profile_stdout": "OPENFHE_STANDARD_PROFILE N=4096 batch=2048 configured_security=HEStd_128_classic secret=UNIFORM_TERNARY scale_bits=29 moduli=1073692673,536813569,536903681, threads=4 omp_max=4"
+    }
+  },
+  "source_sha256": "f1a943f681088b969bd49e179da856772c4ac0a561828a52b140e85223997879",
+  "evidence_sha256": {
+    "workers_1.log": "22fd619433ed1a371c81c76d4d540a2b26e2bc739863b887af9ee124224fc47d",
+    "workers_1.tsv": "54c1eb88355c29dfc9e9235632ee4ceef462cceb27b8516d39dbf352fdd6156b",
+    "workers_3.log": "af09553db2649c7763530dce13c19e38f2814b550b3cf3b3ac21a222128c4ff1",
+    "workers_3.tsv": "edb2d8c3d88c6e792a885c3aa550e7e0ae87b4a6463246da50872d028a23c16d",
+    "workers_4.log": "68625d7518a28bab3f77aa53dee8cd4694218b351a9dc894a2f7c3fe1b96bab0",
+    "workers_4.tsv": "aa4293e7ee87352ab3e7eddc914e77466e77490f49264ed2cd93936a80ac8a67"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_OVERLAY_BINARY_SEMANTICS_ONLY",
+  "external_symbols": [
+    "amba",
+    "gic",
+    "zynqmp_clk",
+    "zynqmp_reset"
+  ],
+  "afi_pairs": [
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      14,
+      512
+    ]
+  ],
+  "clock_id": 71,
+  "reset_id": 116,
+  "limits": [
+    "Not applied to live tree",
+    "No board load/DMA acceptance",
+    "Physical reset warning disposition pending"
+  ]
+}

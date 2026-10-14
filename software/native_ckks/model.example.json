@@ -1,0 +1,7 @@
+{
+  "model_id": "demo-affine-v4",
+  "weights": [1.1, -0.7, 0.9, 0.4],
+  "bias": -0.35,
+  "input_abs_max": 16,
+  "max_logit_error": 0.0005
+}

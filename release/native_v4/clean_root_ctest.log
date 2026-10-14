@@ -1,0 +1,19 @@
+Internal ctest changing into directory: /mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build
+Test project /mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/root_build
+    Start 1: public_cpu_exact
+1/5 Test #1: public_cpu_exact .................   Passed    0.14 sec
+    Start 2: mixed_cpu_exact
+2/5 Test #2: mixed_cpu_exact ..................   Passed    0.15 sec
+    Start 3: ckks_cpu_affine
+3/5 Test #3: ckks_cpu_affine ..................   Passed    9.23 sec
+    Start 4: native_complete_math
+4/5 Test #4: native_complete_math .............   Passed    0.10 sec
+    Start 5: native_protocol_offline
+5/5 Test #5: native_protocol_offline ..........   Passed    0.31 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Label Time Summary:
+cpu-only    =   9.52 sec*proc (3 tests)
+
+Total Test time (real) =   9.97 sec

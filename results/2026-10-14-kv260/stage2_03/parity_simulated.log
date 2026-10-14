@@ -1,0 +1,2 @@
+device=simulated-dma backend=fpga-simulated-dma-overlap requests=29 pack_ms=4.42312 device_ms=191.01 unpack_ms=6.65365 wall_ms=193.303 driver_reported_ms=190.962
+V5_PARITY_PASS device=simulated-dma cases=16 coefficients=196608 client_round=exact

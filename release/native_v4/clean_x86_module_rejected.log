@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/inspect_prebuilt.py", line 41, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/inspect_prebuilt.py", line 37, in main
+    raise ValueError('This optional prebuilt module does not match the current target kernel/architecture')
+ValueError: This optional prebuilt module does not match the current target kernel/architecture

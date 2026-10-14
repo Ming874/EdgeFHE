@@ -1,0 +1,183 @@
+{
+  "status": "NATIVE_V4_CPU_ONLY_OPERATOR_ACCEPTANCE_PASS",
+  "environment": {
+    "system": "Linux",
+    "node": "DESKTOP-99B8DB7",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "board_DMA_operations": 0,
+  "module_insertions": 0,
+  "FPGA_loads": 0,
+  "network_connections": 0,
+  "started_ns": 1791356202300881498,
+  "candidate_version": {
+    "version": "edgefhe-native-ckks-v4-s29-candidate-3",
+    "profile_id": "edgefhe-functional-sparse-n4096-v4-s29",
+    "status": "LOCAL_CPU_AND_LOOPBACK_ACCEPTED_CANDIDATE_NOT_BOARD_OR_SECURITY_RELEASE",
+    "date": "2026-10-07",
+    "architecture_tested": [
+      "x86_64 Linux WSL Ubuntu 24.04"
+    ],
+    "N": 4096,
+    "slots": 2048,
+    "q": [
+      998244353,
+      1004535809,
+      469762049
+    ],
+    "input_scale_bits": 29,
+    "affine_output_scale_bits": 58,
+    "secret_and_mask_fixed_weight": 64,
+    "error_fixed_weight": 16,
+    "security_bits": null,
+    "native_math_source_sha256": {
+      "benchmark.py": "e521db649e2eed3ec51a98b87dc8ebd69367d125be93dea3418c342284f56ace",
+      "CMakeLists.txt": "b63017ee04c8715ff5d5c1f1bd9f7a11a312ed05fc15f183e74c20765c013b43",
+      "core.cpp": "13d739e29b8ad563f184ab1f0b7322f76de2836d85c689cbcfa02a7ce7ba4ec4",
+      "core.hpp": "6894ad0dff440a32918706261ecd3c72af900d92be67f830a394814cfc0bdf46",
+      "c_api.cpp": "7b91b2deb121be63ff312bb1b45da7d654a286a44defe9a7f2a8dc50542b6bfc",
+      "dynamic_client.py": "432d62d56d3d65ef8332359bbf3bf6f39e5686bb63fd72d765311805c32a2866",
+      "interactive.cpp": "69f8c756b8fb3fbc4d46ebb16cc90e681777a7b04f8467abed0268a5dfbc33e3",
+      "model.example.json": "c64d3e543816f785b0c7e44a45599ad9367f99aec04d61ac9dc48a978bdad220",
+      "model.py": "46c0202869afb326f243499d1f7502f75647e78776b492104a56bef3804cc967",
+      "native_api.py": "4f5a408143bea22f078230e5be40e067b957c8cb413516e59c8bec76ac4162d4",
+      "net_config.py": "02b2bd3bf02c2c1650e6f1b2904169a6d27548c5bfdbbbd4b78cbf9306ea2574",
+      "pc_server.py": "47e12de19fdc8ec0a3e0bdb7ce60044d4238bb381f374b84188a3dbb36c5e304",
+      "protocol.py": "20ed84302fb2b1dc74d1e849999e26b858a6c78f1c80b7ac760da592ffeb70fc",
+      "python_baseline.py": "48c398f1bb7fb016ff93db1647c41a237e19cd8cba89896838ae15fb1eee977c",
+      "selftest.cpp": "8fade8e5803025410c25e8fde88d92091279f6cd0b5aad48b457caefc8274375",
+      "transport.py": "cc439ccda7d112ecd065eda12e11c791edd938b8de5b888831e2a8f3ab84dd16"
+    },
+    "tested_x86_shared_library_sha256": "80408e22d110ae7ae6a92399e2c42ea375c534a11e3ba749cf853281ca3f586d",
+    "x86_binary_included": false,
+    "frozen_V3_source_and_firmware_changed": false,
+    "acceptance": {
+      "distinct_dense_cases": 1000,
+      "three_way_exact_coefficients": 12288000,
+      "complete_crypto_cases": 12,
+      "loopback_dynamic_batches": 6,
+      "local_mTLS": true,
+      "ASAN_UBSAN": true,
+      "aarch64_native": false,
+      "V4_native_to_PL": false,
+      "V4_two_machine": false,
+      "production_security_profile": false,
+      "physical_reset_or_fault_recovery": false,
+      "driver_candidate_full_kernel_compile": false,
+      "formal_release": false
+    },
+    "receipt_sha256": {
+      "math_acceptance.json": "3f671d8d895f775a3c6dd05152ca4a942452d1f7d84898dd954eda9661ceda16",
+      "benchmark_cpu.json": "95d13718764128698343669e88b91c4e650cfa2a10bdba78f7d4af9fc59bf94f",
+      "network_acceptance.json": "105049256adca4fb0c903908be5268f4374a26af1f2e332bc873da39a4b36333",
+      "driver_model_acceptance.json": "10c80b3ca3628852ead3aae893ea0e3b0461d8777106efa008c50498cf854386",
+      "openfhe_acceptance.json": "70edb7526391ab4732fa975e42cfe062fd9e736cb804a32da1281e439e3b62de",
+      "sanitizer_acceptance.json": "da15124545e585861c47c40ab00114443e655b45deffa6839e4a243b029a4315",
+      "sanitizer_compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sanitizer_run.log": "2e9f0126ced48226757ec3260cb5cca931be3085f19a0679ba90f83513354e9d",
+      "connected_local_checks.log": "195783f30404019bfcd72dbea61a43ec4133ebb974a8d735cc2fcfaf7574dcad",
+      "openfhe_workers_1.log": "22fd619433ed1a371c81c76d4d540a2b26e2bc739863b887af9ee124224fc47d",
+      "openfhe_workers_1.tsv": "54c1eb88355c29dfc9e9235632ee4ceef462cceb27b8516d39dbf352fdd6156b",
+      "openfhe_workers_3.log": "af09553db2649c7763530dce13c19e38f2814b550b3cf3b3ac21a222128c4ff1",
+      "openfhe_workers_3.tsv": "edb2d8c3d88c6e792a885c3aa550e7e0ae87b4a6463246da50872d028a23c16d",
+      "openfhe_workers_4.log": "68625d7518a28bab3f77aa53dee8cd4694218b351a9dc894a2f7c3fe1b96bab0",
+      "openfhe_workers_4.tsv": "aa4293e7ee87352ab3e7eddc914e77466e77490f49264ed2cd93936a80ac8a67"
+    },
+    "limits": [
+      "V3 board acceptance stays bound to frozen sources and scale24.",
+      "Local CPU ratios are not ARM, FPGA, network E2E or security claims.",
+      "Standard OpenFHE uses different moduli/distributions; no ciphertext interoperability.",
+      "Driver draft must not be deployed; physical quiescence and unload lifetime unresolved."
+    ]
+  },
+  "commands": [
+    {
+      "name": "inventory",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/tools/verify_repository.py"
+      ]
+    },
+    {
+      "name": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/software/native_ckks",
+        "-B",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build",
+        "-DCMAKE_BUILD_TYPE=Release"
+      ]
+    },
+    {
+      "name": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build",
+        "-j",
+        "4"
+      ]
+    },
+    {
+      "name": "ctest",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build",
+        "--output-on-failure"
+      ]
+    },
+    {
+      "name": "math",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/software/native_ckks/tests/validate_native.py",
+        "--build",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build",
+        "--dense-cases",
+        "1000"
+      ]
+    },
+    {
+      "name": "benchmark",
+      "command": [
+        "/usr/bin/python3",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate/EdgeFHE-KV260-GitHub/software/native_ckks/benchmark.py",
+        "--library",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/build/libedgefhe_native.so",
+        "--output",
+        "/mnt/d/NCUE_Project/development_records/native_client_20261007/clean_candidate_qa/cpu_operator/benchmark_cpu.json",
+        "--rounds",
+        "10",
+        "--warmups",
+        "3"
+      ]
+    }
+  ],
+  "finished_ns": 1791356280179634536,
+  "evidence_sha256": {
+    "benchmark.log": "4e945a1d46ff589d0d16859389fcf80b11d516b34fa584e5bd9f16832479e605",
+    "benchmark_cpu.json": "082dfd8e0b7b03ffaaea39e71f443e96325e72fbba37b43b36324330f50c5446",
+    "build.log": "a39492944e56322894c6bb08ba090d184b4d2c4836ee6475d7345a4819dff862",
+    "configure.log": "5ad5393d4d90a5a0e6b977155a8186b76d5711e60df3059e6278a9a268872f33",
+    "ctest.log": "87ec1a484ba2131f63bbe52b2399306fb505f94ee6be9d999ac4b6bbe44a5c44",
+    "inventory.log": "04de2424bac48da4dda613010240b193b1752cbcd8e7f598dad7ff656cf56f4a",
+    "math.log": "61618c0c55f1d9660e13693d6adfa18caab148b3d2be5f8e7e082c37b5df390f",
+    "build/CMakeCache.txt": "6f76e3faabd35852fd4e3549587ad11a2bdd6d5bd692ad5552058bc46bbefb14",
+    "build/cmake_install.cmake": "7cb521f2e6506b181cc238ebe1e1a3875d6d563bfcb06cd879c2d00e69ed8173",
+    "build/CTestTestfile.cmake": "9c3dd0023fcd75500d670cfbabcee3c69891a99250187171193a90b15256abe6",
+    "build/DartConfiguration.tcl": "5ed20bcc260b1c5a0ff5ddb89043359bd9522bf22f01eb0da2fd1280ed730cea",
+    "build/edgefhe_native_demo": "c699c0be3ed8c199bdc0ef8e9f6604c089e46fd4430d10603316c33d5f0642d0",
+    "build/edgefhe_native_selftest": "5ad746fc63d15140f64b9b1a8e39e1fb5618cd93a2a1d9eae0e265efca4d3f6e",
+    "build/libedgefhe_native.so": "80408e22d110ae7ae6a92399e2c42ea375c534a11e3ba749cf853281ca3f586d",
+    "build/libindependent.so": "17d68414c12584110849679660bf33fc03e3c41aa767901519a468b690007d16",
+    "build/Makefile": "57ab80d8a33a660f316db7850604d878343442643fc0a61ffcefaf91a2fc75d0",
+    "build/native_acceptance.json": "cda5d434edc6e056f988936eedd6ca3bc998bff83cd9fe848e0bcfb4f54ac278",
+    "build/Testing/Temporary/CTestCostData.txt": "2a000570c9a9d85767cec5ae39dc043e18fe477449f5a2d02e2fba4f0e9bc29f",
+    "build/Testing/Temporary/LastTest.log": "a36a9d190e9478716c9c4c86566ffa166862c79591fdc8d7fd59f3cb7a785c99"
+  }
+}

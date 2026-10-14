@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "V1 low-level polynomial interoperability; not OpenFHE CKKS ciphertext interoperability",
+  "openfhe_revision": "1306d14f8c26bb6150d3e6ad54f28dfe1007689e",
+  "n": 4096,
+  "primes": [
+    998244353,
+    1004535809,
+    469762049
+  ],
+  "psi": [
+    350007156,
+    2062645,
+    62025685
+  ],
+  "library_output_order": "bit-reversed; exact permutation independently measured from transform of x",
+  "hls_output_order": "natural; explicit adapter",
+  "cases": 16,
+  "operations": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "independent_coefficient_comparisons": 196608,
+  "secret_keys_generated": false,
+  "vector_sha256": "e193e385bd57a67f643fcadcc45254c638058d844422caf9c3a5f13c6255849f",
+  "generator_sha256": "3213fdf6bfe0a3490b322c8fd20643e7b879435bc448f92cf51ada6329d06263",
+  "library_binary_sha256": [
+    "deaaaead10b35075e6046e9ad4744abc67e2b5a94148a62a16d177601dbd5cdb  /home/gwu60/.local/openfhe-v1.5.1/lib/libOPENFHEcore.so",
+    "37d54095f4e174c431bbbef89cc42c084c725e088a2ddac78e0778027af2e485  /mnt/d/NCUE_Project/h/4/fixed-bank-20261003/openfhe_validation/linux_build/export_vectors"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "Kernel-specific optional accepted V3 binary; never a universal or V4 module",
+  "kernel": "5.15.0-1027-xilinx-zynqmp",
+  "distribution": "Ubuntu 22.04.4 LTS Xilinx #31",
+  "architecture": "aarch64",
+  "module_version": "ii1-guarded-v3",
+  "vermagic": "5.15.0-1027-xilinx-zynqmp SMP mod_unload modversions aarch64",
+  "srcversion": "6BDCA74AD872B2765D36882",
+  "module_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+  "module_path": "edgefhe_rns3_n4096_dma_proxy.ko",
+  "source_path": "../../../software/driver/edgefhe_rns3_n4096_dma_proxy.c",
+  "source_sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+  "original_driver_identity_sha256": "ca1716831e2b83dfa4c68b281924fc032534aad79b6a145be358efe56c144887",
+  "original_runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+  "signed_release": false,
+  "auto_load_supported": false,
+  "limits": [
+    "Matching kernel name/vermagic is necessary but does not prove a different kernel build ABI",
+    "Do not load alongside V3 or V4; source/bit/overlay/runtime and live identity gates still required",
+    "No headers needed to inspect/reuse exact accepted binary; different kernels need rebuild"
+  ]
+}

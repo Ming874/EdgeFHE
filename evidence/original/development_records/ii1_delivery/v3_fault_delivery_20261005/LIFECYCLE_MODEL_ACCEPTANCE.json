@@ -1,0 +1,48 @@
+{
+  "status": "PASS_EXACT_FROZEN_LIFECYCLE_C_HOST_MODEL_WITH_NEGATIVE_QUIESCENCE_COUNTEREXAMPLES",
+  "source_sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+  "scenarios": 4,
+  "negative_counterexamples": 2,
+  "exact_functions": [
+    "edgefhe_wipe_buffers",
+    "edgefhe_ioctl",
+    "edgefhe_free",
+    "edgefhe_open",
+    "edgefhe_release",
+    "edgefhe_remove"
+  ],
+  "artifacts_sha256": {
+    "api_error.log": "e29fa8ffd2b69fe7e62df5a49d6d7042ab557683896fd3358586d61a896d8504",
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "false_success.log": "112ea7e2f58872b7b38c080dbcfb40545ce8adca295dc7f67c69c9c30dabe8c8",
+    "frozen_lifecycle_functions.inc": "46c7386e0ede1d42c0cbca07e72232908f3928360fbd953cf74aef319c5a97a2",
+    "frozen_lifecycle_types.inc": "d4a3936cdf0ce0aea2ce72a82082044340a788d6c8baa50686cf49d3bd63cf5c",
+    "harness": "8a73a6610992f24009772be7595dd98c9a2a4307a7eb9173f669f5e96ea69686",
+    "positive.log": "010e1be4d8d385129f5f3b24f89944e61ad93226adec59183904046dafc28a80"
+  },
+  "compile_command": [
+    "gcc",
+    "-O1",
+    "-g",
+    "-std=gnu11",
+    "-pthread",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-unused-parameter",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I",
+    "/mnt/d/NCUE_Project/development_records/ii1_delivery/v3_fault_delivery_20261005/lifecycle_model_v1",
+    "/mnt/d/NCUE_Project/development_records/ii1_delivery/v3_fault_delivery_20261005/lifecycle_harness.c",
+    "-o",
+    "/mnt/d/NCUE_Project/development_records/ii1_delivery/v3_fault_delivery_20261005/lifecycle_model_v1/harness"
+  ],
+  "assistant_board_operations": 0,
+  "limits": [
+    "Transfer and callback semantics not tested here; transfer/DMA/misc/VFS APIs are explicit host stubs",
+    "Assumes framework misc mutex and VFS fd lifetime; not actual Ubuntu kernel or PL/DDR reset acceptance",
+    "Two negatives deliberately violate DMA quiescence; demonstrate conditional safety gap, not observed board failure",
+    "Production V3 driver/KO/bitstream unchanged; physical fault/removal remains pending"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "status": "PASS_IP_PACKAGE_ONLY",
+  "vlnv": "edgefhe.local:hls:rns3_ntt_parallel_accel_n4096:1.1",
+  "package": "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\openfhe_csim_project\\solution1\\impl\\ip\\edgefhe_local_hls_rns3_ntt_parallel_accel_n4096_1_1.zip",
+  "package_sha256": "36fb648997e37aa5817b79ef55746080e9c33ad4c709a4e1efd661ce7eca8947",
+  "package_bytes": 324812,
+  "axi_interfaces": {
+    "s_axi_control": {
+      "ADDR_WIDTH": "5",
+      "DATA_WIDTH": "32",
+      "PROTOCOL": "AXI4LITE",
+      "READ_WRITE_MODE": "READ_WRITE"
+    },
+    "ap_clk": {
+      "ASSOCIATED_BUSIF": "s_axi_control:in_stream:out_stream",
+      "ASSOCIATED_RESET": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "POLARITY": "ACTIVE_LOW"
+    },
+    "interrupt": {
+      "SENSITIVITY": "LEVEL_HIGH"
+    },
+    "in_stream": {
+      "TDATA_NUM_BYTES": "16",
+      "TUSER_WIDTH": "0",
+      "LAYERED_METADATA": ""
+    },
+    "out_stream": {
+      "TDATA_NUM_BYTES": "16",
+      "TUSER_WIDTH": "0",
+      "LAYERED_METADATA": ""
+    }
+  },
+  "axi_logical_ports": {
+    "s_axi_control": [
+      "AWADDR",
+      "AWVALID",
+      "AWREADY",
+      "WDATA",
+      "WSTRB",
+      "WVALID",
+      "WREADY",
+      "BRESP",
+      "BVALID",
+      "BREADY",
+      "ARADDR",
+      "ARVALID",
+      "ARREADY",
+      "RDATA",
+      "RRESP",
+      "RVALID",
+      "RREADY"
+    ],
+    "ap_clk": [
+      "CLK"
+    ],
+    "ap_rst_n": [
+      "RST"
+    ],
+    "interrupt": [
+      "INTERRUPT"
+    ],
+    "in_stream": [
+      "TVALID",
+      "TREADY",
+      "TDATA",
+      "TKEEP",
+      "TSTRB",
+      "TLAST"
+    ],
+    "out_stream": [
+      "TVALID",
+      "TREADY",
+      "TDATA",
+      "TKEEP",
+      "TSTRB",
+      "TLAST"
+    ]
+  },
+  "registers": {
+    "ADDR_AP_CTRL": 0,
+    "ADDR_GIE": 4,
+    "ADDR_IER": 8,
+    "ADDR_ISR": 12,
+    "ADDR_OPERATION_DATA": 16,
+    "BITS_OPERATION_DATA": 3
+  },
+  "packaged_verilog_synthesis_datapath_matches": 53,
+  "rtl_match_origins": {
+    "rns3_ntt_parallel_accel_n4096_butterfly_stage.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_butterfly_stage_Pipeline_butterfly_batch.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_control_s_axi.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_cyclic_ntt.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_cyclic_ntt_Pipeline_VITIS_LOOP_331_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_fifo_w3_d2_S.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_fifo_w32_d64_A.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_flow_control_loop_pipe.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_flow_control_loop_pipe_sequential_init.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_power_cache.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_power_cache_Pipeline_VITIS_LOOP_160_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_power_cache_Pipeline_VITIS_LOOP_174_2.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_power_cache_RNS_MONTGOMERY_NEG_INV_V13_ROM_AUTO_1R.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_power_cache_RNS_MONTGOMERY_R_V_ROM_AUTO_1R.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_stage_twiddles.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_stage_twiddles_Pipeline_VITIS_LOOP_204_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_stage_twiddles_Pipeline_VITIS_LOOP_219_2.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_stage_twiddles_RNS_STAGE_ROOT_FWD_MONT_V_ROM_AUTO_1R.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_generate_stage_twiddles_RNS_STAGE_ROOT_INV_MONT_V_ROM_AUTO_1R.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_load_stream.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_load_stream_Pipeline_VITIS_LOOP_414_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_mul_32ns_30ns_62_1_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_mul_32ns_32ns_64_1_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_mul_32s_30ns_32_1_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_mux_42_32_1_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_mux_43_32_1_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_pack_rns3.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_process_limb_0_s.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_process_limb_1_s.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_process_limb_2_s.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_regslice_both.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_leocq.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_RNbkb.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_RNcud.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_RNeOg.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_RNfYi.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_stg8j.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_ap_uint_0_stream_ap_uint_32_0_s_twwdI.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_2.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_3.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_4.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_5.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_rns_ntt_parallel_process_impl_n4096_stream_stream_ap_uint_0_Pipeline_VITIS_LOO_6.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_start_for_pack_rns3_U0.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_start_for_process_limb_0_U0.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_start_for_process_limb_1_U0.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_start_for_process_limb_2_U0.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_unpack_rns3.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096_unpack_rns3_Pipeline_VITIS_LOOP_17_1.v": "synthesis",
+    "rns3_ntt_parallel_accel_n4096.v": "synthesis_plus_two_export_simulation_only_monitors"
+  },
+  "uninstantiated_export_monitor_files": [
+    "rns3_ntt_parallel_accel_n4096_hls_deadlock_detection_unit.v",
+    "rns3_ntt_parallel_accel_n4096_hls_deadlock_idx0_monitor.v"
+  ],
+  "hardware_source_sha256": {
+    "hls_source\\src\\rns_ntt_onthefly.hpp": "d2c0150555f2ca61b9cf00880960bc0ad82cf5c68b4f983bc6ce5c276e589d60",
+    "hls_source\\src\\rns_ntt_onthefly_constants.hpp": "4a65fb60dbe3ebd2a63a739f3541d10bd843389438b9630bf24b38dbfd0694b3",
+    "hls_source\\src\\rns_ntt_parallel.cpp": "909cc65b75add48d6e8d8b1421f00bbd2ac5e990685cbe37a701163742d27039",
+    "hls_source\\src\\rns_ntt_parallel.hpp": "74fff2a34bf3132d7487033b29e7be96456426e334070037fcd11354e24f19d9",
+    "hls_source\\src\\rns_ntt_parallel_constants.hpp": "9cc71c077ae3e666861daf547b78ea59355ee0c3ddef6e3c4253c3fd9ec3a477",
+    "hls_source\\src\\rns_ntt_parallel_core.cpp": "cd1121254f3e1ee2419c6817a6c8b367d8a75edb9c417ffcd222e727b8bcae7c",
+    "hls_source\\src\\rns_ntt_parallel_core.hpp": "f189e30ca70e2fd552c4e5edb8d0502c055ac7879a8c62426610873b3e4e06a2",
+    "hls_source\\src\\rns_ntt_parallel_rns3.cpp": "07086a23fb21f771b23591e08990ba968d3ceee845b45750a7eeb9ca1739bb2d",
+    "hls_source\\src\\rns_ntt_parallel_rns3.hpp": "48cf2a68a1b356e51ebec7a976a542515911f2234aae543960c99ac668b98fdc"
+  },
+  "interop_acceptance_sha256": "69b8470c6aa52ef6340dd74b88f731fd55c74b68a0191a73721226088cc59677",
+  "export_log_sha256": "3abfe037ed05fce4aafa0fed1e55ab3b6743bc30a13ec48a6865be6cd377b695",
+  "limits": [
+    "No new Vivado placement/routing or bitstream",
+    "No board transfer/deployment",
+    "Same low-level ABI does not prove currently installed driver/image identity"
+  ]
+}

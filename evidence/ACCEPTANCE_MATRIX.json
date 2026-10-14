@@ -1,0 +1,142 @@
+{
+  "status": "CURRENT_ACCEPTANCE_MATRIX_NOT_100_PERCENT",
+  "gates": [
+    {
+      "id": "G01",
+      "status": "PASS_FIXED_N4096_FUNCTIONAL_PROFILE",
+      "scope": "固定6例scale/packet/PSPL，實板接受"
+    },
+    {
+      "id": "G02",
+      "status": "PASS",
+      "scope": "模算術上界與獨立差分"
+    },
+    {
+      "id": "G03",
+      "status": "PASS",
+      "scope": "II1/合法bank/PL無通用運算除法"
+    },
+    {
+      "id": "G04",
+      "status": "PASS",
+      "scope": "公開OpenFHE低層向量Csim"
+    },
+    {
+      "id": "G05",
+      "status": "PASS_IP_LEVEL",
+      "scope": "RTL精確比較與bounded backpressure/reset"
+    },
+    {
+      "id": "G06",
+      "status": "PASS",
+      "scope": "新IP匯出與artifact identity"
+    },
+    {
+      "id": "G07",
+      "status": "PARTIAL_DMA_FUNCTIONAL_AND3_TWO_CORNER_SDF_PASS_PHYSICAL_PENDING",
+      "scope": "實際DMA+frozen HLS九job/三abort四sharedreset及三routed FIFO slow/max fast/min PASS；upstream board reset與跨PLreset DDR responses待驗"
+    },
+    {
+      "id": "G08",
+      "status": "PARTIAL_FORMAL_NORMAL_CONCURRENCY_PASS_RECOVERABLE_FAULT_PREPARED_FATAL_LIFECYCLE_PENDING",
+      "scope": "同V3正常nominal/拒絕/soak與15原檔2000同process shared/separate-fd併發正式接受；usercopy24/18工具QA及四C lifecycle模型PASS；fault board/in-flight remove/quiescence待驗"
+    },
+    {
+      "id": "G09",
+      "status": "PASS_NOMINAL25_SHORT1004_AND_RETURNED_NORMAL_SIX_HOUR_SOAK",
+      "scope": "25公開case、1004短壓測/19 preDMA拒絕及12原檔6h5798822jobs/72正常openclose正式接受；六小時無溫度資料，不含fault/remove/concurrency"
+    },
+    {
+      "id": "G10",
+      "status": "PASS_FORMAL_ORIGINAL_TWO_MACHINE_FIXED6",
+      "scope": "network7/board34/PC14原檔已接受，全部2048slots與84DMA"
+    },
+    {
+      "id": "G11",
+      "status": "PASS_MEASURED_WITH_BASELINE_LIMITS",
+      "scope": "800paired與真6例diagnostic timing完成；無optimized E2E speedup承諾"
+    },
+    {
+      "id": "G12",
+      "status": "PARTIAL_ENGINEERING_REVIEW_BUNDLE_NOT_RELEASE",
+      "scope": "完整reset/fault/lifecycle及乾淨環境release尚待"
+    }
+  ],
+  "formal_release_accepted": false,
+  "new_stress_board_jobs": 1004,
+  "accepted_load_relative_jobs": 5802783,
+  "assistant_board_operations": 0,
+  "evidence": {
+    "development_records/ii1_delivery/v3_ckks_acceptance_20261005/RETURNED_NETWORK_AND_CKKS_ACCEPTANCE.json": "a29838a91c5a0bb69c2c32f92918e1a1805769fdaa0a1766bd71aed602eca2af",
+    "development_records/ii1_delivery/v3_completion_20261005/ACTUAL_CKKS_STAGE_TIMINGS.json": "ae500c976189f917574efee427e1de886aab7859d5039fc124e0866da49cc88f",
+    "development_records/ii1_delivery/v3_completion_20261005/DRIVER_FAULT_SHIM_ACCEPTANCE.json": "3e1d0b9c4fd4b68a91af124e50d6e40f0431ca777c4a9a2116a7e30c363983e0",
+    "development_records/ii1_delivery/v3_completion_20261005/STRESS_LOCAL_QA_V2.json": "19fdb84d003492ae7403f3ba1bbd8cb311a7bf67e91b8609514df1fc14ff716b",
+    "development_records/ii1_delivery/v3_completion_20261005/RETURN_PROTOCOL_QA.json": "5b5a42e2e73c922b247b634848c52dda3fb8fbc6bcad050f014a36a544f404cc",
+    "development_records/ii1_delivery/v3_completion_20261005/RETURNED_STRESS_ACCEPTANCE.json": "8019016a98dc88090052613a8e225fe4b367bcddcbac8485b73fb38d25faf315",
+    "development_records/ii1_delivery/v3_completion_20261005/ACCEPTED_STRESS_TIMINGS.json": "976f76a885a08d4648dc4d22e41f1c8b594d8618378a0f5e5bdd675eb878fb33",
+    "vivado/ii1-20261005/full_dma_ntt_validation_v3/acceptance.json": "d15286868fc62c4d8edbee965a2af76f2b0a11cb6de708bb71b9d12b3654edbd",
+    "vivado/ii1-20261005/three_routed_fifo_slow_validation_v1/acceptance.json": "681eae93370c194af47461c9f86d1773d95c3df7d98a97a427d3c988b08a8886",
+    "vivado/ii1-20261005/three_routed_fifo_fast_validation_v1/acceptance.json": "650140db4dce6faa85651ea7232b8d887b31685a63c6fcbec3afa9002a87b2fc",
+    "development_records/ii1_delivery/v3_completion_20261005/SOAK_LOCAL_QA.json": "5c8d73de1b038096be578c9fab8300e50ccc0dc7cb19acb59ee5f459943b9458",
+    "development_records/ii1_delivery/v3_completion_20261005/SOAK_RETURN_PROTOCOL_QA.json": "bc663487a53d6150d2ff9d712cb621892585cc28548404abb49cbbd11a219f1e",
+    "development_records/ii1_delivery/v3_completion_20261005/SOAK_PACKAGE_FREEZE.json": "e028b411ae947895b5bbeb256aac4c32a72a9ecec422ddd2df4d6bb9e9961a18",
+    "development_records/ii1_delivery/v3_soak_acceptance_20261005/RETURNED_SOAK_ACCEPTANCE.json": "018d2ad7f41d4008b3a8d13c9341bed26cfb90c16c922be4b1abe3481116b691",
+    "development_records/ii1_delivery/v3_soak_acceptance_20261005/ACCEPTED_SOAK_STATISTICS.json": "95cc6e4c42e97bc9a341b13050737bad842a7624170f7ea2b600d362393ebbb1",
+    "development_records/ii1_delivery/v3_soak_acceptance_20261005/SENSOR_PACKAGE_LOCAL_QA.json": "983c265ff7585e195b16f7faca7a07c7e7f3419ef61562427bc9777d4f16b4c1",
+    "development_records/ii1_delivery/v3_soak_acceptance_20261005/SENSOR_FLOW_LOCAL_QA.json": "695b94635d4eab93a934b6a70e96fa6b591f6eff30144ad44bc79c00331f0321",
+    "development_records/ii1_delivery/v3_soak_acceptance_20261005/SIX_HOUR_ACCEPTANCE_REPORT_zh-TW.md": "b8bc622bcbec0b4e3bb0ce526f9585319ded2b46dfc545955dbe7b1852ed794b",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_SENSOR_ACCEPTANCE.json": "c12c24487e2564deb4d24bc4b9b473aebd8a868a9d96aab6ac7559731272f264",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/SENSOR_ORIGINAL_PROTOCOL_QA.json": "ef507b85ac80151536ed696bb62a373c681dfd21535425ee4a6e52556071e610",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/CONCURRENCY_PROTOCOL_LOCAL_QA.json": "5c20cf0fa579fe278ce24afaf831c20482ec8eded5d5e550469a35abd01192b3",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/FINAL_RETURN_GATE_QA.json": "b1e28d7c35fd3f2c94e7ad3729fd8b6cd12ef988c2ed4d537dfe950da42f8a68",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/SENSOR_MEMORY_ACCEPTANCE_zh-TW.md": "a0e3ca6912ea22390d532b3d1d0a30e1f2e7d7a395bdab379dd8a6dfd7888504",
+    "development_records/board_packages/ii1-v3-concurrency-20261005/SHA256SUMS": "e51d3e2f0ad87c1df7dfa5b6c05a5d1f4daf6fa5ab71dac3e6738121ff57a488",
+    "development_records/ii1_delivery/v3_concurrency_delivery_20261005/RETURNED_CONCURRENCY_uC6vdy_ACCEPTANCE.json": "f05564552e46c655d8839c2529432615ae891da8425e310fbfa3a3aa5bb86136",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/ACCEPTED_CONCURRENCY_STATISTICS.json": "2e291ed4297653f05fb144251f039656145a75f2e11a46848f68d698379a148e",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2.json": "7d73379d9b9c421d1c470c7a96f4eeb7281991ad21ebc0f7a8bf2c319f04d62f",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2.json": "a5d217d49a134531d9d9811bbeb8711d73fb7e8775120fda0ea3263942fa7cde",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_FAILURE_FLOWS_QA_V2.json": "a82a40e9731abaefd89459301d1d9c7bf0eff2fefd5903ba6f9c66b641715f1a",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LIFECYCLE_MODEL_ACCEPTANCE.json": "8298b11a5854807d8f641ce753fd810520ad24d57ca5ba97966323e787c9884c",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2.json": "139dc8a0bb8b6c388f2b47ab80be0d6bb7e86bd164265e9dcc64529e38a38fe7",
+    "development_records/board_packages/ii1-v3-usercopy-faults-20261005-v2/SHA256SUMS": "d19feba9d4170ba4bbb342b15ff801914cd3cea8d9656c84d7f600127bfcc531",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_NATIVE_QA_V2_FINAL.json": "708ade22df6c4d76c5e35a0eba887dfbb2c053e1cc395f334267789d5130d143",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_PROTOCOL_QA_V2_FINAL.json": "3fd9f7f9df42c92efc35b39b15a588d78a397d936db09bc3f962fe520e048f1d",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/LOCAL_USERCOPY_FAILURE_FLOWS_QA_V2_FINAL.json": "a82a40e9731abaefd89459301d1d9c7bf0eff2fefd5903ba6f9c66b641715f1a",
+    "development_records/ii1_delivery/v3_fault_delivery_20261005/CLEAN_USERCOPY_REPRODUCTION_ACCEPTANCE_V2_FINAL.json": "365dfe987954b0ee01e6eb09363b92be5a3b8a408fc49a88041cf7a4a97db83d"
+  },
+  "normal_six_hour_soak": "PASS_FORMAL_RETURNED_ORIGINALS_NORMAL_SCOPE_TEMPERATURE_UNAVAILABLE",
+  "current_evidence_scope": "Frozen II1 N4096/V3; no claims transferred from legacy or N32768",
+  "accepted_IRQ_totals": {
+    "121": 5802805,
+    "136": 5802805
+  },
+  "normal_six_hour_jobs": 5798822,
+  "normal_six_hour_temperature_samples": 0,
+  "normal_six_hour_telemetry_samples": 721,
+  "next_user_step": "USER runs ii1-v3-usercopy-faults-20261005-v2 five-argument script; returns15 originals and all18 raw RX packets",
+  "retired_history_instructions": [
+    957,
+    1961,
+    5800783
+  ],
+  "sensor_originals": "PASS_FORMAL_19_READ_ONLY_ORIGINALS_PARTIAL_CONTINUITY",
+  "sensor_IIO_labels": [
+    "ps_temp",
+    "remote_temp",
+    "pl_temp"
+  ],
+  "sensor_snapshot_interval_ns": 27064289753,
+  "normal_concurrency": "PASS_FORMAL_15_ORIGINALS_2000_SAME_PROCESS_TWO_MODE",
+  "normal_concurrency_expected_jobs": 2000,
+  "concurrency_package_SHA256SUMS_sha256": "e51d3e2f0ad87c1df7dfa5b6c05a5d1f4daf6fa5ab71dac3e6738121ff57a488",
+  "user_reported_current_load_relative_jobs": 5802783,
+  "user_reported_expected_IRQ_totals": {
+    "121": 5802805,
+    "136": 5802805
+  },
+  "normal_concurrency_jobs": 2000,
+  "normal_concurrency_temperature_samples": 9,
+  "recoverable_usercopy_faults": "LOCAL_TOOL_QA_PASS_BOARD_24_IOCTL_18_DMA_PENDING",
+  "usercopy_expected_after_history": 5802801,
+  "lifecycle_host_model": "4 normal conditional scenarios and2 deliberately broken quiescence counterexamples; not kernel/board"
+}

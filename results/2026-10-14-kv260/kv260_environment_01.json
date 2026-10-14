@@ -1,0 +1,52 @@
+{
+  "status": "ENVIRONMENT_PREREQUISITES_INCOMPLETE",
+  "target": "kv260",
+  "platform": "Linux-5.15.0-1027-xilinx-zynqmp-aarch64-with-glibc2.35",
+  "machine": "aarch64",
+  "python": "3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]",
+  "kernel": "5.15.0-1027-xilinx-zynqmp",
+  "tools": {
+    "g++": "/usr/bin/g++",
+    "cmake": null,
+    "make": "/usr/bin/make",
+    "dtc": "/usr/bin/dtc",
+    "fdtoverlay": "/usr/bin/fdtoverlay",
+    "xmutil": "/usr/bin/xmutil",
+    "modinfo": "/usr/sbin/modinfo",
+    "openssl": "/usr/bin/openssl"
+  },
+  "versions": {
+    "g++": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0",
+    "make": "GNU Make 4.3"
+  },
+  "kernel_build": "/usr/src/linux-headers-5.15.0-1027-xilinx-zynqmp",
+  "memory": {
+    "MemTotal": "4005128 kB",
+    "CmaTotal": "1024000 kB",
+    "CmaFree": "1014300 kB"
+  },
+  "checks": {
+    "python_3_10_or_newer": true,
+    "linux_aarch64": true,
+    "g++_available": true,
+    "cmake_available": false,
+    "make_available": true,
+    "dtc_available": true,
+    "fdtoverlay_available": true,
+    "xmutil_available": true,
+    "modinfo_available": true,
+    "openssl_available": true,
+    "g++_version_command": true,
+    "make_version_command": true,
+    "running_kernel_headers_makefile": true
+  },
+  "native_build_supported": true,
+  "limits": [
+    "Prerequisites only; not a kernel module, FPGA, DMA, CMA allocation or security acceptance.",
+    "Windows host PASS covers Python checks; native C++ requires Linux/WSL.",
+    "Other tool/kernel versions require new result identities."
+  ],
+  "board_device_opens": 0,
+  "network_connections": 0,
+  "system_configuration_writes": 0
+}

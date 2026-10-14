@@ -1,0 +1,31 @@
+{
+  "status": "NATIVE_V4_S29_FINAL_ASAN_UBSAN_PASS",
+  "board_operations": 0,
+  "command": [
+    "g++",
+    "-O1",
+    "-g",
+    "-std=c++17",
+    "-pthread",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-fno-fast-math",
+    "/mnt/d/NCUE_Project/github_update/EdgeFHE-KV260-GitHub/software/native_ckks/selftest.cpp",
+    "/mnt/d/NCUE_Project/github_update/EdgeFHE-KV260-GitHub/software/native_ckks/core.cpp",
+    "-o",
+    "/mnt/d/NCUE_Project/development_records/native_client_20261007/native_sanitizers_s29_final/selftest"
+  ],
+  "source_sha256": {
+    "selftest.cpp": "8fade8e5803025410c25e8fde88d92091279f6cd0b5aad48b457caefc8274375",
+    "core.cpp": "13d739e29b8ad563f184ab1f0b7322f76de2836d85c689cbcfa02a7ce7ba4ec4",
+    "core.hpp": "6894ad0dff440a32918706261ecd3c72af900d92be67f830a394814cfc0bdf46"
+  },
+  "complex_slot_comparisons": 8192,
+  "exact_noise_coefficients": 16384,
+  "centered_CRT_boundary_coefficients": 4096,
+  "scalar_affine_exact_coefficients": 24576,
+  "Barrett_point_products": 30000
+}

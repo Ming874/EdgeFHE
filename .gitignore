@@ -1,0 +1,47 @@
+# Build output, local secrets and caches.
+/build/
+/local/
+__pycache__/
+*.pyc
+.venv*/
+.env
+node_modules/
+.vscode/
+# Written by tools/pack_for_board.py; extracting a bundle on the board leaves it at the root.
+/BUNDLE_MANIFEST.json
+
+# HLS/Vivado and kernel module build artifacts.
+.Xil/
+*.jou
+*.str
+*.ko
+*.o
+*.mod
+*.mod.c
+Module.symvers
+modules.order
+# Exact accepted V3 binary, restricted to the documented kernel build.
+!firmware/prebuilt/ubuntu-22.04-5.15.0-1027-xilinx-zynqmp/edgefhe_rns3_n4096_dma_proxy.ko
+
+# Logs are build output, except evidence: acceptance receipts (release/SHA256SUMS lists
+# them) and the logs brought back from the board.
+*.log
+!release/native_v4/*.log
+!results/**/*.log
+
+# Two-machine demo secrets never enter git.
+join_config.json
+server_key.pem
+server_cert.pem
+
+# Downloaded datasets and generated splits are large; data/*/manifest.json and
+# data/README.md stay tracked so anyone can regenerate and verify them.
+data/*/raw/
+data/*/splits/
+
+# Training native build output (training/outputs/*.json stay tracked).
+training/build/
+
+# Dashboard build output.
+dashboard/.next/
+dashboard/*.tsbuildinfo

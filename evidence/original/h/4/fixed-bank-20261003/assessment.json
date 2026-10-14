@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "scope": "V1 N4096, three fixed primes, four lanes per limb; isolated candidate",
+  "baseline_sources_unchanged": true,
+  "non_butterfly_synthesis_code_unchanged": true,
+  "math_audit": {
+    "passed": true,
+    "batches": 6144,
+    "coefficient_addresses": 49152,
+    "checks": [
+      "gather",
+      "scatter",
+      "twiddle_index",
+      "address_bounds",
+      "stage_bijection",
+      "exact_primality",
+      "all_constants",
+      "exact_root_orders",
+      "72_stage_root_constants"
+    ],
+    "montgomery_bounds": [
+      {
+        "q": 998244353,
+        "corrected_sum_upper_bound": 5283918634853335039,
+        "uint64_no_overflow": true,
+        "single_subtraction_sufficient": true
+      },
+      {
+        "q": 1004535809,
+        "corrected_sum_upper_bound": 5323540635865579519,
+        "uint64_no_overflow": true,
+        "single_subtraction_sufficient": true
+      },
+      {
+        "q": 469762049,
+        "corrected_sum_upper_bound": 2238289018628341759,
+        "uint64_no_overflow": true,
+        "single_subtraction_sufficient": true
+      }
+    ],
+    "scope": "exhaustive integer index proof and arithmetic bounds; not RTL timing or board acceptance"
+  },
+  "csim": {
+    "status": "PASS",
+    "operand_pairs": 30243,
+    "arithmetic_functions_per_pair": 4,
+    "stage_cases": 216,
+    "top_transactions": 19,
+    "coefficient_comparisons": 1118208
+  },
+  "baseline_hls": {
+    "resources": {
+      "BRAM_18K": 126,
+      "DSP": 639,
+      "FF": 23687,
+      "LUT": 44693,
+      "URAM": 0
+    },
+    "worst_latency_cycles": 171183,
+    "target_ns": 10.0,
+    "uncertainty_ns": 2.7,
+    "estimated_ns": 7.365,
+    "butterfly_loop": {
+      "TripCount": 512,
+      "Latency": 2054,
+      "PipelineII": 4,
+      "PipelineDepth": 11
+    }
+  },
+  "candidate_hls": {
+    "resources": {
+      "BRAM_18K": 126,
+      "DSP": 639,
+      "FF": 23573,
+      "LUT": 43886,
+      "URAM": 0
+    },
+    "worst_latency_cycles": 115779,
+    "target_ns": 10.0,
+    "uncertainty_ns": 2.7,
+    "estimated_ns": 7.365,
+    "butterfly_loop": {
+      "TripCount": 512,
+      "Latency": 515,
+      "PipelineII": 1,
+      "PipelineDepth": 5
+    }
+  },
+  "rtl_scan": {
+    "verilog_files": 53,
+    "division_remainder_operators": 0,
+    "divider_modules": 0
+  },
+  "cosim": {
+    "status": "PASS",
+    "mode": "RTL_SMOKE",
+    "transactions": 7,
+    "coefficient_comparisons": 86016,
+    "operation_latency_cycles": {
+      "forward": 18775,
+      "inverse_roundtrip": 17741,
+      "inverse_arbitrary": 17737,
+      "negacyclic_multiply": 45986,
+      "add2": 8228,
+      "add3": 12323,
+      "negate_add": 8228
+    },
+    "stream_checks": [
+      "TLAST",
+      "TKEEP",
+      "TSTRB",
+      "padding",
+      "packet_lengths",
+      "canonical_residues"
+    ]
+  },
+  "limits": [
+    "canonical inputs 0 <= a < q; primes and lane count fixed",
+    "cosim covers seven transactions; full 19 transactions are C simulation",
+    "no randomized AXI backpressure or malformed-packet recovery test",
+    "HLS estimate only; estimated 7.365ns exceeds 10ns-2.7ns budget by 0.065ns",
+    "no Vivado placement/routing, KV260 board run, or OpenFHE interoperability acceptance"
+  ],
+  "source_sha256": {
+    "hls_source\\src\\rns_ntt_onthefly.hpp": "d2c0150555f2ca61b9cf00880960bc0ad82cf5c68b4f983bc6ce5c276e589d60",
+    "hls_source\\src\\rns_ntt_onthefly_constants.hpp": "4a65fb60dbe3ebd2a63a739f3541d10bd843389438b9630bf24b38dbfd0694b3",
+    "hls_source\\src\\rns_ntt_parallel.cpp": "909cc65b75add48d6e8d8b1421f00bbd2ac5e990685cbe37a701163742d27039",
+    "hls_source\\src\\rns_ntt_parallel.hpp": "74fff2a34bf3132d7487033b29e7be96456426e334070037fcd11354e24f19d9",
+    "hls_source\\src\\rns_ntt_parallel_constants.hpp": "9cc71c077ae3e666861daf547b78ea59355ee0c3ddef6e3c4253c3fd9ec3a477",
+    "hls_source\\src\\rns_ntt_parallel_core.cpp": "cd1121254f3e1ee2419c6817a6c8b367d8a75edb9c417ffcd222e727b8bcae7c",
+    "hls_source\\src\\rns_ntt_parallel_core.hpp": "f189e30ca70e2fd552c4e5edb8d0502c055ac7879a8c62426610873b3e4e06a2",
+    "hls_source\\src\\rns_ntt_parallel_rns3.cpp": "07086a23fb21f771b23591e08990ba968d3ceee845b45750a7eeb9ca1739bb2d",
+    "hls_source\\src\\rns_ntt_parallel_rns3.hpp": "48cf2a68a1b356e51ebec7a976a542515911f2234aae543960c99ac668b98fdc"
+  },
+  "testbench_sha256": "5c946054b4b8ad717f9e3c02c13f49b98ae036843853488b3cee466eb190aae7"
+}

@@ -1,0 +1,72 @@
+/dts-v1/;
+/plugin/;
+
+/* Engineering candidate only. Load instructions are gated separately.
+ * PS: encode/decode, PRNG, Linux DMAEngine. PL: NTT/INTT/mul/ALU.
+ * AFI matches this XSA: SAXIGP2/HP0=128, MAXIGP0/HPM0=128.
+ * No generic-uio control alias; the proxy reserves the NTT MMIO resource.
+ */
+/ {
+    fragment@0 {
+        target-path = "/fpga-full";
+        __overlay__ {
+            firmware-name = "edgefhe-ii1-n4096-kv260.bit.bin";
+            resets = <&zynqmp_reset 116>;
+        };
+    };
+
+    fragment@1 {
+        target = <&amba>;
+        __overlay__ {
+            #address-cells = <2>;
+            #size-cells = <2>;
+
+            edgefhe_ii1_afi: edgefhe-ii1-afi {
+                compatible = "xlnx,afi-fpga";
+                config-afi = <4 0>, <5 0>, <14 0x200>;
+            };
+
+            edgefhe_ii1_dma: dma@a0000000 {
+                compatible = "xlnx,axi-dma-1.00.a";
+                status = "okay";
+                reg = <0 0xa0000000 0 0x10000>;
+                interrupt-parent = <&gic>;
+                interrupts = <0 89 4>, <0 104 4>;
+                #dma-cells = <1>;
+                xlnx,addrwidth = <32>;
+                xlnx,sg-length-width = <26>;
+                clock-names = "s_axi_lite_aclk", "m_axi_mm2s_aclk", "m_axi_s2mm_aclk";
+                clocks = <&zynqmp_clk 71>, <&zynqmp_clk 71>, <&zynqmp_clk 71>;
+                assigned-clocks = <&zynqmp_clk 71>;
+                assigned-clock-rates = <100000000>;
+
+                dma-channel-mm2s {
+                    compatible = "xlnx,axi-dma-mm2s-channel";
+                    dma-channels = <1>;
+                    interrupts = <0 89 4>;
+                    xlnx,datawidth = <128>;
+                    xlnx,device-id = <0>;
+                };
+                dma-channel-s2mm {
+                    compatible = "xlnx,axi-dma-s2mm-channel";
+                    dma-channels = <1>;
+                    interrupts = <0 104 4>;
+                    xlnx,datawidth = <128>;
+                    xlnx,device-id = <0>;
+                };
+            };
+
+            edgefhe_ii1_proxy: edgefhe-ii1-proxy@a0010000 {
+                compatible = "ncue,edgefhe-rns3-n4096-ii1-dma-proxy";
+                reg = <0 0xa0010000 0 0x10000>;
+                dmas = <&edgefhe_ii1_dma 0>, <&edgefhe_ii1_dma 1>;
+                dma-names = "tx", "rx";
+                clocks = <&zynqmp_clk 71>;
+                clock-names = "ap_clk";
+                ntt-control = <0 0xa0010000 0 0x10000>;
+                edgefhe,hardware-id = "edgefhe-ii1-n4096-kv260-20261003";
+                edgefhe,dma-aperture-end = <0 0x80000000>;
+            };
+        };
+    };
+};

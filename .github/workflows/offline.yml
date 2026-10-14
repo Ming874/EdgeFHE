@@ -1,0 +1,16 @@
+name: Fixed-profile offline verification
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  cpu-only:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      # actions/checkout v4.2.2, pinned to its published commit.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 tools/check_environment.py --target host --output build/host_environment.json
+      - run: python3 tools/offline_check.py
+      - run: cmake -S . -B build/native -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build/native --parallel 2
+      - run: ctest --test-dir build/native --output-on-failure

@@ -1,0 +1,39 @@
+{
+  "status": "PASS_EXACT_FROZEN_DRIVER_C_FAULT_BRANCHES_SIMULATED_KERNEL_ONLY",
+  "cases": 35,
+  "source_sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+  "source_excerpts": [
+    {
+      "start_symbol": "#define EDGEFHE_WORDS",
+      "end_before_symbol": "static int edgefhe_parse_ntt_control",
+      "normalized_excerpt_sha256": "354e08317fc5c12b6528d6021e8f839155c42a20ed05576c0b04f7164fa17920"
+    },
+    {
+      "start_symbol": "static int edgefhe_submit_transfer",
+      "end_before_symbol": "static void edgefhe_free",
+      "normalized_excerpt_sha256": "d4e9a11ff6f2a5ecbbdc56aa9927e3020f28a4a20bdb190e6a639dc34789b10d"
+    }
+  ],
+  "checks": [
+    "Shared deadline including unsigned wrap and TX already done at deadline",
+    "RX/TX prep, submit, callback, timeout and partial copy faults",
+    "RX termination then TX termination before both coherent buffers wiped",
+    "Post-error poisoned device rejects next request without starting DMA",
+    "RX->TX->AP_START and write/read barrier order",
+    "Successful all-six-operation descriptors and default timeout",
+    "Offline and pre-DMA header/canonical rejection"
+  ],
+  "artifacts_sha256": {
+    "cases.log": "240fa377793cc9bd29e2e727b1944a264d4294db196561a34d73867a29f8e889",
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fault_shim": "cbe89ed8b10cea827b9a3885c5b888e3b52c81edcdd01ab07e4110d216460853",
+    "frozen_transfer.inc": "a2c16529eca78b289eb7e37991060ce9a4980625e621f1380dc8dd2121440e5b"
+  },
+  "board_operations": 0,
+  "limits": [
+    "Host mocked kernel API, not actual driver concurrency or kernel scheduling",
+    "No AXI/DDR/IRQ fault injection or physical HLS/DMA reset",
+    "Terminate API error is deliberately simulated; physical quiescence remains unproven",
+    "Buffer wiping checks coherent buffers, not userspace or all copies of secrets"
+  ]
+}

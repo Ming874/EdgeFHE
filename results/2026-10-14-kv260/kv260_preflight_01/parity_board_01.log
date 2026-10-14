@@ -1,0 +1,3 @@
+device=linux-dma backend=fpga-linux-dma-overlap requests=77 pack_ms=14.415 device_ms=386.871 unpack_ms=18.4086 wall_ms=392.745 driver_reported_ms=40.151
+V5_PARITY_PASS device=linux-dma cases=64 coefficients=786432 client_round=exact
+parity_exit=0

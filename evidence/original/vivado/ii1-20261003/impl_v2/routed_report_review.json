@@ -1,0 +1,212 @@
+{
+  "status": "PASS_ROUTED_CAPACITY_TIMING_PENDING_WARNING_VALIDATION",
+  "attempt": "impl_v2",
+  "part": "xck26-sfvc784-2LV-c",
+  "resources": {
+    "LUT": {
+      "used": 29328.0,
+      "available": 117120,
+      "percent_reported": 25.04
+    },
+    "FF": {
+      "used": 18735.0,
+      "available": 234240,
+      "percent_reported": 8.0
+    },
+    "BRAM36_tile_equivalent": {
+      "used": 62.0,
+      "available": 144,
+      "percent_reported": 43.06
+    },
+    "DSP": {
+      "used": 753.0,
+      "available": 1248,
+      "percent_reported": 60.34
+    },
+    "URAM": {
+      "used": 0.0,
+      "available": 64,
+      "percent_reported": 0.0
+    }
+  },
+  "timing_routed": {
+    "wns_ns": 0.004,
+    "tns_ns": 0.0,
+    "setup_failing_endpoints": 0,
+    "setup_total_endpoints": 57706,
+    "whs_ns": 0.009,
+    "ths_ns": 0.0,
+    "hold_failing_endpoints": 0,
+    "hold_total_endpoints": 57706,
+    "wpws_ns": 3.5,
+    "tpws_ns": 0.0,
+    "pulse_width_failing_endpoints": 0,
+    "pulse_width_total_endpoints": 19698
+  },
+  "capacity_ok": true,
+  "timing_ok": true,
+  "timing_object_slacks_ns": {
+    "max": 0.004,
+    "min": 0.009
+  },
+  "timing_query_decimal_places_observed": 3,
+  "timing_precision_scope": "SLACK property also reports 3 decimal places in ns; no sub-picosecond precision claim. Zero failing-endpoint counts are checked independently. Historical full_precision filename does not indicate extra decimal precision.",
+  "pl_clock_period_ns": 10.0,
+  "check_timing_counts": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "no_clock_unused_outputs": [
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET0MDIOMDC",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET1MDIOMDC",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET2MDIOMDC",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET3MDIOMDC",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSDIO0CLKOUT",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSDIO1CLKOUT",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSPI0SCLKO",
+    "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSPI1SCLKO"
+  ],
+  "no_clock_live_consumers": 0,
+  "drc_rules": {
+    "DPIP-2": {
+      "severity": "Warning",
+      "description": "Input pipelining",
+      "count": 547
+    },
+    "DPOP-3": {
+      "severity": "Warning",
+      "description": "PREG Output pipelining",
+      "count": 643
+    },
+    "DPOP-4": {
+      "severity": "Warning",
+      "description": "MREG Output pipelining",
+      "count": 753
+    },
+    "PDCN-1569": {
+      "severity": "Warning",
+      "description": "LUT equation term check",
+      "count": 3
+    },
+    "REQP-1934": {
+      "severity": "Warning",
+      "description": "RAMB18E2_nochange_collision_advisory",
+      "count": 2
+    },
+    "REQP-1935": {
+      "severity": "Warning",
+      "description": "RAMB36E2_nochange_collision_advisory",
+      "count": 4
+    },
+    "RTSTAT-10": {
+      "severity": "Warning",
+      "description": "No routable loads",
+      "count": 1
+    }
+  },
+  "drc_blockers": {},
+  "methodology_rules": {
+    "LUTAR-1": {
+      "severity": "Warning",
+      "description": "LUT drives async reset alert",
+      "count": 3
+    }
+  },
+  "route_counts": {
+    "logical nets": 675963,
+    "nets not needing routing": 592442,
+    "internally routed nets": 507722,
+    "nets with no loads": 84720,
+    "routable nets": 83521,
+    "fully routed nets": 83521,
+    "nets with routing errors": 0
+  },
+  "route_ok": true,
+  "route_status_original": "Design Route Status\n                                               :      # nets :\n   ------------------------------------------- : ----------- :\n   # of logical nets.......................... :      675963 :\n       # of nets not needing routing.......... :      592442 :\n           # of internally routed nets........ :      507722 :\n           # of nets with no loads............ :       84720 :\n       # of routable nets..................... :       83521 :\n           # of fully routed nets............. :       83521 :\n       # of nets with routing errors.......... :           0 :\n   ------------------------------------------- : ----------- :\n\n",
+  "warning_code_counts": {
+    "Route 35-328": 1
+  },
+  "warning_lines": [
+    "WARNING: [Route 35-328] Router estimated timing not met."
+  ],
+  "full_g07_accepted": false,
+  "bitstream_generated": false,
+  "new_board_accepted": false,
+  "limits": [
+    "All DRC/methodology warnings need explicit review/validation; none automatically waived",
+    "DMA FIFO collision/backpressure validation remains pending",
+    "No board, DMA correctness, CKKS ciphertext or end-to-end performance acceptance"
+  ],
+  "evidence": [
+    {
+      "path": "D:\\NCUE_Project\\development_records\\runs\\20261003-ii1-implementation-v2-checkpoint-resume\\run.json",
+      "sha256": "415ad5d5123a1f6bd9e0bd41b1ccfef8d501f812e3e297268d9412bf5c720d5c"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2.log",
+      "sha256": "06549e6e18f936b1e865978b3a429a02f0fbd51049be833bf6fac5e093422284"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2_inputs.json",
+      "sha256": "da2a534480b9239414949e8b4784163ad69157b26bc2e280d71ef86b151a4594"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\routed.dcp",
+      "sha256": "0466125a789eaeae388d7ebd1bb4c0c965e47d0a2a6eed28cfd6f8d430646ad7"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\unused_ps_clock_connectivity_routed.rpt",
+      "sha256": "524d98f8f84e891af420c6df990142f2d760f72173f80ed78e98e031496e0d18"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\check_timing_routed_verbose.rpt",
+      "sha256": "3db62af8ff3905438b6517da43d97c440c7ac8b58f26225989004df9b79dc93a"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\clocks_routed.rpt",
+      "sha256": "c1dc5ad91aaad9badec42040268205bb0bc406603be9192f91771c80e5cbc00d"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\drc_routed.rpt",
+      "sha256": "e80a9cd78525d1379689fad30996f126634fe576fa137f08fa5e19f50f7985e9"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\full_precision_timing_routed.rpt",
+      "sha256": "06765aa612ac1a962303f90217463a1c207efae67e3d778953b6370e9d57d672"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\methodology_routed.rpt",
+      "sha256": "458babb10badfebdf7339104eb968be7fb7f1beda4382de126121b18dd0c4423"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\route_status.rpt",
+      "sha256": "9f3176b24169e767ce9ba6916b582d0ecb7a8ae567aa7df53e6b0753862ddfed"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\timing_routed.rpt",
+      "sha256": "e2507199c220ff0f0e0977c84fae9c1923ff3440cddf51a6c062ba5e3542f3c5"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\unused_ps_clock_connectivity_routed.rpt",
+      "sha256": "524d98f8f84e891af420c6df990142f2d760f72173f80ed78e98e031496e0d18"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\utilization_hierarchical_routed.rpt",
+      "sha256": "aa88c4ac6352222b5ed03138a2fd719a9e093cd6cb7fefb760cf01889e8cb283"
+    },
+    {
+      "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\utilization_routed.rpt",
+      "sha256": "6accfeb61f34ceeabf06ef325e59bd020f71dd5b51ae549b453695c1e07af8cb"
+    }
+  ]
+}

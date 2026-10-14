@@ -1,0 +1,8 @@
+v5_tests: build/v5/v5_tests
+v5_parity: build/v5/v5_parity
+v5_bench: build/v5/v5_bench
+v5_e2e: build/v5/v5_e2e
+capi: build/v5/libedgefhe_v5_capi.so
+v4_capi: build/v5/libedgefhe_native_v4.so
+V5_BUILD_DONE
+BUILD_EXIT=0

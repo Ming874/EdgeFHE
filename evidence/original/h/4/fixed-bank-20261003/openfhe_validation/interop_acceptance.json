@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "scope": "V1 fixed N4096 public polynomial OpenFHE/HLS C and RTL exact parity",
+  "openfhe_revision": "1306d14f8c26bb6150d3e6ad54f28dfe1007689e",
+  "cases": 16,
+  "independent_python_coefficient_comparisons": 196608,
+  "csim_coefficient_comparisons": 196608,
+  "rtl_postcheck_coefficient_comparisons": 196608,
+  "operations": "forward six patterns; inverse six roundtrips and arbitrary spectrum; multiply sparse/all-q-minus-one/dense-random",
+  "permutation": "explicit OpenFHE bit-reversed to HLS natural-order conversion",
+  "axi_checks": [
+    "packet_length",
+    "input_consumption",
+    "TLAST",
+    "TKEEP",
+    "TSTRB",
+    "zero_padding"
+  ],
+  "butterfly_ii": 1,
+  "hls_resources": {
+    "BRAM_18K": 126,
+    "DSP": 639,
+    "FF": 23573,
+    "LUT": 43886,
+    "URAM": 0
+  },
+  "hardware_sources_unchanged_since_fixed_bank_assessment": true,
+  "evidence_sha256": {
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\vectors.bin": "e193e385bd57a67f643fcadcc45254c638058d844422caf9c3a5f13c6255849f",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\vector_manifest.json": "404b899106ec3fd22286cf98a713d04a07539dbcf97eb89a3976c91c34040276",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\export_vectors.cpp": "3213fdf6bfe0a3490b322c8fd20643e7b879435bc448f92cf51ada6329d06263",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\verify_vectors.py": "92567ba87202d9468dee1a0c545f111787a6c63eeb68885b3142b7b547ae43b2",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\tb_openfhe_vectors.cpp": "5ca3e3f762c8a86fb1cf928e9b90ddf89fd6e302e7add2d419bf3cbe0f0c4f4f",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\CMakeLists.txt": "6302ab75ca266a6717c8a038b8a667abd23b9a63c9d2af1acbba6da628ab8b2a",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\build_vectors.sh": "863f703277950093add4de25326f355a15c5a85c32503c613f1ef76d170a8ee8",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\library_binary_sha256.txt": "2c0d1df12681b1cf18e5255bbdcd4d58c23ff3aeb26cd9e19c791c058ac64ac9",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\openfhe_revision.txt": "cd2b05d326f75350c74f27fd9610061af7417b119bf84f25c866a994cfaa1391",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\run_csim.tcl": "40bf05f328e1f5f67780fbe3937759b6dfe649c0852b18afe441057b232f0a33",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\run_rtl.tcl": "25eed2d9f798e7980a9f32f8ab647647237d2421e0ce64a3996d44cf7c2e6bf5",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\openfhe_csim_project\\solution1\\csim\\report\\rns3_ntt_parallel_accel_n4096_csim.log": "8f476261473d5dc374094d8f9e4cddfaf58043d77be30be9e79edc74a8edb215",
+    "D:\\NCUE_Project\\h\\4\\fixed-bank-20261003\\openfhe_validation\\openfhe_csim_project\\solution1\\sim\\report\\rns3_ntt_parallel_accel_n4096_cosim.rpt": "88d48a33dc63c0a1f212bc076dd6c2ef52417414a3d071df6b9b55efb9d7a985",
+    "D:\\NCUE_Project\\development_records\\runs\\20261003-openfhe-hls-rtl\\console.log": "061f78f7bc1cb0644f49320ad7a7bc14e0dc1938336700e2cfe3bd3516d0f2ae"
+  },
+  "limits": [
+    "No CKKS context/key/ciphertext serialization interoperability claimed",
+    "V2 N32768/QP751 profile is incompatible with V1",
+    "No randomized AXI stalls or malformed-packet recovery test",
+    "No new Vivado/board deployment or end-to-end speedup evidence"
+  ]
+}

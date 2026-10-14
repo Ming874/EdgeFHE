@@ -1,0 +1,233 @@
+{
+  "status": "PASS_RETURNED_READ_ONLY_SENSOR_ORIGINALS_AND_PARTIAL_CONTINUITY",
+  "original_files_sha256": {
+    "buddyinfo_after.json": "2fba70bbee4dcd3fb9e9140e731174c53e36267aeec15295dc8808ff0f91e697",
+    "buddyinfo_before.json": "6051db2270d48ea9f3659b6fe39d12b6235a3e0dae7c0a339ba80942e56139fe",
+    "collection_report.json": "f1892e1ce5fcbee5cee30b45a782e3a8514df6735c91e57b4b93a5e44c356f29",
+    "console.log": "c5aeadb1bd2c4945d7f02459008fa134f29ae00a1db7d89e8ae8440e462b5541",
+    "context_after.json": "b7f12654b7f4cefa3ca55326834f483042bbe857969eff6514210c97a9980efc",
+    "context_before.json": "f1b477c82c629bdc9d1387e3027445c008ae44620587bd4752793008fa62ec87",
+    "environment_details.json": "3711010f9f4cf45c49cec2b63db6bf2165aace1fdcf7aebf77452552772ece6d",
+    "EVIDENCE_SHA256SUMS": "05879ae3777114130bbf68c278e462ebe352930c7eeee206a3d243bf711d11d6",
+    "interrupts_after.json": "11991abafae589999f09bc8113bb09bd4d7e5c8bc0d81c41506e8044ca5bf430",
+    "interrupts_before.json": "60f15b8c0b7f2fb0c9d3ffb95b68f37a1bf197c274545b254e5be9965742881b",
+    "meminfo_after.json": "329cb7c0a32bba9d1be44ffcb4b891e263085653e786ac734bd2425066636c3c",
+    "meminfo_before.json": "92fa79242b102bad34eeaf928417efbd236543d627bcf9d3096c69b226529c6d",
+    "modules_after.json": "03245f5812623ed467333fdc62ea21df49f7929d716b21cb820f0674ef8e676d",
+    "modules_before.json": "03245f5812623ed467333fdc62ea21df49f7929d716b21cb820f0674ef8e676d",
+    "pagetypeinfo_after.json": "00897cf538124edc6dd212aab7f1f1f95425f6dc6c330d5b60ff60ced024ddc8",
+    "pagetypeinfo_before.json": "00897cf538124edc6dd212aab7f1f1f95425f6dc6c330d5b60ff60ced024ddc8",
+    "sensor_inventory.json": "f4447ba9ebfa60370952dcb8943d885508571196e3e47c4cc82cd9e5dda81610",
+    "vmstat_after.json": "fa4bcdeb9ae3ecd63c9da95829a0acb1117c90a62ddcb1748e2d5d20513dad96",
+    "vmstat_before.json": "c58951bb82edabf4c6ea11187a11d963585f64e9823fd6e9aafb2b875c712ed7"
+  },
+  "snapshot_interval_ns": 27064289753,
+  "continuity": {
+    "status": "MATCH_ACCEPTED_IDLE_SNAPSHOT",
+    "matched": true,
+    "expected": {
+      "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+      "kernel": "5.15.0-1027-xilinx-zynqmp",
+      "module_version": "ii1-guarded-v3",
+      "srcversion": "6BDCA74AD872B2765D36882",
+      "IRQ_total": 5800805
+    },
+    "scope": "Partial read-only boot/module/FPGA-state/IRQ continuity; no configured-PL readback or complete runtime revalidation"
+  },
+  "devices": 5,
+  "readable_attributes": 6,
+  "temperature_observations": [
+    {
+      "interface": "hwmon",
+      "channel": "temp1_input",
+      "path": "/sys/class/hwmon/hwmon0",
+      "label": "Not exposed in this hwmon snapshot; no guessed channel mapping",
+      "reported_celsius": "34.443"
+    },
+    {
+      "interface": "hwmon",
+      "channel": "temp2_input",
+      "path": "/sys/class/hwmon/hwmon0",
+      "label": "Not exposed in this hwmon snapshot; no guessed channel mapping",
+      "reported_celsius": "35.873"
+    },
+    {
+      "interface": "hwmon",
+      "channel": "temp3_input",
+      "path": "/sys/class/hwmon/hwmon0",
+      "label": "Not exposed in this hwmon snapshot; no guessed channel mapping",
+      "reported_celsius": "33.891"
+    },
+    {
+      "interface": "IIO",
+      "channel": "in_temp0_ps_temp",
+      "path": "/sys/bus/iio/devices/iio:device0",
+      "label": "ps_temp",
+      "raw": "40594",
+      "offset": "-36058",
+      "scale_millicelsius_per_count": "7.771514892",
+      "reported_celsius": "35.251591550112"
+    },
+    {
+      "interface": "IIO",
+      "channel": "in_temp1_remote_temp",
+      "path": "/sys/bus/iio/devices/iio:device0",
+      "label": "remote_temp",
+      "raw": "40712",
+      "offset": "-36058",
+      "scale_millicelsius_per_count": "7.771514892",
+      "reported_celsius": "36.168630307368"
+    },
+    {
+      "interface": "IIO",
+      "channel": "in_temp2_pl_temp",
+      "path": "/sys/bus/iio/devices/iio:device0",
+      "label": "pl_temp",
+      "raw": "40450",
+      "offset": "-36058",
+      "scale_millicelsius_per_count": "7.771514892",
+      "reported_celsius": "34.132493405664"
+    }
+  ],
+  "temperature_formula": "IIO: Celsius=(raw+offset)*scale/1000; scale and offset read from the device; Decimal arithmetic",
+  "temperature_observation_scope": "Sequential sysfs readings at collection time; no calibrated measurement, simultaneity or six-hour reconstruction",
+  "memory_kB": {
+    "MemAvailable": {
+      "before_kB": 3257164,
+      "after_kB": 3252272,
+      "delta_kB": -4892
+    },
+    "MemFree": {
+      "before_kB": 714988,
+      "after_kB": 710032,
+      "delta_kB": -4956
+    },
+    "Cached": {
+      "before_kB": 2507104,
+      "after_kB": 2507152,
+      "delta_kB": 48
+    },
+    "AnonPages": {
+      "before_kB": 327212,
+      "after_kB": 327576,
+      "delta_kB": 364
+    },
+    "SUnreclaim": {
+      "before_kB": 119528,
+      "after_kB": 119556,
+      "delta_kB": 28
+    },
+    "CmaTotal": {
+      "before_kB": 1024000,
+      "after_kB": 1024000,
+      "delta_kB": 0
+    },
+    "CmaFree": {
+      "before_kB": 343260,
+      "after_kB": 340840,
+      "delta_kB": -2420
+    }
+  },
+  "vmstat": {
+    "nr_free_cma": {
+      "before": 85788,
+      "after": 85240,
+      "delta": -548
+    },
+    "cma_alloc_success": {
+      "before": 24,
+      "after": 24,
+      "delta": 0
+    },
+    "cma_alloc_fail": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "oom_kill": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    },
+    "compact_stall": {
+      "before": 0,
+      "after": 0,
+      "delta": 0
+    }
+  },
+  "unavailable_sensor_fields": [],
+  "unavailable_proc": {
+    "pagetypeinfo_before": {
+      "state": "UNAVAILABLE",
+      "errno": 13,
+      "reason": "PermissionError"
+    },
+    "pagetypeinfo_after": {
+      "state": "UNAVAILABLE",
+      "errno": 13,
+      "reason": "PermissionError"
+    }
+  },
+  "environment_details": {
+    "cpufreq": {
+      "policy0": {
+        "scaling_governor": {
+          "state": "OK",
+          "text": "userspace"
+        },
+        "scaling_cur_freq": {
+          "state": "OK",
+          "text": "1333333"
+        },
+        "cpuinfo_cur_freq": {
+          "state": "UNAVAILABLE",
+          "errno": 13,
+          "reason": "PermissionError"
+        },
+        "scaling_min_freq": {
+          "state": "OK",
+          "text": "333333"
+        },
+        "scaling_max_freq": {
+          "state": "OK",
+          "text": "1333333"
+        }
+      }
+    },
+    "DT_symbols": {
+      "xilinx_ams": {
+        "state": "OK",
+        "text": "/axi/ams@ffa50000|"
+      },
+      "ams_ps": {
+        "state": "OK",
+        "text": "/axi/ams@ffa50000/ams_ps@ffa50800|"
+      },
+      "ams_pl": {
+        "state": "OK",
+        "text": "/axi/ams@ffa50000/ams_pl@ffa50c00|"
+      }
+    },
+    "observed_driver_names": [
+      "ams",
+      "sysmon",
+      "xadc"
+    ],
+    "kernel_sensor_config_lines": [],
+    "kernel_config_read_state": "TRUNCATED"
+  },
+  "assistant_board_operations": 0,
+  "source_attribution": "Frozen local collector plus user-reported package checksum success; originals do not contain a collector-code attestation",
+  "references": {
+    "IIO_ABI": "https://www.kernel.org/doc/Documentation/ABI/testing/sysfs-bus-iio",
+    "AMS_driver_reference": "https://github.com/Xilinx/linux-xlnx/blob/master/drivers/iio/adc/xilinx-ams.c",
+    "iio_hwmon_reference": "https://github.com/torvalds/linux/blob/master/drivers/hwmon/iio_hwmon.c"
+  },
+  "limits": [
+    "hwmon and IIO may expose the same AMS provider, not six independent sensors.",
+    "No exact cross-interface comparison: collection values were not simultaneous.",
+    "Global CMA and vmstat observations do not attribute pages to this driver.",
+    "Unavailable pagetypeinfo/config/cpuinfo readings remain unavailable.",
+    "Kernel source references explain the interface, not the exact Ubuntu kernel binary provenance."
+  ]
+}

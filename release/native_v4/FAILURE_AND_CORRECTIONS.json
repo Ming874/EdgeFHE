@@ -1,0 +1,20 @@
+{
+  "status": "FAILURES_RETAINED_CORRECTIONS_APPEND_ONLY",
+  "historical_scale24_openfhe_receipt_sha256": "5830460d9fe78de7efe72122dfd7c6445ddf12bd268ff8ebe4f7f0d1a571781c",
+  "historical_scale24_receipt_status": "RUNNING",
+  "interpretation": "The earlier receipt remained RUNNING after an assertion. Actual process and logs show FAIL at the 5e-4 precision gate; it is not accepted.",
+  "corrections": [
+    "Compiler -Werror misleading-indentation corrected and rebuilt.",
+    "Portable tests existing-directory collision corrected with preserved first failure.",
+    "OpenFHE missing pke/binfhe include, const Plaintext API and transitive loader RPATH corrected.",
+    "OpenFHE scale24 tolerance failure preserved; scale29 is a new profile and new trial.",
+    "CPU Barrett/fused INTT/scalar-affine edits each received fresh exact-math and paired checks."
+  ],
+  "failure_log_hashes": {
+    "openfhe_standard_v5\\workers_1.log": "18d663c9b7852ff7ec489d0c9acee4619b41c1b7c29299b89b6df18bc158a4cf"
+  },
+  "limitations": [
+    "Raw failure builds remain in the local development archive; no failed report rewritten as PASS.",
+    "Corrected local tests do not establish new board or security acceptance."
+  ]
+}

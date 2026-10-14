@@ -1,0 +1,57 @@
+{
+  "status": "PASS_LOCAL_CLEAN_ZIP_REPRODUCTION_CPU_ONLY_NOT_RELEASE",
+  "archive_sha256": "fa94c44b33c2d6980df17567ae909bc3aeabc670a094c74dfdd257bb3ac156fa",
+  "archive_bytes": 1544937,
+  "files_sha256": {
+    "concurrency_evidence.py": "c5f4b8523e1b9ad7840de5957433dd353164d049d564ceb7e4a907449f265587",
+    "mixed_vectors.bin": "b2029683cf687954b03e6d5340f2fbdf86ccfc191bb94d1f4819380065482d19",
+    "paired_public_vectors.cpp": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+    "README_zh-TW.md": "3dca7ce9c417ad182656b26f9cdf3ae5b0e53986a4b4d3711003e07045fb44b0",
+    "runtime_contract_v3.json": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "run_usercopy_user_only.sh": "bf018954ec1881f3c9479f01ae9235b44ac30ff80daec67995ee739b2c00c4e1",
+    "SHA256SUMS": "d19feba9d4170ba4bbb342b15ff801914cd3cea8d9656c84d7f600127bfcc531",
+    "soak_mixed_support.hpp": "d69c44fc769c08f39274fb12b4e3d505ffb4d332e633e6282f41872d2476068c",
+    "stress_identity.py": "f9aa0b14ffde7c24e0554a5a025f930ad90ec622b70dba70b31736d8dc0ca7f6",
+    "usercopy_control.py": "5deb4e928d7f04e277c7d90eb77e8fd3ba9b0109d9ec33b7c6751f857b45a7a1",
+    "usercopy_evidence.py": "27bc8cac3720b8f4aba9fc8f89bcd84bf06afe5521666dba6a733a31df2f1ef2",
+    "usercopy_manifest.json": "1cd45f76d680ca966220569d3a110092117b39021c1f36bd437255166cda31b6",
+    "usercopy_runner.cpp": "caa428fdcfc94c95dfb0ae8459bf540f3d86ae00859d3fff8f97dc4eb6eaecc0"
+  },
+  "extracted_files": 13,
+  "CPU_cases": 25,
+  "CPU_coefficients": 307200,
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "commands": [
+    [
+      "sha256sum",
+      "-c",
+      "SHA256SUMS"
+    ],
+    [
+      "bash",
+      "-n",
+      "run_usercopy_user_only.sh"
+    ],
+    [
+      "g++",
+      "-O3",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "usercopy_runner.cpp",
+      "-o",
+      "/tmp/edgefhe-clean-usercopy-mevr1z5u/usercopy_runner"
+    ],
+    [
+      "/tmp/edgefhe-clean-usercopy-mevr1z5u/usercopy_runner",
+      "mixed_vectors.bin",
+      "--cpu-check"
+    ]
+  ],
+  "manual_bash_syntax_only": true,
+  "assistant_board_operations": 0,
+  "limits": [
+    "Clean extraction verifies only this new PS test package, not full HLS/Vivado/kernel/board clean-release reproducibility"
+  ]
+}

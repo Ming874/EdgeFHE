@@ -1,0 +1,220 @@
+{
+  "status": "PASS_LOCAL_RETURNED_NETWORK_AND_TWO_MACHINE_FUNCTIONAL_CKKS",
+  "network": {
+    "status": "PASS_LOCAL_RETURNED_NETWORK_PRECHECK_PINNED_TLS_NO_DMA_AND_BOARD_HANDOFF",
+    "original_files_sha256": {
+      "console.log": "e7bc824d935608d1520752ef933c8e3511689d2c83534b2ff401d7a5e80469dd",
+      "interrupts_after.txt": "f645da5d836c3bae1e5a51fd4c0e1ad674a38728a3981b2be4978d5f03257e55",
+      "interrupts_before.txt": "0ccbffbce8be6d699adee380d41d4cfcc41d98173061c1a14ef425263f33fcd7",
+      "ip_address.txt": "a6b7e2978c82ed8e2f4e4931a565d7d8bbbc99e893757a4dc8b2ca81cf48a121",
+      "package_check.log": "e5e9254e2caf04c7f40dd48f03f4db2219d4ec3c7e87e4041c09e8f80c6c6d9e",
+      "route_to_PC.txt": "b58bae9f5909cc5a1a70b1bd8ee0a949475377a837c56a7f2b322aa089f2e22f",
+      "wifi_precheck_report.json": "28482e7133a493fad4896294a8bf4b0566012436624cc9a84332756dc384a49a"
+    },
+    "DMA_jobs": 0,
+    "irq_before_after": {
+      "121": {
+        "linux_irq": 61,
+        "per_cpu": [
+          895,
+          0,
+          0,
+          0
+        ]
+      },
+      "136": {
+        "linux_irq": 62,
+        "per_cpu": [
+          895,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "limits": [
+      "Source/log proof of actual TLS handshake, not independent packet capture or remote attestation"
+    ]
+  },
+  "board_and_PC": {
+    "status": "PASS_LOCAL_REVALIDATED_ORIGINAL_TWO_MACHINE_FUNCTIONAL_CKKS_AFFINE",
+    "cases": [
+      {
+        "id": 0,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 1.4340045474469831e-06,
+        "error_bound": 0.0006864351880801037,
+        "classification": {
+          "lower_logit": -0.0006878188392857749,
+          "upper_logit": 0.0006850515368744325,
+          "class": null,
+          "status": "indeterminate-at-threshold"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20450176843
+      },
+      {
+        "id": 1,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 3.007262384505174e-06,
+        "error_bound": 0.0012385386699457033,
+        "classification": {
+          "lower_logit": 2.6187641924594205,
+          "upper_logit": 2.621241269799312,
+          "class": 1,
+          "status": "certain"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20577343055
+      },
+      {
+        "id": 2,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 6.760480383402613e-06,
+        "error_bound": 0.0012352360778194976,
+        "classification": {
+          "lower_logit": -3.3212310304806034,
+          "upper_logit": -3.3187605583249646,
+          "class": 0,
+          "status": "certain"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20833439619
+      },
+      {
+        "id": 3,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 1.15602748167464e-05,
+        "error_bound": 0.002519225610657753,
+        "classification": {
+          "lower_logit": 1.059975824034496,
+          "upper_logit": 1.0650142752558114,
+          "class": 1,
+          "status": "certain"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20733088370
+      },
+      {
+        "id": 4,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 7.531437154446639e-07,
+        "error_bound": 0.0005354806273830026,
+        "classification": {
+          "lower_logit": -0.02553500166161461,
+          "upper_logit": -0.024464040406848606,
+          "class": 0,
+          "status": "certain"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20799285149
+      },
+      {
+        "id": 5,
+        "status": "PASS_RECOMPUTED_PUBLIC_PACKET_AND_DECODE",
+        "max_slot_error": 2.4062492589382984e-07,
+        "error_bound": 0.0005392215173918098,
+        "classification": {
+          "lower_logit": -0.0005391286709450319,
+          "upper_logit": 0.0005393143638385878,
+          "class": null,
+          "status": "indeterminate-at-threshold"
+        },
+        "DMA_jobs": 14,
+        "total_validation_inclusive_ns": 20825075390
+      }
+    ],
+    "board_original_files_sha256": {
+      "case00_report.json": "afba0c3d01afb75662be96eb0e3a66b8dd78aa19164c11fb7094f61017c98349",
+      "case00_request.bin": "20a01ccbc333a1a5b0a9d484c29819120f3bad19c6dcdaa653dfcb42b53ae20c",
+      "case00_response.bin": "8085a1613b01e11ebd6f18b6dfab39fd422445cdffa7e8863df7a9129bd2872b",
+      "case01_report.json": "c616916f0475eb1d897a7e0c6b147af41182fe388cc46ec702850eb10755c412",
+      "case01_request.bin": "260cc5f8ce24952871959113194a009d62449e7f0bfce641dbf1343fc12f75f2",
+      "case01_response.bin": "b58096349564271ead0875b7c1a53ded2451a54f759b5505bcd0ff14dfe57abc",
+      "case02_report.json": "ed91ce988898971630dd9a743296f122bfb144de374ebc03edff37ef43b28ce9",
+      "case02_request.bin": "ed555d87ecc6f8d81e676d50e0bd6a348e6e5f7a64d23d55f3dd14142c0fa13c",
+      "case02_response.bin": "eec49a9d8d9b9048b8451737c30b1576e641808f95a2dcb131cf370cca2bf14a",
+      "case03_report.json": "192afe8ee360decde651f63f4dfc231a62b161e0957b168d2880c8c6fba56cee",
+      "case03_request.bin": "bd716b5b003f937710ae4d5fc4af7fb3aa1ae7fb93b26ee16b9d995841b114c9",
+      "case03_response.bin": "98dff10021ade9b0370bc190fe50fd4b9d327d68497ce270e196a722f62e6714",
+      "case04_report.json": "5b34a085b88178dc0080e31a4fd15aa689211cb37c875bd0271c5ebf56f82d90",
+      "case04_request.bin": "7c517ac17e0c82a4a7c89d780f55efd8c971caa9ec6fbbca0dc759d1bea1e4dd",
+      "case04_response.bin": "4703518a9eb9ed436ab3b6b3e004e31f39eb1ab524bd201b3f0b881a43170b22",
+      "case05_report.json": "2e00f8d8796510b7912186b0be4db0add2c1c93d2700c6209e07a21e45fdb3b5",
+      "case05_request.bin": "c56b25c4b99b12caeed36f1153ff7203f9c13e63d733a77084f9b1823042b733",
+      "case05_response.bin": "9a0f18417ea55da4dfc7c567cdd0bd15d0925be137ec499accb682f76dcaf4ca",
+      "compiler_version.txt": "2492f521845dd536aad96475a9c2fd8299b960a29d0821dcab0bbe0e1668717b",
+      "compile_backend.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compile_reference.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "console.log": "3ae1e80ac5b4c024299870ee7976dc8aebd8f78e02c471a4ec29bbb92aab52e9",
+      "cpu_check.log": "c76e34868d71d8740abb01bc1f88a6304a74f96b0d4a13f591710ace4a0dd47b",
+      "dmesg_after.log": "cef2dc062f734e0f187df1c71780a7bfa7abc9499d944fe5c98cf9a12c1dec66",
+      "dmesg_before.log": "cef2dc062f734e0f187df1c71780a7bfa7abc9499d944fe5c98cf9a12c1dec66",
+      "dmesg_final.log": "f15e113ce118221a280119b4caafd02dec84c580c6a2f259ff1411dc8ce4cb07",
+      "environment_after.json": "037b85df1f267fe6ffe5f7ecca7ec623f5abdb5441c9a7d28859dda65fbfeaa6",
+      "environment_before.json": "4667e5bc978ad4fa1372859991e0362642eb33d204ca4ac1f2c5614e331594b1",
+      "experiment_report.json": "b2d165a3e3d7863ae54f1413c3cc72bad4558a59e6529230cc8c657ba9656f9c",
+      "interrupts_after.txt": "b6bc86c6872595f55b77ac3b2d4c8ccc0bc2df5b994331454500d7af67a949d0",
+      "interrupts_before.txt": "0d01335466389b2c2125661babf9bdbebefe6e36ac431cf464587ad7eb5f17b0",
+      "interrupts_final.txt": "a22aff8d80dca0d1b33c0ae3724c7bb5b697b8b57524005c55dc7c5f97d76a8d",
+      "libedgefhe_checked.so": "fe74455c70ae76c8857ba080cf3d8e9a34c6510c4853ee04fac7468c34df606b",
+      "public_cpu_reference": "7b5ced96ec0b66950c96f0b23be381309b9b6eb706c72bd4251b52e7a08894e7"
+    },
+    "PC_original_files_sha256": {
+      "case00_request.bin": "20a01ccbc333a1a5b0a9d484c29819120f3bad19c6dcdaa653dfcb42b53ae20c",
+      "case00_response.bin": "8085a1613b01e11ebd6f18b6dfab39fd422445cdffa7e8863df7a9129bd2872b",
+      "case01_request.bin": "260cc5f8ce24952871959113194a009d62449e7f0bfce641dbf1343fc12f75f2",
+      "case01_response.bin": "b58096349564271ead0875b7c1a53ded2451a54f759b5505bcd0ff14dfe57abc",
+      "case02_request.bin": "ed555d87ecc6f8d81e676d50e0bd6a348e6e5f7a64d23d55f3dd14142c0fa13c",
+      "case02_response.bin": "eec49a9d8d9b9048b8451737c30b1576e641808f95a2dcb131cf370cca2bf14a",
+      "case03_request.bin": "bd716b5b003f937710ae4d5fc4af7fb3aa1ae7fb93b26ee16b9d995841b114c9",
+      "case03_response.bin": "98dff10021ade9b0370bc190fe50fd4b9d327d68497ce270e196a722f62e6714",
+      "case04_request.bin": "7c517ac17e0c82a4a7c89d780f55efd8c971caa9ec6fbbca0dc759d1bea1e4dd",
+      "case04_response.bin": "4703518a9eb9ed436ab3b6b3e004e31f39eb1ab524bd201b3f0b881a43170b22",
+      "case05_request.bin": "c56b25c4b99b12caeed36f1153ff7203f9c13e63d733a77084f9b1823042b733",
+      "case05_response.bin": "9a0f18417ea55da4dfc7c567cdd0bd15d0925be137ec499accb682f76dcaf4ca",
+      "pc_report.json": "e640aa7d435577332bfe79330a0a916041e7dd0b82070ea056190db54fac9bbe",
+      "server_events.jsonl": "602bff3749563a8d5ddf919a5c37ec2c73f35d330a6cc28e9435f53e185ac159"
+    },
+    "load_relative_IRQ_after": 957,
+    "DMA_jobs": 84,
+    "coefficient_comparisons": 1032192,
+    "limits": [
+      "No private keys saved: local review cannot replay secret-dependent decryption; checked source performed exact in-run oracle comparisons",
+      "Public final decoded polynomial and PC ciphertext evaluation independently recomputed",
+      "Not OpenFHE ciphertext interoperability, security certification, G07 reset/fault acceptance or final release"
+    ]
+  },
+  "PC_independent_CPP_oracle_sha256": "40a6f913894512d58561cbb7b0ae9c175fc1c58ba33ca64c79a5195e83690fa7",
+  "package_sha256": {
+    "backend.cpp": "8c9df84cdc001a76e2d79fe8ebbc8733da6fea4641d75ab996e51efaf50b4b0b",
+    "benchmark_archive.py": "32c2d20064b6ce991a2372357652dd8dac0d7a63c52e4571b43425049eab6fe2",
+    "board_experiment.py": "3f45e45c9dd69bdebf74843ba9b3f3cbeccd06d15bfe4dfea64815e4224f6eda",
+    "ckks_canonical.py": "6103f56948537c97924c4e7028a585b70a9bbe23ade762937d70d53910286980",
+    "ckks_identity.py": "32eafb3ff71fc458d1271f2e2a1c5c7630c50010e11644ecb47900d10a044fc5",
+    "ckks_manifest.json": "5bed40ec21658b7fbd76fb037564c2b763ec3eb1cd6a6ff42bd3b89e17a0109a",
+    "cloud.py": "fa7c64584746efe89771f36e9f46ee70377afe797696e7a45723a6e4eaa5d608",
+    "experiment.py": "1cbd57b80c2cfd8906ef6ff4ac1565645cac013d7bd0e7ef079a70f9ac778a98",
+    "join_config.json": "d9258835862afa9f898aa6411917ea8c87ae6c6c9befbc1fe2bbcfd7d94d91b0",
+    "native.py": "efe738e2b5eef655e6b2f098f02526cd09353e7d052cf2f431580882300fcd48",
+    "ntt_ref.py": "4ac0e8d2edb994c4ccf5db9142154115931176d56ecb3484ac2d41b431ba216c",
+    "packets.py": "498f83a97b62df81ef49031c72750d93eac998f5ad620980f2e764ff15c770a6",
+    "paired_public_vectors.cpp": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+    "pc_server.py": "328b12cc83c35aa5eaa0813cd1a46037bdf13162125ea60aa530fd1742d931f1",
+    "profile.py": "80aac82530112b1f63b7b2623c8ae9113094adf4d2a79e0d8b725bc92b94cd46",
+    "README_zh-TW.md": "029d90e741b49c18fc41e465a6c7bfda424e6ad33980879afa6d7d9e55991cf5",
+    "run_affine_user_only.sh": "c75fa0dd228726e1126a8187a2c1dc85a06d99d80d7f7ded6a84c5f2fd93ad82",
+    "run_wifi_resume_user_only.sh": "b316026984de516efcd0aaa7fb41c54d845abe411957d82886181fe30ad69de9",
+    "runtime_contract_v3.json": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "server_cert.pem": "e39c6e6967f858ba84425395952ba673836a552a1f9747557988a92332f3b4a7",
+    "transport.py": "e6cea9de78f204237e920c7f857248d01dbc41c026f4629e421308a879d929a2",
+    "wifi_precheck.py": "f61e320db39806bada3d02c329fdc6a7e5f23e2ff2618b583e534af32d654f6c"
+  },
+  "board_operations_by_assistant": 0,
+  "limits": [
+    "No private keys saved: local review cannot replay secret-dependent decryption; checked source performed exact in-run oracle comparisons",
+    "Public final decoded polynomial and PC ciphertext evaluation independently recomputed",
+    "Not OpenFHE ciphertext interoperability, security certification, G07 reset/fault acceptance or final release",
+    "G07 reset/fault/lifecycle and formal release remain separate gates"
+  ]
+}

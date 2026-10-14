@@ -1,0 +1,4 @@
+MemTotal:        4005128 kB
+CmaTotal:        1024000 kB
+CmaFree:         1014300 kB
+ root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=1000M 

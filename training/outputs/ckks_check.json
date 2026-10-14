@@ -1,0 +1,284 @@
+{
+  "generated_utc": "2026-10-13T08:55:27Z",
+  "split": "test",
+  "records": 38052,
+  "batches": 19,
+  "model_id": "cdc-diabetes-lr4-v1",
+  "model_sha256": "3991d1fba44ddc1f9657e53dd166c612a32b39571731fcb05204086666fe1a94",
+  "features": [
+    "GenHlth",
+    "HighBP",
+    "BMI",
+    "Age"
+  ],
+  "error_bound": 0.0002616828971722551,
+  "max_abs_logit_diff": 5.176636800330314e-07,
+  "mean_abs_logit_diff": 5.92554007864275e-08,
+  "all_within_bound": true,
+  "decisions": {
+    "agree": 38051,
+    "disagree": 0,
+    "uncertain": 1,
+    "agreement_rate_certain": 1.0
+  },
+  "ckks_metrics": {
+    "auc": 0.8071401775507442,
+    "plain_auc": 0.8071439756278057,
+    "accuracy_certain": 0.7190349793697932,
+    "sensitivity": 0.7491512636740852,
+    "specificity": 0.7141592109682738,
+    "confusion": {
+      "tn": 23388,
+      "fp": 9361,
+      "fn": 1330,
+      "tp": 3972
+    }
+  },
+  "timing": {
+    "total_ms": 264.7,
+    "phase_ms": {
+      "encode": 95.5,
+      "sample": 0.3,
+      "encrypt": 65.7,
+      "cloud_affine": 18.4,
+      "decrypt_decode": 56.4
+    },
+    "records_per_second": 143768.2,
+    "note": "CPU-only on this machine through the V4 C++ library (workers=3); not KV260 and not FPGA timings"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "machine": "x86_64",
+    "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  },
+  "per_batch": [
+    {
+      "batch": 0,
+      "records": 2048,
+      "max_abs_logit_diff": 3.3873752425250814e-07,
+      "ms": {
+        "encode": 5.263,
+        "sample": 0.024,
+        "encrypt": 3.699,
+        "cloud_affine": 1.086,
+        "decrypt_decode": 6.452
+      }
+    },
+    {
+      "batch": 1,
+      "records": 2048,
+      "max_abs_logit_diff": 4.508622873933277e-07,
+      "ms": {
+        "encode": 5.327,
+        "sample": 0.016,
+        "encrypt": 3.068,
+        "cloud_affine": 0.963,
+        "decrypt_decode": 2.476
+      }
+    },
+    {
+      "batch": 2,
+      "records": 2048,
+      "max_abs_logit_diff": 3.1874035816281676e-07,
+      "ms": {
+        "encode": 5.187,
+        "sample": 0.014,
+        "encrypt": 3.637,
+        "cloud_affine": 0.972,
+        "decrypt_decode": 2.969
+      }
+    },
+    {
+      "batch": 3,
+      "records": 2048,
+      "max_abs_logit_diff": 4.0209944618396776e-07,
+      "ms": {
+        "encode": 5.597,
+        "sample": 0.015,
+        "encrypt": 3.176,
+        "cloud_affine": 0.943,
+        "decrypt_decode": 2.484
+      }
+    },
+    {
+      "batch": 4,
+      "records": 2048,
+      "max_abs_logit_diff": 3.5557552580112173e-07,
+      "ms": {
+        "encode": 4.875,
+        "sample": 0.015,
+        "encrypt": 3.01,
+        "cloud_affine": 0.821,
+        "decrypt_decode": 2.537
+      }
+    },
+    {
+      "batch": 5,
+      "records": 2048,
+      "max_abs_logit_diff": 3.8821095738050815e-07,
+      "ms": {
+        "encode": 4.808,
+        "sample": 0.014,
+        "encrypt": 4.036,
+        "cloud_affine": 1.329,
+        "decrypt_decode": 2.491
+      }
+    },
+    {
+      "batch": 6,
+      "records": 2048,
+      "max_abs_logit_diff": 3.790868063902053e-07,
+      "ms": {
+        "encode": 5.002,
+        "sample": 0.018,
+        "encrypt": 3.853,
+        "cloud_affine": 1.189,
+        "decrypt_decode": 2.483
+      }
+    },
+    {
+      "batch": 7,
+      "records": 2048,
+      "max_abs_logit_diff": 3.6789087826116784e-07,
+      "ms": {
+        "encode": 4.838,
+        "sample": 0.014,
+        "encrypt": 3.08,
+        "cloud_affine": 0.827,
+        "decrypt_decode": 2.809
+      }
+    },
+    {
+      "batch": 8,
+      "records": 2048,
+      "max_abs_logit_diff": 3.958684235971788e-07,
+      "ms": {
+        "encode": 5.091,
+        "sample": 0.013,
+        "encrypt": 2.77,
+        "cloud_affine": 1.014,
+        "decrypt_decode": 2.803
+      }
+    },
+    {
+      "batch": 9,
+      "records": 2048,
+      "max_abs_logit_diff": 3.467486660024832e-07,
+      "ms": {
+        "encode": 5.331,
+        "sample": 0.014,
+        "encrypt": 2.831,
+        "cloud_affine": 0.896,
+        "decrypt_decode": 2.512
+      }
+    },
+    {
+      "batch": 10,
+      "records": 2048,
+      "max_abs_logit_diff": 3.503532537418863e-07,
+      "ms": {
+        "encode": 5.102,
+        "sample": 0.017,
+        "encrypt": 3.395,
+        "cloud_affine": 0.765,
+        "decrypt_decode": 2.541
+      }
+    },
+    {
+      "batch": 11,
+      "records": 2048,
+      "max_abs_logit_diff": 3.0616210622280704e-07,
+      "ms": {
+        "encode": 4.879,
+        "sample": 0.015,
+        "encrypt": 3.436,
+        "cloud_affine": 0.975,
+        "decrypt_decode": 2.534
+      }
+    },
+    {
+      "batch": 12,
+      "records": 2048,
+      "max_abs_logit_diff": 3.358412639098418e-07,
+      "ms": {
+        "encode": 4.804,
+        "sample": 0.013,
+        "encrypt": 3.165,
+        "cloud_affine": 0.836,
+        "decrypt_decode": 2.928
+      }
+    },
+    {
+      "batch": 13,
+      "records": 2048,
+      "max_abs_logit_diff": 3.8954178716021914e-07,
+      "ms": {
+        "encode": 4.998,
+        "sample": 0.013,
+        "encrypt": 3.313,
+        "cloud_affine": 0.763,
+        "decrypt_decode": 3.441
+      }
+    },
+    {
+      "batch": 14,
+      "records": 2048,
+      "max_abs_logit_diff": 3.045433354387228e-07,
+      "ms": {
+        "encode": 4.874,
+        "sample": 0.012,
+        "encrypt": 3.327,
+        "cloud_affine": 0.773,
+        "decrypt_decode": 2.473
+      }
+    },
+    {
+      "batch": 15,
+      "records": 2048,
+      "max_abs_logit_diff": 5.176636800330314e-07,
+      "ms": {
+        "encode": 4.913,
+        "sample": 0.014,
+        "encrypt": 4.294,
+        "cloud_affine": 1.092,
+        "decrypt_decode": 3.312
+      }
+    },
+    {
+      "batch": 16,
+      "records": 2048,
+      "max_abs_logit_diff": 3.0573213216644746e-07,
+      "ms": {
+        "encode": 4.942,
+        "sample": 0.012,
+        "encrypt": 3.926,
+        "cloud_affine": 0.853,
+        "decrypt_decode": 3.082
+      }
+    },
+    {
+      "batch": 17,
+      "records": 2048,
+      "max_abs_logit_diff": 3.2258414162100735e-07,
+      "ms": {
+        "encode": 4.888,
+        "sample": 0.013,
+        "encrypt": 3.802,
+        "cloud_affine": 1.176,
+        "decrypt_decode": 3.206
+      }
+    },
+    {
+      "batch": 18,
+      "records": 1188,
+      "max_abs_logit_diff": 3.544973277147534e-07,
+      "ms": {
+        "encode": 4.777,
+        "sample": 0.017,
+        "encrypt": 3.852,
+        "cloud_affine": 1.091,
+        "decrypt_decode": 2.896
+      }
+    }
+  ]
+}

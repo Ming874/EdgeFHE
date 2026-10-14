@@ -1,0 +1,508 @@
+{
+  "scope": "Frozen accepted measurements; not new packaging performance",
+  "formal_release_accepted": false,
+  "derived": {
+    "Q_product": 471064322751194440790966273,
+    "Q_bit_length": 89,
+    "log2_Q": 88.60605453705426,
+    "soak_jobs_per_second": 268.4638376254075,
+    "soak_coefficients": 71255924736,
+    "soak_padding": 23751974912,
+    "butterfly_loop_cycle_reduction_percent": 74.92697176241481,
+    "hls_worst_latency_reduction_percent": 32.36536338304621,
+    "moduli_are_1_mod_2N": [
+      true,
+      true,
+      true
+    ]
+  },
+  "hls": {
+    "status": "PASS",
+    "scope": "V1 N4096, three fixed primes, four lanes per limb; isolated candidate",
+    "baseline_sources_unchanged": true,
+    "non_butterfly_synthesis_code_unchanged": true,
+    "math_audit": {
+      "passed": true,
+      "batches": 6144,
+      "coefficient_addresses": 49152,
+      "checks": [
+        "gather",
+        "scatter",
+        "twiddle_index",
+        "address_bounds",
+        "stage_bijection",
+        "exact_primality",
+        "all_constants",
+        "exact_root_orders",
+        "72_stage_root_constants"
+      ],
+      "montgomery_bounds": [
+        {
+          "q": 998244353,
+          "corrected_sum_upper_bound": 5283918634853335039,
+          "uint64_no_overflow": true,
+          "single_subtraction_sufficient": true
+        },
+        {
+          "q": 1004535809,
+          "corrected_sum_upper_bound": 5323540635865579519,
+          "uint64_no_overflow": true,
+          "single_subtraction_sufficient": true
+        },
+        {
+          "q": 469762049,
+          "corrected_sum_upper_bound": 2238289018628341759,
+          "uint64_no_overflow": true,
+          "single_subtraction_sufficient": true
+        }
+      ],
+      "scope": "exhaustive integer index proof and arithmetic bounds; not RTL timing or board acceptance"
+    },
+    "csim": {
+      "status": "PASS",
+      "operand_pairs": 30243,
+      "arithmetic_functions_per_pair": 4,
+      "stage_cases": 216,
+      "top_transactions": 19,
+      "coefficient_comparisons": 1118208
+    },
+    "baseline_hls": {
+      "resources": {
+        "BRAM_18K": 126,
+        "DSP": 639,
+        "FF": 23687,
+        "LUT": 44693,
+        "URAM": 0
+      },
+      "worst_latency_cycles": 171183,
+      "target_ns": 10.0,
+      "uncertainty_ns": 2.7,
+      "estimated_ns": 7.365,
+      "butterfly_loop": {
+        "TripCount": 512,
+        "Latency": 2054,
+        "PipelineII": 4,
+        "PipelineDepth": 11
+      }
+    },
+    "candidate_hls": {
+      "resources": {
+        "BRAM_18K": 126,
+        "DSP": 639,
+        "FF": 23573,
+        "LUT": 43886,
+        "URAM": 0
+      },
+      "worst_latency_cycles": 115779,
+      "target_ns": 10.0,
+      "uncertainty_ns": 2.7,
+      "estimated_ns": 7.365,
+      "butterfly_loop": {
+        "TripCount": 512,
+        "Latency": 515,
+        "PipelineII": 1,
+        "PipelineDepth": 5
+      }
+    },
+    "rtl_scan": {
+      "verilog_files": 53,
+      "division_remainder_operators": 0,
+      "divider_modules": 0
+    },
+    "cosim": {
+      "status": "PASS",
+      "mode": "RTL_SMOKE",
+      "transactions": 7,
+      "coefficient_comparisons": 86016,
+      "operation_latency_cycles": {
+        "forward": 18775,
+        "inverse_roundtrip": 17741,
+        "inverse_arbitrary": 17737,
+        "negacyclic_multiply": 45986,
+        "add2": 8228,
+        "add3": 12323,
+        "negate_add": 8228
+      },
+      "stream_checks": [
+        "TLAST",
+        "TKEEP",
+        "TSTRB",
+        "padding",
+        "packet_lengths",
+        "canonical_residues"
+      ]
+    },
+    "limits": [
+      "canonical inputs 0 <= a < q; primes and lane count fixed",
+      "cosim covers seven transactions; full 19 transactions are C simulation",
+      "no randomized AXI backpressure or malformed-packet recovery test",
+      "HLS estimate only; estimated 7.365ns exceeds 10ns-2.7ns budget by 0.065ns",
+      "no Vivado placement/routing, KV260 board run, or OpenFHE interoperability acceptance"
+    ],
+    "source_sha256": {
+      "hls_source\\src\\rns_ntt_onthefly.hpp": "d2c0150555f2ca61b9cf00880960bc0ad82cf5c68b4f983bc6ce5c276e589d60",
+      "hls_source\\src\\rns_ntt_onthefly_constants.hpp": "4a65fb60dbe3ebd2a63a739f3541d10bd843389438b9630bf24b38dbfd0694b3",
+      "hls_source\\src\\rns_ntt_parallel.cpp": "909cc65b75add48d6e8d8b1421f00bbd2ac5e990685cbe37a701163742d27039",
+      "hls_source\\src\\rns_ntt_parallel.hpp": "74fff2a34bf3132d7487033b29e7be96456426e334070037fcd11354e24f19d9",
+      "hls_source\\src\\rns_ntt_parallel_constants.hpp": "9cc71c077ae3e666861daf547b78ea59355ee0c3ddef6e3c4253c3fd9ec3a477",
+      "hls_source\\src\\rns_ntt_parallel_core.cpp": "cd1121254f3e1ee2419c6817a6c8b367d8a75edb9c417ffcd222e727b8bcae7c",
+      "hls_source\\src\\rns_ntt_parallel_core.hpp": "f189e30ca70e2fd552c4e5edb8d0502c055ac7879a8c62426610873b3e4e06a2",
+      "hls_source\\src\\rns_ntt_parallel_rns3.cpp": "07086a23fb21f771b23591e08990ba968d3ceee845b45750a7eeb9ca1739bb2d",
+      "hls_source\\src\\rns_ntt_parallel_rns3.hpp": "48cf2a68a1b356e51ebec7a976a542515911f2234aae543960c99ac668b98fdc"
+    },
+    "testbench_sha256": "5c946054b4b8ad717f9e3c02c13f49b98ae036843853488b3cee466eb190aae7"
+  },
+  "routed": {
+    "status": "PASS_ROUTED_CAPACITY_TIMING_PENDING_WARNING_VALIDATION",
+    "attempt": "impl_v2",
+    "part": "xck26-sfvc784-2LV-c",
+    "resources": {
+      "LUT": {
+        "used": 29328.0,
+        "available": 117120,
+        "percent_reported": 25.04
+      },
+      "FF": {
+        "used": 18735.0,
+        "available": 234240,
+        "percent_reported": 8.0
+      },
+      "BRAM36_tile_equivalent": {
+        "used": 62.0,
+        "available": 144,
+        "percent_reported": 43.06
+      },
+      "DSP": {
+        "used": 753.0,
+        "available": 1248,
+        "percent_reported": 60.34
+      },
+      "URAM": {
+        "used": 0.0,
+        "available": 64,
+        "percent_reported": 0.0
+      }
+    },
+    "timing_routed": {
+      "wns_ns": 0.004,
+      "tns_ns": 0.0,
+      "setup_failing_endpoints": 0,
+      "setup_total_endpoints": 57706,
+      "whs_ns": 0.009,
+      "ths_ns": 0.0,
+      "hold_failing_endpoints": 0,
+      "hold_total_endpoints": 57706,
+      "wpws_ns": 3.5,
+      "tpws_ns": 0.0,
+      "pulse_width_failing_endpoints": 0,
+      "pulse_width_total_endpoints": 19698
+    },
+    "capacity_ok": true,
+    "timing_ok": true,
+    "timing_object_slacks_ns": {
+      "max": 0.004,
+      "min": 0.009
+    },
+    "timing_query_decimal_places_observed": 3,
+    "timing_precision_scope": "SLACK property also reports 3 decimal places in ns; no sub-picosecond precision claim. Zero failing-endpoint counts are checked independently. Historical full_precision filename does not indicate extra decimal precision.",
+    "pl_clock_period_ns": 10.0,
+    "check_timing_counts": {
+      "no_clock": 0,
+      "constant_clock": 0,
+      "pulse_width_clock": 0,
+      "unconstrained_internal_endpoints": 0,
+      "no_input_delay": 0,
+      "no_output_delay": 0,
+      "multiple_clock": 0,
+      "generated_clocks": 0,
+      "loops": 0,
+      "partial_input_delay": 0,
+      "partial_output_delay": 0,
+      "latch_loops": 0
+    },
+    "no_clock_unused_outputs": [
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET0MDIOMDC",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET1MDIOMDC",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET2MDIOMDC",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOENET3MDIOMDC",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSDIO0CLKOUT",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSDIO1CLKOUT",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSPI0SCLKO",
+      "edgefhe_ii1_i/ps/inst/PS8_i/EMIOSPI1SCLKO"
+    ],
+    "no_clock_live_consumers": 0,
+    "drc_rules": {
+      "DPIP-2": {
+        "severity": "Warning",
+        "description": "Input pipelining",
+        "count": 547
+      },
+      "DPOP-3": {
+        "severity": "Warning",
+        "description": "PREG Output pipelining",
+        "count": 643
+      },
+      "DPOP-4": {
+        "severity": "Warning",
+        "description": "MREG Output pipelining",
+        "count": 753
+      },
+      "PDCN-1569": {
+        "severity": "Warning",
+        "description": "LUT equation term check",
+        "count": 3
+      },
+      "REQP-1934": {
+        "severity": "Warning",
+        "description": "RAMB18E2_nochange_collision_advisory",
+        "count": 2
+      },
+      "REQP-1935": {
+        "severity": "Warning",
+        "description": "RAMB36E2_nochange_collision_advisory",
+        "count": 4
+      },
+      "RTSTAT-10": {
+        "severity": "Warning",
+        "description": "No routable loads",
+        "count": 1
+      }
+    },
+    "drc_blockers": {},
+    "methodology_rules": {
+      "LUTAR-1": {
+        "severity": "Warning",
+        "description": "LUT drives async reset alert",
+        "count": 3
+      }
+    },
+    "route_counts": {
+      "logical nets": 675963,
+      "nets not needing routing": 592442,
+      "internally routed nets": 507722,
+      "nets with no loads": 84720,
+      "routable nets": 83521,
+      "fully routed nets": 83521,
+      "nets with routing errors": 0
+    },
+    "route_ok": true,
+    "route_status_original": "Design Route Status\n                                               :      # nets :\n   ------------------------------------------- : ----------- :\n   # of logical nets.......................... :      675963 :\n       # of nets not needing routing.......... :      592442 :\n           # of internally routed nets........ :      507722 :\n           # of nets with no loads............ :       84720 :\n       # of routable nets..................... :       83521 :\n           # of fully routed nets............. :       83521 :\n       # of nets with routing errors.......... :           0 :\n   ------------------------------------------- : ----------- :\n\n",
+    "warning_code_counts": {
+      "Route 35-328": 1
+    },
+    "warning_lines": [
+      "WARNING: [Route 35-328] Router estimated timing not met."
+    ],
+    "full_g07_accepted": false,
+    "bitstream_generated": false,
+    "new_board_accepted": false,
+    "limits": [
+      "All DRC/methodology warnings need explicit review/validation; none automatically waived",
+      "DMA FIFO collision/backpressure validation remains pending",
+      "No board, DMA correctness, CKKS ciphertext or end-to-end performance acceptance"
+    ],
+    "evidence": [
+      {
+        "path": "D:\\NCUE_Project\\development_records\\runs\\20261003-ii1-implementation-v2-checkpoint-resume\\run.json",
+        "sha256": "415ad5d5123a1f6bd9e0bd41b1ccfef8d501f812e3e297268d9412bf5c720d5c"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2.log",
+        "sha256": "06549e6e18f936b1e865978b3a429a02f0fbd51049be833bf6fac5e093422284"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2_inputs.json",
+        "sha256": "da2a534480b9239414949e8b4784163ad69157b26bc2e280d71ef86b151a4594"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\routed.dcp",
+        "sha256": "0466125a789eaeae388d7ebd1bb4c0c965e47d0a2a6eed28cfd6f8d430646ad7"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\unused_ps_clock_connectivity_routed.rpt",
+        "sha256": "524d98f8f84e891af420c6df990142f2d760f72173f80ed78e98e031496e0d18"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\check_timing_routed_verbose.rpt",
+        "sha256": "3db62af8ff3905438b6517da43d97c440c7ac8b58f26225989004df9b79dc93a"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\clocks_routed.rpt",
+        "sha256": "c1dc5ad91aaad9badec42040268205bb0bc406603be9192f91771c80e5cbc00d"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\drc_routed.rpt",
+        "sha256": "e80a9cd78525d1379689fad30996f126634fe576fa137f08fa5e19f50f7985e9"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\full_precision_timing_routed.rpt",
+        "sha256": "06765aa612ac1a962303f90217463a1c207efae67e3d778953b6370e9d57d672"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\methodology_routed.rpt",
+        "sha256": "458babb10badfebdf7339104eb968be7fb7f1beda4382de126121b18dd0c4423"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\route_status.rpt",
+        "sha256": "9f3176b24169e767ce9ba6916b582d0ecb7a8ae567aa7df53e6b0753862ddfed"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\timing_routed.rpt",
+        "sha256": "e2507199c220ff0f0e0977c84fae9c1923ff3440cddf51a6c062ba5e3542f3c5"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\unused_ps_clock_connectivity_routed.rpt",
+        "sha256": "524d98f8f84e891af420c6df990142f2d760f72173f80ed78e98e031496e0d18"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\utilization_hierarchical_routed.rpt",
+        "sha256": "aa88c4ac6352222b5ed03138a2fd719a9e093cd6cb7fefb760cf01889e8cb283"
+      },
+      {
+        "path": "D:\\NCUE_Project\\vivado\\ii1-20261003\\impl_v2\\reports\\utilization_routed.rpt",
+        "sha256": "6accfeb61f34ceeabf06ef325e59bd020f71dd5b51ae549b453695c1e07af8cb"
+      }
+    ]
+  },
+  "benchmark": {
+    "0": {
+      "cpu_wall_us": {
+        "n": 300,
+        "min": 1440.54,
+        "max": 2180.91,
+        "mean": 1838.2448666666667,
+        "p50": 1852.14,
+        "p95": 2098.24,
+        "p99": 2128.7,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "fpga_wall_us": {
+        "n": 300,
+        "min": 2636.19,
+        "max": 2791.01,
+        "mean": 2698.7127666666665,
+        "p50": 2701.12,
+        "p95": 2741.13,
+        "p99": 2766.17,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "driver_us": {
+        "n": 300,
+        "min": 219.0,
+        "max": 320.0,
+        "mean": 251.20666666666668,
+        "p50": 261.0,
+        "p95": 268.0,
+        "p99": 310.0,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "paired_cpu_over_fpga_wall_ratio": {
+        "n": 300,
+        "min": 0.5292764594555248,
+        "max": 0.8101298267119852,
+        "mean": 0.6812890251339134,
+        "p50": 0.6892998390953248,
+        "p95": 0.7855149846933588,
+        "p99": 0.79131686074032,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "ratio_of_p50_cpu_to_p50_fpga_wall": 0.6856933420210876
+    },
+    "1": {
+      "cpu_wall_us": {
+        "n": 350,
+        "min": 1582.97,
+        "max": 2336.64,
+        "mean": 2050.932257142857,
+        "p50": 2265.55,
+        "p95": 2292.65,
+        "p99": 2329.97,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "fpga_wall_us": {
+        "n": 350,
+        "min": 2631.45,
+        "max": 2916.98,
+        "mean": 2691.6646285714287,
+        "p50": 2692.52,
+        "p95": 2736.53,
+        "p99": 2778.19,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "driver_us": {
+        "n": 350,
+        "min": 211.0,
+        "max": 302.0,
+        "mean": 241.6742857142857,
+        "p50": 253.0,
+        "p95": 257.0,
+        "p99": 300.0,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "paired_cpu_over_fpga_wall_ratio": {
+        "n": 350,
+        "min": 0.5717835036089871,
+        "max": 0.8738859696692035,
+        "mean": 0.7621613307541499,
+        "p50": 0.8387302711938212,
+        "p95": 0.8606537232735316,
+        "p99": 0.8711601160564728,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "ratio_of_p50_cpu_to_p50_fpga_wall": 0.8414236477352073
+    },
+    "2": {
+      "cpu_wall_us": {
+        "n": 150,
+        "min": 4877.51,
+        "max": 6794.03,
+        "mean": 6037.257866666667,
+        "p50": 6590.73,
+        "p95": 6654.64,
+        "p99": 6767.15,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "fpga_wall_us": {
+        "n": 150,
+        "min": 4940.02,
+        "max": 5526.87,
+        "mean": 5025.3546,
+        "p50": 5025.85,
+        "p95": 5068.1,
+        "p99": 5133.25,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "driver_us": {
+        "n": 150,
+        "min": 505.0,
+        "max": 601.0,
+        "mean": 541.52,
+        "p50": 549.0,
+        "p95": 556.0,
+        "p99": 597.0,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "paired_cpu_over_fpga_wall_ratio": {
+        "n": 150,
+        "min": 0.956797350606341,
+        "max": 1.336788874334785,
+        "mean": 1.2016886283875892,
+        "p50": 1.3095136370410851,
+        "p95": 1.3303939807433776,
+        "p99": 1.3349175026812388,
+        "quantile_method": "nearest-rank ceil(p*n)"
+      },
+      "ratio_of_p50_cpu_to_p50_fpga_wall": 1.311366236557
+    }
+  },
+  "cpu_baseline": "Scalar C++ pinned to CPU id 3; not 3 cores, not optimized OpenFHE encryption",
+  "board_summary": {
+    "public_alu_cases": 25,
+    "parity_coefficients": 307200,
+    "CKKS_cases": 6,
+    "CKKS_DMA": 84,
+    "soak_jobs": 5798822,
+    "soak_seconds": 21600.011574338,
+    "concurrency_jobs": 2000
+  }
+}

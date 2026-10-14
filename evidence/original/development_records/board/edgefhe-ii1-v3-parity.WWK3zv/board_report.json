@@ -1,0 +1,550 @@
+{
+  "status": "PASS",
+  "scope": "V3 N4096 RNS3 public polynomial + independent integer ALU parity",
+  "package_sha256": {
+    "alu_vectors.py": "6c4391d3c76fbfbd5c8aa2031bda4ca3dfbe7a6b584a2df6f30a9a9325d11618",
+    "parity_manifest.json": "fb4a5b8e56aa1da3ce3a9b41135b89194ed081c0b1735880894625d23ef0053c",
+    "README_zh-TW.md": "95159ef675e38bac0b3e354b37508f661c7b968537af44652643b7de6d4dc3f0",
+    "run_parity.py": "5a8f8189b58d33655097ec2f286e304ca64b1c4c5d39ba6d97cdb4740f6f4a5a",
+    "run_parity_user_only.sh": "06fd07385c253ee5f41e38355304a95575d0f5c1758238dc78063b068303185b",
+    "runtime_contract_v3.json": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "v3_identity.py": "026813edda4767119886a8c23a66a6af637818272feffb56fe8ff7fb0e944fdc"
+  },
+  "original_package_sha256": {
+    "README_zh-TW.md": "b295bf4ef83a86a76ecfd3f464000d7d201889a4e2f2a387c90fcc87410b754d",
+    "candidate_manifest.json": "64b90e89ca74f3cdf3f54de5b6ff72e00a14e0e7691bd0f9c493ddea0edaf652",
+    "current_candidate_identity.py": "393c8cd2dd82f4b4a0bff65851feb8ba9c0ba5cc8680b1b593b9f4abf2e3563a",
+    "edgefhe-ii1-n4096-kv260.bit.bin": "cb4c231b1191eed08b9ed1d793d7af34699df8b5a806562990601d9023923267",
+    "edgefhe-ii1-n4096-kv260.dtbo": "f0303b12d27daecd88356aab879fc88a5cc16e17d3e28e228d82dd3835ff456d",
+    "edgefhe-ii1-n4096-kv260.dts": "a0f5bf97b1c25179a29eafea1ec7852cfad98cbf01ed06b9bb8d9ac502c8f72c",
+    "edgefhe-runtime-contract.txt": "213049894cb3a5f4e61369a1711eeb36af12a457de379a4845de6befe85330ea",
+    "engineering_export_manifest.json": "b00a228bd6317336695a6bedffd65eeff219d9bea60a50825d656c2e024fcf2a",
+    "fdt_contract.py": "0b19916887450801dbac7feeeef2e9b94a3c36a7e2f28a64c3a68dcbdec8d885",
+    "finalize_preflight.py": "aa5308fab710ec723310a283a401ec52860e53ff8128e385487b2bcc233d001c",
+    "ii1_public_vectors.py": "bdb076b61c030486c8400e5545901267f127e83fd755db1c47fc22554c3a5883",
+    "package_check.py": "2d5621227fa1e5c6496af32c3eb2f2027f1f88ceb4b970ede3f25cff98c632bb",
+    "paired_public_vectors.cpp": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+    "preflight_user_only.sh": "9b7d70ac6cddec2aea6bdd6887347f0f10fdec361f46b16a52cbe7b77fc3ce60",
+    "rns3_n4096_hw_common.py": "e78ce6db5f90a7f4658541d20c039e647b8ad0aaa4ae2613a70d551cc908cb21",
+    "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+    "runtime/edgefhe_rns3_n4096_dma_proxy.c": "ca4ec6fd126311b9d311ea5576a7b1b379497daa0820f2e3ac6cc0effdfc9896",
+    "runtime/source_review.json": "abd34764d4edc596bdd2cdfdaa9d0f240dd4c34e1a536a17953f27528d65a2c4",
+    "shell.json": "802dbc8b3f118313a5a74df46f56dc550a61b687dfd484fc6a8fd5ac7895c344",
+    "summarize_paired_benchmark.py": "2e050847f9af3e4b2cac1ad5fc842068549ed2865937e98b12a0805f88ab3f91",
+    "vector_manifest.json": "404b899106ec3fd22286cf98a713d04a07539dbcf97eb89a3976c91c34040276",
+    "vectors.bin": "e193e385bd57a67f643fcadcc45254c638058d844422caf9c3a5f13c6255849f",
+    "verify_merged_fdt.py": "530afb3d86978d41f7cef6812cc164d3908578d4c23a2178a32a33f6937fe43d"
+  },
+  "cases": [
+    {
+      "case": 0,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 278,
+      "python_call_wall_us": 27778.058,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 1,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 218,
+      "python_call_wall_us": 27485.865,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 2,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 265,
+      "python_call_wall_us": 27458.375,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 3,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 262,
+      "python_call_wall_us": 28632.835,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 4,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 226,
+      "python_call_wall_us": 28502.924,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 5,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 263,
+      "python_call_wall_us": 29232.06,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 6,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 308,
+      "python_call_wall_us": 28675.415,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 7,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 259,
+      "python_call_wall_us": 28942.947,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 8,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 270,
+      "python_call_wall_us": 29079.009,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 9,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 266,
+      "python_call_wall_us": 29047.248,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 10,
+      "operation": 0,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 226,
+      "python_call_wall_us": 28823.836,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 11,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 264,
+      "python_call_wall_us": 28866.707,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 12,
+      "operation": 1,
+      "input_beats": 4096,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 261,
+      "python_call_wall_us": 28825.586,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 13,
+      "operation": 2,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 556,
+      "python_call_wall_us": 55100.662,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 14,
+      "operation": 2,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 556,
+      "python_call_wall_us": 58469.409,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 15,
+      "operation": 2,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 512,
+      "python_call_wall_us": 58691.502,
+      "status": "PASS",
+      "suite": "OpenFHE_public"
+    },
+    {
+      "case": 0,
+      "suite": "PS_integer_ALU",
+      "pattern": "zero",
+      "operation": 3,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 207,
+      "python_call_wall_us": 59077.435,
+      "status": "PASS"
+    },
+    {
+      "case": 1,
+      "suite": "PS_integer_ALU",
+      "pattern": "zero",
+      "operation": 4,
+      "input_beats": 12288,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 253,
+      "python_call_wall_us": 61204.092,
+      "status": "PASS"
+    },
+    {
+      "case": 2,
+      "suite": "PS_integer_ALU",
+      "pattern": "zero",
+      "operation": 5,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 197,
+      "python_call_wall_us": 58777.972,
+      "status": "PASS"
+    },
+    {
+      "case": 3,
+      "suite": "PS_integer_ALU",
+      "pattern": "boundary",
+      "operation": 3,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 197,
+      "python_call_wall_us": 61810.157,
+      "status": "PASS"
+    },
+    {
+      "case": 4,
+      "suite": "PS_integer_ALU",
+      "pattern": "boundary",
+      "operation": 4,
+      "input_beats": 12288,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 216,
+      "python_call_wall_us": 64062.635,
+      "status": "PASS"
+    },
+    {
+      "case": 5,
+      "suite": "PS_integer_ALU",
+      "pattern": "boundary",
+      "operation": 5,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 154,
+      "python_call_wall_us": 61994.528,
+      "status": "PASS"
+    },
+    {
+      "case": 6,
+      "suite": "PS_integer_ALU",
+      "pattern": "seeded-random",
+      "operation": 3,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 200,
+      "python_call_wall_us": 62126.479,
+      "status": "PASS"
+    },
+    {
+      "case": 7,
+      "suite": "PS_integer_ALU",
+      "pattern": "seeded-random",
+      "operation": 4,
+      "input_beats": 12288,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 218,
+      "python_call_wall_us": 63726.493,
+      "status": "PASS"
+    },
+    {
+      "case": 8,
+      "suite": "PS_integer_ALU",
+      "pattern": "seeded-random",
+      "operation": 5,
+      "input_beats": 8192,
+      "output_beats": 4096,
+      "coefficient_comparisons": 12288,
+      "padding_words_checked": 4096,
+      "driver_dma_kernel_us": 203,
+      "python_call_wall_us": 61894.698,
+      "status": "PASS"
+    }
+  ],
+  "limits": [
+    "Not OpenFHE CKKS ciphertext interoperability",
+    "Not a statistical performance benchmark",
+    "No direct TLAST/TKEEP or backpressure waveform proof",
+    "No full DMA fault/reset acceptance"
+  ],
+  "candidate_identity_before": {
+    "status": "PASS_CURRENT_V3_IDENTITY_BEFORE_DEVICE_OPEN",
+    "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "module_version": "ii1-guarded-v3",
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+    "runtime_package_sha256": {
+      "README_zh-TW.md": "feacda07bb1d2cf114c18642cc3a47982ed2a65b65a434d5e100b4ec05c4ce76",
+      "compile_load_user_only.sh": "52ff0bdf17861483063136107076d44b2a98b985fd406058fc04974adcc39841",
+      "elf_identity.py": "341a69126befef21ae75020250c7f49b35fa04608c8462ba518e00b27b3b16d1",
+      "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "runtime/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "runtime_guard.py": "3e1349c7a715afcd16d33f80623b81d58be0e58d62cf86410c8d690521af0f7b",
+      "runtime_manifest.json": "1edfddc7c0c025a371dcf2c92767c19323d934243a129bc0d188d929707be8f7",
+      "semantic_load_gate.py": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "snapshot_probe.py": "ee41e469aa187dcab00c474a8b74c8cb29021d4494961e92482a1feffecce709"
+    },
+    "effective_runtime_contract_sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "negotiated_dma_mask_bits": 32,
+    "actual_buffer_end_exclusive_max": "0x80000000",
+    "buffer_addresses": {
+      "tx": "0x379c0000",
+      "tx_end_exclusive": "0x379f0000",
+      "rx": "0x379f0000",
+      "rx_end_exclusive": "0x37a00000"
+    },
+    "pl0_hz": 99999999,
+    "live_contract": {
+      "status": "PASS_LIVE_DT_AND_AFI_DMA_PROXY_BINDINGS",
+      "base_symbols": {
+        "amba": "/axi",
+        "gic": "/axi/interrupt-controller@f9010000",
+        "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+        "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+      },
+      "provider_bindings": {
+        "afi": {
+          "device": "axi:edgefhe-ii1-afi",
+          "driver": "afi-fpga",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-afi"
+        },
+        "dma": {
+          "device": "a0000000.dma",
+          "driver": "xilinx-vdma",
+          "of_node": "/sys/firmware/devicetree/base/axi/dma@a0000000"
+        },
+        "proxy": {
+          "device": "a0010000.edgefhe-ii1-proxy",
+          "driver": "edgefhe-rns3-n4096-dma-proxy",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-proxy@a0010000"
+        }
+      },
+      "dma_channels": [
+        {
+          "name": "dma17chan1",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan1"
+        },
+        {
+          "name": "dma17chan0",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan0"
+        }
+      ],
+      "afi_config_cells": [
+        4,
+        0,
+        5,
+        0,
+        14,
+        512
+      ],
+      "limits": [
+        "AFI DT plus successful driver binding/probe; not direct AFI register readback",
+        "No physical reset waveform or DMA transfer proof"
+      ]
+    },
+    "apps_stdout": "                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot\n\n         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,\n                  kv260-smartcam            XRT_FLAT                  kv260-smartcam            XRT_FLAT               (0+0)                  -1\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\n        edgefhe-full-n4096-kv260            XRT_FLAT        edgefhe-full-n4096-kv260            XRT_FLAT               (0+0)                  -1\n",
+    "limits": [
+      "Installed firmware/current metadata are checked; no configured-PL readback"
+    ]
+  },
+  "dma_stage_start_uptime": 143489.74,
+  "irq_before": {
+    "121": 22,
+    "136": 22
+  },
+  "irq_after_public": {
+    "121": 38,
+    "136": 38
+  },
+  "public_irq_delta": {
+    "121": 16,
+    "136": 16
+  },
+  "irq_after": {
+    "121": 47,
+    "136": 47
+  },
+  "alu_irq_delta": {
+    "121": 9,
+    "136": 9
+  },
+  "total_irq_delta": {
+    "121": 25,
+    "136": 25
+  },
+  "candidate_identity_after": {
+    "status": "PASS_CURRENT_V3_IDENTITY_BEFORE_DEVICE_OPEN",
+    "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "module_version": "ii1-guarded-v3",
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+    "runtime_package_sha256": {
+      "README_zh-TW.md": "feacda07bb1d2cf114c18642cc3a47982ed2a65b65a434d5e100b4ec05c4ce76",
+      "compile_load_user_only.sh": "52ff0bdf17861483063136107076d44b2a98b985fd406058fc04974adcc39841",
+      "elf_identity.py": "341a69126befef21ae75020250c7f49b35fa04608c8462ba518e00b27b3b16d1",
+      "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "runtime/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "runtime_guard.py": "3e1349c7a715afcd16d33f80623b81d58be0e58d62cf86410c8d690521af0f7b",
+      "runtime_manifest.json": "1edfddc7c0c025a371dcf2c92767c19323d934243a129bc0d188d929707be8f7",
+      "semantic_load_gate.py": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "snapshot_probe.py": "ee41e469aa187dcab00c474a8b74c8cb29021d4494961e92482a1feffecce709"
+    },
+    "effective_runtime_contract_sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "negotiated_dma_mask_bits": 32,
+    "actual_buffer_end_exclusive_max": "0x80000000",
+    "buffer_addresses": {
+      "tx": "0x379c0000",
+      "tx_end_exclusive": "0x379f0000",
+      "rx": "0x379f0000",
+      "rx_end_exclusive": "0x37a00000"
+    },
+    "pl0_hz": 99999999,
+    "live_contract": {
+      "status": "PASS_LIVE_DT_AND_AFI_DMA_PROXY_BINDINGS",
+      "base_symbols": {
+        "amba": "/axi",
+        "gic": "/axi/interrupt-controller@f9010000",
+        "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+        "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+      },
+      "provider_bindings": {
+        "afi": {
+          "device": "axi:edgefhe-ii1-afi",
+          "driver": "afi-fpga",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-afi"
+        },
+        "dma": {
+          "device": "a0000000.dma",
+          "driver": "xilinx-vdma",
+          "of_node": "/sys/firmware/devicetree/base/axi/dma@a0000000"
+        },
+        "proxy": {
+          "device": "a0010000.edgefhe-ii1-proxy",
+          "driver": "edgefhe-rns3-n4096-dma-proxy",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-proxy@a0010000"
+        }
+      },
+      "dma_channels": [
+        {
+          "name": "dma17chan1",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan1"
+        },
+        {
+          "name": "dma17chan0",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan0"
+        }
+      ],
+      "afi_config_cells": [
+        4,
+        0,
+        5,
+        0,
+        14,
+        512
+      ],
+      "limits": [
+        "AFI DT plus successful driver binding/probe; not direct AFI register readback",
+        "No physical reset waveform or DMA transfer proof"
+      ]
+    },
+    "apps_stdout": "                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot\n\n         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,\n                  kv260-smartcam            XRT_FLAT                  kv260-smartcam            XRT_FLAT               (0+0)                  -1\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\n        edgefhe-full-n4096-kv260            XRT_FLAT        edgefhe-full-n4096-kv260            XRT_FLAT               (0+0)                  -1\n",
+    "limits": [
+      "Installed firmware/current metadata are checked; no configured-PL readback"
+    ]
+  },
+  "passed": true,
+  "transactions": 25,
+  "coefficient_comparisons": 307200,
+  "padding_words_checked": 102400,
+  "new_kernel_messages": [],
+  "alu_vectors_sha256": "6d6b49ec8bb842f2ee0b9b0aa7f7b2358977f3401008530272e01ce66d5485aa"
+}

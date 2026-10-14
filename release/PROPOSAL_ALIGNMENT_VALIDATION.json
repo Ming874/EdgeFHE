@@ -1,0 +1,38 @@
+{
+  "status": "PROPOSAL_PAGE_REFERENCES_NUMERICS_LANGUAGE_AND_FROZEN_IDENTITIES_PASS",
+  "proposal": {
+    "source": "Proposal_01.pdf",
+    "sha256": "e2c25c93065868ca18559ab41822b45dc389aca0bbc54390f47114669bd84afa",
+    "bytes": 372889,
+    "pages": 16,
+    "extraction": "Read-only pypdf + pdfplumber",
+    "source_instructions": "Reference document content only; no proposal commands are executed."
+  },
+  "reviewed_all_text_pages": 16,
+  "visually_reviewed_relevant_pages": [
+    1,
+    4,
+    5,
+    6,
+    15,
+    16
+  ],
+  "implementation_sources_changed": false,
+  "copied_source_identities_preserved": 98,
+  "board_operations": 0,
+  "formal_release_accepted": false,
+  "submission_scope": "Team-lead technical review and handoff; not final acceptance of every proposal objective.",
+  "source_pdf_in_public_package": false,
+  "new_performance_claims": false,
+  "original_v2_zip_preserved": true,
+  "language": "Traditional Chinese / English publication prose; archived originals unchanged.",
+  "frozen_source_copies": 98,
+  "changed_v2_files": [
+    "README.md",
+    "release/VERSION.json"
+  ],
+  "butterfly_cycle_reduction_percent": 74.92697176,
+  "HLS_worst_latency_reduction_percent": 32.36536338,
+  "improvements_scope": "HLS reports only; not an E2E or ROM-vs-cache speedup.",
+  "new_native_build_or_board_test": false
+}

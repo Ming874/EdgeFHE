@@ -1,0 +1,340 @@
+{
+  "status": "PASS_USER_NORMAL_TWO_MODE_CONCURRENT_EXACT",
+  "package_sha256": {
+    "README_zh-TW.md": "6aa2f67303b1de23ecc38f1f91c8c0ec69cd6c974e213f3ee99215846adc44ac",
+    "concurrency_control.py": "422e0b5bf76d24905218ea28ded33beb6b383620e92b847bcd8c4e4895d64abe",
+    "concurrency_evidence.py": "c5f4b8523e1b9ad7840de5957433dd353164d049d564ceb7e4a907449f265587",
+    "concurrency_manifest.json": "8dbae6e6c6f4e5f1a23dddddaf3c1d1f47c31af132d48b821b8ebc1c2cabebc2",
+    "concurrent_runner.cpp": "59a9ce29659fdc591d4638b1a337a9aa12582b10bb69d22ab0b44a2aa8c3fa3c",
+    "mixed_vectors.bin": "b2029683cf687954b03e6d5340f2fbdf86ccfc191bb94d1f4819380065482d19",
+    "paired_public_vectors.cpp": "4fb62a87b64edcaa844e85abf348e3e0a49649efe67cf46971b1431da3883fb9",
+    "run_concurrency_user_only.sh": "28c87ad3ef26cc474659c40c8ddfd9e165e1d8f89ddb28a737e0a2aecc48e64d",
+    "runtime_contract_v3.json": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "soak_mixed_support.hpp": "d69c44fc769c08f39274fb12b4e3d505ffb4d332e633e6282f41872d2476068c",
+    "stress_identity.py": "f9aa0b14ffde7c24e0554a5a025f930ad90ec622b70dba70b31736d8dc0ca7f6"
+  },
+  "package_SHA256SUMS_sha256": "e51d3e2f0ad87c1df7dfa5b6c05a5d1f4daf6fa5ab71dac3e6738121ff57a488",
+  "FPGA_loads": 0,
+  "module_reloads": 0,
+  "fault_injections": 0,
+  "sysfs_control_writes": 0,
+  "remote_operations": 0,
+  "parent_CPU": [
+    0
+  ],
+  "worker_CPU": [
+    1,
+    2,
+    3
+  ],
+  "failure_action": "preserve_and_stop_no_retry",
+  "before_history": 5800783,
+  "after_history": 5802783,
+  "compile_command": [
+    "g++",
+    "-O3",
+    "-std=c++17",
+    "-pthread",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "/home/ubuntu/ii1-v3-concurrency-20261005/concurrent_runner.cpp",
+    "-o",
+    "/home/ubuntu/edgefhe-ii1-concurrency.uC6vdy/concurrent_runner"
+  ],
+  "identity_before": {
+    "status": "PASS_CURRENT_V3_IDENTITY_BEFORE_DEVICE_OPEN",
+    "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "module_version": "ii1-guarded-v3",
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+    "runtime_package_sha256": {
+      "README_zh-TW.md": "feacda07bb1d2cf114c18642cc3a47982ed2a65b65a434d5e100b4ec05c4ce76",
+      "compile_load_user_only.sh": "52ff0bdf17861483063136107076d44b2a98b985fd406058fc04974adcc39841",
+      "elf_identity.py": "341a69126befef21ae75020250c7f49b35fa04608c8462ba518e00b27b3b16d1",
+      "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "runtime/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "runtime_guard.py": "3e1349c7a715afcd16d33f80623b81d58be0e58d62cf86410c8d690521af0f7b",
+      "runtime_manifest.json": "1edfddc7c0c025a371dcf2c92767c19323d934243a129bc0d188d929707be8f7",
+      "semantic_load_gate.py": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "snapshot_probe.py": "ee41e469aa187dcab00c474a8b74c8cb29021d4494961e92482a1feffecce709"
+    },
+    "effective_runtime_contract_sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "negotiated_dma_mask_bits": 32,
+    "actual_buffer_end_exclusive_max": "0x80000000",
+    "buffer_addresses": {
+      "tx": "0x379c0000",
+      "tx_end_exclusive": "0x379f0000",
+      "rx": "0x379f0000",
+      "rx_end_exclusive": "0x37a00000"
+    },
+    "pl0_hz": 99999999,
+    "live_contract": {
+      "status": "PASS_LIVE_DT_AND_AFI_DMA_PROXY_BINDINGS",
+      "base_symbols": {
+        "amba": "/axi",
+        "gic": "/axi/interrupt-controller@f9010000",
+        "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+        "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+      },
+      "provider_bindings": {
+        "afi": {
+          "device": "axi:edgefhe-ii1-afi",
+          "driver": "afi-fpga",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-afi"
+        },
+        "dma": {
+          "device": "a0000000.dma",
+          "driver": "xilinx-vdma",
+          "of_node": "/sys/firmware/devicetree/base/axi/dma@a0000000"
+        },
+        "proxy": {
+          "device": "a0010000.edgefhe-ii1-proxy",
+          "driver": "edgefhe-rns3-n4096-dma-proxy",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-proxy@a0010000"
+        }
+      },
+      "dma_channels": [
+        {
+          "name": "dma17chan1",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan1"
+        },
+        {
+          "name": "dma17chan0",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan0"
+        }
+      ],
+      "afi_config_cells": [
+        4,
+        0,
+        5,
+        0,
+        14,
+        512
+      ],
+      "limits": [
+        "AFI DT plus successful driver binding/probe; not direct AFI register readback",
+        "No physical reset waveform or DMA transfer proof"
+      ]
+    },
+    "apps_stdout": "                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot\n\n         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,\n                  kv260-smartcam            XRT_FLAT                  kv260-smartcam            XRT_FLAT               (0+0)                  -1\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\n        edgefhe-full-n4096-kv260            XRT_FLAT        edgefhe-full-n4096-kv260            XRT_FLAT               (0+0)                  -1\n",
+    "limits": [
+      "Installed firmware/current metadata are checked; no configured-PL readback"
+    ]
+  },
+  "IRQ_before": {
+    "121": {
+      "linux_irq": 61,
+      "per_cpu": [
+        5800805,
+        0,
+        0,
+        0
+      ]
+    },
+    "136": {
+      "linux_irq": 62,
+      "per_cpu": [
+        5800805,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "start_uptime": 249523.06,
+  "identity_after": {
+    "status": "PASS_CURRENT_V3_IDENTITY_BEFORE_DEVICE_OPEN",
+    "boot_id": "40ce1175-bfcc-48f8-9fa1-467bfa97c3b7",
+    "kernel": "5.15.0-1027-xilinx-zynqmp",
+    "module_version": "ii1-guarded-v3",
+    "srcversion": "6BDCA74AD872B2765D36882",
+    "ko_sha256": "3590ae35109364c6d97bc7c8cb2220a005f2577ec96868d1741d3a336478d84e",
+    "runtime_report_sha256": "1487e69c5d99fd4fe2934038cada983df7c7824472289e6360656acdedf0d00b",
+    "runtime_package_sha256": {
+      "README_zh-TW.md": "feacda07bb1d2cf114c18642cc3a47982ed2a65b65a434d5e100b4ec05c4ce76",
+      "compile_load_user_only.sh": "52ff0bdf17861483063136107076d44b2a98b985fd406058fc04974adcc39841",
+      "elf_identity.py": "341a69126befef21ae75020250c7f49b35fa04608c8462ba518e00b27b3b16d1",
+      "runtime/Makefile": "cfe387bf5c414793b22a9ae5d31f15549eb4ac266370809746850b2f84f47c84",
+      "runtime/edgefhe_rns3_n4096_dma_proxy.c": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+      "runtime_guard.py": "3e1349c7a715afcd16d33f80623b81d58be0e58d62cf86410c8d690521af0f7b",
+      "runtime_manifest.json": "1edfddc7c0c025a371dcf2c92767c19323d934243a129bc0d188d929707be8f7",
+      "semantic_load_gate.py": "681b71b049df9b9f20f4c3eed57038ba55caa0a1f086a817822413547a002486",
+      "snapshot_probe.py": "ee41e469aa187dcab00c474a8b74c8cb29021d4494961e92482a1feffecce709"
+    },
+    "effective_runtime_contract_sha256": "37d94b4b000e418303102c467d40a727e6cb3e3319c26a5fe0a1c98af7c73161",
+    "negotiated_dma_mask_bits": 32,
+    "actual_buffer_end_exclusive_max": "0x80000000",
+    "buffer_addresses": {
+      "tx": "0x379c0000",
+      "tx_end_exclusive": "0x379f0000",
+      "rx": "0x379f0000",
+      "rx_end_exclusive": "0x37a00000"
+    },
+    "pl0_hz": 99999999,
+    "live_contract": {
+      "status": "PASS_LIVE_DT_AND_AFI_DMA_PROXY_BINDINGS",
+      "base_symbols": {
+        "amba": "/axi",
+        "gic": "/axi/interrupt-controller@f9010000",
+        "zynqmp_clk": "/firmware/zynqmp-firmware/clock-controller",
+        "zynqmp_reset": "/firmware/zynqmp-firmware/reset-controller"
+      },
+      "provider_bindings": {
+        "afi": {
+          "device": "axi:edgefhe-ii1-afi",
+          "driver": "afi-fpga",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-afi"
+        },
+        "dma": {
+          "device": "a0000000.dma",
+          "driver": "xilinx-vdma",
+          "of_node": "/sys/firmware/devicetree/base/axi/dma@a0000000"
+        },
+        "proxy": {
+          "device": "a0010000.edgefhe-ii1-proxy",
+          "driver": "edgefhe-rns3-n4096-dma-proxy",
+          "of_node": "/sys/firmware/devicetree/base/axi/edgefhe-ii1-proxy@a0010000"
+        }
+      },
+      "dma_channels": [
+        {
+          "name": "dma17chan1",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan1"
+        },
+        {
+          "name": "dma17chan0",
+          "target": "/sys/devices/platform/axi/a0000000.dma/dma/dma17chan0"
+        }
+      ],
+      "afi_config_cells": [
+        4,
+        0,
+        5,
+        0,
+        14,
+        512
+      ],
+      "limits": [
+        "AFI DT plus successful driver binding/probe; not direct AFI register readback",
+        "No physical reset waveform or DMA transfer proof"
+      ]
+    },
+    "apps_stdout": "                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot\n\n         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,\n                  kv260-smartcam            XRT_FLAT                  kv260-smartcam            XRT_FLAT               (0+0)                  -1\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\n        edgefhe-full-n4096-kv260            XRT_FLAT        edgefhe-full-n4096-kv260            XRT_FLAT               (0+0)                  -1\n",
+    "limits": [
+      "Installed firmware/current metadata are checked; no configured-PL readback"
+    ]
+  },
+  "IRQ_after": {
+    "121": {
+      "linux_irq": 61,
+      "per_cpu": [
+        5802805,
+        0,
+        0,
+        0
+      ]
+    },
+    "136": {
+      "linux_irq": 62,
+      "per_cpu": [
+        5802805,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "IRQ_delta": {
+    "121": 2000,
+    "136": 2000
+  },
+  "row_check": {
+    "jobs": 2000,
+    "workers": 4,
+    "modes": [
+      "shared_fd",
+      "separate_fd"
+    ],
+    "jobs_per_mode": 1000,
+    "per_case_per_mode": 40,
+    "coefficients": 24576000,
+    "padding": 8192000,
+    "entry_peaks": [
+      4,
+      4
+    ],
+    "interval_peaks": [
+      4,
+      4
+    ]
+  },
+  "native_report": {
+    "status": "PASS_NATIVE_TWO_MODE_CONCURRENT_EXACT",
+    "jobs": 2000,
+    "workers": 4,
+    "opens": 5,
+    "closes": 5,
+    "coefficients": 24576000,
+    "padding": 8192000,
+    "phase_peaks": [
+      4,
+      4
+    ],
+    "phase_begin_ns": [
+      249523283274023,
+      249526976292609
+    ],
+    "phase_end_ns": [
+      249526976073018,
+      249530668416549
+    ]
+  },
+  "telemetry": {
+    "samples": 9,
+    "span_ns": 7647507827,
+    "temperature_celsius": {
+      "ps_temp": {
+        "min": "34.614327328968",
+        "max": "35.780054562768",
+        "samples": 9
+      },
+      "remote_temp": {
+        "min": "35.018446103352",
+        "max": "36.945781796568",
+        "samples": 9
+      },
+      "pl_temp": {
+        "min": "33.518543729196",
+        "max": "34.047006741852",
+        "samples": 9
+      }
+    },
+    "unavailable_optional_cpu_fields": {},
+    "scope": "Short concurrent run observations; no six-hour thermal reconstruction or driver leak attribution"
+  },
+  "new_kernel_messages": [],
+  "limits": [
+    "Same process four threads; shared fd and four separate fds; not multiple-process or fault/remove coverage",
+    "Driver serializes PL work; overlap means host call windows, not parallel PL transfers",
+    "Short temperature/global CMA observations; not thermal certification or attribution of a driver leak",
+    "Exact comparisons recorded in-run; full RX arrays are not archived; no E2E speedup claim"
+  ],
+  "last_phase": "final_identity_IRQ_kernel_thermal_memory",
+  "evidence_sha256": {
+    "interrupts_after.txt": "619e26f997cbef662ee87bc90b9bcc445d8a80a56d625678361f30a929a82b53",
+    "concurrent_runner": "a47c09576e6eca26e117ac2bca99822feadad10b69a4a905b948721ecd8aa996",
+    "memory_before.json": "b8ba9178bb40fa70b4dac326ad73ef8592ab9b9736ba0d67b2717090ef84924f",
+    "telemetry.jsonl": "dc9ac081ab8f1a1f1c34f712ed81a9c9115cad66446c3bcd84dfed2884b3f77d",
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dmesg_after.log": "55cff560270181e8daa295343c13b973e6588aa8e78f6c311b77b9d665abf4d0",
+    "interrupts_before.txt": "e302bc6cd4bb43ce044cda0a401443a7bdd6fb034d8b65f0031e5ea1bc57807d",
+    "native_console.log": "c94c9361d69065a0579321495e99f6c422f7d830988194f5409f5dc034c8e6e0",
+    "native_report.json": "0786c56a4d662a842da602e91f5727eb511cab333f12b1ba47f6b113bf9f3600",
+    "cpu_check.log": "0d3bf49e58b6f68e384edc71409da0f626baf6bee2e2ce3080532ad944162830",
+    "transactions.tsv": "4e0cfcf50fd1ae5b641b300921a67a4f54bcafd6639eebbb6f1d85694d737aa5",
+    "memory_after.json": "9bc38fdf2c96a67a0ac6d38a69e46dd40beaf26fad762a0dd51ced3efde4d749"
+  }
+}

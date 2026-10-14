@@ -1,0 +1,15 @@
+[   75.329493] rfkill: input handler disabled
+[17125.323919] audit: type=1400 audit(1700617329.796:47): apparmor="DENIED" operation="capable" profile="/snap/snapd/20674/usr/lib/snapd/snap-confine" pid=15824 comm="snap-confine" capability=12  capname="net_admin"
+[17125.323946] audit: type=1400 audit(1700617329.796:48): apparmor="DENIED" operation="capable" profile="/snap/snapd/20674/usr/lib/snapd/snap-confine" pid=15824 comm="snap-confine" capability=38  capname="perfmon"
+[17270.077447] audit: type=1400 audit(1791920137.304:49): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=16117 comm="cupsd" capability=12  capname="net_admin"
+[17270.138129] audit: type=1400 audit(1791920137.364:50): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=16120 comm="cups-browsed" capability=23  capname="sys_nice"
+[17642.982437] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17642.992614] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17643.002342] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_afi
+[17643.012833] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_dma
+[17643.023347] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_ii1_proxy
+[17643.037991] xilinx-vdma a0000000.dma: Please ensure that IP supports buffer length > 23 bits
+[17643.038295] xilinx-vdma a0000000.dma: Xilinx AXI DMA Engine Driver Probed!!
+[17656.234380] edgefhe_rns3_n4096_dma_proxy: loading out-of-tree module taints kernel.
+[17656.234529] edgefhe_rns3_n4096_dma_proxy: module verification failed: signature and/or required key missing - tainting kernel
+[17656.237479] edgefhe-rns3-n4096-dma-proxy a0010000.edgefhe-ii1-proxy: EdgeFHE RNS3 parallel N=4096 DMA proxy ready: mode=dmaengine-irq ii1-guarded-v3 tx=0x00000000361c0000 rx=0x00000000361f0000

@@ -1,0 +1,3 @@
+# Python 3.10+ standard library only for the checked-in functional client/oracles.
+# No pip packages are required. GCC/CMake, kernel headers and AMD tools are OS tools.
+# OpenFHE is optional and external, needed only to regenerate public vectors.

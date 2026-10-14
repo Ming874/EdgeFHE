@@ -1,0 +1,4 @@
+                     Accelerator          Accel_type                            Base           Base_type      #slots(PL+AIE)         Active_slot
+
+         edgefhe-ii1-n4096-kv260            XRT_FLAT         edgefhe-ii1-n4096-kv260            XRT_FLAT               (0+0)                  0,
+                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1

@@ -1,0 +1,46 @@
+{
+  "status": "ENGINEERING_PREFLIGHT_PACKAGE_NOT_RELEASE",
+  "hardware_id": "edgefhe-ii1-n4096-kv260-20261003",
+  "payload_files": [
+    "README_zh-TW.md",
+    "current_candidate_identity.py",
+    "edgefhe-ii1-n4096-kv260.bit.bin",
+    "edgefhe-ii1-n4096-kv260.dtbo",
+    "edgefhe-ii1-n4096-kv260.dts",
+    "edgefhe-runtime-contract.txt",
+    "engineering_export_manifest.json",
+    "fdt_contract.py",
+    "finalize_preflight.py",
+    "ii1_public_vectors.py",
+    "package_check.py",
+    "paired_public_vectors.cpp",
+    "preflight_user_only.sh",
+    "rns3_n4096_hw_common.py",
+    "runtime/Makefile",
+    "runtime/edgefhe_rns3_n4096_dma_proxy.c",
+    "runtime/source_review.json",
+    "shell.json",
+    "summarize_paired_benchmark.py",
+    "vector_manifest.json",
+    "vectors.bin",
+    "verify_merged_fdt.py"
+  ],
+  "bit_sha256": "cb4c231b1191eed08b9ed1d793d7af34699df8b5a806562990601d9023923267",
+  "dtbo_sha256": "f0303b12d27daecd88356aab879fc88a5cc16e17d3e28e228d82dd3835ff456d",
+  "driver_source_sha256": "ca4ec6fd126311b9d311ea5576a7b1b379497daa0820f2e3ac6cc0effdfc9896",
+  "preflight_only": [
+    "Checksums",
+    "DTC and pure-file boot-FDT merge",
+    "Current kernel module compile without insmod",
+    "ARM CPU-only oracle",
+    "IRQ unchanged"
+  ],
+  "pending": [
+    "Current kernel compile/user preflight",
+    "Candidate load/AFI/clock/ranges/parity",
+    "Physical LUTAR/full-DMA resets",
+    "CKKS E2E",
+    "ARM paired performance",
+    "Formal release"
+  ]
+}

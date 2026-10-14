@@ -1,0 +1,58 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found Python3: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3.10") found components: Interpreter 
+-- Configuring done (7.3s)
+-- Generating done (1.4s)
+-- Build files have been written to: /mnt/d/NCUE_Project/development_records/native_client_20261007/build_s29_scalar
+[ 22%] Building CXX object CMakeFiles/edgefhe_native.dir/core.cpp.o
+[ 22%] Building CXX object CMakeFiles/edgefhe_native_demo.dir/interactive.cpp.o
+[ 33%] Building CXX object CMakeFiles/edgefhe_native_demo.dir/core.cpp.o
+[ 44%] Building CXX object CMakeFiles/edgefhe_native_selftest.dir/selftest.cpp.o
+[ 55%] Building CXX object CMakeFiles/edgefhe_native.dir/c_api.cpp.o
+[ 66%] Building CXX object CMakeFiles/edgefhe_native_selftest.dir/core.cpp.o
+[ 77%] Linking CXX executable edgefhe_native_demo
+[ 88%] Linking CXX shared library libedgefhe_native.so
+[ 88%] Built target edgefhe_native_demo
+[ 88%] Built target edgefhe_native
+[100%] Linking CXX executable edgefhe_native_selftest
+[100%] Built target edgefhe_native_selftest
+Internal ctest changing into directory: /mnt/d/NCUE_Project/development_records/native_client_20261007/build_s29_scalar
+Test project /mnt/d/NCUE_Project/development_records/native_client_20261007/build_s29_scalar
+    Start 1: native_complete_math
+1/2 Test #1: native_complete_math .............   Passed    0.10 sec
+    Start 2: native_protocol_offline
+2/2 Test #2: native_protocol_offline ..........   Passed    0.24 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.37 sec
+NATIVE_ENCODER_EXACT_AND_FULL_SLOT_BOUND_PASS {'cases': 24, 'exact_coefficients': 98304, 'coefficient_max_delta': 0, 'max_slot_error': 1.6320811990767195e-07, 'ties': 8}
+DENSE_PROGRESS distinct_inputs=250
+DENSE_PROGRESS distinct_inputs=500
+DENSE_PROGRESS distinct_inputs=750
+DENSE_PROGRESS distinct_inputs=1000
+NATIVE_DISTINCT_DENSE_ORACLE_PASS {'distinct_cases': 1000, 'exact_coefficients': 12288000, 'independent_oracle': 'exact integer Kronecker convolution + frozen uint64-modulo NTT vs new Shoup NTT', 'seconds': 41.762961964, 'stream_sha256': '8e5af515fe202aed6a7cfbb4618d1cda7fae8d0e2d83e438ccd9359ff767e5af', 'negacyclic_boundary': True}
+NATIVE_KEYGEN_ENCRYPT_AFFINE_DECRYPT_EXACT_PASS {'cases': 12, 'exact_integer_and_RNS_comparisons': 1867776, 'max_affine_slot_error': 6.669274223452283e-07, 'independent_sparse_noise': True}
+NATIVE_LOCAL_MATHEMATICAL_ACCEPTANCE_PASS
+DYNAMIC_PRIVATE_INPUT_LOCAL_MTLS_PASS checks=29 dynamic_batches=6 includes_full_slots=2 configurable_ports=2 board=0
+CPU_BENCH_PHASE_PASS phase=encode_slots_1 Python_p50_us=5039.748 Cpp1_p50_us=388.931 ratio=12.958
+CPU_BENCH_PHASE_PASS phase=decode_slots_1 Python_p50_us=4329.424 Cpp1_p50_us=1133.978 ratio=3.818
+CPU_BENCH_PHASE_PASS phase=encode_slots_128 Python_p50_us=5176.361 Cpp1_p50_us=441.073 ratio=11.736
+CPU_BENCH_PHASE_PASS phase=decode_slots_128 Python_p50_us=4242.416 Cpp1_p50_us=1157.844 ratio=3.664
+CPU_BENCH_PHASE_PASS phase=encode_slots_2048 Python_p50_us=5024.450 Cpp1_p50_us=875.410 ratio=5.740
+CPU_BENCH_PHASE_PASS phase=decode_slots_2048 Python_p50_us=4246.080 Cpp1_p50_us=1150.817 ratio=3.690
+CPU_BENCH_PHASE_PASS phase=keygen Python_p50_us=39670.669 Cpp1_p50_us=1231.800 ratio=32.205
+CPU_BENCH_PHASE_PASS phase=encrypt4 Python_p50_us=191409.098 Cpp1_p50_us=6360.260 ratio=30.095
+CPU_BENCH_PHASE_PASS phase=cloud_affine Python_p50_us=10510.513 Cpp1_p50_us=723.596 ratio=14.525
+CPU_BENCH_PHASE_PASS phase=decrypt Python_p50_us=42459.897 Cpp1_p50_us=1858.649 ratio=22.844
+CPU_BENCH_PHASE_PASS phase=OS_sampling_material Python_p50_us=9601.481 Cpp1_p50_us=150.014 ratio=64.004
+CPU_BENCH_PHASE_PASS phase=CPU_math_hot_path Python_p50_us=284312.512 Cpp1_p50_us=12565.270 ratio=22.627
+PYTHON_CPP_PAIRED_CPU_BENCHMARK_PASS rounds=30 workers=1,3 cpp_parallel_ratio=1.450 board=0
+NATIVE_V4_S29_FINAL_CONNECTED_LOCAL_PASS board_operations=0

@@ -1,0 +1,17 @@
+{
+  "status": "CANDIDATE_LIFECYCLE_HOST_MODEL_PASS",
+  "normal_scenarios": 4,
+  "api_error_quarantine": true,
+  "late_callbacks_on_retained_proxy": true,
+  "false_success_provider_counterexample_remains": true,
+  "candidate_sha256": "d468a6b0a8cdb178c1ef0c234f1ced643ee74933922bd670fdc75fbc2a17a73f",
+  "ASAN_UBSAN": true,
+  "full_kernel_compile": false,
+  "board_acceptance": false,
+  "physical_reset_acceptance": false,
+  "limits": [
+    "Explicit transfer/provider/VFS host stubs",
+    "No physical proof of DDR/PL quiescence",
+    "Source candidate must not replace accepted V3 without separate kernel and board tests"
+  ]
+}

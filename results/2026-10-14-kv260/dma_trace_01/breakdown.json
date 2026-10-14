@@ -1,0 +1,121 @@
+{
+  "graph_lines": 2798,
+  "calls": 109,
+  "unfinished_calls": 0,
+  "skipped": {},
+  "mode": "fine",
+  "mode_note": "",
+  "complete_calls": 109,
+  "segments": [
+    {
+      "segment": "enter",
+      "meaning": "copy the 48-byte request in, take the driver mutex",
+      "median_us": 3.1,
+      "p10_us": 2.1,
+      "p90_us": 8.9,
+      "mean_us": 4.1,
+      "share_of_mean": 0.0009
+    },
+    {
+      "segment": "checks",
+      "meaning": "request checks, hardened-usercopy object check",
+      "median_us": 2.9,
+      "p10_us": 2.8,
+      "p90_us": 5.1,
+      "mean_us": 3.5,
+      "share_of_mean": 0.0007
+    },
+    {
+      "segment": "copy_in",
+      "meaning": "copy_from_user: 128 KiB into the uncached TX buffer",
+      "median_us": 28.0,
+      "p10_us": 27.6,
+      "p90_us": 82.2,
+      "mean_us": 41.2,
+      "share_of_mean": 0.0087,
+      "bytes": 131072,
+      "mb_per_s": 4676.1
+    },
+    {
+      "segment": "validate",
+      "meaning": "canonical-residue check: 32,768 uncached 32-bit loads",
+      "median_us": 3589,
+      "p10_us": 3579,
+      "p90_us": 3605,
+      "mean_us": 3591.9,
+      "share_of_mean": 0.7603,
+      "bytes": 131072,
+      "mb_per_s": 36.5,
+      "ns_per_load": 109.5
+    },
+    {
+      "segment": "clear_out",
+      "meaning": "memset: 64 KiB of the uncached RX buffer",
+      "median_us": 10,
+      "p10_us": 9,
+      "p90_us": 12,
+      "mean_us": 10.2,
+      "share_of_mean": 0.0022,
+      "bytes": 65536,
+      "mb_per_s": 6553.6
+    },
+    {
+      "segment": "dma_setup",
+      "meaning": "AXI-Lite registers, two descriptors prepared and submitted",
+      "median_us": 18.0,
+      "p10_us": 16.9,
+      "p90_us": 25.9,
+      "mean_us": 19.9,
+      "share_of_mean": 0.0042
+    },
+    {
+      "segment": "dma_wait",
+      "meaning": "DMA both ways + PL compute (the driver's elapsed_us window)",
+      "median_us": 563.0,
+      "p10_us": 518.1,
+      "p90_us": 591.0,
+      "mean_us": 561.5,
+      "share_of_mean": 0.1188,
+      "bytes": 196608,
+      "mb_per_s": 349.2
+    },
+    {
+      "segment": "copy_out",
+      "meaning": "copy_to_user: 64 KiB from the uncached RX buffer",
+      "median_us": 450,
+      "p10_us": 449,
+      "p90_us": 464,
+      "mean_us": 453.5,
+      "share_of_mean": 0.096,
+      "bytes": 65536,
+      "mb_per_s": 145.6
+    },
+    {
+      "segment": "wipe",
+      "meaning": "memzero_explicit: 192 KiB TX + 64 KiB RX, uncached",
+      "median_us": 34.5,
+      "p10_us": 34.4,
+      "p90_us": 35.7,
+      "mean_us": 34.8,
+      "share_of_mean": 0.0074,
+      "bytes": 262144,
+      "mb_per_s": 7596.2
+    },
+    {
+      "segment": "leave",
+      "meaning": "mutex unlock, copy the request back",
+      "median_us": 3.6,
+      "p10_us": 3.5,
+      "p90_us": 4.6,
+      "mean_us": 4.0,
+      "share_of_mean": 0.0008
+    }
+  ],
+  "total": {
+    "median_us": 4705.0,
+    "mean_us": 4724.6,
+    "p10_us": 4659.0,
+    "p90_us": 4804.0
+  },
+  "outside_dma_median_us": 4141.9
+}

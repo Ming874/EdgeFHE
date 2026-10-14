@@ -1,0 +1,19 @@
+{
+  "status": "SOURCE_CANDIDATE_PREPARED_NOT_KERNEL_OR_BOARD_ACCEPTED",
+  "baseline_sha256": "c54764f2d53b1707b31214e740a22c42f933fd31aad57699cb999e3e2e726ddc",
+  "candidate_sha256": "d468a6b0a8cdb178c1ef0c234f1ced643ee74933922bd670fdc75fbc2a17a73f",
+  "changes": [
+    "Persistent callback completion storage in proxy",
+    "Check both terminate_sync return values",
+    "Terminal quarantine retains module/device/proxy/buffers/channels/clock until supervised reboot",
+    "Successful DMA followed by output copy fault does not poison the IP"
+  ],
+  "limits": [
+    "No physical PL reset or resume",
+    "Trusts successful DMA provider termination contract; false success not solved",
+    "No forced module unload protection; force unload/overlay removal forbidden after quarantine",
+    "No full kernel compile, provider fault injection or board run yet",
+    "Remove-time __module_get cannot guarantee veto of an unload already in MODULE_STATE_GOING; owner lifetime needs kernel review"
+  ],
+  "board_operations": 0
+}

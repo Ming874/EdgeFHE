@@ -1,0 +1,219 @@
+{
+  "status": "PASS_ACTUAL_ACCEPTED_SIX_CASE_STAGE_TIMING_ANALYSIS",
+  "cases": [
+    {
+      "id": 0,
+      "total_validation_inclusive_ns": 20450176843,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 658286605,
+        "keygen_with_exact_oracles_ns": 1367004531,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15164231420,
+        "packet_TLS_and_PC_evaluation_ns": 1297003358,
+        "response_exact_oracle_and_decrypt_ns": 1963558748
+      },
+      "native_14_call_total_ns": 69766537,
+      "driver_14_call_total_ns": 7660000,
+      "native_fraction_of_validation_inclusive_time": 0.003411537099928833,
+      "driver_fraction": 0.0003745688880251411,
+      "unattributed_between_named_stages_ns": 92181,
+      "max_slot_error": 1.434004547446983e-06,
+      "error_bound": 0.0006864351880801037,
+      "error_fraction_of_bound": 0.002089060369206541,
+      "class": null
+    },
+    {
+      "id": 1,
+      "total_validation_inclusive_ns": 20577343055,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 659432122,
+        "keygen_with_exact_oracles_ns": 1396011084,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15278819521,
+        "packet_TLS_and_PC_evaluation_ns": 1268782135,
+        "response_exact_oracle_and_decrypt_ns": 1974203411
+      },
+      "native_14_call_total_ns": 69570117,
+      "driver_14_call_total_ns": 7595000,
+      "native_fraction_of_validation_inclusive_time": 0.0033809086437471556,
+      "driver_fraction": 0.0003690952704486561,
+      "unattributed_between_named_stages_ns": 94782,
+      "max_slot_error": 3.007262384503518e-06,
+      "error_bound": 0.0012385386699457033,
+      "error_fraction_of_bound": 0.0024280730650382957,
+      "class": 1
+    },
+    {
+      "id": 2,
+      "total_validation_inclusive_ns": 20833439619,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 660474130,
+        "keygen_with_exact_oracles_ns": 1400584649,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15283507328,
+        "packet_TLS_and_PC_evaluation_ns": 1509470422,
+        "response_exact_oracle_and_decrypt_ns": 1979312709
+      },
+      "native_14_call_total_ns": 69892168,
+      "driver_14_call_total_ns": 7443000,
+      "native_fraction_of_validation_inclusive_time": 0.0033548069487411318,
+      "driver_fraction": 0.00035726217735126265,
+      "unattributed_between_named_stages_ns": 90381,
+      "max_slot_error": 6.7604803834066025e-06,
+      "error_bound": 0.0012352360778194976,
+      "error_fraction_of_bound": 0.005473026982291961,
+      "class": 0
+    },
+    {
+      "id": 3,
+      "total_validation_inclusive_ns": 20733088370,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 661490547,
+        "keygen_with_exact_oracles_ns": 1391064068,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15308251439,
+        "packet_TLS_and_PC_evaluation_ns": 1390905194,
+        "response_exact_oracle_and_decrypt_ns": 1981282911
+      },
+      "native_14_call_total_ns": 69713009,
+      "driver_14_call_total_ns": 7882000,
+      "native_fraction_of_validation_inclusive_time": 0.0033624035047702832,
+      "driver_fraction": 0.00038016526333843045,
+      "unattributed_between_named_stages_ns": 94211,
+      "max_slot_error": 1.156027481674808e-05,
+      "error_bound": 0.002519225610657753,
+      "error_fraction_of_bound": 0.004588820774067063,
+      "class": 1
+    },
+    {
+      "id": 4,
+      "total_validation_inclusive_ns": 20799285149,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 661723178,
+        "keygen_with_exact_oracles_ns": 1402163265,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15335854934,
+        "packet_TLS_and_PC_evaluation_ns": 1413637657,
+        "response_exact_oracle_and_decrypt_ns": 1985810634
+      },
+      "native_14_call_total_ns": 69320153,
+      "driver_14_call_total_ns": 7445000,
+      "native_fraction_of_validation_inclusive_time": 0.0033328142050753516,
+      "driver_fraction": 0.0003579449941027394,
+      "unattributed_between_named_stages_ns": 95481,
+      "max_slot_error": 7.531437154446375e-07,
+      "error_bound": 0.0005354806273830026,
+      "error_fraction_of_bound": 0.0014064817230184338,
+      "class": 0
+    },
+    {
+      "id": 5,
+      "total_validation_inclusive_ns": 20825075390,
+      "stage_times_ns": {
+        "PS_sampling_and_encoding_ns": 659990962,
+        "keygen_with_exact_oracles_ns": 1400889733,
+        "encrypt_and_diagnostic_decrypt_with_oracles_ns": 15331513260,
+        "packet_TLS_and_PC_evaluation_ns": 1389909901,
+        "response_exact_oracle_and_decrypt_ns": 2042671013
+      },
+      "native_14_call_total_ns": 69718299,
+      "driver_14_call_total_ns": 7697000,
+      "native_fraction_of_validation_inclusive_time": 0.0033478053593735393,
+      "driver_fraction": 0.00036960250351343387,
+      "unattributed_between_named_stages_ns": 100521,
+      "max_slot_error": 2.4062492589382984e-07,
+      "error_bound": 0.0005392215173918098,
+      "error_fraction_of_bound": 0.00044624503684074357,
+      "class": null
+    }
+  ],
+  "native_phases": {
+    "allocation_ns": {
+      "n": 84,
+      "min": 40280,
+      "median": 41175.0,
+      "max": 42400,
+      "sum": 3460205
+    },
+    "pack_ns": {
+      "n": 84,
+      "min": 94811,
+      "median": 142441.5,
+      "max": 298632,
+      "sum": 12696449
+    },
+    "setup_ns": {
+      "n": 84,
+      "min": 100,
+      "median": 230.0,
+      "max": 570,
+      "sum": 19661
+    },
+    "ioctl_ns": {
+      "n": 84,
+      "min": 4633988,
+      "median": 4704488.5,
+      "max": 4872609,
+      "sum": 395202287
+    },
+    "unpack_check_ns": {
+      "n": 84,
+      "min": 75671,
+      "median": 77810.5,
+      "max": 137131,
+      "sum": 6601681
+    },
+    "total_ns": {
+      "n": 84,
+      "min": 4888750,
+      "median": 4965600.5,
+      "max": 5171163,
+      "sum": 417980283
+    },
+    "driver_us": {
+      "n": 84,
+      "min": 510,
+      "median": 551.0,
+      "max": 611,
+      "sum": 45722
+    }
+  },
+  "case_stage_stats": {
+    "PS_sampling_and_encoding_ns": {
+      "n": 6,
+      "min": 658286605,
+      "median": 660232546.0,
+      "max": 661723178,
+      "sum": 3961397544
+    },
+    "keygen_with_exact_oracles_ns": {
+      "n": 6,
+      "min": 1367004531,
+      "median": 1398297866.5,
+      "max": 1402163265,
+      "sum": 8357717330
+    },
+    "encrypt_and_diagnostic_decrypt_with_oracles_ns": {
+      "n": 6,
+      "min": 15164231420,
+      "median": 15295879383.5,
+      "max": 15335854934,
+      "sum": 91702177902
+    },
+    "packet_TLS_and_PC_evaluation_ns": {
+      "n": 6,
+      "min": 1268782135,
+      "median": 1390407547.5,
+      "max": 1509470422,
+      "sum": 8269708667
+    },
+    "response_exact_oracle_and_decrypt_ns": {
+      "n": 6,
+      "min": 1963558748,
+      "median": 1980297810.0,
+      "max": 2042671013,
+      "sum": 11926839426
+    }
+  },
+  "native_calls": 84,
+  "load_relative_IRQ_after": 957,
+  "limits": [
+    "Only six validation-inclusive application samples; no optimized E2E speedup or meaningful tail-latency claim",
+    "Stages may contain CPU oracle/secret sampling/schoolbook/decode checking; sums identify measured intervals, not internal exclusive costs"
+  ]
+}

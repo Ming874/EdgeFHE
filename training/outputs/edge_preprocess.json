@@ -1,0 +1,25 @@
+{
+  "model_id": "cdc-diabetes-lr4-v1",
+  "features": [
+    "GenHlth",
+    "HighBP",
+    "BMI",
+    "Age"
+  ],
+  "mean": [
+    2.51113889264315,
+    0.42801392080010814,
+    28.384094697481643,
+    8.028776411226742
+  ],
+  "std": [
+    1.0663602589485628,
+    0.49479086935939603,
+    6.5980653663061455,
+    3.0509583054181006
+  ],
+  "clip": 16.0,
+  "label": "Diabetes_binary",
+  "decision": "class 1 when logit > 0 (probability > 0.5)",
+  "dataset_manifest_sha256": "e439fa6406ebef1390bf8620033a47fd3d024c1f6cc2a0e411595ada49b18afa"
+}

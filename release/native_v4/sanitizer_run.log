@@ -1,0 +1,1 @@
+NATIVE_CPP_SELFTEST_PASS full_complex_slots=8192 exact_noise_coefficients=16384 wide_CRT=4096 scalar_affine_exact=24576 workers=1,3

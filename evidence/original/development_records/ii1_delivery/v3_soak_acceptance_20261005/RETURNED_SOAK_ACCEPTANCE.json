@@ -1,0 +1,54 @@
+{
+  "status": "PASS_LOCAL_RETURNED_USER_NORMAL_SIX_HOUR_SOAK_ORIGINALS",
+  "original_files_sha256": {
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "console.log": "5f6defca2eb5638f2df1ce3c058cea6d4dadf68c7558aa76af3595ef68d74fb4",
+    "cpu_check.log": "4f7eb99a1971ca470cba43e38f11dc20d21820c8c2fe3844420a1f386983aaae",
+    "dmesg_after.log": "6441c57a9cf4a408a2331d8dbec94a433c295ed5b5d4dbe7ac673fa24f07f238",
+    "interrupts_after.txt": "b86f0d85617d4efff3adbae4032e5d91f39a91afd94a485bcd3b86ae8c316d6a",
+    "interrupts_before.txt": "34a81436b13e1070c28daedd6711decc98740daa45fab8ea54b114e6b38a2d10",
+    "native_console.log": "08657ae285d3405caddc003e13a08bb04daad3f400f9d0d377f3f1943b0d5f84",
+    "native_report.json": "8803adacdb40cc778b5b550edee8d3421b2532562ca10447e53d2188aba732ec",
+    "soak_report.json": "35c5d7606a509e8a6650ac0244cad234f46f3504205c01a0a403ae78a7b49b81",
+    "soak_runner": "d5e25cb35d83f8506921475be108352f545f0a8bc67c9361c70aa46f6a0904b5",
+    "telemetry.jsonl": "4995a825609220cbee55e72342c710c5c583116af242ac4340ec8f6285ad9c19",
+    "transactions.tsv": "8fb6246dd0a346fb9ab270514ac9f0badcad8def8a781ce32177ebedb8a31c22"
+  },
+  "row_check": {
+    "jobs": 5798822,
+    "rounds": 231950,
+    "opens_closes": 72,
+    "coefficients": 71255924736,
+    "padding": 23751974912
+  },
+  "native_duration_ns": 21600011574338,
+  "IRQ_delta": {
+    "121": 5798822,
+    "136": 5798822
+  },
+  "load_relative_history_after": 5800783,
+  "telemetry": {
+    "samples": 721,
+    "recorded_span_ns": 21600245583100,
+    "max_sample_gap_ns": 30004138188,
+    "thermal": {},
+    "cpufreq": {
+      "policy0": {
+        "samples": 721,
+        "min_kHz": 1333333,
+        "max_kHz": 1333333,
+        "governors": [
+          "userspace"
+        ]
+      }
+    },
+    "missing_fields": 721,
+    "scope": "Observed sysfs readings; unavailable values are explicit, not zero or calibrated measurement"
+  },
+  "assistant_board_operations": 0,
+  "limits": [
+    "Compiled exact-native receipts; all output arrays are not archived for independent replay",
+    "Normal sequential workload only; no physical DMA fault/remove/concurrency proof",
+    "Recorded sysfs thermal/frequency range only; no calibration or E2E speedup conclusion"
+  ]
+}

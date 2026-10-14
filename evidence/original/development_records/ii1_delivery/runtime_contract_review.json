@@ -1,0 +1,75 @@
+{
+  "status": "PASS_STATIC_ABI_DMAENGINE_CONTRACT_BOARD_MEMORY_CLOCK_PENDING",
+  "abi": {
+    "bytes": 48,
+    "ioctl_hex": "0xc0304504",
+    "offsets": {
+      "operation": 0,
+      "reserved0": 4,
+      "input_words": 8,
+      "output_words": 12,
+      "input_ptr": 16,
+      "output_ptr": 24,
+      "timeout_ms": 32,
+      "elapsed_us": 36,
+      "status": 40,
+      "reserved": 44
+    }
+  },
+  "dma_parameters": {
+    "C_INCLUDE_SG": 0,
+    "C_SG_LENGTH_WIDTH": 26,
+    "C_M_AXI_MM2S_ADDR_WIDTH": 32,
+    "C_M_AXI_S2MM_ADDR_WIDTH": 32,
+    "C_M_AXI_MM2S_DATA_WIDTH": 128,
+    "C_M_AXI_S2MM_DATA_WIDTH": 128,
+    "C_M_AXIS_MM2S_TDATA_WIDTH": 128,
+    "C_S_AXIS_S2MM_TDATA_WIDTH": 128,
+    "C_INCLUDE_MM2S_DRE": 0,
+    "C_INCLUDE_S2MM_DRE": 0,
+    "C_PRMRY_IS_ACLK_ASYNC": 0
+  },
+  "wire": {
+    "beat_bytes": 16,
+    "residues_per_beat": 3,
+    "padding_words_per_polynomial": 4096,
+    "keep_strb": "0xffff",
+    "output_tlast": "last beat"
+  },
+  "operation_input_words": {
+    "0": 4096,
+    "1": 4096,
+    "2": 8192,
+    "3": 8192,
+    "4": 12288,
+    "5": 8192
+  },
+  "max_input_bytes": 196608,
+  "output_bytes": 65536,
+  "cma_buffer_bytes_total": 262144,
+  "cache_contract": "dma_alloc_coherent with DMA API ownership; no extra userspace cache flush/invalidate on these kernel buffers. HP0 is not thereby declared hardware coherent.",
+  "ordering": "RX issue_pending, TX issue_pending, HLS AP_START; completion callbacks and mutex serialization",
+  "source_hashes": {
+    "D:\\NCUE_Project\\software\\kv260\\edgefhe_rns3_n4096_dma_proxy\\edgefhe_rns3_n4096_dma_proxy.c": "bd86534a5fed4ef0a9ad1d5eb58468e335b24d0e9cfe48c4e363372f5b558dcf",
+    "D:\\NCUE_Project\\development_records\\board_packages\\openfhe-v1-20261003\\rns3_n4096_hw_common.py": "e78ce6db5f90a7f4658541d20c039e647b8ad0aaa4ae2613a70d551cc908cb21",
+    "D:\\NCUE_Project\\vivado\\ii1-20261003\\synth_v2\\edgefhe_ii1.gen\\sources_1\\bd\\edgefhe_ii1\\ip\\edgefhe_ii1_dma_0\\synth\\edgefhe_ii1_dma_0.vhd": "29a758d8b36b6246b2949867c2c7ce58a16430f7c8ac16b5f58b04aa0a4d9e25",
+    "D:\\NCUE_Project\\vivado\\ii1-20261003\\candidate_bundle_v2\\edgefhe-ii1-n4096-kv260.xsa": "efe75fa609b74b3e1a5237c58b0b4e12caccf843f45ec77520f009ac3619e19d"
+  },
+  "board_acceptance_pending": [
+    "CMA kernel config/location and successful current candidate allocations",
+    "Actual PL0 clock provider/rate and reset ownership",
+    "Both allocated DMA bus ranges contained entirely in the BD DDR low aperture [0,0x80000000); 32-bit mask alone is not a 2GiB aperture proof",
+    "Recompiled current kernel module and new-candidate parity/IRQ evidence"
+  ],
+  "limitations": [
+    "Coherent allocation need not prove use of CMA without board allocator evidence",
+    "User pointer copy path is not mmap/zero-copy; no promise of zero-copy",
+    "timeout_ms is waited separately for RX then TX; not a single global wall deadline",
+    "DMA terminate_sync stops channels but does not assert HLS ap_rst_n; failed transaction requires controlled full reset recovery",
+    "No invalid DMA/fault/reset jobs run on board; driver remove/open-file lifecycle still needs controlled integration review"
+  ],
+  "primary_references": [
+    "https://www.kernel.org/doc/html/v5.15/core-api/dma-api-howto.html",
+    "https://www.amd.com/content/dam/xilinx/support/documents/ip_documentation/axi_dma/v7_1/pg021_axi_dma.pdf"
+  ]
+}

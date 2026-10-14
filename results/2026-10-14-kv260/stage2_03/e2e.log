@@ -1,0 +1,76 @@
+correctness: 38052 records x 6 backends
+  cpu-w1: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+  cpu-w2: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+  cpu-w3: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+  cpu-w4: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+  fpga-serial: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+  fpga-overlap: max|diff| 4.47049e-07 disagree 0 uncertain 1 cipher e078ae62e2ac
+latency: 3+30 rounds
+  cpu-w1: total p50 68.3659 ms, encrypt p50 38.3817 ms
+  cpu-w2: total p50 50.6322 ms, encrypt p50 23.3337 ms
+  cpu-w3: total p50 44.3312 ms, encrypt p50 18.4098 ms
+  cpu-w4: total p50 41.9999 ms, encrypt p50 16.1718 ms
+  fpga-serial: total p50 75.9146 ms, encrypt p50 47.2674 ms
+  fpga-overlap: total p50 74.5134 ms, encrypt p50 45.9846 ms
+throughput: 19 batches available, 3 repeats
+  cpu-w1 serial x1: 26906.1 records/s
+  cpu-w1 serial x2: 29919.4 records/s
+  cpu-w1 serial x4: 29870.6 records/s
+  cpu-w1 serial x8: 29881.3 records/s
+  cpu-w1 serial x19: 29007.8 records/s
+  cpu-w1 pipelined x1: 28748.8 records/s
+  cpu-w1 pipelined x2: 35530.2 records/s
+  cpu-w1 pipelined x4: 39086.9 records/s
+  cpu-w1 pipelined x8: 40865.9 records/s
+  cpu-w1 pipelined x19: 41058.1 records/s
+  cpu-w2 serial x1: 40487.9 records/s
+  cpu-w2 serial x2: 40398.8 records/s
+  cpu-w2 serial x4: 40371.2 records/s
+  cpu-w2 serial x8: 40041.6 records/s
+  cpu-w2 serial x19: 38831.3 records/s
+  cpu-w2 pipelined x1: 40178.4 records/s
+  cpu-w2 pipelined x2: 48480.9 records/s
+  cpu-w2 pipelined x4: 54711 records/s
+  cpu-w2 pipelined x8: 55616 records/s
+  cpu-w2 pipelined x19: 58081.1 records/s
+  cpu-w3 serial x1: 46149.7 records/s
+  cpu-w3 serial x2: 46305.9 records/s
+  cpu-w3 serial x4: 46140.9 records/s
+  cpu-w3 serial x8: 46110.7 records/s
+  cpu-w3 serial x19: 43968.7 records/s
+  cpu-w3 pipelined x1: 45835.5 records/s
+  cpu-w3 pipelined x2: 56831.1 records/s
+  cpu-w3 pipelined x4: 61947.5 records/s
+  cpu-w3 pipelined x8: 65344 records/s
+  cpu-w3 pipelined x19: 65525.2 records/s
+  cpu-w4 serial x1: 48717.7 records/s
+  cpu-w4 serial x2: 44636 records/s
+  cpu-w4 serial x4: 48369 records/s
+  cpu-w4 serial x8: 48187 records/s
+  cpu-w4 serial x19: 46844.5 records/s
+  cpu-w4 pipelined x1: 48062.2 records/s
+  cpu-w4 pipelined x2: 55376.7 records/s
+  cpu-w4 pipelined x4: 66239.4 records/s
+  cpu-w4 pipelined x8: 68383.9 records/s
+  cpu-w4 pipelined x19: 66748.4 records/s
+  fpga-serial serial x1: 27034.8 records/s
+  fpga-serial serial x2: 26976.5 records/s
+  fpga-serial serial x4: 26943 records/s
+  fpga-serial serial x8: 26606.8 records/s
+  fpga-serial serial x19: 26090.9 records/s
+  fpga-serial pipelined x1: 26775.1 records/s
+  fpga-serial pipelined x2: 31909.7 records/s
+  fpga-serial pipelined x4: 33249.4 records/s
+  fpga-serial pipelined x8: 35212.1 records/s
+  fpga-serial pipelined x19: 34812.3 records/s
+  fpga-overlap serial x1: 27495.7 records/s
+  fpga-overlap serial x2: 27404.8 records/s
+  fpga-overlap serial x4: 27456.9 records/s
+  fpga-overlap serial x8: 27458 records/s
+  fpga-overlap serial x19: 26509.5 records/s
+  fpga-overlap pipelined x1: 27070.1 records/s
+  fpga-overlap pipelined x2: 32419.8 records/s
+  fpga-overlap pipelined x4: 33846.6 records/s
+  fpga-overlap pipelined x8: 35225.8 records/s
+  fpga-overlap pipelined x19: 36080 records/s
+V5_E2E_PASS output=/home/ubuntu/Grad/EdgeFHE-KV260-GitHub/build/comparison/stage2_03/e2e_all.json

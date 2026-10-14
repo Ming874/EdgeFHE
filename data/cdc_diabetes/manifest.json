@@ -1,0 +1,66 @@
+{
+  "dataset": "CDC Diabetes Health Indicators",
+  "source_url": "https://archive.ics.uci.edu/static/public/891/data.csv",
+  "page": "https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators",
+  "license": "UCI: \"See linked dataset for licensing information\" (Kaggle alexteboul/diabetes-health-indicators-dataset); underlying survey is CDC BRFSS. Verify before publishing.",
+  "citation": "CDC Diabetes Health Indicators [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C53919",
+  "raw_file": "raw/data.csv",
+  "raw_sha256": "9f71fda9d4ae5f4878c99b9233b6a16accfa9a17c194116a6b78100540934964",
+  "raw_bytes": 13494568,
+  "seed": 20261013,
+  "label": "Diabetes_binary",
+  "columns": [
+    "ID",
+    "Diabetes_binary",
+    "HighBP",
+    "HighChol",
+    "CholCheck",
+    "BMI",
+    "Smoker",
+    "Stroke",
+    "HeartDiseaseorAttack",
+    "PhysActivity",
+    "Fruits",
+    "Veggies",
+    "HvyAlcoholConsump",
+    "AnyHealthcare",
+    "NoDocbcCost",
+    "GenHlth",
+    "MentHlth",
+    "PhysHlth",
+    "DiffWalk",
+    "Sex",
+    "Age",
+    "Education",
+    "Income"
+  ],
+  "split_rule": "stratified 70/15/15 by label",
+  "splits": {
+    "train": {
+      "file": "train.csv",
+      "rows": 177576,
+      "positives": 24742,
+      "positive_rate": 0.139332,
+      "full_2048_batches": 86,
+      "sha256": "3f06e7eff49d6a4fb0dd805ea7ad0d47f49dd31251e1496d53416e8f8e0cfdd1"
+    },
+    "validation": {
+      "file": "validation.csv",
+      "rows": 38052,
+      "positives": 5302,
+      "positive_rate": 0.139336,
+      "full_2048_batches": 18,
+      "sha256": "cf54ee9f8b9ea6239f41c79e1d9b86d3d3bff438b09b3a4f8588ffd75b06742b"
+    },
+    "test": {
+      "file": "test.csv",
+      "rows": 38052,
+      "positives": 5302,
+      "positive_rate": 0.139336,
+      "full_2048_batches": 18,
+      "sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304"
+    }
+  },
+  "generated_utc": "2026-10-13T08:22:34Z",
+  "python": "3.13.3"
+}

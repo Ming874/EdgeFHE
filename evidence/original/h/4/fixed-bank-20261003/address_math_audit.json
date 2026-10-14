@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "batches": 6144,
+  "coefficient_addresses": 49152,
+  "checks": [
+    "gather",
+    "scatter",
+    "twiddle_index",
+    "address_bounds",
+    "stage_bijection",
+    "exact_primality",
+    "all_constants",
+    "exact_root_orders",
+    "72_stage_root_constants"
+  ],
+  "montgomery_bounds": [
+    {
+      "q": 998244353,
+      "corrected_sum_upper_bound": 5283918634853335039,
+      "uint64_no_overflow": true,
+      "single_subtraction_sufficient": true
+    },
+    {
+      "q": 1004535809,
+      "corrected_sum_upper_bound": 5323540635865579519,
+      "uint64_no_overflow": true,
+      "single_subtraction_sufficient": true
+    },
+    {
+      "q": 469762049,
+      "corrected_sum_upper_bound": 2238289018628341759,
+      "uint64_no_overflow": true,
+      "single_subtraction_sufficient": true
+    }
+  ],
+  "scope": "exhaustive integer index proof and arithmetic bounds; not RTL timing or board acceptance"
+}

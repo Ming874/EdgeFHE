@@ -1,0 +1,3308 @@
+{
+  "real_fpga": true,
+  "fpga_device": "real",
+  "has_group_b": true,
+  "fairness_problems": [],
+  "inputs": {
+    "data": "../data/cdc_diabetes/splits/test.csv",
+    "data_sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304",
+    "model": "../training/outputs/model.json",
+    "model_sha256": "3c33518d11529b78eef7ee8009a10b9f9446235254fe58c510abcb659a03b3d9",
+    "preprocess": "../training/outputs/edge_preprocess.json",
+    "preprocess_sha256": "0ac7d30c5f6009a42ab91c15d614da3378748e480624fe6442018f1540781731",
+    "model_id": "cdc-diabetes-lr4-v1",
+    "records": 38052,
+    "limit": 0,
+    "labelled": true,
+    "features": [
+      "GenHlth",
+      "HighBP",
+      "BMI",
+      "Age"
+    ]
+  },
+  "environment": {
+    "system": "Linux",
+    "release": "5.15.0-1027-xilinx-zynqmp",
+    "machine": "aarch64",
+    "cpu_model": "ARM implementer 0x41 part 0xd03 (Cortex-A53)",
+    "online_cpus": 4,
+    "affinity": "0-3",
+    "pinned": true,
+    "compiler": "11.4.0",
+    "cpufreq": [
+      {
+        "cpu": 0,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 1,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 2,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      },
+      {
+        "cpu": 3,
+        "governor": "userspace",
+        "cur_khz": 1333333,
+        "min_khz": 333333,
+        "max_khz": 1333333
+      }
+    ],
+    "power_sensors": [
+      "ina260_u14/power1"
+    ]
+  },
+  "encode_workers": 4,
+  "files": [
+    "stage2_03/e2e_all.json"
+  ],
+  "correctness": {
+    "all_pass": true,
+    "bit_exact": true,
+    "backends": [
+      "cpu-w1",
+      "cpu-w2",
+      "cpu-w3",
+      "cpu-w4",
+      "fpga-overlap",
+      "fpga-serial"
+    ]
+  },
+  "latency": {
+    "best_A": "cpu-w4",
+    "best_A_ms": 37.403903,
+    "best_B": "fpga-overlap",
+    "best_B_ms": 69.91061900000001,
+    "B_speedup_over_A": 0.5350246290910398
+  },
+  "throughput": {
+    "batches": 19,
+    "best_A": "cpu-w4 pipelined",
+    "best_A_records_per_s": 66748.42805320657,
+    "best_B": "fpga-overlap pipelined",
+    "best_B_records_per_s": 36080.03014914526,
+    "B_over_A": 0.5405375257734176
+  },
+  "energy": {
+    "best_A_records_per_j": 17623.77818733207,
+    "best_B_records_per_j": 10034.02271770004,
+    "B_over_A": 0.5693457220718127,
+    "sensor": "ina260_u14/power1"
+  },
+  "correctness_rows": [
+    {
+      "backend": "cpu-w1",
+      "name": "cpu-w1",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    },
+    {
+      "backend": "cpu-w2",
+      "name": "cpu-w2",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    },
+    {
+      "backend": "cpu-w3",
+      "name": "cpu-w3",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    },
+    {
+      "backend": "cpu-w4",
+      "name": "cpu-w4",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    },
+    {
+      "backend": "fpga-serial",
+      "name": "fpga-linux-dma-serial",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    },
+    {
+      "backend": "fpga-overlap",
+      "name": "fpga-linux-dma-overlap",
+      "records": 38052,
+      "max_abs_logit_diff": 4.470489236019226e-07,
+      "mean_abs_logit_diff": 5.9498297503316017e-08,
+      "all_within_bound": true,
+      "decisions": {
+        "agree": 38051,
+        "disagree": 0,
+        "uncertain": 1
+      },
+      "labels": {
+        "auc_ckks": 0.807144784770834,
+        "auc_plain": 0.8071439756278057,
+        "accuracy_certain": 0.7190349793697932,
+        "confusion": {
+          "tn": 23388,
+          "fp": 9361,
+          "fn": 1330,
+          "tp": 3972
+        }
+      },
+      "cipher_sha256": "e078ae62e2acc35ca2ba918ae2396ac5f4ffca9c5d8b419eb9c6adb82de656a6",
+      "decrypted_sha256": "d469a20616fa11412b7fc421c5e317df16fe2a0622fbabb3a43469c03aaad3b3",
+      "pass": true,
+      "file": "stage2_03/e2e_all.json",
+      "real_device": true,
+      "bit_exact_in_file": true
+    }
+  ],
+  "latency_rows": [
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "total_p50_ms": 68.365934,
+      "total_p95_ms": 68.510306,
+      "edge_p50_ms": 63.765699,
+      "edge_p95_ms": 63.857639000000006,
+      "steps_p50_ms": {
+        "standardize": 0.42693400000000004,
+        "encode": 8.327743,
+        "sample": 0.10941100000000001,
+        "encrypt": 38.381704,
+        "cloud": 4.537546,
+        "decrypt": 7.864429,
+        "decode": 8.628667
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 1102.985712,
+        "pack_ms": 0,
+        "device_ms": 0,
+        "unpack_ms": 0,
+        "driver_reported_ms": 0,
+        "bytes_to_device": 0,
+        "bytes_from_device": 0,
+        "forward_transforms": 720,
+        "inverse_transforms": 810
+      },
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "total_p50_ms": 50.632156,
+      "total_p95_ms": 50.774118,
+      "edge_p50_ms": 46.018431,
+      "edge_p95_ms": 46.184741,
+      "steps_p50_ms": {
+        "standardize": 0.426654,
+        "encode": 8.326744000000001,
+        "sample": 0.107601,
+        "encrypt": 23.333674,
+        "cloud": 4.544516,
+        "decrypt": 5.183332,
+        "decode": 8.633396000000001
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 570.461665,
+        "pack_ms": 0,
+        "device_ms": 0,
+        "unpack_ms": 0,
+        "driver_reported_ms": 0,
+        "bytes_to_device": 0,
+        "bytes_from_device": 0,
+        "forward_transforms": 720,
+        "inverse_transforms": 810
+      },
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "total_p50_ms": 44.331153,
+      "total_p95_ms": 48.00914,
+      "edge_p50_ms": 39.736557999999995,
+      "edge_p95_ms": 43.314844,
+      "steps_p50_ms": {
+        "standardize": 0.427094,
+        "encode": 8.318973,
+        "sample": 0.108011,
+        "encrypt": 18.409775,
+        "cloud": 4.550176,
+        "decrypt": 3.816228,
+        "decode": 8.640777
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 382.684109,
+        "pack_ms": 0,
+        "device_ms": 0,
+        "unpack_ms": 0,
+        "driver_reported_ms": 0,
+        "bytes_to_device": 0,
+        "bytes_from_device": 0,
+        "forward_transforms": 720,
+        "inverse_transforms": 810
+      },
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "total_p50_ms": 41.99994,
+      "total_p95_ms": 47.414004,
+      "edge_p50_ms": 37.403903,
+      "edge_p95_ms": 42.746027000000005,
+      "steps_p50_ms": {
+        "standardize": 0.426854,
+        "encode": 8.311163,
+        "sample": 0.108081,
+        "encrypt": 16.171792,
+        "cloud": 4.529385,
+        "decrypt": 3.744708,
+        "decode": 8.645677
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 321.394495,
+        "pack_ms": 0,
+        "device_ms": 0,
+        "unpack_ms": 0,
+        "driver_reported_ms": 0,
+        "bytes_to_device": 0,
+        "bytes_from_device": 0,
+        "forward_transforms": 720,
+        "inverse_transforms": 810
+      },
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "total_p50_ms": 75.914569,
+      "total_p95_ms": 77.762598,
+      "edge_p50_ms": 71.263163,
+      "edge_p95_ms": 73.03024099999999,
+      "steps_p50_ms": {
+        "standardize": 0.427054,
+        "encode": 8.303792999999999,
+        "sample": 0.108391,
+        "encrypt": 47.267443,
+        "cloud": 4.579655,
+        "decrypt": 6.457954,
+        "decode": 8.652097
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 1329.4252,
+        "pack_ms": 18.849852,
+        "device_ms": 1260.791062,
+        "unpack_ms": 49.667744,
+        "driver_reported_ms": 142.193,
+        "bytes_to_device": 35389440,
+        "bytes_from_device": 17694720,
+        "forward_transforms": 0,
+        "inverse_transforms": 0
+      },
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "total_p50_ms": 74.513425,
+      "total_p95_ms": 74.751987,
+      "edge_p50_ms": 69.91061900000001,
+      "edge_p95_ms": 70.18246099999999,
+      "steps_p50_ms": {
+        "standardize": 0.42649400000000004,
+        "encode": 8.322933,
+        "sample": 0.108602,
+        "encrypt": 45.98464,
+        "cloud": 4.534905,
+        "decrypt": 6.4497539999999995,
+        "decode": 8.641476
+      },
+      "stats": {
+        "batches": 60,
+        "jobs": 270,
+        "wall_ms": 1285.538518,
+        "pack_ms": 22.105865,
+        "device_ms": 1268.797701,
+        "unpack_ms": 49.793013,
+        "driver_reported_ms": 144.352,
+        "bytes_to_device": 35389440,
+        "bytes_from_device": 17694720,
+        "forward_transforms": 0,
+        "inverse_transforms": 0
+      },
+      "label": "fpga-overlap"
+    }
+  ],
+  "throughput_rows": [
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 26906.077858332956,
+      "cpu_utilization": 0.30549828197204365,
+      "mean_w": 3.404,
+      "records_per_j": 7904.253189874547,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 16.599316,
+          "work_ms": 16.597246,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 38.379144,
+          "work_ms": 38.345664,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.580976,
+          "work_ms": 4.579916,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 7.880688,
+          "work_ms": 7.878758,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.663397,
+          "work_ms": 8.662767
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 29919.367669357736,
+      "cpu_utilization": 0.3399511453832988,
+      "mean_w": 3.4287500000000004,
+      "records_per_j": 8726.027756283698,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 17.698996,
+          "work_ms": 17.696066,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 76.886319,
+          "work_ms": 76.819478,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.203143,
+          "work_ms": 9.201383,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 15.839928,
+          "work_ms": 15.835838,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.258363,
+          "work_ms": 17.256493
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 29870.617818196184,
+      "cpu_utilization": 0.3392659703329268,
+      "mean_w": 3.387333333333333,
+      "records_per_j": 8818.328424974272,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 35.696207,
+          "work_ms": 35.691237,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 153.717208,
+          "work_ms": 153.600768,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.665596,
+          "work_ms": 18.662236,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 31.501244,
+          "work_ms": 31.492754,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.650857,
+          "work_ms": 34.648147
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 29881.283143005574,
+      "cpu_utilization": 0.3397381886741642,
+      "mean_w": 3.4103571428571438,
+      "records_per_j": 8761.921960458225,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 71.675617,
+          "work_ms": 71.664867,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 307.496656,
+          "work_ms": 307.259542,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 36.97477,
+          "work_ms": 36.96763,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 63.034968,
+          "work_ms": 63.017718,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.096353,
+          "work_ms": 69.091203
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 29007.806989437653,
+      "cpu_utilization": 0.33887151565463725,
+      "mean_w": 3.411363636363637,
+      "records_per_j": 8503.28785832949,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 170.86345,
+          "work_ms": 170.83614,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 740.0462,
+          "work_ms": 739.467473,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.07357,
+          "work_ms": 87.05761,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 149.566978,
+          "work_ms": 149.525558,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.185552,
+          "work_ms": 164.172521
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 28748.793547333287,
+      "cpu_utilization": 0.3399706268185928,
+      "mean_w": 3.4219999999999997,
+      "records_per_j": 8401.16702142995,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 9.05518,
+          "work_ms": 9.05277,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 40.438315,
+          "work_ms": 40.387794,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.586036,
+          "work_ms": 4.584606,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 7.877639,
+          "work_ms": 7.875429,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.697097,
+          "work_ms": 8.696067
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 35530.19926846824,
+      "cpu_utilization": 0.4081223701005809,
+      "mean_w": 3.468571428571429,
+      "records_per_j": 10243.467663891173,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 28.764678,
+          "work_ms": 28.761938,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 77.482086,
+          "work_ms": 77.381843,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 10.03086,
+          "work_ms": 10.02859,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 49.586106,
+          "work_ms": 15.803708,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.345653,
+          "work_ms": 17.343963
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 39086.853239973774,
+      "cpu_utilization": 0.4484646233632428,
+      "mean_w": 3.4774999999999996,
+      "records_per_j": 11239.929040970175,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 61.747767,
+          "work_ms": 61.741837,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 171.973261,
+          "work_ms": 155.480435,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.764619,
+          "work_ms": 18.760319,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 100.332342,
+          "work_ms": 32.150461,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.669645,
+          "work_ms": 34.666965
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 40865.85120869285,
+      "cpu_utilization": 0.4680566676462432,
+      "mean_w": 3.5271428571428576,
+      "records_per_j": 11586.106053497366,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 138.0954,
+          "work_ms": 138.08205,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 366.426247,
+          "work_ms": 310.607157,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 37.446035,
+          "work_ms": 37.437064,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 247.552782,
+          "work_ms": 63.09489,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.433603,
+          "work_ms": 69.428533
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w1",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w1",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 41058.14474005966,
+      "cpu_utilization": 0.4829044543673929,
+      "mean_w": 3.533913043478261,
+      "records_per_j": 11618.323437762943,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 325.925569,
+          "work_ms": 325.887659,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 879.487637,
+          "work_ms": 742.000549,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 92.16726,
+          "work_ms": 92.14649,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 747.171763,
+          "work_ms": 158.339154,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 166.404653,
+          "work_ms": 166.388813
+        }
+      ],
+      "label": "cpu-w1"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 40487.90615567608,
+      "cpu_utilization": 0.460895898515798,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.865518,
+          "work_ms": 8.863908,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 23.388254,
+          "work_ms": 23.354133,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.536856,
+          "work_ms": 4.535636,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 5.149551,
+          "work_ms": 5.147131,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.629007,
+          "work_ms": 8.627637
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 40398.78652144987,
+      "cpu_utilization": 0.459097293849411,
+      "mean_w": 3.44,
+      "records_per_j": 11743.833291119146,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 17.717786,
+          "work_ms": 17.715246,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 46.792389,
+          "work_ms": 46.725456,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.190792,
+          "work_ms": 9.188522,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 10.341893,
+          "work_ms": 10.337363,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.331114,
+          "work_ms": 17.329944
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 40371.204154449224,
+      "cpu_utilization": 0.4591300449036012,
+      "mean_w": 3.4709090909090903,
+      "records_per_j": 11631.305544760125,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 35.616446,
+          "work_ms": 35.609306,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 93.674077,
+          "work_ms": 93.531195,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.354063,
+          "work_ms": 18.350373,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 20.603756,
+          "work_ms": 20.594846,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.650407,
+          "work_ms": 34.647627
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 40041.56247709873,
+      "cpu_utilization": 0.4573100073439999,
+      "mean_w": 3.5038095238095246,
+      "records_per_j": 11428.007774110805,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 71.639385,
+          "work_ms": 71.626685,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 190.254323,
+          "work_ms": 189.9664,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 36.95372,
+          "work_ms": 36.94631,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 41.10839,
+          "work_ms": 41.09133,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.193124,
+          "work_ms": 69.187824
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 38831.26302945543,
+      "cpu_utilization": 0.4537811988806722,
+      "mean_w": 3.523877551020408,
+      "records_per_j": 11019.470020520741,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 176.131993,
+          "work_ms": 176.101903,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 452.80357,
+          "work_ms": 452.197641,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.875797,
+          "work_ms": 87.855887,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 98.690399,
+          "work_ms": 98.648189,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.386312,
+          "work_ms": 164.373022
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 40178.37077844357,
+      "cpu_utilization": 0.4619090309500778,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.844858,
+          "work_ms": 8.843228,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 23.376844,
+          "work_ms": 23.347793,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.585616,
+          "work_ms": 4.584216,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 5.143991,
+          "work_ms": 5.141461,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.676047,
+          "work_ms": 8.674977
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 48480.88014575985,
+      "cpu_utilization": 0.5574591047619623,
+      "mean_w": 3.4766666666666666,
+      "records_per_j": 13944.644337227186,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 28.783417,
+          "work_ms": 28.779987,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 49.404564,
+          "work_ms": 49.316123,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.865629,
+          "work_ms": 9.863359,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 28.662367,
+          "work_ms": 10.326354,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.456855,
+          "work_ms": 17.455615
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 54710.993185649626,
+      "cpu_utilization": 0.6261076104327239,
+      "mean_w": 3.6422222222222214,
+      "records_per_j": 15021.322107103317,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 55.813168,
+          "work_ms": 55.806018,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 115.151503,
+          "work_ms": 104.696306,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.87571,
+          "work_ms": 18.87085,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 62.577816,
+          "work_ms": 20.522354,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.815569,
+          "work_ms": 34.812759
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 55615.96761586486,
+      "cpu_utilization": 0.6382292104023476,
+      "mean_w": 3.6237499999999994,
+      "records_per_j": 15347.628179610863,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 120.432225,
+          "work_ms": 120.415435,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 261.400045,
+          "work_ms": 215.529587,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 45.417194,
+          "work_ms": 45.407874,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 142.186003,
+          "work_ms": 50.066852,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 70.422816,
+          "work_ms": 70.415256
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w2",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w2",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 58081.05195536771,
+      "cpu_utilization": 0.6819017260938588,
+      "mean_w": 3.7075757575757584,
+      "records_per_j": 15665.506453021118,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 295.05595,
+          "work_ms": 295.018809,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 602.646936,
+          "work_ms": 477.915239,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 102.446155,
+          "work_ms": 102.424304,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 433.031982,
+          "work_ms": 130.303023,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 169.338642,
+          "work_ms": 169.322491
+        }
+      ],
+      "label": "cpu-w2"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 46149.6655737894,
+      "cpu_utilization": 0.5258481730534942,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.839998,
+          "work_ms": 8.838508,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 18.483845,
+          "work_ms": 18.450465,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.541055,
+          "work_ms": 4.539625,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 3.828529,
+          "work_ms": 3.826249,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.670586,
+          "work_ms": 8.669916
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 46305.85123268527,
+      "cpu_utilization": 0.5268534143058672,
+      "mean_w": 3.5533333333333332,
+      "records_per_j": 13031.665450099044,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 17.620186,
+          "work_ms": 17.617016,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 36.813628,
+          "work_ms": 36.747938,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.06018,
+          "work_ms": 9.05864,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 7.621517,
+          "work_ms": 7.617097,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.325003,
+          "work_ms": 17.323823
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 46140.949165848295,
+      "cpu_utilization": 0.5253728893592478,
+      "mean_w": 3.6239999999999997,
+      "records_per_j": 12732.04999057624,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 35.351922,
+          "work_ms": 35.346222,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 74.068991,
+          "work_ms": 73.945959,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.341194,
+          "work_ms": 18.337364,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 15.199812,
+          "work_ms": 15.189481,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.563646,
+          "work_ms": 34.560966
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 46110.66204843695,
+      "cpu_utilization": 0.5256281970503457,
+      "mean_w": 3.594736842105262,
+      "records_per_j": 12827.270555202082,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 71.348332,
+          "work_ms": 71.337162,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 147.450286,
+          "work_ms": 147.180881,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 36.94428,
+          "work_ms": 36.93658,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 30.259411,
+          "work_ms": 30.241771,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.290454,
+          "work_ms": 69.285224
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 43968.70177653164,
+      "cpu_utilization": 0.5141817406631519,
+      "mean_w": 3.5334090909090903,
+      "records_per_j": 12443.705397616211,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 183.085162,
+          "work_ms": 183.041072,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 358.609789,
+          "work_ms": 357.995981,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.231834,
+          "work_ms": 87.210824,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 72.082869,
+          "work_ms": 72.038969,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.38157,
+          "work_ms": 164.36769
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 45835.456039399876,
+      "cpu_utilization": 0.5304872141122535,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.877739,
+          "work_ms": 8.875319,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 18.449565,
+          "work_ms": 18.419225,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.610367,
+          "work_ms": 4.609167,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 3.720627,
+          "work_ms": 3.718487,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.694487,
+          "work_ms": 8.693097
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 56831.14134538931,
+      "cpu_utilization": 0.654085367505943,
+      "mean_w": 3.594,
+      "records_per_j": 15812.782789479497,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 25.423805,
+          "work_ms": 25.420075,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 41.854709,
+          "work_ms": 41.759788,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.956269,
+          "work_ms": 9.953909,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 21.156472,
+          "work_ms": 7.562656,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.352214,
+          "work_ms": 17.350604
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 61947.461368910495,
+      "cpu_utilization": 0.7097642485456469,
+      "mean_w": 3.6637500000000003,
+      "records_per_j": 16908.21190553681,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 60.065201,
+          "work_ms": 60.059131,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 98.636918,
+          "work_ms": 90.880179,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.94292,
+          "work_ms": 18.93944,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 73.568676,
+          "work_ms": 15.04944,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.918279,
+          "work_ms": 34.913459
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 65344.01718649751,
+      "cpu_utilization": 0.7502268096260607,
+      "mean_w": 3.710000000000001,
+      "records_per_j": 17612.942637869946,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 139.304824,
+          "work_ms": 139.289654,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 194.570778,
+          "work_ms": 178.972412,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 38.156071,
+          "work_ms": 38.146931,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 142.881959,
+          "work_ms": 38.598565,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 70.368354,
+          "work_ms": 70.361304
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w3",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w3",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 65525.22636148529,
+      "cpu_utilization": 0.7700591690796534,
+      "mean_w": 3.7631034482758614,
+      "records_per_j": 17412.549844067384,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 310.775028,
+          "work_ms": 310.737347,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 507.935903,
+          "work_ms": 424.148744,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 100.814592,
+          "work_ms": 100.794091,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 405.12945,
+          "work_ms": 117.149951,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 172.439205,
+          "work_ms": 172.422075
+        }
+      ],
+      "label": "cpu-w3"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 48717.72126855142,
+      "cpu_utilization": 0.5566677611502387,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.881799,
+          "work_ms": 8.880269,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 16.192042,
+          "work_ms": 16.158152,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.528165,
+          "work_ms": 4.526785,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 3.754628,
+          "work_ms": 3.752198,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.668307,
+          "work_ms": 8.667687
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 44636.00828198467,
+      "cpu_utilization": 0.509347418725577,
+      "mean_w": 3.4899999999999998,
+      "records_per_j": 12789.687186815092,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 25.326074,
+          "work_ms": 25.323004,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 32.429274,
+          "work_ms": 32.355804,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.141761,
+          "work_ms": 9.139141,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 7.538275,
+          "work_ms": 7.532555,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.313004,
+          "work_ms": 17.311124
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 48368.99763589439,
+      "cpu_utilization": 0.5529517594116611,
+      "mean_w": 3.5409999999999995,
+      "records_per_j": 13659.699981896189,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 35.488625,
+          "work_ms": 35.483145,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 65.752347,
+          "work_ms": 65.609765,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.455165,
+          "work_ms": 18.451825,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 15.007861,
+          "work_ms": 14.998691,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.642666,
+          "work_ms": 34.640266
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 48187.02197324967,
+      "cpu_utilization": 0.5508824526333029,
+      "mean_w": 3.6166666666666663,
+      "records_per_j": 13323.600545598987,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 70.726886,
+          "work_ms": 70.714996,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 133.052763,
+          "work_ms": 132.808368,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 36.779548,
+          "work_ms": 36.771998,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 30.16713,
+          "work_ms": 30.14737,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.258883,
+          "work_ms": 69.254283
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 46844.46917538275,
+      "cpu_utilization": 0.550826301991067,
+      "mean_w": 3.59625,
+      "records_per_j": 13025.921216651443,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 170.368894,
+          "work_ms": 170.340394,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 319.504383,
+          "work_ms": 318.895087,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.198776,
+          "work_ms": 87.182555,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 70.725524,
+          "work_ms": 70.679694,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.463367,
+          "work_ms": 164.451277
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 48062.18119789636,
+      "cpu_utilization": 0.5553082825171985,
+      "mean_w": null,
+      "records_per_j": null,
+      "sensor": null,
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.857258,
+          "work_ms": 8.855588,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 16.438104,
+          "work_ms": 16.407644,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.570776,
+          "work_ms": 4.569446,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 3.708937,
+          "work_ms": 3.705097,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.690217,
+          "work_ms": 8.688807
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 55376.667468384534,
+      "cpu_utilization": 0.6383391217904077,
+      "mean_w": 3.586,
+      "records_per_j": 15442.46164762536,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 31.415354,
+          "work_ms": 31.411964,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 40.189222,
+          "work_ms": 40.094532,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.90278,
+          "work_ms": 9.90026,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 20.177572,
+          "work_ms": 7.491995,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.341414,
+          "work_ms": 17.339764
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 66239.37900840928,
+      "cpu_utilization": 0.7616861502377199,
+      "mean_w": 3.718571428571429,
+      "records_per_j": 17813.125357620625,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 63.180882,
+          "work_ms": 63.171922,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 91.345615,
+          "work_ms": 80.111122,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 27.299904,
+          "work_ms": 27.294854,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 51.616717,
+          "work_ms": 20.672827,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 35.130661,
+          "work_ms": 35.126701
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 68383.94342003344,
+      "cpu_utilization": 0.7884511323139735,
+      "mean_w": 3.766923076923077,
+      "records_per_j": 18153.793433948023,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 143.481085,
+          "work_ms": 143.466815,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 205.235704,
+          "work_ms": 167.933239,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 38.78768,
+          "work_ms": 38.779149,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 162.747879,
+          "work_ms": 42.735839,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 73.795408,
+          "work_ms": 73.787028
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "cpu-w4",
+      "file": "stage2_03/e2e_all.json",
+      "name": "cpu-w4",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 66748.42805320657,
+      "cpu_utilization": 0.7860126455293381,
+      "mean_w": 3.7874074074074078,
+      "records_per_j": 17623.77818733207,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 303.266173,
+          "work_ms": 303.224763,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 482.080929,
+          "work_ms": 392.928019,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 99.009705,
+          "work_ms": 98.991115,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 362.185914,
+          "work_ms": 132.00426,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 166.451505,
+          "work_ms": 166.435145
+        }
+      ],
+      "label": "cpu-w4"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 27034.78397214319,
+      "cpu_utilization": 0.3164013566075718,
+      "mean_w": 3.3879999999999995,
+      "records_per_j": 7979.570239711686,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.837368,
+          "work_ms": 8.835948,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 47.270543,
+          "work_ms": 47.235002,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.556006,
+          "work_ms": 4.554766,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 6.435494,
+          "work_ms": 6.433004,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.641047,
+          "work_ms": 8.640127
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 26976.521166578055,
+      "cpu_utilization": 0.3154906126250725,
+      "mean_w": 3.4155555555555552,
+      "records_per_j": 7898.135670110688,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 17.844529,
+          "work_ms": 17.841119,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 94.617465,
+          "work_ms": 94.550045,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.215763,
+          "work_ms": 9.213563,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 12.841719,
+          "work_ms": 12.836499,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.300572,
+          "work_ms": 17.298622
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 26943.047784278016,
+      "cpu_utilization": 0.3139841883908419,
+      "mean_w": 3.410625,
+      "records_per_j": 7899.739134111202,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 35.620104,
+          "work_ms": 35.614234,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 189.72306,
+          "work_ms": 189.597935,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.423782,
+          "work_ms": 18.418872,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 25.605987,
+          "work_ms": 25.594997,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.658787,
+          "work_ms": 34.655797
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 26606.836016557936,
+      "cpu_utilization": 0.31025326287844024,
+      "mean_w": 3.4512500000000004,
+      "records_per_j": 7709.333144964269,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 79.304072,
+          "work_ms": 79.292612,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 378.854111,
+          "work_ms": 378.600137,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 37.15586,
+          "work_ms": 37.14708,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 51.170692,
+          "work_ms": 51.149422,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.272073,
+          "work_ms": 69.265963
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 26090.9399932879,
+      "cpu_utilization": 0.31213134835237283,
+      "mean_w": 3.451666666666665,
+      "records_per_j": 7558.9396407401,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 177.449275,
+          "work_ms": 177.423422,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 906.913289,
+          "work_ms": 906.336441,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.884061,
+          "work_ms": 87.86199,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 121.778245,
+          "work_ms": 121.726745,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.369936,
+          "work_ms": 164.355896
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 26775.072590451015,
+      "cpu_utilization": 0.3182285360957852,
+      "mean_w": 3.396,
+      "records_per_j": 7884.296993654597,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.848539,
+          "work_ms": 8.846269,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 47.467925,
+          "work_ms": 47.434035,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.591716,
+          "work_ms": 4.590506,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 6.423924,
+          "work_ms": 6.421304,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.684787,
+          "work_ms": 8.683777
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 31909.66225040369,
+      "cpu_utilization": 0.3710374661659031,
+      "mean_w": 3.49,
+      "records_per_j": 9143.169699256072,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 25.303173,
+          "work_ms": 25.299933,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 95.283192,
+          "work_ms": 95.196962,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.381324,
+          "work_ms": 9.378774,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 55.652637,
+          "work_ms": 13.131172,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.327783,
+          "work_ms": 17.326693
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 33249.3543610173,
+      "cpu_utilization": 0.39127249256723506,
+      "mean_w": 3.513571428571428,
+      "records_per_j": 9463.121794150078,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 47.717487,
+          "work_ms": 47.711327,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 213.149162,
+          "work_ms": 199.751078,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.666526,
+          "work_ms": 18.662546,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 111.898679,
+          "work_ms": 26.140222,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.744418,
+          "work_ms": 34.741988
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 35212.06113503268,
+      "cpu_utilization": 0.41288043699508953,
+      "mean_w": 3.5704166666666666,
+      "records_per_j": 9862.171399705732,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 122.177143,
+          "work_ms": 122.162413,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 421.460464,
+          "work_ms": 388.067851,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 37.9632,
+          "work_ms": 37.95549,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 273.307804,
+          "work_ms": 52.1471,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.497766,
+          "work_ms": 69.492186
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-serial",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-serial",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 34812.29146480697,
+      "cpu_utilization": 0.41955800753271494,
+      "mean_w": 3.5629090909090912,
+      "records_per_j": 9770.749288448576,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 313.482235,
+          "work_ms": 313.443944,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 1051.65085,
+          "work_ms": 938.263374,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 91.752867,
+          "work_ms": 91.733346,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 839.958739,
+          "work_ms": 125.034571,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 165.608735,
+          "work_ms": 165.595275
+        }
+      ],
+      "label": "fpga-serial"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 27495.692218484157,
+      "cpu_utilization": 0.32590047888554374,
+      "mean_w": 3.4560000000000004,
+      "records_per_j": 7955.929461366942,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 8.826869,
+          "work_ms": 8.825829,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 45.873368,
+          "work_ms": 45.836298,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.629366,
+          "work_ms": 4.627976,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 6.487725,
+          "work_ms": 6.484785,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.652886,
+          "work_ms": 8.652316
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 27404.756511648808,
+      "cpu_utilization": 0.32484270951014965,
+      "mean_w": 3.431111111111111,
+      "records_per_j": 7987.137584353604,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 17.926569,
+          "work_ms": 17.923919,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 92.179162,
+          "work_ms": 92.106541,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.122382,
+          "work_ms": 9.120012,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 12.926739,
+          "work_ms": 12.921288,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.292573,
+          "work_ms": 17.291463
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 27456.93444184986,
+      "cpu_utilization": 0.32188244876600386,
+      "mean_w": 3.4237499999999996,
+      "records_per_j": 8019.550037780172,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 36.394843,
+          "work_ms": 36.389773,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 183.311264,
+          "work_ms": 183.167934,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.393143,
+          "work_ms": 18.389693,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 25.620886,
+          "work_ms": 25.611266,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.618927,
+          "work_ms": 34.616607
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 27457.99693195095,
+      "cpu_utilization": 0.3226641440615182,
+      "mean_w": 3.465161290322582,
+      "records_per_j": 7924.016988367893,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 71.715739,
+          "work_ms": 71.704768,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 367.561445,
+          "work_ms": 367.279332,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 36.90424,
+          "work_ms": 36.89481,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 51.157262,
+          "work_ms": 51.136982,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.329252,
+          "work_ms": 69.324162
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "serial",
+      "capacity": 0,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 26509.484512122093,
+      "cpu_utilization": 0.3204861315567682,
+      "mean_w": 3.46236111111111,
+      "records_per_j": 7656.475931135589,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 177.805687,
+          "work_ms": 177.779706,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 883.98438,
+          "work_ms": 883.353853,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 87.311663,
+          "work_ms": 87.288883,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 121.802097,
+          "work_ms": 121.750126,
+          "queue_high_water_after": 0
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 164.468429,
+          "work_ms": 164.455659
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 1,
+      "records": 2048,
+      "records_per_s": 27070.129320405198,
+      "cpu_utilization": 0.32352637710493054,
+      "mean_w": 3.4120000000000004,
+      "records_per_j": 7933.801090388392,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 9.458175,
+          "work_ms": 9.456065,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 46.166952,
+          "work_ms": 46.133901,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 4.617436,
+          "work_ms": 4.615856,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 6.463424,
+          "work_ms": 6.460884,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 8.636176,
+          "work_ms": 8.635516
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 2,
+      "records": 4096,
+      "records_per_s": 32419.75118252546,
+      "cpu_utilization": 0.38814855787432934,
+      "mean_w": 3.5037499999999997,
+      "records_per_j": 9252.872260442515,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 25.565535,
+          "work_ms": 25.562084,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 93.111101,
+          "work_ms": 93.01336,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 9.315213,
+          "work_ms": 9.312873,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 54.496175,
+          "work_ms": 12.887649,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 17.363773,
+          "work_ms": 17.362552
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 4,
+      "records": 8192,
+      "records_per_s": 33846.561151582304,
+      "cpu_utilization": 0.39722195259695736,
+      "mean_w": 3.520769230769231,
+      "records_per_j": 9613.399496844439,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 49.225972,
+          "work_ms": 49.219262,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 200.260693,
+          "work_ms": 193.483406,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 18.737906,
+          "work_ms": 18.733606,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 159.123951,
+          "work_ms": 25.936768,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 34.776648,
+          "work_ms": 34.774167
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 8,
+      "records": 16384,
+      "records_per_s": 35225.80805066751,
+      "cpu_utilization": 0.4185709221635805,
+      "mean_w": 3.5870833333333336,
+      "records_per_j": 9820.181126913929,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 98.203473,
+          "work_ms": 98.187873,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 422.992421,
+          "work_ms": 386.353775,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 37.767497,
+          "work_ms": 37.758507,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 328.407506,
+          "work_ms": 55.474106,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 69.639407,
+          "work_ms": 69.634607
+        }
+      ],
+      "label": "fpga-overlap"
+    },
+    {
+      "backend": "fpga-overlap",
+      "file": "stage2_03/e2e_all.json",
+      "name": "fpga-linux-dma-overlap",
+      "real_device": true,
+      "pipeline": "pipelined",
+      "capacity": 2,
+      "batches": 19,
+      "records": 38052,
+      "records_per_s": 36080.03014914526,
+      "cpu_utilization": 0.4376834683329059,
+      "mean_w": 3.595769230769231,
+      "records_per_j": 10034.02271770004,
+      "sensor": "ina260_u14/power1",
+      "stages": [
+        {
+          "stage": "prepare",
+          "busy_ms": 310.371052,
+          "work_ms": 310.332131,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "encrypt",
+          "busy_ms": 1003.784948,
+          "work_ms": 889.416583,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "cloud",
+          "busy_ms": 89.830295,
+          "work_ms": 89.811255,
+          "queue_high_water_after": 2
+        },
+        {
+          "stage": "decrypt",
+          "busy_ms": 954.612499,
+          "work_ms": 138.965979,
+          "queue_high_water_after": 1
+        },
+        {
+          "stage": "finish",
+          "busy_ms": 165.639907,
+          "work_ms": 165.624267
+        }
+      ],
+      "label": "fpga-overlap"
+    }
+  ]
+}
