@@ -81,7 +81,7 @@ Grad/                                repository 根目錄
 ├── training/                        [可改] 訓練 4 特徵邏輯斯迴歸，驗證 CKKS 推論與明文一致
 ├── results/                         [證據] 從 KV260 帶回的量測結果，每次上板一個資料夾
 ├── dashboard/                       [可改] Next.js 本機網頁：把 data／training／results 畫成圖
-└── .github/workflows/offline.yml    [可改] CPU-only CI，不碰板子
+└── .github/workflows/ci.yml         [可改] CPU-only CI＋dashboard 建置＋secret scan，不碰板子
 ```
 
 - **看起來重複、但不能刪**：`software/` 下 `reference`、`ckks`、`board_tests` 三份相同的 `paired_public_vectors.cpp`，各被同目錄的凍結程式 `#include`；兩個驅動目錄的 `Makefile` 相同是核心模組建置的要求。

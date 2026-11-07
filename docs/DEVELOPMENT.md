@@ -296,7 +296,7 @@ git push -u origin update/ii1-v3-snapshot
 
 ## 7. 持續整合 / Continuous integration
 
-[.github/workflows/offline.yml](../.github/workflows/offline.yml)（`Fixed-profile offline verification`）：push、pull_request、手動 workflow_dispatch 觸發；`contents: read`；job `cpu-only`、`ubuntu-22.04`、逾時 15 分鐘；`actions/checkout` v4.2.2 釘在其發布 commit。內容是第 1.1 節的 Linux 指令，但沒有 `apt-get` 與 `export` 兩行，環境報告寫到 `build/host_environment.json`。
+[.github/workflows/ci.yml](../.github/workflows/ci.yml)（`CI`）：pull_request、push 到 `main`、手動 workflow_dispatch 觸發；`contents: read`；同一 ref 的舊執行會自動取消。job `verify`：`ubuntu-22.04`、逾時 15 分鐘；`actions/checkout` v4.2.2 釘在其發布 commit。內容是第 1.1 節的 Linux 指令，但沒有 `apt-get` 與 `export` 兩行，環境報告寫到 `build/host_environment.json`。另有 `verify-dashboard`（Node 26，`npm ci` 後 `npm run build`）、`secrets`（gitleaks 只掃本次變更的 commit）與 `notify`（`main` 上失敗時發 Discord，`DISCORD_WEBHOOK_URL` 未設定時略過）。
 
 - 只做主機 CPU：**不跑** `run_v5_checks.py`（sanitizers、mTLS 演練）、`offline_check.py --native`、HLS／Vivado，不碰板子；CI 通過不代表 HLS、P&R、板上、安全、網路隱私或 release 被接受。
 - 清單或收據過期時，CI 在 `offline_check.py`（內含 `verify_repository.py`）失敗：push 前先完成第 4 節。
