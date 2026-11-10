@@ -1,0 +1,6823 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "EdgeFHE-source-research-release",
+      "version": "20261025-s1b-t0",
+      "licenses": [
+        {
+          "license": {
+            "name": "NOASSERTION - pending rights-holder decision"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "scope",
+        "value": "Source dependency inventory; no runtime binaries; unresolved licence metadata is explicit"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "@adobe/css-tools",
+      "version": "4.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@adobe/css-tools"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@asamuzakjp/css-color",
+      "version": "5.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@asamuzakjp/css-color"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@asamuzakjp/dom-selector",
+      "version": "7.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@asamuzakjp/dom-selector"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@asamuzakjp/generational-cache",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@asamuzakjp/generational-cache"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@asamuzakjp/nwsapi",
+      "version": "2.3.9",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@asamuzakjp/nwsapi"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/code-frame"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/compat-data",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/compat-data"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/core"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/generator",
+      "version": "7.29.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/generator"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-compilation-targets",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-compilation-targets"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-globals",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-globals"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-module-imports",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-module-imports"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-module-transforms",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-module-transforms"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-string-parser"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-validator-identifier"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helper-validator-option",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helper-validator-option"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/helpers",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/helpers"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/parser",
+      "version": "7.29.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/parser"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/runtime"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/template",
+      "version": "7.29.7",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/template"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/traverse",
+      "version": "7.29.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/traverse"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@babel/types",
+      "version": "7.29.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@babel/types"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@bramus/specificity",
+      "version": "2.4.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@bramus/specificity"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/color-helpers",
+      "version": "6.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT-0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/color-helpers"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-calc",
+      "version": "3.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/css-calc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-color-parser",
+      "version": "4.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/css-color-parser"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-parser-algorithms",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/css-parser-algorithms"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-syntax-patches-for-csstree",
+      "version": "1.1.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT-0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/css-syntax-patches-for-csstree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@csstools/css-tokenizer",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@csstools/css-tokenizer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint-community/eslint-utils",
+      "version": "4.10.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint-community/eslint-utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint-visitor-keys",
+      "version": "3.4.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint-community/regexpp",
+      "version": "4.12.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint-community/regexpp"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/config-array",
+      "version": "0.23.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/config-array"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/config-helpers",
+      "version": "0.7.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/config-helpers"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/core",
+      "version": "1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/core"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/js",
+      "version": "10.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/js"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/object-schema",
+      "version": "3.0.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/object-schema"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@eslint/plugin-kit",
+      "version": "0.7.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@eslint/plugin-kit"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@exodus/bytes",
+      "version": "1.15.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@exodus/bytes"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@humanfs/core",
+      "version": "0.19.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@humanfs/core"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@humanfs/node",
+      "version": "0.16.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@humanfs/node"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@humanfs/types",
+      "version": "0.15.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@humanfs/types"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@humanwhocodes/module-importer",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@humanwhocodes/module-importer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@humanwhocodes/retry",
+      "version": "0.4.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@humanwhocodes/retry"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.3.13",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@jridgewell/gen-mapping"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/remapping",
+      "version": "2.3.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@jridgewell/remapping"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@jridgewell/resolve-uri"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.5.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@jridgewell/sourcemap-codec"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@jridgewell/trace-mapping"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@oxc-project/types",
+      "version": "0.146.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@oxc-project/types"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@playwright/test",
+      "version": "1.62.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@playwright/test"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@reduxjs/toolkit",
+      "version": "2.12.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@reduxjs/toolkit"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-android-arm-eabi",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-android-arm-eabi"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-android-arm64",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-android-arm64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-darwin-arm64",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-darwin-arm64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-darwin-x64",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-darwin-x64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-freebsd-x64",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-freebsd-x64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm-gnueabihf",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-arm-gnueabihf"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm64-gnu",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-arm64-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-arm64-musl",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-arm64-musl"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-ppc64-gnu",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-ppc64-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-s390x-gnu",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-s390x-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-x64-gnu",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-x64-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-linux-x64-musl",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-linux-x64-musl"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-openharmony-arm64",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-openharmony-arm64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-win32-arm64-msvc",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-win32-arm64-msvc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/binding-win32-x64-msvc",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/binding-win32-x64-msvc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@rolldown/pluginutils",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@rolldown/pluginutils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@standard-schema/spec",
+      "version": "1.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@standard-schema/spec"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@standard-schema/utils",
+      "version": "0.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@standard-schema/utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@testing-library/dom",
+      "version": "10.4.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@testing-library/dom"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@testing-library/jest-dom",
+      "version": "7.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@testing-library/jest-dom"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dom-accessibility-api",
+      "version": "0.6.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@testing-library/jest-dom/node_modules/dom-accessibility-api"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@testing-library/react",
+      "version": "16.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@testing-library/react"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/aria-query",
+      "version": "5.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/aria-query"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/chai",
+      "version": "5.2.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/chai"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-array",
+      "version": "3.2.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-array"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-color",
+      "version": "3.1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-color"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-ease",
+      "version": "3.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-ease"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-interpolate",
+      "version": "3.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-interpolate"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-path",
+      "version": "3.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-path"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-scale",
+      "version": "4.0.9",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-scale"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-shape",
+      "version": "3.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-shape"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-time",
+      "version": "3.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-time"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/d3-timer",
+      "version": "3.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/d3-timer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/deep-eql",
+      "version": "4.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/deep-eql"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/esrecurse",
+      "version": "4.3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/esrecurse"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/estree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/json-schema",
+      "version": "7.0.15",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/json-schema"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/node",
+      "version": "24.10.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/node"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/react",
+      "version": "19.2.18",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/react"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/react-dom",
+      "version": "19.2.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/react-dom"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@types/use-sync-external-store",
+      "version": "0.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@types/use-sync-external-store"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/eslint-plugin",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/eslint-plugin"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ignore",
+      "version": "7.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/eslint-plugin/node_modules/ignore"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/parser",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/parser"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/project-service",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/project-service"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/scope-manager",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/scope-manager"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/tsconfig-utils",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/tsconfig-utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/type-utils",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/type-utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/types",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/types"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/typescript-estree",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/typescript-estree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "7.8.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/typescript-estree/node_modules/semver"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/utils",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@typescript-eslint/visitor-keys",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@typescript-eslint/visitor-keys"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitejs/plugin-react",
+      "version": "6.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitejs/plugin-react"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/expect",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/expect"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/mocker",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/mocker"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/pretty-format",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/pretty-format"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/runner",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/runner"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/snapshot",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/snapshot"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/spy",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/spy"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "@vitest/utils",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/@vitest/utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "acorn",
+      "version": "8.18.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/acorn"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "acorn-jsx",
+      "version": "5.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/acorn-jsx"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ajv",
+      "version": "6.15.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ajv"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ansi-regex"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ansi-styles",
+      "version": "5.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ansi-styles"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "aria-query",
+      "version": "5.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/aria-query"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "assertion-error",
+      "version": "2.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/assertion-error"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/balanced-match"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "baseline-browser-mapping",
+      "version": "2.11.17",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/baseline-browser-mapping"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bidi-js",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/bidi-js"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "brace-expansion",
+      "version": "5.0.9",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/brace-expansion"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "browserslist",
+      "version": "4.28.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/browserslist"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "caniuse-lite",
+      "version": "1.0.30001809",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC-BY-4.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/caniuse-lite"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chai",
+      "version": "6.2.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/chai"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "clsx",
+      "version": "2.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/clsx"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/convert-source-map"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/cross-spawn"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "css-tree",
+      "version": "3.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/css-tree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "css.escape",
+      "version": "1.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/css.escape"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "csstype",
+      "version": "3.2.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/csstype"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-array",
+      "version": "3.2.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-array"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-color",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-color"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-ease"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-format",
+      "version": "3.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-format"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-interpolate"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-path",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-path"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-scale"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-shape"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-time",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-time"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-time-format"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/d3-timer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "data-urls",
+      "version": "7.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/data-urls"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debug",
+      "version": "4.4.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/debug"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decimal.js",
+      "version": "10.6.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/decimal.js"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "decimal.js-light",
+      "version": "2.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/decimal.js-light"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "deep-is",
+      "version": "0.1.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/deep-is"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dequal",
+      "version": "2.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/dequal"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/detect-libc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dom-accessibility-api",
+      "version": "0.5.16",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/dom-accessibility-api"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "electron-to-chromium",
+      "version": "1.5.412",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/electron-to-chromium"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "entities",
+      "version": "8.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/entities"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "es-module-lexer",
+      "version": "2.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/es-module-lexer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "es-toolkit",
+      "version": "1.51.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/es-toolkit"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "escalade",
+      "version": "3.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/escalade"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "escape-string-regexp",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/escape-string-regexp"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint",
+      "version": "10.9.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eslint"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint-plugin-react-hooks",
+      "version": "7.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eslint-plugin-react-hooks"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint-plugin-react-refresh",
+      "version": "0.5.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eslint-plugin-react-refresh"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint-scope",
+      "version": "9.1.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eslint-scope"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eslint-visitor-keys",
+      "version": "5.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eslint-visitor-keys"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "espree",
+      "version": "11.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/espree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "esquery",
+      "version": "1.7.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/esquery"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "esrecurse",
+      "version": "4.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/esrecurse"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "estraverse",
+      "version": "5.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/estraverse"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "estree-walker",
+      "version": "3.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/estree-walker"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "esutils",
+      "version": "2.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/esutils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "eventemitter3",
+      "version": "5.0.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/eventemitter3"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "expect-type",
+      "version": "1.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/expect-type"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/fast-deep-equal"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-json-stable-stringify",
+      "version": "2.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/fast-json-stable-stringify"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-levenshtein",
+      "version": "2.0.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/fast-levenshtein"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fdir",
+      "version": "6.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/fdir"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "file-entry-cache",
+      "version": "8.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/file-entry-cache"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "find-up",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/find-up"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "flat-cache",
+      "version": "4.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/flat-cache"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "flatted",
+      "version": "3.4.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/flatted"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fsevents",
+      "version": "2.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/fsevents"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gensync",
+      "version": "1.0.0-beta.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/gensync"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "glob-parent",
+      "version": "6.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/glob-parent"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "globals",
+      "version": "17.11.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/globals"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hermes-estree",
+      "version": "0.25.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/hermes-estree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hermes-parser",
+      "version": "0.25.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/hermes-parser"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "html-encoding-sniffer",
+      "version": "6.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/html-encoding-sniffer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ignore",
+      "version": "5.3.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ignore"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "immer",
+      "version": "11.1.18",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/immer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "imurmurhash",
+      "version": "0.1.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/imurmurhash"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "indent-string",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/indent-string"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "internmap",
+      "version": "2.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/internmap"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-extglob",
+      "version": "2.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/is-extglob"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-glob",
+      "version": "4.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/is-glob"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "is-potential-custom-element-name",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/is-potential-custom-element-name"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "isexe",
+      "version": "2.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/isexe"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/js-tokens"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsdom",
+      "version": "29.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/jsdom"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lru-cache",
+      "version": "11.5.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BlueOak-1.0.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/jsdom/node_modules/lru-cache"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jsesc",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/jsesc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json-buffer",
+      "version": "3.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/json-buffer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json-schema-traverse",
+      "version": "0.4.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/json-schema-traverse"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json-stable-stringify-without-jsonify",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/json-stable-stringify-without-jsonify"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json5",
+      "version": "2.2.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/json5"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "keyv",
+      "version": "4.5.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/keyv"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "levn",
+      "version": "0.4.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/levn"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-android-arm64",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-android-arm64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-darwin-arm64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-darwin-x64",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-darwin-x64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-freebsd-x64"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-linux-arm-gnueabihf"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-linux-arm64-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-linux-arm64-musl"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-linux-x64-gnu"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-linux-x64-musl"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-win32-arm64-msvc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lightningcss-win32-x64-msvc"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "locate-path",
+      "version": "6.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/locate-path"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lru-cache",
+      "version": "5.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lru-cache"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lucide-react",
+      "version": "1.33.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lucide-react"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lz-string",
+      "version": "1.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/lz-string"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "magic-string",
+      "version": "0.30.21",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/magic-string"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mdn-data",
+      "version": "2.27.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "CC0-1.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/mdn-data"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "min-indent",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/min-indent"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "minimatch",
+      "version": "10.2.6",
+      "licenses": [
+        {
+          "license": {
+            "id": "BlueOak-1.0.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/minimatch"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ms",
+      "version": "2.1.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ms"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nanoid",
+      "version": "3.3.18",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/nanoid"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "natural-compare",
+      "version": "1.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/natural-compare"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "node-releases",
+      "version": "2.0.53",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/node-releases"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "obug",
+      "version": "2.1.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/obug"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "optionator",
+      "version": "0.9.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/optionator"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "p-limit",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/p-limit"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "p-locate",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/p-locate"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parse5",
+      "version": "8.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/parse5"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-exists",
+      "version": "4.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/path-exists"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "path-key",
+      "version": "3.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/path-key"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pathe",
+      "version": "2.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/pathe"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "picocolors",
+      "version": "1.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/picocolors"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "picomatch",
+      "version": "4.0.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/picomatch"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "playwright",
+      "version": "1.62.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/playwright"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "playwright-core",
+      "version": "1.62.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/playwright-core"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "postcss",
+      "version": "8.5.26",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/postcss"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "prelude-ls",
+      "version": "1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/prelude-ls"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pretty-format",
+      "version": "27.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/pretty-format"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-is",
+      "version": "17.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/pretty-format/node_modules/react-is"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "punycode",
+      "version": "2.3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/punycode"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "19.2.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/react"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-dom",
+      "version": "19.2.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/react-dom"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-is",
+      "version": "19.2.8",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/react-is"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "react-redux",
+      "version": "9.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/react-redux"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "recharts",
+      "version": "3.10.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/recharts"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "redent",
+      "version": "3.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/redent"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "redux",
+      "version": "5.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/redux"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "redux-thunk",
+      "version": "3.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/redux-thunk"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/require-from-string"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "reselect",
+      "version": "5.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/reselect"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rolldown",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/rolldown"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "saxes",
+      "version": "6.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/saxes"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/scheduler"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "6.3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/semver"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/shebang-command"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/shebang-regex"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "siginfo",
+      "version": "2.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/siginfo"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "source-map-js",
+      "version": "1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/source-map-js"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "stackback",
+      "version": "0.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/stackback"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "std-env",
+      "version": "4.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/std-env"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "strip-indent",
+      "version": "3.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/strip-indent"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "symbol-tree",
+      "version": "3.2.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/symbol-tree"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tiny-invariant"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinybench",
+      "version": "2.9.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tinybench"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyexec",
+      "version": "1.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tinyexec"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tinyglobby"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tinyrainbow",
+      "version": "3.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tinyrainbow"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tldts",
+      "version": "7.4.10",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tldts"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tldts-core",
+      "version": "7.4.10",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tldts-core"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tough-cookie",
+      "version": "6.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tough-cookie"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tr46",
+      "version": "6.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/tr46"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ts-api-utils",
+      "version": "2.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/ts-api-utils"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "type-check",
+      "version": "0.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/type-check"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typescript",
+      "version": "6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/typescript"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typescript-eslint",
+      "version": "8.67.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/typescript-eslint"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "undici",
+      "version": "7.29.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/undici"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "undici-types",
+      "version": "7.16.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/undici-types"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "update-browserslist-db",
+      "version": "1.3.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/update-browserslist-db"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "uri-js",
+      "version": "4.4.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/uri-js"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "use-sync-external-store",
+      "version": "1.6.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/use-sync-external-store"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "victory-vendor",
+      "version": "37.3.6",
+      "licenses": [
+        {
+          "expression": "MIT AND ISC"
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/victory-vendor"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "vite",
+      "version": "8.2.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/vite"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fsevents",
+      "version": "2.3.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/vite/node_modules/fsevents"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "vitest",
+      "version": "4.1.11",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/vitest"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "w3c-xmlserializer",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/w3c-xmlserializer"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "webidl-conversions",
+      "version": "8.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/webidl-conversions"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-mimetype",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/whatwg-mimetype"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-url",
+      "version": "16.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/whatwg-url"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "which",
+      "version": "2.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/which"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "why-is-node-running",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/why-is-node-running"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "word-wrap",
+      "version": "1.2.5",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/word-wrap"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xml-name-validator",
+      "version": "5.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/xml-name-validator"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "xmlchars",
+      "version": "2.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/xmlchars"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yallist",
+      "version": "3.1.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/yallist"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "yocto-queue",
+      "version": "0.1.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/yocto-queue"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zod",
+      "version": "4.4.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/zod"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "zod-validation-error",
+      "version": "4.0.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "package-lock:path",
+          "value": "node_modules/zod-validation-error"
+        },
+        {
+          "name": "licence:source",
+          "value": "package-lock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "OpenFHE",
+      "version": "1.5.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "OpenSSL-Windows",
+      "version": "3.6.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "OpenSSL-ARM",
+      "version": "3.0.2-0ubuntu1.30",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "OpenSSL-local-WSL",
+      "version": "3.0.13",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "GCC-board",
+      "version": "11.4.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "GCC-local-release-QA",
+      "version": "11.5.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "GCC-local-historical-QA",
+      "version": "13",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-or-later"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "MSVC",
+      "version": "19.51",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-MSVC"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "Vivado-Vitis-HLS",
+      "version": "2022.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-AMD"
+          }
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "Linux-kernel",
+      "version": "5.15.0-1027-xilinx-zynqmp",
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "Python-local-WSL",
+      "version": "3.12.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "Python-2.0"
+          }
+        }
+      ]
+    }
+  ]
+}

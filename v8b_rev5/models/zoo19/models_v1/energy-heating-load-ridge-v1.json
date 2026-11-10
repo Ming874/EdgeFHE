@@ -1,0 +1,78 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "energy-heating-load-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "relative_compactness",
+    "surface_area",
+    "wall_area",
+    "roof_area",
+    "overall_height",
+    "orientation",
+    "glazing_area",
+    "glazing_area_distribution"
+  ],
+  "mean": [
+    0.7665330661322649,
+    669.4048096192384,
+    317.41983967935874,
+    175.99248496993988,
+    5.274549098196393,
+    3.470941883767535,
+    0.23647294589178364,
+    2.81563126252505
+  ],
+  "std": [
+    0.10429938221811189,
+    86.47849743115184,
+    44.10368303087772,
+    45.13410288377858,
+    1.749827803464604,
+    1.1256960948787684,
+    0.13456820565603927,
+    1.5604313648454384
+  ],
+  "weights": [
+    -0.2551277058014294,
+    -0.13957581609368835,
+    0.1609943246057737,
+    -0.21237543554433252,
+    0.7078277465460259,
+    -0.005134736986196423,
+    0.25310208994645456,
+    0.033915921493514516
+  ],
+  "bias": -6.4788966887945e-16,
+  "weights_int": [
+    -273941288,
+    -149868391,
+    172866340,
+    -228036388,
+    760024256,
+    -5513382,
+    271766300,
+    36416943
+  ],
+  "bias_int": -747,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 22.563587174348697,
+  "target_std": 10.275649141951705,
+  "training_source": {
+    "name": "Energy Efficiency",
+    "uci_id": 242,
+    "data_url": "https://archive.ics.uci.edu/static/public/242/data.csv",
+    "sha256": "db44dbe453acd464b5cf65be2fb01a28aa9c5b2630300e65fbe28cde35f5d96f",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "Y1 heating load"
+  },
+  "split_seed": 20261103,
+  "split": "row",
+  "selected_lambda": 10.0,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

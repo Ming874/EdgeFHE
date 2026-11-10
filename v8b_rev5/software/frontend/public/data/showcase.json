@@ -1,0 +1,3774 @@
+{
+  "schema": "edgefhe.showcase.v2",
+  "version": "2.0.0",
+  "generatedOn": "2026-10-24",
+  "sources": [
+    {
+      "id": "campaign-v3-acceptance",
+      "label": "campaign v3 獨立原件審查",
+      "sha256": "8e713dddb564c4d749e2e366f68d098553b3d0a2fd4fcaf8a799b32de8b64d2d",
+      "kind": "reviewed-report"
+    },
+    {
+      "id": "campaign-v3-reference",
+      "label": "版本與量測協定",
+      "sha256": "5923dbe6848dc40b95358074ffaacc27f29ad74006185890d4e6a3b92ad07073",
+      "kind": "source-identity"
+    },
+    {
+      "id": "model-catalog",
+      "label": "原生 C++ 模型目錄",
+      "sha256": "f66e4d760b659f2e44bb7fa96b144ab9febac65838a5f3e71113814cdd04850d",
+      "kind": "source-identity"
+    },
+    {
+      "id": "utilization",
+      "label": "V8b routed 資源報告",
+      "sha256": "6df590e6f1fe6946f4d965af7f1de0c79344df41e83954fcda021d66ab7ba465",
+      "kind": "source-identity"
+    },
+    {
+      "id": "paper-catalog",
+      "label": "論文知識庫索引",
+      "sha256": "36fde0015cbca5e209f4bd34639e00d85d4b0c211297e4174202e417c464030e",
+      "kind": "source-identity"
+    },
+    {
+      "id": "model-0",
+      "label": "公開模型卡",
+      "sha256": "de0499f25657351b6a1ca2460181c328a05fd43147a0f01aa51f10f89b9dc2a4",
+      "kind": "source-identity"
+    },
+    {
+      "id": "model-1",
+      "label": "公開模型卡",
+      "sha256": "727f278c3d58c26466adef1885342c63940a796a970eeae4d6368508e67ef611",
+      "kind": "source-identity"
+    },
+    {
+      "id": "model-2",
+      "label": "公開模型卡",
+      "sha256": "6395cb10c6041f22490e801b341d0eda9ff090dec4ebf2d69e2c665aa111356d",
+      "kind": "source-identity"
+    },
+    {
+      "id": "lan-wired-review",
+      "label": "有線兩機 LAN 獨立審查",
+      "sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07",
+      "kind": "reviewed-report"
+    },
+    {
+      "id": "lan-wifi-review",
+      "label": "Wi-Fi 兩機 LAN 獨立審查",
+      "sha256": "b9c381c165062867751342acbde8f307b490f129ade83b28cc01a93226049a53",
+      "kind": "reviewed-report"
+    },
+    {
+      "id": "lan-wired-evidence-sums",
+      "label": "有線長測封存清單",
+      "sha256": "119e02d30801b8b5227f2436eaa9829e03912a765cc566ee1c9a534ba4eb25fd",
+      "kind": "source-identity"
+    },
+    {
+      "id": "lan-wired-soak",
+      "label": "六小時浸泡窗口原件",
+      "sha256": "0e9132ca8ada793f8750544a9c4ba652b70c285871af0bc316f967310e6d7b3e",
+      "kind": "source-identity"
+    }
+  ],
+  "models": [
+    {
+      "id": "ai4i-failure-logreg-v1",
+      "title": "工業設備維護研究",
+      "short": "工業維護",
+      "features": [
+        "temperature_difference_K",
+        "rotational_speed_rpm",
+        "torque_Nm",
+        "tool_wear_min"
+      ],
+      "featureCount": 4,
+      "task": "classification",
+      "sourceSha256": "de0499f25657351b6a1ca2460181c328a05fd43147a0f01aa51f10f89b9dc2a4",
+      "threshold": 1.5500000000000007,
+      "weightScale": 1073741824,
+      "outputScale": 1152921504606846976,
+      "inputAbsMax": 8,
+      "primary": true,
+      "sourceName": "UCI AI4I2020 synthetic maintenance",
+      "targetMean": 0.0,
+      "targetStd": 1.0,
+      "notice": "公開研究模型；未作臨床或工業部署驗證。"
+    },
+    {
+      "id": "diabetes-progression-ridge-v1",
+      "title": "糖尿病進展研究",
+      "short": "進展評分",
+      "features": [
+        "age",
+        "sex",
+        "bmi",
+        "bp",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "featureCount": 10,
+      "task": "regression",
+      "sourceSha256": "727f278c3d58c26466adef1885342c63940a796a970eeae4d6368508e67ef611",
+      "threshold": 0.0,
+      "weightScale": 1073741824,
+      "outputScale": 1152921504606846976,
+      "inputAbsMax": 8,
+      "primary": true,
+      "sourceName": "scikit-learn1.5.2 diabetes public research regression",
+      "targetMean": 147.17421602787456,
+      "targetStd": 77.01303770337697,
+      "notice": "公開研究模型；未作臨床或工業部署驗證。"
+    },
+    {
+      "id": "diabetes-symptom-logreg-v1",
+      "title": "糖尿病症狀研究",
+      "short": "症狀分析",
+      "features": [
+        "age",
+        "female",
+        "polyuria",
+        "polydipsia",
+        "sudden_weight_loss",
+        "weakness",
+        "polyphagia",
+        "genital_thrush",
+        "visual_blurring",
+        "itching",
+        "irritability",
+        "delayed_healing",
+        "partial_paresis",
+        "muscle_stiffness",
+        "alopecia",
+        "obesity"
+      ],
+      "featureCount": 16,
+      "task": "classification",
+      "sourceSha256": "6395cb10c6041f22490e801b341d0eda9ff090dec4ebf2d69e2c665aa111356d",
+      "threshold": 0.5,
+      "weightScale": 1073741824,
+      "outputScale": 1152921504606846976,
+      "inputAbsMax": 8,
+      "primary": false,
+      "sourceName": "UCI529 Early Stage Diabetes Risk Prediction",
+      "targetMean": 0.0,
+      "targetStd": 1.0,
+      "notice": "公開研究模型；未作臨床或工業部署驗證。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "public-0-0",
+      "modelId": "ai4i-failure-logreg-v1",
+      "label": "基準合成案例",
+      "raw": [
+        9.996876923076947,
+        1538.535076923077,
+        40.01961538461533,
+        108.77338461538461
+      ],
+      "normalized": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contributions": [
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bias": -1.4097262796780072,
+      "score": -1.4097262796780072,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-0-1",
+      "modelId": "ai4i-failure-logreg-v1",
+      "label": "特徵組合 A",
+      "raw": [
+        10.499255366144693,
+        1448.9028005845107,
+        35.06413997841268,
+        76.93590597805768
+      ],
+      "normalized": [
+        0.5000000000000007,
+        -0.4999999999999995,
+        -0.5000000000000002,
+        -0.5
+      ],
+      "contributions": [
+        -0.4487857974837449,
+        -0.8116481091321383,
+        -1.1077324793610344,
+        -0.45990608382707265
+      ],
+      "bias": -1.4097262796780072,
+      "score": -4.237798749481998,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-0-2",
+      "modelId": "ai4i-failure-logreg-v1",
+      "label": "特徵組合 B",
+      "raw": [
+        9.4944984800092,
+        1628.1673532616433,
+        44.97509079081797,
+        140.61086325271157
+      ],
+      "normalized": [
+        -0.5000000000000007,
+        0.4999999999999995,
+        0.5000000000000002,
+        0.5000000000000002
+      ],
+      "contributions": [
+        0.4487857974837449,
+        0.8116481091321383,
+        1.1077324793610344,
+        0.4599060838270729
+      ],
+      "bias": -1.4097262796780072,
+      "score": 1.418346190125983,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-0-3",
+      "modelId": "ai4i-failure-logreg-v1",
+      "label": "數值邊界探針",
+      "raw": [
+        9.996876923076947,
+        1538.535076923077,
+        46.32606936929177,
+        108.77338461538461
+      ],
+      "normalized": [
+        0.0,
+        0.0,
+        0.6363117024839653,
+        0.0
+      ],
+      "contributions": [
+        -0.0,
+        0.0,
+        1.4097262796780068,
+        0.0
+      ],
+      "bias": -1.4097262796780072,
+      "score": -4.440892098500626e-16,
+      "boundary": true,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-1-0",
+      "modelId": "diabetes-progression-ridge-v1",
+      "label": "基準合成案例",
+      "raw": [
+        47.47386759581882,
+        1.4634146341463414,
+        26.367247386759598,
+        94.22759581881536,
+        188.14634146341464,
+        114.70487804878044,
+        49.74738675958188,
+        4.062822299651568,
+        4.628755052264812,
+        91.17421602787456
+      ],
+      "normalized": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contributions": [
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bias": 4.146895757484905e-15,
+      "score": 4.146895757484905e-15,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-1-1",
+      "modelId": "diabetes-progression-ridge-v1",
+      "label": "特徵組合 A",
+      "raw": [
+        53.78225714876455,
+        1.7127444914665957,
+        24.132049828779163,
+        87.41917430423982,
+        204.7914340127018,
+        99.82468012609112,
+        43.37324095084786,
+        3.4231828011067402,
+        4.365725493125562,
+        85.52882312973225
+      ],
+      "normalized": [
+        0.5000000000000001,
+        0.5,
+        -0.5000000000000001,
+        -0.5000000000000006,
+        0.5000000000000002,
+        -0.5000000000000002,
+        -0.5000000000000001,
+        -0.4999999999999999,
+        -0.5000000000000007,
+        -0.5000000000000001
+      ],
+      "contributions": [
+        -0.02355127636505104,
+        -0.07240394219940813,
+        -0.1791145996122056,
+        -0.06739738732688992,
+        -0.19248264029954668,
+        -0.10914365622396024,
+        -0.020395853462992972,
+        -0.04379509591664544,
+        -0.2188556692146746,
+        -0.04787697757044087
+      ],
+      "bias": 4.146895757484905e-15,
+      "score": -0.9750170981918114,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-1-2",
+      "modelId": "diabetes-progression-ridge-v1",
+      "label": "特徵組合 B",
+      "raw": [
+        41.16547804287308,
+        1.2140847768260872,
+        28.602444944740032,
+        101.0360173333909,
+        171.50124891412747,
+        129.58507597146976,
+        56.1215325683159,
+        4.7024617981963965,
+        4.891784611404062,
+        96.81960892601688
+      ],
+      "normalized": [
+        -0.5000000000000001,
+        -0.5,
+        0.5000000000000001,
+        0.5000000000000006,
+        -0.5000000000000002,
+        0.5000000000000002,
+        0.5000000000000001,
+        0.5000000000000002,
+        0.5000000000000007,
+        0.5000000000000001
+      ],
+      "contributions": [
+        0.02355127636505104,
+        0.07240394219940813,
+        0.1791145996122056,
+        0.06739738732688992,
+        0.19248264029954668,
+        0.10914365622396024,
+        0.020395853462992972,
+        0.04379509591664547,
+        0.2188556692146746,
+        0.04787697757044087
+      ],
+      "bias": 4.146895757484905e-15,
+      "score": 0.9750170981918197,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-1-3",
+      "modelId": "diabetes-progression-ridge-v1",
+      "label": "數值邊界探針",
+      "raw": [
+        47.47386759581882,
+        1.4634146341463414,
+        26.367247386759598,
+        94.22759581881536,
+        188.14634146341464,
+        114.70487804878044,
+        49.74738675958188,
+        4.062822299651568,
+        4.628755052264807,
+        91.17421602787456
+      ],
+      "normalized": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0130174220037957e-14,
+        0.0
+      ],
+      "contributions": [
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        -4.434092116375296e-15,
+        0.0
+      ],
+      "bias": 4.146895757484905e-15,
+      "score": -2.871963588903909e-16,
+      "boundary": true,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-2-0",
+      "modelId": "diabetes-symptom-logreg-v1",
+      "label": "基準合成案例",
+      "raw": [
+        45.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized": [
+        -0.2523875719592306,
+        -0.7312883211809496,
+        -0.9915372244226311,
+        -0.889875369132573,
+        -0.9001424388708771,
+        -1.2407934337849083,
+        -0.8898753691325725,
+        -0.5500754728491883,
+        -0.8898753691325726,
+        -0.9529470646935797,
+        -0.5588091427245685,
+        -0.8847758376155411,
+        -0.8645951378970663,
+        -0.7312883211809496,
+        -0.7822225681471497,
+        -0.4840100559551791
+      ],
+      "contributions": [
+        0.11369176275925526,
+        -1.261444118735714,
+        -1.9503915494696293,
+        -1.8451032583522295,
+        -0.1792987590434816,
+        -0.2568368705301821,
+        -0.18589610182354727,
+        -0.44888603199118954,
+        -0.38948101200293134,
+        1.4325132524512063,
+        -0.522125697465008,
+        0.09059157068623051,
+        -0.30713559135944085,
+        0.03982496596011334,
+        -0.07441924284632401,
+        0.11765228518496941
+      ],
+      "bias": 2.0551689359900176,
+      "score": -3.5715754605878853,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-2-1",
+      "modelId": "diabetes-symptom-logreg-v1",
+      "label": "特徵組合 A",
+      "raw": [
+        55.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "normalized": [
+        0.5763827806138702,
+        1.3674497062733202,
+        1.0085350054127336,
+        1.123752869994339,
+        1.1109352884798798,
+        0.8059359219444028,
+        1.1237528699943384,
+        1.8179323553918298,
+        1.1237528699943384,
+        1.0493762319542395,
+        1.7895197546774873,
+        1.1302297796637235,
+        1.1566107142728967,
+        1.3674497062733202,
+        1.278408525553924,
+        2.066072776166884
+      ],
+      "contributions": [
+        -0.2596402582083454,
+        2.3587979456033676,
+        1.9838268331748232,
+        2.3300342429191616,
+        0.22128644312328424,
+        0.1668239486153986,
+        0.23475341063614624,
+        1.4835135935318582,
+        0.491844611311394,
+        -1.5774699506159116,
+        1.6720453883105615,
+        -0.11572342577982994,
+        0.4108701288384573,
+        -0.07446944854330136,
+        0.12162547898018626,
+        -0.5022172173567351
+      ],
+      "bias": 2.0551689359900176,
+      "score": 11.001070660530536,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-2-2",
+      "modelId": "diabetes-symptom-logreg-v1",
+      "label": "特徵組合 B",
+      "raw": [
+        40.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normalized": [
+        -0.6667727482457809,
+        -0.7312883211809496,
+        1.0085350054127336,
+        -0.889875369132573,
+        1.1109352884798798,
+        -1.2407934337849083,
+        1.1237528699943384,
+        -0.5500754728491883,
+        1.1237528699943384,
+        -0.9529470646935797,
+        1.7895197546774873,
+        -0.8847758376155411,
+        1.1566107142728967,
+        -0.7312883211809496,
+        1.278408525553924,
+        -0.4840100559551791
+      ],
+      "contributions": [
+        0.30035777324305557,
+        -1.261444118735714,
+        1.9838268331748232,
+        -1.8451032583522295,
+        0.22128644312328424,
+        -0.2568368705301821,
+        0.23475341063614624,
+        -0.44888603199118954,
+        0.491844611311394,
+        1.4325132524512063,
+        1.6720453883105615,
+        0.09059157068623051,
+        0.4108701288384573,
+        0.03982496596011334,
+        0.12162547898018626,
+        0.11765228518496941
+      ],
+      "bias": 2.0551689359900176,
+      "score": 5.3600907982811306,
+      "boundary": false,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    },
+    {
+      "id": "public-2-3",
+      "modelId": "diabetes-symptom-logreg-v1",
+      "label": "數值邊界探針",
+      "raw": [
+        46.30357432574528,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized": [
+        -0.14435119660391477,
+        1.3674497062733202,
+        -0.9915372244226311,
+        -0.889875369132573,
+        -0.9001424388708771,
+        -1.2407934337849083,
+        -0.8898753691325725,
+        -0.5500754728491883,
+        -0.8898753691325726,
+        -0.9529470646935797,
+        -0.5588091427245685,
+        -0.8847758376155411,
+        -0.8645951378970663,
+        -0.7312883211809496,
+        -0.7822225681471497,
+        -0.4840100559551791
+      ],
+      "contributions": [
+        0.06502515900805896,
+        2.3587979456033676,
+        -1.9503915494696293,
+        -1.8451032583522295,
+        -0.1792987590434816,
+        -0.2568368705301821,
+        -0.18589610182354727,
+        -0.44888603199118954,
+        -0.38948101200293134,
+        1.4325132524512063,
+        -0.522125697465008,
+        0.09059157068623051,
+        -0.30713559135944085,
+        0.03982496596011334,
+        -0.07441924284632401,
+        0.11765228518496941
+      ],
+      "bias": 2.0551689359900176,
+      "score": -4.579669976578771e-16,
+      "boundary": true,
+      "provenance": "reference-demo",
+      "referenceKind": "native-cpp-public-scalar-affine",
+      "notice": "公開合成向量；原生 C++ 明文 affine 參考，不是當次 CKKS／FPGA 執行結果。"
+    }
+  ],
+  "campaign": {
+    "id": "native-campaign-v3-app-v5",
+    "title": "app_v5 / campaign v3",
+    "acceptedStatus": "NATIVE_CPP_V3_ARCHIVE_SOURCE_ELF_IRQ_GATES_PROTOCOL_INDEPENDENT_STATISTICS_SENSOR_PASS",
+    "provenance": "checked-evidence",
+    "sourceId": "campaign-v3-acceptance",
+    "sessions": 10,
+    "pairs": 30,
+    "warmups": 3,
+    "windowSeconds": 60,
+    "workers": 3,
+    "networkE2E": false,
+    "wholeProjectAcceptance": false,
+    "scope": "同板 ARM＋真 PL；單一 boot；不含網路／TLS；歷史量測",
+    "confidenceScope": "10 process sessions, one boot (4e02e74b); marginal 95% session bootstrap; not cross-boot/familywise",
+    "deviceCalls": 550850,
+    "sessionCalls": 534540,
+    "archiveSha256": "b4f5b81b704f2e1b63c6ecc6d680563e4fe2724baaf877535b48b20cbc358156",
+    "models": [
+      {
+        "model": "ai4i-failure-logreg-v1",
+        "primary": true,
+        "model_pass": true,
+        "W1_latency_speedup": {
+          "point": 2.7146240237845096,
+          "CI95": [
+            2.707608901790832,
+            2.721784970132926
+          ]
+        },
+        "W2_sustained_speedup": {
+          "point": 2.582319624008564,
+          "CI95": [
+            2.5758653683989525,
+            2.5897520526416615
+          ]
+        },
+        "P95_speedup": {
+          "1": {
+            "point": 2.6355586259193884,
+            "CI95": [
+              2.5567230467024684,
+              2.70281689546192
+            ]
+          },
+          "2048": {
+            "point": 2.4476018844577476,
+            "CI95": [
+              2.366195803192117,
+              2.521035314236517
+            ]
+          }
+        },
+        "W1_cpu_P50_ms": 12.9526685,
+        "W1_candidate_P50_ms": 4.7715345,
+        "W2_cpu_records_s": 154432.30166583057,
+        "W2_candidate_records_s": 398787.42780940613,
+        "W2_window_max_error": {
+          "cpu": 0.0005529304319131789,
+          "pl": 0.00048314587003295273
+        },
+        "W2_window_requests": {
+          "cpu": 45260,
+          "pl": 116851
+        },
+        "W2_max_in_flight": {
+          "cpu": 3,
+          "pl": 3
+        },
+        "stage_median_of_session_medians_ms": {
+          "1": {
+            "cpu": {
+              "normalize_ns": 0.0546825,
+              "encrypt_ns": 10.7595195,
+              "cloud_ns": 0.502134,
+              "decrypt_ns": 1.60852725,
+              "sink_ns": 0.0006375,
+              "cleanup_ns": 0.00278,
+              "wall_ns": 12.9526685
+            },
+            "candidate": {
+              "normalize_ns": 0.05480825,
+              "encrypt_ns": 2.62285325,
+              "cloud_ns": 0.472951,
+              "decrypt_ns": 1.61353,
+              "sink_ns": 0.0006375,
+              "cleanup_ns": 0.002455,
+              "wall_ns": 4.7715345
+            }
+          },
+          "2048": {
+            "cpu": {
+              "normalize_ns": 0.4018105,
+              "encrypt_ns": 10.898947,
+              "cloud_ns": 0.49946425,
+              "decrypt_ns": 1.6567955,
+              "sink_ns": 0.01401025,
+              "cleanup_ns": 0.18798925,
+              "wall_ns": 13.68752125
+            },
+            "candidate": {
+              "normalize_ns": 0.4018335,
+              "encrypt_ns": 2.77624225,
+              "cloud_ns": 0.47900875,
+              "decrypt_ns": 1.6532675,
+              "sink_ns": 0.0139475,
+              "cleanup_ns": 0.18767625,
+              "wall_ns": 5.52646475
+            }
+          }
+        }
+      },
+      {
+        "model": "diabetes-progression-ridge-v1",
+        "primary": true,
+        "model_pass": true,
+        "W1_latency_speedup": {
+          "point": 3.746341226011751,
+          "CI95": [
+            3.7371335371227143,
+            3.7545868744525843
+          ]
+        },
+        "W2_sustained_speedup": {
+          "point": 3.530904081985108,
+          "CI95": [
+            3.5230552225380665,
+            3.537810486802912
+          ]
+        },
+        "P95_speedup": {
+          "1": {
+            "point": 3.633164405282645,
+            "CI95": [
+              3.4870399886476644,
+              3.7701499183611156
+            ]
+          },
+          "2048": {
+            "point": 3.2987486505719144,
+            "CI95": [
+              3.2271513737940474,
+              3.3571153572560726
+            ]
+          }
+        },
+        "W1_cpu_P50_ms": 29.29940725,
+        "W1_candidate_P50_ms": 7.812755,
+        "W2_cpu_records_s": 67163.10237093823,
+        "W2_candidate_records_s": 237145.02469733747,
+        "W2_window_max_error": {
+          "cpu": 0.00012134562604948496,
+          "pl": 0.00010985144529995772
+        },
+        "W2_window_requests": {
+          "cpu": 19692,
+          "pl": 69493
+        },
+        "W2_max_in_flight": {
+          "cpu": 3,
+          "pl": 3
+        },
+        "stage_median_of_session_medians_ms": {
+          "1": {
+            "cpu": {
+              "normalize_ns": 0.14640875,
+              "encrypt_ns": 26.46230625,
+              "cloud_ns": 1.0394445,
+              "decrypt_ns": 1.61120075,
+              "sink_ns": 0.00062,
+              "cleanup_ns": 0.00346,
+              "wall_ns": 29.29940725
+            },
+            "candidate": {
+              "normalize_ns": 0.1460265,
+              "encrypt_ns": 5.0357555,
+              "cloud_ns": 0.992901,
+              "decrypt_ns": 1.608787,
+              "sink_ns": 0.0006175,
+              "cleanup_ns": 0.0034525,
+              "wall_ns": 7.812755
+            }
+          },
+          "2048": {
+            "cpu": {
+              "normalize_ns": 0.98774925,
+              "encrypt_ns": 26.82219925,
+              "cloud_ns": 1.03499675,
+              "decrypt_ns": 1.6547995,
+              "sink_ns": 0.01397,
+              "cleanup_ns": 0.4099665,
+              "wall_ns": 30.93502225
+            },
+            "candidate": {
+              "normalize_ns": 0.98742425,
+              "encrypt_ns": 5.506694,
+              "cloud_ns": 0.98688775,
+              "decrypt_ns": 1.656899,
+              "sink_ns": 0.0138925,
+              "cleanup_ns": 0.40995075,
+              "wall_ns": 9.562756
+            }
+          }
+        }
+      },
+      {
+        "model": "diabetes-symptom-logreg-v1",
+        "primary": false,
+        "model_pass": true,
+        "W1_latency_speedup": {
+          "point": 4.208083886671168,
+          "CI95": [
+            4.196399496002306,
+            4.22023154280449
+          ]
+        },
+        "W2_sustained_speedup": {
+          "point": 3.9146781476651924,
+          "CI95": [
+            3.9061929204517267,
+            3.924623215516237
+          ]
+        },
+        "P95_speedup": {
+          "1": {
+            "point": 4.297053835155763,
+            "CI95": [
+              4.242781633387928,
+              4.359012149678496
+            ]
+          },
+          "2048": {
+            "point": 3.525186587985395,
+            "CI95": [
+              3.4171072452325078,
+              3.6190185685603264
+            ]
+          }
+        },
+        "W1_cpu_P50_ms": 44.1263165,
+        "W1_candidate_P50_ms": 10.50378225,
+        "W2_cpu_records_s": 44398.40861975498,
+        "W2_candidate_records_s": 173803.83505697508,
+        "W2_window_max_error": {
+          "cpu": 0.0005488538164462042,
+          "pl": 0.000596827187534732
+        },
+        "W2_window_requests": {
+          "cpu": 13021,
+          "pl": 50935
+        },
+        "W2_max_in_flight": {
+          "cpu": 3,
+          "pl": 3
+        },
+        "stage_median_of_session_medians_ms": {
+          "1": {
+            "cpu": {
+              "normalize_ns": 0.19399925,
+              "encrypt_ns": 40.935337,
+              "cloud_ns": 1.2922335,
+              "decrypt_ns": 1.6309065,
+              "sink_ns": 0.0006275,
+              "cleanup_ns": 0.0036025,
+              "wall_ns": 44.1263165
+            },
+            "candidate": {
+              "normalize_ns": 0.19359425,
+              "encrypt_ns": 7.42950275,
+              "cloud_ns": 1.254208,
+              "decrypt_ns": 1.6102985,
+              "sink_ns": 0.0006175,
+              "cleanup_ns": 0.0037825,
+              "wall_ns": 10.50378225
+            }
+          },
+          "2048": {
+            "cpu": {
+              "normalize_ns": 1.71583275,
+              "encrypt_ns": 41.45258575,
+              "cloud_ns": 1.2884435,
+              "decrypt_ns": 1.6787945,
+              "sink_ns": 0.013935,
+              "cleanup_ns": 0.632495,
+              "wall_ns": 46.82777125
+            },
+            "candidate": {
+              "normalize_ns": 1.70864625,
+              "encrypt_ns": 8.1604435,
+              "cloud_ns": 1.24858725,
+              "decrypt_ns": 1.6568565,
+              "sink_ns": 0.013895,
+              "cleanup_ns": 0.632678,
+              "wall_ns": 13.430237
+            }
+          }
+        }
+      }
+    ],
+    "precisionExceedances": {
+      "ai4i-failure-logreg-v1": 1,
+      "diabetes-progression-ridge-v1": 0,
+      "diabetes-symptom-logreg-v1": 25
+    }
+  },
+  "hardware": {
+    "name": "AMD Kria KV260",
+    "n": 4096,
+    "slots": 2048,
+    "limbs": 3,
+    "lanesPerLimb": 4,
+    "nominalPLMHz": 200,
+    "baseline": "V8b rev4 routed baseline",
+    "sourceId": "utilization",
+    "resources": [
+      {
+        "name": "LUT",
+        "used": 53046.0,
+        "available": 117120.0,
+        "percent": 45.29
+      },
+      {
+        "name": "FF",
+        "used": 61285.0,
+        "available": 234240.0,
+        "percent": 26.16
+      },
+      {
+        "name": "BRAM",
+        "used": 65.5,
+        "available": 144.0,
+        "percent": 45.49
+      },
+      {
+        "name": "URAM",
+        "used": 42.0,
+        "available": 64.0,
+        "percent": 65.63
+      },
+      {
+        "name": "DSP",
+        "used": 531.0,
+        "available": 1248.0,
+        "percent": 42.55
+      }
+    ],
+    "clockNotice": "200 MHz 為基準名目時脈；此頁未讀取目前硬體。",
+    "architectureNotice": "PS：KeyGen／正規化／編解碼／解密；PL ENC：ChaCha20／CDT63／三分量 NTT。"
+  },
+  "sensors": {
+    "provenance": "checked-evidence",
+    "scope": "歷史 session 摘要；非即時感測",
+    "maxTempC": 40.287,
+    "cpuFrequencyKHz": 1333333,
+    "sessions": [
+      {
+        "index": 1,
+        "powerW": 4.321190476190476,
+        "temperatureC": 38.857,
+        "samples": 714
+      },
+      {
+        "index": 2,
+        "powerW": 4.319915966386555,
+        "temperatureC": 38.935,
+        "samples": 714
+      },
+      {
+        "index": 3,
+        "powerW": 4.3088671328671335,
+        "temperatureC": 38.546,
+        "samples": 715
+      },
+      {
+        "index": 4,
+        "powerW": 4.311090909090909,
+        "temperatureC": 38.966,
+        "samples": 715
+      },
+      {
+        "index": 5,
+        "powerW": 4.326293706293706,
+        "temperatureC": 39.572,
+        "samples": 715
+      },
+      {
+        "index": 6,
+        "powerW": 4.313454545454546,
+        "temperatureC": 39.603,
+        "samples": 715
+      },
+      {
+        "index": 7,
+        "powerW": 4.317478991596638,
+        "temperatureC": 40.287,
+        "samples": 714
+      },
+      {
+        "index": 8,
+        "powerW": 4.320615384615385,
+        "temperatureC": 39.23,
+        "samples": 715
+      },
+      {
+        "index": 9,
+        "powerW": 4.318587412587413,
+        "temperatureC": 39.541,
+        "samples": 715
+      },
+      {
+        "index": 10,
+        "powerW": 4.3148599439775905,
+        "temperatureC": 39.494,
+        "samples": 714
+      }
+    ]
+  },
+  "energy": {
+    "scope": "INA260 U14 = K26 SOM supply rail, not wall power; single 30 s window per cell, no CI",
+    "windowSeconds": 30,
+    "hasCI": false,
+    "idleW": 3.5627088122605364,
+    "models": [
+      {
+        "modelId": "ai4i-failure-logreg-v1",
+        "recordsPerJRatio": 2.51760398082482,
+        "cpu": {
+          "records_per_s": 154093.3304009644,
+          "mean_W": 4.175862068965517,
+          "records_per_J_total": 36900.96268891798,
+          "records_per_J_incremental": 251312.91192848788
+        },
+        "pl": {
+          "records_per_s": 399302.4519478116,
+          "mean_W": 4.298103448275862,
+          "records_per_J_total": 92902.01056188805,
+          "records_per_J_incremental": 542977.1069740168
+        }
+      },
+      {
+        "modelId": "diabetes-progression-ridge-v1",
+        "recordsPerJRatio": 3.267064225135648,
+        "cpu": {
+          "records_per_s": 67193.94737411183,
+          "mean_W": 4.145862068965517,
+          "records_per_J_total": 16207.47295890579,
+          "records_per_J_incremental": 115225.1944090668
+        },
+        "pl": {
+          "records_per_s": 236900.2997537894,
+          "mean_W": 4.473965517241379,
+          "records_per_J_total": 52950.85508389451,
+          "records_per_J_incremental": 259970.98123823374
+        }
+      }
+    ]
+  },
+  "papers": [
+    {
+      "id": "EF01",
+      "title": "Aloha-HE: A Low-Area Hardware Accelerator for Client-Side Operations in Homomorphic Encryption",
+      "year": 2024,
+      "venue": "DATE 2024",
+      "doi": "10.23919/DATE58400.2024.10546608",
+      "url": "https://doi.org/10.23919/DATE58400.2024.10546608",
+      "limit": "本文範例 N=8192，平台為 Genesys2 與 PYNQ-Z2，不是 KV260；不能把低面積設計直接當成最高吞吐設計。",
+      "pages": {
+        "first": 1,
+        "last": 6
+      }
+    },
+    {
+      "id": "EF02",
+      "title": "RISE: RISC-V SoC for En/Decryption Acceleration on the Edge for Homomorphic Encryption",
+      "year": 2023,
+      "venue": "IEEE Transactions on VLSI Systems 31(10), 1523-1536",
+      "doi": "10.1109/TVLSI.2023.3288754",
+      "url": "https://doi.org/10.1109/TVLSI.2023.3288754",
+      "limit": "1GHz／12nm RTL 評估與 A53＋100MHz FPGA 不同，作者加速倍數不作 EdgeFHE 排名；作者 BFV／BGV 延伸說明不等於我們已有這些 PL 後端。",
+      "pages": {
+        "first": 1,
+        "last": 14
+      }
+    },
+    {
+      "id": "EF04",
+      "title": "HEAX: An Architecture for Computing on Encrypted Data",
+      "year": 2020,
+      "venue": "ASPLOS 2020, 1295-1309",
+      "doi": "10.1145/3373376.3378523",
+      "url": "https://doi.org/10.1145/3373376.3378523",
+      "limit": "Intel FPGA 及不同 CPU／密文操作基準，不是 KV260 client E2E；本文高階 key switching 不列入本輪 PL 範圍。",
+      "pages": {
+        "first": 1,
+        "last": 15
+      }
+    },
+    {
+      "id": "EF11",
+      "title": "Homomorphic Encryption for Arithmetic of Approximate Numbers",
+      "year": 2017,
+      "venue": "ASIACRYPT 2017, 409-437",
+      "doi": "10.1007/978-3-319-70694-8_15",
+      "url": "https://doi.org/10.1007/978-3-319-70694-8_15",
+      "limit": "只支援當前 affine 不代表已具備任意深度或 rescale；經驗門檻 5e-4 不可取代解析界。",
+      "pages": {
+        "first": 424,
+        "last": 452
+      }
+    },
+    {
+      "id": "EF12",
+      "title": "A Full RNS Variant of Approximate Homomorphic Encryption",
+      "year": 2019,
+      "venue": "Selected Areas in Cryptography - SAC 2018, 347-368",
+      "doi": "10.1007/978-3-030-10970-7_16",
+      "url": "https://doi.org/10.1007/978-3-030-10970-7_16",
+      "limit": "Full-RNS 高階運算不是三個 limb 各算 NTT 就自然得到；新增基底與輔助模數會改變資源及安全估算。",
+      "pages": {
+        "first": 352,
+        "last": 373
+      }
+    },
+    {
+      "id": "EF36",
+      "title": "OpenFHE: Open-Source Fully Homomorphic Encryption Library",
+      "year": 2022,
+      "venue": "WAHC 2022, 53-63",
+      "doi": "10.1145/3560827.3563379",
+      "url": "https://doi.org/10.1145/3560827.3563379",
+      "limit": "2022 論文不是 1.5.1 每項 API 的規格；實驗必須同時保存實際 commit、參數與建置身分。",
+      "pages": {
+        "first": 1,
+        "last": 11
+      }
+    },
+    {
+      "id": "EF39",
+      "title": "Roofline: An Insightful Visual Performance Model for Multicore Architectures",
+      "year": 2009,
+      "venue": "Communications of the ACM 52(4), 65-76",
+      "doi": "10.1145/1498765.1498785",
+      "url": "https://doi.org/10.1145/1498765.1498785",
+      "limit": "高於理想傳輸下界不代表 compute-bound；不同記憶體層級與瓶頸 ceiling 要分開。",
+      "pages": {
+        "first": 1,
+        "last": 12
+      }
+    },
+    {
+      "id": "EF40",
+      "title": "Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities",
+      "year": 1967,
+      "venue": "AFIPS Spring Joint Computer Conference 1967, 483-485",
+      "doi": "10.1145/1465482.1465560",
+      "url": "https://doi.org/10.1145/1465482.1465560",
+      "limit": "不同 run 的中位數相減只是估算；固定工作量 latency 的公式不能直接取代穩態管線模型。",
+      "pages": {
+        "first": 1,
+        "last": 3
+      }
+    },
+    {
+      "id": "EF41",
+      "title": "Rigorous Benchmarking in Reasonable Time",
+      "year": 2013,
+      "venue": "ACM ISMM 2013",
+      "doi": "10.1145/2464157.2464160",
+      "url": "https://doi.org/10.1145/2464157.2464160",
+      "limit": "重複同一份有偏差的測試十次，不能修正工作量或輸出處理不等價；本文不替任意十次重複提供自動認證。",
+      "pages": {
+        "first": 1,
+        "last": 11
+      }
+    }
+  ],
+  "gates": [
+    {
+      "id": "local-performance",
+      "title": "同板正式效能",
+      "state": "accepted",
+      "detail": "app_v5 兩主模型、十 session；不含網路。"
+    },
+    {
+      "id": "math",
+      "title": "數學與精度",
+      "state": "partial",
+      "detail": "整數與案例原件已驗；解析證書、任意 dense 與新組合範圍仍需逐關核對。"
+    },
+    {
+      "id": "network",
+      "title": "原生兩機 E2E",
+      "state": "accepted",
+      "detail": "有線 LAN＋mTLS 十 session：兩主模型延遲與吞吐 CI 下界皆 > 1；單板單 boot、單一 PC。"
+    },
+    {
+      "id": "security",
+      "title": "安全參數與側信道",
+      "state": "partial",
+      "detail": "研究設定；不宣稱產品安全認證或常數時間證明。"
+    },
+    {
+      "id": "fault",
+      "title": "故障與清除",
+      "state": "partial",
+      "detail": "fail-closed 與隔離設計；最新整合／全路徑 quiescence 仍需驗收。"
+    },
+    {
+      "id": "soak",
+      "title": "兩機組合六小時",
+      "state": "accepted",
+      "detail": "有線 LAN 360/360 窗口、6.0 小時、首末小時吞吐無衰退；換組合或換網路需重測。"
+    },
+    {
+      "id": "live",
+      "title": "即時前中後端展示",
+      "state": "pending",
+      "detail": "邊緣閘道與瀏覽器 Live 模式開發中；本頁仍為離線展示。"
+    },
+    {
+      "id": "release",
+      "title": "完整研究發布與簽認",
+      "state": "pending",
+      "detail": "本次只交付展示前端；整個加速器專題尚未全數驗收。"
+    }
+  ],
+  "lan": {
+    "provenance": "checked-evidence",
+    "networkE2E": true,
+    "wholeProjectAcceptance": false,
+    "scope": "兩機：KV260（ARM＋PL 用戶端）↔ PC（Windows 原生雲端服務），mTLS；含網路的 warm request E2E；單板單 boot；session bootstrap 邊際 CI",
+    "topology": {
+      "front": "瀏覽器展示（本頁）",
+      "edge": "KV260：正規化、編碼、PL 加密、解密",
+      "cloud": "PC：Windows 原生 efnet_server，只收密文",
+      "transport": "TLS 1.3 雙向憑證（mTLS）",
+      "lan": "路由器同網段"
+    },
+    "runs": [
+      {
+        "id": "wired",
+        "title": "有線 LAN",
+        "bootTag": "e26925f5",
+        "sessions": 10,
+        "connections": 1728,
+        "soakWindows": 360,
+        "soakComplete": true,
+        "serverResponses": 1794939,
+        "deviceCalls": 2879110,
+        "sourceId": "lan-wired-review",
+        "note": "十個 session 與六小時浸泡皆經獨立審查接受。",
+        "models": [
+          {
+            "model": "ai4i-failure-logreg-v1",
+            "latency": {
+              "point": 1.599798794153481,
+              "CI95": [
+                1.5712224201964557,
+                1.625853100752894
+              ]
+            },
+            "records": {
+              "point": 1.640491202061486,
+              "CI95": [
+                1.6353095146371905,
+                1.6464118366988933
+              ]
+            },
+            "P95": {
+              "point": 1.4538411730438467,
+              "CI95": [
+                1.3006499105978804,
+                1.6063759884191147
+              ]
+            },
+            "decompositionMs": {
+              "cpu": {
+                "prepare": 13.383,
+                "net": 8.503,
+                "decrypt": 1.685,
+                "total": 23.817
+              },
+              "pl": {
+                "prepare": 4.91,
+                "net": 8.104,
+                "decrypt": 1.66,
+                "total": 14.829
+              }
+            },
+            "windowRecordsPerS": {
+              "cpu": 127872,
+              "pl": 209771
+            }
+          },
+          {
+            "model": "diabetes-progression-ridge-v1",
+            "latency": {
+              "point": 1.81068445656707,
+              "CI95": [
+                1.7914680183873344,
+                1.829210195032364
+              ]
+            },
+            "records": {
+              "point": 2.021562176848513,
+              "CI95": [
+                2.0125518455116507,
+                2.0304858349856945
+              ]
+            },
+            "P95": {
+              "point": 1.5075258309863702,
+              "CI95": [
+                1.3949526943281647,
+                1.6320103600729097
+              ]
+            },
+            "decompositionMs": {
+              "cpu": {
+                "prepare": 32.517,
+                "net": 15.562,
+                "decrypt": 1.714,
+                "total": 50.233
+              },
+              "pl": {
+                "prepare": 10.672,
+                "net": 15.27,
+                "decrypt": 1.704,
+                "total": 27.809
+              }
+            },
+            "windowRecordsPerS": {
+              "cpu": 50144,
+              "pl": 101367
+            }
+          }
+        ],
+        "serverConnections": 1728,
+        "serverCloudMedianMs": 0.1212,
+        "scope": "two-machine KV260 ARM+PL client <-> Windows-native PC server over wired Ethernet LAN (router) with mTLS; warm-request E2E incl. network; single board/boot e26925f5; marginal CIs, not cross-boot"
+      },
+      {
+        "id": "wifi",
+        "title": "Wi-Fi LAN",
+        "bootTag": "da6d5dd4",
+        "sessions": 10,
+        "connections": 1371,
+        "soakWindows": 3,
+        "soakComplete": false,
+        "serverResponses": null,
+        "deviceCalls": 153350,
+        "sourceId": "lan-wifi-review",
+        "note": "十個 session 已審查接受；六小時浸泡在第 4 個窗口因 TLS 30 秒逾時停止（疑為 Wi-Fi，未證實），不計入浸泡。",
+        "models": [
+          {
+            "model": "ai4i-failure-logreg-v1",
+            "latency": {
+              "point": 1.2516894157798946,
+              "CI95": [
+                1.2136456142447827,
+                1.290409783451421
+              ]
+            },
+            "records": {
+              "point": 1.433430505310413,
+              "CI95": [
+                1.3958089886790477,
+                1.4706342678464224
+              ]
+            },
+            "P95": {
+              "point": 1.1411765830219276,
+              "CI95": [
+                1.0712900460102073,
+                1.205269482356258
+              ]
+            },
+            "decompositionMs": {
+              "cpu": {
+                "prepare": 13.389,
+                "net": 31.231,
+                "decrypt": 1.705,
+                "total": 46.409
+              },
+              "pl": {
+                "prepare": 4.902,
+                "net": 29.924,
+                "decrypt": 1.698,
+                "total": 36.652
+              }
+            },
+            "windowRecordsPerS": {
+              "cpu": 121454,
+              "pl": 174011
+            }
+          },
+          {
+            "model": "diabetes-progression-ridge-v1",
+            "latency": {
+              "point": 1.3780592631152115,
+              "CI95": [
+                1.337840357011689,
+                1.4168124681613596
+              ]
+            },
+            "records": {
+              "point": 1.7944180819148747,
+              "CI95": [
+                1.741709330936265,
+                1.8524645448023083
+              ]
+            },
+            "P95": {
+              "point": 1.347793250755957,
+              "CI95": [
+                1.2732014429942544,
+                1.4404766437039034
+              ]
+            },
+            "decompositionMs": {
+              "cpu": {
+                "prepare": 32.529,
+                "net": 55.074,
+                "decrypt": 1.707,
+                "total": 89.663
+              },
+              "pl": {
+                "prepare": 10.674,
+                "net": 53.489,
+                "decrypt": 1.692,
+                "total": 66.05
+              }
+            },
+            "windowRecordsPerS": {
+              "cpu": 51512,
+              "pl": 92375
+            }
+          }
+        ],
+        "serverConnections": 1372,
+        "serverCloudMedianMs": 0.1641,
+        "scope": "two-machine KV260 ARM+PL client <-> Windows-native PC server over Wi-Fi LAN with mTLS; warm-request E2E incl. network; single board/boot; soak incomplete"
+      }
+    ],
+    "soak": {
+      "sourceId": "lan-wired-soak",
+      "windows": 360,
+      "activeHours": 6.0018,
+      "requests": 1650251,
+      "records": 3379714048,
+      "deviceCalls": 2726453,
+      "maxError": 0.0004736602983652638,
+      "perModel": {
+        "ai4i-failure-logreg-v1": {
+          "windows": 180,
+          "meanRecordsPerS": 210890,
+          "minRecordsPerS": 188810,
+          "maxRecordsPerS": 216967,
+          "firstHour": 208889,
+          "lastHour": 212619,
+          "p50Ms": 18.52,
+          "p99Ms": 26.63,
+          "maxMs": 234.4
+        },
+        "diabetes-progression-ridge-v1": {
+          "windows": 180,
+          "meanRecordsPerS": 101965,
+          "minRecordsPerS": 91080,
+          "maxRecordsPerS": 104075,
+          "firstHour": 101410,
+          "lastHour": 102819,
+          "p50Ms": 38.98,
+          "p99Ms": 49.49,
+          "maxMs": 247.7
+        }
+      },
+      "series": [
+        {
+          "index": 0,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208321,
+          "activeHour": 0.0167
+        },
+        {
+          "index": 1,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101889,
+          "activeHour": 0.0333
+        },
+        {
+          "index": 2,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209196,
+          "activeHour": 0.05
+        },
+        {
+          "index": 3,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100929,
+          "activeHour": 0.0667
+        },
+        {
+          "index": 4,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209851,
+          "activeHour": 0.0834
+        },
+        {
+          "index": 5,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101350,
+          "activeHour": 0.1
+        },
+        {
+          "index": 6,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210600,
+          "activeHour": 0.1167
+        },
+        {
+          "index": 7,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101915,
+          "activeHour": 0.1334
+        },
+        {
+          "index": 8,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209978,
+          "activeHour": 0.15
+        },
+        {
+          "index": 9,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102204,
+          "activeHour": 0.1667
+        },
+        {
+          "index": 10,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207982,
+          "activeHour": 0.1834
+        },
+        {
+          "index": 11,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101167,
+          "activeHour": 0.2001
+        },
+        {
+          "index": 12,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209018,
+          "activeHour": 0.2167
+        },
+        {
+          "index": 13,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101919,
+          "activeHour": 0.2334
+        },
+        {
+          "index": 14,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210837,
+          "activeHour": 0.2501
+        },
+        {
+          "index": 15,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101020,
+          "activeHour": 0.2667
+        },
+        {
+          "index": 16,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210695,
+          "activeHour": 0.2834
+        },
+        {
+          "index": 17,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101803,
+          "activeHour": 0.3001
+        },
+        {
+          "index": 18,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207529,
+          "activeHour": 0.3168
+        },
+        {
+          "index": 19,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101052,
+          "activeHour": 0.3334
+        },
+        {
+          "index": 20,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210181,
+          "activeHour": 0.3501
+        },
+        {
+          "index": 21,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100161,
+          "activeHour": 0.3668
+        },
+        {
+          "index": 22,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207158,
+          "activeHour": 0.3834
+        },
+        {
+          "index": 23,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100467,
+          "activeHour": 0.4001
+        },
+        {
+          "index": 24,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209154,
+          "activeHour": 0.4168
+        },
+        {
+          "index": 25,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101775,
+          "activeHour": 0.4335
+        },
+        {
+          "index": 26,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207459,
+          "activeHour": 0.4501
+        },
+        {
+          "index": 27,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102262,
+          "activeHour": 0.4668
+        },
+        {
+          "index": 28,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208573,
+          "activeHour": 0.4835
+        },
+        {
+          "index": 29,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101452,
+          "activeHour": 0.5001
+        },
+        {
+          "index": 30,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209027,
+          "activeHour": 0.5168
+        },
+        {
+          "index": 31,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101693,
+          "activeHour": 0.5335
+        },
+        {
+          "index": 32,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208440,
+          "activeHour": 0.5501
+        },
+        {
+          "index": 33,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100353,
+          "activeHour": 0.5668
+        },
+        {
+          "index": 34,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208115,
+          "activeHour": 0.5835
+        },
+        {
+          "index": 35,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100893,
+          "activeHour": 0.6002
+        },
+        {
+          "index": 36,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208686,
+          "activeHour": 0.6168
+        },
+        {
+          "index": 37,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100364,
+          "activeHour": 0.6335
+        },
+        {
+          "index": 38,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209813,
+          "activeHour": 0.6502
+        },
+        {
+          "index": 39,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101720,
+          "activeHour": 0.6668
+        },
+        {
+          "index": 40,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209936,
+          "activeHour": 0.6835
+        },
+        {
+          "index": 41,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101528,
+          "activeHour": 0.7002
+        },
+        {
+          "index": 42,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 206599,
+          "activeHour": 0.7169
+        },
+        {
+          "index": 43,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101589,
+          "activeHour": 0.7335
+        },
+        {
+          "index": 44,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207280,
+          "activeHour": 0.7502
+        },
+        {
+          "index": 45,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102253,
+          "activeHour": 0.7669
+        },
+        {
+          "index": 46,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207866,
+          "activeHour": 0.7835
+        },
+        {
+          "index": 47,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101325,
+          "activeHour": 0.8002
+        },
+        {
+          "index": 48,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208069,
+          "activeHour": 0.8169
+        },
+        {
+          "index": 49,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102116,
+          "activeHour": 0.8336
+        },
+        {
+          "index": 50,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209424,
+          "activeHour": 0.8502
+        },
+        {
+          "index": 51,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102311,
+          "activeHour": 0.8669
+        },
+        {
+          "index": 52,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207694,
+          "activeHour": 0.8836
+        },
+        {
+          "index": 53,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100652,
+          "activeHour": 0.9002
+        },
+        {
+          "index": 54,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208877,
+          "activeHour": 0.9169
+        },
+        {
+          "index": 55,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102116,
+          "activeHour": 0.9336
+        },
+        {
+          "index": 56,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209563,
+          "activeHour": 0.9503
+        },
+        {
+          "index": 57,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100620,
+          "activeHour": 0.9669
+        },
+        {
+          "index": 58,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210748,
+          "activeHour": 0.9836
+        },
+        {
+          "index": 59,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101392,
+          "activeHour": 1.0003
+        },
+        {
+          "index": 60,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 204352,
+          "activeHour": 1.0169
+        },
+        {
+          "index": 61,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101110,
+          "activeHour": 1.0336
+        },
+        {
+          "index": 62,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208678,
+          "activeHour": 1.0503
+        },
+        {
+          "index": 63,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102038,
+          "activeHour": 1.067
+        },
+        {
+          "index": 64,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 206954,
+          "activeHour": 1.0836
+        },
+        {
+          "index": 65,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100402,
+          "activeHour": 1.1003
+        },
+        {
+          "index": 66,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208743,
+          "activeHour": 1.117
+        },
+        {
+          "index": 67,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102061,
+          "activeHour": 1.1336
+        },
+        {
+          "index": 68,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208227,
+          "activeHour": 1.1503
+        },
+        {
+          "index": 69,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101944,
+          "activeHour": 1.167
+        },
+        {
+          "index": 70,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208427,
+          "activeHour": 1.1836
+        },
+        {
+          "index": 71,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101778,
+          "activeHour": 1.2003
+        },
+        {
+          "index": 72,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209445,
+          "activeHour": 1.217
+        },
+        {
+          "index": 73,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100369,
+          "activeHour": 1.2337
+        },
+        {
+          "index": 74,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211621,
+          "activeHour": 1.2503
+        },
+        {
+          "index": 75,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101283,
+          "activeHour": 1.267
+        },
+        {
+          "index": 76,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210359,
+          "activeHour": 1.2837
+        },
+        {
+          "index": 77,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102124,
+          "activeHour": 1.3003
+        },
+        {
+          "index": 78,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208899,
+          "activeHour": 1.317
+        },
+        {
+          "index": 79,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101675,
+          "activeHour": 1.3337
+        },
+        {
+          "index": 80,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210315,
+          "activeHour": 1.3504
+        },
+        {
+          "index": 81,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101534,
+          "activeHour": 1.367
+        },
+        {
+          "index": 82,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210763,
+          "activeHour": 1.3837
+        },
+        {
+          "index": 83,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101355,
+          "activeHour": 1.4004
+        },
+        {
+          "index": 84,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207957,
+          "activeHour": 1.4171
+        },
+        {
+          "index": 85,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101582,
+          "activeHour": 1.4337
+        },
+        {
+          "index": 86,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208135,
+          "activeHour": 1.4504
+        },
+        {
+          "index": 87,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101263,
+          "activeHour": 1.4671
+        },
+        {
+          "index": 88,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207713,
+          "activeHour": 1.4837
+        },
+        {
+          "index": 89,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101055,
+          "activeHour": 1.5004
+        },
+        {
+          "index": 90,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210015,
+          "activeHour": 1.5171
+        },
+        {
+          "index": 91,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101223,
+          "activeHour": 1.5337
+        },
+        {
+          "index": 92,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207953,
+          "activeHour": 1.5504
+        },
+        {
+          "index": 93,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101437,
+          "activeHour": 1.5671
+        },
+        {
+          "index": 94,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209378,
+          "activeHour": 1.5838
+        },
+        {
+          "index": 95,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101331,
+          "activeHour": 1.6004
+        },
+        {
+          "index": 96,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209940,
+          "activeHour": 1.6171
+        },
+        {
+          "index": 97,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101301,
+          "activeHour": 1.6338
+        },
+        {
+          "index": 98,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209827,
+          "activeHour": 1.6504
+        },
+        {
+          "index": 99,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102240,
+          "activeHour": 1.6671
+        },
+        {
+          "index": 100,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208364,
+          "activeHour": 1.6838
+        },
+        {
+          "index": 101,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101901,
+          "activeHour": 1.7005
+        },
+        {
+          "index": 102,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210572,
+          "activeHour": 1.7171
+        },
+        {
+          "index": 103,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101229,
+          "activeHour": 1.7338
+        },
+        {
+          "index": 104,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209284,
+          "activeHour": 1.7505
+        },
+        {
+          "index": 105,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101271,
+          "activeHour": 1.7672
+        },
+        {
+          "index": 106,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208169,
+          "activeHour": 1.7838
+        },
+        {
+          "index": 107,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102008,
+          "activeHour": 1.8005
+        },
+        {
+          "index": 108,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210023,
+          "activeHour": 1.8172
+        },
+        {
+          "index": 109,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102007,
+          "activeHour": 1.8338
+        },
+        {
+          "index": 110,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210108,
+          "activeHour": 1.8505
+        },
+        {
+          "index": 111,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101837,
+          "activeHour": 1.8672
+        },
+        {
+          "index": 112,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210384,
+          "activeHour": 1.8838
+        },
+        {
+          "index": 113,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101881,
+          "activeHour": 1.9005
+        },
+        {
+          "index": 114,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208466,
+          "activeHour": 1.9172
+        },
+        {
+          "index": 115,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101220,
+          "activeHour": 1.9339
+        },
+        {
+          "index": 116,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209668,
+          "activeHour": 1.9505
+        },
+        {
+          "index": 117,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101050,
+          "activeHour": 1.9672
+        },
+        {
+          "index": 118,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207715,
+          "activeHour": 1.9839
+        },
+        {
+          "index": 119,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101103,
+          "activeHour": 2.0005
+        },
+        {
+          "index": 120,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209404,
+          "activeHour": 2.0172
+        },
+        {
+          "index": 121,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100917,
+          "activeHour": 2.0339
+        },
+        {
+          "index": 122,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209201,
+          "activeHour": 2.0506
+        },
+        {
+          "index": 123,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101462,
+          "activeHour": 2.0672
+        },
+        {
+          "index": 124,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 206179,
+          "activeHour": 2.0839
+        },
+        {
+          "index": 125,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101197,
+          "activeHour": 2.1006
+        },
+        {
+          "index": 126,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207046,
+          "activeHour": 2.1172
+        },
+        {
+          "index": 127,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102593,
+          "activeHour": 2.1339
+        },
+        {
+          "index": 128,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207897,
+          "activeHour": 2.1506
+        },
+        {
+          "index": 129,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100514,
+          "activeHour": 2.1673
+        },
+        {
+          "index": 130,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209321,
+          "activeHour": 2.1839
+        },
+        {
+          "index": 131,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101225,
+          "activeHour": 2.2006
+        },
+        {
+          "index": 132,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208362,
+          "activeHour": 2.2173
+        },
+        {
+          "index": 133,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101686,
+          "activeHour": 2.2339
+        },
+        {
+          "index": 134,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207678,
+          "activeHour": 2.2506
+        },
+        {
+          "index": 135,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100737,
+          "activeHour": 2.2673
+        },
+        {
+          "index": 136,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209560,
+          "activeHour": 2.284
+        },
+        {
+          "index": 137,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100768,
+          "activeHour": 2.3006
+        },
+        {
+          "index": 138,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208117,
+          "activeHour": 2.3173
+        },
+        {
+          "index": 139,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100950,
+          "activeHour": 2.334
+        },
+        {
+          "index": 140,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210745,
+          "activeHour": 2.3506
+        },
+        {
+          "index": 141,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100910,
+          "activeHour": 2.3673
+        },
+        {
+          "index": 142,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209484,
+          "activeHour": 2.384
+        },
+        {
+          "index": 143,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101459,
+          "activeHour": 2.4007
+        },
+        {
+          "index": 144,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207456,
+          "activeHour": 2.4173
+        },
+        {
+          "index": 145,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101315,
+          "activeHour": 2.434
+        },
+        {
+          "index": 146,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207825,
+          "activeHour": 2.4507
+        },
+        {
+          "index": 147,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102023,
+          "activeHour": 2.4673
+        },
+        {
+          "index": 148,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210108,
+          "activeHour": 2.484
+        },
+        {
+          "index": 149,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102326,
+          "activeHour": 2.5007
+        },
+        {
+          "index": 150,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209261,
+          "activeHour": 2.5174
+        },
+        {
+          "index": 151,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100318,
+          "activeHour": 2.534
+        },
+        {
+          "index": 152,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210154,
+          "activeHour": 2.5507
+        },
+        {
+          "index": 153,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101539,
+          "activeHour": 2.5674
+        },
+        {
+          "index": 154,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207275,
+          "activeHour": 2.584
+        },
+        {
+          "index": 155,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101408,
+          "activeHour": 2.6007
+        },
+        {
+          "index": 156,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211476,
+          "activeHour": 2.6174
+        },
+        {
+          "index": 157,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102176,
+          "activeHour": 2.634
+        },
+        {
+          "index": 158,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207653,
+          "activeHour": 2.6507
+        },
+        {
+          "index": 159,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101469,
+          "activeHour": 2.6674
+        },
+        {
+          "index": 160,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209781,
+          "activeHour": 2.6841
+        },
+        {
+          "index": 161,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102068,
+          "activeHour": 2.7007
+        },
+        {
+          "index": 162,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209651,
+          "activeHour": 2.7174
+        },
+        {
+          "index": 163,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101473,
+          "activeHour": 2.7341
+        },
+        {
+          "index": 164,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211388,
+          "activeHour": 2.7508
+        },
+        {
+          "index": 165,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101135,
+          "activeHour": 2.7674
+        },
+        {
+          "index": 166,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207148,
+          "activeHour": 2.7841
+        },
+        {
+          "index": 167,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101983,
+          "activeHour": 2.8008
+        },
+        {
+          "index": 168,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 209338,
+          "activeHour": 2.8174
+        },
+        {
+          "index": 169,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101928,
+          "activeHour": 2.8341
+        },
+        {
+          "index": 170,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207842,
+          "activeHour": 2.8508
+        },
+        {
+          "index": 171,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100957,
+          "activeHour": 2.8675
+        },
+        {
+          "index": 172,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208196,
+          "activeHour": 2.8841
+        },
+        {
+          "index": 173,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100997,
+          "activeHour": 2.9008
+        },
+        {
+          "index": 174,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210841,
+          "activeHour": 2.9175
+        },
+        {
+          "index": 175,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101712,
+          "activeHour": 2.9341
+        },
+        {
+          "index": 176,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212291,
+          "activeHour": 2.9508
+        },
+        {
+          "index": 177,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101910,
+          "activeHour": 2.9675
+        },
+        {
+          "index": 178,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211394,
+          "activeHour": 2.9842
+        },
+        {
+          "index": 179,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103103,
+          "activeHour": 3.0008
+        },
+        {
+          "index": 180,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210717,
+          "activeHour": 3.0175
+        },
+        {
+          "index": 181,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101801,
+          "activeHour": 3.0342
+        },
+        {
+          "index": 182,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214247,
+          "activeHour": 3.0508
+        },
+        {
+          "index": 183,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102528,
+          "activeHour": 3.0675
+        },
+        {
+          "index": 184,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211202,
+          "activeHour": 3.0842
+        },
+        {
+          "index": 185,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 92423,
+          "activeHour": 3.1009
+        },
+        {
+          "index": 186,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 190244,
+          "activeHour": 3.1175
+        },
+        {
+          "index": 187,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 97088,
+          "activeHour": 3.1342
+        },
+        {
+          "index": 188,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 188810,
+          "activeHour": 3.1509
+        },
+        {
+          "index": 189,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 91080,
+          "activeHour": 3.1675
+        },
+        {
+          "index": 190,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 199955,
+          "activeHour": 3.1842
+        },
+        {
+          "index": 191,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 94256,
+          "activeHour": 3.2009
+        },
+        {
+          "index": 192,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 207125,
+          "activeHour": 3.2176
+        },
+        {
+          "index": 193,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102725,
+          "activeHour": 3.2342
+        },
+        {
+          "index": 194,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214562,
+          "activeHour": 3.2509
+        },
+        {
+          "index": 195,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102224,
+          "activeHour": 3.2676
+        },
+        {
+          "index": 196,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215787,
+          "activeHour": 3.2843
+        },
+        {
+          "index": 197,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102943,
+          "activeHour": 3.3009
+        },
+        {
+          "index": 198,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215255,
+          "activeHour": 3.3176
+        },
+        {
+          "index": 199,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102581,
+          "activeHour": 3.3343
+        },
+        {
+          "index": 200,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212532,
+          "activeHour": 3.3509
+        },
+        {
+          "index": 201,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102320,
+          "activeHour": 3.3676
+        },
+        {
+          "index": 202,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214174,
+          "activeHour": 3.3843
+        },
+        {
+          "index": 203,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103543,
+          "activeHour": 3.401
+        },
+        {
+          "index": 204,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214402,
+          "activeHour": 3.4176
+        },
+        {
+          "index": 205,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102373,
+          "activeHour": 3.4343
+        },
+        {
+          "index": 206,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214171,
+          "activeHour": 3.451
+        },
+        {
+          "index": 207,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102554,
+          "activeHour": 3.4676
+        },
+        {
+          "index": 208,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215410,
+          "activeHour": 3.4843
+        },
+        {
+          "index": 209,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102900,
+          "activeHour": 3.501
+        },
+        {
+          "index": 210,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214368,
+          "activeHour": 3.5177
+        },
+        {
+          "index": 211,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102642,
+          "activeHour": 3.5343
+        },
+        {
+          "index": 212,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212496,
+          "activeHour": 3.551
+        },
+        {
+          "index": 213,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102531,
+          "activeHour": 3.5677
+        },
+        {
+          "index": 214,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215972,
+          "activeHour": 3.5844
+        },
+        {
+          "index": 215,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103027,
+          "activeHour": 3.601
+        },
+        {
+          "index": 216,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214534,
+          "activeHour": 3.6177
+        },
+        {
+          "index": 217,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102827,
+          "activeHour": 3.6344
+        },
+        {
+          "index": 218,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215281,
+          "activeHour": 3.651
+        },
+        {
+          "index": 219,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103513,
+          "activeHour": 3.6677
+        },
+        {
+          "index": 220,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214195,
+          "activeHour": 3.6844
+        },
+        {
+          "index": 221,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103111,
+          "activeHour": 3.7011
+        },
+        {
+          "index": 222,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212775,
+          "activeHour": 3.7177
+        },
+        {
+          "index": 223,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102136,
+          "activeHour": 3.7344
+        },
+        {
+          "index": 224,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212288,
+          "activeHour": 3.7511
+        },
+        {
+          "index": 225,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103362,
+          "activeHour": 3.7678
+        },
+        {
+          "index": 226,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213378,
+          "activeHour": 3.7844
+        },
+        {
+          "index": 227,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103441,
+          "activeHour": 3.8011
+        },
+        {
+          "index": 228,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215798,
+          "activeHour": 3.8178
+        },
+        {
+          "index": 229,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103690,
+          "activeHour": 3.8344
+        },
+        {
+          "index": 230,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215058,
+          "activeHour": 3.8511
+        },
+        {
+          "index": 231,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102695,
+          "activeHour": 3.8678
+        },
+        {
+          "index": 232,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215392,
+          "activeHour": 3.8845
+        },
+        {
+          "index": 233,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102760,
+          "activeHour": 3.9011
+        },
+        {
+          "index": 234,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211310,
+          "activeHour": 3.9178
+        },
+        {
+          "index": 235,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102672,
+          "activeHour": 3.9345
+        },
+        {
+          "index": 236,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212753,
+          "activeHour": 3.9511
+        },
+        {
+          "index": 237,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100973,
+          "activeHour": 3.9678
+        },
+        {
+          "index": 238,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215175,
+          "activeHour": 3.9845
+        },
+        {
+          "index": 239,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103513,
+          "activeHour": 4.0012
+        },
+        {
+          "index": 240,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214706,
+          "activeHour": 4.0178
+        },
+        {
+          "index": 241,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103326,
+          "activeHour": 4.0345
+        },
+        {
+          "index": 242,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214493,
+          "activeHour": 4.0512
+        },
+        {
+          "index": 243,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102961,
+          "activeHour": 4.0678
+        },
+        {
+          "index": 244,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213496,
+          "activeHour": 4.0845
+        },
+        {
+          "index": 245,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103570,
+          "activeHour": 4.1012
+        },
+        {
+          "index": 246,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214946,
+          "activeHour": 4.1179
+        },
+        {
+          "index": 247,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103214,
+          "activeHour": 4.1345
+        },
+        {
+          "index": 248,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213905,
+          "activeHour": 4.1512
+        },
+        {
+          "index": 249,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103266,
+          "activeHour": 4.1679
+        },
+        {
+          "index": 250,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215191,
+          "activeHour": 4.1846
+        },
+        {
+          "index": 251,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103100,
+          "activeHour": 4.2012
+        },
+        {
+          "index": 252,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214709,
+          "activeHour": 4.2179
+        },
+        {
+          "index": 253,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103393,
+          "activeHour": 4.2346
+        },
+        {
+          "index": 254,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213223,
+          "activeHour": 4.2512
+        },
+        {
+          "index": 255,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103979,
+          "activeHour": 4.2679
+        },
+        {
+          "index": 256,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 216205,
+          "activeHour": 4.2846
+        },
+        {
+          "index": 257,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103312,
+          "activeHour": 4.3013
+        },
+        {
+          "index": 258,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213685,
+          "activeHour": 4.3179
+        },
+        {
+          "index": 259,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102687,
+          "activeHour": 4.3346
+        },
+        {
+          "index": 260,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213048,
+          "activeHour": 4.3513
+        },
+        {
+          "index": 261,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103284,
+          "activeHour": 4.3679
+        },
+        {
+          "index": 262,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212876,
+          "activeHour": 4.3846
+        },
+        {
+          "index": 263,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102263,
+          "activeHour": 4.4013
+        },
+        {
+          "index": 264,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215678,
+          "activeHour": 4.418
+        },
+        {
+          "index": 265,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103357,
+          "activeHour": 4.4346
+        },
+        {
+          "index": 266,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213617,
+          "activeHour": 4.4513
+        },
+        {
+          "index": 267,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102719,
+          "activeHour": 4.468
+        },
+        {
+          "index": 268,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215054,
+          "activeHour": 4.4846
+        },
+        {
+          "index": 269,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102240,
+          "activeHour": 4.5013
+        },
+        {
+          "index": 270,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215302,
+          "activeHour": 4.518
+        },
+        {
+          "index": 271,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103136,
+          "activeHour": 4.5347
+        },
+        {
+          "index": 272,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215222,
+          "activeHour": 4.5513
+        },
+        {
+          "index": 273,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102735,
+          "activeHour": 4.568
+        },
+        {
+          "index": 274,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214326,
+          "activeHour": 4.5847
+        },
+        {
+          "index": 275,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103288,
+          "activeHour": 4.6014
+        },
+        {
+          "index": 276,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213571,
+          "activeHour": 4.618
+        },
+        {
+          "index": 277,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102529,
+          "activeHour": 4.6347
+        },
+        {
+          "index": 278,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211964,
+          "activeHour": 4.6514
+        },
+        {
+          "index": 279,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102996,
+          "activeHour": 4.668
+        },
+        {
+          "index": 280,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214594,
+          "activeHour": 4.6847
+        },
+        {
+          "index": 281,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102761,
+          "activeHour": 4.7014
+        },
+        {
+          "index": 282,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 211996,
+          "activeHour": 4.718
+        },
+        {
+          "index": 283,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102632,
+          "activeHour": 4.7347
+        },
+        {
+          "index": 284,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213727,
+          "activeHour": 4.7514
+        },
+        {
+          "index": 285,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103117,
+          "activeHour": 4.7681
+        },
+        {
+          "index": 286,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213772,
+          "activeHour": 4.7847
+        },
+        {
+          "index": 287,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102913,
+          "activeHour": 4.8014
+        },
+        {
+          "index": 288,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215050,
+          "activeHour": 4.8181
+        },
+        {
+          "index": 289,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102729,
+          "activeHour": 4.8348
+        },
+        {
+          "index": 290,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214208,
+          "activeHour": 4.8514
+        },
+        {
+          "index": 291,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102799,
+          "activeHour": 4.8681
+        },
+        {
+          "index": 292,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214389,
+          "activeHour": 4.8848
+        },
+        {
+          "index": 293,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103925,
+          "activeHour": 4.9014
+        },
+        {
+          "index": 294,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213664,
+          "activeHour": 4.9181
+        },
+        {
+          "index": 295,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102247,
+          "activeHour": 4.9348
+        },
+        {
+          "index": 296,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212027,
+          "activeHour": 4.9514
+        },
+        {
+          "index": 297,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103676,
+          "activeHour": 4.9681
+        },
+        {
+          "index": 298,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214379,
+          "activeHour": 4.9848
+        },
+        {
+          "index": 299,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103641,
+          "activeHour": 5.0015
+        },
+        {
+          "index": 300,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213717,
+          "activeHour": 5.0181
+        },
+        {
+          "index": 301,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103311,
+          "activeHour": 5.0348
+        },
+        {
+          "index": 302,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212254,
+          "activeHour": 5.0515
+        },
+        {
+          "index": 303,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102712,
+          "activeHour": 5.0682
+        },
+        {
+          "index": 304,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215622,
+          "activeHour": 5.0848
+        },
+        {
+          "index": 305,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103377,
+          "activeHour": 5.1015
+        },
+        {
+          "index": 306,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215496,
+          "activeHour": 5.1182
+        },
+        {
+          "index": 307,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103184,
+          "activeHour": 5.1348
+        },
+        {
+          "index": 308,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213699,
+          "activeHour": 5.1515
+        },
+        {
+          "index": 309,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102288,
+          "activeHour": 5.1682
+        },
+        {
+          "index": 310,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213884,
+          "activeHour": 5.1849
+        },
+        {
+          "index": 311,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103091,
+          "activeHour": 5.2015
+        },
+        {
+          "index": 312,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214178,
+          "activeHour": 5.2182
+        },
+        {
+          "index": 313,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103252,
+          "activeHour": 5.2349
+        },
+        {
+          "index": 314,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 212755,
+          "activeHour": 5.2515
+        },
+        {
+          "index": 315,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103617,
+          "activeHour": 5.2682
+        },
+        {
+          "index": 316,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213210,
+          "activeHour": 5.2849
+        },
+        {
+          "index": 317,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102952,
+          "activeHour": 5.3016
+        },
+        {
+          "index": 318,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214281,
+          "activeHour": 5.3182
+        },
+        {
+          "index": 319,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103870,
+          "activeHour": 5.3349
+        },
+        {
+          "index": 320,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214328,
+          "activeHour": 5.3516
+        },
+        {
+          "index": 321,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103467,
+          "activeHour": 5.3682
+        },
+        {
+          "index": 322,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213374,
+          "activeHour": 5.3849
+        },
+        {
+          "index": 323,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103328,
+          "activeHour": 5.4016
+        },
+        {
+          "index": 324,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214062,
+          "activeHour": 5.4183
+        },
+        {
+          "index": 325,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103651,
+          "activeHour": 5.4349
+        },
+        {
+          "index": 326,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213480,
+          "activeHour": 5.4516
+        },
+        {
+          "index": 327,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103457,
+          "activeHour": 5.4683
+        },
+        {
+          "index": 328,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215532,
+          "activeHour": 5.4849
+        },
+        {
+          "index": 329,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 104075,
+          "activeHour": 5.5016
+        },
+        {
+          "index": 330,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214407,
+          "activeHour": 5.5183
+        },
+        {
+          "index": 331,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102860,
+          "activeHour": 5.535
+        },
+        {
+          "index": 332,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 215170,
+          "activeHour": 5.5516
+        },
+        {
+          "index": 333,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103386,
+          "activeHour": 5.5683
+        },
+        {
+          "index": 334,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214460,
+          "activeHour": 5.585
+        },
+        {
+          "index": 335,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103883,
+          "activeHour": 5.6017
+        },
+        {
+          "index": 336,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213799,
+          "activeHour": 5.6183
+        },
+        {
+          "index": 337,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103538,
+          "activeHour": 5.635
+        },
+        {
+          "index": 338,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 213734,
+          "activeHour": 5.6517
+        },
+        {
+          "index": 339,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102481,
+          "activeHour": 5.6683
+        },
+        {
+          "index": 340,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 214784,
+          "activeHour": 5.685
+        },
+        {
+          "index": 341,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102788,
+          "activeHour": 5.7017
+        },
+        {
+          "index": 342,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 216967,
+          "activeHour": 5.7184
+        },
+        {
+          "index": 343,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 103451,
+          "activeHour": 5.735
+        },
+        {
+          "index": 344,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210968,
+          "activeHour": 5.7517
+        },
+        {
+          "index": 345,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101390,
+          "activeHour": 5.7684
+        },
+        {
+          "index": 346,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208454,
+          "activeHour": 5.785
+        },
+        {
+          "index": 347,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 100942,
+          "activeHour": 5.8017
+        },
+        {
+          "index": 348,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 200366,
+          "activeHour": 5.8184
+        },
+        {
+          "index": 349,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101560,
+          "activeHour": 5.8351
+        },
+        {
+          "index": 350,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208442,
+          "activeHour": 5.8517
+        },
+        {
+          "index": 351,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101991,
+          "activeHour": 5.8684
+        },
+        {
+          "index": 352,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208766,
+          "activeHour": 5.8851
+        },
+        {
+          "index": 353,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101040,
+          "activeHour": 5.9017
+        },
+        {
+          "index": 354,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210073,
+          "activeHour": 5.9184
+        },
+        {
+          "index": 355,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102021,
+          "activeHour": 5.9351
+        },
+        {
+          "index": 356,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 208109,
+          "activeHour": 5.9518
+        },
+        {
+          "index": 357,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 101425,
+          "activeHour": 5.9684
+        },
+        {
+          "index": 358,
+          "model": "ai4i-failure-logreg-v1",
+          "recordsPerS": 210204,
+          "activeHour": 5.9851
+        },
+        {
+          "index": 359,
+          "model": "diabetes-progression-ridge-v1",
+          "recordsPerS": 102169,
+          "activeHour": 6.0018
+        }
+      ]
+    }
+  }
+}

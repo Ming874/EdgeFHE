@@ -1,0 +1,9 @@
+{
+ "model": "diabetes-progression-ridge-v1",
+ "windows": 12,
+ "requests_per_window": 2992,
+ "slots_per_window": 6127616,
+ "window_max_median": 9.853727052792686e-05,
+ "window_max_p90": 0.00011503271019805288,
+ "window_max_max": 0.00012332183295191078
+}

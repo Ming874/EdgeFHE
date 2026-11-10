@@ -1,0 +1,3286 @@
+{
+  "schema": "edgefhe.demo.model-cards.v1",
+  "zoo": "2026-10-28",
+  "models": [
+    {
+      "id": "ai4i-failure-logreg-v1",
+      "sourceSha256": "de0499f25657351b6a1ca2460181c328a05fd43147a0f01aa51f10f89b9dc2a4",
+      "domain": "工業",
+      "category": "設備預測維護",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 1.5500000000000007,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "temperature_difference_K",
+          "kind": "number",
+          "unit": "K（溫差）",
+          "mean": 9.996876923076947,
+          "std": 1.0047568861354912,
+          "minimum": 1.9588218339930172,
+          "maximum": 18.034932012160876,
+          "exampleRange": [
+            9.4944984800092,
+            10.499255366144693
+          ],
+          "note": "溫差 1 K = 1 °C；不減去 273.15。"
+        },
+        {
+          "name": "rotational_speed_rpm",
+          "kind": "number",
+          "unit": "rpm",
+          "mean": 1538.535076923077,
+          "std": 179.2645526771327,
+          "minimum": 104.41865550601528,
+          "maximum": 2972.6514983401385,
+          "exampleRange": [
+            1448.9028005845107,
+            1628.1673532616433
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "torque_Nm",
+          "kind": "number",
+          "unit": "N·m",
+          "mean": 40.01961538461533,
+          "std": 9.910950812405284,
+          "minimum": -39.267991114626945,
+          "maximum": 119.30722188385761,
+          "exampleRange": [
+            35.06413997841268,
+            46.32606936929177
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "tool_wear_min",
+          "kind": "number",
+          "unit": "min",
+          "mean": 108.77338461538461,
+          "std": 63.67495727465388,
+          "minimum": -400.6262735818464,
+          "maximum": 618.1730428126157,
+          "exampleRange": [
+            76.93590597805768,
+            140.61086325271157
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "UCI AI4I2020 synthetic maintenance",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip"
+    },
+    {
+      "id": "diabetes-progression-ridge-v1",
+      "sourceSha256": "727f278c3d58c26466adef1885342c63940a796a970eeae4d6368508e67ef611",
+      "domain": "醫療",
+      "category": "糖尿病",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "age",
+          "kind": "number",
+          "unit": "歲",
+          "mean": 47.47386759581882,
+          "std": 12.616779105891464,
+          "minimum": -53.46036525131289,
+          "maximum": 148.4081004429505,
+          "exampleRange": [
+            41.16547804287308,
+            53.78225714876455
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sex",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 1.4634146341463414,
+          "std": 0.4986597146405085,
+          "minimum": -2.5258630829777267,
+          "maximum": 5.452692351270409,
+          "exampleRange": [
+            1.2140847768260872,
+            1.7127444914665957
+          ],
+          "note": "連續研究編碼，公開合成案例包含內插值。"
+        },
+        {
+          "name": "bmi",
+          "kind": "number",
+          "unit": "kg/m²",
+          "mean": 26.367247386759598,
+          "std": 4.470395115960868,
+          "minimum": -9.39591354092735,
+          "maximum": 62.13040831444654,
+          "exampleRange": [
+            24.132049828779163,
+            28.602444944740032
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bp",
+          "kind": "number",
+          "unit": "資料集原始指標",
+          "mean": 94.22759581881536,
+          "std": 13.61684302915107,
+          "minimum": -14.707148414393203,
+          "maximum": 203.16234005202392,
+          "exampleRange": [
+            87.41917430423982,
+            101.0360173333909
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s1",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 188.14634146341464,
+          "std": 33.29018509857433,
+          "minimum": -78.17513932517997,
+          "maximum": 454.4678222520092,
+          "exampleRange": [
+            171.50124891412747,
+            204.7914340127018
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s2",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 114.70487804878044,
+          "std": 29.76039584537863,
+          "minimum": -123.37828871424858,
+          "maximum": 352.78804481180947,
+          "exampleRange": [
+            99.82468012609112,
+            129.58507597146976
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s3",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 49.74738675958188,
+          "std": 12.748291617468038,
+          "minimum": -52.23894618016242,
+          "maximum": 151.73371969932617,
+          "exampleRange": [
+            43.37324095084786,
+            56.1215325683159
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s4",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 4.062822299651568,
+          "std": 1.279278997089656,
+          "minimum": -6.1714096770656806,
+          "maximum": 14.297054276368817,
+          "exampleRange": [
+            3.4231828011067402,
+            4.7024617981963965
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s5",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 4.628755052264812,
+          "std": 0.5260591182784993,
+          "minimum": 0.4202821060368178,
+          "maximum": 8.837227998492807,
+          "exampleRange": [
+            4.365725493125562,
+            4.891784611404062
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "s6",
+          "kind": "number",
+          "unit": "研究編碼／原始指標",
+          "mean": 91.17421602787456,
+          "std": 11.290785796284634,
+          "minimum": 0.84792965759749,
+          "maximum": 181.50050239815164,
+          "exampleRange": [
+            85.52882312973225,
+            96.81960892601688
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "scikit-learn1.5.2 diabetes public research regression",
+      "sourceUrl": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.5.2/sklearn/datasets/data/diabetes_data_raw.csv.gz"
+    },
+    {
+      "id": "diabetes-symptom-logreg-v1",
+      "sourceSha256": "6395cb10c6041f22490e801b341d0eda9ff090dec4ebf2d69e2c665aa111356d",
+      "domain": "醫療",
+      "category": "糖尿病",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.5,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "age",
+          "kind": "integer",
+          "unit": "歲",
+          "mean": 48.04532577903683,
+          "std": 12.066068687125197,
+          "minimum": 16,
+          "maximum": 90,
+          "exampleRange": [
+            40.0,
+            55.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "female",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.34844192634560905,
+          "std": 0.4764768098346135,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "polyuria",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.49575070821529743,
+          "std": 0.49998194319327893,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "polydipsia",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.44192634560906513,
+          "std": 0.4966159992042967,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sudden_weight_loss",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.4475920679886686,
+          "std": 0.4972458231722973,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "weakness",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.6062322946175638,
+          "std": 0.4885843832750765,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "polyphagia",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.44192634560906513,
+          "std": 0.496615999204297,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "genital_thrush",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.23229461756373937,
+          "std": 0.4222959012524932,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "visual_blurring",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.44192634560906513,
+          "std": 0.49661599920429694,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "itching",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.47592067988668557,
+          "std": 0.49941984976858916,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "irritability",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.23796033994334279,
+          "std": 0.42583472915837933,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "delayed_healing",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.43909348441926344,
+          "std": 0.496276532146961,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "partial_paresis",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.42776203966005666,
+          "std": 0.49475415823004953,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "muscle_stiffness",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.34844192634560905,
+          "std": 0.4764768098346135,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "alopecia",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.37960339943342775,
+          "std": 0.4852882221649449,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "obesity",
+          "kind": "binary",
+          "unit": "研究編碼／原始指標",
+          "mean": 0.18980169971671387,
+          "std": 0.39214412465490206,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依模型原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "UCI529 Early Stage Diabetes Risk Prediction",
+      "sourceUrl": "https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset"
+    },
+    {
+      "id": "finance-credit-default-logreg-v1",
+      "sourceSha256": "ae165f66317e17d69ff060f1ac3cc76b90e69143dfb0312156d3cf7182f64203",
+      "domain": "金融",
+      "category": "信用風險",
+      "title": "信用卡違約風險",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.35000000000000053,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "limit_bal",
+          "kind": "number",
+          "unit": "",
+          "mean": 168424.29128205127,
+          "std": 130787.37162673645,
+          "minimum": 0.0,
+          "maximum": 1214723.2642959428,
+          "exampleRange": [
+            50000.0,
+            240000.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sex",
+          "kind": "integer",
+          "unit": "",
+          "mean": 1.5993846153846154,
+          "std": 0.49002316090659037,
+          "minimum": 1,
+          "maximum": 5,
+          "exampleRange": [
+            1.0,
+            2.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "education",
+          "kind": "integer",
+          "unit": "",
+          "mean": 1.8472307692307692,
+          "std": 0.7907121250457168,
+          "minimum": 0,
+          "maximum": 8,
+          "exampleRange": [
+            1.0,
+            2.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "marriage",
+          "kind": "integer",
+          "unit": "",
+          "mean": 1.554871794871795,
+          "std": 0.5236110897479632,
+          "minimum": 0,
+          "maximum": 5,
+          "exampleRange": [
+            1.0,
+            2.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "age",
+          "kind": "number",
+          "unit": "",
+          "mean": 35.528410256410254,
+          "std": 9.21234194650751,
+          "minimum": 0.0,
+          "maximum": 109.22714582847033,
+          "exampleRange": [
+            28.0,
+            41.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_0",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.013487179487179488,
+          "std": 1.1297708610836974,
+          "minimum": -9,
+          "maximum": 9,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_2",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.1363076923076923,
+          "std": 1.1998225115288985,
+          "minimum": -9,
+          "maximum": 9,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_3",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.16574358974358974,
+          "std": 1.1986384737125397,
+          "minimum": -9,
+          "maximum": 9,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_4",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.21943589743589745,
+          "std": 1.1728123944422222,
+          "minimum": -9,
+          "maximum": 9,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_5",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.26579487179487177,
+          "std": 1.1316741666490069,
+          "minimum": -9,
+          "maximum": 8,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_6",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.29174358974358977,
+          "std": 1.1450063423392602,
+          "minimum": -9,
+          "maximum": 8,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt1",
+          "kind": "number",
+          "unit": "",
+          "mean": 51266.86035897436,
+          "std": 74075.26938857377,
+          "minimum": -541335.2947496158,
+          "maximum": 643869.0154675645,
+          "exampleRange": [
+            3537.0,
+            67100.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt2",
+          "kind": "number",
+          "unit": "",
+          "mean": 49278.96153846154,
+          "std": 71680.47667460733,
+          "minimum": -524164.8518583971,
+          "maximum": 622722.7749353201,
+          "exampleRange": [
+            2958.25,
+            64207.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt3",
+          "kind": "number",
+          "unit": "",
+          "mean": 47208.800615384615,
+          "std": 69144.51157723748,
+          "minimum": -505947.2920025153,
+          "maximum": 600364.8932332845,
+          "exampleRange": [
+            2701.0,
+            60762.25
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt4",
+          "kind": "number",
+          "unit": "",
+          "mean": 43495.34902564102,
+          "std": 64833.50426959417,
+          "minimum": -475172.6851311123,
+          "maximum": 562163.3831823943,
+          "exampleRange": [
+            2355.0,
+            54444.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt5",
+          "kind": "number",
+          "unit": "",
+          "mean": 40442.88923076923,
+          "std": 61102.75605011862,
+          "minimum": -448379.15917017974,
+          "maximum": 529264.9376317182,
+          "exampleRange": [
+            1776.0,
+            50186.75
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "bill_amt6",
+          "kind": "number",
+          "unit": "",
+          "mean": 38834.95825641025,
+          "std": 59869.454084042,
+          "minimum": -440120.67441592575,
+          "maximum": 517790.5909287463,
+          "exampleRange": [
+            1269.0,
+            48972.75
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt1",
+          "kind": "number",
+          "unit": "",
+          "mean": 5676.831794871795,
+          "std": 16704.577104992004,
+          "minimum": 0.0,
+          "maximum": 139313.44863480784,
+          "exampleRange": [
+            977.0,
+            5011.25
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt2",
+          "kind": "number",
+          "unit": "",
+          "mean": 6012.183846153846,
+          "std": 21387.321600129635,
+          "minimum": 0.0,
+          "maximum": 177110.75664719092,
+          "exampleRange": [
+            831.5,
+            5000.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt3",
+          "kind": "number",
+          "unit": "",
+          "mean": 5311.864564102564,
+          "std": 18887.426714840964,
+          "minimum": 0.0,
+          "maximum": 156411.27828283026,
+          "exampleRange": [
+            390.0,
+            4580.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt4",
+          "kind": "number",
+          "unit": "",
+          "mean": 4865.983897435897,
+          "std": 16440.584071215086,
+          "minimum": 0.0,
+          "maximum": 136390.65646715657,
+          "exampleRange": [
+            291.0,
+            4013.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt5",
+          "kind": "number",
+          "unit": "",
+          "mean": 4762.078871794872,
+          "std": 14935.207034322333,
+          "minimum": 0.0,
+          "maximum": 124243.73514637354,
+          "exampleRange": [
+            240.75,
+            4055.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pay_amt6",
+          "kind": "number",
+          "unit": "",
+          "mean": 5221.518974358974,
+          "std": 18481.73424287286,
+          "minimum": 0.0,
+          "maximum": 153075.39291734184,
+          "exampleRange": [
+            113.75,
+            4001.25
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Default of Credit Card Clients",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/350/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "finance-banknote-auth-logreg-v2",
+      "sourceSha256": "3221684c8ed17538b6d36a0650040e9a06741daa0871877f6419a25b707ea6f4",
+      "domain": "金融",
+      "category": "鈔票鑑定",
+      "title": "鈔票真偽（影像小波特徵）",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.6500000000000004,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "variance",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.45524563434343424,
+          "std": 2.835446992961068,
+          "minimum": -22.22833030934511,
+          "maximum": 23.13882157803198,
+          "exampleRange": [
+            -1.7539500000000001,
+            2.8869499999999997
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "skewness",
+          "kind": "number",
+          "unit": "",
+          "mean": 1.8283528086612812,
+          "std": 5.845036683798554,
+          "minimum": -44.931940661727154,
+          "maximum": 48.58864627904971,
+          "exampleRange": [
+            -1.9637499999999999,
+            6.68275
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "curtosis",
+          "kind": "number",
+          "unit": "",
+          "mean": 1.4218899296296301,
+          "std": 4.2705205117208,
+          "minimum": -32.742274164136774,
+          "maximum": 35.58605402339603,
+          "exampleRange": [
+            -1.4856500000000001,
+            3.32855
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "entropy",
+          "kind": "number",
+          "unit": "",
+          "mean": -1.1447510905723897,
+          "std": 2.0940662702497708,
+          "minimum": -17.897281252570554,
+          "maximum": 15.607779071425776,
+          "exampleRange": [
+            -2.25085,
+            0.39934000000000003
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Banknote Authentication",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/267/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "energy-heating-load-ridge-v1",
+      "sourceSha256": "83866a31050533e29be579b8f2f7a818d6ce2b1fd601749d6047defd981df813",
+      "domain": "能源",
+      "category": "建築節能",
+      "title": "建築暖氣負載",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "relative_compactness",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.7665330661322649,
+          "std": 0.10429938221811189,
+          "minimum": 0.0,
+          "maximum": 1.60092812387716,
+          "exampleRange": [
+            0.69,
+            0.86
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "surface_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 669.4048096192384,
+          "std": 86.47849743115184,
+          "minimum": 0.0,
+          "maximum": 1361.2327890684533,
+          "exampleRange": [
+            588.0,
+            735.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "wall_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 317.41983967935874,
+          "std": 44.10368303087772,
+          "minimum": 0.0,
+          "maximum": 670.2493039263804,
+          "exampleRange": [
+            294.0,
+            343.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "roof_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 175.99248496993988,
+          "std": 45.13410288377858,
+          "minimum": 0.0,
+          "maximum": 537.0653080401685,
+          "exampleRange": [
+            122.5,
+            220.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "overall_height",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.274549098196393,
+          "std": 1.749827803464604,
+          "minimum": 0.0,
+          "maximum": 19.273171525913224,
+          "exampleRange": [
+            3.5,
+            7.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "orientation",
+          "kind": "integer",
+          "unit": "",
+          "mean": 3.470941883767535,
+          "std": 1.1256960948787684,
+          "minimum": 2,
+          "maximum": 12,
+          "exampleRange": [
+            2.0,
+            4.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "glazing_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.23647294589178364,
+          "std": 0.13456820565603927,
+          "minimum": 0.0,
+          "maximum": 1.3130185911400978,
+          "exampleRange": [
+            0.1,
+            0.4
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "glazing_area_distribution",
+          "kind": "integer",
+          "unit": "",
+          "mean": 2.81563126252505,
+          "std": 1.5604313648454384,
+          "minimum": 0,
+          "maximum": 15,
+          "exampleRange": [
+            1.0,
+            4.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Energy Efficiency",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/242/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "energy-power-plant-output-ridge-v1",
+      "sourceSha256": "a346e1a30ba5405ce6eb6a86b2e59ea60d927dd25451664a2d4c4d9311d793ee",
+      "domain": "能源",
+      "category": "發電預測",
+      "title": "複循環電廠滿載出力",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "ambient_temperature_C",
+          "kind": "number",
+          "unit": "",
+          "mean": 19.76264190384305,
+          "std": 7.485096856200252,
+          "minimum": 0.0,
+          "maximum": 79.64341675344507,
+          "exampleRange": [
+            13.565000000000001,
+            25.89
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "exhaust_vacuum_cmHg",
+          "kind": "number",
+          "unit": "",
+          "mean": 54.53919922817205,
+          "std": 12.752928924086982,
+          "minimum": 0.0,
+          "maximum": 156.5626306208679,
+          "exampleRange": [
+            41.79,
+            66.56
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "ambient_pressure_mbar",
+          "kind": "number",
+          "unit": "",
+          "mean": 1013.2184113201478,
+          "std": 5.929051942682952,
+          "minimum": 965.7859957786842,
+          "maximum": 1060.6508268616114,
+          "exampleRange": [
+            1009.055,
+            1017.28
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "relative_humidity_pct",
+          "kind": "number",
+          "unit": "",
+          "mean": 73.29214986332201,
+          "std": 14.630740843925745,
+          "minimum": 0.0,
+          "maximum": 190.33807661472798,
+          "exampleRange": [
+            63.23,
+            84.945
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Combined Cycle Power Plant",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/294/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "energy-grid-instability-logreg-v1",
+      "sourceSha256": "87ef1bc2a64e238bc46f6673ce80c0f98556ad14c6f28bdf8a77a013fdbf0ab5",
+      "domain": "能源",
+      "category": "電網穩定",
+      "title": "分散式電網不穩定風險",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "tau1",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.209454727955023,
+          "std": 2.7245132826451863,
+          "minimum": 0.0,
+          "maximum": 27.005560989116514,
+          "exampleRange": [
+            2.8533669281582177,
+            7.548200458311922
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "tau2",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.229257519778139,
+          "std": 2.7383028416999364,
+          "minimum": 0.0,
+          "maximum": 27.13568025337763,
+          "exampleRange": [
+            2.85624147911127,
+            7.6064174831218
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "tau3",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.226252233933066,
+          "std": 2.7555832406854166,
+          "minimum": 0.0,
+          "maximum": 27.2709181594164,
+          "exampleRange": [
+            2.82800318729492,
+            7.644142033746588
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "tau4",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.232908098802829,
+          "std": 2.7403581314329712,
+          "minimum": 0.0,
+          "maximum": 27.155773150266597,
+          "exampleRange": [
+            2.801233578312985,
+            7.582958697183253
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "p1",
+          "kind": "number",
+          "unit": "",
+          "mean": 3.7512211017245027,
+          "std": 0.7506440006456881,
+          "minimum": 0.0,
+          "maximum": 9.756373106890008,
+          "exampleRange": [
+            3.22237173363281,
+            4.282946897364843
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "p2",
+          "kind": "number",
+          "unit": "",
+          "mean": -1.250295228673435,
+          "std": 0.43329086688067875,
+          "minimum": -4.716622163718865,
+          "maximum": 2.2160317063719948,
+          "exampleRange": [
+            -1.6298796221591099,
+            -0.8733095169854608
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "p3",
+          "kind": "number",
+          "unit": "",
+          "mean": -1.2472563350285761,
+          "std": 0.4315920083245009,
+          "minimum": -4.699992401624583,
+          "maximum": 2.205479731567431,
+          "exampleRange": [
+            -1.62077242163949,
+            -0.8740397486466536
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "p4",
+          "kind": "number",
+          "unit": "",
+          "mean": -1.2536695380224918,
+          "std": 0.433670655194533,
+          "minimum": -4.7230347795787555,
+          "maximum": 2.2156957035337723,
+          "exampleRange": [
+            -1.6273609289266824,
+            -0.8788742129079705
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "g1",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.5268258801372735,
+          "std": 0.2740518918499157,
+          "minimum": 0.0,
+          "maximum": 2.719241014936599,
+          "exampleRange": [
+            0.28673484454075704,
+            0.7633287209095154
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "g2",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.5250865569259457,
+          "std": 0.2745883980725449,
+          "minimum": 0.0,
+          "maximum": 2.721793741506305,
+          "exampleRange": [
+            0.28532436212982776,
+            0.7625290940823113
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "g3",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.520034167307704,
+          "std": 0.2748786349341543,
+          "minimum": 0.0,
+          "maximum": 2.7190632467809386,
+          "exampleRange": [
+            0.28105643818374704,
+            0.7547559937426782
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "g4",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.526618747913084,
+          "std": 0.2741033470270535,
+          "minimum": 0.0,
+          "maximum": 2.719445524129512,
+          "exampleRange": [
+            0.28980350999054305,
+            0.762966435500664
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Electrical Grid Stability Simulated Data ",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/471/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "medical-heart-failure-logreg-v1",
+      "sourceSha256": "8a13195ac372d73f8b9fc7dcb239ed77b7a5973359e3e9dcabe7bc0be76bc14e",
+      "domain": "醫療",
+      "category": "心臟衰竭",
+      "title": "心衰竭追蹤期死亡風險",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.5499999999999998,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "age",
+          "kind": "number",
+          "unit": "",
+          "mean": 61.32302577319587,
+          "std": 12.010920253006342,
+          "minimum": 0.0,
+          "maximum": 157.4103877972466,
+          "exampleRange": [
+            52.25,
+            70.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "anaemia",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.4175257731958763,
+          "std": 0.493151094405215,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "creatinine_phosphokinase",
+          "kind": "number",
+          "unit": "",
+          "mean": 574.1443298969073,
+          "std": 999.8001190927878,
+          "minimum": 0.0,
+          "maximum": 8572.54528263921,
+          "exampleRange": [
+            113.5,
+            582.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "diabetes",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.4020618556701031,
+          "std": 0.49031430724099473,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "ejection_fraction",
+          "kind": "number",
+          "unit": "",
+          "mean": 39.31958762886598,
+          "std": 11.836120142856595,
+          "minimum": 0.0,
+          "maximum": 134.00854877171875,
+          "exampleRange": [
+            30.0,
+            45.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "high_blood_pressure",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.30927835051546393,
+          "std": 0.46219611899917334,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "platelets",
+          "kind": "number",
+          "unit": "",
+          "mean": 266461.187886598,
+          "std": 106318.77391881612,
+          "minimum": 0.0,
+          "maximum": 1117011.379237127,
+          "exampleRange": [
+            208500.0,
+            307250.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "serum_creatinine",
+          "kind": "number",
+          "unit": "",
+          "mean": 1.3383505154639181,
+          "std": 0.7857325433735253,
+          "minimum": 0.0,
+          "maximum": 7.62421086245212,
+          "exampleRange": [
+            0.9,
+            1.4
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "serum_sodium",
+          "kind": "integer",
+          "unit": "",
+          "mean": 136.69072164948454,
+          "std": 4.752342503759224,
+          "minimum": 113,
+          "maximum": 174,
+          "exampleRange": [
+            134.0,
+            140.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sex",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.6237113402061856,
+          "std": 0.48445382061078707,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "smoking",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.30927835051546393,
+          "std": 0.46219611899917334,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Heart Failure Clinical Records",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/519/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "medical-maternal-high-risk-logreg-v1",
+      "sourceSha256": "a2ae147dd1fc1e7bd5047c03ed01bc79ae97f07e90b46a0a250eac0699765104",
+      "domain": "醫療",
+      "category": "孕產婦照護",
+      "title": "孕產婦高風險",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": -0.25,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "age",
+          "kind": "number",
+          "unit": "",
+          "mean": 29.74658573596358,
+          "std": 13.383039105048685,
+          "minimum": 0.0,
+          "maximum": 136.81089857635305,
+          "exampleRange": [
+            19.0,
+            36.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "systolic_bp",
+          "kind": "number",
+          "unit": "",
+          "mean": 113.06676783004552,
+          "std": 18.361942821534512,
+          "minimum": 0.0,
+          "maximum": 259.96231040232163,
+          "exampleRange": [
+            100.0,
+            120.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "diastolic_bp",
+          "kind": "number",
+          "unit": "",
+          "mean": 76.3216995447648,
+          "std": 13.66218264935451,
+          "minimum": 0.0,
+          "maximum": 185.6191607396009,
+          "exampleRange": [
+            65.0,
+            90.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "blood_sugar_mmolL",
+          "kind": "integer",
+          "unit": "",
+          "mean": 8.70151745068285,
+          "std": 3.3032538982741366,
+          "minimum": 6,
+          "maximum": 35,
+          "exampleRange": [
+            6.9,
+            8.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "body_temp_F",
+          "kind": "integer",
+          "unit": "",
+          "mean": 98.67132018209408,
+          "std": 1.3665680635422928,
+          "minimum": 98,
+          "maximum": 109,
+          "exampleRange": [
+            98.0,
+            98.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "heart_rate_bpm",
+          "kind": "number",
+          "unit": "",
+          "mean": 74.5341426403642,
+          "std": 7.881325943013506,
+          "minimum": 11.483535096256148,
+          "maximum": 137.58475018447223,
+          "exampleRange": [
+            70.0,
+            80.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Maternal Health Risk",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/863/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "medical-breast-cancer-malignant-logreg-v1",
+      "sourceSha256": "c648bf6504e85bd748f824ad4c7bd1790b725c71c1de9be4e3855d2c3e9661bf",
+      "domain": "醫療",
+      "category": "乳癌篩檢",
+      "title": "乳房腫塊惡性（細胞核特徵）",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.15000000000000036,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "mean_radius",
+          "kind": "number",
+          "unit": "",
+          "mean": 14.131821138211395,
+          "std": 3.4767802373686165,
+          "minimum": 0.0,
+          "maximum": 41.94606303716033,
+          "exampleRange": [
+            11.69,
+            15.85
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_texture",
+          "kind": "number",
+          "unit": "",
+          "mean": 19.454715447154477,
+          "std": 4.08877138970807,
+          "minimum": 0.0,
+          "maximum": 52.164886564819035,
+          "exampleRange": [
+            16.67,
+            21.82
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_perimeter",
+          "kind": "number",
+          "unit": "",
+          "mean": 92.09281842818424,
+          "std": 24.06519186013556,
+          "minimum": 0.0,
+          "maximum": 284.6143533092687,
+          "exampleRange": [
+            75.0,
+            104.3
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 653.8132791327915,
+          "std": 343.10762177743516,
+          "minimum": 0.0,
+          "maximum": 3398.674253352273,
+          "exampleRange": [
+            419.8,
+            782.7
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_smoothness",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.09704216802168025,
+          "std": 0.01390089539780289,
+          "minimum": 0.0,
+          "maximum": 0.20824933120410338,
+          "exampleRange": [
+            0.08673,
+            0.1059
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_compactness",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.10662392953929542,
+          "std": 0.05358688807392729,
+          "minimum": 0.0,
+          "maximum": 0.5353190341307137,
+          "exampleRange": [
+            0.06545,
+            0.131
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_concavity",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.09241832249322494,
+          "std": 0.08177688847241212,
+          "minimum": 0.0,
+          "maximum": 0.7466334302725218,
+          "exampleRange": [
+            0.03102,
+            0.1324
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_concave_points",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.05026660162601623,
+          "std": 0.039195077456896786,
+          "minimum": 0.0,
+          "maximum": 0.3638272212811905,
+          "exampleRange": [
+            0.02068,
+            0.07488
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_symmetry",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.18227696476964766,
+          "std": 0.027228727765351547,
+          "minimum": 0.0,
+          "maximum": 0.40010678689246004,
+          "exampleRange": [
+            0.162,
+            0.1967
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mean_fractal_dimension",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.06304289972899725,
+          "std": 0.006810936088318537,
+          "minimum": 0.008555411022448958,
+          "maximum": 0.11753038843554554,
+          "exampleRange": [
+            0.05865,
+            0.06623
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "radius_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.4068013550135497,
+          "std": 0.26462818272628263,
+          "minimum": 0.0,
+          "maximum": 2.523826816823811,
+          "exampleRange": [
+            0.2387,
+            0.4953
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "texture_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 1.2308512195121961,
+          "std": 0.5335217947050915,
+          "minimum": 0.0,
+          "maximum": 5.499025577152929,
+          "exampleRange": [
+            0.8309,
+            1.493
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "perimeter_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 2.8770005420054194,
+          "std": 1.9601244583984028,
+          "minimum": 0.0,
+          "maximum": 18.55799620919264,
+          "exampleRange": [
+            1.67,
+            3.301
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "area_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 39.84084823848238,
+          "std": 41.29367446015688,
+          "minimum": 0.0,
+          "maximum": 370.19024391973744,
+          "exampleRange": [
+            18.49,
+            44.96
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "smoothness_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.007180479674796746,
+          "std": 0.003180332543885199,
+          "minimum": 0.0,
+          "maximum": 0.032623140025878336,
+          "exampleRange": [
+            0.005169,
+            0.008439
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "compactness_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.025946346883468835,
+          "std": 0.017264723336163017,
+          "minimum": 0.0,
+          "maximum": 0.16406413357277297,
+          "exampleRange": [
+            0.01388,
+            0.03318
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "concavity_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.03330015962059619,
+          "std": 0.03274851274527018,
+          "minimum": 0.0,
+          "maximum": 0.2952882615827576,
+          "exampleRange": [
+            0.01596,
+            0.04266
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "concave_points_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.012109655826558263,
+          "std": 0.00646937167322409,
+          "minimum": 0.0,
+          "maximum": 0.06386462921235098,
+          "exampleRange": [
+            0.008043,
+            0.01494
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "symmetry_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.020657937669376694,
+          "std": 0.0082592784765229,
+          "minimum": 0.0,
+          "maximum": 0.08673216548155989,
+          "exampleRange": [
+            0.01522,
+            0.02337
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "fractal_dimension_error",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.0038918138211382117,
+          "std": 0.002704802014955454,
+          "minimum": 0.0,
+          "maximum": 0.025530229940781843,
+          "exampleRange": [
+            0.002355,
+            0.00457
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_radius",
+          "kind": "number",
+          "unit": "",
+          "mean": 16.293357723577238,
+          "std": 4.742232705946165,
+          "minimum": 0.0,
+          "maximum": 54.23121937114656,
+          "exampleRange": [
+            13.05,
+            18.79
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_texture",
+          "kind": "number",
+          "unit": "",
+          "mean": 25.924742547425463,
+          "std": 5.864495671970752,
+          "minimum": 0.0,
+          "maximum": 72.84070792319147,
+          "exampleRange": [
+            21.58,
+            30.15
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_perimeter",
+          "kind": "number",
+          "unit": "",
+          "mean": 107.4895663956639,
+          "std": 33.0565081403843,
+          "minimum": 0.0,
+          "maximum": 371.9416315187383,
+          "exampleRange": [
+            84.35,
+            125.1
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 878.9371273712744,
+          "std": 545.658746711487,
+          "minimum": 0.0,
+          "maximum": 5244.20710106317,
+          "exampleRange": [
+            515.3,
+            1088.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_smoothness",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.13324504065040652,
+          "std": 0.022685851961054694,
+          "minimum": 0.0,
+          "maximum": 0.31473185633884404,
+          "exampleRange": [
+            0.1184,
+            0.1467
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_compactness",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.2595546341463416,
+          "std": 0.15601707328897527,
+          "minimum": 0.0,
+          "maximum": 1.5076912204581436,
+          "exampleRange": [
+            0.1486,
+            0.3458
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_concavity",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.2819889783197831,
+          "std": 0.21033508119427485,
+          "minimum": 0.0,
+          "maximum": 1.964669627873982,
+          "exampleRange": [
+            0.1201,
+            0.3853
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_concave_points",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.11707967208672077,
+          "std": 0.06620577572462222,
+          "minimum": 0.0,
+          "maximum": 0.6467258778836985,
+          "exampleRange": [
+            0.06499,
+            0.1663
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_symmetry",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.29189647696476984,
+          "std": 0.05864183799762746,
+          "minimum": 0.0,
+          "maximum": 0.7610311809457895,
+          "exampleRange": [
+            0.2522,
+            0.321
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "worst_fractal_dimension",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.08464523035230345,
+          "std": 0.017277229355866952,
+          "minimum": 0.0,
+          "maximum": 0.22286306519923907,
+          "exampleRange": [
+            0.07185,
+            0.0927
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Breast Cancer Wisconsin (Diagnostic), scikit-learn 1.7.1 bundled copy",
+      "sourceUrl": "https://archive.ics.uci.edu/dataset/17",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "construction-concrete-strength-ridge-v1",
+      "sourceSha256": "d668de33016be836d42bff1f422d833df324240d2653ebddc0d949f18fc5438c",
+      "domain": "營建",
+      "category": "材料強度",
+      "title": "混凝土抗壓強度",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "cement_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 279.5986547085199,
+          "std": 103.3389143735321,
+          "minimum": 0.0,
+          "maximum": 1106.3099696967768,
+          "exampleRange": [
+            192.0,
+            350.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "slag_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 74.44245142002993,
+          "std": 86.96420508570074,
+          "minimum": 0.0,
+          "maximum": 770.1560921056358,
+          "exampleRange": [
+            0.0,
+            144.2
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "fly_ash_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 54.15859491778772,
+          "std": 64.53881397914297,
+          "minimum": 0.0,
+          "maximum": 570.4691067509315,
+          "exampleRange": [
+            0.0,
+            118.6
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "water_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 180.94319880418547,
+          "std": 21.622660204326106,
+          "minimum": 7.961917169576623,
+          "maximum": 353.9244804387943,
+          "exampleRange": [
+            164.9,
+            192.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "superplasticizer_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 6.26980568011958,
+          "std": 6.308514434619778,
+          "minimum": 0.0,
+          "maximum": 56.73792115707781,
+          "exampleRange": [
+            0.0,
+            10.4
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "coarse_aggregate_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 973.2970104633769,
+          "std": 75.92459434818934,
+          "minimum": 365.9002556778621,
+          "maximum": 1580.6937652488916,
+          "exampleRange": [
+            932.0,
+            1029.4
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "fine_aggregate_kgm3",
+          "kind": "number",
+          "unit": "",
+          "mean": 774.9047832585944,
+          "std": 80.28218863917398,
+          "minimum": 132.64727414520257,
+          "maximum": 1417.1622923719863,
+          "exampleRange": [
+            734.3,
+            825.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "age_day",
+          "kind": "number",
+          "unit": "",
+          "mean": 47.04633781763827,
+          "std": 65.37475689709123,
+          "minimum": 0.0,
+          "maximum": 570.0443929943681,
+          "exampleRange": [
+            7.0,
+            56.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Concrete Compressive Strength",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/165/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "realestate-unit-price-ridge-v1",
+      "sourceSha256": "c71207a80a059613ab5c7da0eca9e3d28cf88a9f295a3998e511e7688140fb65",
+      "domain": "不動產",
+      "category": "房價估算",
+      "title": "新店區單位房價",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "transaction_date",
+          "kind": "number",
+          "unit": "",
+          "mean": 2013.1462193308546,
+          "std": 0.2891690573272699,
+          "minimum": 2010.8328668722365,
+          "maximum": 2015.4595717894726,
+          "exampleRange": [
+            2012.917,
+            2013.417
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "house_age_year",
+          "kind": "number",
+          "unit": "",
+          "mean": 18.060594795539043,
+          "std": 11.247922948257411,
+          "minimum": 0.0,
+          "maximum": 108.04397838159834,
+          "exampleRange": [
+            10.3,
+            28.2
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "mrt_distance_m",
+          "kind": "number",
+          "unit": "",
+          "mean": 1090.0323870260227,
+          "std": 1284.6037409725325,
+          "minimum": 0.0,
+          "maximum": 11366.862314806283,
+          "exampleRange": [
+            289.3248,
+            1455.798
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "convenience_stores",
+          "kind": "integer",
+          "unit": "",
+          "mean": 4.044609665427509,
+          "std": 2.9071535178355266,
+          "minimum": 0,
+          "maximum": 27,
+          "exampleRange": [
+            1.0,
+            6.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "latitude",
+          "kind": "number",
+          "unit": "",
+          "mean": 24.969419479553892,
+          "std": 0.0125770733954217,
+          "minimum": 24.86880289239052,
+          "maximum": 25.070036066717265,
+          "exampleRange": [
+            24.96305,
+            24.97927
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "longitude",
+          "kind": "number",
+          "unit": "",
+          "mean": 121.53342208178437,
+          "std": 0.01547698202550636,
+          "minimum": 121.40960622558032,
+          "maximum": 121.65723793798841,
+          "exampleRange": [
+            121.52954,
+            121.54348
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Real Estate Valuation",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/477/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "food-wine-good-quality-logreg-v1",
+      "sourceSha256": "d7215af55ab00c4c7ca664f01fb4a0cb3995724571789757c78fe2a5c2f10f72",
+      "domain": "食品",
+      "category": "品質分級",
+      "title": "葡萄酒高品質（≥7）",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.4500000000000002,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "fixed_acidity",
+          "kind": "number",
+          "unit": "",
+          "mean": 7.223383850343374,
+          "std": 1.291390583375095,
+          "minimum": 0.0,
+          "maximum": 17.554508517344132,
+          "exampleRange": [
+            6.4,
+            7.7
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "volatile_acidity",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.33923987686478874,
+          "std": 0.16299304335472498,
+          "minimum": 0.0,
+          "maximum": 1.6431842237025887,
+          "exampleRange": [
+            0.23,
+            0.4
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "citric_acid",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.31785934170020963,
+          "std": 0.14446701872784412,
+          "minimum": 0.0,
+          "maximum": 1.4735954915229625,
+          "exampleRange": [
+            0.24,
+            0.39
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "residual_sugar",
+          "kind": "number",
+          "unit": "",
+          "mean": 5.465972057778824,
+          "std": 4.7602289673025915,
+          "minimum": 0.0,
+          "maximum": 43.54780379619956,
+          "exampleRange": [
+            1.8,
+            8.1
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "chlorides",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.05666990291262145,
+          "std": 0.03604674342103854,
+          "minimum": 0.0,
+          "maximum": 0.3450438502809298,
+          "exampleRange": [
+            0.038,
+            0.0655
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "free_sulfur_dioxide",
+          "kind": "number",
+          "unit": "",
+          "mean": 30.492777646223065,
+          "std": 17.96725933952811,
+          "minimum": 0.0,
+          "maximum": 174.23085236244793,
+          "exampleRange": [
+            17.0,
+            41.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "total_sulfur_dioxide",
+          "kind": "number",
+          "unit": "",
+          "mean": 115.74094245796827,
+          "std": 57.142821579155694,
+          "minimum": 0.0,
+          "maximum": 572.8835150912138,
+          "exampleRange": [
+            77.0,
+            156.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "density",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.9947178475017698,
+          "std": 0.0029540914480024973,
+          "minimum": 0.9710851159177498,
+          "maximum": 1.0183505790857899,
+          "exampleRange": [
+            0.9924,
+            0.997
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "pH",
+          "kind": "number",
+          "unit": "",
+          "mean": 3.2168126923987552,
+          "std": 0.15828085628757937,
+          "minimum": 1.9505658420981202,
+          "maximum": 4.48305954269939,
+          "exampleRange": [
+            3.11,
+            3.32
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sulphates",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.5317475728155364,
+          "std": 0.14877947110939047,
+          "minimum": 0.0,
+          "maximum": 1.72198334169066,
+          "exampleRange": [
+            0.43,
+            0.6
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "alcohol",
+          "kind": "number",
+          "unit": "",
+          "mean": 10.486133080749516,
+          "std": 1.1967042908588679,
+          "minimum": 0.9124987538785732,
+          "maximum": 20.05976740762046,
+          "exampleRange": [
+            9.5,
+            11.3
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "is_red",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.24863840871418422,
+          "std": 0.4322237272828343,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Wine Quality",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/186/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "agriculture-rice-cammeo-logreg-v1",
+      "sourceSha256": "b4c9c6e90a2e6a60e2f24ea0b0198fa7c281965b490d07052e3a2b2538f7f22b",
+      "domain": "農業",
+      "category": "品種辨識",
+      "title": "稻米 Cammeo 品種",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 0.5,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "area",
+          "kind": "number",
+          "unit": "",
+          "mean": 12689.985864297254,
+          "std": 1741.6916556342103,
+          "minimum": 0.0,
+          "maximum": 26623.519109370936,
+          "exampleRange": [
+            11414.5,
+            13982.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "perimeter",
+          "kind": "number",
+          "unit": "",
+          "mean": 454.71787655100997,
+          "std": 35.64762629788246,
+          "minimum": 169.53686616795028,
+          "maximum": 739.8988869340697,
+          "exampleRange": [
+            426.64625552499996,
+            484.162506125
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "major_axis_length",
+          "kind": "number",
+          "unit": "",
+          "mean": 188.99913021256057,
+          "std": 17.468009299752392,
+          "minimum": 49.255055814541436,
+          "maximum": 328.7432046105797,
+          "exampleRange": [
+            174.5748367,
+            203.86730957499998
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "minor_axis_length",
+          "kind": "number",
+          "unit": "",
+          "mean": 86.3678084282228,
+          "std": 5.784472863011156,
+          "minimum": 40.092025524133554,
+          "maximum": 132.64359133231204,
+          "exampleRange": [
+            82.79850196749999,
+            90.17543602
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "eccentricity",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.8870184067964464,
+          "std": 0.020710672328938223,
+          "minimum": 0.7213330281649406,
+          "maximum": 1.0527037854279522,
+          "exampleRange": [
+            0.87250000225,
+            0.90281616125
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "convex_area",
+          "kind": "number",
+          "unit": "",
+          "mean": 12975.823909531502,
+          "std": 1785.2420595870115,
+          "minimum": 0.0,
+          "maximum": 27257.760386227594,
+          "exampleRange": [
+            11659.25,
+            14310.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "extent",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.6611646832447496,
+          "std": 0.0772657395734182,
+          "minimum": 0.043038766657404026,
+          "maximum": 1.2792905998320951,
+          "exampleRange": [
+            0.59801693275,
+            0.72676838925
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Rice (Cammeo and Osmancik)",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/545/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "fishery-abalone-rings-ridge-v1",
+      "sourceSha256": "08662e3a2c772f656e1de071c4c8986c7c1d71cb914b09ac25abc8688bb57c84",
+      "domain": "漁業",
+      "category": "年齡估算",
+      "title": "鮑魚年輪數",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "sex_male",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.3661141804788214,
+          "std": 0.481741203688401,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sex_female",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.3152854511970534,
+          "std": 0.4646294603880895,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "length",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.5262725598526712,
+          "std": 0.11975785622385275,
+          "minimum": 0.0,
+          "maximum": 1.484335409643493,
+          "exampleRange": [
+            0.455,
+            0.615
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "diameter",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.40989318600368463,
+          "std": 0.09885573510125358,
+          "minimum": 0.0,
+          "maximum": 1.2007390668137132,
+          "exampleRange": [
+            0.35,
+            0.48
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "height",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.1401749539594842,
+          "std": 0.04323196202213482,
+          "minimum": 0.0,
+          "maximum": 0.48603065013656277,
+          "exampleRange": [
+            0.115,
+            0.165
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "whole_weight",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.837258747697976,
+          "std": 0.49043075382966267,
+          "minimum": 0.0,
+          "maximum": 4.760704778335278,
+          "exampleRange": [
+            0.453,
+            1.15475
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "shucked_weight",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.36378802946593086,
+          "std": 0.2226604048707851,
+          "minimum": 0.0,
+          "maximum": 2.1450712684322117,
+          "exampleRange": [
+            0.195,
+            0.5055
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "viscera_weight",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.1829453038674028,
+          "std": 0.1100317418251194,
+          "minimum": 0.0,
+          "maximum": 1.063199238468358,
+          "exampleRange": [
+            0.096,
+            0.2555
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "shell_weight",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.24050681399631688,
+          "std": 0.13822055416113702,
+          "minimum": 0.0,
+          "maximum": 1.346271247285413,
+          "exampleRange": [
+            0.13375,
+            0.33
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Abalone",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/1/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "transport-auto-mpg-ridge-v1",
+      "sourceSha256": "c11630e11e4fa8de8f1bd08a8e1b3a4d6d6da24d79052398e62ab53a54c76076",
+      "domain": "交通",
+      "category": "車輛油耗",
+      "title": "汽車油耗（mpg）",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "affine-output",
+      "decisionLogit": 0.0,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "cylinders",
+          "kind": "integer",
+          "unit": "",
+          "mean": 5.460629921259843,
+          "std": 1.6849335826679799,
+          "minimum": 3,
+          "maximum": 18,
+          "exampleRange": [
+            4.0,
+            7.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "displacement",
+          "kind": "number",
+          "unit": "",
+          "mean": 193.48425196850394,
+          "std": 103.66757587323326,
+          "minimum": 0.0,
+          "maximum": 1022.82485895437,
+          "exampleRange": [
+            105.0,
+            259.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "horsepower",
+          "kind": "number",
+          "unit": "",
+          "mean": 103.58661417322834,
+          "std": 37.80969725674106,
+          "minimum": 0.0,
+          "maximum": 406.0641922271568,
+          "exampleRange": [
+            76.0,
+            118.75
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "weight",
+          "kind": "number",
+          "unit": "",
+          "mean": 2961.728346456693,
+          "std": 829.0763342036943,
+          "minimum": 0.0,
+          "maximum": 9594.339020086247,
+          "exampleRange": [
+            2229.5,
+            3556.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "acceleration",
+          "kind": "number",
+          "unit": "",
+          "mean": 15.625590551181102,
+          "std": 2.7931466052350205,
+          "minimum": 0.0,
+          "maximum": 37.97076339306126,
+          "exampleRange": [
+            14.0,
+            17.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "model_year",
+          "kind": "integer",
+          "unit": "",
+          "mean": 75.95669291338582,
+          "std": 3.6793334416697205,
+          "minimum": 70,
+          "maximum": 105,
+          "exampleRange": [
+            73.0,
+            79.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "origin_europe",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.16929133858267717,
+          "std": 0.3750090415757512,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "origin_japan",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.2204724409448819,
+          "std": 0.41456524664844735,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Auto MPG",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/9/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "security-phishing-site-logreg-v1",
+      "sourceSha256": "79dece4bfaaad2033f621643cc978dfb6448cd4a4fee0bc99974ec2fd38b9794",
+      "domain": "資訊安全",
+      "category": "釣魚網站",
+      "title": "釣魚網站偵測",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": -0.5,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "having_ip_address",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.32386917188587333,
+          "std": 0.9461018758579665,
+          "minimum": -7,
+          "maximum": 7,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "url_length",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.6283924843423799,
+          "std": 0.7701645960233207,
+          "minimum": -6,
+          "maximum": 5,
+          "exampleRange": [
+            -1.0,
+            -1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "shortining_service",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.7500347947112039,
+          "std": 0.6613983721801232,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "having_at_symbol",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.6977035490605428,
+          "std": 0.7163865978844149,
+          "minimum": -5,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "double_slash_redirecting",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.751704940848991,
+          "std": 0.6594995692972428,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "prefix_suffix",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.7338900487125957,
+          "std": 0.6792682801372015,
+          "minimum": -6,
+          "maximum": 4,
+          "exampleRange": [
+            -1.0,
+            -1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "having_sub_domain",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.061238691718858734,
+          "std": 0.8177786991512406,
+          "minimum": -6,
+          "maximum": 6,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sslfinal_state",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.24968684759916493,
+          "std": 0.9132186149813183,
+          "minimum": -7,
+          "maximum": 7,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "domain_registration_length",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.3330549756437022,
+          "std": 0.9429074096638368,
+          "minimum": -7,
+          "maximum": 7,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "favicon",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.6228253305497564,
+          "std": 0.7823609190300477,
+          "minimum": -5,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "port",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.7247042449547669,
+          "std": 0.6890600535109421,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "https_token",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.6829505915100905,
+          "std": 0.7304645710478073,
+          "minimum": -5,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "request_url",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.17856645789839945,
+          "std": 0.9839278531038592,
+          "minimum": -7,
+          "maximum": 8,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "url_of_anchor",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.07237299930410578,
+          "std": 0.7155073279194655,
+          "minimum": -5,
+          "maximum": 5,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "links_in_tags",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.1187195546276966,
+          "std": 0.7621648305554614,
+          "minimum": -6,
+          "maximum": 5,
+          "exampleRange": [
+            -1.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "sfh",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.5986082115518441,
+          "std": 0.7550697205076727,
+          "minimum": -6,
+          "maximum": 5,
+          "exampleRange": [
+            -1.0,
+            -1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "submitting_to_email",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.6308977035490605,
+          "std": 0.7758660242958076,
+          "minimum": -5,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "abnormal_url",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.7118997912317327,
+          "std": 0.7022810600067875,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "redirect",
+          "kind": "binary",
+          "unit": "",
+          "mean": 0.10981210855949895,
+          "std": 0.31265541635034527,
+          "minimum": 0,
+          "maximum": 1,
+          "exampleRange": [
+            0.0,
+            0.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "on_mouseover",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.759777313848295,
+          "std": 0.6501833844089324,
+          "minimum": -4,
+          "maximum": 5,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "rightclick",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.9117606123869172,
+          "std": 0.41072202972304994,
+          "minimum": -2,
+          "maximum": 4,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "popupwindow",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.6097425191370912,
+          "std": 0.7925995586399948,
+          "minimum": -5,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "iframe",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.8107167710508003,
+          "std": 0.5854385682007769,
+          "minimum": -3,
+          "maximum": 5,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "age_of_domain",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.07139874739039666,
+          "std": 0.9974478527076304,
+          "minimum": -7,
+          "maximum": 8,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "dnsrecord",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.3915100904662491,
+          "std": 0.920173814593307,
+          "minimum": -6,
+          "maximum": 7,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "web_traffic",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.28990953375086986,
+          "std": 0.8252384941286048,
+          "minimum": -6,
+          "maximum": 6,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "page_rank",
+          "kind": "integer",
+          "unit": "",
+          "mean": -0.4778009742519137,
+          "std": 0.8784681149614638,
+          "minimum": -7,
+          "maximum": 6,
+          "exampleRange": [
+            -1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "google_index",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.7241475295755045,
+          "std": 0.6896450938053155,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "links_pointing_to_page",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.33890048712595683,
+          "std": 0.5708991691680575,
+          "minimum": -4,
+          "maximum": 4,
+          "exampleRange": [
+            0.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "statistical_report",
+          "kind": "integer",
+          "unit": "",
+          "mean": 0.7152400835073068,
+          "std": 0.6988788328061079,
+          "minimum": -4,
+          "maximum": 6,
+          "exampleRange": [
+            1.0,
+            1.0
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Phishing Websites",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/327/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    },
+    {
+      "id": "building-room-occupancy-logreg-v1",
+      "sourceSha256": "d8a07bb47d7ee11d9f573dfa8a219a98c6b085cc5d2542a71af20bc93e51cdda",
+      "domain": "智慧建築",
+      "category": "人員偵測",
+      "title": "室內有人偵測",
+      "operation": "public-scalar-affine",
+      "thresholdSpace": "logit",
+      "decisionLogit": 1.0500000000000007,
+      "normalizedAbsMax": 8,
+      "fields": [
+        {
+          "name": "temperature_C",
+          "kind": "number",
+          "unit": "",
+          "mean": 20.903142344930526,
+          "std": 1.0547189002281763,
+          "minimum": 12.465391143105116,
+          "maximum": 29.340893546755936,
+          "exampleRange": [
+            20.2,
+            21.5
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "humidity_pct",
+          "kind": "number",
+          "unit": "",
+          "mean": 27.672434062372012,
+          "std": 4.989395826417206,
+          "minimum": 0.0,
+          "maximum": 67.58760067370966,
+          "exampleRange": [
+            24.545,
+            31.29
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "light_lux",
+          "kind": "number",
+          "unit": "",
+          "mean": 130.12936585139892,
+          "std": 208.71568838741112,
+          "minimum": 0.0,
+          "maximum": 1799.8548729506879,
+          "exampleRange": [
+            0.0,
+            300.27083333333326
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "co2_ppm",
+          "kind": "number",
+          "unit": "",
+          "mean": 691.5637725196339,
+          "std": 312.8132488716062,
+          "minimum": 0.0,
+          "maximum": 3194.0697634924836,
+          "exampleRange": [
+            460.0,
+            806.2708333333333
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        },
+        {
+          "name": "humidity_ratio",
+          "kind": "number",
+          "unit": "",
+          "mean": 0.004230213957479205,
+          "std": 0.0007698412037150807,
+          "minimum": 0.0,
+          "maximum": 0.01038894358719985,
+          "exampleRange": [
+            0.0037228324312411324,
+            0.0048343798934014645
+          ],
+          "note": "依資料集原始欄位定義輸入；研究用途。"
+        }
+      ],
+      "dataset": "Occupancy Detection ",
+      "sourceUrl": "https://archive.ics.uci.edu/static/public/357/data.csv",
+      "status": "LOCAL_CPP_CKKS_VERIFIED_NOT_ON_BOARD"
+    }
+  ]
+}

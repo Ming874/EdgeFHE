@@ -1,0 +1,79 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "transport-auto-mpg-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "cylinders",
+    "displacement",
+    "horsepower",
+    "weight",
+    "acceleration",
+    "model_year",
+    "origin_europe",
+    "origin_japan"
+  ],
+  "mean": [
+    5.460629921259843,
+    193.48425196850394,
+    103.58661417322834,
+    2961.728346456693,
+    15.625590551181102,
+    75.95669291338582,
+    0.16929133858267717,
+    0.2204724409448819
+  ],
+  "std": [
+    1.6849335826679799,
+    103.66757587323326,
+    37.80969725674106,
+    829.0763342036943,
+    2.7931466052350205,
+    3.6793334416697205,
+    0.3750090415757512,
+    0.41456524664844735
+  ],
+  "weights": [
+    -0.11833081878183507,
+    0.2944584622245613,
+    -0.058587551709266085,
+    -0.6927373800818213,
+    0.06814504664320434,
+    0.3638893360144544,
+    0.14559503160585094,
+    0.16336594023264206
+  ],
+  "bias": -2.9897344442661697e-16,
+  "weights_int": [
+    -127056749,
+    316172366,
+    -62907905,
+    -743821098,
+    73170187,
+    390723199,
+    156331475,
+    175412843
+  ],
+  "bias_int": -345,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 23.374803149606297,
+  "target_std": 7.51744395016864,
+  "training_source": {
+    "name": "Auto MPG",
+    "uci_id": 9,
+    "data_url": "https://archive.ics.uci.edu/static/public/9/data.csv",
+    "sha256": "240f4657d747fe105f3c992251daba65f926ef54c4dec3cde34e398e8cf5da9c",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "mpg",
+    "excluded": "car_name; rows with missing horsepower"
+  },
+  "split_seed": 20261115,
+  "split": "row",
+  "selected_lambda": 0.001,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

@@ -1,0 +1,53 @@
+{
+  "model_id": "diabetes-progression-ridge-v1",
+  "model_sha256": "88711f9857b0378ec76248f8f2291b300cd11099e6831890c9759e387b7cf184",
+  "rows": 442,
+  "features": 10,
+  "groups": 3,
+  "padded_ciphertexts": 12,
+  "split_counts": {
+    "train": 287,
+    "validation": 66,
+    "test": 89
+  },
+  "test_metrics": {
+    "RMSE": 57.68233357304771,
+    "MAE": 47.92722236060775,
+    "R2": 0.4418907745994308,
+    "constant_train_mean_RMSE": 79.54605019094086
+  },
+  "validation_search": [
+    {
+      "lambda_": 0.001,
+      "selection_score": -0.5639967205768176
+    },
+    {
+      "lambda_": 0.01,
+      "selection_score": -0.5640422768648965
+    },
+    {
+      "lambda_": 0.1,
+      "selection_score": -0.5644841768163583
+    },
+    {
+      "lambda_": 1.0,
+      "selection_score": -0.5678395692347085
+    },
+    {
+      "lambda_": 10.0,
+      "selection_score": -0.5749347772201395
+    }
+  ],
+  "test_out_of_domain_rows": 0,
+  "quantization_max_score_difference": 3.5383082575002334e-09,
+  "error_contract": {
+    "no_wrap_coefficient_bound": "73670209871572818477206",
+    "conservative_normalized_error": 2.9558367276329562,
+    "empirical_QA_tolerance": 0.0005,
+    "empirical_tolerance_is_proof": false
+  },
+  "numpy_version": "2.3.5",
+  "python_version": "3.12.14",
+  "measured_on_KV260": false,
+  "training_is_plaintext_public_data": true
+}

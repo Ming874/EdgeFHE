@@ -1,0 +1,828 @@
+{
+ "status": "O7_INFLIGHT_SCAN_V1_INDEPENDENT_REVIEW_PASS",
+ "gates": {
+  "seal_exact": true,
+  "root_returned_same_boot": true,
+  "irq_chain_from_o345_v2": true,
+  "children_returned_exit0": true,
+  "states_same_boot_fastpath3_no_fatal": true,
+  "irq_delta_equals_device_calls_every_child_chained": true,
+  "irq_total_equals_root": true,
+  "owner_rebuilt_equivalence_pass": true,
+  "owner_build_byte_identical_to_accepted_o345": true,
+  "exact_pl_gate": true,
+  "s1b_60_windows_valid": true,
+  "profile_server_ready": true,
+  "server_digests_match_all_windows_in_order": true
+ },
+ "notes": {
+  "IRQ_final": {
+   "121": 3238303,
+   "136": 3238303
+  },
+  "DMA_total": 127469,
+  "irq_mismatch": [],
+  "server_segments": 60,
+  "server_segments_before_windows": 0,
+  "s1b": {
+   "ai4i|cpu|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 129267.92906750769,
+     "CI95": [
+      128860.98726585359,
+      129903.73816560383
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 13.357,
+     "tls_roundtrip_ms": 8.896,
+     "decrypt_ms": 1.736,
+     "latency_ms": 30.697
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 7.546,
+     "body": 5.888,
+     "validate_unpack": 0.496,
+     "cloud": 0.108,
+     "pack": 0.047,
+     "write": 0.135,
+     "previous_log": 1.104
+    },
+    "server_busy_fraction": 0.483
+   },
+   "ai4i|cpu|O345_3slot_duplex": {
+    "records_per_s": {
+     "point": 134898.1319228923,
+     "CI95": [
+      133944.82500735822,
+      136102.26409344858
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 14.457,
+     "tls_roundtrip_ms": 22.58,
+     "decrypt_ms": 2.624,
+     "latency_ms": 44.084
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 6.54,
+     "body": 6.326,
+     "validate_unpack": 0.461,
+     "cloud": 0.1,
+     "pack": 0.043,
+     "write": 0.132,
+     "previous_log": 1.11
+    },
+    "server_busy_fraction": 0.518,
+    "over_baseline": {
+     "point": 1.0435545219606972,
+     "CI95": [
+      1.035207767689351,
+      1.0524308494170536
+     ]
+    }
+   },
+   "ai4i|cpu|O7_slots4_inflight4": {
+    "records_per_s": {
+     "point": 133664.75302452175,
+     "CI95": [
+      133389.93840966563,
+      134151.4892450299
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 14.421,
+     "tls_roundtrip_ms": 9.548,
+     "decrypt_ms": 1.692,
+     "latency_ms": 58.788
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 6.98,
+     "body": 5.86,
+     "validate_unpack": 0.458,
+     "cloud": 0.101,
+     "pack": 0.041,
+     "write": 0.135,
+     "previous_log": 1.106
+    },
+    "server_busy_fraction": 0.479,
+    "over_baseline": {
+     "point": 1.0340132621349407,
+     "CI95": [
+      1.0291137056463913,
+      1.0387701246989578
+     ]
+    },
+    "over_O345": {
+     "point": 0.990856960872701,
+     "CI95": [
+      0.9822446250352876,
+      0.998059440852103
+     ]
+    }
+   },
+   "ai4i|cpu|O7_slots6_inflight6": {
+    "records_per_s": {
+     "point": 135170.7489375082,
+     "CI95": [
+      134793.72888071116,
+      135543.39121377072
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 14.393,
+     "tls_roundtrip_ms": 9.561,
+     "decrypt_ms": 1.665,
+     "latency_ms": 87.98
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 6.944,
+     "body": 5.859,
+     "validate_unpack": 0.463,
+     "cloud": 0.102,
+     "pack": 0.043,
+     "write": 0.137,
+     "previous_log": 1.106
+    },
+    "server_busy_fraction": 0.496,
+    "over_baseline": {
+     "point": 1.0456634519681822,
+     "CI95": [
+      1.0405454904245317,
+      1.0504209861190494
+     ]
+    },
+    "over_O345": {
+     "point": 1.0020209102285549,
+     "CI95": [
+      0.993927400589171,
+      1.0092536906268084
+     ]
+    }
+   },
+   "ai4i|cpu|O7_slots8_inflight8": {
+    "records_per_s": {
+     "point": 133457.277690031,
+     "CI95": [
+      131440.28433642216,
+      135278.17986648183
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 14.405,
+     "tls_roundtrip_ms": 9.498,
+     "decrypt_ms": 1.707,
+     "latency_ms": 118.555
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 7.101,
+     "body": 5.753,
+     "validate_unpack": 0.463,
+     "cloud": 0.102,
+     "pack": 0.043,
+     "write": 0.135,
+     "previous_log": 1.102
+    },
+    "server_busy_fraction": 0.471,
+    "over_baseline": {
+     "point": 1.0324082597496824,
+     "CI95": [
+      1.0172721780125653,
+      1.0460142075022019
+     ]
+    },
+    "over_O345": {
+     "point": 0.9893189459904095,
+     "CI95": [
+      0.9746396687176867,
+      1.0041555735188936
+     ]
+    }
+   },
+   "ai4i|pl|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 219145.017787773,
+     "CI95": [
+      216158.79785378248,
+      221159.1951367813
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 5.013,
+     "tls_roundtrip_ms": 8.547,
+     "decrypt_ms": 1.722,
+     "latency_ms": 17.776
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 1.726,
+     "body": 5.841,
+     "validate_unpack": 0.46,
+     "cloud": 0.101,
+     "pack": 0.043,
+     "write": 0.135,
+     "previous_log": 0.282
+    },
+    "server_busy_fraction": 0.706
+   },
+   "ai4i|pl|O345_3slot_duplex": {
+    "records_per_s": {
+     "point": 238989.8347310168,
+     "CI95": [
+      236380.01220866814,
+      240980.37553029018
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 4.371,
+     "tls_roundtrip_ms": 17.359,
+     "decrypt_ms": 1.687,
+     "latency_ms": 26.059
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 1.3,
+     "body": 6.369,
+     "validate_unpack": 0.453,
+     "cloud": 0.099,
+     "pack": 0.043,
+     "write": 0.131,
+     "previous_log": 0.259
+    },
+    "server_busy_fraction": 0.839,
+    "over_baseline": {
+     "point": 1.090555638195992,
+     "CI95": [
+      1.0753789522834138,
+      1.1062996218377865
+     ]
+    }
+   },
+   "ai4i|pl|O7_slots4_inflight4": {
+    "records_per_s": {
+     "point": 245972.16658719679,
+     "CI95": [
+      242972.97569377694,
+      249168.96034327633
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 4.35,
+     "tls_roundtrip_ms": 12.888,
+     "decrypt_ms": 1.694,
+     "latency_ms": 34.076
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.29,
+     "body": 6.904,
+     "validate_unpack": 0.455,
+     "cloud": 0.103,
+     "pack": 0.05,
+     "write": 0.146,
+     "previous_log": 0.267
+    },
+    "server_busy_fraction": 0.938,
+    "over_baseline": {
+     "point": 1.1224173338287073,
+     "CI95": [
+      1.1045914200367355,
+      1.1405164907725
+     ]
+    },
+    "over_O345": {
+     "point": 1.029216020271484,
+     "CI95": [
+      1.0140674493966617,
+      1.044560245129134
+     ]
+    }
+   },
+   "ai4i|pl|O7_slots6_inflight6": {
+    "records_per_s": {
+     "point": 246164.28095348118,
+     "CI95": [
+      242358.14463548697,
+      251349.8214441526
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 4.35,
+     "tls_roundtrip_ms": 12.827,
+     "decrypt_ms": 1.684,
+     "latency_ms": 51.155
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.552,
+     "body": 6.851,
+     "validate_unpack": 0.452,
+     "cloud": 0.096,
+     "pack": 0.043,
+     "write": 0.123,
+     "previous_log": 0.234
+    },
+    "server_busy_fraction": 0.929,
+    "over_baseline": {
+     "point": 1.1232939878737034,
+     "CI95": [
+      1.1012411327624845,
+      1.14695658601542
+     ]
+    },
+    "over_O345": {
+     "point": 1.030019880262017,
+     "CI95": [
+      1.0109917263652146,
+      1.0517176252581912
+     ]
+    }
+   },
+   "ai4i|pl|O7_slots8_inflight8": {
+    "records_per_s": {
+     "point": 252976.34475812066,
+     "CI95": [
+      251615.86789974992,
+      255397.30091956246
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 4.361,
+     "tls_roundtrip_ms": 12.803,
+     "decrypt_ms": 1.751,
+     "latency_ms": 68.044
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.531,
+     "body": 6.836,
+     "validate_unpack": 0.451,
+     "cloud": 0.095,
+     "pack": 0.043,
+     "write": 0.121,
+     "previous_log": 0.23
+    },
+    "server_busy_fraction": 0.927,
+    "over_baseline": {
+     "point": 1.1543787183111367,
+     "CI95": [
+      1.1399565052229244,
+      1.170326386295148
+     ]
+    },
+    "over_O345": {
+     "point": 1.0585234516055702,
+     "CI95": [
+      1.0465342792868138,
+      1.070667472149572
+     ]
+    }
+   },
+   "ai4i|pl_over_cpu|baseline_2slot_seq": {
+    "point": 1.6952775477150928,
+    "CI95": [
+     1.6741490411630384,
+     1.7127771116212838
+    ]
+   },
+   "ai4i|pl_over_cpu|O345_3slot_duplex": {
+    "point": 1.7716319071610516,
+    "CI95": [
+     1.7509301417448953,
+     1.7925555791481123
+    ]
+   },
+   "ai4i|pl_over_cpu|O7_slots4_inflight4": {
+    "point": 1.8402171179867548,
+    "CI95": [
+     1.818144843142197,
+     1.8638412933116328
+    ]
+   },
+   "ai4i|pl_over_cpu|O7_slots6_inflight6": {
+    "point": 1.821135733051884,
+    "CI95": [
+     1.7940163159049523,
+     1.85781145761833
+    ]
+   },
+   "ai4i|pl_over_cpu|O7_slots8_inflight8": {
+    "point": 1.8955605054801554,
+    "CI95": [
+     1.8682073879561345,
+     1.9246484898847773
+    ]
+   },
+   "diabetes|cpu|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 51253.4179267487,
+     "CI95": [
+      50457.2389181992,
+      51652.90589020033
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 34.407,
+     "tls_roundtrip_ms": 16.677,
+     "decrypt_ms": 3.696,
+     "latency_ms": 77.297
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 23.463,
+     "body": 12.318,
+     "validate_unpack": 1.472,
+     "cloud": 0.152,
+     "pack": 0.044,
+     "write": 0.142,
+     "previous_log": 1.129
+    },
+    "server_busy_fraction": 0.373
+   },
+   "diabetes|cpu|O345_3slot_duplex": {
+    "records_per_s": {
+     "point": 56991.67625366878,
+     "CI95": [
+      56458.10960139846,
+      57547.185787706425
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 34.75,
+     "tls_roundtrip_ms": 52.017,
+     "decrypt_ms": 3.835,
+     "latency_ms": 105.843
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 16.896,
+     "body": 15.17,
+     "validate_unpack": 1.47,
+     "cloud": 0.153,
+     "pack": 0.045,
+     "write": 0.15,
+     "previous_log": 1.136
+    },
+    "server_busy_fraction": 0.463,
+    "over_baseline": {
+     "point": 1.1119585494790063,
+     "CI95": [
+      1.0963501862334268,
+      1.1295044571515924
+     ]
+    }
+   },
+   "diabetes|cpu|O7_slots4_inflight4": {
+    "records_per_s": {
+     "point": 55675.070157081536,
+     "CI95": [
+      55202.9782783073,
+      56172.75903654934
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 35.185,
+     "tls_roundtrip_ms": 20.398,
+     "decrypt_ms": 2.894,
+     "latency_ms": 143.921
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 18.019,
+     "body": 14.623,
+     "validate_unpack": 1.441,
+     "cloud": 0.157,
+     "pack": 0.051,
+     "write": 0.163,
+     "previous_log": 1.134
+    },
+    "server_busy_fraction": 0.443,
+    "over_baseline": {
+     "point": 1.0862703875993647,
+     "CI95": [
+      1.0716301055608057,
+      1.10341095451817
+     ]
+    },
+    "over_O345": {
+     "point": 0.9768982738685021,
+     "CI95": [
+      0.9650788568821395,
+      0.9888692307012241
+     ]
+    }
+   },
+   "diabetes|cpu|O7_slots6_inflight6": {
+    "records_per_s": {
+     "point": 55167.96143633442,
+     "CI95": [
+      54994.62794297771,
+      55322.17383400618
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 34.988,
+     "tls_roundtrip_ms": 20.366,
+     "decrypt_ms": 2.881,
+     "latency_ms": 218.758
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 18.006,
+     "body": 14.508,
+     "validate_unpack": 1.472,
+     "cloud": 0.166,
+     "pack": 0.047,
+     "write": 0.157,
+     "previous_log": 1.158
+    },
+    "server_busy_fraction": 0.429,
+    "over_baseline": {
+     "point": 1.0763762431450012,
+     "CI95": [
+      1.0659569354698526,
+      1.0920892836801406
+     ]
+    },
+    "over_O345": {
+     "point": 0.9680003302724938,
+     "CI95": [
+      0.9588512599966791,
+      0.9769290455550969
+     ]
+    }
+   },
+   "diabetes|cpu|O7_slots8_inflight8": {
+    "records_per_s": {
+     "point": 55622.702935757974,
+     "CI95": [
+      55129.73109213234,
+      56093.37833018826
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 35.046,
+     "tls_roundtrip_ms": 20.393,
+     "decrypt_ms": 2.882,
+     "latency_ms": 288.525
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 17.927,
+     "body": 14.543,
+     "validate_unpack": 1.459,
+     "cloud": 0.159,
+     "pack": 0.044,
+     "write": 0.147,
+     "previous_log": 1.148
+    },
+    "server_busy_fraction": 0.443,
+    "over_baseline": {
+     "point": 1.0852486562994463,
+     "CI95": [
+      1.0706558404726976,
+      1.1028149890477454
+     ]
+    },
+    "over_O345": {
+     "point": 0.9759794165060607,
+     "CI95": [
+      0.9642014621237684,
+      0.9879083791317864
+     ]
+    }
+   },
+   "diabetes|pl|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 105565.56947365846,
+     "CI95": [
+      104676.24082267663,
+      106471.55897714077
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 11.84,
+     "tls_roundtrip_ms": 18.472,
+     "decrypt_ms": 1.737,
+     "latency_ms": 37.686
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.783,
+     "body": 14.675,
+     "validate_unpack": 1.447,
+     "cloud": 0.158,
+     "pack": 0.051,
+     "write": 0.164,
+     "previous_log": 1.136
+    },
+    "server_busy_fraction": 0.854
+   },
+   "diabetes|pl|O345_3slot_duplex": {
+    "records_per_s": {
+     "point": 110497.74389015832,
+     "CI95": [
+      109675.93819262483,
+      111815.60863716736
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 10.108,
+     "tls_roundtrip_ms": 37.38,
+     "decrypt_ms": 1.715,
+     "latency_ms": 56.07
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.569,
+     "body": 15.231,
+     "validate_unpack": 1.476,
+     "cloud": 0.159,
+     "pack": 0.054,
+     "write": 0.177,
+     "previous_log": 0.868
+    },
+    "server_busy_fraction": 0.942,
+    "over_baseline": {
+     "point": 1.0467214304918857,
+     "CI95": [
+      1.034103003353901,
+      1.0594837381716644
+     ]
+    }
+   },
+   "diabetes|pl|O7_slots4_inflight4": {
+    "records_per_s": {
+     "point": 114661.3976029783,
+     "CI95": [
+      112741.86536843856,
+      116280.01356957108
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 10.071,
+     "tls_roundtrip_ms": 23.834,
+     "decrypt_ms": 1.708,
+     "latency_ms": 72.662
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.019,
+     "body": 15.228,
+     "validate_unpack": 1.491,
+     "cloud": 0.154,
+     "pack": 0.046,
+     "write": 0.156,
+     "previous_log": 0.856
+    },
+    "server_busy_fraction": 0.962,
+    "over_baseline": {
+     "point": 1.0861628291749945,
+     "CI95": [
+      1.0679795119806632,
+      1.1035910026181466
+     ]
+    },
+    "over_O345": {
+     "point": 1.0376808934394073,
+     "CI95": [
+      1.0203092063174706,
+      1.0541223932164312
+     ]
+    }
+   },
+   "diabetes|pl|O7_slots6_inflight6": {
+    "records_per_s": {
+     "point": 116092.44602034696,
+     "CI95": [
+      115218.94455211695,
+      117291.5258854871
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 10.084,
+     "tls_roundtrip_ms": 23.742,
+     "decrypt_ms": 1.741,
+     "latency_ms": 108.88
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.02,
+     "body": 15.144,
+     "validate_unpack": 1.474,
+     "cloud": 0.148,
+     "pack": 0.043,
+     "write": 0.144,
+     "previous_log": 0.849
+    },
+    "server_busy_fraction": 0.958,
+    "over_baseline": {
+     "point": 1.0997188439296512,
+     "CI95": [
+      1.0870123200577742,
+      1.1125702528588348
+     ]
+    },
+    "over_O345": {
+     "point": 1.0506318222727709,
+     "CI95": [
+      1.0376816990559257,
+      1.06375020840924
+     ]
+    }
+   },
+   "diabetes|pl|O7_slots8_inflight8": {
+    "records_per_s": {
+     "point": 116744.61775125675,
+     "CI95": [
+      115741.725692533,
+      117384.1819187095
+     ],
+     "n": 3
+    },
+    "client_stage_medians_ms": {
+     "prepare_ms": 10.127,
+     "tls_roundtrip_ms": 23.761,
+     "decrypt_ms": 1.738,
+     "latency_ms": 144.866
+    },
+    "server_stage_medians_ms": {
+     "wait_header": 0.018,
+     "body": 14.939,
+     "validate_unpack": 1.462,
+     "cloud": 0.151,
+     "pack": 0.043,
+     "write": 0.143,
+     "previous_log": 1.125
+    },
+    "server_busy_fraction": 0.968,
+    "over_baseline": {
+     "point": 1.105896726871613,
+     "CI95": [
+      1.094505883791803,
+      1.1174174530704435
+     ]
+    },
+    "over_O345": {
+     "point": 1.0565339493927424,
+     "CI95": [
+      1.0440815837266837,
+      1.0683847114638119
+     ]
+    }
+   },
+   "diabetes|pl_over_cpu|baseline_2slot_seq": {
+    "point": 2.059678627180193,
+    "CI95": [
+     2.0321997942240255,
+     2.092178877342067
+    ]
+   },
+   "diabetes|pl_over_cpu|O345_3slot_duplex": {
+    "point": 1.9388400404005512,
+    "CI95": [
+     1.9141328827809838,
+     1.9638639749706206
+    ]
+   },
+   "diabetes|pl_over_cpu|O7_slots4_inflight4": {
+    "point": 2.0594746855185426,
+    "CI95": [
+     2.0259287100815437,
+     2.092809260201237
+    ]
+   },
+   "diabetes|pl_over_cpu|O7_slots6_inflight6": {
+    "point": 2.1043454026178097,
+    "CI95": [
+     2.087690833457001,
+     2.1243464973054
+    ]
+   },
+   "diabetes|pl_over_cpu|O7_slots8_inflight8": {
+    "point": 2.098866318778003,
+    "CI95": [
+     2.077028836744355,
+     2.120957484516704
+    ]
+   }
+  },
+  "vs_previous_run_same_config": {
+   "ai4i|cpu|baseline_2slot_seq": 0.9895,
+   "ai4i|cpu|O345_3slot_duplex": 0.9928,
+   "ai4i|pl|baseline_2slot_seq": 1.0252,
+   "ai4i|pl|O345_3slot_duplex": 1.0116,
+   "diabetes|cpu|baseline_2slot_seq": 0.9858,
+   "diabetes|cpu|O345_3slot_duplex": 1.0022,
+   "diabetes|pl|baseline_2slot_seq": 0.9998,
+   "diabetes|pl|O345_3slot_duplex": 1.0057
+  }
+ },
+ "scope": "KV260 boot e26925f5; two-machine wired LAN; PC PROFILE server (locked server.cpp + stage timestamps); 30 s windows, 3 sessions per cell; marginal CIs; one board, one boot",
+ "assistant_board_operations": 0
+}

@@ -1,0 +1,3824 @@
+{
+  "status": "T0_ALL_NUMERIC_OCCURRENCES_CLASSIFIED_PASS",
+  "claims": 168,
+  "documents": 3,
+  "occurrences": [
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "4096",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "998244353",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "1004535809",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "469762049",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "1073741824",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 42,
+      "token": "4.5",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 44,
+      "token": "1",
+      "category": "ring_formula_constant",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.600",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.571",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.626",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.641",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.635",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 52,
+      "token": "1.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "1.811",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "1.792",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "1.829",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "2.022",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "2.013",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 53,
+      "token": "2.030",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "44.893",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "13.387",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "4.912",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "9.139",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "9.105",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 57,
+      "token": "9.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "45.405",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "13.354",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "5.007",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "9.069",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "9.051",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 58,
+      "token": "9.084",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "114.045",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "32.516",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "10.691",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 59,
+      "token": "10.716",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "114.543",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "34.428",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "11.848",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "9.668",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "9.609",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 60,
+      "token": "9.720",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 64,
+      "token": "4",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 64,
+      "token": "4.186",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 64,
+      "token": "4.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 64,
+      "token": "4.199",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 65,
+      "token": "10",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 65,
+      "token": "5.375",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 65,
+      "token": "5.337",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 65,
+      "token": "5.422",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 67,
+      "token": "832396",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 67,
+      "token": "831638",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 67,
+      "token": "833155",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 69,
+      "token": "4.274",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/point"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 69,
+      "token": "4.263",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/0"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 69,
+      "token": "4.286",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/1"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 71,
+      "token": "6.0018",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/active_h"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 71,
+      "token": "1,650,251",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/requests"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 71,
+      "token": "3,379,714,048",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/records"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 71,
+      "token": "2,726,453",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/device_calls"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 71,
+      "token": "0.00047366",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/max_error"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "323,475",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "329,546",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "127,831",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "129,291",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "1.2565",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 99,
+      "token": "1.3200",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "123,907",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "125,034",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "54,568",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "55,240",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "1.0584",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 100,
+      "token": "1.0753",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "0",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 110,
+      "token": "6.008374",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/active_seconds"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 111,
+      "token": "2,014,736",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/requests"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 112,
+      "token": "4,126,179,328",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/records"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 113,
+      "token": "3,320,109",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/DMA_total"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 114,
+      "token": "384",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/connections"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 115,
+      "token": "0.000509600326",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/max_public_error"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 117,
+      "token": "114,592",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/DMA_total"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 117,
+      "token": "6,699,271",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/IRQ_final/121"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 117,
+      "token": "20.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_classic_128"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 117,
+      "token": "12.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_quantum_128"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 121,
+      "token": "10.554",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 121,
+      "token": "10.449",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 122,
+      "token": "11.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 122,
+      "token": "11.639",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 128,
+      "token": "6.19",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/variants/v0_current_nb_16k_read_each/cpu_ms_per_MB_median"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 128,
+      "token": "6.56",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    },
+    {
+      "document": "README_zh-TW.md",
+      "line": 128,
+      "token": "8.07",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "4096",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "998244353",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "1004535809",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "469762049",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "1073741824",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 42,
+      "token": "4.5",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 44,
+      "token": "1",
+      "category": "ring_formula_constant",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.600",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.571",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.626",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.641",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.635",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 52,
+      "token": "1.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "1.811",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "1.792",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "1.829",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "2.022",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "2.013",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 53,
+      "token": "2.030",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "44.893",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "13.387",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "4.912",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "9.139",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "9.105",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 57,
+      "token": "9.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "45.405",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "13.354",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "5.007",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "9.069",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "9.051",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 58,
+      "token": "9.084",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "114.045",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "32.516",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "10.691",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 59,
+      "token": "10.716",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "114.543",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "34.428",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "11.848",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "9.668",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "9.609",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 60,
+      "token": "9.720",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 64,
+      "token": "4",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 64,
+      "token": "4.186",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 64,
+      "token": "4.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 64,
+      "token": "4.199",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 65,
+      "token": "10",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "README_en.md",
+      "line": 65,
+      "token": "5.375",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 65,
+      "token": "5.337",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 65,
+      "token": "5.422",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 67,
+      "token": "832396",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 67,
+      "token": "831638",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 67,
+      "token": "833155",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 69,
+      "token": "4.274",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/point"
+    },
+    {
+      "document": "README_en.md",
+      "line": 69,
+      "token": "4.263",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/0"
+    },
+    {
+      "document": "README_en.md",
+      "line": 69,
+      "token": "4.286",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/1"
+    },
+    {
+      "document": "README_en.md",
+      "line": 71,
+      "token": "6.0018",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/active_h"
+    },
+    {
+      "document": "README_en.md",
+      "line": 71,
+      "token": "1,650,251",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/requests"
+    },
+    {
+      "document": "README_en.md",
+      "line": 71,
+      "token": "3,379,714,048",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/records"
+    },
+    {
+      "document": "README_en.md",
+      "line": 71,
+      "token": "2,726,453",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/device_calls"
+    },
+    {
+      "document": "README_en.md",
+      "line": 71,
+      "token": "0.00047366",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/max_error"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "323,475",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "329,546",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "127,831",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "129,291",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "1.2565",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "README_en.md",
+      "line": 99,
+      "token": "1.3200",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "123,907",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "125,034",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "54,568",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "55,240",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "1.0584",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "README_en.md",
+      "line": 100,
+      "token": "1.0753",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "0",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 104,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "README_en.md",
+      "line": 110,
+      "token": "6.008374",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/active_seconds"
+    },
+    {
+      "document": "README_en.md",
+      "line": 111,
+      "token": "2,014,736",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/requests"
+    },
+    {
+      "document": "README_en.md",
+      "line": 112,
+      "token": "4,126,179,328",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/records"
+    },
+    {
+      "document": "README_en.md",
+      "line": 113,
+      "token": "3,320,109",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/DMA_total"
+    },
+    {
+      "document": "README_en.md",
+      "line": 114,
+      "token": "384",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/connections"
+    },
+    {
+      "document": "README_en.md",
+      "line": 115,
+      "token": "0.000509600326",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/max_public_error"
+    },
+    {
+      "document": "README_en.md",
+      "line": 117,
+      "token": "114,592",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/DMA_total"
+    },
+    {
+      "document": "README_en.md",
+      "line": 117,
+      "token": "6,699,271",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/IRQ_final/121"
+    },
+    {
+      "document": "README_en.md",
+      "line": 117,
+      "token": "20.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_classic_128"
+    },
+    {
+      "document": "README_en.md",
+      "line": 117,
+      "token": "12.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_quantum_128"
+    },
+    {
+      "document": "README_en.md",
+      "line": 121,
+      "token": "10.554",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "README_en.md",
+      "line": 121,
+      "token": "10.449",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "README_en.md",
+      "line": 122,
+      "token": "11.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "README_en.md",
+      "line": 122,
+      "token": "11.639",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "README_en.md",
+      "line": 128,
+      "token": "6.19",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/variants/v0_current_nb_16k_read_each/cpu_ms_per_MB_median"
+    },
+    {
+      "document": "README_en.md",
+      "line": 128,
+      "token": "6.56",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    },
+    {
+      "document": "README_en.md",
+      "line": 128,
+      "token": "8.07",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 5,
+      "token": "1",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 11,
+      "token": "2",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "4096",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "998244353",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "1004535809",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "469762049",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "1073741824",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 27,
+      "token": "4.5",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 29,
+      "token": "1",
+      "category": "ring_formula_constant",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 37,
+      "token": "3",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 47,
+      "token": "4",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.600",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.571",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.626",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.641",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.635",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 51,
+      "token": "1.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "1.811",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "1.792",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "1.829",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "2.022",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "2.013",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 52,
+      "token": "2.030",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "44.893",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "13.387",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "4.912",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "9.139",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "9.105",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 56,
+      "token": "9.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "45.405",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "13.354",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "5.007",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "9.069",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "9.051",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 57,
+      "token": "9.084",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "1",
+      "category": "rows_1_workload_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "114.045",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "32.516",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "10.691",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "10.667",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 58,
+      "token": "10.716",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "2048",
+      "category": "verified_profile_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "114.543",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/openfhe_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "34.428",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "11.848",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_pl_prepare_ms"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "9.668",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "9.609",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 59,
+      "token": "9.720",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 63,
+      "token": "4",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 63,
+      "token": "4.186",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 63,
+      "token": "4.173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 63,
+      "token": "4.199",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 64,
+      "token": "10",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 64,
+      "token": "5.375",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 64,
+      "token": "5.337",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 64,
+      "token": "5.422",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 66,
+      "token": "832396",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 66,
+      "token": "831638",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 66,
+      "token": "833155",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 68,
+      "token": "4.274",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 68,
+      "token": "4.263",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 68,
+      "token": "4.286",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 70,
+      "token": "6.0018",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/active_h"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 70,
+      "token": "1,650,251",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/requests"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 70,
+      "token": "3,379,714,048",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/records"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 70,
+      "token": "2,726,453",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/device_calls"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 70,
+      "token": "0.00047366",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/soak_6h/values/max_error"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 75,
+      "token": "4",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 75,
+      "token": "4",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 75,
+      "token": "8",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 75,
+      "token": "8",
+      "category": "workload_configuration_key",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "129268",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "128861",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "129904",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "134898",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "133945",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "136102",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "133665",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "133390",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "134151",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "133457",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "131440",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 77,
+      "token": "135278",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "219145",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "216159",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "221159",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "238990",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "236380",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "240980",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "245972",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "242973",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "249169",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "252976",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "251616",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 78,
+      "token": "255397",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "51253",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "50457",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "51653",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "56992",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "56458",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "57547",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "55675",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "55203",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "56173",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "55623",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "55130",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 79,
+      "token": "56093",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "105566",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "104676",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "106472",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "110498",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "109676",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "111816",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "114661",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "112742",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "116280",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "116745",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "115742",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 80,
+      "token": "117384",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 91,
+      "token": "5",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 97,
+      "token": "0.926",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 97,
+      "token": "0.919",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 97,
+      "token": "0.934",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 98,
+      "token": "1.094",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 98,
+      "token": "1.060",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 98,
+      "token": "1.123",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 99,
+      "token": "1.026",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4+O5/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 99,
+      "token": "1.000",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4+O5/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 99,
+      "token": "1.060",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 100,
+      "token": "0.959",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 100,
+      "token": "0.938",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 100,
+      "token": "0.979",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 101,
+      "token": "1.159",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 101,
+      "token": "1.139",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 101,
+      "token": "1.185",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 102,
+      "token": "0.995",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 102,
+      "token": "0.989",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 102,
+      "token": "0.998",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 103,
+      "token": "0.944",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 103,
+      "token": "0.915",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 103,
+      "token": "0.980",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 104,
+      "token": "1.114",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 104,
+      "token": "1.071",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 104,
+      "token": "1.159",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 105,
+      "token": "1.040",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 105,
+      "token": "1.014",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 105,
+      "token": "1.069",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 106,
+      "token": "1.009",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 106,
+      "token": "0.900",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 106,
+      "token": "1.085",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 107,
+      "token": "1.021",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 107,
+      "token": "0.949",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 107,
+      "token": "1.145",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 108,
+      "token": "1.010",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/point"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 108,
+      "token": "1.008",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/CI95/0"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 108,
+      "token": "1.012",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/CI95/1"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 117,
+      "token": "6",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 125,
+      "token": "7",
+      "category": "chapter_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 135,
+      "token": "256",
+      "category": "digest_algorithm_label",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 148,
+      "token": "2024",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 148,
+      "token": "10.23919",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 148,
+      "token": "2024.10546608",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "31",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "10",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "1523",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "1536",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "10.1109",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 150,
+      "token": "2023.3288754",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 152,
+      "token": "2020",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 152,
+      "token": "1295",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 152,
+      "token": "1309",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 152,
+      "token": "10.1145",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 152,
+      "token": "3373376.3378523",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "2023",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "1",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "463",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "500",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "10.46586",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "463",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 154,
+      "token": "500",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "2017",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "409",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "437",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "10.1007",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "978",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "3",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "319",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 156,
+      "token": "70694",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "2018",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "347",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "368",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "10.1007",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "978",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "3",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "030",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 158,
+      "token": "10970",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "2017",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "455",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "485",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "10.1007",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "978",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "3",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "319",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 160,
+      "token": "63715",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "2021",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "648",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "677",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "10.1007",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "978",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "3",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "030",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 162,
+      "token": "77870",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 164,
+      "token": "2022",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 164,
+      "token": "53",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 164,
+      "token": "63",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 164,
+      "token": "10.1145",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 164,
+      "token": "3560827.3563379",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "52",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "4",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "65",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "76",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "10.1145",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 166,
+      "token": "1498765.1498785",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 168,
+      "token": "1967",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 168,
+      "token": "483",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 168,
+      "token": "485",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 168,
+      "token": "10.1145",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 168,
+      "token": "1465482.1465560",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 170,
+      "token": "2013",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 170,
+      "token": "10.1145",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 170,
+      "token": "2464157.2464160",
+      "category": "bibliographic_metadata",
+      "source": null,
+      "pointer": null
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "323,475",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "329,546",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ai4i_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "127,831",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "129,291",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ai4i_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "1.2565",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 181,
+      "token": "1.3200",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "123,907",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "125,034",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/ridge_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "54,568",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "55,240",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/cpu/ridge_records_per_s"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "1.0584",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 182,
+      "token": "1.0753",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "8",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "0",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 186,
+      "token": "1",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "current_best/pl/config"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 192,
+      "token": "6.008374",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/active_seconds"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 193,
+      "token": "2,014,736",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/requests"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 194,
+      "token": "4,126,179,328",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/records"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 195,
+      "token": "3,320,109",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/DMA_total"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 196,
+      "token": "384",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/connections"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 197,
+      "token": "0.000509600326",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/summary/max_public_error"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 199,
+      "token": "114,592",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/DMA_total"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 199,
+      "token": "6,699,271",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1b_placement_ab/IRQ_final/121"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 199,
+      "token": "20.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_classic_128"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 199,
+      "token": "12.39",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_quantum_128"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 203,
+      "token": "10.554",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 203,
+      "token": "10.449",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 204,
+      "token": "11.646",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_pre"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 204,
+      "token": "11.639",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_post"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 210,
+      "token": "6.19",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/variants/v0_current_nb_16k_read_each/cpu_ms_per_MB_median"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 210,
+      "token": "6.56",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    },
+    {
+      "document": "PROFESSOR_REPORT_zh-TW.md",
+      "line": 210,
+      "token": "8.07",
+      "category": "pinned_measurement",
+      "source": "REFERENCE_BASELINES_S2.json",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range"
+    }
+  ],
+  "unmatched": []
+}

@@ -1,0 +1,4 @@
+all:
+{
+ [destination_device = pl] edgefhe-v8b-r5.bit
+}

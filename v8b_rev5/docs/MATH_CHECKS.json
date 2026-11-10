@@ -1,0 +1,100 @@
+{
+ "moduli": [
+  {
+   "q": 998244353,
+   "bits": 29.895,
+   "prime": true,
+   "q_mod_2N": 1,
+   "psi_n_is_minus_1": true,
+   "psi_order_2N": true,
+   "below_2_30": true
+  },
+  {
+   "q": 1004535809,
+   "bits": 29.904,
+   "prime": true,
+   "q_mod_2N": 1,
+   "psi_n_is_minus_1": true,
+   "psi_order_2N": true,
+   "below_2_30": true
+  },
+  {
+   "q": 469762049,
+   "bits": 28.807,
+   "prime": true,
+   "q_mod_2N": 1,
+   "psi_n_is_minus_1": true,
+   "psi_order_2N": true,
+   "below_2_30": true
+  }
+ ],
+ "log2_Q": 88.606,
+ "montgomery": [
+  {
+   "q": 998244353,
+   "qprime_ok": true,
+   "max_t_lt_2q": true,
+   "two_q_fits_32": true
+  },
+  {
+   "q": 1004535809,
+   "qprime_ok": true,
+   "max_t_lt_2q": true,
+   "two_q_fits_32": true
+  },
+  {
+   "q": 469762049,
+   "qprime_ok": true,
+   "max_t_lt_2q": true,
+   "two_q_fits_32": true
+  }
+ ],
+ "python_ntt_equals_schoolbook": [
+  true,
+  true,
+  true
+ ],
+ "models": {
+  "ai4i-failure-logreg-v1": {
+   "features": 4,
+   "sum_abs_weight_int_log2": 32.5,
+   "max_abs_output": 46.659,
+   "crt_headroom_bits": 22.06,
+   "worst_case_slot_error": 9.722685822565946,
+   "gaussian_slot_std": 4.250540086450599e-05,
+   "gaussian_6sigma": 0.0002550324051870359,
+   "quantization_error_bound": 1.4901161194281337e-08
+  },
+  "diabetes-progression-ridge-v1": {
+   "features": 10,
+   "sum_abs_weight_int_log2": 30.96,
+   "max_abs_output": 15.6,
+   "crt_headroom_bits": 23.64,
+   "worst_case_slot_error": 3.3520304086711583,
+   "gaussian_slot_std": 1.0635017575990409e-05,
+   "gaussian_6sigma": 6.381010545594245e-05,
+   "quantization_error_bound": 3.725290298505282e-08
+  },
+  "diabetes-symptom-logreg-v1": {
+   "features": 16,
+   "sum_abs_weight_int_log2": 33.51,
+   "max_abs_output": 93.036,
+   "crt_headroom_bits": 21.07,
+   "worst_case_slot_error": 19.549066966192097,
+   "gaussian_slot_std": 5.549005109703779e-05,
+   "gaussian_6sigma": 0.0003329403065822267,
+   "quantization_error_bound": 5.96046447758243e-08
+  }
+ },
+ "fresh_noise": {
+  "worst_case": 450615,
+  "worst_log2": 18.78,
+  "gaussian_std": 332.6,
+  "board_exact_gate_bound": "max_abs_noise < 2^20 (checked on every board run)"
+ },
+ "measured": {
+  "wired_soak_max_error": 0.0004736602983652638,
+  "b1_openfhe_max_error": "<= 3.5e-4 (OpenFHE, same parameter class)"
+ },
+ "status": "MATH_REVIEW_CHECKS_PASS"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="270" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 270" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="270"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-270)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="15" y="249" style="font-family: JH; font-size: 12px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,498) scale(1,-1)">S1b: observed rounds, not confidence intervals</text>
+			<text x="56.37548828124999" y="199" style="font-family: JH; font-size: 9px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,398) scale(1,-1)">ai4i CPU A</text>
+			<rect x="110" y="194" width="120.91499266843795" height="18" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,52%,60%); fill-rule: evenodd;"/>
+			<path d="M 229.743143,203 L 231.110769,203 Z" style="stroke: rgb(85%,56%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="234.91499266843795" y="199" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,398) scale(1,-1)">129.1k</text>
+			<text x="65.2041015625" y="155" style="font-family: JH; font-size: 9px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,310) scale(1,-1)">ai4i PL B</text>
+			<rect x="110" y="150" width="305.9641472497473" height="18" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<path d="M 413.008764,159 L 418.695652,159 Z" style="stroke: rgb(85%,56%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="419.9641472497473" y="155" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,310) scale(1,-1)">326.6k</text>
+			<text x="49.02343749999999" y="111" style="font-family: JH; font-size: 9px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,222) scale(1,-1)">ridge CPU A</text>
+			<rect x="110" y="106" width="51.35529011058429" height="18" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,52%,60%); fill-rule: evenodd;"/>
+			<path d="M 161.115487,115 L 161.74497,115 Z" style="stroke: rgb(85%,56%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="165.3552901105843" y="111" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,222) scale(1,-1)">54.8k</text>
+			<text x="57.85205078124999" y="67" style="font-family: JH; font-size: 9px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,134) scale(1,-1)">ridge PL B</text>
+			<rect x="110" y="62" width="116.63600964594508" height="18" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<path d="M 226.067414,71 L 227.123109,71 Z" style="stroke: rgb(85%,56%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="230.63600964594508" y="67" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,134) scale(1,-1)">124.5k</text>
+			<text x="110" y="16" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,32) scale(1,-1)">CPU A and PL B selected separately; one boot, three rounds</text>
+		</g>
+	</g>
+</svg>

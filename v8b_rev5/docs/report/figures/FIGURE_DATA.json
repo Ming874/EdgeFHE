@@ -1,0 +1,414 @@
+{
+  "baseline_sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+  "data": {
+    "ai4i": [
+      {
+        "key": "ai4i|cpu|baseline_2slot_seq",
+        "point": 129268,
+        "CI95": [
+          128861,
+          129904
+        ]
+      },
+      {
+        "key": "ai4i|pl|baseline_2slot_seq",
+        "point": 219145,
+        "CI95": [
+          216159,
+          221159
+        ]
+      },
+      {
+        "key": "ai4i|cpu|O345_3slot_duplex",
+        "point": 134898,
+        "CI95": [
+          133945,
+          136102
+        ]
+      },
+      {
+        "key": "ai4i|pl|O345_3slot_duplex",
+        "point": 238990,
+        "CI95": [
+          236380,
+          240980
+        ]
+      },
+      {
+        "key": "ai4i|cpu|O7_slots4_inflight4",
+        "point": 133665,
+        "CI95": [
+          133390,
+          134151
+        ]
+      },
+      {
+        "key": "ai4i|pl|O7_slots4_inflight4",
+        "point": 245972,
+        "CI95": [
+          242973,
+          249169
+        ]
+      },
+      {
+        "key": "ai4i|cpu|O7_slots8_inflight8",
+        "point": 133457,
+        "CI95": [
+          131440,
+          135278
+        ]
+      },
+      {
+        "key": "ai4i|pl|O7_slots8_inflight8",
+        "point": 252976,
+        "CI95": [
+          251616,
+          255397
+        ]
+      }
+    ],
+    "diabetes": [
+      {
+        "key": "diabetes|cpu|baseline_2slot_seq",
+        "point": 51253,
+        "CI95": [
+          50457,
+          51653
+        ]
+      },
+      {
+        "key": "diabetes|pl|baseline_2slot_seq",
+        "point": 105566,
+        "CI95": [
+          104676,
+          106472
+        ]
+      },
+      {
+        "key": "diabetes|cpu|O345_3slot_duplex",
+        "point": 56992,
+        "CI95": [
+          56458,
+          57547
+        ]
+      },
+      {
+        "key": "diabetes|pl|O345_3slot_duplex",
+        "point": 110498,
+        "CI95": [
+          109676,
+          111816
+        ]
+      },
+      {
+        "key": "diabetes|cpu|O7_slots4_inflight4",
+        "point": 55675,
+        "CI95": [
+          55203,
+          56173
+        ]
+      },
+      {
+        "key": "diabetes|pl|O7_slots4_inflight4",
+        "point": 114661,
+        "CI95": [
+          112742,
+          116280
+        ]
+      },
+      {
+        "key": "diabetes|cpu|O7_slots8_inflight8",
+        "point": 55623,
+        "CI95": [
+          55130,
+          56093
+        ]
+      },
+      {
+        "key": "diabetes|pl|O7_slots8_inflight8",
+        "point": 116745,
+        "CI95": [
+          115742,
+          117384
+        ]
+      }
+    ],
+    "stage_rows": [
+      {
+        "key": "ai4i|pl|baseline_2slot_seq",
+        "values": {
+          "wait_header": 1.726,
+          "body": 5.841,
+          "validate_unpack": 0.46,
+          "cloud": 0.101,
+          "pack": 0.043,
+          "write": 0.135,
+          "previous_log": 0.282
+        }
+      },
+      {
+        "key": "ai4i|pl|O7_slots8_inflight8",
+        "values": {
+          "wait_header": 0.531,
+          "body": 6.836,
+          "validate_unpack": 0.451,
+          "cloud": 0.095,
+          "pack": 0.043,
+          "write": 0.121,
+          "previous_log": 0.23
+        }
+      },
+      {
+        "key": "diabetes|pl|baseline_2slot_seq",
+        "values": {
+          "wait_header": 0.783,
+          "body": 14.675,
+          "validate_unpack": 1.447,
+          "cloud": 0.158,
+          "pack": 0.051,
+          "write": 0.164,
+          "previous_log": 1.136
+        }
+      },
+      {
+        "key": "diabetes|pl|O7_slots8_inflight8",
+        "values": {
+          "wait_header": 0.018,
+          "body": 14.939,
+          "validate_unpack": 1.462,
+          "cloud": 0.151,
+          "pack": 0.043,
+          "write": 0.143,
+          "previous_log": 1.125
+        }
+      }
+    ],
+    "literature_rows": [
+      {
+        "id": "OURS-CPU-ai4i",
+        "work": "EdgeFHE ARM CPU3 (3 threads, optimised C++)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz",
+        "N": 4096,
+        "logQ": 90,
+        "enc_ms": 3.3380664375,
+        "per_element_us": 1.629915252685547,
+        "resources": null
+      },
+      {
+        "id": "OURS-PL-ai4i",
+        "work": "EdgeFHE ARM + PL (V8b, 200 MHz)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz + PL @200 MHz",
+        "N": 4096,
+        "logQ": 90,
+        "enc_ms": 1.2509820624999999,
+        "per_element_us": 0.6108310852050781,
+        "resources": {
+          "LUT": 53046,
+          "FF": 61285,
+          "DSP": 531,
+          "BRAM": 65.5,
+          "URAM": 42
+        }
+      },
+      {
+        "id": "OURS-CPU-diabetes",
+        "work": "EdgeFHE ARM CPU3 (3 threads, optimised C++)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz",
+        "N": 4096,
+        "logQ": 90,
+        "enc_ms": 3.44379385,
+        "per_element_us": 1.6815399658203125,
+        "resources": null
+      },
+      {
+        "id": "OURS-PL-diabetes",
+        "work": "EdgeFHE ARM + PL (V8b, 200 MHz)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz + PL @200 MHz",
+        "N": 4096,
+        "logQ": 90,
+        "enc_ms": 1.184655775,
+        "per_element_us": 0.5784452026367187,
+        "resources": {
+          "LUT": 53046,
+          "FF": 61285,
+          "DSP": 531,
+          "BRAM": 65.5,
+          "URAM": 42
+        }
+      },
+      {
+        "id": "OPENFHE-SAMEBOOT-ai4i",
+        "work": "OpenFHE 1.5.1 (stock, 3 OpenMP threads)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260, A53 @1.333 GHz (same boot e26925f5 as EdgeFHE rows)",
+        "N": 4096,
+        "logQ": 91,
+        "enc_ms": 11.351332625,
+        "per_element_us": 5.542642883300781,
+        "resources": null
+      },
+      {
+        "id": "OPENFHE-SAMEBOOT-diabetes",
+        "work": "OpenFHE 1.5.1 (stock, 3 OpenMP threads)",
+        "level": "OUR_BOARD_MEASURED",
+        "platform": "AMD Kria KV260, A53 @1.333 GHz (same boot e26925f5 as EdgeFHE rows)",
+        "N": 4096,
+        "logQ": 91,
+        "enc_ms": 11.45429436,
+        "per_element_us": 5.59291716796875,
+        "resources": null
+      },
+      {
+        "id": "SEAL-i5",
+        "work": "Microsoft SEAL",
+        "level": "AUTHOR_MEASURED_CITED",
+        "platform": "Intel i5-8250U @2.4 GHz",
+        "N": 8192,
+        "logQ": 162,
+        "enc_ms": 4.91,
+        "per_element_us": 1.19873046875,
+        "resources": null
+      },
+      {
+        "id": "SEAL-Embedded-A7",
+        "work": "SEAL-Embedded",
+        "level": "AUTHOR_MEASURED_CITED",
+        "platform": "ARM Cortex-A7 @494 MHz",
+        "N": 4096,
+        "logQ": 90,
+        "enc_ms": 91.27,
+        "per_element_us": 44.5654296875,
+        "resources": null
+      },
+      {
+        "id": "DiMatteo-ZUS+",
+        "work": "Di Matteo et al. (IEEE Access 2023)",
+        "level": "AUTHOR_MEASURED_CITED",
+        "platform": "Zynq UltraScale+ @150 MHz",
+        "N": 8192,
+        "logQ": null,
+        "enc_ms": 7.79,
+        "per_element_us": 1.90185546875,
+        "resources": {
+          "LUT": 3320,
+          "FF": 1480,
+          "DSP": 42,
+          "BRAM": 29.5
+        }
+      },
+      {
+        "id": "Aloha-HE-K7",
+        "work": "Aloha-HE (stored twiddles)",
+        "level": "AUTHOR_MEASURED_HW",
+        "platform": "Kintex-7 @200 MHz (MicroBlaze host)",
+        "N": 8192,
+        "logQ": 162,
+        "enc_ms": 1.87,
+        "per_element_us": 0.45654296875,
+        "resources": {
+          "LUT": 17680,
+          "FF": 14431,
+          "DSP": 56,
+          "BRAM": 97
+        }
+      },
+      {
+        "id": "Aloha-HE-Z7",
+        "work": "Aloha-HE (stored twiddles)",
+        "level": "AUTHOR_MEASURED_HW",
+        "platform": "Zynq-7000 (PYNQ-Z2) PL @130 MHz, ARM @650 MHz",
+        "N": 8192,
+        "logQ": 162,
+        "enc_ms": 3.04,
+        "per_element_us": 0.7421875,
+        "resources": {
+          "LUT": 19274,
+          "FF": 15163,
+          "DSP": 56,
+          "BRAM": 97
+        }
+      },
+      {
+        "id": "Lee-U250",
+        "work": "Lee, Duong-Ngoc, Lee (Sensors 2023)",
+        "level": "AUTHOR_MEASURED_CITED",
+        "platform": "Xilinx Alveo U250",
+        "N": 65536,
+        "logQ": null,
+        "enc_ms": 16.9,
+        "per_element_us": 0.5157470703125,
+        "resources": {
+          "LUT": 1179000,
+          "FF": 1036000,
+          "DSP": 12288,
+          "BRAM": 828.5
+        }
+      },
+      {
+        "id": "RISE-ASIC",
+        "work": "RISE (IEEE TVLSI 2023)",
+        "level": "AUTHOR_SIMULATED",
+        "platform": "12 nm ASIC @1 GHz, RISC-V SoC (cycle-accurate simulation)",
+        "N": 8192,
+        "logQ": 180,
+        "enc_ms": 20.0,
+        "per_element_us": 4.8828125,
+        "resources": null
+      },
+      {
+        "id": "RACE-ASIC",
+        "work": "RACE (ISLPED 2022)",
+        "level": "AUTHOR_SIMULATED",
+        "platform": "12 nm ASIC @1 GHz",
+        "N": 8192,
+        "logQ": 130,
+        "enc_ms": 110.28,
+        "per_element_us": 26.923828125,
+        "resources": null
+      }
+    ]
+  },
+  "scope": "Values copied from baseline JSON; stage medians do not sum to total request median; literature platforms differ",
+  "s1b": {
+    "source_sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+    "rows": [
+      {
+        "label": "ai4i CPU A",
+        "values": [
+          127831,
+          129082,
+          129291
+        ]
+      },
+      {
+        "label": "ai4i PL B",
+        "values": [
+          323475,
+          329546,
+          326630
+        ]
+      },
+      {
+        "label": "ridge CPU A",
+        "values": [
+          54568,
+          54824,
+          55240
+        ]
+      },
+      {
+        "label": "ridge PL B",
+        "values": [
+          123907,
+          124514,
+          125034
+        ]
+      }
+    ],
+    "statistic": "median and observed min/max; not CI"
+  }
+}

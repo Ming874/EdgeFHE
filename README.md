@@ -2,6 +2,15 @@
 
 EdgeFHE 讓一塊 AMD Kria KV260 開發板（`xck26-sfvc784-2LV-c`）自己完成 CKKS 同態加密的 client 端工作：ARM 處理器負責 CKKS 編碼／解碼、用作業系統亂數取樣、組裝密文；FPGA 負責最重的多項式乘法（三個 RNS 分量的 NTT／INTT）。資料在板上加密後才送出，雲端只拿到密文，用公開模型算「Σ 權重×密文＋偏差」後送回加密結果；解密、sigmoid 與判斷都在板上，私鑰只存在板上。這是功能研究版本，不是可部署的安全產品。
 
+> **分支 `feat/v8-full-pl-encryption`（未驗證）**：這個分支在 [`v8b_rev5/`](v8b_rev5/README.md) 加入 **V8**（接在 V3、V4、V5 之後的第 8 代架構：整段加密在 FPGA）的獨立子專案，收錄的是 V8b 的第 5 次硬體修訂（rev5），N = 4096。名稱與版本順序見 [v8b_rev5/README.md 第 4 節](v8b_rev5/README.md#4-版本順序--version-order)。它還沒經過審查，CI 也不會建置或測試它；main 原有的內容都沒有改動。和 main 的主要差異（完整對照見 [v8b_rev5/README.md 第 2 節](v8b_rev5/README.md#2-與-main-的差異--what-changed-compared-with-main)）：
+>
+> - **PL 做整段加密**：ChaCha20 DRBG、取樣、NTT、與公鑰相乘、組裝都在 PL，200 MHz。main 的 PL 只做 op2 多項式乘法，100 MHz。
+> - **公鑰快取在 PL**，一次呼叫處理一個 frame（最多 8 個密文）。結果 PL 比同板 CPU 快：延遲 1.6–1.8×、吞吐 1.6–2.0×（rev4 板上量測）；main 在目前的介面下是 CPU 較快。
+> - **稠密取樣**：ternary 私鑰、σ 4.5 常數時間高斯，HEStd_128 估算最低 128.77 bits。main 是沒有安全位元數的稀疏功能 profile。
+> - **新的應用**：ABI 8 驅動、原生 C++ mTLS 雲端 server、19 個模型（12 個領域），以及 rev5 安全強化（清除 FIFO 與金鑰、TKEEP 檢查）。
+>
+> 和第一版 FPGA（V1，main 使用的硬體）相比做了哪 10 項優化、效果多大，見 [v8b_rev5/docs/CHANGES_FROM_V1_zh-TW.md](v8b_rev5/docs/CHANGES_FROM_V1_zh-TW.md)。
+
 **English:** EdgeFHE is a hardware/software co-designed CKKS client on the AMD Kria KV260: the ARM cores encode, sample and assemble ciphertexts, the FPGA runs the NTT polynomial multiplication, and the cloud only ever sees ciphertexts.
 
 這個資料夾就是整個專題：程式碼、硬體、文件、資料、訓練、上板結果和 dashboard 都在同一個 repository，沒有另外的子 repo（2026-10-14 起；之前程式碼放在 `EdgeFHE-KV260-GitHub/` 子資料夾）。

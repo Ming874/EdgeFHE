@@ -1,0 +1,73 @@
+{
+  "status": "V8B_NEW_BOOT_CE91708D_5B_ENC_FUNCTIONAL_ORIGINALS_ACCEPTED",
+  "boot_id": "ce91708d-d365-4510-972b-b3c5ccfe1694",
+  "archive": "edgefhe-v8b-boot-math.r5_1029_fjh0qnv8.tar.gz",
+  "archive_sha256": "0d5487c312d10630e8d3c55ed2362280969afacc16aade766e770edc54a08eaf",
+  "UART_sha256": "904d9cb879a46cd2e3d60ad29714389fffa1b49bf4778041bce49436510266ff",
+  "sealed_payloads": 90,
+  "exact_output_words": 983040,
+  "CPU_crosscheck_residue_coefficients": 589824,
+  "complex_slots_checked": 81920,
+  "max_slot_error_board": 0.0001024555093530195,
+  "max_slot_error_spec": 0.00010695747973467236,
+  "CAPS_PL_Hz": 199999998,
+  "IRQ_before": {
+    "121": 0,
+    "136": 0
+  },
+  "IRQ_after": {
+    "121": 10,
+    "136": 10
+  },
+  "successful_DMA": 10,
+  "device_opens": 1,
+  "kernel_unchanged": true,
+  "source_payloads": 67,
+  "decoded_ELF": {
+    "smoke_math": {
+      "machine": "AArch64",
+      "type": 3,
+      "compiler": "GCC: (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+      "needed": [
+        "libOPENFHEcore.so.1",
+        "libcrypto.so.3",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "rpath": [
+        "/home/ubuntu/edgefhe-v7-cpu.vEUa6e/session/dependency_prefix/lib"
+      ]
+    },
+    "smoke_math_mock": {
+      "machine": "AArch64",
+      "type": 3,
+      "compiler": "GCC: (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+      "needed": [
+        "libOPENFHEcore.so.1",
+        "libcrypto.so.3",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "rpath": [
+        "/home/ubuntu/edgefhe-v7-cpu.vEUa6e/session/dependency_prefix/lib"
+      ]
+    }
+  },
+  "prior_chain": "reviewed reentry seal plus 8 runtime private records validated in memory only",
+  "performance_acceptance": false,
+  "universal_precision_or_security_acceptance": false,
+  "returned_values_are_runtime_checks_not_all_raw_ciphertexts": true,
+  "assistant_board_operations": 0,
+  "module": {
+    "version": "v8b-candidate-5b-safe",
+    "srcversion": "06F54F5CFA2C1E96CEEFE2F",
+    "vermagic": "5.15.0-1027-xilinx-zynqmp SMP mod_unload modversions aarch64"
+  },
+  "fastpath": 3
+}

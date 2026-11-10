@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="300" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="300"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-300)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="20" y="278" style="font-family: JH; font-size: 12px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,556) scale(1,-1)">PC-observed wall-time components (ms)</text>
+			<text x="59.8359375" y="229" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,458) scale(1,-1)">ai4i</text>
+			<text x="57.60546875" y="218" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,436) scale(1,-1)">base</text>
+			<rect x="80" y="220" width="33.84803832832506" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,91%); fill-rule: evenodd;"/>
+			<rect x="113.84803832832506" y="220" width="114.54599761051372" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,41%,57%); fill-rule: evenodd;"/>
+			<rect x="228.39403593883878" y="220" width="9.020914038835173" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,67%,26%); fill-rule: evenodd;"/>
+			<rect x="237.41494997767396" y="220" width="1.9806789520051211" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<rect x="239.39562892967908" y="220" width="0.8432593558041503" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(71%,62%,81%); fill-rule: evenodd;"/>
+			<rect x="240.23888828548323" y="220" width="2.647442163571185" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(44%,53%,35%); fill-rule: evenodd;"/>
+			<rect x="242.8863304490544" y="220" width="5.5302125194598375" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,41%,38%); fill-rule: evenodd;"/>
+			<text x="59.8359375" y="187" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,374) scale(1,-1)">ai4i</text>
+			<text x="50.4619140625" y="176" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,352) scale(1,-1)">O7 8/8</text>
+			<rect x="80" y="178" width="10.41327251004671" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,91%); fill-rule: evenodd;"/>
+			<rect x="90.41327251004671" y="178" width="134.05862689016809" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,41%,57%); fill-rule: evenodd;"/>
+			<rect x="224.4718994002148" y="178" width="8.844417894597115" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,67%,26%); fill-rule: evenodd;"/>
+			<rect x="233.3163172948119" y="178" width="1.8630148558463873" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<rect x="235.1793321506583" y="178" width="0.8432593558041503" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(71%,62%,81%); fill-rule: evenodd;"/>
+			<rect x="236.02259150646245" y="178" width="2.37289260586752" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(44%,53%,35%); fill-rule: evenodd;"/>
+			<rect x="238.39548411232997" y="178" width="4.510457019417601" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,41%,38%); fill-rule: evenodd;"/>
+			<text x="40.8515625" y="145" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,290) scale(1,-1)">diabetes</text>
+			<text x="57.60546875" y="134" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,268) scale(1,-1)">base</text>
+			<rect x="80" y="136" width="15.355164548712935" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,91%); fill-rule: evenodd;"/>
+			<rect x="95.35516454871293" y="136" width="287.7867685215355" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,41%,57%); fill-rule: evenodd;"/>
+			<rect x="383.14193307024846" y="136" width="28.376657856944576" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,67%,26%); fill-rule: evenodd;"/>
+			<rect x="411.51859092719303" y="136" width="3.0984878655129364" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<rect x="414.61707879270597" y="136" width="1.0001448173491099" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(71%,62%,81%); fill-rule: evenodd;"/>
+			<rect x="415.6172236100551" y="136" width="3.2161519616716987" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(44%,53%,35%); fill-rule: evenodd;"/>
+			<rect x="418.8333755717268" y="136" width="22.27773553938431" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,41%,38%); fill-rule: evenodd;"/>
+			<text x="40.8515625" y="103" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,206) scale(1,-1)">diabetes</text>
+			<text x="50.4619140625" y="92" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,184) scale(1,-1)">O7 8/8</text>
+			<rect x="80" y="94" width="0.35299228847615893" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,91%); fill-rule: evenodd;"/>
+			<rect x="80.35299228847616" y="94" width="292.9639887525192" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,41%,57%); fill-rule: evenodd;"/>
+			<rect x="373.31698104099536" y="94" width="28.670818097341396" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,67%,26%); fill-rule: evenodd;"/>
+			<rect x="401.98779913833675" y="94" width="2.9612130866611324" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<rect x="404.9490122249979" y="94" width="0.8432593558041503" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(71%,62%,81%); fill-rule: evenodd;"/>
+			<rect x="405.79227158080204" y="94" width="2.804327625116173" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(44%,53%,35%); fill-rule: evenodd;"/>
+			<rect x="408.5965992059182" y="94" width="22.06201802975994" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,41%,38%); fill-rule: evenodd;"/>
+			<text x="74.44140625" y="72" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">0.0</text>
+			<text x="171.94140625" y="72" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">5.0</text>
+			<text x="269.44140625" y="72" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">9.9</text>
+			<text x="364.623046875" y="72" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">14.9</text>
+			<text x="462.123046875" y="72" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,144) scale(1,-1)">19.9</text>
+			<rect x="15" y="43" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,91%); fill-rule: evenodd;"/>
+			<text x="27" y="43" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,86) scale(1,-1)">wait_header</text>
+			<rect x="179" y="43" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(19%,41%,57%); fill-rule: evenodd;"/>
+			<text x="191" y="43" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,86) scale(1,-1)">body</text>
+			<rect x="343" y="43" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(88%,67%,26%); fill-rule: evenodd;"/>
+			<text x="355" y="43" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,86) scale(1,-1)">validate_unpack</text>
+			<rect x="15" y="27" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="27" y="27" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,54) scale(1,-1)">cloud</text>
+			<rect x="179" y="27" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(71%,62%,81%); fill-rule: evenodd;"/>
+			<text x="191" y="27" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,54) scale(1,-1)">pack</text>
+			<rect x="343" y="27" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(44%,53%,35%); fill-rule: evenodd;"/>
+			<text x="355" y="27" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,54) scale(1,-1)">write</text>
+			<rect x="15" y="11" width="8" height="8" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(72%,41%,38%); fill-rule: evenodd;"/>
+			<text x="27" y="11" style="font-family: JH; font-size: 7.5px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,22) scale(1,-1)">previous_log</text>
+		</g>
+	</g>
+</svg>

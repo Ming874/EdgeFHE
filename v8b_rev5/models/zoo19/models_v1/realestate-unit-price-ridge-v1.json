@@ -1,0 +1,68 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "realestate-unit-price-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "transaction_date",
+    "house_age_year",
+    "mrt_distance_m",
+    "convenience_stores",
+    "latitude",
+    "longitude"
+  ],
+  "mean": [
+    2013.1462193308546,
+    18.060594795539043,
+    1090.0323870260227,
+    4.044609665427509,
+    24.969419479553892,
+    121.53342208178437
+  ],
+  "std": [
+    0.2891690573272699,
+    11.247922948257411,
+    1284.6037409725325,
+    2.9071535178355266,
+    0.0125770733954217,
+    0.01547698202550636
+  ],
+  "weights": [
+    0.08305769330354518,
+    -0.16461814601265062,
+    -0.24085941933163404,
+    0.20041621217286165,
+    0.195153129216749,
+    0.0970040384570525
+  ],
+  "bias": -4.303736219116451e-13,
+  "weights_int": [
+    89182519,
+    -176757388,
+    -258620832,
+    215195269,
+    209544077,
+    104157293
+  ],
+  "bias_int": -496187,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 38.37026022304833,
+  "target_std": 14.481638429582008,
+  "training_source": {
+    "name": "Real Estate Valuation",
+    "uci_id": 477,
+    "data_url": "https://archive.ics.uci.edu/static/public/477/data.csv",
+    "sha256": "0730a5687ec285a3c2f9921a808855bd1bde21fc53e6377561cbdce2dda9cbb1",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "price per ping (10k TWD)"
+  },
+  "split_seed": 20261111,
+  "split": "row",
+  "selected_lambda": 100.0,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}
