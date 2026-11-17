@@ -1,0 +1,9 @@
+{
+ "model": "ai4i-failure-logreg-v1",
+ "windows": 12,
+ "requests_per_window": 6172,
+ "slots_per_window": 12640256,
+ "window_max_median": 0.0003900870980346982,
+ "window_max_p90": 0.00041373749792309865,
+ "window_max_max": 0.0004341129202937315
+}

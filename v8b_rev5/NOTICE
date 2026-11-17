@@ -1,0 +1,17 @@
+EdgeFHE KV260 - V8b rev5 (CKKS N=4096)
+Copyright 2026 The EdgeFHE project authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party software keeps its own licence and is not relicensed by this notice:
+- OpenFHE (BSD-2-Clause)
+- OpenSSL 3 (Apache-2.0)
+- AMD Vivado / Vitis HLS generated IP, drivers and tools (AMD terms; generated IP and binaries are not part of the source tree)
+- Frontend and Python dependencies as listed in SBOM.cdx.json; licence texts in licenses/
+
+Datasets: 18 datasets from the UCI Machine Learning Repository, each licensed under CC BY 4.0 as stated on its UCI
+page (checked 2026-11-11; Breast Cancer Wisconsin (Diagnostic) was used through the scikit-learn bundled copy of the same data),
+and the scikit-learn diabetes dataset (Efron et al., 2004), distributed with scikit-learn under BSD-3-Clause. See
+models/README.md for every dataset, its creators, DOI and licence.
+Changes by this project: data cleaned, columns selected, splits made and models trained. No endorsement by the
+dataset authors is implied.

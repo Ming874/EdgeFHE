@@ -1,0 +1,377 @@
+{
+ "schema": "edgefhe.reference_points.v1",
+ "date": "2026-10-24",
+ "levels": {
+  "OUR_BOARD_MEASURED": "our reviewed board originals",
+  "OUR_BOARD_PENDING": "package ready, not yet run",
+  "AUTHOR_MEASURED_HW": "authors measured on real hardware",
+  "AUTHOR_MEASURED_CITED": "author measurement quoted through another paper's table",
+  "AUTHOR_SIMULATED": "simulation / synthesis, not silicon",
+  "DERIVED": "computed from the above; not a measurement"
+ },
+ "normalisation": "W = N*log2(N)*limbs; work_norm_ms rescales to N=4096, 3 limbs; per_element_us uses N/2 CKKS slots",
+ "rows": [
+  {
+   "id": "OURS-CPU-ai4i",
+   "work": "EdgeFHE ARM CPU3 (3 threads, optimised C++)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz",
+   "clock_MHz": 1333,
+   "N": 4096,
+   "logQ": 90,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "normalize + encode + public-key encrypt, per ciphertext, full 2048 slots, median of 10 session medians",
+   "enc_ms": 3.3380664375,
+   "dec_ms": 1.719742,
+   "resources": null,
+   "source": {
+    "path": "development_records/rerun_wired_20261023f/return_1023_wired (sealed archive p8ahqq3r)",
+    "review_sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07"
+   },
+   "per_element_us": 1.629915252685547,
+   "work_norm_ms": 3.3380664375,
+   "cycles_per_ct": 4449642.561187501,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "OURS-PL-ai4i",
+   "work": "EdgeFHE ARM + PL (V8b, 200 MHz)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz + PL @200 MHz",
+   "clock_MHz": 200,
+   "N": 4096,
+   "logQ": 90,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "normalize + encode + public-key encrypt, per ciphertext, full 2048 slots, median of 10 session medians",
+   "enc_ms": 1.2509820624999999,
+   "dec_ms": 2.81581975,
+   "resources": {
+    "LUT": 53046,
+    "FF": 61285,
+    "DSP": 531,
+    "BRAM": 65.5,
+    "URAM": 42
+   },
+   "source": {
+    "path": "development_records/rerun_wired_20261023f/return_1023_wired (sealed archive p8ahqq3r)",
+    "review_sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07"
+   },
+   "per_element_us": 0.6108310852050781,
+   "work_norm_ms": 1.2509820624999999,
+   "cycles_per_ct": 250196.41249999998,
+   "elements_per_s_per_DSP": 3083.0768390618055
+  },
+  {
+   "id": "OURS-CPU-diabetes",
+   "work": "EdgeFHE ARM CPU3 (3 threads, optimised C++)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz",
+   "clock_MHz": 1333,
+   "N": 4096,
+   "logQ": 90,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "normalize + encode + public-key encrypt, per ciphertext, full 2048 slots, median of 10 session medians",
+   "enc_ms": 3.44379385,
+   "dec_ms": 5.098186500000001,
+   "resources": null,
+   "source": {
+    "path": "development_records/rerun_wired_20261023f/return_1023_wired (sealed archive p8ahqq3r)",
+    "review_sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07"
+   },
+   "per_element_us": 1.6815399658203125,
+   "work_norm_ms": 3.44379385,
+   "cycles_per_ct": 4590577.20205,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "OURS-PL-diabetes",
+   "work": "EdgeFHE ARM + PL (V8b, 200 MHz)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260 (Zynq UltraScale+ XCK26), A53 @1.333 GHz + PL @200 MHz",
+   "clock_MHz": 200,
+   "N": 4096,
+   "logQ": 90,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "normalize + encode + public-key encrypt, per ciphertext, full 2048 slots, median of 10 session medians",
+   "enc_ms": 1.184655775,
+   "dec_ms": 2.8569375,
+   "resources": {
+    "LUT": 53046,
+    "FF": 61285,
+    "DSP": 531,
+    "BRAM": 65.5,
+    "URAM": 42
+   },
+   "source": {
+    "path": "development_records/rerun_wired_20261023f/return_1023_wired (sealed archive p8ahqq3r)",
+    "review_sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07"
+   },
+   "per_element_us": 0.5784452026367187,
+   "work_norm_ms": 1.184655775,
+   "cycles_per_ct": 236931.15499999997,
+   "elements_per_s_per_DSP": 3255.6915724954097
+  },
+  {
+   "id": "OPENFHE-SAMEBOOT-ai4i",
+   "work": "OpenFHE 1.5.1 (stock, 3 OpenMP threads)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260, A53 @1.333 GHz (same boot e26925f5 as EdgeFHE rows)",
+   "clock_MHz": 1333,
+   "N": 4096,
+   "logQ": 91,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "MakeCKKSPackedPlaintext + Encrypt per ciphertext, full 2048 slots, mean of 10 session medians",
+   "enc_ms": 11.351332625,
+   "dec_ms": 12.4961226,
+   "resources": null,
+   "source": {
+    "path": "development_records/baseline_b1_20261024/return_1024_b1/REVIEW.json",
+    "review_sha256": "9c304b63c347375a7b99eb1e8b756b0fed62f5c499cfface89ca3cd4b2990146"
+   },
+   "per_element_us": 5.542642883300781,
+   "work_norm_ms": 11.351332625,
+   "cycles_per_ct": 15131326.389125,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "OPENFHE-SAMEBOOT-diabetes",
+   "work": "OpenFHE 1.5.1 (stock, 3 OpenMP threads)",
+   "level": "OUR_BOARD_MEASURED",
+   "platform": "AMD Kria KV260, A53 @1.333 GHz (same boot e26925f5 as EdgeFHE rows)",
+   "clock_MHz": 1333,
+   "N": 4096,
+   "logQ": 91,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "MakeCKKSPackedPlaintext + Encrypt per ciphertext, full 2048 slots, mean of 10 session medians",
+   "enc_ms": 11.45429436,
+   "dec_ms": 12.655464049999999,
+   "resources": null,
+   "source": {
+    "path": "development_records/baseline_b1_20261024/return_1024_b1/REVIEW.json",
+    "review_sha256": "9c304b63c347375a7b99eb1e8b756b0fed62f5c499cfface89ca3cd4b2990146"
+   },
+   "per_element_us": 5.59291716796875,
+   "work_norm_ms": 11.45429436,
+   "cycles_per_ct": 15268574.38188,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "SEAL-i5",
+   "work": "Microsoft SEAL",
+   "level": "AUTHOR_MEASURED_CITED",
+   "platform": "Intel i5-8250U @2.4 GHz",
+   "clock_MHz": 2400,
+   "N": 8192,
+   "logQ": 162,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "pt-to-ct per ciphertext",
+   "enc_ms": 4.91,
+   "dec_ms": 0.73,
+   "resources": null,
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I"
+   },
+   "per_element_us": 1.19873046875,
+   "work_norm_ms": 2.266153846153846,
+   "cycles_per_ct": 11784000.0,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "SEAL-Embedded-A7",
+   "work": "SEAL-Embedded",
+   "level": "AUTHOR_MEASURED_CITED",
+   "platform": "ARM Cortex-A7 @494 MHz",
+   "clock_MHz": 494,
+   "N": 4096,
+   "logQ": 90,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "encryption per ciphertext (no decryption in the library)",
+   "enc_ms": 91.27,
+   "dec_ms": null,
+   "resources": null,
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I; abstract of TCHES 2021(3) gives 77 ms"
+   },
+   "per_element_us": 44.5654296875,
+   "work_norm_ms": 91.27,
+   "cycles_per_ct": 45087380.0,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "DiMatteo-ZUS+",
+   "work": "Di Matteo et al. (IEEE Access 2023)",
+   "level": "AUTHOR_MEASURED_CITED",
+   "platform": "Zynq UltraScale+ @150 MHz",
+   "clock_MHz": 150,
+   "N": 8192,
+   "logQ": null,
+   "limbs": null,
+   "scheme": "CKKS (SEAL-Embedded, symmetric)",
+   "scope": "encryption per ciphertext; resources are for the NTT unit only (N=4096)",
+   "enc_ms": 7.79,
+   "dec_ms": null,
+   "resources": {
+    "LUT": 3320,
+    "FF": 1480,
+    "DSP": 42,
+    "BRAM": 29.5
+   },
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I (footnote a: NTT unit only)"
+   },
+   "per_element_us": 1.90185546875,
+   "work_norm_ms": null,
+   "cycles_per_ct": 1168500.0,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "Aloha-HE-K7",
+   "work": "Aloha-HE (stored twiddles)",
+   "level": "AUTHOR_MEASURED_HW",
+   "platform": "Kintex-7 @200 MHz (MicroBlaze host)",
+   "clock_MHz": 200,
+   "N": 8192,
+   "logQ": 162,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "end-to-end pt-to-ct incl. encoding, software and transfers",
+   "enc_ms": 1.87,
+   "dec_ms": 0.87,
+   "resources": {
+    "LUT": 17680,
+    "FF": 14431,
+    "DSP": 56,
+    "BRAM": 97
+   },
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I"
+   },
+   "per_element_us": 0.45654296875,
+   "work_norm_ms": 0.8630769230769232,
+   "cycles_per_ct": 374000.0,
+   "elements_per_s_per_DSP": 39113.827349121464
+  },
+  {
+   "id": "Aloha-HE-Z7",
+   "work": "Aloha-HE (stored twiddles)",
+   "level": "AUTHOR_MEASURED_HW",
+   "platform": "Zynq-7000 (PYNQ-Z2) PL @130 MHz, ARM @650 MHz",
+   "clock_MHz": 130,
+   "N": 8192,
+   "logQ": 162,
+   "limbs": 3,
+   "scheme": "CKKS",
+   "scope": "end-to-end pt-to-ct incl. encoding, software and transfers",
+   "enc_ms": 3.04,
+   "dec_ms": 1.3,
+   "resources": {
+    "LUT": 19274,
+    "FF": 15163,
+    "DSP": 56,
+    "BRAM": 97
+   },
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I"
+   },
+   "per_element_us": 0.7421875,
+   "work_norm_ms": 1.403076923076923,
+   "cycles_per_ct": 395200.0,
+   "elements_per_s_per_DSP": 24060.15037593985
+  },
+  {
+   "id": "Lee-U250",
+   "work": "Lee, Duong-Ngoc, Lee (Sensors 2023)",
+   "level": "AUTHOR_MEASURED_CITED",
+   "platform": "Xilinx Alveo U250",
+   "clock_MHz": null,
+   "N": 65536,
+   "logQ": null,
+   "limbs": null,
+   "scheme": "CKKS",
+   "scope": "one encryption; N=2^16 INFERRED from EF08 per-element value 0.51 us (16.9 ms / 32768 slots), not read from the original",
+   "enc_ms": 16.9,
+   "dec_ms": null,
+   "resources": {
+    "LUT": 1179000,
+    "FF": 1036000,
+    "DSP": 12288,
+    "BRAM": 828.5
+   },
+   "source": {
+    "paper": "EF08 Pasta on Edge (DATE 2025)",
+    "page": 6,
+    "table": "Table III, ref [22]"
+   },
+   "per_element_us": 0.5157470703125,
+   "work_norm_ms": null,
+   "cycles_per_ct": null,
+   "elements_per_s_per_DSP": 157.79092702169626
+  },
+  {
+   "id": "RISE-ASIC",
+   "work": "RISE (IEEE TVLSI 2023)",
+   "level": "AUTHOR_SIMULATED",
+   "platform": "12 nm ASIC @1 GHz, RISC-V SoC (cycle-accurate simulation)",
+   "clock_MHz": 1000,
+   "N": 8192,
+   "logQ": 180,
+   "limbs": null,
+   "scheme": "CKKS",
+   "scope": "message-to-ciphertext (encoding in software)",
+   "enc_ms": 20.0,
+   "dec_ms": 19.0,
+   "resources": null,
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024) Table I; EF02 RISE",
+    "page": 6,
+    "table": "Table I (values from diagrams)"
+   },
+   "per_element_us": 4.8828125,
+   "work_norm_ms": null,
+   "cycles_per_ct": 20000000.0,
+   "elements_per_s_per_DSP": null
+  },
+  {
+   "id": "RACE-ASIC",
+   "work": "RACE (ISLPED 2022)",
+   "level": "AUTHOR_SIMULATED",
+   "platform": "12 nm ASIC @1 GHz",
+   "clock_MHz": 1000,
+   "N": 8192,
+   "logQ": 130,
+   "limbs": null,
+   "scheme": "CKKS",
+   "scope": "message-to-ciphertext",
+   "enc_ms": 110.28,
+   "dec_ms": 19.08,
+   "resources": null,
+   "source": {
+    "paper": "EF01 Aloha-HE (DATE 2024)",
+    "page": 6,
+    "table": "Table I"
+   },
+   "per_element_us": 26.923828125,
+   "work_norm_ms": null,
+   "cycles_per_ct": 110280000.0,
+   "elements_per_s_per_DSP": null
+  }
+ ]
+}

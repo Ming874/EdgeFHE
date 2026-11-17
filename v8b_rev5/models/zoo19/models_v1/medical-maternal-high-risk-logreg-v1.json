@@ -1,0 +1,68 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "medical-maternal-high-risk-logreg-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "age",
+    "systolic_bp",
+    "diastolic_bp",
+    "blood_sugar_mmolL",
+    "body_temp_F",
+    "heart_rate_bpm"
+  ],
+  "mean": [
+    29.74658573596358,
+    113.06676783004552,
+    76.3216995447648,
+    8.70151745068285,
+    98.67132018209408,
+    74.5341426403642
+  ],
+  "std": [
+    13.383039105048685,
+    18.361942821534512,
+    13.66218264935451,
+    3.3032538982741366,
+    1.3665680635422928,
+    7.881325943013506
+  ],
+  "weights": [
+    -0.06097674568478389,
+    0.46253263299790337,
+    0.6840092524729134,
+    1.6791009455943227,
+    0.9839635314474559,
+    0.33671714701592653
+  ],
+  "bias": -0.5542791527672027,
+  "weights_int": [
+    -65473282,
+    496640633,
+    734449342,
+    1802920912,
+    1056522797,
+    361547284
+  ],
+  "bias_int": -639040354780571776,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "classification",
+  "decision_logit": -0.25,
+  "target_mean": 0.0,
+  "target_std": 1.0,
+  "training_source": {
+    "name": "Maternal Health Risk",
+    "uci_id": 863,
+    "data_url": "https://archive.ics.uci.edu/static/public/863/data.csv",
+    "sha256": "a1f7025719f84715096e0d1f95ae2e56b57809b9b15449e1836c96a7d976ae9b",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "RiskLevel==high risk"
+  },
+  "split_seed": 20261108,
+  "split": "row",
+  "selected_lambda": 0.001,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "EdgeFHE KV260: client-side CKKS encryption in FPGA logic (V8b rev5, N=4096)"
+authors:
+  - name: "EdgeFHE project authors"
+version: "v8b-rev5"
+date-released: "2026-11-10"
+license: Apache-2.0
+keywords: [homomorphic encryption, CKKS, FPGA, Kria KV260, edge computing, privacy-preserving inference]

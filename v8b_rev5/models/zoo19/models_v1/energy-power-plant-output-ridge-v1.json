@@ -1,0 +1,58 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "energy-power-plant-output-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "ambient_temperature_C",
+    "exhaust_vacuum_cmHg",
+    "ambient_pressure_mbar",
+    "relative_humidity_pct"
+  ],
+  "mean": [
+    19.76264190384305,
+    54.53919922817205,
+    1013.2184113201478,
+    73.29214986332201
+  ],
+  "std": [
+    7.485096856200252,
+    12.752928924086982,
+    5.929051942682952,
+    14.630740843925745
+  ],
+  "weights": [
+    -0.8705133169154853,
+    -0.16765574216561657,
+    0.02070597535929799,
+    -0.13753001903912698
+  ],
+  "bias": -2.9174640227744265e-15,
+  "weights_int": [
+    -934706557,
+    -180018982,
+    22232872,
+    -147671733
+  ],
+  "bias_int": -3364,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 454.08945650426114,
+  "target_std": 17.108720792413298,
+  "training_source": {
+    "name": "Combined Cycle Power Plant",
+    "uci_id": 294,
+    "data_url": "https://archive.ics.uci.edu/static/public/294/data.csv",
+    "sha256": "3c1fc11025f8424f8d95802d8b7086dffd3f73a552c6dcab3d973620986194b2",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "PE net electrical output MW"
+  },
+  "split_seed": 20261104,
+  "split": "row",
+  "selected_lambda": 1.0,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

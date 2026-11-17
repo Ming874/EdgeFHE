@@ -1,0 +1,532 @@
+{
+ "status": "O345_AB_V2_INDEPENDENT_REVIEW_PASS",
+ "gates": {
+  "seal_exact": true,
+  "root_returned_same_boot": true,
+  "irq_chain_from_stopped_o345_v1": true,
+  "children_returned_exit0": true,
+  "states_same_boot_fastpath3_no_fatal": true,
+  "irq_delta_equals_device_calls_every_child_chained": true,
+  "irq_total_equals_root": true,
+  "owner_rebuilt_equivalence_pass": true,
+  "owner_build_reproducible_across_runs": true,
+  "exact_pl_gate": true,
+  "o5_bit_identical_cpu_and_pl": true,
+  "s1b_48_windows_valid": true,
+  "server_digests_match_all_windows_in_order": true
+ },
+ "notes": {
+  "IRQ_final": {
+   "121": 3110834,
+   "136": 3110834
+  },
+  "DMA_total": 96545,
+  "irq_mismatch": [],
+  "owner_build": {
+   "libef_app_owner.so": "befe004e76f7f96249a012dc769d3091fea3e0c0c4855456bba570c5e9883fe7",
+   "libef_app_normalize.so": "ed127ab26d871423a2176dad1b9978e392bf8e3eee8a5f365a3c0ff008333cdb"
+  },
+  "s1b": {
+   "ai4i|cpu|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 130642.83558144046,
+     "CI95": [
+      129745.66002827157,
+      131464.61509780528
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 13.341,
+     "tls_roundtrip_ms": 8.843,
+     "decrypt_ms": 1.72,
+     "latency_ms": 30.621
+    },
+    "max_public_error": 0.00039185218965998025
+   },
+   "ai4i|cpu|O3v2": {
+    "records_per_s": {
+     "point": 121040.38959941205,
+     "CI95": [
+      120069.30758808463,
+      121597.78105309572
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 13.331,
+     "tls_roundtrip_ms": 22.596,
+     "decrypt_ms": 2.169,
+     "latency_ms": 48.33
+    },
+    "max_public_error": 0.00037416920117694374,
+    "over_baseline": {
+     "point": 0.9264984877334325,
+     "CI95": [
+      0.9185698636721101,
+      0.9344969663048054
+     ]
+    },
+    "over_previous_step": {
+     "point": 0.9264984877334325,
+     "CI95": [
+      0.9185698636721101,
+      0.9344969663048054
+     ]
+    }
+   },
+   "ai4i|cpu|O3v2+O4": {
+    "records_per_s": {
+     "point": 132396.96986675126,
+     "CI95": [
+      128235.86732234918,
+      135911.9032018657
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 12.878,
+     "tls_roundtrip_ms": 22.576,
+     "decrypt_ms": 1.812,
+     "latency_ms": 45.64
+    },
+    "max_public_error": 0.000418981912241545,
+    "over_baseline": {
+     "point": 1.0134269458979808,
+     "CI95": [
+      0.9834488313431158,
+      1.0401553968267605
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.093824716732359,
+     "CI95": [
+      1.059866344295251,
+      1.1228640592753503
+     ]
+    }
+   },
+   "ai4i|cpu|O3v2+O4+O5": {
+    "records_per_s": {
+     "point": 135874.5290440566,
+     "CI95": [
+      134491.56754424196,
+      136606.21551054606
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 14.436,
+     "tls_roundtrip_ms": 22.687,
+     "decrypt_ms": 2.54,
+     "latency_ms": 44.032
+    },
+    "max_public_error": 0.00039522993541840634,
+    "over_baseline": {
+     "point": 1.0400457739556241,
+     "CI95": [
+      1.0294599542766527,
+      1.050046656571754
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.026266153831204,
+     "CI95": [
+      0.9997250118869015,
+      1.059567279273793
+     ]
+    }
+   },
+   "ai4i|pl|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 213759.7783150668,
+     "CI95": [
+      210971.43474885394,
+      216217.82361082715
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 4.995,
+     "tls_roundtrip_ms": 8.367,
+     "decrypt_ms": 2.16,
+     "latency_ms": 18.142
+    },
+    "max_public_error": 0.00037477333601732
+   },
+   "ai4i|pl|O3v2": {
+    "records_per_s": {
+     "point": 204944.0138896078,
+     "CI95": [
+      200506.70677176866,
+      208582.72938074134
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 4.964,
+     "tls_roundtrip_ms": 14.174,
+     "decrypt_ms": 4.905,
+     "latency_ms": 30.305
+    },
+    "max_public_error": 0.00045657071119586945,
+    "over_baseline": {
+     "point": 0.9587585443110576,
+     "CI95": [
+      0.938000162388997,
+      0.9793644623501727
+     ]
+    },
+    "over_previous_step": {
+     "point": 0.9587585443110576,
+     "CI95": [
+      0.938000162388997,
+      0.9793644623501727
+     ]
+    }
+   },
+   "ai4i|pl|O3v2+O4": {
+    "records_per_s": {
+     "point": 237548.96610474619,
+     "CI95": [
+      236817.22448331388,
+      238861.56735040646
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 4.718,
+     "tls_roundtrip_ms": 15.111,
+     "decrypt_ms": 2.014,
+     "latency_ms": 25.849
+    },
+    "max_public_error": 0.0004258028444397155,
+    "over_baseline": {
+     "point": 1.1112893547008447,
+     "CI95": [
+      1.0988761116360994,
+      1.1259769190437126
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.1590919958886963,
+     "CI95": [
+      1.1391128153765164,
+      1.184492408904887
+     ]
+    }
+   },
+   "ai4i|pl|O3v2+O4+O5": {
+    "records_per_s": {
+     "point": 236253.08093983625,
+     "CI95": [
+      236107.79805758075,
+      236510.60687890914
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 4.362,
+     "tls_roundtrip_ms": 17.461,
+     "decrypt_ms": 1.685,
+     "latency_ms": 26.21
+    },
+    "max_public_error": 0.0004250310922759848,
+    "over_baseline": {
+     "point": 1.1052270113773037,
+     "CI95": [
+      1.0927133122949042,
+      1.1197822489377252
+     ]
+    },
+    "over_previous_step": {
+     "point": 0.9945447661332337,
+     "CI95": [
+      0.9891256129471272,
+      0.9979728417872035
+     ]
+    }
+   },
+   "ai4i|pl_over_cpu|baseline_2slot_seq": {
+    "point": 1.636215084919928,
+    "CI95": [
+     1.6148718282935464,
+     1.6568680111295877
+    ]
+   },
+   "ai4i|pl_over_cpu|O3v2": {
+    "point": 1.6931869978928364,
+    "CI95": [
+     1.6571830857484098,
+     1.7226787828325911
+    ]
+   },
+   "ai4i|pl_over_cpu|O3v2+O4": {
+    "point": 1.7942175439802241,
+    "CI95": [
+     1.7481858064404818,
+     1.8520455865025087
+    ]
+   },
+   "ai4i|pl_over_cpu|O3v2+O4+O5": {
+    "point": 1.7387591523002257,
+    "CI95": [
+     1.7288830114996923,
+     1.756556726777511
+    ]
+   },
+   "diabetes|cpu|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 51993.28975886392,
+     "CI95": [
+      51404.76792395659,
+      52754.953167657775
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 34.422,
+     "tls_roundtrip_ms": 18.388,
+     "decrypt_ms": 1.76,
+     "latency_ms": 74.891
+    },
+    "max_public_error": 0.00010302281071733477
+   },
+   "diabetes|cpu|O3v2": {
+    "records_per_s": {
+     "point": 49083.45156907487,
+     "CI95": [
+      47846.21529198859,
+      51069.133297024564
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 34.399,
+     "tls_roundtrip_ms": 51.853,
+     "decrypt_ms": 6.328,
+     "latency_ms": 124.202
+    },
+    "max_public_error": 8.982172012506062e-05,
+    "over_baseline": {
+     "point": 0.9440343512925535,
+     "CI95": [
+      0.9154477009579343,
+      0.9796167105077435
+     ]
+    },
+    "over_previous_step": {
+     "point": 0.9440343512925535,
+     "CI95": [
+      0.9154477009579343,
+      0.9796167105077435
+     ]
+    }
+   },
+   "diabetes|cpu|O3v2+O4": {
+    "records_per_s": {
+     "point": 54677.31525907148,
+     "CI95": [
+      53135.844641801974,
+      56085.484347754194
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 34.199,
+     "tls_roundtrip_ms": 52.712,
+     "decrypt_ms": 1.722,
+     "latency_ms": 110.751
+    },
+    "max_public_error": 8.876528269813333e-05,
+    "over_baseline": {
+     "point": 1.0516225365360727,
+     "CI95": [
+      1.0219750450151748,
+      1.0798805321729092
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.1139663880834543,
+     "CI95": [
+      1.0705044368862007,
+      1.159373445133522
+     ]
+    }
+   },
+   "diabetes|cpu|O3v2+O4+O5": {
+    "records_per_s": {
+     "point": 56867.121923453196,
+     "CI95": [
+      56073.69969862341,
+      57329.004537220106
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 34.793,
+     "tls_roundtrip_ms": 52.778,
+     "decrypt_ms": 3.787,
+     "latency_ms": 106.041
+    },
+    "max_public_error": 0.00010729418181743,
+    "over_baseline": {
+     "point": 1.0937396380800923,
+     "CI95": [
+      1.0763745137450524,
+      1.1114080177024834
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.0400496376606276,
+     "CI95": [
+      1.0139365396374669,
+      1.069403801500541
+     ]
+    }
+   },
+   "diabetes|pl|baseline_2slot_seq": {
+    "records_per_s": {
+     "point": 105587.29486316901,
+     "CI95": [
+      104377.6136625152,
+      106240.8648719418
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 11.841,
+     "tls_roundtrip_ms": 18.414,
+     "decrypt_ms": 1.739,
+     "latency_ms": 37.62
+    },
+    "max_public_error": 9.067064538637037e-05
+   },
+   "diabetes|pl|O3v2": {
+    "records_per_s": {
+     "point": 106519.01039659468,
+     "CI95": [
+      94979.42569080346,
+      114631.67379845747
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 11.817,
+     "tls_roundtrip_ms": 31.7,
+     "decrypt_ms": 4.684,
+     "latency_ms": 55.577
+    },
+    "max_public_error": 9.330218767469867e-05,
+    "over_baseline": {
+     "point": 1.008824125427525,
+     "CI95": [
+      0.8998114530143457,
+      1.0853239096512868
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.008824125427525,
+     "CI95": [
+      0.8998114530143457,
+      1.0853239096512868
+     ]
+    }
+   },
+   "diabetes|pl|O3v2+O4": {
+    "records_per_s": {
+     "point": 108778.8249252388,
+     "CI95": [
+      108588.3921082943,
+      109046.01562784052
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 10.344,
+     "tls_roundtrip_ms": 35.533,
+     "decrypt_ms": 1.73,
+     "latency_ms": 56.298
+    },
+    "max_public_error": 9.653361120176562e-05,
+    "over_baseline": {
+     "point": 1.0302264592175197,
+     "CI95": [
+      1.022765672391314,
+      1.041803213024865
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.021215128832218,
+     "CI95": [
+      0.9492726832229638,
+      1.1448893535687634
+     ]
+    }
+   },
+   "diabetes|pl|O3v2+O4+O5": {
+    "records_per_s": {
+     "point": 109871.31249475102,
+     "CI95": [
+      109774.32493915776,
+      109941.45837132997
+     ],
+     "n": 3
+    },
+    "stage_medians_ms": {
+     "prepare_ms": 10.082,
+     "tls_roundtrip_ms": 37.487,
+     "decrypt_ms": 1.728,
+     "latency_ms": 56.255
+    },
+    "max_public_error": 0.00010020438044777702,
+    "over_baseline": {
+     "point": 1.0405732303032642,
+     "CI95": [
+      1.0339636363779414,
+      1.0524946289482189
+     ]
+    },
+    "over_previous_step": {
+     "point": 1.0100432006896845,
+     "CI95": [
+      1.0077007086833685,
+      1.0119744489254616
+     ]
+    }
+   },
+   "diabetes|pl_over_cpu|baseline_2slot_seq": {
+    "point": 2.0307869602570836,
+    "CI95": [
+     2.0014669433523617,
+     2.060569015527189
+    ]
+   },
+   "diabetes|pl_over_cpu|O3v2": {
+    "point": 2.1701613678632823,
+    "CI95": [
+     1.9415047750748013,
+     2.3551712580904627
+    ]
+   },
+   "diabetes|pl_over_cpu|O3v2+O4": {
+    "point": 1.989469022204622,
+    "CI95": [
+     1.9401939349278088,
+     2.046470400809812
+    ]
+   },
+   "diabetes|pl_over_cpu|O3v2+O4+O5": {
+    "point": 1.9320709186345826,
+    "CI95": [
+     1.9165048020922553,
+     1.9591515871553316
+    ]
+   }
+  },
+  "server_segments": 48,
+  "server_segments_before_windows": 0
+ },
+ "scope": "KV260 boot e26925f5; two-machine wired LAN (PC 192.0.2.20, Windows-native server r3); 30 s windows, 3 sessions per cell; marginal CIs; one board, one boot",
+ "assistant_board_operations": 0
+}

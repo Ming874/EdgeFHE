@@ -1,0 +1,20 @@
+{
+ "ai4i-failure-logreg-v1": {
+  "trials": 40,
+  "slots": 81920,
+  "slot_std": 4.263000239987136e-05,
+  "max_abs": 0.00031585682822213675
+ },
+ "diabetes-progression-ridge-v1": {
+  "trials": 40,
+  "slots": 81920,
+  "slot_std": 1.0640325522858755e-05,
+  "max_abs": 8.319121287268924e-05
+ },
+ "diabetes-symptom-logreg-v1": {
+  "trials": 40,
+  "slots": 81920,
+  "slot_std": 5.5496087172579294e-05,
+  "max_abs": 0.0003671143249727188
+ }
+}

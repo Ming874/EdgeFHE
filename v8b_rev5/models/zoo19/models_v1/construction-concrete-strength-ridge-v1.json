@@ -1,0 +1,78 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "construction-concrete-strength-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "cement_kgm3",
+    "slag_kgm3",
+    "fly_ash_kgm3",
+    "water_kgm3",
+    "superplasticizer_kgm3",
+    "coarse_aggregate_kgm3",
+    "fine_aggregate_kgm3",
+    "age_day"
+  ],
+  "mean": [
+    279.5986547085199,
+    74.44245142002993,
+    54.15859491778772,
+    180.94319880418547,
+    6.26980568011958,
+    973.2970104633769,
+    774.9047832585944,
+    47.04633781763827
+  ],
+  "std": [
+    103.3389143735321,
+    86.96420508570074,
+    64.53881397914297,
+    21.622660204326106,
+    6.308514434619778,
+    75.92459434818934,
+    80.28218863917398,
+    65.37475689709123
+  ],
+  "weights": [
+    0.5576486981061366,
+    0.3504909339777505,
+    0.1773982881087837,
+    -0.3097801074657629,
+    0.11358543437862549,
+    -0.021376847603097937,
+    -0.06792227705281287,
+    0.4056962001976599
+  ],
+  "bias": -2.033915304903725e-15,
+  "weights_int": [
+    598770730,
+    376336775,
+    190479961,
+    -332623858,
+    121961431,
+    -22953215,
+    -72930990,
+    435612978
+  ],
+  "bias_int": -2345,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 35.94056801195814,
+  "target_std": 17.156888979013633,
+  "training_source": {
+    "name": "Concrete Compressive Strength",
+    "uci_id": 165,
+    "data_url": "https://archive.ics.uci.edu/static/public/165/data.csv",
+    "sha256": "8d4b15b6fc68cd932d745cbd663d5ceae66dd54422e99c1e4865f2936ab7e2af",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "compressive strength MPa"
+  },
+  "split_seed": 20261110,
+  "split": "row",
+  "selected_lambda": 30.0,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

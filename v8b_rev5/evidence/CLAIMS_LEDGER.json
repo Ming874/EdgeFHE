@@ -1,0 +1,1614 @@
+{
+  "schema": "multi-source-json-claim-ledger-v2",
+  "baseline_sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+  "claims": [
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/point",
+      "value": 1.5998,
+      "format": ".3f",
+      "rendered": "1.600"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/0",
+      "value": 1.5712,
+      "format": ".3f",
+      "rendered": "1.571"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/latency/CI95/1",
+      "value": 1.6259,
+      "format": ".3f",
+      "rendered": "1.626"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/point",
+      "value": 1.6405,
+      "format": ".3f",
+      "rendered": "1.641"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/0",
+      "value": 1.6353,
+      "format": ".3f",
+      "rendered": "1.635"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/ai4i/records/CI95/1",
+      "value": 1.6464,
+      "format": ".3f",
+      "rendered": "1.646"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/point",
+      "value": 1.8107,
+      "format": ".3f",
+      "rendered": "1.811"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/0",
+      "value": 1.7915,
+      "format": ".3f",
+      "rendered": "1.792"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/latency/CI95/1",
+      "value": 1.8292,
+      "format": ".3f",
+      "rendered": "1.829"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/point",
+      "value": 2.0216,
+      "format": ".3f",
+      "rendered": "2.022"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/0",
+      "value": 2.0126,
+      "format": ".3f",
+      "rendered": "2.013"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/two_machine_wired_vs_cpu/values/diabetes/records/CI95/1",
+      "value": 2.0305,
+      "format": ".3f",
+      "rendered": "2.030"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/point",
+      "value": 129268,
+      "format": ".0f",
+      "rendered": "129268"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/CI95/0",
+      "value": 128861,
+      "format": ".0f",
+      "rendered": "128861"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|baseline_2slot_seq/CI95/1",
+      "value": 129904,
+      "format": ".0f",
+      "rendered": "129904"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/point",
+      "value": 134898,
+      "format": ".0f",
+      "rendered": "134898"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/CI95/0",
+      "value": 133945,
+      "format": ".0f",
+      "rendered": "133945"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O345_3slot_duplex/CI95/1",
+      "value": 136102,
+      "format": ".0f",
+      "rendered": "136102"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/point",
+      "value": 133665,
+      "format": ".0f",
+      "rendered": "133665"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/CI95/0",
+      "value": 133390,
+      "format": ".0f",
+      "rendered": "133390"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots4_inflight4/CI95/1",
+      "value": 134151,
+      "format": ".0f",
+      "rendered": "134151"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/point",
+      "value": 133457,
+      "format": ".0f",
+      "rendered": "133457"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/CI95/0",
+      "value": 131440,
+      "format": ".0f",
+      "rendered": "131440"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|cpu|O7_slots8_inflight8/CI95/1",
+      "value": 135278,
+      "format": ".0f",
+      "rendered": "135278"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/point",
+      "value": 219145,
+      "format": ".0f",
+      "rendered": "219145"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/CI95/0",
+      "value": 216159,
+      "format": ".0f",
+      "rendered": "216159"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|baseline_2slot_seq/CI95/1",
+      "value": 221159,
+      "format": ".0f",
+      "rendered": "221159"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/point",
+      "value": 238990,
+      "format": ".0f",
+      "rendered": "238990"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/CI95/0",
+      "value": 236380,
+      "format": ".0f",
+      "rendered": "236380"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O345_3slot_duplex/CI95/1",
+      "value": 240980,
+      "format": ".0f",
+      "rendered": "240980"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/point",
+      "value": 245972,
+      "format": ".0f",
+      "rendered": "245972"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/CI95/0",
+      "value": 242973,
+      "format": ".0f",
+      "rendered": "242973"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots4_inflight4/CI95/1",
+      "value": 249169,
+      "format": ".0f",
+      "rendered": "249169"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/point",
+      "value": 252976,
+      "format": ".0f",
+      "rendered": "252976"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/CI95/0",
+      "value": 251616,
+      "format": ".0f",
+      "rendered": "251616"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/ai4i|pl|O7_slots8_inflight8/CI95/1",
+      "value": 255397,
+      "format": ".0f",
+      "rendered": "255397"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/point",
+      "value": 51253,
+      "format": ".0f",
+      "rendered": "51253"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/CI95/0",
+      "value": 50457,
+      "format": ".0f",
+      "rendered": "50457"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|baseline_2slot_seq/CI95/1",
+      "value": 51653,
+      "format": ".0f",
+      "rendered": "51653"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/point",
+      "value": 56992,
+      "format": ".0f",
+      "rendered": "56992"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/CI95/0",
+      "value": 56458,
+      "format": ".0f",
+      "rendered": "56458"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O345_3slot_duplex/CI95/1",
+      "value": 57547,
+      "format": ".0f",
+      "rendered": "57547"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/point",
+      "value": 55675,
+      "format": ".0f",
+      "rendered": "55675"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/CI95/0",
+      "value": 55203,
+      "format": ".0f",
+      "rendered": "55203"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots4_inflight4/CI95/1",
+      "value": 56173,
+      "format": ".0f",
+      "rendered": "56173"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/point",
+      "value": 55623,
+      "format": ".0f",
+      "rendered": "55623"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/CI95/0",
+      "value": 55130,
+      "format": ".0f",
+      "rendered": "55130"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|cpu|O7_slots8_inflight8/CI95/1",
+      "value": 56093,
+      "format": ".0f",
+      "rendered": "56093"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/point",
+      "value": 105566,
+      "format": ".0f",
+      "rendered": "105566"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/CI95/0",
+      "value": 104676,
+      "format": ".0f",
+      "rendered": "104676"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|baseline_2slot_seq/CI95/1",
+      "value": 106472,
+      "format": ".0f",
+      "rendered": "106472"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/point",
+      "value": 110498,
+      "format": ".0f",
+      "rendered": "110498"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/CI95/0",
+      "value": 109676,
+      "format": ".0f",
+      "rendered": "109676"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O345_3slot_duplex/CI95/1",
+      "value": 111816,
+      "format": ".0f",
+      "rendered": "111816"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/point",
+      "value": 114661,
+      "format": ".0f",
+      "rendered": "114661"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/CI95/0",
+      "value": 112742,
+      "format": ".0f",
+      "rendered": "112742"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots4_inflight4/CI95/1",
+      "value": 116280,
+      "format": ".0f",
+      "rendered": "116280"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/point",
+      "value": 116745,
+      "format": ".0f",
+      "rendered": "116745"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/CI95/0",
+      "value": 115742,
+      "format": ".0f",
+      "rendered": "115742"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/optimisation_throughput_records_per_s/diabetes|pl|O7_slots8_inflight8/CI95/1",
+      "value": 117384,
+      "format": ".0f",
+      "rendered": "117384"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/openfhe_prepare_ms",
+      "value": 44.8933919,
+      "format": ".3f",
+      "rendered": "44.893"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_cpu3_prepare_ms",
+      "value": 13.38667545,
+      "format": ".3f",
+      "rendered": "13.387"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/ours_pl_prepare_ms",
+      "value": 4.9120379000000005,
+      "format": ".3f",
+      "rendered": "4.912"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point",
+      "value": 9.1395,
+      "format": ".3f",
+      "rendered": "9.139"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/0",
+      "value": 9.1046,
+      "format": ".3f",
+      "rendered": "9.105"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1",
+      "value": 9.173,
+      "format": ".3f",
+      "rendered": "9.173"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/openfhe_prepare_ms",
+      "value": 45.4053305,
+      "format": ".3f",
+      "rendered": "45.405"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms",
+      "value": 13.3539576,
+      "format": ".3f",
+      "rendered": "13.354"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/ours_pl_prepare_ms",
+      "value": 5.0068430500000005,
+      "format": ".3f",
+      "rendered": "5.007"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point",
+      "value": 9.0687,
+      "format": ".3f",
+      "rendered": "9.069"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0",
+      "value": 9.0511,
+      "format": ".3f",
+      "rendered": "9.051"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/ai4i|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1",
+      "value": 9.0842,
+      "format": ".3f",
+      "rendered": "9.084"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/openfhe_prepare_ms",
+      "value": 114.04466235,
+      "format": ".3f",
+      "rendered": "114.045"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_cpu3_prepare_ms",
+      "value": 32.5158574,
+      "format": ".3f",
+      "rendered": "32.516"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/ours_pl_prepare_ms",
+      "value": 10.6669415,
+      "format": ".3f",
+      "rendered": "10.667"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/point",
+      "value": 10.6914,
+      "format": ".3f",
+      "rendered": "10.691"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/0",
+      "value": 10.6674,
+      "format": ".3f",
+      "rendered": "10.667"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=1|openfhe_t=3/prepare_openfhe_over_pl/CI95/1",
+      "value": 10.7157,
+      "format": ".3f",
+      "rendered": "10.716"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/openfhe_prepare_ms",
+      "value": 114.5429436,
+      "format": ".3f",
+      "rendered": "114.543"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_cpu3_prepare_ms",
+      "value": 34.4284874,
+      "format": ".3f",
+      "rendered": "34.428"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/ours_pl_prepare_ms",
+      "value": 11.8478328,
+      "format": ".3f",
+      "rendered": "11.848"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/point",
+      "value": 9.6678,
+      "format": ".3f",
+      "rendered": "9.668"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/0",
+      "value": 9.6094,
+      "format": ".3f",
+      "rendered": "9.609"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/b1_openfhe_same_boot/values/diabetes|rows=2048|openfhe_t=3/prepare_openfhe_over_pl/CI95/1",
+      "value": 9.7195,
+      "format": ".3f",
+      "rendered": "9.720"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/point",
+      "value": 4.2736,
+      "format": ".3f",
+      "rendered": "4.274"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/0",
+      "value": 4.2626,
+      "format": ".3f",
+      "rendered": "4.263"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/energy_pl_over_cpu_records_per_J/value/CI95/1",
+      "value": 4.2857,
+      "format": ".3f",
+      "rendered": "4.286"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/soak_6h/values/active_h",
+      "value": 6.0018,
+      "format": ".6g",
+      "rendered": "6.0018"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/soak_6h/values/requests",
+      "value": 1650251,
+      "format": ",.0f",
+      "rendered": "1,650,251"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/soak_6h/values/records",
+      "value": 3379714048,
+      "format": ",.0f",
+      "rendered": "3,379,714,048"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/soak_6h/values/device_calls",
+      "value": 2726453,
+      "format": ",.0f",
+      "rendered": "2,726,453"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/soak_6h/values/max_error",
+      "value": 0.0004736602983652638,
+      "format": ".6g",
+      "rendered": "0.00047366"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/in_process_pl_records_per_s/value/point",
+      "value": 832396.3886,
+      "format": ".0f",
+      "rendered": "832396"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/0",
+      "value": 831637.8098,
+      "format": ".0f",
+      "rendered": "831638"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/in_process_pl_records_per_s/value/CI95/1",
+      "value": 833154.9674,
+      "format": ".0f",
+      "rendered": "833155"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/point",
+      "value": 4.186,
+      "format": ".3f",
+      "rendered": "4.186"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/0",
+      "value": 4.1728,
+      "format": ".3f",
+      "rendered": "4.173"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=4/CI95/1",
+      "value": 4.1988,
+      "format": ".3f",
+      "rendered": "4.199"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/point",
+      "value": 5.3746,
+      "format": ".3f",
+      "rendered": "5.375"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/0",
+      "value": 5.337,
+      "format": ".3f",
+      "rendered": "5.337"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/pl_over_cpu_encrypt_4cores/values/F=10/CI95/1",
+      "value": 5.4221,
+      "format": ".3f",
+      "rendered": "5.422"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/point",
+      "value": 0.9265,
+      "format": ".3f",
+      "rendered": "0.926"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/CI95/0",
+      "value": 0.9186,
+      "format": ".3f",
+      "rendered": "0.919"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2/over_previous_step/CI95/1",
+      "value": 0.9345,
+      "format": ".3f",
+      "rendered": "0.934"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/point",
+      "value": 1.0938,
+      "format": ".3f",
+      "rendered": "1.094"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/CI95/0",
+      "value": 1.0599,
+      "format": ".3f",
+      "rendered": "1.060"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4/over_previous_step/CI95/1",
+      "value": 1.1229,
+      "format": ".3f",
+      "rendered": "1.123"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4+O5/over_previous_step/point",
+      "value": 1.0263,
+      "format": ".3f",
+      "rendered": "1.026"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4+O5/over_previous_step/CI95/0",
+      "value": 0.9997,
+      "format": ".3f",
+      "rendered": "1.000"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|cpu|O3v2+O4+O5/over_previous_step/CI95/1",
+      "value": 1.0596,
+      "format": ".3f",
+      "rendered": "1.060"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/point",
+      "value": 0.9588,
+      "format": ".3f",
+      "rendered": "0.959"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/CI95/0",
+      "value": 0.938,
+      "format": ".3f",
+      "rendered": "0.938"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2/over_previous_step/CI95/1",
+      "value": 0.9794,
+      "format": ".3f",
+      "rendered": "0.979"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/point",
+      "value": 1.1591,
+      "format": ".3f",
+      "rendered": "1.159"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/CI95/0",
+      "value": 1.1391,
+      "format": ".3f",
+      "rendered": "1.139"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4/over_previous_step/CI95/1",
+      "value": 1.1845,
+      "format": ".3f",
+      "rendered": "1.185"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/point",
+      "value": 0.9945,
+      "format": ".3f",
+      "rendered": "0.995"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/CI95/0",
+      "value": 0.9891,
+      "format": ".3f",
+      "rendered": "0.989"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/ai4i|pl|O3v2+O4+O5/over_previous_step/CI95/1",
+      "value": 0.998,
+      "format": ".3f",
+      "rendered": "0.998"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/point",
+      "value": 0.944,
+      "format": ".3f",
+      "rendered": "0.944"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/CI95/0",
+      "value": 0.9154,
+      "format": ".3f",
+      "rendered": "0.915"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2/over_previous_step/CI95/1",
+      "value": 0.9796,
+      "format": ".3f",
+      "rendered": "0.980"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4/over_previous_step/point",
+      "value": 1.114,
+      "format": ".3f",
+      "rendered": "1.114"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4/over_previous_step/CI95/0",
+      "value": 1.0705,
+      "format": ".3f",
+      "rendered": "1.071"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4/over_previous_step/CI95/1",
+      "value": 1.1594,
+      "format": ".3f",
+      "rendered": "1.159"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/point",
+      "value": 1.04,
+      "format": ".3f",
+      "rendered": "1.040"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/CI95/0",
+      "value": 1.0139,
+      "format": ".3f",
+      "rendered": "1.014"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|cpu|O3v2+O4+O5/over_previous_step/CI95/1",
+      "value": 1.0694,
+      "format": ".3f",
+      "rendered": "1.069"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/point",
+      "value": 1.0088,
+      "format": ".3f",
+      "rendered": "1.009"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/CI95/0",
+      "value": 0.8998,
+      "format": ".3f",
+      "rendered": "0.900"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2/over_previous_step/CI95/1",
+      "value": 1.0853,
+      "format": ".3f",
+      "rendered": "1.085"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/point",
+      "value": 1.0212,
+      "format": ".3f",
+      "rendered": "1.021"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/CI95/0",
+      "value": 0.9493,
+      "format": ".3f",
+      "rendered": "0.949"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4/over_previous_step/CI95/1",
+      "value": 1.1449,
+      "format": ".3f",
+      "rendered": "1.145"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/point",
+      "value": 1.01,
+      "format": ".3f",
+      "rendered": "1.010"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/CI95/0",
+      "value": 1.0077,
+      "format": ".3f",
+      "rendered": "1.008"
+    },
+    {
+      "source": "REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb",
+      "pointer": "task_F/o345_steps/values/diabetes|pl|O3v2+O4+O5/over_previous_step/CI95/1",
+      "value": 1.012,
+      "format": ".3f",
+      "rendered": "1.012"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/pl/ai4i_records_per_s",
+      "raw_value": [
+        323475,
+        329546,
+        326630
+      ],
+      "value": 323475,
+      "operation": "min",
+      "format": ",.0f",
+      "rendered": "323,475"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/pl/ai4i_records_per_s",
+      "raw_value": [
+        323475,
+        329546,
+        326630
+      ],
+      "value": 329546,
+      "operation": "max",
+      "format": ",.0f",
+      "rendered": "329,546"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/cpu/ai4i_records_per_s",
+      "raw_value": [
+        127831,
+        129082,
+        129291
+      ],
+      "value": 127831,
+      "operation": "min",
+      "format": ",.0f",
+      "rendered": "127,831"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/cpu/ai4i_records_per_s",
+      "raw_value": [
+        127831,
+        129082,
+        129291
+      ],
+      "value": 129291,
+      "operation": "max",
+      "format": ",.0f",
+      "rendered": "129,291"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A",
+      "raw_value": [
+        1.2565,
+        1.32,
+        1.2843
+      ],
+      "value": 1.2565,
+      "operation": "min",
+      "format": ".4f",
+      "rendered": "1.2565"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/table/pl_ai4i/B/ratio_vs_A",
+      "raw_value": [
+        1.2565,
+        1.32,
+        1.2843
+      ],
+      "value": 1.32,
+      "operation": "max",
+      "format": ".4f",
+      "rendered": "1.3200"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/pl/ridge_records_per_s",
+      "raw_value": [
+        123907,
+        124514,
+        125034
+      ],
+      "value": 123907,
+      "operation": "min",
+      "format": ",.0f",
+      "rendered": "123,907"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/pl/ridge_records_per_s",
+      "raw_value": [
+        123907,
+        124514,
+        125034
+      ],
+      "value": 125034,
+      "operation": "max",
+      "format": ",.0f",
+      "rendered": "125,034"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/cpu/ridge_records_per_s",
+      "raw_value": [
+        54568,
+        54824,
+        55240
+      ],
+      "value": 54568,
+      "operation": "min",
+      "format": ",.0f",
+      "rendered": "54,568"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/cpu/ridge_records_per_s",
+      "raw_value": [
+        54568,
+        54824,
+        55240
+      ],
+      "value": 55240,
+      "operation": "max",
+      "format": ",.0f",
+      "rendered": "55,240"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A",
+      "raw_value": [
+        1.0584,
+        1.0589,
+        1.0753
+      ],
+      "value": 1.0584,
+      "operation": "min",
+      "format": ".4f",
+      "rendered": "1.0584"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/table/pl_diabetes/B/ratio_vs_A",
+      "raw_value": [
+        1.0584,
+        1.0589,
+        1.0753
+      ],
+      "value": 1.0753,
+      "operation": "max",
+      "format": ".4f",
+      "rendered": "1.0753"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "current_best/pl/config",
+      "raw_value": "slots 8, duplex 1, hash_io 1, decrypt_thread 1, inflight 8, --io-cpu auto (chose cpu1), --io-isolate 0, --read-every 1 (placement B)",
+      "value": "slots 8, duplex 1, hash_io 1, decrypt_thread 1, inflight 8, --io-cpu auto (chose cpu1), --io-isolate 0, --read-every 1 (placement B)",
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "slots 8, duplex 1, hash_io 1, decrypt_thread 1, inflight 8, --io-cpu auto (chose cpu1), --io-isolate 0, --read-every 1 (placement B)"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/active_seconds",
+      "raw_value": 21630.146524037,
+      "value": 6.0083740344547225,
+      "operation": "seconds_to_hours",
+      "format": ".6f",
+      "rendered": "6.008374"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/requests",
+      "raw_value": 2014736,
+      "value": 2014736,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "2,014,736"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/records",
+      "raw_value": 4126179328,
+      "value": 4126179328,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "4,126,179,328"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/DMA_total",
+      "raw_value": 3320109,
+      "value": 3320109,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "3,320,109"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/connections",
+      "raw_value": 384,
+      "value": 384,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "384"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/summary/max_public_error",
+      "raw_value": 0.0005096003255609105,
+      "value": 0.0005096003255609105,
+      "operation": "identity",
+      "format": ".9g",
+      "rendered": "0.000509600326"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/status",
+      "raw_value": "OPENFHE_STANDARD_CONFORMANCE_PASS",
+      "value": "OPENFHE_STANDARD_CONFORMANCE_PASS",
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "OPENFHE_STANDARD_CONFORMANCE_PASS"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_classic_128",
+      "raw_value": 20.39,
+      "value": 20.39,
+      "operation": "identity",
+      "format": ".2f",
+      "rendered": "20.39"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/parameter_conformance/margin_bits/margin_bits_quantum_128",
+      "raw_value": 12.39,
+      "value": 12.39,
+      "operation": "identity",
+      "format": ".2f",
+      "rendered": "12.39"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_pre",
+      "raw_value": 10.554,
+      "value": 10.554,
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "10.554"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/ai4i/openfhe_prepare_over_edgefhe/pl_post",
+      "raw_value": 10.449,
+      "value": 10.449,
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "10.449"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_pre",
+      "raw_value": 11.646,
+      "value": 11.646,
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "11.646"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "o7_soak_6h/openfhe_standard/same_boot_reference/diabetes/openfhe_prepare_over_edgefhe/pl_post",
+      "raw_value": 11.639,
+      "value": 11.639,
+      "operation": "identity",
+      "format": ".3f",
+      "rendered": "11.639"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/IRQ_final/121",
+      "raw_value": 6699271,
+      "value": 6699271,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "6,699,271"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1b_placement_ab/DMA_total",
+      "raw_value": 114592,
+      "value": 114592,
+      "operation": "identity",
+      "format": ",.0f",
+      "rendered": "114,592"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range",
+      "raw_value": [
+        6.56,
+        8.07
+      ],
+      "value": 6.56,
+      "operation": "min",
+      "format": ".2f",
+      "rendered": "6.56"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1a_send_loop/softirq_ms_per_MB_total_traffic_range",
+      "raw_value": [
+        6.56,
+        8.07
+      ],
+      "value": 8.07,
+      "operation": "max",
+      "format": ".2f",
+      "rendered": "8.07"
+    },
+    {
+      "source": "REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56",
+      "pointer": "s1a_send_loop/variants/v0_current_nb_16k_read_each/cpu_ms_per_MB_median",
+      "raw_value": 6.19,
+      "value": 6.19,
+      "operation": "identity",
+      "format": ".2f",
+      "rendered": "6.19"
+    }
+  ],
+  "document_hashes": {
+    "README_zh-TW.md": "320aab716c037549a67149f3e1612dce641e6d4ec39c973dba401ff731061ca2",
+    "README_en.md": "b60ad11766696c8aeae20e504f0695453376758d7b8763f7bc63325e57d53a87",
+    "PROFESSOR_REPORT_zh-TW.md": "25da3265df95ac759ba5a0eaf5bb26b8337cbd9474b7bb900387d4f2f677e2d3"
+  },
+  "metadata": {
+    "N": 4096,
+    "slots": 2048,
+    "primes": [
+      998244353,
+      1004535809,
+      469762049
+    ],
+    "sigma": 4.5,
+    "scale": 1073741824,
+    "log2Q": 88.606,
+    "source_sha256": "d63c09d3d5c6f74496bc3c2ba0d377fc22d34853aa64b3db5565f769c31b3eff",
+    "scope": "Constants checked against copied frozen header and security assessment; versions, chapter labels, arithmetic subscripts and selftest markers are structural metadata, not measured claims"
+  },
+  "bilingual_sections": [
+    {
+      "id": 1,
+      "zh": "一句話與交付狀態",
+      "en": "Summary and delivery status"
+    },
+    {
+      "id": 2,
+      "zh": "架構與程式碼",
+      "en": "Architecture and code map"
+    },
+    {
+      "id": 3,
+      "zh": "威脅模型",
+      "en": "Threat model"
+    },
+    {
+      "id": 4,
+      "zh": "參數與數學",
+      "en": "Parameters and mathematics"
+    },
+    {
+      "id": 5,
+      "zh": "成果與基準",
+      "en": "Results and baselines"
+    },
+    {
+      "id": 6,
+      "zh": "本機重現",
+      "en": "Local reproduction"
+    },
+    {
+      "id": 7,
+      "zh": "上板與部署",
+      "en": "Board and deployment"
+    },
+    {
+      "id": 8,
+      "zh": "限制與後續",
+      "en": "Limitations and next work"
+    },
+    {
+      "id": 9,
+      "zh": "授權與清單",
+      "en": "Licensing and inventory"
+    },
+    {
+      "id": "T0",
+      "zh": "O7長測、S1b與產品預設更新",
+      "en": "O7 soak, S1b and product-default update"
+    }
+  ],
+  "evidence_index": [
+    {
+      "id": "E1",
+      "path": "development_records/rerun_wired_20261023f/return_1023_wired/REVIEW.json",
+      "sha256": "8e80dd3c68c2f107c08dd79028b4857cc8d4bf53e2c82881152a286ba380de07"
+    },
+    {
+      "id": "E2",
+      "path": "development_records/verification_suite_20261024/return_1024_suite/REVIEW.json",
+      "sha256": "08a9c9ffe1a12412d5c620d7cf3fcf3a31f200ef40f15c486510d92cd6268ba4"
+    },
+    {
+      "id": "E3",
+      "path": "development_records/baseline_b1_20261024/return_1024_b1/REVIEW.json",
+      "sha256": "9c304b63c347375a7b99eb1e8b756b0fed62f5c499cfface89ca3cd4b2990146"
+    },
+    {
+      "id": "E4",
+      "path": "development_records/live_demo_20261024/return_1024_live2/REVIEW.json",
+      "sha256": "5acedea408b3af7f139250a1e8338cd9c8035c70d7a49946be84d6debd6daafe"
+    },
+    {
+      "id": "E5",
+      "path": "development_records/optimization_o7_20261024/return_1024_o7/REVIEW.json",
+      "sha256": "9bbf4ff0cf70c1f7054006760bb567e864fb4a0c396aae28f6a5ec8d5db7f6c7"
+    },
+    {
+      "id": "E6",
+      "path": "development_records/optimization_o3_20261024/return_1024_o345v2/REVIEW.json",
+      "sha256": "3c05d8f34a6d458a8d55ee81bac4da24848e71d88f0e4d8f8eaa4ec2e9ac54a1"
+    },
+    {
+      "id": "E7",
+      "path": "development_records/reference_points_20261024/REFERENCE_POINTS.json",
+      "sha256": "f0cb20da6762686d76c9e6a899af15c0c47d7a0399eabe61b0dd835984b6c758"
+    },
+    {
+      "id": "E8",
+      "path": "development_records/security_assessment_20261024/ESTIMATE.json",
+      "sha256": "ebec0a51d0b14d215afa63bedbe639c3a14e567c14eef95ef9ea743bde3f02bd"
+    },
+    {
+      "id": "T0-o7_soak_6h",
+      "path": "development_records/o7_soak_openfhe_20261025/return_1025_soak/REVIEW.json",
+      "sha256": "d1323974e7009c0165b48862791d7e7053f7602f5e13c289a54abb487d2d8523"
+    },
+    {
+      "id": "T0-s1b_placement_ab",
+      "path": "development_records/s1_io_optimization_20261025/s1b/return_1025_s1b/REVIEW.json",
+      "sha256": "c79d01b1f12ddad383f363e98d766e8d12c8a64cfeaec4805b6dc851390cc7ee"
+    },
+    {
+      "id": "T0-s0b_profile",
+      "path": "development_records/s0b_client_profile_20261025/return_1025_s0b/REVIEW.json",
+      "sha256": "a1ebdf80e91241ab7081fe46f89dc91d7de40101953746ac34b0d47e2820cd92"
+    },
+    {
+      "id": "T0-s1a_send_loop",
+      "path": "development_records/s1_io_optimization_20261025/return_s1a_20261025T034905/ANALYSIS_S1A.json",
+      "sha256": "1528cd26bfc0cd2b441ecaad82719634cdc1507c5c66b8677a362aaaec7d78da"
+    }
+  ],
+  "limitations": [
+    "Structural numerals, version identifiers and formulas are metadata, not measurements",
+    "The checker binds generated documents and every quantitative claim to a JSON pointer; it is not semantic peer review"
+  ],
+  "baseline_sources": {
+    "REFERENCE_BASELINES_FOR_TASKS.json": {
+      "path": "development_records/handoff_f_server_20261024/REFERENCE_BASELINES_FOR_TASKS.json",
+      "sha256": "a84e15f5a924380e34e3fd275040b88106daa17124f8e78e807968e91a5575fb"
+    },
+    "REFERENCE_BASELINES_S2.json": {
+      "path": "development_records/handoff_s2_20261025/REFERENCE_BASELINES_S2.json",
+      "sha256": "4ba39f4b7fe93d2aa81f2d2e3101444cc7357170484a2effa38501b944f20a56"
+    }
+  },
+  "revision_scope": "O7 and S1b independent evidence update; launcher candidates local QA only; no new board measurements."
+}

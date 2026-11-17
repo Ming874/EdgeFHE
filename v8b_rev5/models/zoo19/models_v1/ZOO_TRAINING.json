@@ -1,0 +1,2485 @@
+{
+ "status": "ZOO_TRAINING_DONE",
+ "numpy": "2.4.3",
+ "python": "3.12.7",
+ "models": [
+  {
+   "model_id": "finance-credit-default-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "ae165f66317e17d69ff060f1ac3cc76b90e69143dfb0312156d3cf7182f64203",
+   "rows": 30000,
+   "features": 23,
+   "split_counts": {
+    "train": 19500,
+    "validation": 4500,
+    "test": 6000
+   },
+   "selected_lambda": 0.01,
+   "admission": "ok gate/sigma 208.6 headroom 23.6",
+   "test_metrics": {
+    "AUROC": 0.7237403373482231,
+    "accuracy": 0.8083333333333333,
+    "precision": 0.5633546034639927,
+    "recall": 0.4794414274631497,
+    "F1": 0.5180217937971501,
+    "balanced_accuracy": 0.6888822505602736,
+    "confusion": {
+     "TP": 618,
+     "FP": 479,
+     "TN": 4232,
+     "FN": 671
+    },
+    "majority_class_accuracy": 0.7851666666666667
+   },
+   "test_rows_outside_z8": 99,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.7191781463945043,
+     "reason": "ok gate/sigma 173.1 headroom 23.2"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.7195753525937331,
+     "reason": "ok gate/sigma 208.6 headroom 23.6"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.7173274467140268,
+     "reason": "ok gate/sigma 311.5 headroom 24.1"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.7042958026201549,
+     "reason": "ok gate/sigma 790.2 headroom 25.3"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.6962099029715476,
+     "reason": "ok gate/sigma 4228.6 headroom 27.7"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.6951219797975537,
+     "reason": "ok gate/sigma 11731.3 headroom 29.2"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.6946820065591749,
+     "reason": "ok gate/sigma 37972.3 headroom 30.9"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.6945622002645698,
+     "reason": "ok gate/sigma 112941.7 headroom 32.5"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.6945153322764602,
+     "reason": "ok gate/sigma 375332.5 headroom 34.2"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     10000.0,
+     1.0,
+     0.0,
+     0.0,
+     21.0,
+     -2.0,
+     -2.0,
+     -2.0,
+     -2.0,
+     -2.0,
+     -2.0,
+     -165580.0,
+     -69777.0,
+     -157264.0,
+     -170000.0,
+     -53007.0,
+     -339603.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max": [
+     1000000.0,
+     2.0,
+     6.0,
+     3.0,
+     75.0,
+     8.0,
+     7.0,
+     8.0,
+     8.0,
+     7.0,
+     7.0,
+     964511.0,
+     983931.0,
+     855086.0,
+     891586.0,
+     927171.0,
+     961664.0,
+     873552.0,
+     1215471.0,
+     896040.0,
+     621000.0,
+     417990.0,
+     528666.0
+    ],
+    "p25": [
+     50000.0,
+     1.0,
+     1.0,
+     1.0,
+     28.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     3537.0,
+     2958.25,
+     2701.0,
+     2355.0,
+     1776.0,
+     1269.0,
+     977.0,
+     831.5,
+     390.0,
+     291.0,
+     240.75,
+     113.75
+    ],
+    "p75": [
+     240000.0,
+     2.0,
+     2.0,
+     2.0,
+     41.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     67100.5,
+     64207.5,
+     60762.25,
+     54444.5,
+     50186.75,
+     48972.75,
+     5011.25,
+     5000.0,
+     4580.0,
+     4013.0,
+     4055.5,
+     4001.25
+    ]
+   },
+   "spec": {
+    "id": "finance-credit-default-logreg-v1",
+    "task": "classification",
+    "seed": 20261101,
+    "source": {
+     "name": "Default of Credit Card Clients",
+     "uci_id": 350,
+     "data_url": "https://archive.ics.uci.edu/static/public/350/data.csv",
+     "sha256": "45bcf4df62ff2e237a74eb155cabfb4bbbc171219a0637daef44fdad07503dd0",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "note": "coded categorical columns used as published integers; research only"
+    }
+   }
+  },
+  {
+   "model_id": "finance-banknote-auth-logreg-v2",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "3221684c8ed17538b6d36a0650040e9a06741daa0871877f6419a25b707ea6f4",
+   "rows": 1372,
+   "features": 4,
+   "split_counts": {
+    "train": 891,
+    "validation": 206,
+    "test": 275
+   },
+   "selected_lambda": 0.01,
+   "admission": "ok gate/sigma 36.2 headroom 21.8",
+   "test_metrics": {
+    "AUROC": 0.999731182795699,
+    "accuracy": 0.9781818181818182,
+    "precision": 1.0,
+    "recall": 0.95,
+    "F1": 0.9743589743589743,
+    "balanced_accuracy": 0.975,
+    "confusion": {
+     "TP": 114,
+     "FP": 0,
+     "TN": 155,
+     "FN": 6
+    },
+    "majority_class_accuracy": 0.5636363636363637
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.999810606060606,
+     "reason": "native pipeline QA oracle 5e-4 < 6 sigma 6.54e-04"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.9993371212121213,
+     "reason": "ok gate/sigma 36.2 headroom 21.8"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.9902462121212121,
+     "reason": "ok gate/sigma 98.5 headroom 23.4"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.9364583333333333,
+     "reason": "ok gate/sigma 434.4 headroom 25.6"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.9131628787878788,
+     "reason": "ok gate/sigma 3363.5 headroom 28.5"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.9107954545454545,
+     "reason": "ok gate/sigma 9844.5 headroom 30.0"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.9094696969696969,
+     "reason": "ok gate/sigma 32524.7 headroom 31.8"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.9090909090909091,
+     "reason": "ok gate/sigma 97324.4 headroom 33.3"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.9089015151515152,
+     "reason": "ok gate/sigma 324123.1 headroom 35.1"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     -7.0421,
+     -13.6779,
+     -5.2861,
+     -8.5482
+    ],
+    "max": [
+     6.8248,
+     12.7302,
+     17.6052,
+     2.4495
+    ],
+    "p25": [
+     -1.7539500000000001,
+     -1.9637499999999999,
+     -1.4856500000000001,
+     -2.25085
+    ],
+    "p75": [
+     2.8869499999999997,
+     6.68275,
+     3.32855,
+     0.39934000000000003
+    ]
+   },
+   "spec": {
+    "id": "finance-banknote-auth-logreg-v2",
+    "task": "classification",
+    "seed": 20261102,
+    "source": {
+     "name": "Banknote Authentication",
+     "uci_id": 267,
+     "data_url": "https://archive.ics.uci.edu/static/public/267/data.csv",
+     "sha256": "0787e50299c198e919276660edf98dd5dcb94951ad81435b3ab61afb666936c9",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)"
+    }
+   }
+  },
+  {
+   "model_id": "energy-heating-load-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "83866a31050533e29be579b8f2f7a818d6ce2b1fd601749d6047defd981df813",
+   "rows": 768,
+   "features": 8,
+   "split_counts": {
+    "train": 499,
+    "validation": 115,
+    "test": 154
+   },
+   "selected_lambda": 10.0,
+   "admission": "ok gate/sigma 42.0 headroom 23.8",
+   "test_metrics": {
+    "RMSE": 3.0221739772734417,
+    "MAE": 2.1550532811366168,
+    "R2": 0.9041679961580262,
+    "constant_train_mean_RMSE": 9.82323339985787
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.08064305068589538,
+     "reason": "ok gate/sigma 29.7 headroom 23.2"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.08063594804525649,
+     "reason": "ok gate/sigma 29.7 headroom 23.2"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.08056828644529755,
+     "reason": "ok gate/sigma 30.1 headroom 23.2"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.08007636029640193,
+     "reason": "ok gate/sigma 32.8 headroom 23.4"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.0784338151601562,
+     "reason": "ok gate/sigma 42.0 headroom 23.8"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.08105056223262318,
+     "reason": "ok gate/sigma 50.8 headroom 24.0"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.09241562397160685,
+     "reason": "ok gate/sigma 62.0 headroom 24.3"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.12279818003341603,
+     "reason": "ok gate/sigma 75.8 headroom 24.5"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.23396642804643603,
+     "reason": "ok gate/sigma 111.8 headroom 25.0"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     0.62,
+     514.5,
+     245.0,
+     110.25,
+     3.5,
+     2.0,
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.98,
+     808.5,
+     416.5,
+     220.5,
+     7.0,
+     5.0,
+     0.4,
+     5.0
+    ],
+    "p25": [
+     0.69,
+     588.0,
+     294.0,
+     122.5,
+     3.5,
+     2.0,
+     0.1,
+     1.0
+    ],
+    "p75": [
+     0.86,
+     735.0,
+     343.0,
+     220.5,
+     7.0,
+     4.0,
+     0.4,
+     4.0
+    ]
+   },
+   "spec": {
+    "id": "energy-heating-load-ridge-v1",
+    "task": "regression",
+    "seed": 20261103,
+    "source": {
+     "name": "Energy Efficiency",
+     "uci_id": 242,
+     "data_url": "https://archive.ics.uci.edu/static/public/242/data.csv",
+     "sha256": "db44dbe453acd464b5cf65be2fb01a28aa9c5b2630300e65fbe28cde35f5d96f",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "Y1 heating load"
+    }
+   }
+  },
+  {
+   "model_id": "energy-power-plant-output-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "a346e1a30ba5405ce6eb6a86b2e59ea60d927dd25451664a2d4c4d9311d793ee",
+   "rows": 9568,
+   "features": 4,
+   "split_counts": {
+    "train": 6219,
+    "validation": 1435,
+    "test": 1914
+   },
+   "selected_lambda": 1.0,
+   "admission": "ok gate/sigma 39.8 headroom 24.3",
+   "test_metrics": {
+    "RMSE": 4.534992082043265,
+    "MAE": 3.634784681830814,
+    "R2": 0.9288426859891432,
+    "constant_train_mean_RMSE": 17.01081900142549
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.0679424387796402,
+     "reason": "ok gate/sigma 39.7 headroom 24.3"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.06794243056585622,
+     "reason": "ok gate/sigma 39.7 headroom 24.3"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.06794234930286663,
+     "reason": "ok gate/sigma 39.7 headroom 24.3"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.0679416239053725,
+     "reason": "ok gate/sigma 39.8 headroom 24.3"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.06794284632802698,
+     "reason": "ok gate/sigma 40.0 headroom 24.4"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.0679962476597887,
+     "reason": "ok gate/sigma 40.6 headroom 24.4"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.0686034118721041,
+     "reason": "ok gate/sigma 42.5 headroom 24.4"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.07208841000619383,
+     "reason": "ok gate/sigma 46.8 headroom 24.5"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.08674179606890593,
+     "reason": "ok gate/sigma 55.3 headroom 24.6"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     1.81,
+     25.36,
+     992.89,
+     25.56
+    ],
+    "max": [
+     35.56,
+     80.18,
+     1033.3,
+     100.16
+    ],
+    "p25": [
+     13.565000000000001,
+     41.79,
+     1009.055,
+     63.23
+    ],
+    "p75": [
+     25.89,
+     66.56,
+     1017.28,
+     84.945
+    ]
+   },
+   "spec": {
+    "id": "energy-power-plant-output-ridge-v1",
+    "task": "regression",
+    "seed": 20261104,
+    "source": {
+     "name": "Combined Cycle Power Plant",
+     "uci_id": 294,
+     "data_url": "https://archive.ics.uci.edu/static/public/294/data.csv",
+     "sha256": "3c1fc11025f8424f8d95802d8b7086dffd3f73a552c6dcab3d973620986194b2",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "PE net electrical output MW"
+    }
+   }
+  },
+  {
+   "model_id": "energy-grid-instability-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "87ef1bc2a64e238bc46f6673ce80c0f98556ad14c6f28bdf8a77a013fdbf0ab5",
+   "rows": 10000,
+   "features": 12,
+   "split_counts": {
+    "train": 6500,
+    "validation": 1500,
+    "test": 2000
+   },
+   "selected_lambda": 10.0,
+   "admission": "ok gate/sigma 4366.4 headroom 28.0",
+   "test_metrics": {
+    "AUROC": 0.8962808401106274,
+    "accuracy": 0.7985,
+    "precision": 0.8825042881646655,
+    "recall": 0.7945945945945946,
+    "F1": 0.8362454286875254,
+    "balanced_accuracy": 0.8001341767299215,
+    "confusion": {
+     "TP": 1029,
+     "FP": 137,
+     "TN": 568,
+     "FN": 266
+    },
+    "majority_class_accuracy": 0.6475
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.8766466902379425,
+     "reason": "ok gate/sigma 61.2 headroom 21.9"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.8766817936271747,
+     "reason": "ok gate/sigma 71.3 headroom 22.1"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.8769002147157308,
+     "reason": "ok gate/sigma 132.1 headroom 23.0"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.8771888425827513,
+     "reason": "ok gate/sigma 534.5 headroom 25.0"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.8772473482314718,
+     "reason": "ok gate/sigma 4366.4 headroom 28.0"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.877227846348565,
+     "reason": "ok gate/sigma 12877.4 headroom 29.6"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.8772161452188209,
+     "reason": "ok gate/sigma 42666.1 headroom 31.3"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.8772102946539488,
+     "reason": "ok gate/sigma 127776.4 headroom 32.9"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.8772102946539488,
+     "reason": "ok gate/sigma 425662.3 headroom 34.6"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     0.501330760795786,
+     0.500141360493773,
+     0.500788152733829,
+     0.500472961226082,
+     1.64285964046143,
+     -1.99989095591106,
+     -1.99994466917731,
+     -1.99992633173043,
+     0.0500093036111293,
+     0.0501297829456604,
+     0.0501038881702232,
+     0.0500284939589759
+    ],
+    "max": [
+     9.99773812652497,
+     9.99790713117815,
+     9.99945000849598,
+     9.99944329731088,
+     5.82728450075086,
+     -0.500108275885764,
+     -0.50007225154374,
+     -0.500024528740323,
+     0.999937073063054,
+     0.999893486301863,
+     0.999981832400081,
+     0.999930047985306
+    ],
+    "p25": [
+     2.8533669281582177,
+     2.85624147911127,
+     2.82800318729492,
+     2.801233578312985,
+     3.22237173363281,
+     -1.6298796221591099,
+     -1.62077242163949,
+     -1.6273609289266824,
+     0.28673484454075704,
+     0.28532436212982776,
+     0.28105643818374704,
+     0.28980350999054305
+    ],
+    "p75": [
+     7.548200458311922,
+     7.6064174831218,
+     7.644142033746588,
+     7.582958697183253,
+     4.282946897364843,
+     -0.8733095169854608,
+     -0.8740397486466536,
+     -0.8788742129079705,
+     0.7633287209095154,
+     0.7625290940823113,
+     0.7547559937426782,
+     0.762966435500664
+    ]
+   },
+   "spec": {
+    "id": "energy-grid-instability-logreg-v1",
+    "task": "classification",
+    "seed": 20261105,
+    "source": {
+     "name": "Electrical Grid Stability Simulated Data ",
+     "uci_id": 471,
+     "data_url": "https://archive.ics.uci.edu/static/public/471/data.csv",
+     "sha256": "ec7af733b64aa82d1254a1e97b0df2279319a94321112c7c519a551fb267ea6b",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "stabf==unstable; continuous stab excluded (twin target)"
+    }
+   }
+  },
+  {
+   "model_id": "medical-heart-failure-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "8a13195ac372d73f8b9fc7dcb239ed77b7a5973359e3e9dcabe7bc0be76bc14e",
+   "rows": 299,
+   "features": 11,
+   "split_counts": {
+    "train": 194,
+    "validation": 45,
+    "test": 60
+   },
+   "selected_lambda": 0.1,
+   "admission": "ok gate/sigma 178.2 headroom 23.5",
+   "test_metrics": {
+    "AUROC": 0.7631578947368421,
+    "accuracy": 0.7166666666666667,
+    "precision": 0.6923076923076923,
+    "recall": 0.4090909090909091,
+    "F1": 0.5142857142857142,
+    "balanced_accuracy": 0.6519138755980861,
+    "confusion": {
+     "TP": 9,
+     "FP": 4,
+     "TN": 34,
+     "FN": 13
+    },
+    "majority_class_accuracy": 0.6333333333333333
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.7672811059907834,
+     "reason": "ok gate/sigma 106.4 headroom 22.7"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.7741935483870968,
+     "reason": "ok gate/sigma 114.8 headroom 22.9"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.7788018433179723,
+     "reason": "ok gate/sigma 178.2 headroom 23.5"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.771889400921659,
+     "reason": "ok gate/sigma 630.4 headroom 25.3"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.7580645161290323,
+     "reason": "ok gate/sigma 4873.8 headroom 28.3"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.7580645161290323,
+     "reason": "ok gate/sigma 14289.5 headroom 29.8"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.7580645161290323,
+     "reason": "ok gate/sigma 47243.3 headroom 31.5"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.7580645161290323,
+     "reason": "ok gate/sigma 141396.4 headroom 33.1"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.7580645161290323,
+     "reason": "ok gate/sigma 470932.4 headroom 34.8"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     40.0,
+     0.0,
+     23.0,
+     0.0,
+     14.0,
+     0.0,
+     25100.0,
+     0.5,
+     113.0,
+     0.0,
+     0.0
+    ],
+    "max": [
+     95.0,
+     1.0,
+     7861.0,
+     1.0,
+     80.0,
+     1.0,
+     850000.0,
+     6.1,
+     148.0,
+     1.0,
+     1.0
+    ],
+    "p25": [
+     52.25,
+     0.0,
+     113.5,
+     0.0,
+     30.0,
+     0.0,
+     208500.0,
+     0.9,
+     134.0,
+     0.0,
+     0.0
+    ],
+    "p75": [
+     70.0,
+     1.0,
+     582.0,
+     1.0,
+     45.0,
+     1.0,
+     307250.0,
+     1.4,
+     140.0,
+     1.0,
+     1.0
+    ]
+   },
+   "spec": {
+    "id": "medical-heart-failure-logreg-v1",
+    "task": "classification",
+    "seed": 20261106,
+    "source": {
+     "name": "Heart Failure Clinical Records",
+     "uci_id": 519,
+     "data_url": "https://archive.ics.uci.edu/static/public/519/data.csv",
+     "sha256": "54349729933cffdde5c92068572a89761bb53df50cc28250b0915fd18066976c",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "excluded": "time (follow-up period, outcome leakage)"
+    }
+   }
+  },
+  {
+   "model_id": "medical-parkinsons-updrs-ridge-v1",
+   "status": "ADMISSIBLE_BUT_NOT_USEFUL_EXCLUDED",
+   "useful": false,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "aa936642cab8256edc457f00e0c6a72e71f0f181c189d2cbee066a5be20b5a18",
+   "rows": 5875,
+   "features": 18,
+   "split_counts": {
+    "train": 3777,
+    "validation": 797,
+    "test": 1301
+   },
+   "selected_lambda": 1000.0,
+   "admission": "ok gate/sigma 79.2 headroom 24.2",
+   "test_metrics": {
+    "RMSE": 12.549031027295849,
+    "MAE": 11.51291238311447,
+    "R2": -0.028450029263147103,
+    "constant_train_mean_RMSE": 12.401463884204155
+   },
+   "test_rows_outside_z8": 6,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -2.564672666046885,
+     "reason": "noise gate/sigma 3.9"
+    },
+    {
+     "lam": 0.01,
+     "score": -2.5644130044696825,
+     "reason": "ok gate/sigma 22.3 headroom 22.2"
+    },
+    {
+     "lam": 0.1,
+     "score": -2.564169081493464,
+     "reason": "ok gate/sigma 28.5 headroom 22.5"
+    },
+    {
+     "lam": 1.0,
+     "score": -2.5620809849319945,
+     "reason": "ok gate/sigma 29.3 headroom 22.6"
+    },
+    {
+     "lam": 10.0,
+     "score": -2.5441462681394276,
+     "reason": "ok gate/sigma 34.6 headroom 22.8"
+    },
+    {
+     "lam": 30.0,
+     "score": -2.514721126660792,
+     "reason": "ok gate/sigma 41.7 headroom 23.0"
+    },
+    {
+     "lam": 100.0,
+     "score": -2.45404777539783,
+     "reason": "ok gate/sigma 51.8 headroom 23.4"
+    },
+    {
+     "lam": 300.0,
+     "score": -2.3643498279278723,
+     "reason": "ok gate/sigma 61.3 headroom 23.7"
+    },
+    {
+     "lam": 1000.0,
+     "score": -2.2435413262904658,
+     "reason": "ok gate/sigma 79.2 headroom 24.2"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     49.0,
+     0.0,
+     0.00083,
+     2.25e-06,
+     0.00033,
+     0.00043,
+     0.00098,
+     0.00306,
+     0.026,
+     0.00161,
+     0.00194,
+     0.00249,
+     0.00484,
+     0.000286,
+     2.206,
+     0.15102,
+     0.51404,
+     0.021983
+    ],
+    "max": [
+     78.0,
+     1.0,
+     0.09999,
+     0.00037926,
+     0.05754,
+     0.06956,
+     0.17263,
+     0.23915,
+     1.97,
+     0.16267,
+     0.16246,
+     0.27546,
+     0.48802,
+     0.72537,
+     37.875,
+     0.86563,
+     0.8656,
+     0.73173
+    ],
+    "p25": [
+     59.0,
+     0.0,
+     0.00345,
+     2.05e-05,
+     0.00153,
+     0.00174,
+     0.00459,
+     0.01785,
+     0.165,
+     0.00855,
+     0.01005,
+     0.01459,
+     0.02564,
+     0.010512,
+     19.467,
+     0.46493,
+     0.59345,
+     0.15182
+    ],
+    "p75": [
+     73.0,
+     1.0,
+     0.00675,
+     5.32e-05,
+     0.00323,
+     0.00341,
+     0.00969,
+     0.03875,
+     0.355,
+     0.01984,
+     0.02298,
+     0.03208,
+     0.05951,
+     0.030945,
+     24.737,
+     0.61011,
+     0.71848,
+     0.26311
+    ]
+   },
+   "spec": {
+    "id": "medical-parkinsons-updrs-ridge-v1",
+    "task": "regression",
+    "seed": 20261107,
+    "source": {
+     "name": "Parkinsons Telemonitoring",
+     "uci_id": 189,
+     "data_url": "https://archive.ics.uci.edu/static/public/189/data.csv",
+     "sha256": "689fd221159cd78b07a50087992c9d9472a4eb26527cdc8e896a708a2013ebcf",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "total_UPDRS",
+     "excluded": "subject#, test_time, motor_UPDRS",
+     "split": "subject-grouped"
+    }
+   }
+  },
+  {
+   "model_id": "medical-maternal-high-risk-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "a2ae147dd1fc1e7bd5047c03ed01bc79ae97f07e90b46a0a250eac0699765104",
+   "rows": 1014,
+   "features": 6,
+   "split_counts": {
+    "train": 659,
+    "validation": 152,
+    "test": 203
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 66.6 headroom 22.5",
+   "test_metrics": {
+    "AUROC": 0.9215986394557824,
+    "accuracy": 0.8571428571428571,
+    "precision": 0.7297297297297297,
+    "recall": 0.8571428571428571,
+    "F1": 0.7883211678832117,
+    "balanced_accuracy": 0.8571428571428571,
+    "confusion": {
+     "TP": 54,
+     "FP": 20,
+     "TN": 120,
+     "FN": 9
+    },
+    "majority_class_accuracy": 0.6896551724137931
+   },
+   "test_rows_outside_z8": 1,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.9172709294660514,
+     "reason": "ok gate/sigma 66.6 headroom 22.5"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.9161722698308065,
+     "reason": "ok gate/sigma 77.3 headroom 22.7"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.9146341463414634,
+     "reason": "ok gate/sigma 136.1 headroom 23.4"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.8970555921775434,
+     "reason": "ok gate/sigma 455.9 headroom 25.1"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.8783783783783784,
+     "reason": "ok gate/sigma 3090.5 headroom 27.9"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.8761810591078883,
+     "reason": "ok gate/sigma 8892.9 headroom 29.4"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.8755218633267414,
+     "reason": "ok gate/sigma 29195.5 headroom 31.1"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.8755218633267414,
+     "reason": "ok gate/sigma 87201.2 headroom 32.7"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.8753021313996924,
+     "reason": "ok gate/sigma 290220.8 headroom 34.4"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     10.0,
+     70.0,
+     49.0,
+     6.0,
+     98.0,
+     7.0
+    ],
+    "max": [
+     70.0,
+     160.0,
+     100.0,
+     19.0,
+     103.0,
+     90.0
+    ],
+    "p25": [
+     19.0,
+     100.0,
+     65.0,
+     6.9,
+     98.0,
+     70.0
+    ],
+    "p75": [
+     36.0,
+     120.0,
+     90.0,
+     8.0,
+     98.0,
+     80.0
+    ]
+   },
+   "spec": {
+    "id": "medical-maternal-high-risk-logreg-v1",
+    "task": "classification",
+    "seed": 20261108,
+    "source": {
+     "name": "Maternal Health Risk",
+     "uci_id": 863,
+     "data_url": "https://archive.ics.uci.edu/static/public/863/data.csv",
+     "sha256": "a1f7025719f84715096e0d1f95ae2e56b57809b9b15449e1836c96a7d976ae9b",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "RiskLevel==high risk"
+    }
+   }
+  },
+  {
+   "model_id": "medical-breast-cancer-malignant-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "c648bf6504e85bd748f824ad4c7bd1790b725c71c1de9be4e3855d2c3e9661bf",
+   "rows": 569,
+   "features": 30,
+   "split_counts": {
+    "train": 369,
+    "validation": 86,
+    "test": 114
+   },
+   "selected_lambda": 0.1,
+   "admission": "ok gate/sigma 128.0 headroom 22.2",
+   "test_metrics": {
+    "AUROC": 0.9977071732721913,
+    "accuracy": 0.9824561403508771,
+    "precision": 0.9767441860465116,
+    "recall": 0.9767441860465116,
+    "F1": 0.9767441860465116,
+    "balanced_accuracy": 0.981329839502129,
+    "confusion": {
+     "TP": 42,
+     "FP": 1,
+     "TN": 70,
+     "FN": 1
+    },
+    "majority_class_accuracy": 0.6228070175438596
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.9818548387096774,
+     "reason": "ok gate/sigma 27.7 headroom 20.0"
+    },
+    {
+     "lam": 0.01,
+     "score": 1.0,
+     "reason": "ok gate/sigma 60.6 headroom 21.1"
+    },
+    {
+     "lam": 0.1,
+     "score": 1.0,
+     "reason": "ok gate/sigma 128.0 headroom 22.2"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.9986559139784946,
+     "reason": "ok gate/sigma 319.5 headroom 23.5"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.9959677419354839,
+     "reason": "ok gate/sigma 1278.8 headroom 25.5"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.9932795698924731,
+     "reason": "ok gate/sigma 3206.4 headroom 26.8"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.9926075268817204,
+     "reason": "ok gate/sigma 9911.9 headroom 28.4"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.9926075268817204,
+     "reason": "ok gate/sigma 29062.9 headroom 30.0"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.9926075268817204,
+     "reason": "ok gate/sigma 96089.9 headroom 31.7"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     7.729,
+     9.71,
+     47.98,
+     178.8,
+     0.06251,
+     0.01938,
+     0.0,
+     0.0,
+     0.1167,
+     0.04996,
+     0.1115,
+     0.3621,
+     0.757,
+     6.802,
+     0.002826,
+     0.002252,
+     0.0,
+     0.0,
+     0.009539,
+     0.0009683,
+     8.952,
+     12.02,
+     56.65,
+     240.1,
+     0.08125,
+     0.03432,
+     0.0,
+     0.0,
+     0.1603,
+     0.05521
+    ],
+    "max": [
+     28.11,
+     33.81,
+     188.5,
+     2499.0,
+     0.1634,
+     0.3454,
+     0.4264,
+     0.1913,
+     0.304,
+     0.09575,
+     2.873,
+     3.647,
+     21.98,
+     525.6,
+     0.03113,
+     0.1064,
+     0.396,
+     0.05279,
+     0.07895,
+     0.02984,
+     33.13,
+     47.16,
+     229.3,
+     3432.0,
+     0.2226,
+     0.9379,
+     1.252,
+     0.291,
+     0.5558,
+     0.1486
+    ],
+    "p25": [
+     11.69,
+     16.67,
+     75.0,
+     419.8,
+     0.08673,
+     0.06545,
+     0.03102,
+     0.02068,
+     0.162,
+     0.05865,
+     0.2387,
+     0.8309,
+     1.67,
+     18.49,
+     0.005169,
+     0.01388,
+     0.01596,
+     0.008043,
+     0.01522,
+     0.002355,
+     13.05,
+     21.58,
+     84.35,
+     515.3,
+     0.1184,
+     0.1486,
+     0.1201,
+     0.06499,
+     0.2522,
+     0.07185
+    ],
+    "p75": [
+     15.85,
+     21.82,
+     104.3,
+     782.7,
+     0.1059,
+     0.131,
+     0.1324,
+     0.07488,
+     0.1967,
+     0.06623,
+     0.4953,
+     1.493,
+     3.301,
+     44.96,
+     0.008439,
+     0.03318,
+     0.04266,
+     0.01494,
+     0.02337,
+     0.00457,
+     18.79,
+     30.15,
+     125.1,
+     1088.0,
+     0.1467,
+     0.3458,
+     0.3853,
+     0.1663,
+     0.321,
+     0.0927
+    ]
+   },
+   "spec": {
+    "id": "medical-breast-cancer-malignant-logreg-v1",
+    "task": "classification",
+    "seed": 20261109,
+    "source": {
+     "name": "Breast Cancer Wisconsin (Diagnostic), scikit-learn 1.7.1 bundled copy",
+     "uci_id": 17,
+     "sha256": "ff5fc1f247213db5fd49539610bcd5a98033bbd0307524fde3127251752aa073",
+     "license": "CC BY 4.0 (UCI 17)",
+     "target": "malignant"
+    }
+   }
+  },
+  {
+   "model_id": "construction-concrete-strength-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "d668de33016be836d42bff1f422d833df324240d2653ebddc0d949f18fc5438c",
+   "rows": 1030,
+   "features": 8,
+   "split_counts": {
+    "train": 669,
+    "validation": 155,
+    "test": 206
+   },
+   "selected_lambda": 30.0,
+   "admission": "ok gate/sigma 41.4 headroom 23.6",
+   "test_metrics": {
+    "RMSE": 10.424116567243203,
+    "MAE": 8.358462981466342,
+    "R2": 0.5602149824728724,
+    "constant_train_mean_RMSE": 15.720840317903312
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.3941837086989155,
+     "reason": "ok gate/sigma 30.2 headroom 23.2"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.39417699200632916,
+     "reason": "ok gate/sigma 30.2 headroom 23.2"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.39411038580262087,
+     "reason": "ok gate/sigma 30.3 headroom 23.2"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.3934963398200807,
+     "reason": "ok gate/sigma 30.9 headroom 23.2"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.39020954640023786,
+     "reason": "ok gate/sigma 35.7 headroom 23.4"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.3880257628598349,
+     "reason": "ok gate/sigma 41.4 headroom 23.6"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.38979121996258226,
+     "reason": "ok gate/sigma 50.6 headroom 23.8"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.4177950680015187,
+     "reason": "ok gate/sigma 66.8 headroom 24.2"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.5290032513684962,
+     "reason": "ok gate/sigma 114.4 headroom 25.0"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     102.0,
+     0.0,
+     0.0,
+     121.8,
+     0.0,
+     801.0,
+     594.0,
+     1.0
+    ],
+    "max": [
+     540.0,
+     359.4,
+     200.1,
+     228.0,
+     32.2,
+     1145.0,
+     992.6,
+     365.0
+    ],
+    "p25": [
+     192.0,
+     0.0,
+     0.0,
+     164.9,
+     0.0,
+     932.0,
+     734.3,
+     7.0
+    ],
+    "p75": [
+     350.0,
+     144.2,
+     118.6,
+     192.0,
+     10.4,
+     1029.4,
+     825.5,
+     56.0
+    ]
+   },
+   "spec": {
+    "id": "construction-concrete-strength-ridge-v1",
+    "task": "regression",
+    "seed": 20261110,
+    "source": {
+     "name": "Concrete Compressive Strength",
+     "uci_id": 165,
+     "data_url": "https://archive.ics.uci.edu/static/public/165/data.csv",
+     "sha256": "8d4b15b6fc68cd932d745cbd663d5ceae66dd54422e99c1e4865f2936ab7e2af",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "compressive strength MPa"
+    }
+   }
+  },
+  {
+   "model_id": "realestate-unit-price-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "c71207a80a059613ab5c7da0eca9e3d28cf88a9f295a3998e511e7688140fb65",
+   "rows": 414,
+   "features": 6,
+   "split_counts": {
+    "train": 269,
+    "validation": 62,
+    "test": 83
+   },
+   "selected_lambda": 100.0,
+   "admission": "ok gate/sigma 84.2 headroom 24.6",
+   "test_metrics": {
+    "RMSE": 6.629976703378619,
+    "MAE": 5.356362480306732,
+    "R2": 0.6843058742980266,
+    "constant_train_mean_RMSE": 11.816044512597065
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.2160104273069562,
+     "reason": "ok gate/sigma 63.0 headroom 24.3"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.2160074184192414,
+     "reason": "ok gate/sigma 63.0 headroom 24.3"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.2159773830347625,
+     "reason": "ok gate/sigma 63.0 headroom 24.3"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.21568219603380492,
+     "reason": "ok gate/sigma 63.4 headroom 24.4"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.21312122057384053,
+     "reason": "ok gate/sigma 66.6 headroom 24.4"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.2089729195855368,
+     "reason": "ok gate/sigma 71.8 headroom 24.5"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.20414524594057243,
+     "reason": "ok gate/sigma 84.2 headroom 24.6"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.22567535096392868,
+     "reason": "ok gate/sigma 111.5 headroom 25.0"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.3370432972098888,
+     "reason": "ok gate/sigma 196.2 headroom 25.9"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     2012.667,
+     0.0,
+     49.66105,
+     0.0,
+     24.93293,
+     121.47353
+    ],
+    "max": [
+     2013.583,
+     42.7,
+     6488.021,
+     10.0,
+     25.00115,
+     121.56627
+    ],
+    "p25": [
+     2012.917,
+     10.3,
+     289.3248,
+     1.0,
+     24.96305,
+     121.52954
+    ],
+    "p75": [
+     2013.417,
+     28.2,
+     1455.798,
+     6.0,
+     24.97927,
+     121.54348
+    ]
+   },
+   "spec": {
+    "id": "realestate-unit-price-ridge-v1",
+    "task": "regression",
+    "seed": 20261111,
+    "source": {
+     "name": "Real Estate Valuation",
+     "uci_id": 477,
+     "data_url": "https://archive.ics.uci.edu/static/public/477/data.csv",
+     "sha256": "0730a5687ec285a3c2f9921a808855bd1bde21fc53e6377561cbdce2dda9cbb1",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "price per ping (10k TWD)"
+    }
+   }
+  },
+  {
+   "model_id": "food-wine-good-quality-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "d7215af55ab00c4c7ca664f01fb4a0cb3995724571789757c78fe2a5c2f10f72",
+   "rows": 6497,
+   "features": 12,
+   "split_counts": {
+    "train": 4223,
+    "validation": 974,
+    "test": 1300
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 75.2 headroom 22.1",
+   "test_metrics": {
+    "AUROC": 0.8118822349831374,
+    "accuracy": 0.7753846153846153,
+    "precision": 0.4636118598382749,
+    "recall": 0.6490566037735849,
+    "F1": 0.5408805031446541,
+    "balanced_accuracy": 0.7283930361863094,
+    "confusion": {
+     "TP": 172,
+     "FP": 199,
+     "TN": 836,
+     "FN": 93
+    },
+    "majority_class_accuracy": 0.7961538461538462
+   },
+   "test_rows_outside_z8": 8,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.7998193315266486,
+     "reason": "ok gate/sigma 75.2 headroom 22.1"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.7986901535682024,
+     "reason": "ok gate/sigma 101.1 headroom 22.6"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.787330623306233,
+     "reason": "ok gate/sigma 184.4 headroom 23.6"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.7660343270099368,
+     "reason": "ok gate/sigma 622.5 headroom 25.5"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.7567449563384523,
+     "reason": "ok gate/sigma 4368.0 headroom 28.2"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.7559996988858777,
+     "reason": "ok gate/sigma 12644.2 headroom 29.8"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.7556082505269497,
+     "reason": "ok gate/sigma 41605.0 headroom 31.5"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.7555103884372177,
+     "reason": "ok gate/sigma 124348.3 headroom 33.1"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.7554878048780488,
+     "reason": "ok gate/sigma 413950.1 headroom 34.8"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     3.8,
+     0.08,
+     0.0,
+     0.6,
+     0.012,
+     1.0,
+     6.0,
+     0.98742,
+     2.72,
+     0.23,
+     8.0,
+     0.0
+    ],
+    "max": [
+     15.5,
+     1.33,
+     1.66,
+     31.6,
+     0.611,
+     289.0,
+     440.0,
+     1.0103,
+     4.01,
+     2.0,
+     14.2,
+     1.0
+    ],
+    "p25": [
+     6.4,
+     0.23,
+     0.24,
+     1.8,
+     0.038,
+     17.0,
+     77.0,
+     0.9924,
+     3.11,
+     0.43,
+     9.5,
+     0.0
+    ],
+    "p75": [
+     7.7,
+     0.4,
+     0.39,
+     8.1,
+     0.0655,
+     41.0,
+     156.0,
+     0.997,
+     3.32,
+     0.6,
+     11.3,
+     0.0
+    ]
+   },
+   "spec": {
+    "id": "food-wine-good-quality-logreg-v1",
+    "task": "classification",
+    "seed": 20261112,
+    "source": {
+     "name": "Wine Quality",
+     "uci_id": 186,
+     "data_url": "https://archive.ics.uci.edu/static/public/186/data.csv",
+     "sha256": "428bd8df7313b159988405ae5e3be6d363993d73f7ffc2adedfdc1d496508191",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "quality>=7"
+    }
+   }
+  },
+  {
+   "model_id": "agriculture-rice-cammeo-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "b4c9c6e90a2e6a60e2f24ea0b0198fa7c281965b490d07052e3a2b2538f7f22b",
+   "rows": 3810,
+   "features": 7,
+   "split_counts": {
+    "train": 2476,
+    "validation": 572,
+    "test": 762
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 58.2 headroom 22.1",
+   "test_metrics": {
+    "AUROC": 0.9764961386513499,
+    "accuracy": 0.9343832020997376,
+    "precision": 0.9273927392739274,
+    "recall": 0.9093851132686084,
+    "F1": 0.9183006535947712,
+    "balanced_accuracy": 0.9304099959279024,
+    "confusion": {
+     "TP": 281,
+     "FP": 22,
+     "TN": 431,
+     "FN": 28
+    },
+    "majority_class_accuracy": 0.594488188976378
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.9799447791164658,
+     "reason": "ok gate/sigma 58.2 headroom 22.1"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.9798443775100402,
+     "reason": "ok gate/sigma 71.3 headroom 22.4"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.9787525100401606,
+     "reason": "ok gate/sigma 121.6 headroom 23.1"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.9761295180722892,
+     "reason": "ok gate/sigma 327.1 headroom 24.5"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.9738453815261044,
+     "reason": "ok gate/sigma 1831.4 headroom 27.0"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.9735441767068274,
+     "reason": "ok gate/sigma 5123.1 headroom 28.5"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.9734186746987952,
+     "reason": "ok gate/sigma 16640.6 headroom 30.2"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.973406124497992,
+     "reason": "ok gate/sigma 49547.0 headroom 31.7"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.9733810240963855,
+     "reason": "ok gate/sigma 164719.5 headroom 33.5"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     7551.0,
+     359.1000061,
+     145.2644653,
+     59.53240585,
+     0.799511433,
+     7723.0,
+     0.49741286
+    ],
+    "max": [
+     18913.0,
+     548.4459839,
+     232.4802094,
+     107.54245,
+     0.948006928,
+     19099.0,
+     0.839661241
+    ],
+    "p25": [
+     11414.5,
+     426.64625552499996,
+     174.5748367,
+     82.79850196749999,
+     0.87250000225,
+     11659.25,
+     0.59801693275
+    ],
+    "p75": [
+     13982.0,
+     484.162506125,
+     203.86730957499998,
+     90.17543602,
+     0.90281616125,
+     14310.5,
+     0.72676838925
+    ]
+   },
+   "spec": {
+    "id": "agriculture-rice-cammeo-logreg-v1",
+    "task": "classification",
+    "seed": 20261113,
+    "source": {
+     "name": "Rice (Cammeo and Osmancik)",
+     "uci_id": 545,
+     "data_url": "https://archive.ics.uci.edu/static/public/545/data.csv",
+     "sha256": "a0d9b19693f0bde9a59a6a6e886df0456008fab1c3a406178a76e7c4440e95b3",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "Class==Cammeo"
+    }
+   }
+  },
+  {
+   "model_id": "fishery-abalone-rings-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "08662e3a2c772f656e1de071c4c8986c7c1d71cb914b09ac25abc8688bb57c84",
+   "rows": 4177,
+   "features": 9,
+   "split_counts": {
+    "train": 2715,
+    "validation": 626,
+    "test": 836
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 18.0 headroom 22.5",
+   "test_metrics": {
+    "RMSE": 2.1391965028412585,
+    "MAE": 1.576500535133067,
+    "R2": 0.5659674184653256,
+    "constant_train_mean_RMSE": 3.2471372854817924
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.46782249060148223,
+     "reason": "ok gate/sigma 18.0 headroom 22.5"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.46782748096678495,
+     "reason": "ok gate/sigma 18.0 headroom 22.5"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.4678774310277137,
+     "reason": "ok gate/sigma 18.1 headroom 22.5"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.4683799364188908,
+     "reason": "ok gate/sigma 18.6 headroom 22.6"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.47298013488943563,
+     "reason": "ok gate/sigma 22.7 headroom 22.8"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.4795669103969987,
+     "reason": "ok gate/sigma 27.9 headroom 23.1"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.49244771761035216,
+     "reason": "ok gate/sigma 36.4 headroom 23.5"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.5223629731135611,
+     "reason": "ok gate/sigma 52.6 headroom 23.9"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.5812735647544064,
+     "reason": "ok gate/sigma 93.6 headroom 24.6"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     0.0,
+     0.0,
+     0.075,
+     0.055,
+     0.0,
+     0.002,
+     0.001,
+     0.0005,
+     0.0015
+    ],
+    "max": [
+     1.0,
+     1.0,
+     0.815,
+     0.65,
+     1.13,
+     2.7795,
+     1.488,
+     0.76,
+     0.885
+    ],
+    "p25": [
+     0.0,
+     0.0,
+     0.455,
+     0.35,
+     0.115,
+     0.453,
+     0.195,
+     0.096,
+     0.13375
+    ],
+    "p75": [
+     1.0,
+     1.0,
+     0.615,
+     0.48,
+     0.165,
+     1.15475,
+     0.5055,
+     0.2555,
+     0.33
+    ]
+   },
+   "spec": {
+    "id": "fishery-abalone-rings-ridge-v1",
+    "task": "regression",
+    "seed": 20261114,
+    "source": {
+     "name": "Abalone",
+     "uci_id": 1,
+     "data_url": "https://archive.ics.uci.edu/static/public/1/data.csv",
+     "sha256": "25f3dc964447fcb3d68cf1048c04ed69d1474771c4fb34318e10778800a4342f",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "rings (age-1.5)"
+    }
+   }
+  },
+  {
+   "model_id": "transport-auto-mpg-ridge-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "c11630e11e4fa8de8f1bd08a8e1b3a4d6d6da24d79052398e62ab53a54c76076",
+   "rows": 392,
+   "features": 8,
+   "split_counts": {
+    "train": 254,
+    "validation": 59,
+    "test": 79
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 40.7 headroom 23.7",
+   "test_metrics": {
+    "RMSE": 3.4445278037449,
+    "MAE": 2.5717735205931804,
+    "R2": 0.84959078114722,
+    "constant_train_mean_RMSE": 8.990876411276965
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": -0.16249426150567017,
+     "reason": "ok gate/sigma 40.7 headroom 23.7"
+    },
+    {
+     "lam": 0.01,
+     "score": -0.1625028136617302,
+     "reason": "ok gate/sigma 40.7 headroom 23.7"
+    },
+    {
+     "lam": 0.1,
+     "score": -0.16258855673476966,
+     "reason": "ok gate/sigma 40.9 headroom 23.7"
+    },
+    {
+     "lam": 1.0,
+     "score": -0.1634562917436713,
+     "reason": "ok gate/sigma 42.8 headroom 23.8"
+    },
+    {
+     "lam": 10.0,
+     "score": -0.17050979697681942,
+     "reason": "ok gate/sigma 55.3 headroom 24.2"
+    },
+    {
+     "lam": 30.0,
+     "score": -0.17918214347072192,
+     "reason": "ok gate/sigma 68.0 headroom 24.4"
+    },
+    {
+     "lam": 100.0,
+     "score": -0.19536990102216867,
+     "reason": "ok gate/sigma 83.9 headroom 24.5"
+    },
+    {
+     "lam": 300.0,
+     "score": -0.23317959708134708,
+     "reason": "ok gate/sigma 106.0 headroom 24.8"
+    },
+    {
+     "lam": 1000.0,
+     "score": -0.36318039122906576,
+     "reason": "ok gate/sigma 164.1 headroom 25.4"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     3.0,
+     70.0,
+     46.0,
+     1613.0,
+     8.0,
+     70.0,
+     0.0,
+     0.0
+    ],
+    "max": [
+     8.0,
+     455.0,
+     230.0,
+     4997.0,
+     24.6,
+     82.0,
+     1.0,
+     1.0
+    ],
+    "p25": [
+     4.0,
+     105.0,
+     76.0,
+     2229.5,
+     14.0,
+     73.0,
+     0.0,
+     0.0
+    ],
+    "p75": [
+     7.5,
+     259.5,
+     118.75,
+     3556.0,
+     17.5,
+     79.0,
+     0.0,
+     0.0
+    ]
+   },
+   "spec": {
+    "id": "transport-auto-mpg-ridge-v1",
+    "task": "regression",
+    "seed": 20261115,
+    "source": {
+     "name": "Auto MPG",
+     "uci_id": 9,
+     "data_url": "https://archive.ics.uci.edu/static/public/9/data.csv",
+     "sha256": "240f4657d747fe105f3c992251daba65f926ef54c4dec3cde34e398e8cf5da9c",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "mpg",
+     "excluded": "car_name; rows with missing horsepower"
+    }
+   }
+  },
+  {
+   "model_id": "security-phishing-site-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "79dece4bfaaad2033f621643cc978dfb6448cd4a4fee0bc99974ec2fd38b9794",
+   "rows": 11055,
+   "features": 30,
+   "split_counts": {
+    "train": 7185,
+    "validation": 1659,
+    "test": 2211
+   },
+   "selected_lambda": 0.001,
+   "admission": "ok gate/sigma 41.4 headroom 20.9",
+   "test_metrics": {
+    "AUROC": 0.9806577993790018,
+    "accuracy": 0.9235639981908639,
+    "precision": 0.8874878758486906,
+    "recall": 0.9452479338842975,
+    "F1": 0.9154577288644322,
+    "balanced_accuracy": 0.9259626636436773,
+    "confusion": {
+     "TP": 915,
+     "FP": 116,
+     "TN": 1127,
+     "FN": 53
+    },
+    "majority_class_accuracy": 0.5621890547263682
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.9756053625145354,
+     "reason": "ok gate/sigma 41.4 headroom 20.9"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.9744073788762386,
+     "reason": "ok gate/sigma 58.2 headroom 21.4"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.9712703605960041,
+     "reason": "ok gate/sigma 111.3 headroom 22.5"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.9663759091055544,
+     "reason": "ok gate/sigma 349.8 headroom 24.1"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.9631788451906376,
+     "reason": "ok gate/sigma 2361.3 headroom 26.9"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.9627526676371604,
+     "reason": "ok gate/sigma 6809.4 headroom 28.4"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.9626208601463941,
+     "reason": "ok gate/sigma 22376.3 headroom 30.1"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.9625637435670622,
+     "reason": "ok gate/sigma 66852.8 headroom 31.7"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.9625432401796097,
+     "reason": "ok gate/sigma 222520.3 headroom 33.4"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     0.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0
+    ],
+    "max": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "p25": [
+     -1.0,
+     -1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     -1.0,
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     -1.0,
+     0.0,
+     -1.0,
+     1.0,
+     0.0,
+     1.0
+    ],
+    "p75": [
+     1.0,
+     -1.0,
+     1.0,
+     1.0,
+     1.0,
+     -1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     -1.0,
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "spec": {
+    "id": "security-phishing-site-logreg-v1",
+    "task": "classification",
+    "seed": 20261116,
+    "source": {
+     "name": "Phishing Websites",
+     "uci_id": 327,
+     "data_url": "https://archive.ics.uci.edu/static/public/327/data.csv",
+     "sha256": "35dd9aa6870643c292d68343d926869095292a7406d198305cae7435069b59c2",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "target": "result==-1 (phishing)"
+    }
+   }
+  },
+  {
+   "model_id": "building-room-occupancy-logreg-v1",
+   "status": "TRAINED_ADMISSIBLE",
+   "useful": true,
+   "usefulness_rule": "regression test R2>=0.3; classification test AUROC>=0.7 and balanced accuracy>0.6",
+   "model_sha256": "d8a07bb47d7ee11d9f573dfa8a219a98c6b085cc5d2542a71af20bc93e51cdda",
+   "rows": 20560,
+   "features": 5,
+   "split_counts": {
+    "train": 13364,
+    "validation": 3084,
+    "test": 4112
+   },
+   "selected_lambda": 0.01,
+   "admission": "ok gate/sigma 48.2 headroom 22.6",
+   "test_metrics": {
+    "AUROC": 0.995579398365456,
+    "accuracy": 0.9895428015564203,
+    "precision": 0.9592445328031809,
+    "recall": 0.9979317476732161,
+    "F1": 0.9782057780030411,
+    "balanced_accuracy": 0.9924475908477368,
+    "confusion": {
+     "TP": 965,
+     "FP": 41,
+     "TN": 3104,
+     "FN": 2
+    },
+    "majority_class_accuracy": 0.7648346303501945
+   },
+   "test_rows_outside_z8": 0,
+   "search": [
+    {
+     "lam": 0.001,
+     "score": 0.99479074330154,
+     "reason": "ok gate/sigma 30.8 headroom 21.8"
+    },
+    {
+     "lam": 0.01,
+     "score": 0.9953586497890295,
+     "reason": "ok gate/sigma 48.2 headroom 22.6"
+    },
+    {
+     "lam": 0.1,
+     "score": 0.994252384498103,
+     "reason": "ok gate/sigma 100.8 headroom 23.4"
+    },
+    {
+     "lam": 1.0,
+     "score": 0.9889544847474855,
+     "reason": "ok gate/sigma 323.1 headroom 24.9"
+    },
+    {
+     "lam": 10.0,
+     "score": 0.9856433712725596,
+     "reason": "ok gate/sigma 2125.5 headroom 27.5"
+    },
+    {
+     "lam": 30.0,
+     "score": 0.9852391589547211,
+     "reason": "ok gate/sigma 6103.2 headroom 29.0"
+    },
+    {
+     "lam": 100.0,
+     "score": 0.9850902386270964,
+     "reason": "ok gate/sigma 20023.0 headroom 30.8"
+    },
+    {
+     "lam": 300.0,
+     "score": 0.9850459171010176,
+     "reason": "ok gate/sigma 59793.6 headroom 32.3"
+    },
+    {
+     "lam": 1000.0,
+     "score": 0.9850293703979482,
+     "reason": "ok gate/sigma 198990.4 headroom 34.1"
+    }
+   ],
+   "train_ranges": {
+    "min": [
+     19.0,
+     16.745,
+     0.0,
+     413.0,
+     0.00267412691390407
+    ],
+    "max": [
+     24.4083333333333,
+     39.5,
+     1451.75,
+     2072.0,
+     0.00647601323671025
+    ],
+    "p25": [
+     20.2,
+     24.545,
+     0.0,
+     460.0,
+     0.0037228324312411324
+    ],
+    "p75": [
+     21.5,
+     31.29,
+     300.27083333333326,
+     806.2708333333333,
+     0.0048343798934014645
+    ]
+   },
+   "spec": {
+    "id": "building-room-occupancy-logreg-v1",
+    "task": "classification",
+    "seed": 20261117,
+    "source": {
+     "name": "Occupancy Detection ",
+     "uci_id": 357,
+     "data_url": "https://archive.ics.uci.edu/static/public/357/data.csv",
+     "sha256": "3648f2aa7026c24b1fcf69f463a696898a37949046aabf2db4e263e2769b9530",
+     "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+     "excluded": "id, date"
+    }
+   }
+  }
+ ],
+ "field_validation": false,
+ "deployment_approved": false
+}

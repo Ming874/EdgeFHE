@@ -1,0 +1,27 @@
+# build outputs (evidence logs and QA build records in the tree are kept on purpose)
+__pycache__/
+*.pyc
+node_modules/
+*.runs/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+.Xil/
+*.jou
+!**/reports/*.dcp
+*_prj/
+hardware/system/build_rev5/
+# binaries are distributed as GitHub Release assets
+*.bit
+*.bit.bin
+*.dtbo
+*.xsa
+# never commit secrets or private data
+*.key
+*.pem
+*.p12
+*.pfx
+**/private/
+**/secrets/
+.env

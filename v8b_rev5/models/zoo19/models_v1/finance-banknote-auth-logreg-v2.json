@@ -1,0 +1,57 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "finance-banknote-auth-logreg-v2",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "variance",
+    "skewness",
+    "curtosis",
+    "entropy"
+  ],
+  "mean": [
+    0.45524563434343424,
+    1.8283528086612812,
+    1.4218899296296301,
+    -1.1447510905723897
+  ],
+  "std": [
+    2.835446992961068,
+    5.845036683798554,
+    4.2705205117208,
+    2.0940662702497708
+  ],
+  "weights": [
+    -2.6368848005199514,
+    -2.214355207642816,
+    -1.915538585428112,
+    0.12441802673566163
+  ],
+  "bias": -0.45573014554572217,
+  "weights_int": [
+    -2831333495,
+    -2377645800,
+    -2056793895,
+    133592839
+  ],
+  "bias_int": -525421085097271360,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "classification",
+  "decision_logit": 0.6500000000000004,
+  "target_mean": 0.0,
+  "target_std": 1.0,
+  "training_source": {
+    "name": "Banknote Authentication",
+    "uci_id": 267,
+    "data_url": "https://archive.ics.uci.edu/static/public/267/data.csv",
+    "sha256": "0787e50299c198e919276660edf98dd5dcb94951ad81435b3ab61afb666936c9",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)"
+  },
+  "split_seed": 20261102,
+  "split": "row",
+  "selected_lambda": 0.01,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

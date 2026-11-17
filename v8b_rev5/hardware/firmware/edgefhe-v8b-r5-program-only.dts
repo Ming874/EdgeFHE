@@ -1,0 +1,12 @@
+/dts-v1/;
+/plugin/;
+/* V8b rev5 (H2/H3/H4 hardening): program the routed rev5 bitstream. Region firmware/reset only, as the V7 program-only overlay. */
+/ {
+    fragment@0 {
+        target-path = "/fpga-full";
+        __overlay__ {
+            firmware-name = "edgefhe-v8b-r5.bit.bin";
+            resets = <&zynqmp_reset 116>;
+        };
+    };
+};

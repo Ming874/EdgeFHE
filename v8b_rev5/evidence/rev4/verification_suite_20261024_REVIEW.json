@@ -1,0 +1,598 @@
+{
+ "status": "VERIFICATION_SUITE_V1_INDEPENDENT_REVIEW_PASS",
+ "gates": {
+  "seal_exact": true,
+  "root_returned_same_boot": true,
+  "children_returned_expected_exit": true,
+  "states_same_boot_fastpath3_no_fatal": true,
+  "irq_delta_equals_device_calls_every_child_chained": true,
+  "irq_total_equals_root": true,
+  "m1_exact_real_pl": true,
+  "c01_device_all_refused_before_dma": true,
+  "c01_client_all_ok": true,
+  "s1_profile_complete": true,
+  "power_sensor_and_windows": true,
+  "s1b_windows_valid": true,
+  "server_digests_match_control_and_all_windows": true
+ },
+ "notes": {
+  "IRQ_final": {
+   "121": 3014289,
+   "136": 3014289
+  },
+  "DMA_total": 134956,
+  "irq_mismatch": [],
+  "c01_device_codes": {
+   "pair_invalid_trit_code_3": -22,
+   "pair_k_9": -22,
+   "pair_k_0": -22,
+   "load_noncanonical_coefficient_q": -22,
+   "enc_zero_seed": -22,
+   "enc_message_2_pow_62": -22,
+   "enc_message_minus_2_pow_62": -22,
+   "enc_input_bytes_short": -22,
+   "enc_output_bytes_wrong": -22,
+   "unknown_command_5": -22,
+   "enc_stale_generation": -116,
+   "enc_generation_0": -116,
+   "enc_wrong_profile": -22,
+   "enc_wrong_key_digest": -116,
+   "load_nonzero_generation": -22,
+   "load_zero_key_digest": -22,
+   "valid_enc_after_refusals_equals_spec": 0,
+   "enc_after_invalidate_old_generation": -116,
+   "reload_restores_exact_enc": 0
+  },
+  "c01_client": {
+   "c01_pl_without_permit": {
+    "rc": 1,
+    "wall_s": 0.0,
+    "reason": "STOP_CPP_E2E_CLIENT_PRESERVE_NO_RETRY PL_REQUIRES_CONTROLLED_INVOCATION"
+   },
+   "c01_pl_permit_for_other_invocation": {
+    "rc": 1,
+    "wall_s": 0.02,
+    "reason": "STOP_CPP_E2E_CLIENT_PRESERVE_NO_RETRY PL_PERMIT_INVOCATION_BINDING"
+   },
+   "c01_pl_permit_other_boot": {
+    "rc": 1,
+    "wall_s": 0.01,
+    "reason": "STOP_CPP_E2E_CLIENT_PRESERVE_NO_RETRY PL_PERMIT_INVOCATION_BINDING"
+   },
+   "c01_cpu_wrong_server_pin": {
+    "rc": 1,
+    "wall_s": 0.11,
+    "reason": "STOP_CPP_E2E_CLIENT_PRESERVE_NO_RETRY TLS_PEER_PIN"
+   },
+   "c01_cpu_unreachable_port": {
+    "rc": 1,
+    "wall_s": 3.07,
+    "reason": "STOP_CPP_E2E_CLIENT_PRESERVE_NO_RETRY TLS_DEADLINE"
+   },
+   "c01_cpu_sigterm_mid_window": {
+    "rc": -15,
+    "wall_s": 3.00867019299767
+   },
+   "c01_cpu_control_after_faults": {
+    "status": "CPP_E2E_CPU_SPEC_NUMERIC_AND_DRAIN_PASS"
+   }
+  },
+  "s1_stage_means_ms": {
+   "cpu|workers=1|cores=4|F=4": {
+    "encrypt": 28.8816,
+    "decrypt": 3.9302,
+    "sha": 0.7149,
+    "gcm": 0.7564
+   },
+   "cpu|workers=1|cores=4|F=10": {
+    "encrypt": 69.6138,
+    "decrypt": 3.8948,
+    "sha": 1.748,
+    "gcm": 1.8591
+   },
+   "cpu|workers=3|cores=1|F=4": {
+    "encrypt": 28.9425,
+    "decrypt": 4.0318,
+    "sha": 0.7217,
+    "gcm": 0.7496
+   },
+   "cpu|workers=3|cores=1|F=10": {
+    "encrypt": 72.7011,
+    "decrypt": 3.989,
+    "sha": 1.7628,
+    "gcm": 1.8547
+   },
+   "cpu|workers=3|cores=2|F=4": {
+    "encrypt": 19.3877,
+    "decrypt": 2.8682,
+    "sha": 0.7136,
+    "gcm": 0.7508
+   },
+   "cpu|workers=3|cores=2|F=10": {
+    "encrypt": 48.0989,
+    "decrypt": 2.8481,
+    "sha": 1.7805,
+    "gcm": 1.8523
+   },
+   "cpu|workers=3|cores=3|F=4": {
+    "encrypt": 10.9392,
+    "decrypt": 1.6514,
+    "sha": 0.7276,
+    "gcm": 0.7572
+   },
+   "cpu|workers=3|cores=3|F=10": {
+    "encrypt": 27.814,
+    "decrypt": 1.6423,
+    "sha": 1.7622,
+    "gcm": 1.8648
+   },
+   "cpu|workers=3|cores=4|F=4": {
+    "encrypt": 10.935,
+    "decrypt": 1.6537,
+    "sha": 0.7126,
+    "gcm": 0.7487
+   },
+   "cpu|workers=3|cores=4|F=10": {
+    "encrypt": 27.055,
+    "decrypt": 1.6543,
+    "sha": 1.7602,
+    "gcm": 1.8632
+   },
+   "pl|workers=1|cores=4|F=4": {
+    "encrypt": 3.5907,
+    "decrypt": 3.9517,
+    "sha": 0.7122,
+    "gcm": 0.7529
+   },
+   "pl|workers=1|cores=4|F=10": {
+    "encrypt": 6.1724,
+    "decrypt": 3.9557,
+    "sha": 1.7445,
+    "gcm": 1.8669
+   },
+   "pl|workers=3|cores=1|F=4": {
+    "encrypt": 3.6053,
+    "decrypt": 4.0487,
+    "sha": 0.717,
+    "gcm": 0.7476
+   },
+   "pl|workers=3|cores=1|F=10": {
+    "encrypt": 9.1502,
+    "decrypt": 4.0527,
+    "sha": 1.7606,
+    "gcm": 1.8588
+   },
+   "pl|workers=3|cores=2|F=4": {
+    "encrypt": 2.7625,
+    "decrypt": 2.8472,
+    "sha": 0.7168,
+    "gcm": 0.7503
+   },
+   "pl|workers=3|cores=2|F=10": {
+    "encrypt": 5.9883,
+    "decrypt": 2.8386,
+    "sha": 1.7504,
+    "gcm": 1.8553
+   },
+   "pl|workers=3|cores=3|F=4": {
+    "encrypt": 2.6069,
+    "decrypt": 1.647,
+    "sha": 0.7162,
+    "gcm": 0.7479
+   },
+   "pl|workers=3|cores=3|F=10": {
+    "encrypt": 5.0152,
+    "decrypt": 1.649,
+    "sha": 1.7623,
+    "gcm": 1.8536
+   },
+   "pl|workers=3|cores=4|F=4": {
+    "encrypt": 2.6123,
+    "decrypt": 1.6421,
+    "sha": 0.7117,
+    "gcm": 0.7462
+   },
+   "pl|workers=3|cores=4|F=10": {
+    "encrypt": 5.0339,
+    "decrypt": 1.644,
+    "sha": 1.7381,
+    "gcm": 1.8483
+   }
+  },
+  "s1_core_scaling": {
+   "cpu|F=4": {
+    "1": {
+     "encrypt_ms": 28.942,
+     "speedup_vs_1core": 1.0,
+     "efficiency": 1.0
+    },
+    "2": {
+     "encrypt_ms": 19.388,
+     "speedup_vs_1core": 1.493,
+     "efficiency": 0.746
+    },
+    "3": {
+     "encrypt_ms": 10.939,
+     "speedup_vs_1core": 2.646,
+     "efficiency": 0.882
+    },
+    "4": {
+     "encrypt_ms": 10.935,
+     "speedup_vs_1core": 2.647,
+     "efficiency": 0.662
+    },
+    "workers1_cores4_ms": 28.882
+   },
+   "cpu|F=10": {
+    "1": {
+     "encrypt_ms": 72.701,
+     "speedup_vs_1core": 1.0,
+     "efficiency": 1.0
+    },
+    "2": {
+     "encrypt_ms": 48.099,
+     "speedup_vs_1core": 1.511,
+     "efficiency": 0.756
+    },
+    "3": {
+     "encrypt_ms": 27.814,
+     "speedup_vs_1core": 2.614,
+     "efficiency": 0.871
+    },
+    "4": {
+     "encrypt_ms": 27.055,
+     "speedup_vs_1core": 2.687,
+     "efficiency": 0.672
+    },
+    "workers1_cores4_ms": 69.614
+   },
+   "pl|F=4": {
+    "1": {
+     "encrypt_ms": 3.605,
+     "speedup_vs_1core": 1.0,
+     "efficiency": 1.0
+    },
+    "2": {
+     "encrypt_ms": 2.762,
+     "speedup_vs_1core": 1.305,
+     "efficiency": 0.653
+    },
+    "3": {
+     "encrypt_ms": 2.607,
+     "speedup_vs_1core": 1.383,
+     "efficiency": 0.461
+    },
+    "4": {
+     "encrypt_ms": 2.612,
+     "speedup_vs_1core": 1.38,
+     "efficiency": 0.345
+    },
+    "workers1_cores4_ms": 3.591
+   },
+   "pl|F=10": {
+    "1": {
+     "encrypt_ms": 9.15,
+     "speedup_vs_1core": 1.0,
+     "efficiency": 1.0
+    },
+    "2": {
+     "encrypt_ms": 5.988,
+     "speedup_vs_1core": 1.528,
+     "efficiency": 0.764
+    },
+    "3": {
+     "encrypt_ms": 5.015,
+     "speedup_vs_1core": 1.824,
+     "efficiency": 0.608
+    },
+    "4": {
+     "encrypt_ms": 5.034,
+     "speedup_vs_1core": 1.818,
+     "efficiency": 0.454
+    },
+    "workers1_cores4_ms": 6.172
+   }
+  },
+  "s1_pl_over_cpu_encrypt_4cores": {
+   "4": {
+    "point": 4.186038143216984,
+    "CI95": [
+     4.172766950938001,
+     4.198752210647325
+    ]
+   },
+   "10": {
+    "point": 5.374607160310378,
+    "CI95": [
+     5.337033474920819,
+     5.422139863850429
+    ]
+   }
+  },
+  "energy": {
+   "cpu": {
+    "watts": {
+     "point": 4.062890009395553,
+     "CI95": [
+      4.058595552771688,
+      4.067184466019417
+     ],
+     "n": 5
+    },
+    "records_per_s": {
+     "point": 187394.73380000002,
+     "CI95": [
+      187271.0326,
+      187557.722
+     ],
+     "n": 5
+    },
+    "records_per_J_total": {
+     "point": 46123.59704987668,
+     "CI95": [
+      46051.88401293166,
+      46195.31008682169
+     ],
+     "n": 5
+    },
+    "records_per_J_incremental": {
+     "point": 312252.5615363793,
+     "CI95": [
+      310232.1795513123,
+      314272.94352144626
+     ],
+     "n": 5
+    }
+   },
+   "pl": {
+    "watts": {
+     "point": 4.222935483870968,
+     "CI95": [
+      4.216148387096774,
+      4.228058064516129
+     ],
+     "n": 5
+    },
+    "records_per_s": {
+     "point": 832396.3886000001,
+     "CI95": [
+      831637.8098,
+      833154.9674000001
+     ],
+     "n": 5
+    },
+    "records_per_J_total": {
+     "point": 197113.96473092327,
+     "CI95": [
+      196740.12016749114,
+      197571.99987664243
+     ],
+     "n": 5
+    },
+    "records_per_J_incremental": {
+     "point": 1095066.7324115254,
+     "CI95": [
+      1086095.7758762827,
+      1106779.980902489
+     ],
+     "n": 5
+    }
+   },
+   "idle_W": {
+    "point": 3.462722408026756,
+    "CI95": [
+     3.461886287625418,
+     3.463612040133779
+    ],
+    "n": 5
+   },
+   "pl_over_cpu_records_per_J_total": {
+    "point": 4.273603477147937,
+    "CI95": [
+     4.2626419849184005,
+     4.285656431783444
+    ]
+   }
+  },
+  "s1b": {
+   "ai4i|cpu|slots=2": {
+    "point": 129003.8332626873,
+    "CI95": [
+     128177.26697732782,
+     130060.01347814048
+    ],
+    "n": 3
+   },
+   "ai4i|cpu|slots=3": {
+    "point": 129233.31375485605,
+    "CI95": [
+     126163.7461488304,
+     131287.02391193048
+    ],
+    "n": 3
+   },
+   "ai4i|cpu|slots=4": {
+    "point": 129526.12979042537,
+    "CI95": [
+     128832.54400041758,
+     130323.43786737976
+    ],
+    "n": 3
+   },
+   "ai4i|cpu|slots=3_over_2": {
+    "point": 1.001778865684568,
+    "CI95": [
+     0.9794953139343623,
+     1.0199789438590166
+    ]
+   },
+   "ai4i|cpu|slots=4_over_2": {
+    "point": 1.0040486899848513,
+    "CI95": [
+     0.9953541334133841,
+     1.0128282552492365
+    ]
+   },
+   "ai4i|pl|slots=2": {
+    "point": 218166.19576765125,
+    "CI95": [
+     214544.62059815676,
+     221484.6344915547
+    ],
+    "n": 3
+   },
+   "ai4i|pl|slots=3": {
+    "point": 215362.1066138283,
+    "CI95": [
+     213041.66719805612,
+     219727.61109784825
+    ],
+    "n": 3
+   },
+   "ai4i|pl|slots=4": {
+    "point": 215804.88895818955,
+    "CI95": [
+     211301.150124179,
+     219879.80811703455
+    ],
+    "n": 3
+   },
+   "ai4i|pl|slots=3_over_2": {
+    "point": 0.9871470044020508,
+    "CI95": [
+     0.9670977005760296,
+     1.0080513030725078
+    ]
+   },
+   "ai4i|pl|slots=4_over_2": {
+    "point": 0.9891765688027282,
+    "CI95": [
+     0.9658281323863513,
+     1.0130254648833652
+    ]
+   },
+   "ai4i|pl_over_cpu|slots=2": {
+    "point": 1.6911605667050595,
+    "CI95": [
+     1.6630871747918132,
+     1.7174479847341237
+    ]
+   },
+   "ai4i|pl_over_cpu|slots=3": {
+    "point": 1.6664596794472888,
+    "CI95": [
+     1.627705148194555,
+     1.7070046918214852
+    ]
+   },
+   "ai4i|pl_over_cpu|slots=4": {
+    "point": 1.66611084039463,
+    "CI95": [
+     1.6338200954629523,
+     1.6972764398859188
+    ]
+   },
+   "diabetes|cpu|slots=2": {
+    "point": 51631.74557083649,
+    "CI95": [
+     50666.58347751808,
+     52289.5543227526
+    ],
+    "n": 3
+   },
+   "diabetes|cpu|slots=3": {
+    "point": 51519.44061358685,
+    "CI95": [
+     50637.64057313676,
+     52089.12025749986
+    ],
+    "n": 3
+   },
+   "diabetes|cpu|slots=4": {
+    "point": 52313.245195971715,
+    "CI95": [
+     51668.55891678121,
+     52713.07342917174
+    ],
+    "n": 3
+   },
+   "diabetes|cpu|slots=3_over_2": {
+    "point": 0.9978248855232763,
+    "CI95": [
+     0.9782046737272533,
+     1.0178606066946205
+    ]
+   },
+   "diabetes|cpu|slots=4_over_2": {
+    "point": 1.0131992365859535,
+    "CI95": [
+     0.99601971877943,
+     1.0317536534917202
+    ]
+   },
+   "diabetes|pl|slots=2": {
+    "point": 106213.65326040043,
+    "CI95": [
+     105953.27600262748,
+     106469.57520659063
+    ],
+    "n": 3
+   },
+   "diabetes|pl|slots=3": {
+    "point": 104957.08541213669,
+    "CI95": [
+     103366.5893211206,
+     106177.64564541314
+    ],
+    "n": 3
+   },
+   "diabetes|pl|slots=4": {
+    "point": 103661.18262463792,
+    "CI95": [
+     101588.99826365315,
+     105774.55311372815
+    ],
+    "n": 3
+   },
+   "diabetes|pl|slots=3_over_2": {
+    "point": 0.9881694319921088,
+    "CI95": [
+     0.9740044603187953,
+     0.9994415291536135
+    ]
+   },
+   "diabetes|pl|slots=4_over_2": {
+    "point": 0.9759685261036573,
+    "CI95": [
+     0.9572143596165646,
+     0.9950805759413718
+    ]
+   },
+   "diabetes|pl_over_cpu|slots=2": {
+    "point": 2.057138531461811,
+    "CI95": [
+     2.031259486451274,
+     2.0946711572916072
+    ]
+   },
+   "diabetes|pl_over_cpu|slots=3": {
+    "point": 2.037232628346068,
+    "CI95": [
+     2.0002602199443453,
+     2.0749060465644806
+    ]
+   },
+   "diabetes|pl_over_cpu|slots=4": {
+    "point": 1.9815475456800786,
+    "CI95": [
+     1.941936461465706,
+     2.0219459281771557
+    ]
+   }
+  },
+  "server_segments": 38,
+  "server_segments_before_control": 1
+ },
+ "scope": "KV260 boot e26925f5; M1/C01 device on real PL; S1 in-process (no network); S1b two-machine wired LAN, 30 s windows, 3 sessions; marginal CIs",
+ "assistant_board_operations": 0
+}

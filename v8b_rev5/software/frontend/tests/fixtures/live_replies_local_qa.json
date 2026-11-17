@@ -1,0 +1,272 @@
+{
+ "ai4i-failure-logreg-v1": {
+  "type": "result",
+  "request_id": "20261024020922-3e59eb0b",
+  "index": 1,
+  "model": "ai4i-failure-logreg-v1",
+  "normalized": [
+   0.2519246998113329,
+   -0.14244353689414183,
+   0.5781871713269019,
+   1.2599398384920468
+  ],
+  "reference": {
+   "score": 0.5727866225587475,
+   "probability": 0.6394059248067637
+  },
+  "results": {
+   "cpu": {
+    "score": 0.5726864893372249,
+    "abs_error": 0.00010013322152258031,
+    "probability": 0.639382837169334,
+    "prepare_ms": 3.844813,
+    "network_ms": 239.328283,
+    "decrypt_ms": 0.375913,
+    "request_ms": 250.858479,
+    "cold_context_and_TLS_ms": 15.973312,
+    "process_wall_ms": 315.410638,
+    "request_sha256": "60645b35f2f4c21f2da35aceb2e35412092a127a4d979a4dc66211033d13f787",
+    "response_sha256": "5c1cecb036ef175e6ea7730f6f3e3dc790586d8581d0d730c256b5c6f1e3a997",
+    "upload_bytes": 393216,
+    "response_bytes": 98304,
+    "ciphertexts": 4,
+    "dma": 0,
+    "device_calls": 0,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 350.049,
+     "sequence": 1,
+     "response_payload_sha256": "5c1cecb036ef175e6ea7730f6f3e3dc790586d8581d0d730c256b5c6f1e3a997",
+     "response_digest_matches": true
+    }
+   },
+   "pl": {
+    "score": 0.5727751210668085,
+    "abs_error": 1.1501491938958885e-05,
+    "probability": 0.6394032729496579,
+    "prepare_ms": 10.585097,
+    "network_ms": 242.742651,
+    "decrypt_ms": 0.438754,
+    "request_ms": 261.147669,
+    "cold_context_and_TLS_ms": 18.315106,
+    "process_wall_ms": 315.35487,
+    "request_sha256": "a5bc0f541b9b589ff209942b6afed8fd1130612d786e391d601e77d60b738a9a",
+    "response_sha256": "916659a9e481303254341cab1365f5af9f9edf3bb292ab7bc6e65cb26d3d05f9",
+    "upload_bytes": 393216,
+    "response_bytes": 98304,
+    "ciphertexts": 4,
+    "dma": 0,
+    "device_calls": 2,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 196.076,
+     "sequence": 1,
+     "response_payload_sha256": "916659a9e481303254341cab1365f5af9f9edf3bb292ab7bc6e65cb26d3d05f9",
+     "response_digest_matches": true
+    }
+   }
+  },
+  "irq_before": {
+   "121": 10,
+   "136": 10
+  },
+  "irq_after": {
+   "121": 10,
+   "136": 10
+  },
+  "session_dma": 0,
+  "boot_tag": "8eae49ac",
+  "console_round_trip_ms": 686.350324000017,
+  "provenance": "live"
+ },
+ "diabetes-progression-ridge-v1": {
+  "type": "result",
+  "request_id": "20261024020923-af2f6f91",
+  "index": 2,
+  "model": "diabetes-progression-ridge-v1",
+  "normalized": [
+   0.755036790628514,
+   1.076055173697942,
+   1.0922418458733714,
+   0.8645472490196269,
+   1.0469649968416062,
+   0.6953913536211658,
+   -0.9999290212435273,
+   1.5142730434529819,
+   1.145013795609759,
+   0.33884124994952564
+  ],
+  "reference": {
+   "score": 0.6906514414939795,
+   "probability": null
+  },
+  "results": {
+   "cpu": {
+    "score": 0.6906562571218471,
+    "abs_error": 4.815627867582606e-06,
+    "probability": null,
+    "prepare_ms": 10.404838,
+    "network_ms": 886.061661,
+    "decrypt_ms": 0.340551,
+    "request_ms": 900.174116,
+    "cold_context_and_TLS_ms": 16.834264,
+    "process_wall_ms": 919.19093,
+    "request_sha256": "eee6c50a21856759759ec2a72d70956199365bc505ff32720e942764af6d1737",
+    "response_sha256": "c8c1ffa5b7a16c82fe655d91cc6acef2a316ef32eaea1be10fcfc993d7e79791",
+    "upload_bytes": 983040,
+    "response_bytes": 98304,
+    "ciphertexts": 10,
+    "dma": 0,
+    "device_calls": 0,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 227.93,
+     "sequence": 1,
+     "response_payload_sha256": "c8c1ffa5b7a16c82fe655d91cc6acef2a316ef32eaea1be10fcfc993d7e79791",
+     "response_digest_matches": true
+    }
+   },
+   "pl": {
+    "score": 0.6906547760438448,
+    "abs_error": 3.3345498653414296e-06,
+    "probability": null,
+    "prepare_ms": 23.554026,
+    "network_ms": 888.518034,
+    "decrypt_ms": 0.362061,
+    "request_ms": 921.565765,
+    "cold_context_and_TLS_ms": 19.709537,
+    "process_wall_ms": 969.125909,
+    "request_sha256": "d7964762dc30296240445b301cf0e04ea8bd7027202d59ec7a24294884792ec3",
+    "response_sha256": "4d62f87511d15507e952a61562b71cf7c43edb507415ed7771c36a9564b01cde",
+    "upload_bytes": 983040,
+    "response_bytes": 98304,
+    "ciphertexts": 10,
+    "dma": 0,
+    "device_calls": 4,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 282.188,
+     "sequence": 1,
+     "response_payload_sha256": "4d62f87511d15507e952a61562b71cf7c43edb507415ed7771c36a9564b01cde",
+     "response_digest_matches": true
+    }
+   }
+  },
+  "irq_before": {
+   "121": 10,
+   "136": 10
+  },
+  "irq_after": {
+   "121": 10,
+   "136": 10
+  },
+  "session_dma": 0,
+  "boot_tag": "8eae49ac",
+  "console_round_trip_ms": 2170.419587999987,
+  "provenance": "live"
+ },
+ "diabetes-symptom-logreg-v1": {
+  "type": "result",
+  "request_id": "20261024020925-f73571e2",
+  "index": 3,
+  "model": "diabetes-symptom-logreg-v1",
+  "normalized": [
+   -0.08663350144461046,
+   1.3674497062733202,
+   1.0085350054127336,
+   -0.889875369132573,
+   1.1109352884798798,
+   0.8059359219444028,
+   -0.8898753691325725,
+   -0.5500754728491883,
+   1.1237528699943384,
+   -0.9529470646935797,
+   1.7895197546774873,
+   -0.8847758376155411,
+   1.1566107142728967,
+   -0.7312883211809496,
+   -0.7822225681471497,
+   2.066072776166884
+  ],
+  "reference": {
+   "score": 7.906097530260563,
+   "probability": 0.9996316459361001
+  },
+  "results": {
+   "cpu": {
+    "score": 7.906047472735262,
+    "abs_error": 5.005752530173879e-05,
+    "probability": 0.9996316275035383,
+    "prepare_ms": 14.335194,
+    "network_ms": 1542.137985,
+    "decrypt_ms": 0.277902,
+    "request_ms": 1565.634686,
+    "cold_context_and_TLS_ms": 15.806743,
+    "process_wall_ms": 1622.735414,
+    "request_sha256": "db763be2c0523ef539797ea0091e5304c5ee862e1214bbfb269f6c27898be851",
+    "response_sha256": "95b4d7a3f8b40c26f2e5daf42b0d77e7c2e140407dd4c3ea32d403cfa6270338",
+    "upload_bytes": 1572864,
+    "response_bytes": 98304,
+    "ciphertexts": 16,
+    "dma": 0,
+    "device_calls": 0,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 274.681,
+     "sequence": 1,
+     "response_payload_sha256": "95b4d7a3f8b40c26f2e5daf42b0d77e7c2e140407dd4c3ea32d403cfa6270338",
+     "response_digest_matches": true
+    }
+   },
+   "pl": {
+    "score": 7.906060546966898,
+    "abs_error": 3.698329366574882e-05,
+    "probability": 0.9996316323179202,
+    "prepare_ms": 35.349515,
+    "network_ms": 1537.782501,
+    "decrypt_ms": 0.487216,
+    "request_ms": 1577.160175,
+    "cold_context_and_TLS_ms": 19.182159,
+    "process_wall_ms": 1622.444414,
+    "request_sha256": "d63f20ce5e5b9ef59e15e51ab60ab83fe73658c5eb4528d9aed9fe9a1f4583c2",
+    "response_sha256": "cdaac3f108627de0ff22b3007a6bee07e9e0d15ad95f847b3d7949452699f07e",
+    "upload_bytes": 1572864,
+    "response_bytes": 98304,
+    "ciphertexts": 16,
+    "dma": 0,
+    "device_calls": 5,
+    "PL_hz": 0,
+    "real_PL": false,
+    "fixture": true,
+    "cloud_log": {
+     "cloud_us": 230.488,
+     "sequence": 1,
+     "response_payload_sha256": "cdaac3f108627de0ff22b3007a6bee07e9e0d15ad95f847b3d7949452699f07e",
+     "response_digest_matches": true
+    }
+   }
+  },
+  "irq_before": {
+   "121": 10,
+   "136": 10
+  },
+  "irq_after": {
+   "121": 10,
+   "136": 10
+  },
+  "session_dma": 0,
+  "boot_tag": "8eae49ac",
+  "console_round_trip_ms": 3533.5178910000022,
+  "provenance": "live"
+ }
+}

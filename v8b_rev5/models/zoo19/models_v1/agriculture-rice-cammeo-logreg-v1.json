@@ -1,0 +1,73 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "agriculture-rice-cammeo-logreg-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "area",
+    "perimeter",
+    "major_axis_length",
+    "minor_axis_length",
+    "eccentricity",
+    "convex_area",
+    "extent"
+  ],
+  "mean": [
+    12689.985864297254,
+    454.71787655100997,
+    188.99913021256057,
+    86.3678084282228,
+    0.8870184067964464,
+    12975.823909531502,
+    0.6611646832447496
+  ],
+  "std": [
+    1741.6916556342103,
+    35.64762629788246,
+    17.468009299752392,
+    5.784472863011156,
+    0.020710672328938223,
+    1785.2420595870115,
+    0.0772657395734182
+  ],
+  "weights": [
+    0.5585060161514409,
+    1.0648260570502879,
+    1.0912527470708895,
+    -0.1900640536810676,
+    1.2314146761548463,
+    1.3511550485571242,
+    0.007472069281888021
+  ],
+  "bias": -0.4279180794650849,
+  "weights_int": [
+    599691268,
+    1143348273,
+    1171723715,
+    -204079724,
+    1322221440,
+    1450791686,
+    8023073
+  ],
+  "bias_int": -493355956025358016,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "classification",
+  "decision_logit": 0.5,
+  "target_mean": 0.0,
+  "target_std": 1.0,
+  "training_source": {
+    "name": "Rice (Cammeo and Osmancik)",
+    "uci_id": 545,
+    "data_url": "https://archive.ics.uci.edu/static/public/545/data.csv",
+    "sha256": "a0d9b19693f0bde9a59a6a6e886df0456008fab1c3a406178a76e7c4440e95b3",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "Class==Cammeo"
+  },
+  "split_seed": 20261113,
+  "split": "row",
+  "selected_lambda": 0.001,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

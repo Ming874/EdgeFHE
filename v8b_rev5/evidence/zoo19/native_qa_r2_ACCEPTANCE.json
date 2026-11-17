@@ -1,0 +1,320 @@
+{
+ "status": "ZOO_NATIVE_CPP_CKKS_CPU_SPEC_PASS_NOT_ARM_NOT_PL",
+ "models": 19,
+ "cases": [
+  {
+   "model": "ai4i-failure-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00025182080612085045,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "ai4i-failure-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.0002016994168325681,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "diabetes-progression-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.203739277454989e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "diabetes-progression-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.322347018810181e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "diabetes-symptom-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.0002461482239799473,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "diabetes-symptom-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00029158475777224524,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "finance-credit-default-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 4.376607284695133e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "finance-credit-default-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.147225229529262e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "finance-banknote-auth-logreg-v2",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.0002411219910315454,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "finance-banknote-auth-logreg-v2",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00022716574566783443,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-heating-load-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.2522043894637216e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-heating-load-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.871770830384593e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-power-plant-output-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.42541140789682e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-power-plant-output-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.471090576021243e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-grid-instability-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 2.7191389592277904e-06,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "energy-grid-instability-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 2.0275354514470018e-06,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-heart-failure-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.935867943286267e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-heart-failure-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.0384794870350635e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-maternal-high-risk-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00014875376702505605,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-maternal-high-risk-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00013544750669514105,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-breast-cancer-malignant-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 8.920781230958852e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "medical-breast-cancer-malignant-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00010693097671410356,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "construction-concrete-strength-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.1022687232005204e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "construction-concrete-strength-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.138767017042912e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "realestate-unit-price-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 3.4368419604219325e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "realestate-unit-price-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 2.824337160811652e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "food-wine-good-quality-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00015308184095547128,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "food-wine-good-quality-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00011867056319728175,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "agriculture-rice-cammeo-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00019900527460237072,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "agriculture-rice-cammeo-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00017472854020617046,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "fishery-abalone-rings-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00012501258259467463,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "fishery-abalone-rings-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00012136784441452164,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "transport-auto-mpg-ridge-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 6.222872433234161e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "transport-auto-mpg-ridge-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 5.3866297013760445e-05,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "security-phishing-site-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00021609803120503646,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "security-phishing-site-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00021420248740566805,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "building-room-occupancy-logreg-v1",
+   "backend": "cpu",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.0001977286441250392,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  },
+  {
+   "model": "building-room-occupancy-logreg-v1",
+   "backend": "spec",
+   "ok": true,
+   "rc": 0,
+   "max_observed_error": 0.00022847204972720192,
+   "stderr_tail": "InitPRNGEngine: using external PRNG"
+  }
+ ],
+ "pipeline_source_sha256": "684f4943ba05dde2d096e26b5c58cd151dd9fba09269581759f3f4e3e8b57909",
+ "catalogue_sha256": "19a60b8c2c3b07da2428473bce12c01cb820340b55e9ad3c322a9bf2bf97c3a7",
+ "frozen_entries_copied": 3,
+ "binary_sha256": "f667140022a6b87cb64c5928eced5c8c561d444d7c83c8617830f71c9b40d2a0",
+ "rows": 2048,
+ "rounds": 2,
+ "input": "synthetic |z|<=1",
+ "oracle": "C++ decrypted vs plaintext affine, hard limit 5e-4",
+ "new_ARM_or_PL_acceptance": false,
+ "assistant_board_operations": 0
+}

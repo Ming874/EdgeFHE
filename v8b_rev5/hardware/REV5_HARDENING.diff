@@ -1,0 +1,244 @@
+--- rev4/v8b.cpp
++++ rev5/v8b.cpp
+@@ -10,14 +10,21 @@
+ // Resource revision (csynth v1: LUT 120%): one interleaved ChaCha20 core and one CDT unit, one message coefficient
+ // per cycle in the reader, aligned 4-bank twiddle reads, signed-byte e tokens.
+ // The limb engines zero their working buffers at the end of every PAIR / ENC frame (the mask spectrum and the
+-// products are secret-derived). Registers of the sampler hold the last seed until the next ENC frame (documented).
++// products are secret-derived).
++// rev5 (2026-10-29, review H2/H3/H4): the seed travels only to the sampler, followed by two zero tokens that overwrite
++// its control FIFO; after every ENC frame the sampler runs one zero-key ChaCha batch (overwrites the shared core, key
++// and block registers; block 0 must equal the RFC 8439 zero vector, else trailer status 7) and refills the noise and
++// mask FIFOs with zeros; the reader refills the message FIFOs (ENC) and the trit FIFOs (PAIR) with zeros. Every input
++// beat must carry TKEEP = all ones, otherwise the frame ends with ST_LENGTH. Single last-value pipeline registers are
++// not scrubbed at source level (residency inventory, not a physical zeroization proof).
+ #include "v8b.hpp"
+ #include "v8_tables.hpp"
+-#include "../../v7_offboard_20261013/src/client/baseline/cdt63_table.hpp"
++#include "../frozen_math/cdt63_table.hpp"
+ 
+ static const int N = 4096, LOGN = 12, BANK = 1024;
+ static const u32 MAGIC = 0x45463841u;
+-static const unsigned ST_OK = 0, ST_HEADER = 1, ST_GENERATION = 2, ST_LENGTH = 3, ST_TRIT = 4, ST_KEY = 5, ST_MESSAGE = 6;
++static const unsigned ST_OK = 0, ST_HEADER = 1, ST_GENERATION = 2, ST_LENGTH = 3, ST_TRIT = 4, ST_KEY = 5, ST_MESSAGE = 6, ST_SELFTEST = 7;
++static const unsigned KEEP_ALL = 0xFFFF;
+ typedef u32 poly_t[4][BANK];   // coefficient i at bank i % 4, address i / 4
+ 
+ static u32 mod_add(u32 a, u32 b, u32 q) {
+@@ -163,7 +170,7 @@
+ 
+ // ---- reader ------------------------------------------------------------------------------------------------------
+ static void reader(hls::stream<beat_t>& in, hls::stream<ctl_t>& c0, hls::stream<ctl_t>& c1, hls::stream<ctl_t>& c2,
+-                   hls::stream<ctl_t>& cw, hls::stream<ctl_t>& cs, hls::stream<v4_t>& s0, hls::stream<v4_t>& s1,
++                   hls::stream<ctl_t>& cw, hls::stream<sampler_ctl_t>& cs, hls::stream<v4_t>& s0, hls::stream<v4_t>& s1,
+                    hls::stream<v4_t>& s2, hls::stream<v4_t>& m0, hls::stream<v4_t>& m1, hls::stream<v4_t>& m2,
+                    hls::stream<ap_uint<8> >& status_out) {
+   static ap_uint<1> valid = 0;
+@@ -176,7 +183,7 @@
+   const ap_uint<8> command = hd.range(39, 32), k = hd.range(47, 40);
+   const ap_uint<64> gen = (ap_uint<64>(hd.range(127, 96)) << 32) | ap_uint<64>(hd.range(95, 64));
+   unsigned head = ST_OK, content = ST_OK;
+-  bool len_err = false, run = false;
++  bool len_err = h.keep != KEEP_ALL, run = false;
+   if (hd.range(31, 0) != MAGIC) head = ST_HEADER;
+   else if (command == 8) { /* header + trailer only */ }
+   else if (command == 6) { if (gen == 0) head = ST_GENERATION; else if (k != 0) head = ST_HEADER; else run = true; }
+@@ -190,19 +197,23 @@
+   seed_beats:
+     for (int b = 0; b < 2; b++) {
+       ap_uint<128> d = 0;
+-      if (!ended) { beat_t x = in.read(); d = x.data; ended = x.last; if (ended) len_err = true; }   // message beats must follow
++      if (!ended) { beat_t x = in.read(); d = x.data; ended = x.last; if (ended || x.keep != KEEP_ALL) len_err = true; }   // message beats must follow
+       else len_err = true;
+       seed.range(128 * b + 127, 128 * b) = d;
+     }
+   }
+-  ctl_t c; c.command = command; c.k = k; c.gen = gen; c.run = run; c.seed = seed;
+-  c0.write(c); c1.write(c); c2.write(c); cw.write(c); cs.write(c);
++  ctl_t c; c.command = command; c.k = k; c.gen = gen; c.run = run;
++  sampler_ctl_t sc; sc.command = command; sc.k = k; sc.run = run; sc.seed = seed;
++  c0.write(c); c1.write(c); c2.write(c); cw.write(c); cs.write(sc);
++  sampler_ctl_t zero; zero.command = 0; zero.k = 0; zero.run = 0; zero.seed = 0;
++  cs.write(zero); cs.write(zero);   // depth-2 FIFO: the seed slot is overwritten once the sampler has read it
++  seed = 0;
+   if (run && command == 6) {
+   load_beats:
+     for (int i = 0; i < 2 * 3 * BANK; i++) {
+ #pragma HLS PIPELINE II=1
+       ap_uint<128> d = 0;
+-      if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if (ended && i != 2 * 3 * BANK - 1) len_err = true; }
++      if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if ((ended && i != 2 * 3 * BANK - 1) || b.keep != KEEP_ALL) len_err = true; }
+       else len_err = true;
+       const int limb = (i / BANK) % 3;
+       ap_uint<128> v = 0;
+@@ -221,7 +232,7 @@
+ #pragma HLS LOOP_TRIPCOUNT min=1024 max=8192
+       if ((i & 15) == 0) {
+         d = 0;
+-        if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if (ended && i != int(k) * 1024 - 16) len_err = true; }
++        if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if ((ended && i != int(k) * 1024 - 16) || b.keep != KEEP_ALL) len_err = true; }
+         else len_err = true;
+       }
+       ap_uint<8> t = d.range(8 * (i & 15) + 7, 8 * (i & 15));
+@@ -230,6 +241,11 @@
+       }
+       v4_t v = t;
+       s0.write(v); s1.write(v); s2.write(v);
++    }
++  pair_scrub:
++    for (int i = 0; i < 32; i++) {   // s0-s2 depth 32: the trit FIFOs end holding zeros
++#pragma HLS PIPELINE II=1
++      s0.write(0); s1.write(0); s2.write(0);
+     }
+   } else if (run && command == 9) {
+     v4_t a0 = 0, a1 = 0, a2 = 0;
+@@ -240,7 +256,7 @@
+ #pragma HLS LOOP_TRIPCOUNT min=4096 max=32768
+       if ((i & 1) == 0) {
+         d = 0;
+-        if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if (ended && i != int(k) * 4096 - 2) len_err = true; }
++        if (!ended) { beat_t b = in.read(); d = b.data; ended = b.last; if ((ended && i != int(k) * 4096 - 2) || b.keep != KEEP_ALL) len_err = true; }
+         else len_err = true;
+       }
+       ap_uint<64> x = (i & 1) ? ap_uint<64>(d.range(127, 64)) : ap_uint<64>(d.range(63, 0));
+@@ -252,6 +268,12 @@
+       a2.range(32 * lane + 31, 32 * lane) = residue64(x, 2);
+       if (lane == 3) { m0.write(a0); m1.write(a1); m2.write(a2); }
+     }
++    a0 = 0; a1 = 0; a2 = 0;
++  message_scrub:
++    for (int i = 0; i < 1024; i++) {   // m0-m2 depth 1024: the message FIFOs end holding zeros
++#pragma HLS PIPELINE II=1
++      m0.write(a0); m1.write(a1); m2.write(a2);
++    }
+   }
+ drain:
+   while (!ended) {
+@@ -266,16 +288,17 @@
+ 
+ // ---- sampler (ENC) -------------------------------------------------------------------------------------------------
+ // e values travel as four signed bytes per 32-bit token (limb independent); each limb engine forms its residues.
+-static void sampler(hls::stream<ctl_t>& ctl, hls::stream<v4_t>& u0, hls::stream<v4_t>& u1, hls::stream<v4_t>& u2,
+-                    hls::stream<ap_uint<32> >& e00, hls::stream<ap_uint<32> >& e01, hls::stream<ap_uint<32> >& e02,
+-                    hls::stream<ap_uint<32> >& e10, hls::stream<ap_uint<32> >& e11, hls::stream<ap_uint<32> >& e12) {
+-  const ctl_t c = ctl.read();
+-  if (!c.run || c.command != 9) return;
++static void sampler_enc(const sampler_ctl_t& c, hls::stream<v4_t>& u0, hls::stream<v4_t>& u1, hls::stream<v4_t>& u2,
++                        hls::stream<ap_uint<32> >& e00, hls::stream<ap_uint<32> >& e01, hls::stream<ap_uint<32> >& e02,
++                        hls::stream<ap_uint<32> >& e10, hls::stream<ap_uint<32> >& e11, hls::stream<ap_uint<32> >& e12,
++                        hls::stream<ap_uint<1> >& kat) {
++#pragma HLS INLINE
+   u32 key[8];
+ #pragma HLS ARRAY_PARTITION variable=key complete
+   for (int i = 0; i < 8; i++) key[i] = c.seed.range(32 * i + 31, 32 * i);
+   u32 blk[CC_SLOTS][16];
+ #pragma HLS ARRAY_PARTITION variable=blk complete dim=0
++  ap_uint<32> tok = 0;
+ feature:
+   for (int f = 0; f < int(c.k); f++) {
+ #pragma HLS LOOP_TRIPCOUNT min=1 max=8
+@@ -309,7 +332,6 @@
+       for (int batch = 0; batch < 512 / CC_SLOTS; batch++) {
+ #pragma HLS LOOP_FLATTEN off
+         chacha8(key, CC_SLOTS * batch, 2 + t, f, blk);
+-        ap_uint<32> tok = 0;
+       gauss_samples:
+         for (int i = 0; i < CC_SLOTS * 8; i++) {
+ #pragma HLS PIPELINE II=1
+@@ -324,9 +346,30 @@
+       }
+     }
+   }
++  // rev5 scrub: zero key through the shared ChaCha core (state, init and blk registers), checked against RFC 8439.
+   for (int i = 0; i < 8; i++) key[i] = 0;
+-}
+-
++  chacha8(key, 0, 0, 0, blk);
++  ap_uint<1> ok = 1;
++  for (int i = 0; i < 16; i++) if (blk[0][i] != V8_CHACHA_ZERO_BLOCK[i]) ok = 0;
++  tok = 0;
++noise_scrub:
++  for (int i = 0; i < 1024; i++) {   // e FIFOs depth 1024, mask FIFOs depth 32: end holding zeros
++#pragma HLS PIPELINE II=1
++    e00.write(tok); e01.write(tok); e02.write(tok); e10.write(tok); e11.write(tok); e12.write(tok);
++    if (i < 32) { u0.write(0); u1.write(0); u2.write(0); }
++  }
++  kat.write(ok);
++}
++
++static void sampler(hls::stream<sampler_ctl_t>& ctl, hls::stream<v4_t>& u0, hls::stream<v4_t>& u1, hls::stream<v4_t>& u2,
++                    hls::stream<ap_uint<32> >& e00, hls::stream<ap_uint<32> >& e01, hls::stream<ap_uint<32> >& e02,
++                    hls::stream<ap_uint<32> >& e10, hls::stream<ap_uint<32> >& e11, hls::stream<ap_uint<32> >& e12,
++                    hls::stream<ap_uint<1> >& kat) {
++  const sampler_ctl_t c = ctl.read();
++  if (c.run && c.command == 9) sampler_enc(c, u0, u1, u2, e00, e01, e02, e10, e11, e12, kat);
++  const sampler_ctl_t z0 = ctl.read(), z1 = ctl.read();   // the two scrub tokens of every frame
++  (void)z0; (void)z1;
++}
+ // ---- limb engine -------------------------------------------------------------------------------------------------
+ template<int L> static void ct_stage(poly_t src, poly_t dst, int s) {
+ #pragma HLS INLINE off
+@@ -499,11 +542,25 @@
+ #pragma HLS PIPELINE II=1
+     for (int b = 0; b < 4; b++) { A[b][j] = 0; B[b][j] = 0; C[b][j] = 0; }
+   }
++  if (enc) {
++  scrub_enc:   // consume the zero tokens that overwrite the message, noise and mask FIFOs
++    for (int j = 0; j < 1024; j++) {
++#pragma HLS PIPELINE II=1
++      (void)m_in.read(); (void)e0_in.read(); (void)e1_in.read();
++      if (j < 32) (void)us.read();
++    }
++  } else {
++  scrub_pair:
++    for (int j = 0; j < 32; j++) {
++#pragma HLS PIPELINE II=1
++      (void)in.read();
++    }
++  }
+ }
+ 
+ // ---- writer ------------------------------------------------------------------------------------------------------
+ static void writer(hls::stream<ctl_t>& ctl, hls::stream<v4_t>& o0, hls::stream<v4_t>& o1, hls::stream<v4_t>& o2,
+-                   hls::stream<ap_uint<8> >& status_in, hls::stream<beat_t>& out) {
++                   hls::stream<ap_uint<8> >& status_in, hls::stream<ap_uint<1> >& kat, hls::stream<beat_t>& out) {
+   const ctl_t c = ctl.read();
+   beat_t h;
+   h.data = 0; h.data.range(31, 0) = MAGIC; h.data.range(39, 32) = c.command; h.data.range(47, 40) = c.k;
+@@ -521,7 +578,10 @@
+       out.write(b);
+     }
+   }
+-  const ap_uint<8> st = status_in.read();
++  ap_uint<1> kat_ok = 1;
++  if (c.run && c.command == 9) kat_ok = kat.read();
++  ap_uint<8> st = status_in.read();
++  if (st == ST_OK && kat_ok == 0) st = ST_SELFTEST;
+   beat_t t;
+   t.data = 0; t.data.range(31, 0) = MAGIC; t.data.range(63, 32) = st; t.data.range(95, 64) = c.k; t.data.range(127, 96) = c.gen.range(31, 0);
+   t.keep = -1; t.strb = -1; t.last = 1;
+@@ -539,7 +599,10 @@
+ #pragma HLS ARRAY_PARTITION variable=V8_PSI_INV_M_1 cyclic factor=4
+ #pragma HLS ARRAY_PARTITION variable=V8_PSI_INV_M_2 cyclic factor=4
+ #pragma HLS DATAFLOW
+-  hls::stream<ctl_t> c0, c1, c2, cw, cs;
++  hls::stream<ctl_t> c0, c1, c2, cw;
++  hls::stream<sampler_ctl_t> cs;
++  hls::stream<ap_uint<1> > kat;
++#pragma HLS STREAM variable=kat depth=2
+   hls::stream<v4_t> s0, s1, s2, us0, us1, us2, m0, m1, m2, o0, o1, o2;
+   hls::stream<ap_uint<32> > e00, e01, e02, e10, e11, e12;
+   hls::stream<ap_uint<8> > status;
+@@ -580,9 +643,9 @@
+ #pragma HLS BIND_STORAGE variable=o1 type=fifo impl=uram
+ #pragma HLS BIND_STORAGE variable=o2 type=fifo impl=uram
+   reader(in, c0, c1, c2, cw, cs, s0, s1, s2, m0, m1, m2, status);
+-  sampler(cs, us0, us1, us2, e00, e01, e02, e10, e11, e12);
++  sampler(cs, us0, us1, us2, e00, e01, e02, e10, e11, e12, kat);
+   limb<0>(c0, s0, us0, m0, e00, e10, o0);
+   limb<1>(c1, s1, us1, m1, e01, e11, o1);
+   limb<2>(c2, s2, us2, m2, e02, e12, o2);
+-  writer(cw, o0, o1, o2, status, out);
+-}
++  writer(cw, o0, o1, o2, status, kat, out);
++}
