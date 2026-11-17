@@ -1,0 +1,89 @@
+// EdgeFHE S4 optimal (DAG, depth 1): key=C; features=[3xF 1xA]; dec=O; NTT(s)=C ; edge latency 23.05 ms
+digraph edgefhe_best {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontsize=10];
+  subgraph cluster_prepare { label="prepare"; color=gray;
+    n0 [label="STD\n0.43 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n1 [label="ENC_f0\n8.30 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n2 [label="ENC_f1\n8.30 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n3 [label="ENC_f2\n8.30 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n4 [label="ENC_f3\n8.30 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n5 [label="NOWRAP\n0.02 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n6 [label="SAMPLE\n0.11 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+  }
+  subgraph cluster_encrypt { label="encrypt"; color=gray;
+    n7 [label="VALKEY\n0.04 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n8 [label="RNS_m_f0\n0.43 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n9 [label="RNS_m_f1\n0.43 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n10 [label="RNS_m_f2\n0.43 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n11 [label="RNS_m_f3\n0.43 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n12 [label="RNS_t_f0\n1.32 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n13 [label="RNS_t_f1\n1.32 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n14 [label="RNS_t_f2\n1.32 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n15 [label="RNS_t_f3\n1.32 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n16 [label="NTT_u_f0\n2.25 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n17 [label="INTT_bu_f0\n2.35 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n18 [label="INTT_au_f0\n2.35 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n19 [label="ADD_c0_f0\n0.14 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n20 [label="ADD_c1_f0\n0.07 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n21 [label="FENC_ALL\nPL 1.78 ms | ARM 2.00 ms", fillcolor="#fed7aa", color="#c2410c"];
+  }
+  subgraph cluster_cloud { label="cloud"; color=gray;
+    n22 [label="CLOUD\n(not in edge latency)", fillcolor="#dbeafe", color="#1d4ed8"];
+  }
+  subgraph cluster_decrypt { label="decrypt"; color=gray;
+    n23 [label="DEC_PRE\n0.04 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n24 [label="OP2_d\nPL 0.55 ms | ARM 0.35 ms", fillcolor="#fed7aa", color="#c2410c"];
+    n25 [label="ADD_d\n0.07 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n26 [label="CRT\n0.97 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+  }
+  subgraph cluster_finish { label="finish"; color=gray;
+    n27 [label="NWCHECK\n0.04 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n28 [label="DEC_FFT\n8.40 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+    n29 [label="SIGMOID\n0.20 ms", fillcolor="#dbeafe", color="#1d4ed8"];
+  }
+  n19 -> n22 [label="48K", fontsize=8];
+  n20 -> n22 [label="48K", fontsize=8];
+  n25 -> n26 [label="48K", fontsize=8];
+  n22 -> n23 [label="96K", fontsize=8];
+  n26 -> n27 [label="64K", fontsize=8];
+  n28 -> n29 [label="32K", fontsize=8];
+  n23 -> n25 [label="48K", fontsize=8];
+  n23 -> n24 [label="64K", fontsize=8];
+  n1 -> n5 [label="32K", fontsize=8];
+  n1 -> n8 [label="32K", fontsize=8];
+  n2 -> n5 [label="32K", fontsize=8];
+  n2 -> n9 [label="32K", fontsize=8];
+  n3 -> n5 [label="32K", fontsize=8];
+  n3 -> n10 [label="32K", fontsize=8];
+  n4 -> n5 [label="32K", fontsize=8];
+  n4 -> n11 [label="32K", fontsize=8];
+  n21 -> n22 [label="288K", fontsize=8];
+  n18 -> n20 [label="48K", fontsize=8];
+  n17 -> n19 [label="48K", fontsize=8];
+  n5 -> n27 [label="16B", fontsize=8];
+  n16 -> n18 [label="48K", fontsize=8];
+  n16 -> n17 [label="48K", fontsize=8];
+  n27 -> n28 [label="64K", fontsize=8];
+  n24 -> n25 [label="48K", fontsize=8];
+  n8 -> n19 [label="48K", fontsize=8];
+  n9 -> n21 [label="64K", fontsize=8];
+  n10 -> n21 [label="64K", fontsize=8];
+  n11 -> n21 [label="64K", fontsize=8];
+  n12 -> n19 [label="96K", fontsize=8];
+  n12 -> n20 [label="48K", fontsize=8];
+  n12 -> n16 [label="48K", fontsize=8];
+  n13 -> n21 [label="192K", fontsize=8];
+  n14 -> n21 [label="192K", fontsize=8];
+  n15 -> n21 [label="192K", fontsize=8];
+  n6 -> n12 [label="12K", fontsize=8];
+  n6 -> n13 [label="12K", fontsize=8];
+  n6 -> n14 [label="12K", fontsize=8];
+  n6 -> n15 [label="12K", fontsize=8];
+  n0 -> n1 [label="16K", fontsize=8];
+  n0 -> n2 [label="16K", fontsize=8];
+  n0 -> n3 [label="16K", fontsize=8];
+  n0 -> n4 [label="16K", fontsize=8];
+  n7 -> n21 [label="64K", fontsize=8];
+  n7 -> n16 [label="48K", fontsize=8];
+}
