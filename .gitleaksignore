@@ -1,0 +1,10 @@
+# Reviewed false positives (2026-11-17). Each line suppresses exactly one gitleaks finding:
+# <commit>:<file>:<rule>:<line>. Every other finding still fails CI.
+#
+# PROFILE_DESCRIPTOR.json lists the SHA-256 digest of each frozen source file. generic-api-key
+# matches because these three file names contain "api" (cloud_api.cpp, edgefhe_uapi.h,
+# edgefhe_v8_uapi.h). The values are public file hashes; recompute them with sha256sum on
+# v8b_rev5/software/client/vendor/frozen_sdk/src/... to check.
+a83fab4791095df1f0dc403ccea84c088d69354c:v8b_rev5/software/client/PROFILE_DESCRIPTOR.json:generic-api-key:36
+a83fab4791095df1f0dc403ccea84c088d69354c:v8b_rev5/software/client/PROFILE_DESCRIPTOR.json:generic-api-key:61
+a83fab4791095df1f0dc403ccea84c088d69354c:v8b_rev5/software/client/PROFILE_DESCRIPTOR.json:generic-api-key:84
