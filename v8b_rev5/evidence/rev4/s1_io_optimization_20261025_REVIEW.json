@@ -1,0 +1,4195 @@
+{
+ "status": "S1B_IO_PLACEMENT_AB_V1_INDEPENDENT_REVIEW_PASS",
+ "gates": {
+  "sealed_exact": true,
+  "returned_scope": true,
+  "delivered_source_manifest": true,
+  "owner_identity": true,
+  "exact_gate": true,
+  "owner_equivalence": true,
+  "states_no_fatal": true,
+  "irq_start": true,
+  "child_configure_owner": true,
+  "child_build_owner": true,
+  "child_owner_equivalence": true,
+  "child_configure_client": true,
+  "child_build_client": true,
+  "child_span_gate": true,
+  "child_permit_gate": true,
+  "child_configure_suite": true,
+  "child_build_suite": true,
+  "child_configure_openfhe_reference": true,
+  "child_build_openfhe_reference": true,
+  "child_openfhe_ref_pre_0": true,
+  "openfhe_openfhe_ref_pre_0": true,
+  "irq_openfhe_ref_pre_0": true,
+  "child_openfhe_ref_pre_1": true,
+  "openfhe_openfhe_ref_pre_1": true,
+  "irq_openfhe_ref_pre_1": true,
+  "child_openfhe_ref_pre_2": true,
+  "openfhe_openfhe_ref_pre_2": true,
+  "irq_openfhe_ref_pre_2": true,
+  "child_exact_PL_gate": true,
+  "irq_exact_PL_gate": true,
+  "child_s1b_0_ai4i_pl_A": true,
+  "window_s1b_0_ai4i_pl_A": true,
+  "placement_s1b_0_ai4i_pl_A": true,
+  "irq_s1b_0_ai4i_pl_A": true,
+  "child_s1b_0_ai4i_pl_B": true,
+  "window_s1b_0_ai4i_pl_B": true,
+  "placement_s1b_0_ai4i_pl_B": true,
+  "irq_s1b_0_ai4i_pl_B": true,
+  "child_s1b_0_ai4i_pl_C": true,
+  "window_s1b_0_ai4i_pl_C": true,
+  "placement_s1b_0_ai4i_pl_C": true,
+  "irq_s1b_0_ai4i_pl_C": true,
+  "child_s1b_0_ai4i_pl_D": true,
+  "window_s1b_0_ai4i_pl_D": true,
+  "placement_s1b_0_ai4i_pl_D": true,
+  "irq_s1b_0_ai4i_pl_D": true,
+  "child_s1b_0_ai4i_cpu_D": true,
+  "window_s1b_0_ai4i_cpu_D": true,
+  "placement_s1b_0_ai4i_cpu_D": true,
+  "irq_s1b_0_ai4i_cpu_D": true,
+  "child_s1b_0_ai4i_cpu_C": true,
+  "window_s1b_0_ai4i_cpu_C": true,
+  "placement_s1b_0_ai4i_cpu_C": true,
+  "irq_s1b_0_ai4i_cpu_C": true,
+  "child_s1b_0_ai4i_cpu_B": true,
+  "window_s1b_0_ai4i_cpu_B": true,
+  "placement_s1b_0_ai4i_cpu_B": true,
+  "irq_s1b_0_ai4i_cpu_B": true,
+  "child_s1b_0_ai4i_cpu_A": true,
+  "window_s1b_0_ai4i_cpu_A": true,
+  "placement_s1b_0_ai4i_cpu_A": true,
+  "irq_s1b_0_ai4i_cpu_A": true,
+  "child_s1b_0_diabetes_cpu_D": true,
+  "window_s1b_0_diabetes_cpu_D": true,
+  "placement_s1b_0_diabetes_cpu_D": true,
+  "irq_s1b_0_diabetes_cpu_D": true,
+  "child_s1b_0_diabetes_cpu_C": true,
+  "window_s1b_0_diabetes_cpu_C": true,
+  "placement_s1b_0_diabetes_cpu_C": true,
+  "irq_s1b_0_diabetes_cpu_C": true,
+  "child_s1b_0_diabetes_cpu_B": true,
+  "window_s1b_0_diabetes_cpu_B": true,
+  "placement_s1b_0_diabetes_cpu_B": true,
+  "irq_s1b_0_diabetes_cpu_B": true,
+  "child_s1b_0_diabetes_cpu_A": true,
+  "window_s1b_0_diabetes_cpu_A": true,
+  "placement_s1b_0_diabetes_cpu_A": true,
+  "irq_s1b_0_diabetes_cpu_A": true,
+  "child_s1b_0_diabetes_pl_A": true,
+  "window_s1b_0_diabetes_pl_A": true,
+  "placement_s1b_0_diabetes_pl_A": true,
+  "irq_s1b_0_diabetes_pl_A": true,
+  "child_s1b_0_diabetes_pl_B": true,
+  "window_s1b_0_diabetes_pl_B": true,
+  "placement_s1b_0_diabetes_pl_B": true,
+  "irq_s1b_0_diabetes_pl_B": true,
+  "child_s1b_0_diabetes_pl_C": true,
+  "window_s1b_0_diabetes_pl_C": true,
+  "placement_s1b_0_diabetes_pl_C": true,
+  "irq_s1b_0_diabetes_pl_C": true,
+  "child_s1b_0_diabetes_pl_D": true,
+  "window_s1b_0_diabetes_pl_D": true,
+  "placement_s1b_0_diabetes_pl_D": true,
+  "irq_s1b_0_diabetes_pl_D": true,
+  "child_s1b_1_ai4i_cpu_A": true,
+  "window_s1b_1_ai4i_cpu_A": true,
+  "placement_s1b_1_ai4i_cpu_A": true,
+  "irq_s1b_1_ai4i_cpu_A": true,
+  "child_s1b_1_ai4i_cpu_B": true,
+  "window_s1b_1_ai4i_cpu_B": true,
+  "placement_s1b_1_ai4i_cpu_B": true,
+  "irq_s1b_1_ai4i_cpu_B": true,
+  "child_s1b_1_ai4i_cpu_C": true,
+  "window_s1b_1_ai4i_cpu_C": true,
+  "placement_s1b_1_ai4i_cpu_C": true,
+  "irq_s1b_1_ai4i_cpu_C": true,
+  "child_s1b_1_ai4i_cpu_D": true,
+  "window_s1b_1_ai4i_cpu_D": true,
+  "placement_s1b_1_ai4i_cpu_D": true,
+  "irq_s1b_1_ai4i_cpu_D": true,
+  "child_s1b_1_ai4i_pl_D": true,
+  "window_s1b_1_ai4i_pl_D": true,
+  "placement_s1b_1_ai4i_pl_D": true,
+  "irq_s1b_1_ai4i_pl_D": true,
+  "child_s1b_1_ai4i_pl_C": true,
+  "window_s1b_1_ai4i_pl_C": true,
+  "placement_s1b_1_ai4i_pl_C": true,
+  "irq_s1b_1_ai4i_pl_C": true,
+  "child_s1b_1_ai4i_pl_B": true,
+  "window_s1b_1_ai4i_pl_B": true,
+  "placement_s1b_1_ai4i_pl_B": true,
+  "irq_s1b_1_ai4i_pl_B": true,
+  "child_s1b_1_ai4i_pl_A": true,
+  "window_s1b_1_ai4i_pl_A": true,
+  "placement_s1b_1_ai4i_pl_A": true,
+  "irq_s1b_1_ai4i_pl_A": true,
+  "child_s1b_1_diabetes_pl_D": true,
+  "window_s1b_1_diabetes_pl_D": true,
+  "placement_s1b_1_diabetes_pl_D": true,
+  "irq_s1b_1_diabetes_pl_D": true,
+  "child_s1b_1_diabetes_pl_C": true,
+  "window_s1b_1_diabetes_pl_C": true,
+  "placement_s1b_1_diabetes_pl_C": true,
+  "irq_s1b_1_diabetes_pl_C": true,
+  "child_s1b_1_diabetes_pl_B": true,
+  "window_s1b_1_diabetes_pl_B": true,
+  "placement_s1b_1_diabetes_pl_B": true,
+  "irq_s1b_1_diabetes_pl_B": true,
+  "child_s1b_1_diabetes_pl_A": true,
+  "window_s1b_1_diabetes_pl_A": true,
+  "placement_s1b_1_diabetes_pl_A": true,
+  "irq_s1b_1_diabetes_pl_A": true,
+  "child_s1b_1_diabetes_cpu_A": true,
+  "window_s1b_1_diabetes_cpu_A": true,
+  "placement_s1b_1_diabetes_cpu_A": true,
+  "irq_s1b_1_diabetes_cpu_A": true,
+  "child_s1b_1_diabetes_cpu_B": true,
+  "window_s1b_1_diabetes_cpu_B": true,
+  "placement_s1b_1_diabetes_cpu_B": true,
+  "irq_s1b_1_diabetes_cpu_B": true,
+  "child_s1b_1_diabetes_cpu_C": true,
+  "window_s1b_1_diabetes_cpu_C": true,
+  "placement_s1b_1_diabetes_cpu_C": true,
+  "irq_s1b_1_diabetes_cpu_C": true,
+  "child_s1b_1_diabetes_cpu_D": true,
+  "window_s1b_1_diabetes_cpu_D": true,
+  "placement_s1b_1_diabetes_cpu_D": true,
+  "irq_s1b_1_diabetes_cpu_D": true,
+  "child_s1b_2_ai4i_pl_B": true,
+  "window_s1b_2_ai4i_pl_B": true,
+  "placement_s1b_2_ai4i_pl_B": true,
+  "irq_s1b_2_ai4i_pl_B": true,
+  "child_s1b_2_ai4i_pl_D": true,
+  "window_s1b_2_ai4i_pl_D": true,
+  "placement_s1b_2_ai4i_pl_D": true,
+  "irq_s1b_2_ai4i_pl_D": true,
+  "child_s1b_2_ai4i_pl_A": true,
+  "window_s1b_2_ai4i_pl_A": true,
+  "placement_s1b_2_ai4i_pl_A": true,
+  "irq_s1b_2_ai4i_pl_A": true,
+  "child_s1b_2_ai4i_pl_C": true,
+  "window_s1b_2_ai4i_pl_C": true,
+  "placement_s1b_2_ai4i_pl_C": true,
+  "irq_s1b_2_ai4i_pl_C": true,
+  "child_s1b_2_ai4i_cpu_C": true,
+  "window_s1b_2_ai4i_cpu_C": true,
+  "placement_s1b_2_ai4i_cpu_C": true,
+  "irq_s1b_2_ai4i_cpu_C": true,
+  "child_s1b_2_ai4i_cpu_A": true,
+  "window_s1b_2_ai4i_cpu_A": true,
+  "placement_s1b_2_ai4i_cpu_A": true,
+  "irq_s1b_2_ai4i_cpu_A": true,
+  "child_s1b_2_ai4i_cpu_D": true,
+  "window_s1b_2_ai4i_cpu_D": true,
+  "placement_s1b_2_ai4i_cpu_D": true,
+  "irq_s1b_2_ai4i_cpu_D": true,
+  "child_s1b_2_ai4i_cpu_B": true,
+  "window_s1b_2_ai4i_cpu_B": true,
+  "placement_s1b_2_ai4i_cpu_B": true,
+  "irq_s1b_2_ai4i_cpu_B": true,
+  "child_s1b_2_diabetes_cpu_C": true,
+  "window_s1b_2_diabetes_cpu_C": true,
+  "placement_s1b_2_diabetes_cpu_C": true,
+  "irq_s1b_2_diabetes_cpu_C": true,
+  "child_s1b_2_diabetes_cpu_A": true,
+  "window_s1b_2_diabetes_cpu_A": true,
+  "placement_s1b_2_diabetes_cpu_A": true,
+  "irq_s1b_2_diabetes_cpu_A": true,
+  "child_s1b_2_diabetes_cpu_D": true,
+  "window_s1b_2_diabetes_cpu_D": true,
+  "placement_s1b_2_diabetes_cpu_D": true,
+  "irq_s1b_2_diabetes_cpu_D": true,
+  "child_s1b_2_diabetes_cpu_B": true,
+  "window_s1b_2_diabetes_cpu_B": true,
+  "placement_s1b_2_diabetes_cpu_B": true,
+  "irq_s1b_2_diabetes_cpu_B": true,
+  "child_s1b_2_diabetes_pl_B": true,
+  "window_s1b_2_diabetes_pl_B": true,
+  "placement_s1b_2_diabetes_pl_B": true,
+  "irq_s1b_2_diabetes_pl_B": true,
+  "child_s1b_2_diabetes_pl_D": true,
+  "window_s1b_2_diabetes_pl_D": true,
+  "placement_s1b_2_diabetes_pl_D": true,
+  "irq_s1b_2_diabetes_pl_D": true,
+  "child_s1b_2_diabetes_pl_A": true,
+  "window_s1b_2_diabetes_pl_A": true,
+  "placement_s1b_2_diabetes_pl_A": true,
+  "irq_s1b_2_diabetes_pl_A": true,
+  "child_s1b_2_diabetes_pl_C": true,
+  "window_s1b_2_diabetes_pl_C": true,
+  "placement_s1b_2_diabetes_pl_C": true,
+  "irq_s1b_2_diabetes_pl_C": true,
+  "child_openfhe_ref_post_0": true,
+  "openfhe_openfhe_ref_post_0": true,
+  "irq_openfhe_ref_post_0": true,
+  "child_openfhe_ref_post_1": true,
+  "openfhe_openfhe_ref_post_1": true,
+  "irq_openfhe_ref_post_1": true,
+  "child_openfhe_ref_post_2": true,
+  "openfhe_openfhe_ref_post_2": true,
+  "irq_openfhe_ref_post_2": true,
+  "irq_end": true,
+  "window_plan": true,
+  "openfhe_reference_pre_post": true,
+  "pc_profile_server_digests": true,
+  "sampled_pid_s1b_0_ai4i_pl_A": true,
+  "samples_s1b_0_ai4i_pl_A": true,
+  "affinity_s1b_0_ai4i_pl_A": true,
+  "sampled_pid_s1b_0_ai4i_pl_B": true,
+  "samples_s1b_0_ai4i_pl_B": true,
+  "affinity_s1b_0_ai4i_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_pl_B": true,
+  "sampled_pid_s1b_0_ai4i_pl_C": true,
+  "samples_s1b_0_ai4i_pl_C": true,
+  "affinity_s1b_0_ai4i_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_pl_C": true,
+  "sampled_pid_s1b_0_ai4i_pl_D": true,
+  "samples_s1b_0_ai4i_pl_D": true,
+  "affinity_s1b_0_ai4i_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_pl_D": true,
+  "sampled_pid_s1b_0_ai4i_cpu_D": true,
+  "samples_s1b_0_ai4i_cpu_D": true,
+  "affinity_s1b_0_ai4i_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_cpu_D": true,
+  "sampled_pid_s1b_0_ai4i_cpu_C": true,
+  "samples_s1b_0_ai4i_cpu_C": true,
+  "affinity_s1b_0_ai4i_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_cpu_C": true,
+  "sampled_pid_s1b_0_ai4i_cpu_B": true,
+  "samples_s1b_0_ai4i_cpu_B": true,
+  "affinity_s1b_0_ai4i_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_0_ai4i_cpu_B": true,
+  "sampled_pid_s1b_0_ai4i_cpu_A": true,
+  "samples_s1b_0_ai4i_cpu_A": true,
+  "affinity_s1b_0_ai4i_cpu_A": true,
+  "sampled_pid_s1b_0_diabetes_cpu_D": true,
+  "samples_s1b_0_diabetes_cpu_D": true,
+  "affinity_s1b_0_diabetes_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_cpu_D": true,
+  "sampled_pid_s1b_0_diabetes_cpu_C": true,
+  "samples_s1b_0_diabetes_cpu_C": true,
+  "affinity_s1b_0_diabetes_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_cpu_C": true,
+  "sampled_pid_s1b_0_diabetes_cpu_B": true,
+  "samples_s1b_0_diabetes_cpu_B": true,
+  "affinity_s1b_0_diabetes_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_cpu_B": true,
+  "sampled_pid_s1b_0_diabetes_cpu_A": true,
+  "samples_s1b_0_diabetes_cpu_A": true,
+  "affinity_s1b_0_diabetes_cpu_A": true,
+  "sampled_pid_s1b_0_diabetes_pl_A": true,
+  "samples_s1b_0_diabetes_pl_A": true,
+  "affinity_s1b_0_diabetes_pl_A": true,
+  "sampled_pid_s1b_0_diabetes_pl_B": true,
+  "samples_s1b_0_diabetes_pl_B": true,
+  "affinity_s1b_0_diabetes_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_pl_B": true,
+  "sampled_pid_s1b_0_diabetes_pl_C": true,
+  "samples_s1b_0_diabetes_pl_C": true,
+  "affinity_s1b_0_diabetes_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_pl_C": true,
+  "sampled_pid_s1b_0_diabetes_pl_D": true,
+  "samples_s1b_0_diabetes_pl_D": true,
+  "affinity_s1b_0_diabetes_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_0_diabetes_pl_D": true,
+  "sampled_pid_s1b_1_ai4i_cpu_A": true,
+  "samples_s1b_1_ai4i_cpu_A": true,
+  "affinity_s1b_1_ai4i_cpu_A": true,
+  "sampled_pid_s1b_1_ai4i_cpu_B": true,
+  "samples_s1b_1_ai4i_cpu_B": true,
+  "affinity_s1b_1_ai4i_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_cpu_B": true,
+  "sampled_pid_s1b_1_ai4i_cpu_C": true,
+  "samples_s1b_1_ai4i_cpu_C": true,
+  "affinity_s1b_1_ai4i_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_cpu_C": true,
+  "sampled_pid_s1b_1_ai4i_cpu_D": true,
+  "samples_s1b_1_ai4i_cpu_D": true,
+  "affinity_s1b_1_ai4i_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_cpu_D": true,
+  "sampled_pid_s1b_1_ai4i_pl_D": true,
+  "samples_s1b_1_ai4i_pl_D": true,
+  "affinity_s1b_1_ai4i_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_pl_D": true,
+  "sampled_pid_s1b_1_ai4i_pl_C": true,
+  "samples_s1b_1_ai4i_pl_C": true,
+  "affinity_s1b_1_ai4i_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_pl_C": true,
+  "sampled_pid_s1b_1_ai4i_pl_B": true,
+  "samples_s1b_1_ai4i_pl_B": true,
+  "affinity_s1b_1_ai4i_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_1_ai4i_pl_B": true,
+  "sampled_pid_s1b_1_ai4i_pl_A": true,
+  "samples_s1b_1_ai4i_pl_A": true,
+  "affinity_s1b_1_ai4i_pl_A": true,
+  "sampled_pid_s1b_1_diabetes_pl_D": true,
+  "samples_s1b_1_diabetes_pl_D": true,
+  "affinity_s1b_1_diabetes_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_pl_D": true,
+  "sampled_pid_s1b_1_diabetes_pl_C": true,
+  "samples_s1b_1_diabetes_pl_C": true,
+  "affinity_s1b_1_diabetes_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_pl_C": true,
+  "sampled_pid_s1b_1_diabetes_pl_B": true,
+  "samples_s1b_1_diabetes_pl_B": true,
+  "affinity_s1b_1_diabetes_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_pl_B": true,
+  "sampled_pid_s1b_1_diabetes_pl_A": true,
+  "samples_s1b_1_diabetes_pl_A": true,
+  "affinity_s1b_1_diabetes_pl_A": true,
+  "sampled_pid_s1b_1_diabetes_cpu_A": true,
+  "samples_s1b_1_diabetes_cpu_A": true,
+  "affinity_s1b_1_diabetes_cpu_A": true,
+  "sampled_pid_s1b_1_diabetes_cpu_B": true,
+  "samples_s1b_1_diabetes_cpu_B": true,
+  "affinity_s1b_1_diabetes_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_cpu_B": true,
+  "sampled_pid_s1b_1_diabetes_cpu_C": true,
+  "samples_s1b_1_diabetes_cpu_C": true,
+  "affinity_s1b_1_diabetes_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_cpu_C": true,
+  "sampled_pid_s1b_1_diabetes_cpu_D": true,
+  "samples_s1b_1_diabetes_cpu_D": true,
+  "affinity_s1b_1_diabetes_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_1_diabetes_cpu_D": true,
+  "sampled_pid_s1b_2_ai4i_pl_B": true,
+  "samples_s1b_2_ai4i_pl_B": true,
+  "affinity_s1b_2_ai4i_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_pl_B": true,
+  "sampled_pid_s1b_2_ai4i_pl_D": true,
+  "samples_s1b_2_ai4i_pl_D": true,
+  "affinity_s1b_2_ai4i_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_pl_D": true,
+  "sampled_pid_s1b_2_ai4i_pl_A": true,
+  "samples_s1b_2_ai4i_pl_A": true,
+  "affinity_s1b_2_ai4i_pl_A": true,
+  "sampled_pid_s1b_2_ai4i_pl_C": true,
+  "samples_s1b_2_ai4i_pl_C": true,
+  "affinity_s1b_2_ai4i_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_pl_C": true,
+  "sampled_pid_s1b_2_ai4i_cpu_C": true,
+  "samples_s1b_2_ai4i_cpu_C": true,
+  "affinity_s1b_2_ai4i_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_cpu_C": true,
+  "sampled_pid_s1b_2_ai4i_cpu_A": true,
+  "samples_s1b_2_ai4i_cpu_A": true,
+  "affinity_s1b_2_ai4i_cpu_A": true,
+  "sampled_pid_s1b_2_ai4i_cpu_D": true,
+  "samples_s1b_2_ai4i_cpu_D": true,
+  "affinity_s1b_2_ai4i_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_cpu_D": true,
+  "sampled_pid_s1b_2_ai4i_cpu_B": true,
+  "samples_s1b_2_ai4i_cpu_B": true,
+  "affinity_s1b_2_ai4i_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_2_ai4i_cpu_B": true,
+  "sampled_pid_s1b_2_diabetes_cpu_C": true,
+  "samples_s1b_2_diabetes_cpu_C": true,
+  "affinity_s1b_2_diabetes_cpu_C": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_cpu_C": true,
+  "sampled_pid_s1b_2_diabetes_cpu_A": true,
+  "samples_s1b_2_diabetes_cpu_A": true,
+  "affinity_s1b_2_diabetes_cpu_A": true,
+  "sampled_pid_s1b_2_diabetes_cpu_D": true,
+  "samples_s1b_2_diabetes_cpu_D": true,
+  "affinity_s1b_2_diabetes_cpu_D": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_cpu_D": true,
+  "sampled_pid_s1b_2_diabetes_cpu_B": true,
+  "samples_s1b_2_diabetes_cpu_B": true,
+  "affinity_s1b_2_diabetes_cpu_B": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_cpu_B": true,
+  "sampled_pid_s1b_2_diabetes_pl_B": true,
+  "samples_s1b_2_diabetes_pl_B": true,
+  "affinity_s1b_2_diabetes_pl_B": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_pl_B": true,
+  "sampled_pid_s1b_2_diabetes_pl_D": true,
+  "samples_s1b_2_diabetes_pl_D": true,
+  "affinity_s1b_2_diabetes_pl_D": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_pl_D": true,
+  "sampled_pid_s1b_2_diabetes_pl_A": true,
+  "samples_s1b_2_diabetes_pl_A": true,
+  "affinity_s1b_2_diabetes_pl_A": true,
+  "sampled_pid_s1b_2_diabetes_pl_C": true,
+  "samples_s1b_2_diabetes_pl_C": true,
+  "affinity_s1b_2_diabetes_pl_C": true,
+  "io_cpu_avoids_net_softirq_s1b_2_diabetes_pl_C": true
+ },
+ "notes": {
+  "windows": {
+   "s1b_0_ai4i_pl_A": {
+    "records_per_s": 257448,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1346884
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     96.8,
+     37.1,
+     22.5,
+     18.4,
+     16.8,
+     13.8
+    ],
+    "process_cpu_pct": 220.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 36.8,
+      "system": 10.6,
+      "softirq": 10.3,
+      "idle": 42.3
+     },
+     "cpu0": {
+      "user": 35.4,
+      "system": 6.0,
+      "softirq": 0.2,
+      "idle": 58.4
+     },
+     "cpu1": {
+      "user": 36.6,
+      "system": 6.3,
+      "softirq": 0.0,
+      "idle": 57.1
+     },
+     "cpu2": {
+      "user": 40.3,
+      "system": 6.2,
+      "softirq": 0.0,
+      "idle": 53.5
+     },
+     "cpu3": {
+      "user": 34.7,
+      "system": 23.7,
+      "softirq": 40.7,
+      "idle": 0.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.862,
+     "delivery_MB_s_median": 100.3
+    },
+    "server_stage_ms": {
+     "wait_header": 0.016,
+     "body": 6.76,
+     "validate_unpack": 0.463,
+     "cloud": 0.114,
+     "pack": 0.043,
+     "write": 0.125,
+     "previous_log": 0.236
+    },
+    "temp_C_max": 36.9
+   },
+   "s1b_0_ai4i_pl_B": {
+    "records_per_s": 323475,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1058314
+    },
+    "io_thread_cpu_pct": 78.0,
+    "top_thread_cpu_pct": [
+     78.0,
+     50.0,
+     41.8,
+     27.9,
+     26.9,
+     20.0
+    ],
+    "process_cpu_pct": 268.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 46.0,
+      "system": 13.6,
+      "softirq": 14.5,
+      "idle": 25.9
+     },
+     "cpu0": {
+      "user": 52.8,
+      "system": 7.7,
+      "softirq": 0.3,
+      "idle": 39.1
+     },
+     "cpu1": {
+      "user": 52.9,
+      "system": 33.3,
+      "softirq": 0.0,
+      "idle": 13.8
+     },
+     "cpu2": {
+      "user": 50.6,
+      "system": 9.7,
+      "softirq": 0.0,
+      "idle": 39.6
+     },
+     "cpu3": {
+      "user": 27.7,
+      "system": 3.7,
+      "softirq": 57.1,
+      "idle": 11.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 103.9
+    },
+    "server_stage_ms": {
+     "wait_header": 0.261,
+     "body": 4.239,
+     "validate_unpack": 0.465,
+     "cloud": 0.102,
+     "pack": 0.043,
+     "write": 0.136,
+     "previous_log": 0.265
+    },
+    "temp_C_max": 36.9
+   },
+   "s1b_0_ai4i_pl_C": {
+    "records_per_s": 306631,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1000139
+    },
+    "io_thread_cpu_pct": 74.3,
+    "top_thread_cpu_pct": [
+     74.3,
+     46.8,
+     35.5,
+     26.5,
+     26.1,
+     21.9
+    ],
+    "process_cpu_pct": 257.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 43.2,
+      "system": 12.9,
+      "softirq": 14.4,
+      "idle": 29.5
+     },
+     "cpu0": {
+      "user": 50.2,
+      "system": 8.7,
+      "softirq": 0.2,
+      "idle": 40.9
+     },
+     "cpu1": {
+      "user": 44.8,
+      "system": 30.8,
+      "softirq": 0.0,
+      "idle": 24.4
+     },
+     "cpu2": {
+      "user": 51.5,
+      "system": 7.8,
+      "softirq": 0.0,
+      "idle": 40.7
+     },
+     "cpu3": {
+      "user": 26.3,
+      "system": 4.1,
+      "softirq": 57.4,
+      "idle": 12.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 106.9
+    },
+    "server_stage_ms": {
+     "wait_header": 0.778,
+     "body": 4.054,
+     "validate_unpack": 0.461,
+     "cloud": 0.1,
+     "pack": 0.043,
+     "write": 0.133,
+     "previous_log": 0.259
+    },
+    "temp_C_max": 37.3
+   },
+   "s1b_0_ai4i_pl_D": {
+    "records_per_s": 291200,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 929410
+    },
+    "io_thread_cpu_pct": 71.8,
+    "top_thread_cpu_pct": [
+     71.8,
+     44.2,
+     30.3,
+     24.7,
+     24.3,
+     24.0
+    ],
+    "process_cpu_pct": 246.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 41.2,
+      "system": 12.6,
+      "softirq": 14.3,
+      "idle": 31.9
+     },
+     "cpu0": {
+      "user": 47.7,
+      "system": 7.7,
+      "softirq": 0.2,
+      "idle": 44.4
+     },
+     "cpu1": {
+      "user": 42.0,
+      "system": 31.2,
+      "softirq": 0.0,
+      "idle": 26.8
+     },
+     "cpu2": {
+      "user": 48.9,
+      "system": 7.4,
+      "softirq": 0.0,
+      "idle": 43.7
+     },
+     "cpu3": {
+      "user": 26.1,
+      "system": 3.9,
+      "softirq": 56.9,
+      "idle": 13.2
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 94.7
+    },
+    "server_stage_ms": {
+     "wait_header": 2.243,
+     "body": 3.618,
+     "validate_unpack": 0.453,
+     "cloud": 0.097,
+     "pack": 0.043,
+     "write": 0.127,
+     "previous_log": 0.238
+    },
+    "temp_C_max": 38.1
+   },
+   "s1b_0_ai4i_cpu_D": {
+    "records_per_s": 111701,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 387757
+    },
+    "io_thread_cpu_pct": 28.2,
+    "top_thread_cpu_pct": [
+     68.0,
+     51.8,
+     47.8,
+     28.2,
+     12.9,
+     9.4
+    ],
+    "process_cpu_pct": 241.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.9,
+      "system": 4.2,
+      "softirq": 5.5,
+      "idle": 37.4
+     },
+     "cpu0": {
+      "user": 64.6,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 34.0
+     },
+     "cpu1": {
+      "user": 17.6,
+      "system": 12.9,
+      "softirq": 0.0,
+      "idle": 69.5
+     },
+     "cpu2": {
+      "user": 67.4,
+      "system": 1.3,
+      "softirq": 0.0,
+      "idle": 31.2
+     },
+     "cpu3": {
+      "user": 61.8,
+      "system": 1.2,
+      "softirq": 22.1,
+      "idle": 14.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 110.4
+    },
+    "server_stage_ms": {
+     "wait_header": 12.464,
+     "body": 3.527,
+     "validate_unpack": 0.477,
+     "cloud": 0.103,
+     "pack": 0.044,
+     "write": 0.138,
+     "previous_log": 1.127
+    },
+    "temp_C_max": 36.8
+   },
+   "s1b_0_ai4i_cpu_C": {
+    "records_per_s": 112005,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 389846
+    },
+    "io_thread_cpu_pct": 28.1,
+    "top_thread_cpu_pct": [
+     68.5,
+     52.2,
+     48.7,
+     28.1,
+     9.4,
+     9.0
+    ],
+    "process_cpu_pct": 242.0,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 53.2,
+      "system": 4.1,
+      "softirq": 5.5,
+      "idle": 37.1
+     },
+     "cpu0": {
+      "user": 65.3,
+      "system": 1.2,
+      "softirq": 0.0,
+      "idle": 33.5
+     },
+     "cpu1": {
+      "user": 17.6,
+      "system": 12.7,
+      "softirq": 0.0,
+      "idle": 69.8
+     },
+     "cpu2": {
+      "user": 67.6,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 31.0
+     },
+     "cpu3": {
+      "user": 62.4,
+      "system": 1.3,
+      "softirq": 22.0,
+      "idle": 14.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 98.0
+    },
+    "server_stage_ms": {
+     "wait_header": 12.456,
+     "body": 3.471,
+     "validate_unpack": 0.483,
+     "cloud": 0.111,
+     "pack": 0.044,
+     "write": 0.143,
+     "previous_log": 1.132
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_0_ai4i_cpu_B": {
+    "records_per_s": 117484,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 406184
+    },
+    "io_thread_cpu_pct": 29.5,
+    "top_thread_cpu_pct": [
+     72.7,
+     53.9,
+     50.2,
+     29.5,
+     9.9,
+     7.4
+    ],
+    "process_cpu_pct": 251.2,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 55.6,
+      "system": 4.4,
+      "softirq": 5.7,
+      "idle": 34.3
+     },
+     "cpu0": {
+      "user": 59.0,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 39.5
+     },
+     "cpu1": {
+      "user": 46.9,
+      "system": 13.6,
+      "softirq": 0.0,
+      "idle": 39.5
+     },
+     "cpu2": {
+      "user": 61.0,
+      "system": 1.3,
+      "softirq": 0.0,
+      "idle": 37.7
+     },
+     "cpu3": {
+      "user": 55.5,
+      "system": 1.3,
+      "softirq": 22.6,
+      "idle": 20.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 94.8
+    },
+    "server_stage_ms": {
+     "wait_header": 11.534,
+     "body": 3.571,
+     "validate_unpack": 0.48,
+     "cloud": 0.111,
+     "pack": 0.044,
+     "write": 0.144,
+     "previous_log": 1.137
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_0_ai4i_cpu_A": {
+    "records_per_s": 127831,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 581736
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     78.4,
+     58.5,
+     54.0,
+     43.4,
+     10.6,
+     7.8
+    ],
+    "process_cpu_pct": 276.0,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 60.8,
+      "system": 4.6,
+      "softirq": 5.9,
+      "idle": 28.7
+     },
+     "cpu0": {
+      "user": 64.8,
+      "system": 3.5,
+      "softirq": 0.0,
+      "idle": 31.7
+     },
+     "cpu1": {
+      "user": 62.6,
+      "system": 3.9,
+      "softirq": 0.0,
+      "idle": 33.5
+     },
+     "cpu2": {
+      "user": 69.3,
+      "system": 2.4,
+      "softirq": 0.0,
+      "idle": 28.3
+     },
+     "cpu3": {
+      "user": 46.3,
+      "system": 8.8,
+      "softirq": 23.6,
+      "idle": 21.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.379,
+     "delivery_MB_s_median": 104.7
+    },
+    "server_stage_ms": {
+     "wait_header": 8.625,
+     "body": 5.283,
+     "validate_unpack": 0.464,
+     "cloud": 0.1,
+     "pack": 0.043,
+     "write": 0.127,
+     "previous_log": 1.1
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_0_diabetes_cpu_D": {
+    "records_per_s": 47804,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 286090
+    },
+    "io_thread_cpu_pct": 23.7,
+    "top_thread_cpu_pct": [
+     75.0,
+     53.8,
+     50.0,
+     23.7,
+     13.0,
+     5.3
+    ],
+    "process_cpu_pct": 234.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.5,
+      "system": 3.6,
+      "softirq": 5.0,
+      "idle": 38.9
+     },
+     "cpu0": {
+      "user": 67.0,
+      "system": 0.8,
+      "softirq": 0.0,
+      "idle": 32.2
+     },
+     "cpu1": {
+      "user": 15.1,
+      "system": 11.1,
+      "softirq": 0.0,
+      "idle": 73.8
+     },
+     "cpu2": {
+      "user": 67.4,
+      "system": 1.3,
+      "softirq": 0.0,
+      "idle": 31.3
+     },
+     "cpu3": {
+      "user": 60.7,
+      "system": 1.3,
+      "softirq": 20.0,
+      "idle": 18.1
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 88.4
+    },
+    "server_stage_ms": {
+     "wait_header": 31.436,
+     "body": 8.511,
+     "validate_unpack": 1.467,
+     "cloud": 0.166,
+     "pack": 0.045,
+     "write": 0.143,
+     "previous_log": 1.153
+    },
+    "temp_C_max": 36.7
+   },
+   "s1b_0_diabetes_cpu_C": {
+    "records_per_s": 47771,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 1,
+     "1": 0,
+     "2": 0,
+     "3": 281468
+    },
+    "io_thread_cpu_pct": 23.6,
+    "top_thread_cpu_pct": [
+     74.9,
+     53.9,
+     50.4,
+     23.6,
+     12.4,
+     5.5
+    ],
+    "process_cpu_pct": 234.9,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.8,
+      "system": 3.5,
+      "softirq": 4.9,
+      "idle": 38.7
+     },
+     "cpu0": {
+      "user": 67.8,
+      "system": 0.9,
+      "softirq": 0.0,
+      "idle": 31.2
+     },
+     "cpu1": {
+      "user": 15.1,
+      "system": 10.8,
+      "softirq": 0.0,
+      "idle": 74.1
+     },
+     "cpu2": {
+      "user": 67.8,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 30.8
+     },
+     "cpu3": {
+      "user": 60.5,
+      "system": 1.0,
+      "softirq": 19.8,
+      "idle": 18.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 74.9
+    },
+    "server_stage_ms": {
+     "wait_header": 31.679,
+     "body": 8.43,
+     "validate_unpack": 1.469,
+     "cloud": 0.163,
+     "pack": 0.045,
+     "write": 0.144,
+     "previous_log": 1.152
+    },
+    "temp_C_max": 37.3
+   },
+   "s1b_0_diabetes_cpu_B": {
+    "records_per_s": 50002,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 303904
+    },
+    "io_thread_cpu_pct": 24.9,
+    "top_thread_cpu_pct": [
+     77.9,
+     55.9,
+     52.1,
+     24.9,
+     12.4,
+     6.1
+    ],
+    "process_cpu_pct": 244.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 55.0,
+      "system": 3.8,
+      "softirq": 5.2,
+      "idle": 36.0
+     },
+     "cpu0": {
+      "user": 58.9,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 39.6
+     },
+     "cpu1": {
+      "user": 57.0,
+      "system": 11.3,
+      "softirq": 0.0,
+      "idle": 31.7
+     },
+     "cpu2": {
+      "user": 61.4,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 37.5
+     },
+     "cpu3": {
+      "user": 42.3,
+      "system": 1.3,
+      "softirq": 20.9,
+      "idle": 35.4
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 84.3
+    },
+    "server_stage_ms": {
+     "wait_header": 29.785,
+     "body": 8.448,
+     "validate_unpack": 1.473,
+     "cloud": 0.176,
+     "pack": 0.045,
+     "write": 0.147,
+     "previous_log": 1.158
+    },
+    "temp_C_max": 36.7
+   },
+   "s1b_0_diabetes_cpu_A": {
+    "records_per_s": 54568,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 541872
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     84.1,
+     61.0,
+     57.3,
+     40.5,
+     8.4,
+     4.7
+    ],
+    "process_cpu_pct": 270.5,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 60.7,
+      "system": 4.2,
+      "softirq": 5.1,
+      "idle": 30.0
+     },
+     "cpu0": {
+      "user": 68.5,
+      "system": 2.9,
+      "softirq": 0.0,
+      "idle": 28.6
+     },
+     "cpu1": {
+      "user": 71.3,
+      "system": 2.0,
+      "softirq": 0.0,
+      "idle": 26.7
+     },
+     "cpu2": {
+      "user": 69.5,
+      "system": 2.1,
+      "softirq": 0.0,
+      "idle": 28.4
+     },
+     "cpu3": {
+      "user": 33.3,
+      "system": 9.6,
+      "softirq": 20.6,
+      "idle": 36.5
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.345,
+     "delivery_MB_s_median": 99.2
+    },
+    "server_stage_ms": {
+     "wait_header": 19.226,
+     "body": 13.814,
+     "validate_unpack": 1.483,
+     "cloud": 0.156,
+     "pack": 0.045,
+     "write": 0.143,
+     "previous_log": 1.129
+    },
+    "temp_C_max": 36.5
+   },
+   "s1b_0_diabetes_pl_A": {
+    "records_per_s": 117065,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1363761
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     95.6,
+     46.3,
+     17.0,
+     10.2,
+     8.8,
+     7.7
+    ],
+    "process_cpu_pct": 203.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 32.5,
+      "system": 10.9,
+      "softirq": 10.3,
+      "idle": 46.3
+     },
+     "cpu0": {
+      "user": 31.1,
+      "system": 7.6,
+      "softirq": 0.3,
+      "idle": 60.9
+     },
+     "cpu1": {
+      "user": 32.0,
+      "system": 5.7,
+      "softirq": 0.0,
+      "idle": 62.3
+     },
+     "cpu2": {
+      "user": 33.1,
+      "system": 6.6,
+      "softirq": 0.0,
+      "idle": 60.4
+     },
+     "cpu3": {
+      "user": 33.6,
+      "system": 23.5,
+      "softirq": 40.5,
+      "idle": 2.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.828,
+     "delivery_MB_s_median": 104.4
+    },
+    "server_stage_ms": {
+     "wait_header": 0.018,
+     "body": 14.838,
+     "validate_unpack": 1.462,
+     "cloud": 0.146,
+     "pack": 0.044,
+     "write": 0.14,
+     "previous_log": 1.098
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_0_diabetes_pl_B": {
+    "records_per_s": 123907,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 743714
+    },
+    "io_thread_cpu_pct": 62.6,
+    "top_thread_cpu_pct": [
+     62.6,
+     52.1,
+     24.3,
+     16.5,
+     14.8,
+     11.8
+    ],
+    "process_cpu_pct": 206.5,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 33.8,
+      "system": 11.4,
+      "softirq": 13.2,
+      "idle": 41.6
+     },
+     "cpu0": {
+      "user": 34.1,
+      "system": 6.8,
+      "softirq": 0.3,
+      "idle": 58.8
+     },
+     "cpu1": {
+      "user": 46.5,
+      "system": 28.1,
+      "softirq": 0.0,
+      "idle": 25.3
+     },
+     "cpu2": {
+      "user": 34.5,
+      "system": 7.6,
+      "softirq": 0.0,
+      "idle": 57.9
+     },
+     "cpu3": {
+      "user": 20.0,
+      "system": 3.1,
+      "softirq": 52.1,
+      "idle": 24.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 126.2
+    },
+    "server_stage_ms": {
+     "wait_header": 5.261,
+     "body": 8.629,
+     "validate_unpack": 1.397,
+     "cloud": 0.144,
+     "pack": 0.043,
+     "write": 0.132,
+     "previous_log": 1.081
+    },
+    "temp_C_max": 36.9
+   },
+   "s1b_0_diabetes_pl_C": {
+    "records_per_s": 116952,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 750839
+    },
+    "io_thread_cpu_pct": 59.1,
+    "top_thread_cpu_pct": [
+     59.1,
+     49.7,
+     26.9,
+     15.7,
+     14.5,
+     10.8
+    ],
+    "process_cpu_pct": 198.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 32.1,
+      "system": 10.8,
+      "softirq": 12.6,
+      "idle": 44.4
+     },
+     "cpu0": {
+      "user": 34.9,
+      "system": 6.5,
+      "softirq": 0.2,
+      "idle": 58.4
+     },
+     "cpu1": {
+      "user": 34.2,
+      "system": 25.8,
+      "softirq": 0.0,
+      "idle": 40.0
+     },
+     "cpu2": {
+      "user": 35.3,
+      "system": 7.3,
+      "softirq": 0.0,
+      "idle": 57.4
+     },
+     "cpu3": {
+      "user": 24.3,
+      "system": 3.6,
+      "softirq": 50.1,
+      "idle": 22.0
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 113.9
+    },
+    "server_stage_ms": {
+     "wait_header": 5.829,
+     "body": 8.761,
+     "validate_unpack": 1.435,
+     "cloud": 0.149,
+     "pack": 0.044,
+     "write": 0.136,
+     "previous_log": 1.1
+    },
+    "temp_C_max": 37.3
+   },
+   "s1b_0_diabetes_pl_D": {
+    "records_per_s": 115596,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 689103
+    },
+    "io_thread_cpu_pct": 58.4,
+    "top_thread_cpu_pct": [
+     58.4,
+     49.5,
+     27.4,
+     15.8,
+     14.9,
+     10.2
+    ],
+    "process_cpu_pct": 196.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 31.5,
+      "system": 10.6,
+      "softirq": 12.5,
+      "idle": 45.5
+     },
+     "cpu0": {
+      "user": 33.0,
+      "system": 6.4,
+      "softirq": 0.3,
+      "idle": 60.3
+     },
+     "cpu1": {
+      "user": 34.3,
+      "system": 25.1,
+      "softirq": 0.0,
+      "idle": 40.6
+     },
+     "cpu2": {
+      "user": 34.6,
+      "system": 7.2,
+      "softirq": 0.0,
+      "idle": 58.2
+     },
+     "cpu3": {
+      "user": 24.0,
+      "system": 3.5,
+      "softirq": 49.4,
+      "idle": 23.1
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 110.2
+    },
+    "server_stage_ms": {
+     "wait_header": 6.125,
+     "body": 8.578,
+     "validate_unpack": 1.392,
+     "cloud": 0.141,
+     "pack": 0.043,
+     "write": 0.127,
+     "previous_log": 1.081
+    },
+    "temp_C_max": 36.9
+   },
+   "s1b_1_ai4i_cpu_A": {
+    "records_per_s": 129082,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 607917
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     78.4,
+     58.7,
+     54.3,
+     44.9,
+     10.9,
+     8.0
+    ],
+    "process_cpu_pct": 278.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 61.5,
+      "system": 4.7,
+      "softirq": 5.7,
+      "idle": 28.1
+     },
+     "cpu0": {
+      "user": 65.0,
+      "system": 3.7,
+      "softirq": 0.0,
+      "idle": 31.2
+     },
+     "cpu1": {
+      "user": 67.6,
+      "system": 3.0,
+      "softirq": 0.0,
+      "idle": 29.4
+     },
+     "cpu2": {
+      "user": 68.6,
+      "system": 2.3,
+      "softirq": 0.0,
+      "idle": 29.0
+     },
+     "cpu3": {
+      "user": 44.4,
+      "system": 9.9,
+      "softirq": 23.1,
+      "idle": 22.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.483,
+     "delivery_MB_s_median": 104.4
+    },
+    "server_stage_ms": {
+     "wait_header": 7.79,
+     "body": 5.428,
+     "validate_unpack": 0.462,
+     "cloud": 0.097,
+     "pack": 0.042,
+     "write": 0.122,
+     "previous_log": 1.083
+    },
+    "temp_C_max": 37.9
+   },
+   "s1b_1_ai4i_cpu_B": {
+    "records_per_s": 117723,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 401525
+    },
+    "io_thread_cpu_pct": 29.5,
+    "top_thread_cpu_pct": [
+     73.8,
+     54.4,
+     50.0,
+     29.5,
+     9.9,
+     7.3
+    ],
+    "process_cpu_pct": 251.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 56.0,
+      "system": 4.3,
+      "softirq": 5.6,
+      "idle": 34.1
+     },
+     "cpu0": {
+      "user": 60.8,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 38.1
+     },
+     "cpu1": {
+      "user": 46.3,
+      "system": 13.4,
+      "softirq": 0.0,
+      "idle": 40.4
+     },
+     "cpu2": {
+      "user": 59.5,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 39.1
+     },
+     "cpu3": {
+      "user": 57.5,
+      "system": 1.2,
+      "softirq": 22.6,
+      "idle": 18.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 113.5
+    },
+    "server_stage_ms": {
+     "wait_header": 11.788,
+     "body": 3.423,
+     "validate_unpack": 0.473,
+     "cloud": 0.102,
+     "pack": 0.043,
+     "write": 0.134,
+     "previous_log": 1.105
+    },
+    "temp_C_max": 36.6
+   },
+   "s1b_1_ai4i_cpu_C": {
+    "records_per_s": 112559,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 375140
+    },
+    "io_thread_cpu_pct": 28.2,
+    "top_thread_cpu_pct": [
+     68.8,
+     51.8,
+     48.6,
+     28.2,
+     9.4,
+     9.4
+    ],
+    "process_cpu_pct": 242.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 53.3,
+      "system": 4.3,
+      "softirq": 5.4,
+      "idle": 37.0
+     },
+     "cpu0": {
+      "user": 65.8,
+      "system": 1.2,
+      "softirq": 0.0,
+      "idle": 33.0
+     },
+     "cpu1": {
+      "user": 17.3,
+      "system": 13.0,
+      "softirq": 0.0,
+      "idle": 69.7
+     },
+     "cpu2": {
+      "user": 67.1,
+      "system": 1.5,
+      "softirq": 0.0,
+      "idle": 31.5
+     },
+     "cpu3": {
+      "user": 62.8,
+      "system": 1.4,
+      "softirq": 21.6,
+      "idle": 14.1
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 127.8
+    },
+    "server_stage_ms": {
+     "wait_header": 12.523,
+     "body": 3.418,
+     "validate_unpack": 0.479,
+     "cloud": 0.106,
+     "pack": 0.043,
+     "write": 0.139,
+     "previous_log": 1.121
+    },
+    "temp_C_max": 36.8
+   },
+   "s1b_1_ai4i_cpu_D": {
+    "records_per_s": 112094,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 376105
+    },
+    "io_thread_cpu_pct": 28.1,
+    "top_thread_cpu_pct": [
+     68.8,
+     52.2,
+     48.6,
+     28.1,
+     9.4,
+     7.2
+    ],
+    "process_cpu_pct": 241.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 53.0,
+      "system": 4.3,
+      "softirq": 5.5,
+      "idle": 37.2
+     },
+     "cpu0": {
+      "user": 65.1,
+      "system": 1.5,
+      "softirq": 0.0,
+      "idle": 33.4
+     },
+     "cpu1": {
+      "user": 17.1,
+      "system": 12.9,
+      "softirq": 0.0,
+      "idle": 69.9
+     },
+     "cpu2": {
+      "user": 67.1,
+      "system": 1.5,
+      "softirq": 0.0,
+      "idle": 31.4
+     },
+     "cpu3": {
+      "user": 62.3,
+      "system": 1.3,
+      "softirq": 21.9,
+      "idle": 14.4
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 114.3
+    },
+    "server_stage_ms": {
+     "wait_header": 12.549,
+     "body": 3.386,
+     "validate_unpack": 0.485,
+     "cloud": 0.104,
+     "pack": 0.044,
+     "write": 0.143,
+     "previous_log": 1.138
+    },
+    "temp_C_max": 37.6
+   },
+   "s1b_1_ai4i_pl_D": {
+    "records_per_s": 290972,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 916125
+    },
+    "io_thread_cpu_pct": 71.8,
+    "top_thread_cpu_pct": [
+     71.8,
+     44.0,
+     30.7,
+     24.4,
+     23.9,
+     22.5
+    ],
+    "process_cpu_pct": 245.9,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 41.3,
+      "system": 12.6,
+      "softirq": 14.1,
+      "idle": 32.0
+     },
+     "cpu0": {
+      "user": 47.4,
+      "system": 7.3,
+      "softirq": 0.3,
+      "idle": 44.9
+     },
+     "cpu1": {
+      "user": 41.7,
+      "system": 31.5,
+      "softirq": 0.0,
+      "idle": 26.8
+     },
+     "cpu2": {
+      "user": 48.9,
+      "system": 7.4,
+      "softirq": 0.0,
+      "idle": 43.7
+     },
+     "cpu3": {
+      "user": 27.2,
+      "system": 3.8,
+      "softirq": 55.9,
+      "idle": 13.1
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 119.4
+    },
+    "server_stage_ms": {
+     "wait_header": 2.268,
+     "body": 3.591,
+     "validate_unpack": 0.453,
+     "cloud": 0.095,
+     "pack": 0.043,
+     "write": 0.121,
+     "previous_log": 0.226
+    },
+    "temp_C_max": 37.3
+   },
+   "s1b_1_ai4i_pl_C": {
+    "records_per_s": 304552,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1001372
+    },
+    "io_thread_cpu_pct": 74.3,
+    "top_thread_cpu_pct": [
+     74.3,
+     46.3,
+     35.6,
+     27.2,
+     25.8,
+     21.9
+    ],
+    "process_cpu_pct": 257.0,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 43.6,
+      "system": 12.9,
+      "softirq": 14.2,
+      "idle": 29.4
+     },
+     "cpu0": {
+      "user": 50.6,
+      "system": 7.9,
+      "softirq": 0.2,
+      "idle": 41.3
+     },
+     "cpu1": {
+      "user": 43.9,
+      "system": 31.9,
+      "softirq": 0.0,
+      "idle": 24.2
+     },
+     "cpu2": {
+      "user": 51.8,
+      "system": 7.7,
+      "softirq": 0.0,
+      "idle": 40.5
+     },
+     "cpu3": {
+      "user": 28.1,
+      "system": 3.8,
+      "softirq": 56.1,
+      "idle": 12.0
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.069,
+     "delivery_MB_s_median": 101.0
+    },
+    "server_stage_ms": {
+     "wait_header": 1.019,
+     "body": 4.011,
+     "validate_unpack": 0.446,
+     "cloud": 0.094,
+     "pack": 0.043,
+     "write": 0.118,
+     "previous_log": 0.217
+    },
+    "temp_C_max": 38.0
+   },
+   "s1b_1_ai4i_pl_B": {
+    "records_per_s": 329546,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1066811
+    },
+    "io_thread_cpu_pct": 79.3,
+    "top_thread_cpu_pct": [
+     79.3,
+     50.5,
+     43.1,
+     29.0,
+     27.7,
+     20.0
+    ],
+    "process_cpu_pct": 273.9,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 46.2,
+      "system": 14.1,
+      "softirq": 15.1,
+      "idle": 24.6
+     },
+     "cpu0": {
+      "user": 53.8,
+      "system": 8.3,
+      "softirq": 0.3,
+      "idle": 37.6
+     },
+     "cpu1": {
+      "user": 53.3,
+      "system": 34.2,
+      "softirq": 0.0,
+      "idle": 12.6
+     },
+     "cpu2": {
+      "user": 51.8,
+      "system": 10.1,
+      "softirq": 0.0,
+      "idle": 38.2
+     },
+     "cpu3": {
+      "user": 26.1,
+      "system": 3.5,
+      "softirq": 59.8,
+      "idle": 10.5
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.172,
+     "delivery_MB_s_median": 96.7
+    },
+    "server_stage_ms": {
+     "wait_header": 0.104,
+     "body": 4.141,
+     "validate_unpack": 0.459,
+     "cloud": 0.098,
+     "pack": 0.043,
+     "write": 0.127,
+     "previous_log": 0.235
+    },
+    "temp_C_max": 36.8
+   },
+   "s1b_1_ai4i_pl_A": {
+    "records_per_s": 249649,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1369791
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     97.6,
+     36.0,
+     21.2,
+     16.7,
+     15.9,
+     13.4
+    ],
+    "process_cpu_pct": 215.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 35.5,
+      "system": 9.8,
+      "softirq": 10.8,
+      "idle": 43.9
+     },
+     "cpu0": {
+      "user": 36.9,
+      "system": 6.8,
+      "softirq": 0.1,
+      "idle": 56.1
+     },
+     "cpu1": {
+      "user": 33.5,
+      "system": 4.4,
+      "softirq": 0.0,
+      "idle": 62.0
+     },
+     "cpu2": {
+      "user": 37.1,
+      "system": 5.4,
+      "softirq": 0.0,
+      "idle": 57.5
+     },
+     "cpu3": {
+      "user": 34.4,
+      "system": 22.4,
+      "softirq": 42.7,
+      "idle": 0.4
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.862,
+     "delivery_MB_s_median": 100.0
+    },
+    "server_stage_ms": {
+     "wait_header": 0.062,
+     "body": 6.847,
+     "validate_unpack": 0.451,
+     "cloud": 0.095,
+     "pack": 0.043,
+     "write": 0.119,
+     "previous_log": 0.227
+    },
+    "temp_C_max": 36.7
+   },
+   "s1b_1_diabetes_pl_D": {
+    "records_per_s": 116859,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 690425
+    },
+    "io_thread_cpu_pct": 58.9,
+    "top_thread_cpu_pct": [
+     58.9,
+     49.9,
+     26.4,
+     15.4,
+     15.2,
+     10.2
+    ],
+    "process_cpu_pct": 196.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 31.0,
+      "system": 11.2,
+      "softirq": 12.8,
+      "idle": 45.1
+     },
+     "cpu0": {
+      "user": 33.2,
+      "system": 6.4,
+      "softirq": 0.2,
+      "idle": 60.2
+     },
+     "cpu1": {
+      "user": 32.8,
+      "system": 27.3,
+      "softirq": 0.0,
+      "idle": 39.9
+     },
+     "cpu2": {
+      "user": 34.7,
+      "system": 7.4,
+      "softirq": 0.0,
+      "idle": 57.9
+     },
+     "cpu3": {
+      "user": 23.2,
+      "system": 3.6,
+      "softirq": 50.5,
+      "idle": 22.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 107.6
+    },
+    "server_stage_ms": {
+     "wait_header": 5.964,
+     "body": 8.58,
+     "validate_unpack": 1.392,
+     "cloud": 0.14,
+     "pack": 0.043,
+     "write": 0.129,
+     "previous_log": 1.082
+    },
+    "temp_C_max": 37.6
+   },
+   "s1b_1_diabetes_pl_C": {
+    "records_per_s": 117697,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 741124
+    },
+    "io_thread_cpu_pct": 59.5,
+    "top_thread_cpu_pct": [
+     59.5,
+     50.2,
+     25.3,
+     15.4,
+     15.0,
+     10.9
+    ],
+    "process_cpu_pct": 197.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 31.2,
+      "system": 11.2,
+      "softirq": 13.1,
+      "idle": 44.5
+     },
+     "cpu0": {
+      "user": 34.4,
+      "system": 6.6,
+      "softirq": 0.2,
+      "idle": 58.7
+     },
+     "cpu1": {
+      "user": 33.1,
+      "system": 27.2,
+      "softirq": 0.0,
+      "idle": 39.7
+     },
+     "cpu2": {
+      "user": 34.8,
+      "system": 7.5,
+      "softirq": 0.0,
+      "idle": 57.7
+     },
+     "cpu3": {
+      "user": 22.7,
+      "system": 3.2,
+      "softirq": 51.7,
+      "idle": 22.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 92.1
+    },
+    "server_stage_ms": {
+     "wait_header": 5.781,
+     "body": 8.697,
+     "validate_unpack": 1.429,
+     "cloud": 0.145,
+     "pack": 0.044,
+     "write": 0.136,
+     "previous_log": 1.094
+    },
+    "temp_C_max": 36.8
+   },
+   "s1b_1_diabetes_pl_B": {
+    "records_per_s": 124514,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 759673
+    },
+    "io_thread_cpu_pct": 62.9,
+    "top_thread_cpu_pct": [
+     62.9,
+     52.1,
+     25.6,
+     16.8,
+     13.4,
+     12.1
+    ],
+    "process_cpu_pct": 207.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 33.3,
+      "system": 11.9,
+      "softirq": 13.5,
+      "idle": 41.2
+     },
+     "cpu0": {
+      "user": 34.3,
+      "system": 6.9,
+      "softirq": 0.2,
+      "idle": 58.5
+     },
+     "cpu1": {
+      "user": 45.2,
+      "system": 29.4,
+      "softirq": 0.0,
+      "idle": 25.4
+     },
+     "cpu2": {
+      "user": 35.1,
+      "system": 8.2,
+      "softirq": 0.0,
+      "idle": 56.7
+     },
+     "cpu3": {
+      "user": 18.8,
+      "system": 3.0,
+      "softirq": 53.4,
+      "idle": 24.8
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.138,
+     "delivery_MB_s_median": 108.8
+    },
+    "server_stage_ms": {
+     "wait_header": 4.959,
+     "body": 8.721,
+     "validate_unpack": 1.429,
+     "cloud": 0.142,
+     "pack": 0.043,
+     "write": 0.133,
+     "previous_log": 1.091
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_1_diabetes_pl_A": {
+    "records_per_s": 117588,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1342905
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     94.3,
+     46.5,
+     18.0,
+     10.7,
+     8.9,
+     7.7
+    ],
+    "process_cpu_pct": 204.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 31.9,
+      "system": 10.9,
+      "softirq": 11.1,
+      "idle": 46.1
+     },
+     "cpu0": {
+      "user": 32.5,
+      "system": 8.1,
+      "softirq": 0.3,
+      "idle": 59.2
+     },
+     "cpu1": {
+      "user": 29.3,
+      "system": 5.6,
+      "softirq": 0.0,
+      "idle": 65.1
+     },
+     "cpu2": {
+      "user": 34.7,
+      "system": 7.4,
+      "softirq": 0.0,
+      "idle": 57.9
+     },
+     "cpu3": {
+      "user": 31.1,
+      "system": 22.2,
+      "softirq": 43.8,
+      "idle": 2.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.69,
+     "delivery_MB_s_median": 103.8
+    },
+    "server_stage_ms": {
+     "wait_header": 0.018,
+     "body": 14.709,
+     "validate_unpack": 1.48,
+     "cloud": 0.146,
+     "pack": 0.044,
+     "write": 0.141,
+     "previous_log": 1.107
+    },
+    "temp_C_max": 36.6
+   },
+   "s1b_1_diabetes_cpu_A": {
+    "records_per_s": 54824,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 567466
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     84.2,
+     61.3,
+     57.4,
+     41.7,
+     7.9,
+     4.7
+    ],
+    "process_cpu_pct": 271.9,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 60.6,
+      "system": 4.4,
+      "softirq": 5.2,
+      "idle": 29.8
+     },
+     "cpu0": {
+      "user": 70.5,
+      "system": 3.0,
+      "softirq": 0.0,
+      "idle": 26.5
+     },
+     "cpu1": {
+      "user": 68.9,
+      "system": 2.1,
+      "softirq": 0.0,
+      "idle": 29.0
+     },
+     "cpu2": {
+      "user": 70.5,
+      "system": 2.2,
+      "softirq": 0.0,
+      "idle": 27.3
+     },
+     "cpu3": {
+      "user": 32.5,
+      "system": 10.3,
+      "softirq": 20.7,
+      "idle": 36.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.621,
+     "delivery_MB_s_median": 98.6
+    },
+    "server_stage_ms": {
+     "wait_header": 19.054,
+     "body": 14.012,
+     "validate_unpack": 1.467,
+     "cloud": 0.159,
+     "pack": 0.045,
+     "write": 0.146,
+     "previous_log": 1.136
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_1_diabetes_cpu_B": {
+    "records_per_s": 49915,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 297951
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     78.4,
+     56.1,
+     52.3,
+     5.3,
+     4.3,
+     0.0
+    ],
+    "process_cpu_pct": 196.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 54.9,
+      "system": 3.7,
+      "softirq": 5.1,
+      "idle": 36.3
+     },
+     "cpu0": {
+      "user": 59.0,
+      "system": 1.3,
+      "softirq": 0.0,
+      "idle": 39.7
+     },
+     "cpu1": {
+      "user": 54.7,
+      "system": 11.0,
+      "softirq": 0.0,
+      "idle": 34.3
+     },
+     "cpu2": {
+      "user": 61.7,
+      "system": 1.2,
+      "softirq": 0.0,
+      "idle": 37.1
+     },
+     "cpu3": {
+      "user": 44.1,
+      "system": 1.3,
+      "softirq": 20.6,
+      "idle": 34.0
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 82.1
+    },
+    "server_stage_ms": {
+     "wait_header": 29.558,
+     "body": 8.496,
+     "validate_unpack": 1.468,
+     "cloud": 0.172,
+     "pack": 0.045,
+     "write": 0.144,
+     "previous_log": 1.155
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_1_diabetes_cpu_C": {
+    "records_per_s": 47684,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 1,
+     "1": 0,
+     "2": 0,
+     "3": 270416
+    },
+    "io_thread_cpu_pct": 23.6,
+    "top_thread_cpu_pct": [
+     74.7,
+     53.3,
+     49.8,
+     23.6,
+     13.4,
+     5.2
+    ],
+    "process_cpu_pct": 234.0,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.4,
+      "system": 3.6,
+      "softirq": 5.0,
+      "idle": 39.0
+     },
+     "cpu0": {
+      "user": 67.5,
+      "system": 0.9,
+      "softirq": 0.0,
+      "idle": 31.6
+     },
+     "cpu1": {
+      "user": 14.2,
+      "system": 11.4,
+      "softirq": 0.0,
+      "idle": 74.4
+     },
+     "cpu2": {
+      "user": 67.1,
+      "system": 1.0,
+      "softirq": 0.0,
+      "idle": 31.9
+     },
+     "cpu3": {
+      "user": 60.6,
+      "system": 1.2,
+      "softirq": 19.8,
+      "idle": 18.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 98.5
+    },
+    "server_stage_ms": {
+     "wait_header": 31.741,
+     "body": 8.342,
+     "validate_unpack": 1.47,
+     "cloud": 0.176,
+     "pack": 0.045,
+     "write": 0.143,
+     "previous_log": 1.146
+    },
+    "temp_C_max": 38.5
+   },
+   "s1b_1_diabetes_cpu_D": {
+    "records_per_s": 47757,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 282339
+    },
+    "io_thread_cpu_pct": 23.7,
+    "top_thread_cpu_pct": [
+     75.5,
+     53.7,
+     50.0,
+     23.7,
+     12.2,
+     5.5
+    ],
+    "process_cpu_pct": 234.2,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.4,
+      "system": 3.7,
+      "softirq": 5.0,
+      "idle": 39.0
+     },
+     "cpu0": {
+      "user": 66.6,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 32.2
+     },
+     "cpu1": {
+      "user": 15.4,
+      "system": 10.9,
+      "softirq": 0.0,
+      "idle": 73.6
+     },
+     "cpu2": {
+      "user": 66.3,
+      "system": 1.5,
+      "softirq": 0.0,
+      "idle": 32.3
+     },
+     "cpu3": {
+      "user": 61.4,
+      "system": 1.2,
+      "softirq": 19.8,
+      "idle": 17.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 84.5
+    },
+    "server_stage_ms": {
+     "wait_header": 31.662,
+     "body": 8.434,
+     "validate_unpack": 1.465,
+     "cloud": 0.175,
+     "pack": 0.045,
+     "write": 0.142,
+     "previous_log": 1.137
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_2_ai4i_pl_B": {
+    "records_per_s": 326630,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1033469
+    },
+    "io_thread_cpu_pct": 78.5,
+    "top_thread_cpu_pct": [
+     78.5,
+     50.4,
+     42.7,
+     28.3,
+     28.0,
+     20.0
+    ],
+    "process_cpu_pct": 272.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 46.6,
+      "system": 13.4,
+      "softirq": 14.7,
+      "idle": 25.3
+     },
+     "cpu0": {
+      "user": 52.6,
+      "system": 8.6,
+      "softirq": 0.3,
+      "idle": 38.5
+     },
+     "cpu1": {
+      "user": 54.9,
+      "system": 32.5,
+      "softirq": 0.0,
+      "idle": 12.6
+     },
+     "cpu2": {
+      "user": 51.5,
+      "system": 9.1,
+      "softirq": 0.0,
+      "idle": 39.4
+     },
+     "cpu3": {
+      "user": 27.5,
+      "system": 3.3,
+      "softirq": 58.3,
+      "idle": 10.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.069,
+     "delivery_MB_s_median": 85.5
+    },
+    "server_stage_ms": {
+     "wait_header": 0.243,
+     "body": 4.228,
+     "validate_unpack": 0.447,
+     "cloud": 0.093,
+     "pack": 0.043,
+     "write": 0.118,
+     "previous_log": 0.22
+    },
+    "temp_C_max": 37.2
+   },
+   "s1b_2_ai4i_pl_D": {
+    "records_per_s": 289359,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 962397
+    },
+    "io_thread_cpu_pct": 71.0,
+    "top_thread_cpu_pct": [
+     71.0,
+     43.6,
+     30.3,
+     24.0,
+     23.6,
+     23.0
+    ],
+    "process_cpu_pct": 243.5,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 40.9,
+      "system": 12.4,
+      "softirq": 14.1,
+      "idle": 32.5
+     },
+     "cpu0": {
+      "user": 46.8,
+      "system": 7.1,
+      "softirq": 0.2,
+      "idle": 45.9
+     },
+     "cpu1": {
+      "user": 41.8,
+      "system": 31.0,
+      "softirq": 0.0,
+      "idle": 27.2
+     },
+     "cpu2": {
+      "user": 48.8,
+      "system": 7.3,
+      "softirq": 0.0,
+      "idle": 43.9
+     },
+     "cpu3": {
+      "user": 26.4,
+      "system": 4.1,
+      "softirq": 56.2,
+      "idle": 13.3
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 92.1
+    },
+    "server_stage_ms": {
+     "wait_header": 2.219,
+     "body": 3.703,
+     "validate_unpack": 0.465,
+     "cloud": 0.098,
+     "pack": 0.043,
+     "write": 0.126,
+     "previous_log": 0.234
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_2_ai4i_pl_A": {
+    "records_per_s": 254322,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1361976
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     96.7,
+     36.2,
+     21.7,
+     17.0,
+     16.0,
+     13.5
+    ],
+    "process_cpu_pct": 216.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 36.5,
+      "system": 10.1,
+      "softirq": 10.0,
+      "idle": 43.4
+     },
+     "cpu0": {
+      "user": 33.4,
+      "system": 6.5,
+      "softirq": 0.2,
+      "idle": 59.9
+     },
+     "cpu1": {
+      "user": 38.2,
+      "system": 5.7,
+      "softirq": 0.0,
+      "idle": 56.1
+     },
+     "cpu2": {
+      "user": 36.9,
+      "system": 5.2,
+      "softirq": 0.0,
+      "idle": 57.9
+     },
+     "cpu3": {
+      "user": 37.5,
+      "system": 22.8,
+      "softirq": 39.2,
+      "idle": 0.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.828,
+     "delivery_MB_s_median": 102.8
+    },
+    "server_stage_ms": {
+     "wait_header": 0.023,
+     "body": 6.798,
+     "validate_unpack": 0.464,
+     "cloud": 0.096,
+     "pack": 0.043,
+     "write": 0.125,
+     "previous_log": 0.237
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_2_ai4i_pl_C": {
+    "records_per_s": 308389,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1006846
+    },
+    "io_thread_cpu_pct": 75.2,
+    "top_thread_cpu_pct": [
+     75.2,
+     46.5,
+     38.0,
+     26.7,
+     26.3,
+     21.7
+    ],
+    "process_cpu_pct": 260.2,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 43.7,
+      "system": 13.1,
+      "softirq": 14.3,
+      "idle": 28.9
+     },
+     "cpu0": {
+      "user": 51.0,
+      "system": 8.7,
+      "softirq": 0.2,
+      "idle": 40.0
+     },
+     "cpu1": {
+      "user": 44.7,
+      "system": 31.7,
+      "softirq": 0.0,
+      "idle": 23.5
+     },
+     "cpu2": {
+      "user": 51.2,
+      "system": 8.3,
+      "softirq": 0.0,
+      "idle": 40.5
+     },
+     "cpu3": {
+      "user": 28.1,
+      "system": 3.3,
+      "softirq": 56.8,
+      "idle": 11.8
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.034,
+     "delivery_MB_s_median": 90.3
+    },
+    "server_stage_ms": {
+     "wait_header": 0.753,
+     "body": 4.025,
+     "validate_unpack": 0.469,
+     "cloud": 0.096,
+     "pack": 0.043,
+     "write": 0.124,
+     "previous_log": 0.237
+    },
+    "temp_C_max": 36.7
+   },
+   "s1b_2_ai4i_cpu_C": {
+    "records_per_s": 112122,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 396152
+    },
+    "io_thread_cpu_pct": 28.3,
+    "top_thread_cpu_pct": [
+     68.4,
+     51.9,
+     48.6,
+     28.3,
+     9.5,
+     9.2
+    ],
+    "process_cpu_pct": 242.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 53.2,
+      "system": 4.1,
+      "softirq": 5.5,
+      "idle": 37.1
+     },
+     "cpu0": {
+      "user": 66.6,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 32.4
+     },
+     "cpu1": {
+      "user": 17.8,
+      "system": 12.7,
+      "softirq": 0.0,
+      "idle": 69.5
+     },
+     "cpu2": {
+      "user": 66.3,
+      "system": 1.4,
+      "softirq": 0.0,
+      "idle": 32.2
+     },
+     "cpu3": {
+      "user": 62.0,
+      "system": 1.3,
+      "softirq": 22.2,
+      "idle": 14.4
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 131.1
+    },
+    "server_stage_ms": {
+     "wait_header": 12.639,
+     "body": 3.355,
+     "validate_unpack": 0.487,
+     "cloud": 0.104,
+     "pack": 0.043,
+     "write": 0.139,
+     "previous_log": 1.109
+    },
+    "temp_C_max": 37.7
+   },
+   "s1b_2_ai4i_cpu_A": {
+    "records_per_s": 129291,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 611842
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     78.4,
+     58.8,
+     54.1,
+     45.3,
+     10.8,
+     8.1
+    ],
+    "process_cpu_pct": 279.0,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 61.6,
+      "system": 4.9,
+      "softirq": 5.6,
+      "idle": 27.9
+     },
+     "cpu0": {
+      "user": 66.3,
+      "system": 3.4,
+      "softirq": 0.0,
+      "idle": 30.4
+     },
+     "cpu1": {
+      "user": 66.3,
+      "system": 2.9,
+      "softirq": 0.0,
+      "idle": 30.9
+     },
+     "cpu2": {
+      "user": 68.2,
+      "system": 3.0,
+      "softirq": 0.0,
+      "idle": 28.8
+     },
+     "cpu3": {
+      "user": 45.7,
+      "system": 10.3,
+      "softirq": 22.4,
+      "idle": 21.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.517,
+     "delivery_MB_s_median": 101.9
+    },
+    "server_stage_ms": {
+     "wait_header": 7.697,
+     "body": 5.526,
+     "validate_unpack": 0.473,
+     "cloud": 0.099,
+     "pack": 0.043,
+     "write": 0.126,
+     "previous_log": 1.086
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_2_ai4i_cpu_D": {
+    "records_per_s": 112587,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 367133
+    },
+    "io_thread_cpu_pct": 28.3,
+    "top_thread_cpu_pct": [
+     68.7,
+     51.5,
+     48.6,
+     28.3,
+     12.1,
+     9.4
+    ],
+    "process_cpu_pct": 242.9,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.9,
+      "system": 4.3,
+      "softirq": 5.6,
+      "idle": 37.2
+     },
+     "cpu0": {
+      "user": 66.0,
+      "system": 1.0,
+      "softirq": 0.0,
+      "idle": 32.9
+     },
+     "cpu1": {
+      "user": 17.2,
+      "system": 13.0,
+      "softirq": 0.0,
+      "idle": 69.7
+     },
+     "cpu2": {
+      "user": 66.8,
+      "system": 1.6,
+      "softirq": 0.0,
+      "idle": 31.6
+     },
+     "cpu3": {
+      "user": 61.5,
+      "system": 1.3,
+      "softirq": 22.6,
+      "idle": 14.5
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 130.0
+    },
+    "server_stage_ms": {
+     "wait_header": 12.616,
+     "body": 3.412,
+     "validate_unpack": 0.471,
+     "cloud": 0.104,
+     "pack": 0.042,
+     "write": 0.133,
+     "previous_log": 1.13
+    },
+    "temp_C_max": 38.0
+   },
+   "s1b_2_ai4i_cpu_B": {
+    "records_per_s": 117609,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 397910
+    },
+    "io_thread_cpu_pct": 29.5,
+    "top_thread_cpu_pct": [
+     72.9,
+     54.1,
+     50.4,
+     29.5,
+     9.9,
+     7.3
+    ],
+    "process_cpu_pct": 251.3,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 55.6,
+      "system": 4.5,
+      "softirq": 5.7,
+      "idle": 34.2
+     },
+     "cpu0": {
+      "user": 60.3,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 38.7
+     },
+     "cpu1": {
+      "user": 47.1,
+      "system": 14.0,
+      "softirq": 0.0,
+      "idle": 38.9
+     },
+     "cpu2": {
+      "user": 60.2,
+      "system": 1.6,
+      "softirq": 0.0,
+      "idle": 38.2
+     },
+     "cpu3": {
+      "user": 54.8,
+      "system": 1.4,
+      "softirq": 22.7,
+      "idle": 21.0
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 122.5
+    },
+    "server_stage_ms": {
+     "wait_header": 11.761,
+     "body": 3.482,
+     "validate_unpack": 0.479,
+     "cloud": 0.104,
+     "pack": 0.043,
+     "write": 0.135,
+     "previous_log": 1.119
+    },
+    "temp_C_max": 37.4
+   },
+   "s1b_2_diabetes_cpu_C": {
+    "records_per_s": 47797,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 288027
+    },
+    "io_thread_cpu_pct": 23.7,
+    "top_thread_cpu_pct": [
+     75.3,
+     53.6,
+     50.3,
+     23.7,
+     12.2,
+     5.6
+    ],
+    "process_cpu_pct": 234.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.5,
+      "system": 3.7,
+      "softirq": 5.0,
+      "idle": 38.8
+     },
+     "cpu0": {
+      "user": 67.1,
+      "system": 1.3,
+      "softirq": 0.0,
+      "idle": 31.6
+     },
+     "cpu1": {
+      "user": 14.9,
+      "system": 11.2,
+      "softirq": 0.0,
+      "idle": 73.9
+     },
+     "cpu2": {
+      "user": 66.8,
+      "system": 1.1,
+      "softirq": 0.0,
+      "idle": 32.1
+     },
+     "cpu3": {
+      "user": 61.3,
+      "system": 1.1,
+      "softirq": 19.9,
+      "idle": 17.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 97.7
+    },
+    "server_stage_ms": {
+     "wait_header": 31.73,
+     "body": 8.334,
+     "validate_unpack": 1.462,
+     "cloud": 0.167,
+     "pack": 0.045,
+     "write": 0.146,
+     "previous_log": 1.153
+    },
+    "temp_C_max": 36.5
+   },
+   "s1b_2_diabetes_cpu_A": {
+    "records_per_s": 55240,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 584701
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     84.6,
+     61.6,
+     57.9,
+     42.5,
+     7.7,
+     4.7
+    ],
+    "process_cpu_pct": 273.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 61.0,
+      "system": 4.2,
+      "softirq": 5.5,
+      "idle": 29.3
+     },
+     "cpu0": {
+      "user": 73.4,
+      "system": 2.6,
+      "softirq": 0.0,
+      "idle": 23.9
+     },
+     "cpu1": {
+      "user": 69.2,
+      "system": 2.3,
+      "softirq": 0.0,
+      "idle": 28.5
+     },
+     "cpu2": {
+      "user": 68.8,
+      "system": 2.1,
+      "softirq": 0.0,
+      "idle": 29.2
+     },
+     "cpu3": {
+      "user": 32.3,
+      "system": 9.9,
+      "softirq": 22.0,
+      "idle": 35.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.655,
+     "delivery_MB_s_median": 103.1
+    },
+    "server_stage_ms": {
+     "wait_header": 18.352,
+     "body": 14.197,
+     "validate_unpack": 1.47,
+     "cloud": 0.154,
+     "pack": 0.045,
+     "write": 0.143,
+     "previous_log": 1.133
+    },
+    "temp_C_max": 38.1
+   },
+   "s1b_2_diabetes_cpu_D": {
+    "records_per_s": 47835,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 285945
+    },
+    "io_thread_cpu_pct": 23.7,
+    "top_thread_cpu_pct": [
+     75.2,
+     53.6,
+     50.1,
+     23.7,
+     12.8,
+     5.2
+    ],
+    "process_cpu_pct": 234.4,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 52.6,
+      "system": 3.7,
+      "softirq": 4.8,
+      "idle": 38.9
+     },
+     "cpu0": {
+      "user": 67.0,
+      "system": 1.2,
+      "softirq": 0.0,
+      "idle": 31.8
+     },
+     "cpu1": {
+      "user": 14.4,
+      "system": 11.5,
+      "softirq": 0.0,
+      "idle": 74.1
+     },
+     "cpu2": {
+      "user": 66.8,
+      "system": 1.0,
+      "softirq": 0.0,
+      "idle": 32.1
+     },
+     "cpu3": {
+      "user": 62.0,
+      "system": 1.0,
+      "softirq": 19.3,
+      "idle": 17.7
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 87.2
+    },
+    "server_stage_ms": {
+     "wait_header": 31.67,
+     "body": 8.327,
+     "validate_unpack": 1.472,
+     "cloud": 0.177,
+     "pack": 0.045,
+     "write": 0.146,
+     "previous_log": 1.153
+    },
+    "temp_C_max": 36.5
+   },
+   "s1b_2_diabetes_cpu_B": {
+    "records_per_s": 50037,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 300070
+    },
+    "io_thread_cpu_pct": 24.9,
+    "top_thread_cpu_pct": [
+     77.5,
+     56.2,
+     52.3,
+     24.9,
+     12.4,
+     5.4
+    ],
+    "process_cpu_pct": 243.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 54.9,
+      "system": 3.9,
+      "softirq": 5.2,
+      "idle": 36.0
+     },
+     "cpu0": {
+      "user": 62.7,
+      "system": 1.0,
+      "softirq": 0.0,
+      "idle": 36.3
+     },
+     "cpu1": {
+      "user": 52.3,
+      "system": 11.9,
+      "softirq": 0.0,
+      "idle": 35.8
+     },
+     "cpu2": {
+      "user": 59.8,
+      "system": 1.6,
+      "softirq": 0.0,
+      "idle": 38.6
+     },
+     "cpu3": {
+      "user": 44.8,
+      "system": 1.2,
+      "softirq": 21.0,
+      "idle": 33.0
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 97.2
+    },
+    "server_stage_ms": {
+     "wait_header": 29.898,
+     "body": 8.273,
+     "validate_unpack": 1.462,
+     "cloud": 0.161,
+     "pack": 0.045,
+     "write": 0.142,
+     "previous_log": 1.143
+    },
+    "temp_C_max": 37.0
+   },
+   "s1b_2_diabetes_pl_B": {
+    "records_per_s": 125034,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 753711
+    },
+    "io_thread_cpu_pct": 63.1,
+    "top_thread_cpu_pct": [
+     63.1,
+     52.5,
+     25.3,
+     16.4,
+     13.9,
+     12.3
+    ],
+    "process_cpu_pct": 208.1,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 33.8,
+      "system": 11.6,
+      "softirq": 13.5,
+      "idle": 41.2
+     },
+     "cpu0": {
+      "user": 35.5,
+      "system": 6.7,
+      "softirq": 0.3,
+      "idle": 57.5
+     },
+     "cpu1": {
+      "user": 46.7,
+      "system": 28.0,
+      "softirq": 0.0,
+      "idle": 25.3
+     },
+     "cpu2": {
+      "user": 34.5,
+      "system": 8.2,
+      "softirq": 0.0,
+      "idle": 57.3
+     },
+     "cpu3": {
+      "user": 18.2,
+      "system": 3.2,
+      "softirq": 53.6,
+      "idle": 24.9
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 100.3
+    },
+    "server_stage_ms": {
+     "wait_header": 5.178,
+     "body": 8.689,
+     "validate_unpack": 1.389,
+     "cloud": 0.141,
+     "pack": 0.043,
+     "write": 0.129,
+     "previous_log": 1.077
+    },
+    "temp_C_max": 37.1
+   },
+   "s1b_2_diabetes_pl_D": {
+    "records_per_s": 116826,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 728130
+    },
+    "io_thread_cpu_pct": 59.1,
+    "top_thread_cpu_pct": [
+     59.1,
+     49.2,
+     25.7,
+     16.0,
+     15.8,
+     10.2
+    ],
+    "process_cpu_pct": 196.8,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 31.8,
+      "system": 10.8,
+      "softirq": 12.5,
+      "idle": 44.9
+     },
+     "cpu0": {
+      "user": 34.2,
+      "system": 7.3,
+      "softirq": 0.2,
+      "idle": 58.3
+     },
+     "cpu1": {
+      "user": 34.3,
+      "system": 25.3,
+      "softirq": 0.0,
+      "idle": 40.4
+     },
+     "cpu2": {
+      "user": 34.2,
+      "system": 7.1,
+      "softirq": 0.0,
+      "idle": 58.8
+     },
+     "cpu3": {
+      "user": 24.6,
+      "system": 3.3,
+      "softirq": 49.4,
+      "idle": 22.6
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 120.1
+    },
+    "server_stage_ms": {
+     "wait_header": 5.908,
+     "body": 8.654,
+     "validate_unpack": 1.417,
+     "cloud": 0.147,
+     "pack": 0.043,
+     "write": 0.135,
+     "previous_log": 1.098
+    },
+    "temp_C_max": 36.9
+   },
+   "s1b_2_diabetes_pl_A": {
+    "records_per_s": 116283,
+    "io_cpu_chosen": -1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 1407489
+    },
+    "io_thread_cpu_pct": null,
+    "top_thread_cpu_pct": [
+     97.8,
+     45.9,
+     16.5,
+     10.6,
+     8.4,
+     8.0
+    ],
+    "process_cpu_pct": 204.7,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 32.0,
+      "system": 11.2,
+      "softirq": 10.2,
+      "idle": 46.6
+     },
+     "cpu0": {
+      "user": 31.1,
+      "system": 7.9,
+      "softirq": 0.3,
+      "idle": 60.7
+     },
+     "cpu1": {
+      "user": 29.7,
+      "system": 5.6,
+      "softirq": 0.0,
+      "idle": 64.7
+     },
+     "cpu2": {
+      "user": 32.9,
+      "system": 6.1,
+      "softirq": 0.0,
+      "idle": 61.1
+     },
+     "cpu3": {
+      "user": 34.4,
+      "system": 24.9,
+      "softirq": 40.0,
+      "idle": 0.8
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.828,
+     "delivery_MB_s_median": 101.5
+    },
+    "server_stage_ms": {
+     "wait_header": 0.017,
+     "body": 15.25,
+     "validate_unpack": 1.431,
+     "cloud": 0.146,
+     "pack": 0.043,
+     "write": 0.139,
+     "previous_log": 1.106
+    },
+    "temp_C_max": 37.2
+   },
+   "s1b_2_diabetes_pl_C": {
+    "records_per_s": 117216,
+    "io_cpu_chosen": 1,
+    "net_softirq_cpu": 3,
+    "net_softirq_delta": {
+     "0": 0,
+     "1": 0,
+     "2": 0,
+     "3": 709714
+    },
+    "io_thread_cpu_pct": 59.2,
+    "top_thread_cpu_pct": [
+     59.2,
+     49.8,
+     25.8,
+     16.0,
+     15.2,
+     10.7
+    ],
+    "process_cpu_pct": 197.6,
+    "cpu_split_pct": {
+     "cpu": {
+      "user": 32.1,
+      "system": 10.9,
+      "softirq": 12.5,
+      "idle": 44.6
+     },
+     "cpu0": {
+      "user": 35.3,
+      "system": 7.0,
+      "softirq": 0.3,
+      "idle": 57.4
+     },
+     "cpu1": {
+      "user": 34.7,
+      "system": 25.7,
+      "softirq": 0.0,
+      "idle": 39.6
+     },
+     "cpu2": {
+      "user": 34.6,
+      "system": 7.3,
+      "softirq": 0.0,
+      "idle": 58.1
+     },
+     "cpu3": {
+      "user": 23.7,
+      "system": 3.4,
+      "softirq": 49.8,
+      "idle": 23.1
+     }
+    },
+    "tcp": {
+     "samples": 29,
+     "app_limited_share": 0.0,
+     "delivery_MB_s_median": 90.5
+    },
+    "server_stage_ms": {
+     "wait_header": 5.873,
+     "body": 8.595,
+     "validate_unpack": 1.411,
+     "cloud": 0.146,
+     "pack": 0.043,
+     "write": 0.136,
+     "previous_log": 1.104
+    },
+    "temp_C_max": 36.9
+   }
+  },
+  "comparison_vs_A": {
+   "pl_ai4i": {
+    "A_records_per_s": [
+     257448,
+     249649,
+     254322
+    ],
+    "B": {
+     "records_per_s": [
+      323475,
+      329546,
+      326630
+     ],
+     "ratio_vs_A": [
+      1.2565,
+      1.32,
+      1.2843
+     ],
+     "median_ratio": 1.2843,
+     "verdict": "faster"
+    },
+    "C": {
+     "records_per_s": [
+      306631,
+      304552,
+      308389
+     ],
+     "ratio_vs_A": [
+      1.191,
+      1.2199,
+      1.2126
+     ],
+     "median_ratio": 1.2126,
+     "verdict": "faster"
+    },
+    "D": {
+     "records_per_s": [
+      291200,
+      290972,
+      289359
+     ],
+     "ratio_vs_A": [
+      1.1311,
+      1.1655,
+      1.1378
+     ],
+     "median_ratio": 1.1378,
+     "verdict": "faster"
+    }
+   },
+   "pl_diabetes": {
+    "A_records_per_s": [
+     117065,
+     117588,
+     116283
+    ],
+    "B": {
+     "records_per_s": [
+      123907,
+      124514,
+      125034
+     ],
+     "ratio_vs_A": [
+      1.0584,
+      1.0589,
+      1.0753
+     ],
+     "median_ratio": 1.0589,
+     "verdict": "faster"
+    },
+    "C": {
+     "records_per_s": [
+      116952,
+      117697,
+      117216
+     ],
+     "ratio_vs_A": [
+      0.999,
+      1.0009,
+      1.008
+     ],
+     "median_ratio": 1.0009,
+     "verdict": "no clear difference"
+    },
+    "D": {
+     "records_per_s": [
+      115596,
+      116859,
+      116826
+     ],
+     "ratio_vs_A": [
+      0.9875,
+      0.9938,
+      1.0047
+     ],
+     "median_ratio": 0.9938,
+     "verdict": "no clear difference"
+    }
+   },
+   "cpu_ai4i": {
+    "A_records_per_s": [
+     127831,
+     129082,
+     129291
+    ],
+    "B": {
+     "records_per_s": [
+      117484,
+      117723,
+      117609
+     ],
+     "ratio_vs_A": [
+      0.9191,
+      0.912,
+      0.9096
+     ],
+     "median_ratio": 0.912,
+     "verdict": "slower"
+    },
+    "C": {
+     "records_per_s": [
+      112005,
+      112559,
+      112122
+     ],
+     "ratio_vs_A": [
+      0.8762,
+      0.872,
+      0.8672
+     ],
+     "median_ratio": 0.872,
+     "verdict": "slower"
+    },
+    "D": {
+     "records_per_s": [
+      111701,
+      112094,
+      112587
+     ],
+     "ratio_vs_A": [
+      0.8738,
+      0.8684,
+      0.8708
+     ],
+     "median_ratio": 0.8708,
+     "verdict": "slower"
+    }
+   },
+   "cpu_diabetes": {
+    "A_records_per_s": [
+     54568,
+     54824,
+     55240
+    ],
+    "B": {
+     "records_per_s": [
+      50002,
+      49915,
+      50037
+     ],
+     "ratio_vs_A": [
+      0.9163,
+      0.9105,
+      0.9058
+     ],
+     "median_ratio": 0.9105,
+     "verdict": "slower"
+    },
+    "C": {
+     "records_per_s": [
+      47771,
+      47684,
+      47797
+     ],
+     "ratio_vs_A": [
+      0.8754,
+      0.8698,
+      0.8653
+     ],
+     "median_ratio": 0.8698,
+     "verdict": "slower"
+    },
+    "D": {
+     "records_per_s": [
+      47804,
+      47757,
+      47835
+     ],
+     "ratio_vs_A": [
+      0.876,
+      0.8711,
+      0.8659
+     ],
+     "median_ratio": 0.8711,
+     "verdict": "slower"
+    }
+   }
+  },
+  "openfhe_reference": {
+   "openfhe_ref_pre_0": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 45.051,
+     "cloud_ms_median": 3.607,
+     "decrypt_ms_median": 23.565,
+     "max_error": 9.500427013620083e-05
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.913,
+     "cloud_ms_median": 3.767,
+     "decrypt_ms_median": 23.964,
+     "max_error": 0.00021649401741452579
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.721,
+     "cloud_ms_median": 9.583,
+     "decrypt_ms_median": 23.807,
+     "max_error": 2.3182247083752827e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.959,
+     "cloud_ms_median": 9.584,
+     "decrypt_ms_median": 23.905,
+     "max_error": 5.939250586015077e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 186.039,
+     "cloud_ms_median": 15.401,
+     "decrypt_ms_median": 23.886,
+     "max_error": 0.00013955313352020937
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 187.074,
+     "cloud_ms_median": 15.253,
+     "decrypt_ms_median": 23.928,
+     "max_error": 0.00032124174364778213
+    }
+   ],
+   "openfhe_ref_pre_1": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 45.126,
+     "cloud_ms_median": 3.61,
+     "decrypt_ms_median": 23.786,
+     "max_error": 6.586209225645234e-05
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.855,
+     "cloud_ms_median": 3.766,
+     "decrypt_ms_median": 24.134,
+     "max_error": 0.00020994380124417233
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.637,
+     "cloud_ms_median": 9.665,
+     "decrypt_ms_median": 23.996,
+     "max_error": 2.3208154985299156e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.835,
+     "cloud_ms_median": 9.555,
+     "decrypt_ms_median": 24.058,
+     "max_error": 6.838711144963039e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 185.736,
+     "cloud_ms_median": 15.168,
+     "decrypt_ms_median": 24.032,
+     "max_error": 0.00011356198190126676
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 187.036,
+     "cloud_ms_median": 15.065,
+     "decrypt_ms_median": 24.136,
+     "max_error": 0.0003041393174845197
+    }
+   ],
+   "openfhe_ref_pre_2": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 44.942,
+     "cloud_ms_median": 3.666,
+     "decrypt_ms_median": 23.562,
+     "max_error": 0.00010215580967543048
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.74,
+     "cloud_ms_median": 3.794,
+     "decrypt_ms_median": 23.987,
+     "max_error": 0.00022873547864649124
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.223,
+     "cloud_ms_median": 9.743,
+     "decrypt_ms_median": 23.846,
+     "max_error": 3.6825529879297436e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.383,
+     "cloud_ms_median": 9.609,
+     "decrypt_ms_median": 23.951,
+     "max_error": 5.3388049731678544e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 185.392,
+     "cloud_ms_median": 15.22,
+     "decrypt_ms_median": 23.873,
+     "max_error": 0.00014170833472881839
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 186.461,
+     "cloud_ms_median": 15.084,
+     "decrypt_ms_median": 23.946,
+     "max_error": 0.00029600530691364924
+    }
+   ],
+   "openfhe_ref_post_0": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 44.93,
+     "cloud_ms_median": 3.609,
+     "decrypt_ms_median": 23.588,
+     "max_error": 8.366619676003495e-05
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.742,
+     "cloud_ms_median": 3.758,
+     "decrypt_ms_median": 23.965,
+     "max_error": 0.00025046602573586263
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.103,
+     "cloud_ms_median": 9.587,
+     "decrypt_ms_median": 23.817,
+     "max_error": 2.6147346777749547e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.142,
+     "cloud_ms_median": 9.503,
+     "decrypt_ms_median": 23.913,
+     "max_error": 5.383771472861065e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 185.034,
+     "cloud_ms_median": 15.216,
+     "decrypt_ms_median": 23.857,
+     "max_error": 0.00015303001834610086
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 186.479,
+     "cloud_ms_median": 15.074,
+     "decrypt_ms_median": 23.964,
+     "max_error": 0.00029925292918964175
+    }
+   ],
+   "openfhe_ref_post_1": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 44.966,
+     "cloud_ms_median": 3.629,
+     "decrypt_ms_median": 23.756,
+     "max_error": 0.00014743786237936263
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.751,
+     "cloud_ms_median": 3.798,
+     "decrypt_ms_median": 24.194,
+     "max_error": 0.00023783350435824246
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.338,
+     "cloud_ms_median": 9.631,
+     "decrypt_ms_median": 23.976,
+     "max_error": 2.9615136716773516e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.429,
+     "cloud_ms_median": 9.582,
+     "decrypt_ms_median": 24.068,
+     "max_error": 5.496162102311408e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 185.003,
+     "cloud_ms_median": 15.288,
+     "decrypt_ms_median": 24.026,
+     "max_error": 0.00016416988117118336
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 186.307,
+     "cloud_ms_median": 15.154,
+     "decrypt_ms_median": 24.174,
+     "max_error": 0.000306938670578738
+    }
+   ],
+   "openfhe_ref_post_2": [
+    {
+     "model": "ai4i",
+     "rows": 1,
+     "prepare_ms_median": 45.11,
+     "cloud_ms_median": 3.632,
+     "decrypt_ms_median": 23.589,
+     "max_error": 8.594410661899587e-05
+    },
+    {
+     "model": "ai4i",
+     "rows": 2048,
+     "prepare_ms_median": 45.886,
+     "cloud_ms_median": 3.791,
+     "decrypt_ms_median": 24.007,
+     "max_error": 0.0002401920332202323
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 117.639,
+     "cloud_ms_median": 9.554,
+     "decrypt_ms_median": 23.825,
+     "max_error": 2.7720503042255595e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 117.8,
+     "cloud_ms_median": 9.552,
+     "decrypt_ms_median": 23.917,
+     "max_error": 5.587778402423027e-05
+    },
+    {
+     "model": "diabetes",
+     "rows": 1,
+     "prepare_ms_median": 185.647,
+     "cloud_ms_median": 15.165,
+     "decrypt_ms_median": 23.862,
+     "max_error": 0.0001065781917177766
+    },
+    {
+     "model": "diabetes",
+     "rows": 2048,
+     "prepare_ms_median": 186.971,
+     "cloud_ms_median": 15.065,
+     "decrypt_ms_median": 23.971,
+     "max_error": 0.00028631271679024906
+    }
+   ]
+  },
+  "IRQ_final": {
+   "121": 6699271,
+   "136": 6699271
+  },
+  "DMA_total": 114592
+ },
+ "scope": "I/O thread placement A/B of the O7 configuration; one boot; 30 s windows; 3 rotated sessions; OpenFHE B1 reference pre/post on the same boot (library reference, not equal-parameter)",
+ "assistant_board_operations": 0
+}

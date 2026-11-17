@@ -1,0 +1,83 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "fishery-abalone-rings-ridge-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "sex_male",
+    "sex_female",
+    "length",
+    "diameter",
+    "height",
+    "whole_weight",
+    "shucked_weight",
+    "viscera_weight",
+    "shell_weight"
+  ],
+  "mean": [
+    0.3661141804788214,
+    0.3152854511970534,
+    0.5262725598526712,
+    0.40989318600368463,
+    0.1401749539594842,
+    0.837258747697976,
+    0.36378802946593086,
+    0.1829453038674028,
+    0.24050681399631688
+  ],
+  "std": [
+    0.481741203688401,
+    0.4646294603880895,
+    0.11975785622385275,
+    0.09885573510125358,
+    0.04323196202213482,
+    0.49043075382966267,
+    0.2226604048707851,
+    0.1100317418251194,
+    0.13822055416113702
+  ],
+  "weights": [
+    0.11561442439729872,
+    0.0997467324966166,
+    -0.08119937087508958,
+    0.3991113551243438,
+    0.11308020533989611,
+    1.3068818677796175,
+    -1.3130771949056144,
+    -0.3415297429683409,
+    0.41506533013490854
+  ],
+  "bias": 6.744267514010233e-15,
+  "weights_int": [
+    124140043,
+    107102238,
+    -87187161,
+    428542554,
+    121418946,
+    1403253720,
+    -1409905902,
+    -366714769,
+    445673005
+  ],
+  "bias_int": 7776,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "regression",
+  "decision_logit": 0.0,
+  "target_mean": 9.9097605893186,
+  "target_std": 3.231685403998559,
+  "training_source": {
+    "name": "Abalone",
+    "uci_id": 1,
+    "data_url": "https://archive.ics.uci.edu/static/public/1/data.csv",
+    "sha256": "25f3dc964447fcb3d68cf1048c04ed69d1474771c4fb34318e10778800a4342f",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "target": "rings (age-1.5)"
+  },
+  "split_seed": 20261114,
+  "split": "row",
+  "selected_lambda": 0.001,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

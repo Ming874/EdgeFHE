@@ -1,0 +1,551 @@
+{
+ "normalizer_enforces_z8": true,
+ "catalogue_models": [
+  "agriculture-rice-cammeo-logreg-v1",
+  "ai4i-failure-logreg-v1",
+  "building-room-occupancy-logreg-v1",
+  "construction-concrete-strength-ridge-v1",
+  "diabetes-progression-ridge-v1",
+  "diabetes-symptom-logreg-v1",
+  "energy-grid-instability-logreg-v1",
+  "energy-heating-load-ridge-v1",
+  "energy-power-plant-output-ridge-v1",
+  "finance-banknote-auth-logreg-v2",
+  "finance-credit-default-logreg-v1",
+  "fishery-abalone-rings-ridge-v1",
+  "food-wine-good-quality-logreg-v1",
+  "medical-breast-cancer-malignant-logreg-v1",
+  "medical-heart-failure-logreg-v1",
+  "medical-maternal-high-risk-logreg-v1",
+  "realestate-unit-price-ridge-v1",
+  "security-phishing-site-logreg-v1",
+  "transport-auto-mpg-ridge-v1"
+ ],
+ "models": {
+  "ai4i-failure-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 4,
+    "max_abs_output_z8": 46.658885796541846,
+    "crt_headroom_bits": 22.06,
+    "slot_sigma": 4.250540086450599e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 47.1
+   },
+   "warnings": []
+  },
+  "diabetes-progression-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 10,
+    "max_abs_output_z8": 15.600273571069042,
+    "crt_headroom_bits": 23.64,
+    "slot_sigma": 1.0635017575990409e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 47.0
+   },
+   "warnings": []
+  },
+  "diabetes-symptom-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 16,
+    "max_abs_output_z8": 93.03608364987579,
+    "crt_headroom_bits": 21.07,
+    "slot_sigma": 5.549005109703779e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 36.0
+   },
+   "warnings": []
+  },
+  "finance-credit-default-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 23,
+    "max_abs_output_z8": 16.35992002998074,
+    "crt_headroom_bits": 23.57,
+    "slot_sigma": 9.58846426532638e-06,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 208.6
+   },
+   "warnings": []
+  },
+  "finance-banknote-auth-logreg-v2": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 4,
+    "max_abs_output_z8": 55.58530310815805,
+    "crt_headroom_bits": 21.81,
+    "slot_sigma": 5.5259934838173676e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 36.2
+   },
+   "warnings": []
+  },
+  "energy-heating-load-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 8,
+    "max_abs_output_z8": 14.144430216139323,
+    "crt_headroom_bits": 23.78,
+    "slot_sigma": 1.1909421051319072e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 42.0
+   },
+   "warnings": []
+  },
+  "energy-power-plant-output-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 4,
+    "max_abs_output_z8": 9.571240427836218,
+    "crt_headroom_bits": 24.35,
+    "slot_sigma": 1.2578555549956055e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 39.8
+   },
+   "warnings": []
+  },
+  "energy-grid-instability-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 12,
+    "max_abs_output_z8": 0.7577948725878004,
+    "crt_headroom_bits": 28.01,
+    "slot_sigma": 4.580475613731338e-07,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 4366.4
+   },
+   "warnings": []
+  },
+  "medical-heart-failure-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 11,
+    "max_abs_output_z8": 17.586935553236714,
+    "crt_headroom_bits": 23.47,
+    "slot_sigma": 1.1224954303995384e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 178.2
+   },
+   "warnings": []
+  },
+  "medical-maternal-high-risk-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 6,
+    "max_abs_output_z8": 34.212681194473646,
+    "crt_headroom_bits": 22.51,
+    "slot_sigma": 3.00196624420984e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 66.6
+   },
+   "warnings": []
+  },
+  "medical-breast-cancer-malignant-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 30,
+    "max_abs_output_z8": 43.04833482415154,
+    "crt_headroom_bits": 22.18,
+    "slot_sigma": 1.5628756672711285e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 128.0
+   },
+   "warnings": []
+  },
+  "construction-concrete-strength-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 8,
+    "max_abs_output_z8": 16.031190295125043,
+    "crt_headroom_bits": 23.6,
+    "slot_sigma": 1.2089215081040408e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 41.4
+   },
+   "warnings": []
+  },
+  "realestate-unit-price-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 6,
+    "max_abs_output_z8": 7.848869107956374,
+    "crt_headroom_bits": 24.63,
+    "slot_sigma": 5.941650651543176e-06,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 84.2
+   },
+   "warnings": []
+  },
+  "food-wine-good-quality-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 12,
+    "max_abs_output_z8": 45.07793238780555,
+    "crt_headroom_bits": 22.11,
+    "slot_sigma": 2.6583189625680968e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 75.2
+   },
+   "warnings": []
+  },
+  "agriculture-rice-cammeo-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 7,
+    "max_abs_output_z8": 44.385443423045444,
+    "crt_headroom_bits": 22.13,
+    "slot_sigma": 3.4377734548034987e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 58.2
+   },
+   "warnings": []
+  },
+  "fishery-abalone-rings-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 9,
+    "max_abs_output_z8": 33.48244979217382,
+    "crt_headroom_bits": 22.54,
+    "slot_sigma": 2.7763677462913874e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 18.0
+   },
+   "warnings": []
+  },
+  "transport-auto-mpg-ridge-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 8,
+    "max_abs_output_z8": 15.240876538349085,
+    "crt_headroom_bits": 23.68,
+    "slot_sigma": 1.2291976604239743e-05,
+    "precision_gate": 0.0005,
+    "gate_over_sigma": 40.7
+   },
+   "warnings": []
+  },
+  "security-phishing-site-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 30,
+    "max_abs_output_z8": 103.93988183256539,
+    "crt_headroom_bits": 20.91,
+    "slot_sigma": 4.831401449709132e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 41.4
+   },
+   "warnings": []
+  },
+  "building-room-occupancy-logreg-v1": {
+   "admitted": true,
+   "checks": {
+    "identity_in_catalogue": true,
+    "identity_source_sha": true,
+    "identity_feature_order": true,
+    "input_feature_count_1_32": true,
+    "input_mean_std_equal": true,
+    "input_range_within_enforced_z8": true,
+    "scope_affine_depth1_only": true,
+    "integers_weights_round_2p30": true,
+    "integers_bias_round_2p60": true,
+    "crt_headroom_ge_10_bits": true,
+    "noise_gate_ge_15_sigma": true
+   },
+   "facts": {
+    "features": 5,
+    "max_abs_output_z8": 32.357930046361034,
+    "crt_headroom_bits": 22.59,
+    "slot_sigma": 4.146719946113494e-05,
+    "precision_gate": 0.002,
+    "gate_over_sigma": 48.2
+   },
+   "warnings": []
+  }
+ },
+ "every_catalogue_model_has_card": true,
+ "negative_controls": {
+  "nonlinear_operation": {
+   "refused": true,
+   "by": "scope_affine_depth1_only",
+   "named_check_failed": true
+  },
+  "wrong_source_sha": {
+   "refused": true,
+   "by": "identity_source_sha",
+   "named_check_failed": true
+  },
+  "swapped_feature_order": {
+   "refused": true,
+   "by": "identity_feature_order",
+   "named_check_failed": true
+  },
+  "range_wider_than_z8": {
+   "refused": true,
+   "by": "input_range_within_enforced_z8",
+   "named_check_failed": true
+  },
+  "unknown_model": {
+   "refused": true,
+   "by": "identity_in_catalogue",
+   "named_check_failed": true
+  },
+  "weights_too_large_for_Q": {
+   "refused": true,
+   "by": "crt_headroom_ge_10_bits",
+   "named_check_failed": true
+  },
+  "noise_over_gate": {
+   "refused": true,
+   "by": "noise_gate_ge_15_sigma",
+   "named_check_failed": true
+  },
+  "unrounded_integer_weight": {
+   "refused": true,
+   "by": "integers_weights_round_2p30",
+   "named_check_failed": true
+  },
+  "thirty_three_features": {
+   "refused": true,
+   "by": "input_feature_count_1_32",
+   "named_check_failed": true
+  }
+ },
+ "status": "MODEL_CARD_ADMISSION_PASS",
+ "scope": "catalogue/card/math consistency for public scalar affine models only; not dataset validity, clinical/industrial suitability or security certification"
+}

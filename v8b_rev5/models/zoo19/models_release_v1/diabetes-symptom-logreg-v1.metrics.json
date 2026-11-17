@@ -1,0 +1,63 @@
+{
+  "model_id": "diabetes-symptom-logreg-v1",
+  "model_sha256": "cf4e4d81758a40710376b7a3f20bc132f721664ef4c97106be448c3d387af19b",
+  "rows": 520,
+  "features": 16,
+  "groups": 4,
+  "padded_ciphertexts": 16,
+  "split_counts": {
+    "train": 353,
+    "validation": 67,
+    "test": 100
+  },
+  "test_metrics": {
+    "AUROC": 0.997591328783621,
+    "accuracy": 0.93,
+    "precision": 1.0,
+    "recall": 0.8679245283018868,
+    "F1": 0.9292929292929293,
+    "balanced_accuracy": 0.9339622641509434,
+    "confusion": {
+      "TP": 46,
+      "FP": 0,
+      "TN": 47,
+      "FN": 7
+    },
+    "probabilities_calibrated": false,
+    "always_negative_accuracy": 0.47
+  },
+  "validation_search": [
+    {
+      "lambda_": 0.001,
+      "selection_score": 0.98989898989899
+    },
+    {
+      "lambda_": 0.01,
+      "selection_score": 0.9878787878787879
+    },
+    {
+      "lambda_": 0.1,
+      "selection_score": 0.9848484848484849
+    },
+    {
+      "lambda_": 1.0,
+      "selection_score": 0.9858585858585859
+    },
+    {
+      "lambda_": 10.0,
+      "selection_score": 0.9878787878787879
+    }
+  ],
+  "test_out_of_domain_rows": 0,
+  "quantization_max_score_difference": 2.8553550635024294e-09,
+  "error_contract": {
+    "no_wrap_coefficient_bound": "429647596552393096115227",
+    "conservative_normalized_error": 17.23846238988444,
+    "empirical_QA_tolerance": 0.0005,
+    "empirical_tolerance_is_proof": false
+  },
+  "numpy_version": "2.3.5",
+  "python_version": "3.12.14",
+  "measured_on_KV260": false,
+  "training_is_plaintext_public_data": true
+}

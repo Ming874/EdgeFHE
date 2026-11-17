@@ -1,0 +1,334 @@
+{
+ "status": "WIRED_RERUN_TEN_SESSION_AND_SIX_HOUR_SOAK_INDEPENDENT_REVIEW_PASS",
+ "gates": {
+  "seal_all_hashes": true,
+  "seal_exact_file_set": true,
+  "root_identity": true,
+  "all_children_returned_exit_0": true,
+  "irq_delta_equals_reported_dma_every_child": true,
+  "irq_chain_continuous_from_bootmath_10": true,
+  "irq_total_equals_root_known_device_calls": true,
+  "every_state_same_boot_fastpath3_no_kernel_fatal": true,
+  "client_server_digests_identical_per_connection": true,
+  "pc_runtime_identity_and_clean_exit": true,
+  "every_pair_scope_dma_precision": true,
+  "independent_statistics_gates_pass": true,
+  "soak_360_windows_each_verified": true,
+  "soak_totals_equal_board": true
+ },
+ "notes": {
+  "sealed_files": 10518,
+  "children": 1734,
+  "network_children": 1728,
+  "IRQ_final": {
+   "121": 2879120,
+   "136": 2879120
+  },
+  "DMA_total": 2879110,
+  "states_checked": 3459,
+  "server_connections_with_responses": 1728,
+  "client_children_with_trace": 1728,
+  "server_responses": 1794939,
+  "server_cloud_ms": {
+   "median": 0.1212,
+   "p99": 0.572,
+   "max": 36.3964,
+   "n": 1794939
+  },
+  "pc_heartbeat": {
+   "rows": 5262,
+   "first": "2026-10-23T10:02:56.9774883Z",
+   "last": "2026-10-23T17:22:19.5195892Z",
+   "max_gap_s": 5.13,
+   "gaps_over_15s": 0,
+   "wall_h": 7.323
+  },
+  "recomputed": {
+   "ai4i-failure-logreg-v1": {
+    "latency_point": 1.599798794153481,
+    "latency_CI95": [
+     1.5712224201964557,
+     1.625853100752894
+    ],
+    "records_point": 1.640491202061486,
+    "records_CI95": [
+     1.6353095146371905,
+     1.6464118366988933
+    ],
+    "P95_point": 1.4538411730438467,
+    "P95_CI95": [
+     1.3006499105978804,
+     1.6063759884191147
+    ],
+    "session_values_equal_board": true,
+    "board_CI95": {
+     "latency": [
+      1.5718799466081943,
+      1.6257705906010695
+     ],
+     "records": [
+      1.6352191105706173,
+      1.6466107102260317
+     ],
+     "P95": [
+      1.2996848284819424,
+      1.6068117574649845
+     ]
+    },
+    "gates": true,
+    "decomposition_ms": {
+     "cpu": {
+      "prepare": {
+       "median": 13.383,
+       "p95": 13.617
+      },
+      "net": {
+       "median": 8.503,
+       "p95": 29.583
+      },
+      "decrypt": {
+       "median": 1.685,
+       "p95": 1.866
+      },
+      "total": {
+       "median": 23.817,
+       "p95": 44.882
+      }
+     },
+     "pl": {
+      "prepare": {
+       "median": 4.91,
+       "p95": 5.121
+      },
+      "net": {
+       "median": 8.104,
+       "p95": 27.314
+      },
+      "decrypt": {
+       "median": 1.66,
+       "p95": 1.836
+      },
+      "total": {
+       "median": 14.829,
+       "p95": 34.064
+      }
+     }
+    },
+    "window_records_per_s": {
+     "cpu": [
+      128196,
+      127888,
+      128100,
+      127100,
+      128170,
+      128709,
+      127321,
+      127148,
+      128294,
+      127799
+     ],
+     "pl": [
+      209523,
+      209645,
+      210925,
+      211072,
+      208990,
+      210257,
+      208678,
+      209791,
+      210415,
+      208410
+     ]
+    }
+   },
+   "diabetes-progression-ridge-v1": {
+    "latency_point": 1.81068445656707,
+    "latency_CI95": [
+     1.7914680183873344,
+     1.829210195032364
+    ],
+    "records_point": 2.021562176848513,
+    "records_CI95": [
+     2.0125518455116507,
+     2.0304858349856945
+    ],
+    "P95_point": 1.5075258309863702,
+    "P95_CI95": [
+     1.3949526943281647,
+     1.6320103600729097
+    ],
+    "session_values_equal_board": true,
+    "board_CI95": {
+     "latency": [
+      1.7910110868155948,
+      1.8287760409280194
+     ],
+     "records": [
+      2.0127632922045477,
+      2.030477602322014
+     ],
+     "P95": [
+      1.3975492252071777,
+      1.634572200649472
+     ]
+    },
+    "gates": true,
+    "decomposition_ms": {
+     "cpu": {
+      "prepare": {
+       "median": 32.517,
+       "p95": 33.407
+      },
+      "net": {
+       "median": 15.562,
+       "p95": 37.115
+      },
+      "decrypt": {
+       "median": 1.714,
+       "p95": 1.931
+      },
+      "total": {
+       "median": 50.233,
+       "p95": 71.736
+      }
+     },
+     "pl": {
+      "prepare": {
+       "median": 10.672,
+       "p95": 10.923
+      },
+      "net": {
+       "median": 15.27,
+       "p95": 35.052
+      },
+      "decrypt": {
+       "median": 1.704,
+       "p95": 2.332
+      },
+      "total": {
+       "median": 27.809,
+       "p95": 47.541
+      }
+     }
+    },
+    "window_records_per_s": {
+     "cpu": [
+      50395,
+      50620,
+      49743,
+      50248,
+      49857,
+      49981,
+      50230,
+      50346,
+      49768,
+      50254
+     ],
+     "pl": [
+      100634,
+      101396,
+      101707,
+      102159,
+      100881,
+      101934,
+      101360,
+      101141,
+      100706,
+      101748
+     ]
+    }
+   }
+  },
+  "soak": {
+   "active_h": 6.0018,
+   "requests": 1650251,
+   "records": 3379714048,
+   "device_calls": 2726453,
+   "max_error": 0.0004736602983652638,
+   "per_model": {
+    "ai4i-failure-logreg-v1": {
+     "windows": 180,
+     "records_per_s": {
+      "mean": 210890,
+      "min": 188810,
+      "max": 216967,
+      "first_hour": 208889,
+      "last_hour": 212619
+     },
+     "request_ms": {
+      "p50": 18.52,
+      "p99": 26.63,
+      "max": 234.4
+     }
+    },
+    "diabetes-progression-ridge-v1": {
+     "windows": 180,
+     "records_per_s": {
+      "mean": 101965,
+      "min": 91080,
+      "max": 104075,
+      "first_hour": 101410,
+      "last_hour": 102819
+     },
+     "request_ms": {
+      "p50": 38.98,
+      "p99": 49.49,
+      "max": 247.7
+     }
+    }
+   }
+  },
+  "wired_vs_wifi": {
+   "ai4i-failure-logreg-v1": {
+    "latency": {
+     "wifi": 1.2517,
+     "wired": 1.5998
+    },
+    "records": {
+     "wifi": 1.4334,
+     "wired": 1.6405
+    },
+    "P95": {
+     "wifi": 1.1412,
+     "wired": 1.4538
+    },
+    "net_median_ms": {
+     "cpu": {
+      "wifi": 31.231,
+      "wired": 8.503
+     },
+     "pl": {
+      "wifi": 29.924,
+      "wired": 8.104
+     }
+    }
+   },
+   "diabetes-progression-ridge-v1": {
+    "latency": {
+     "wifi": 1.3781,
+     "wired": 1.8107
+    },
+    "records": {
+     "wifi": 1.7944,
+     "wired": 2.0216
+    },
+    "P95": {
+     "wifi": 1.3478,
+     "wired": 1.5075
+    },
+    "net_median_ms": {
+     "cpu": {
+      "wifi": 55.074,
+      "wired": 15.562
+     },
+     "pl": {
+      "wifi": 53.489,
+      "wired": 15.27
+     }
+    }
+   }
+  }
+ },
+ "scope": "two-machine KV260 ARM+PL client <-> Windows-native PC server over wired Ethernet LAN (router) with mTLS; warm-request E2E incl. network; single board/boot e26925f5; marginal CIs, not cross-boot",
+ "assistant_board_operations": 0
+}

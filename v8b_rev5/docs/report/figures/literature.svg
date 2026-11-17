@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="462" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 462" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="462"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-462)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="15" y="444" style="font-family: JH; font-size: 11px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,888) scale(1,-1)">Literature positioning - not an equivalent speed ranking</text>
+			<path d="M 205,30 L 205,422 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="199.44140625" y="15" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,30) scale(1,-1)">0.1</text>
+			<path d="M 295,30 L 295,422 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="292.681640625" y="15" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,30) scale(1,-1)">1</text>
+			<path d="M 385,30 L 385,422 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="380.36328125" y="15" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,30) scale(1,-1)">10</text>
+			<path d="M 475,30 L 475,422 Z" style="stroke: rgb(86%,89%,91%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="468.044921875" y="15" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,30) scale(1,-1)">100</text>
+			<text x="12" y="405.2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,810) scale(1,-1)">OURS-CPU-ai4i</text>
+			<text x="12" y="395.2" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,790) scale(1,-1)">N=4096 logQ=90 OUR_BOARD_MEASURED</text>
+			<path d="M 205,405.2 L 314.094852,405.2 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="318.09485214954236" y="409.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,818) scale(1,-1)">1.63</text>
+			<text x="12" y="377.2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,754) scale(1,-1)">OURS-PL-ai4i</text>
+			<text x="12" y="367.2" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,734) scale(1,-1)">N=4096 logQ=90 OUR_BOARD_MEASURED</text>
+			<path d="M 205,377.2 L 275.732902,377.2 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="279.7329017180794" y="381.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,762) scale(1,-1)">0.611</text>
+			<text x="12" y="349.2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,698) scale(1,-1)">OURS-CPU-diabetes</text>
+			<text x="12" y="339.2" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,678) scale(1,-1)">N=4096 logQ=90 OUR_BOARD_MEASURED</text>
+			<path d="M 205,349.2 L 315.313647,349.2 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="319.3136474438645" y="353.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,706) scale(1,-1)">1.68</text>
+			<text x="12" y="321.2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,642) scale(1,-1)">OURS-PL-diabetes</text>
+			<text x="12" y="311.2" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,622) scale(1,-1)">N=4096 logQ=90 OUR_BOARD_MEASURED</text>
+			<path d="M 205,321.2 L 273.6036,321.2 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="277.6036001223955" y="325.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,650) scale(1,-1)">0.578</text>
+			<text x="12" y="293.20000000000005" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,586) scale(1,-1)">OPENFHE-SAMEBOOT-ai4i</text>
+			<text x="12" y="283.20000000000005" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,566) scale(1,-1)">N=4096 logQ=91 OUR_BOARD_MEASURED</text>
+			<path d="M 205,293.2 L 361.934521,293.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="365.9345207812893" y="297.20000000000005" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,594) scale(1,-1)">5.54</text>
+			<text x="12" y="265.20000000000005" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,530) scale(1,-1)">OPENFHE-SAMEBOOT-diabetes</text>
+			<text x="12" y="255.20000000000005" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,510) scale(1,-1)">N=4096 logQ=91 OUR_BOARD_MEASURED</text>
+			<path d="M 205,265.2 L 362.287455,265.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="366.2874548662287" y="269.20000000000005" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,538) scale(1,-1)">5.59</text>
+			<text x="12" y="237.20000000000002" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,474) scale(1,-1)">SEAL-i5</text>
+			<text x="12" y="227.20000000000002" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,454) scale(1,-1)">N=8192 logQ=162 MEASURED_CITED</text>
+			<path d="M 205,237.2 L 302.084939,237.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="306.0849389739675" y="241.20000000000002" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,482) scale(1,-1)">1.2</text>
+			<text x="12" y="209.20000000000002" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,418) scale(1,-1)">SEAL-Embedded-A7</text>
+			<text x="12" y="199.20000000000002" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,398) scale(1,-1)">N=4096 logQ=90 MEASURED_CITED</text>
+			<path d="M 205,209.2 L 443.409829,209.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="447.40982884037146" y="213.20000000000002" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,426) scale(1,-1)">44.6</text>
+			<text x="12" y="181.20000000000002" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,362) scale(1,-1)">DiMatteo-ZUS+</text>
+			<text x="12" y="171.20000000000002" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,342) scale(1,-1)">N=8192 logQ=? MEASURED_CITED</text>
+			<path d="M 205,181.2 L 320.125976,181.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="324.1259758734311" y="185.20000000000002" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,370) scale(1,-1)">1.9</text>
+			<text x="12" y="153.2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,306) scale(1,-1)">Aloha-HE-K7</text>
+			<text x="12" y="143.2" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,286) scale(1,-1)">N=8192 logQ=162 MEASURED_HW</text>
+			<path d="M 205,153.2 L 264.353349,153.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="268.3533492711852" y="157.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,314) scale(1,-1)">0.457</text>
+			<text x="12" y="125.19999999999999" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,250) scale(1,-1)">Aloha-HE-Z7</text>
+			<text x="12" y="115.19999999999999" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,230) scale(1,-1)">N=8192 logQ=162 MEASURED_HW</text>
+			<path d="M 205,125.2 L 283.346227,125.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="287.3462272076881" y="129.2" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,258) scale(1,-1)">0.742</text>
+			<text x="12" y="97.19999999999999" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,194) scale(1,-1)">Lee-U250</text>
+			<text x="12" y="87.19999999999999" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,174) scale(1,-1)">N=65536 logQ=? MEASURED_CITED</text>
+			<path d="M 205,97.2 L 269.119309,97.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="273.119309268856" y="101.19999999999999" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,202) scale(1,-1)">0.516</text>
+			<text x="12" y="69.19999999999999" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,138) scale(1,-1)">RISE-ASIC</text>
+			<text x="12" y="59.19999999999999" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,118) scale(1,-1)">N=8192 logQ=180 SIMULATED</text>
+			<path d="M 205,69.2 L 356.980304,69.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="360.9803042926586" y="73.19999999999999" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,146) scale(1,-1)">4.88</text>
+			<text x="12" y="41.19999999999999" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,82) scale(1,-1)">RACE-ASIC</text>
+			<text x="12" y="31.19999999999999" style="font-family: JH; font-size: 6.5px;fill: rgb(45%,52%,60%); stroke:none;" transform="translate(0,62) scale(1,-1)">N=8192 logQ=130 SIMULATED</text>
+			<path d="M 205,41.2 L 423.712313,41.2 Z" style="stroke: rgb(45%,52%,60%); stroke-linecap: butt; stroke-width: 5;"/>
+			<text x="427.71231285193653" y="45.19999999999999" style="font-family: JH; font-size: 7px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,90) scale(1,-1)">26.9</text>
+			<text x="274.765625" y="2" style="font-family: JH; font-size: 8px;fill: rgb(7%,20%,29%); stroke:none;" transform="translate(0,4) scale(1,-1)">microseconds / CKKS slot (log axis)</text>
+		</g>
+	</g>
+</svg>

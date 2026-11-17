@@ -1,0 +1,25 @@
+{
+ "status": "B02_SIMPLIFIED_ESTIMATE_DERIVED_NOT_LATTICE_ESTIMATOR",
+ "n": 4096,
+ "primes": [
+  998244353,
+  1004535809,
+  469762049
+ ],
+ "log2_q": 88.606,
+ "sigma_e": 4.5,
+ "secret": "uniform ternary (dense)",
+ "he_standard_limits": {
+  "classical_128": 109,
+  "quantum_128": 101
+ },
+ "within_he_standard_classical_128": true,
+ "within_he_standard_quantum_128": true,
+ "primal_usvp": {
+  "block_size": 444,
+  "samples_m": 3904,
+  "core_svp_classical_bits": 129.6,
+  "core_svp_quantum_bits": 117.7
+ },
+ "note": "simplified primal uSVP only; hybrid, dual and refined BKZ cost models are not covered; the HE Standard table is the primary reference"
+}

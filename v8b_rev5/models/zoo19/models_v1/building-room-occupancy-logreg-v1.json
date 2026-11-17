@@ -1,0 +1,63 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "building-room-occupancy-logreg-v1",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "temperature_C",
+    "humidity_pct",
+    "light_lux",
+    "co2_ppm",
+    "humidity_ratio"
+  ],
+  "mean": [
+    20.903142344930526,
+    27.672434062372012,
+    130.12936585139892,
+    691.5637725196339,
+    0.004230213957479205
+  ],
+  "std": [
+    1.0547189002281763,
+    4.989395826417206,
+    208.71568838741112,
+    312.8132488716062,
+    0.0007698412037150807
+  ],
+  "weights": [
+    -0.0881861585195412,
+    0.06672658833379269,
+    2.8874953496506124,
+    0.6195064756417354,
+    0.13312255943698106
+  ],
+  "bias": -1.9976329936997315,
+  "weights_int": [
+    -94689167,
+    71647129,
+    3100424524,
+    665190013,
+    142939260
+  ],
+  "bias_int": -2303114036748574464,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "task": "classification",
+  "decision_logit": 1.0500000000000007,
+  "target_mean": 0.0,
+  "target_std": 1.0,
+  "training_source": {
+    "name": "Occupancy Detection ",
+    "uci_id": 357,
+    "data_url": "https://archive.ics.uci.edu/static/public/357/data.csv",
+    "sha256": "3648f2aa7026c24b1fcf69f463a696898a37949046aabf2db4e263e2769b9530",
+    "license": "CC BY 4.0 (UCI repository policy; per-dataset page check recorded separately)",
+    "excluded": "id, date"
+  },
+  "split_seed": 20261117,
+  "split": "row",
+  "selected_lambda": 0.01,
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback"
+}

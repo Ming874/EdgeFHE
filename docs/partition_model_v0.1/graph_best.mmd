@@ -1,0 +1,90 @@
+%% EdgeFHE S4 optimal (DAG, depth 1): key=C; features=[3xF 1xA]; dec=O; NTT(s)=C ; edge latency 23.05 ms
+flowchart LR
+  subgraph prepare
+    n0["STD<br/>0.43ms"]
+    n1["ENC_f0<br/>8.30ms"]
+    n2["ENC_f1<br/>8.30ms"]
+    n3["ENC_f2<br/>8.30ms"]
+    n4["ENC_f3<br/>8.30ms"]
+    n5["NOWRAP<br/>0.02ms"]
+    n6["SAMPLE<br/>0.11ms"]
+  end
+  subgraph encrypt
+    n7["VALKEY<br/>0.04ms"]
+    n8["RNS_m_f0<br/>0.43ms"]
+    n9["RNS_m_f1<br/>0.43ms"]
+    n10["RNS_m_f2<br/>0.43ms"]
+    n11["RNS_m_f3<br/>0.43ms"]
+    n12["RNS_t_f0<br/>1.32ms"]
+    n13["RNS_t_f1<br/>1.32ms"]
+    n14["RNS_t_f2<br/>1.32ms"]
+    n15["RNS_t_f3<br/>1.32ms"]
+    n16["NTT_u_f0<br/>2.25ms"]
+    n17["INTT_bu_f0<br/>2.35ms"]
+    n18["INTT_au_f0<br/>2.35ms"]
+    n19["ADD_c0_f0<br/>0.14ms"]
+    n20["ADD_c1_f0<br/>0.07ms"]
+    n21["FENC_ALL<br/>PL 1.78ms<br/>ARM 2.00ms"]
+  end
+  subgraph cloud
+    n22["CLOUD<br/>(not in edge latency)"]
+  end
+  subgraph decrypt
+    n23["DEC_PRE<br/>0.04ms"]
+    n24["OP2_d<br/>PL 0.55ms<br/>ARM 0.35ms"]
+    n25["ADD_d<br/>0.07ms"]
+    n26["CRT<br/>0.97ms"]
+  end
+  subgraph finish
+    n27["NWCHECK<br/>0.04ms"]
+    n28["DEC_FFT<br/>8.40ms"]
+    n29["SIGMOID<br/>0.20ms"]
+  end
+  n19 -->|48K| n22
+  n20 -->|48K| n22
+  n25 -->|48K| n26
+  n22 -->|96K| n23
+  n26 -->|64K| n27
+  n28 -->|32K| n29
+  n23 -->|48K| n25
+  n23 -->|64K| n24
+  n1 -->|32K| n5
+  n1 -->|32K| n8
+  n2 -->|32K| n5
+  n2 -->|32K| n9
+  n3 -->|32K| n5
+  n3 -->|32K| n10
+  n4 -->|32K| n5
+  n4 -->|32K| n11
+  n21 -->|288K| n22
+  n18 -->|48K| n20
+  n17 -->|48K| n19
+  n5 -->|16B| n27
+  n16 -->|48K| n18
+  n16 -->|48K| n17
+  n27 -->|64K| n28
+  n24 -->|48K| n25
+  n8 -->|48K| n19
+  n9 -->|64K| n21
+  n10 -->|64K| n21
+  n11 -->|64K| n21
+  n12 -->|96K| n19
+  n12 -->|48K| n20
+  n12 -->|48K| n16
+  n13 -->|192K| n21
+  n14 -->|192K| n21
+  n15 -->|192K| n21
+  n6 -->|12K| n12
+  n6 -->|12K| n13
+  n6 -->|12K| n14
+  n6 -->|12K| n15
+  n0 -->|16K| n1
+  n0 -->|16K| n2
+  n0 -->|16K| n3
+  n0 -->|16K| n4
+  n7 -->|64K| n21
+  n7 -->|48K| n16
+  classDef arm fill:#dbeafe,stroke:#1d4ed8,color:#0b1d4f
+  classDef pl fill:#fed7aa,stroke:#c2410c,color:#431407
+  class n0,n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n22,n23,n25,n26,n27,n28,n29 arm
+  class n21,n24 pl

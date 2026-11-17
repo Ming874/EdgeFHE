@@ -1,0 +1,63 @@
+{
+  "model_id": "ai4i-failure-logreg-v1",
+  "model_sha256": "c82123cdafd280ac9451e98f8ac0d404730455699b2e1911afac098ede801e22",
+  "rows": 10000,
+  "features": 4,
+  "groups": 1,
+  "padded_ciphertexts": 4,
+  "split_counts": {
+    "train": 6500,
+    "validation": 1500,
+    "test": 2000
+  },
+  "test_metrics": {
+    "AUROC": 0.9028731150249786,
+    "accuracy": 0.961,
+    "precision": 0.43529411764705883,
+    "recall": 0.5522388059701493,
+    "F1": 0.4868421052631579,
+    "balanced_accuracy": 0.7637034692033882,
+    "confusion": {
+      "TP": 37,
+      "FP": 48,
+      "TN": 1885,
+      "FN": 30
+    },
+    "probabilities_calibrated": false,
+    "always_negative_accuracy": 0.9665
+  },
+  "validation_search": [
+    {
+      "lambda_": 0.001,
+      "selection_score": 0.9147404844290657
+    },
+    {
+      "lambda_": 0.01,
+      "selection_score": 0.9145265806857502
+    },
+    {
+      "lambda_": 0.1,
+      "selection_score": 0.9028751179616231
+    },
+    {
+      "lambda_": 1.0,
+      "selection_score": 0.8688266750550487
+    },
+    {
+      "lambda_": 10.0,
+      "selection_score": 0.8727901855929537
+    }
+  ],
+  "test_out_of_domain_rows": 0,
+  "quantization_max_score_difference": 3.233928680401732e-09,
+  "error_contract": {
+    "no_wrap_coefficient_bound": "213684742023364707055859",
+    "conservative_normalized_error": 8.573511675560692,
+    "empirical_QA_tolerance": 0.0005,
+    "empirical_tolerance_is_proof": false
+  },
+  "numpy_version": "2.3.5",
+  "python_version": "3.12.14",
+  "measured_on_KV260": false,
+  "training_is_plaintext_public_data": true
+}

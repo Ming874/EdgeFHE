@@ -1,0 +1,17 @@
+@page{size:A4;margin:16mm}
+@media print{
+ html,body{background:#fff!important;color:#222!important}
+ .sidebar,.workspace,.modal,.toast,.guide-bar,.skip-link{display:none!important}
+ .print-report{display:block!important;font:10px/1.65 'Segoe UI','Microsoft JhengHei',sans-serif;color:#222}
+ .print-report header{padding-bottom:12px;border-bottom:2px solid #1e7555;margin-bottom:17px}
+ .print-report h1{font-size:20px;line-height:1.5;margin:0 0 7px;color:#16452f}
+ .print-report h2{font-size:12px;line-height:1.5;margin:16px 0 7px;color:#1e6544;break-after:avoid}
+ .print-report p{font-size:9px;line-height:1.8;margin:5px 0}
+ .print-report table{font-size:8px;break-inside:avoid}
+ .print-report td,.print-report th{white-space:normal;padding:8px 6px;border-color:#d8dfd6;color:#222}
+ .print-report ul{padding-left:17px;font-size:9px;line-height:1.9;margin:7px 0}
+ .print-report li{break-inside:avoid}
+ .print-report .print-hash{font:8px/1.7 Consolas,monospace;overflow-wrap:anywhere;margin-top:10px}
+ .print-report .print-reference{font-size:8px;line-height:1.7;margin:4px 0}
+ *{animation:none!important;box-shadow:none!important}
+}

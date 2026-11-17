@@ -1,0 +1,57 @@
+{
+  "status": "V8B_R5_REENTRY_5B_ORIGINALS_ACCEPTED_HARDWARE_RESTORED_NO_JOB_DMA",
+  "boot_id": "bba35b86-ea1b-4efa-b894-bbfc35c644b5",
+  "hls_revision": "rev5",
+  "firmware_app": "edgefhe-v8b-r5",
+  "firmware_sha256": {
+    "edgefhe-v8b-r5.bit.bin": "0dc8c805ee3a1267bc49fbd0704fd2074777366133da9d491189e877dbae28aa",
+    "edgefhe-v8b-r5.dtbo": "4669e78c7db8f34e10f3215adf55de2a5ca076600c2fff605b673adfea81f822",
+    "shell.json": "870c32038d56a0b9ed3bba84c4ce3e458327304568a08d37be7343a78cb1944b"
+  },
+  "archive": "edgefhe-v8b-reentry-5b.r5_1105_nb01drw1.tar.gz",
+  "archive_sha256": "a11322a8e63f64b48630b0b1ab8ef16f02bf706d74bb4897b1ba644f78a341c1",
+  "sealed_files": 57,
+  "stages": [
+    "program",
+    "afi",
+    "provider",
+    "proxy"
+  ],
+  "commands": 30,
+  "module": {
+    "sha256": "cd347f266362d2ca36ae64cc68a114e987a7b98d9318e1cf4f170d8a64e290f6",
+    "version": "v8b-candidate-5b-safe",
+    "srcversion": "06F54F5CFA2C1E96CEEFE2F"
+  },
+  "probe_line": "edgefhe-v8b-dma-proxy a0010000.edgefhe-v8b-proxy: V8b candidate-4 ABI=8 epoch=1 tx=0x0000000037900000 rx=0x0000000037a00000 buffers=cacheable+owned-sync DMA provider=a0000000.dma recovery_proven=0",
+  "IRQ": {
+    "121": {
+      "linux_irq": 61,
+      "total": 0,
+      "action": "xilinx-dma-controller"
+    },
+    "136": {
+      "linux_irq": 62,
+      "total": 0,
+      "action": "xilinx-dma-controller"
+    }
+  },
+  "PL0_Hz": 99999999,
+  "kernel_fatal_hits": 0,
+  "accelerator_DMA_jobs": 0,
+  "accelerator_device_opens": 0,
+  "hardware_math_accepted": false,
+  "recovery_proven_reported_by_driver": 0,
+  "limits": [
+    "Restore only: no CAPS/small-vector/arithmetic acceptance on this boot yet.",
+    "rev5 identity is the firmware file SHA only; the supervisor identity register equals rev4 (H5).",
+    "Provider probe ran Linux DMA initialization/soft reset; not a whole-path quiescence proof.",
+    "Module is out-of-tree and unsigned (kernel taint expected); identity is SHA/modinfo-pinned, not attested."
+  ],
+  "actual_assistant_board_operations": 0,
+  "fastpath": 3,
+  "build_result_sha256": "0de140c8549b965357d915903de0c5ec900cdfca5d067dc997ac06ef8e98d14c",
+  "candidate5b_source": "root-bank exact accepted ARM build",
+  "module_runtime_identity_accepted": true,
+  "formal_performance": false
+}
