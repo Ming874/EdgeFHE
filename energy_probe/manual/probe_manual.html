@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>EdgeFHE 能耗探針實作手冊</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1b1f24; --quiet:#5b6470; --line:#cfd5dc; --accent:#1f5fbf; --warn:#a8460c; --tint:#eef3fa; --wtint:#fbf0e8; }
+  * { box-sizing: border-box; }
+  body { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.6; margin: 0; background:#fff; }
+  h1 { font-size: 22pt; margin: 0 0 4pt; }
+  h2 { font-size: 15pt; margin: 18pt 0 6pt; padding-bottom: 3pt; border-bottom: 2px solid var(--accent); break-after: avoid; }
+  h3 { font-size: 12pt; margin: 12pt 0 4pt; break-after: avoid; }
+  p { margin: 4pt 0; }
+  .sub { color: var(--quiet); font-size: 10pt; }
+  .cover { border-left: 6px solid var(--accent); padding: 6pt 0 6pt 12pt; margin-bottom: 10pt; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0; font-size: 9.8pt; break-inside: avoid; }
+  th, td { border: 1px solid var(--line); padding: 4pt 6pt; vertical-align: top; text-align: left; }
+  th { background: #f1f4f7; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 9pt; background: #f3f5f7; padding: 0 3px; border-radius: 3px; }
+  pre { font-family: Consolas, "Courier New", monospace; font-size: 8.4pt; line-height: 1.45; background: #f6f8fa; border: 1px solid var(--line); border-radius: 6px; padding: 7pt 9pt; margin: 6pt 0; white-space: pre-wrap; break-inside: avoid; }
+  .box { border-radius: 6px; padding: 6pt 10pt; margin: 8pt 0; break-inside: avoid; }
+  .info { background: var(--tint); border: 1px solid #c4d5ee; }
+  .warn { background: var(--wtint); border: 1px solid #e9c4a8; }
+  .box b.t { display: block; margin-bottom: 2pt; }
+  ol, ul { margin: 4pt 0 4pt 18pt; padding: 0; }
+  li { margin: 2pt 0; }
+  .refs li { margin: 0; font-size: 9.5pt; line-height: 1.45; }
+  figure { margin: 8pt 0; break-inside: avoid; }
+  figcaption { color: var(--quiet); font-size: 9pt; margin-top: 3pt; }
+  .check li { list-style: "☐  "; }
+  .pb { break-before: page; }
+  .tag { display:inline-block; font-size:8.5pt; padding:0 5px; border-radius:3px; background:#e4ebf5; color:var(--accent); }
+  .tagw { background:#f7e3d6; color:var(--warn); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>EdgeFHE 能耗探針實作手冊</h1>
+  <p><b>ESP32 + INA228：接線、程式實作與校正</b></p>
+  <p class="sub">版本 2026-11-23　·　適用：KV260、INA228 模組（分流電阻 R015）、GST60A12-P1J 變壓器</p>
+</div>
+
+<h2>0　這支探針做什麼</h2>
+<p>探針串接在 KV260 的 12 V 電源線上，量測<b>整塊板子</b>的電壓、電流、功率與累積能量。板上的 INA260 只量 SOM 電源軌，探針補上整板的數字，用來驗證專題「每焦耳處理筆數」的主張。</p>
+<p>工作分三個階段，依序完成：</p>
+<table>
+  <tr><th style="width:18%">階段</th><th>內容</th><th style="width:30%">完成標準</th></tr>
+  <tr><td>1　接線</td><td>電源線路串入 INA228；訊號線接到 ESP32</td><td>通電前檢查全部通過</td></tr>
+  <tr><td>2　實作</td><td>寫入程式，讀出電壓、電流、功率、能量</td><td>KV260 待機時讀到約 12.1 V、約 7.1–7.3 W</td></tr>
+  <tr><td>3　校正</td><td>與參考儀器比對，求出修正係數並寫回程式</td><td>修正後與參考值差距 ≤ 1%</td></tr>
+</table>
+
+<h2>1　材料清單</h2>
+<table>
+  <tr><th>項目</th><th>規格</th><th style="width:14%">狀態</th></tr>
+  <tr><td>INA228 電流／功率監測模組</td><td>分流電阻 R015（0.015 Ω），0–85 V，I²C 位址 0x40</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>ESP32 開發板</td><td>任一型號；需知道 SDA、SCL 腳位</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>ILI9341 彩色顯示面板</td><td>SPI 介面，240 × 320（第 3.3、4.4 節）</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>12 V 變壓器</td><td>GST60A12-P1J：12 V、5 A、插頭 5.5 × 2.1 mm</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>DC 母座電源線</td><td>TG-E1126：5.5 × 2.1 mm，紅黑裸線</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>DC 公頭電源線</td><td><b>5.5 × 2.5 mm</b>，<b>一頭插頭、一頭紅黑裸線</b>（插入 KV260）；也可剪斷公對公線自製（第 3.1 節）</td><td><span class="tag">已有</span></td></tr>
+  <tr><td>連接線</td><td>Qwiic 轉杜邦線或杜邦線數條；電工膠帶或接線端子</td><td>依需要</td></tr>
+  <tr><td>三用電表</td><td>通電前檢查、極性確認</td><td>必備</td></tr>
+  <tr><td>參考儀器</td><td>校正用：實驗室桌上型電表、電源分析儀或 Joulescope JS220</td><td>向實驗室借</td></tr>
+</table>
+
+<h2>2　安全規則</h2>
+<div class="box warn">
+<ol>
+  <li><b>12 V 只接到 INA228 的綠色端子</b>，絕不能碰到 ESP32、顯示面板或 Pmod 的任何腳位。ESP32 的腳位最高只能承受 3.3 V。</li>
+  <li><b>先接線、再檢查、最後才插變壓器。</b>改接線之前一律先拔掉變壓器。</li>
+  <li><b>ESP32 由電腦 USB 供電</b>，不從 KV260 取電，否則探針自己的耗電會被算進 KV260。</li>
+  <li><b>插頭尺寸不可混用：</b>母座線 2.1 mm 只配 GST60A12-P1J；插入 KV260 的必須是 2.5 mm 公頭。尺寸不合會接觸不良，KV260 可能突然斷電。</li>
+  <li>裸線接點用電工膠帶或接線端子包好，避免正負極相碰短路。</li>
+</ol>
+</div>
+
+<h2>3　接線</h2>
+
+<h3>3.1　電源線路：讓正極電流繞過 INA228</h3>
+<p>INA228 就像裝在水管上的水表：只有<b>正極</b>線要斷開，兩端分別接到綠色端子的 Vin+ 與 Vin−；負極線直接連到 KV260，不經過模組。</p>
+<figure>
+<svg viewBox="0 0 760 250" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft JhengHei, sans-serif" font-size="12">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7480"/></marker>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c62828"/></marker>
+  </defs>
+  <!-- adapter -->
+  <rect x="8" y="40" width="118" height="62" rx="8" fill="#fff" stroke="#6b7480"/>
+  <text x="67" y="66" text-anchor="middle" font-weight="700">12 V 變壓器</text>
+  <text x="67" y="84" text-anchor="middle" font-size="10.5" fill="#5b6470">GST60A12-P1J</text>
+  <!-- female pigtail -->
+  <rect x="160" y="40" width="122" height="62" rx="8" fill="#fff" stroke="#6b7480"/>
+  <text x="221" y="66" text-anchor="middle" font-weight="700">母座線</text>
+  <text x="221" y="84" text-anchor="middle" font-size="10.5" fill="#5b6470">TG-E1126（5.5×2.1）</text>
+  <path d="M126 71H160" stroke="#6b7480" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="143" y="62" text-anchor="middle" font-size="10" fill="#5b6470">插入</text>
+  <!-- INA228 -->
+  <rect x="318" y="18" width="170" height="120" rx="8" fill="#eef3fa" stroke="#1f5fbf" stroke-width="2"/>
+  <text x="403" y="38" text-anchor="middle" font-weight="700">INA228 模組</text>
+  <rect x="332" y="56" width="52" height="30" rx="4" fill="#2e7d32"/>
+  <text x="358" y="76" text-anchor="middle" fill="#fff" font-weight="700">Vin+</text>
+  <rect x="422" y="56" width="52" height="30" rx="4" fill="#2e7d32"/>
+  <text x="448" y="76" text-anchor="middle" fill="#fff" font-weight="700">Vin−</text>
+  <path d="M384 71h6l4-8 6 16 6-16 6 16 6-16 4 8h0" fill="none" stroke="#1b1f24" stroke-width="1.5"/>
+  <text x="403" y="54" text-anchor="middle" font-size="10" fill="#5b6470">R015</text>
+  <rect x="340" y="110" width="40" height="18" rx="3" fill="#fff" stroke="#a8460c"/>
+  <text x="360" y="123" text-anchor="middle" font-size="10" fill="#a8460c">VBus</text>
+  <path d="M358 110V86" stroke="#a8460c" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <!-- male pigtail -->
+  <rect x="520" y="40" width="120" height="62" rx="8" fill="#fff" stroke="#6b7480"/>
+  <text x="580" y="66" text-anchor="middle" font-weight="700">公頭線</text>
+  <text x="580" y="84" text-anchor="middle" font-size="10.5" fill="#a8460c">5.5×2.5</text>
+  <!-- KV260 -->
+  <rect x="672" y="40" width="80" height="62" rx="8" fill="#fff" stroke="#6b7480"/>
+  <text x="712" y="76" text-anchor="middle" font-weight="700">KV260</text>
+  <path d="M640 71H672" stroke="#6b7480" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="656" y="62" text-anchor="middle" font-size="10" fill="#5b6470">插入</text>
+  <!-- positive wires -->
+  <path d="M282 64H332" stroke="#c62828" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="307" y="56" text-anchor="middle" font-size="10" fill="#c62828">紅</text>
+  <path d="M474 64H520" stroke="#c62828" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="497" y="56" text-anchor="middle" font-size="10" fill="#c62828">紅</text>
+  <!-- GND pin on header -->
+  <rect x="430" y="110" width="44" height="18" rx="3" fill="#fff" stroke="#1b1f24"/>
+  <text x="452" y="123" text-anchor="middle" font-size="10">GND</text>
+  <!-- negative wires -->
+  <path d="M232 102V196H568V102" fill="none" stroke="#1b1f24" stroke-width="3"/>
+  <path d="M452 196V128" stroke="#1b1f24" stroke-width="1.5"/>
+  <circle cx="452" cy="196" r="6" fill="#1b1f24"/>
+  <text x="400" y="222" text-anchor="middle" font-size="11">三條線在此相接並包好絕緣：母座黑、公頭黑、INA228 的 GND（細線）</text>
+  <text x="246" y="150" font-size="10">黑</text>
+  <text x="575" y="150" font-size="10">黑</text>
+  <text x="318" y="156" font-size="10" fill="#a8460c">VBus 接到 Vin+</text>
+</svg>
+<figcaption>圖 1　電源線路。紅線＝+12 V，經過 INA228；黑線＝負極，直接相接。R015 是模組上已有的分流電阻，不需另外準備。</figcaption>
+</figure>
+
+<ol>
+  <li>母座線的<b>紅線</b>鎖進綠色端子 <b>Vin+</b>。</li>
+  <li>公頭線的<b>紅線</b>鎖進綠色端子 <b>Vin−</b>。</li>
+  <li>母座線與公頭線的<b>兩條黑線</b>互相接上。</li>
+  <li>從這個黑線接點再拉<b>一條細線到 INA228 排針的 GND</b>，三條線一起用接線端子或膠帶包好。INA228 量電壓時以這個負極為基準。</li>
+</ol>
+<div class="box info"><b class="t">紅線一定是正極嗎？</b>不一定。接之前用三用電表確認：母座中心那根針要導通到紅線；公頭的中心針也要導通到紅線。若相反，就以導通中心針的那條線當正極。</div>
+<div class="box info"><b class="t">公頭線長怎樣？沒有的話怎麼辦？</b>公頭線是「<b>一頭金屬插頭、一頭紅黑裸線</b>」，和 TG-E1126 同款，只是母座換成插頭。兩頭都是插頭的公對公線或延長線不能直接用，但可以自己剪：全部拔電後從中間剪斷，保留 5.5 × 2.5 插頭那一半；剝開外皮、分出兩條線，各剝約 5–7 mm；用三用電表找出導通插頭中心針的那條當正極；銅絲扭緊（有烙鐵就上錫）再鎖進端子；另一半的裸線頭用膠帶包好。</div>
+
+<h3>3.2　VBus 設定：讓 INA228 量得到電壓</h3>
+<p>量正極側（高側量測）時，VBus 必須接到 Vin+。模組背面的 VBus 跳線焊點<b>出廠時是斷開的</b>。擇一處理：</p>
+<ul>
+  <li>用烙鐵把背面 VBus 跳線焊點焊通；或</li>
+  <li>用一條短線把排針上的 <b>VBus</b> 接到綠端子的 <b>Vin+</b>。</li>
+</ul>
+<p>沒有接的話，電壓會讀錯，功率與能量也會跟著錯。</p>
+
+<h3>3.3　訊號線：INA228、顯示面板與 ESP32</h3>
+<p>INA228 走 I²C（2 條訊號線），ILI9341 走 SPI（5 條訊號線），兩組各接各的腳位，互不干擾。螢幕以 <b>2.4 吋 8 腳模組</b>（腳位 GND、VCC、SCL、SDA、RES、DC、CS、BL）為準。以下以 <b>ESP32-S3 N16R8</b> 為例。</p>
+<figure>
+<svg viewBox="0 0 760 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft JhengHei, sans-serif" font-size="12">
+  <rect x="14" y="50" width="130" height="150" rx="8" fill="#eef3fa" stroke="#1f5fbf" stroke-width="2"/>
+  <text x="79" y="74" text-anchor="middle" font-weight="700">INA228</text>
+  <text x="132" y="100" text-anchor="end">VCC</text><text x="132" y="128" text-anchor="end">GND</text>
+  <text x="132" y="156" text-anchor="end">SCL</text><text x="132" y="184" text-anchor="end">SDA</text>
+  <rect x="250" y="20" width="240" height="270" rx="8" fill="#fff" stroke="#6b7480" stroke-width="1.5"/>
+  <text x="370" y="44" text-anchor="middle" font-weight="700">ESP32-S3 N16R8</text>
+  <text x="262" y="100">3V3</text><text x="262" y="128">GND</text>
+  <text x="262" y="156">GPIO 18（SCL）</text><text x="262" y="184">GPIO 17（SDA）</text>
+  <text x="478" y="72" text-anchor="end">GPIO 12（SCK）</text>
+  <text x="478" y="100" text-anchor="end">GPIO 11（MOSI）</text>
+  <text x="478" y="128" text-anchor="end">GPIO 10（CS）</text>
+  <text x="478" y="156" text-anchor="end">GPIO 14（DC）</text>
+  <text x="478" y="184" text-anchor="end">GPIO 4（RST）</text>
+  <text x="478" y="212" text-anchor="end">3V3</text>
+  <text x="478" y="240" text-anchor="end">GND</text>
+  <text x="370" y="276" text-anchor="middle" font-size="10.5" fill="#5b6470">USB → 電腦（供電與序列埠）</text>
+  <path d="M144 96H250" stroke="#c62828" stroke-width="2.5"/>
+  <path d="M144 124H250" stroke="#1b1f24" stroke-width="2.5"/>
+  <path d="M144 152H250" stroke="#d4a017" stroke-width="2.5"/>
+  <path d="M144 180H250" stroke="#1f5fbf" stroke-width="2.5"/>
+  <rect x="600" y="30" width="146" height="230" rx="8" fill="#fbf7ee" stroke="#6b7480" stroke-width="1.5"/>
+  <text x="673" y="52" text-anchor="middle" font-weight="700">ILI9341（2.4 吋）</text>
+  <text x="612" y="72">SCL（SCK）</text><text x="612" y="100">SDA（MOSI）</text>
+  <text x="612" y="128">CS</text><text x="612" y="156">DC</text>
+  <text x="612" y="184">RES（RESET）</text><text x="612" y="212">VCC、BL</text>
+  <text x="612" y="240">GND</text>
+  <path d="M490 68H600" stroke="#e67e22" stroke-width="2.5"/>
+  <path d="M490 96H600" stroke="#2e7d32" stroke-width="2.5"/>
+  <path d="M490 124H600" stroke="#7b1fa2" stroke-width="2.5"/>
+  <path d="M490 152H600" stroke="#00897b" stroke-width="2.5"/>
+  <path d="M490 180H600" stroke="#6b7480" stroke-width="2.5"/>
+  <path d="M490 208H600" stroke="#c62828" stroke-width="2.5"/>
+  <path d="M490 236H600" stroke="#1b1f24" stroke-width="2.5"/>
+  <text x="673" y="284" text-anchor="middle" font-size="10.5" fill="#c62828">SCL／SDA 屬 SPI，非 I²C</text>
+</svg>
+<figcaption>圖 2　訊號線（ESP32-S3 N16R8）。左側 4 條接 INA228（I²C）；右側接 ILI9341（SPI），VCC 與 BL（背光）都接 3V3。螢幕腳位名稱依 8 腳模組，括號內為一般名稱。</figcaption>
+</figure>
+<table>
+  <tr><th style="width:24%">INA228</th><th style="width:24%">ESP32-S3</th><th>說明</th></tr>
+  <tr><td>VCC</td><td>3V3</td><td>3.3 V 供電</td></tr>
+  <tr><td>GND</td><td>GND</td><td>共地</td></tr>
+  <tr><td>SCL</td><td>GPIO 18</td><td rowspan="2">有 Qwiic 接頭可用 Qwiic 線一次接好</td></tr>
+  <tr><td>SDA</td><td>GPIO 17</td></tr>
+</table>
+<table>
+  <tr><th style="width:17%">螢幕腳位</th><th style="width:21%">其他模組的寫法</th><th style="width:20%">ESP32-S3</th><th>說明</th></tr>
+  <tr><td>GND</td><td>GND</td><td>GND</td><td>共地</td></tr>
+  <tr><td>VCC</td><td>VCC</td><td>3V3</td><td>供電</td></tr>
+  <tr><td>SCL</td><td>SCK、CLK</td><td>GPIO 12</td><td>SPI 時脈（不是 I²C）</td></tr>
+  <tr><td>SDA</td><td>SDI、MOSI、DIN</td><td>GPIO 11</td><td>SPI 資料（不是 I²C）</td></tr>
+  <tr><td>RES</td><td>RESET、RST</td><td>GPIO 4</td><td>重置</td></tr>
+  <tr><td>DC</td><td>RS、A0</td><td>GPIO 14</td><td>區分指令與資料</td></tr>
+  <tr><td>CS</td><td>CS</td><td>GPIO 10</td><td>晶片選擇</td></tr>
+  <tr><td>BL</td><td>LED</td><td>3V3</td><td>背光，接上才會亮</td></tr>
+  <tr><td>（無）</td><td>SDO（MISO）</td><td>不接（或 GPIO 13）</td><td>8 腳模組沒有這支；只寫入畫面，可以不接</td></tr>
+  <tr><td>（無）</td><td>T_ 開頭的腳</td><td>不接</td><td>觸控，這次用不到</td></tr>
+</table>
+<div class="box warn"><b class="t">螢幕的 SCL、SDA 不是 I²C</b>8 腳模組把 SPI 的時脈與資料線標成 SCL、SDA，名稱和 INA228 的 I²C 腳一樣，但用途不同。螢幕的 SCL 接 <b>GPIO 12</b>、SDA 接 <b>GPIO 11</b>；不要接到 INA228 使用的 GPIO 17、18。</div>
+<div class="box warn"><b class="t">ESP32-S3 N16R8 不可使用的腳位</b>GPIO 26–37（快閃記憶體與 PSRAM 專用）、0／3／45／46（開機設定腳）、19／20（原生 USB）、43／44（序列埠）、48（板上 RGB LED）。改腳位時避開這些。</div>
+<p>ESP32 的 GND 接 KV260 Pmod J2 的 GND 腳，留到第 8 章接標記時才需要（Pmod 標準為第 5 或 11 腳，<b>不可</b>接到 VCC 腳 6、12）。</p>
+
+<h3>3.4　通電前檢查（變壓器尚未插上）</h3>
+<ul class="check">
+  <li>三用電表電阻檔：Vin+ 到 Vin− 約 0 Ω（分流電阻只有 0.015 Ω）。</li>
+  <li>Vin+ 到 GND 不可為 0 Ω（不能短路）。</li>
+  <li>母座中心針導通紅線；公頭中心針導通紅線。</li>
+  <li>VBus 已接到 Vin+。</li>
+  <li>兩條黑線與 INA228 的 GND 細線已相接並絕緣；裸露的金屬不會互相碰到。</li>
+  <li>12 V 的線沒有任何一條接到 ESP32、顯示面板或 Pmod。</li>
+  <li>ILI9341 的 VCC 與 BL（LED）接到 ESP32 的 3V3；螢幕的 SCL、SDA 接到 GPIO 12、11。</li>
+</ul>
+
+<h2>4　實作：程式</h2>
+
+<h3>4.1　安裝開發環境</h3>
+<ol>
+  <li>安裝 Arduino IDE 2。</li>
+  <li>開發板管理員搜尋 <b>esp32</b>，安裝 Espressif Systems 的版本。</li>
+  <li>「工具」選單設定：開發板選 <b>ESP32S3 Dev Module</b>；Flash Size 選 <b>16MB</b>；PSRAM 選 <b>OPI PSRAM</b>；其他維持預設。</li>
+  <li>USB 線插在板子上標示 <b>COM</b> 的孔（USB CDC On Boot 維持 Disabled）。若插在標示 <b>USB</b> 的孔，USB CDC On Boot 要改成 <b>Enabled</b>，否則序列埠看不到輸出。</li>
+  <li>程式庫管理員搜尋 <b>INA228</b>，安裝 <b>Adafruit INA228 Library</b>（作者 Adafruit，會一併安裝 Adafruit BusIO），本手冊依 3.0.0 版撰寫。</li>
+  <li>程式庫管理員安裝 <b>Adafruit ILI9341</b>（會一併安裝 Adafruit GFX），1.6.3 與 1.7.0 版皆可。</li>
+  <li>已在 Arduino IDE 2.3.11、ESP32 開發板套件 3.3.12 上以「ESP32S3 Dev Module（16MB、OPI PSRAM）」完整編譯 <code>probe.ino</code>，COM 孔與 USB 孔兩種設定皆無錯誤。</li>
+</ol>
+
+<h3>4.2　先做低電壓測試（建議）</h3>
+<p>公頭線還沒買到前，可以先用 ESP32 自己的 3.3 V 點亮一顆 LED，確認接線與程式都正確，全程沒有 12 V：</p>
+<pre>ESP32 3V3 ─► Vin+ [INA228] Vin− ─► LED 長腳 ─ LED 短腳 ─► 330 Ω 電阻 ─► ESP32 GND
+（VBus 接 Vin+；INA228 的 VCC、GND、SDA、SCL 照第 3.3 節接到 ESP32）</pre>
+<p>上傳 4.3 節的程式後，序列埠與螢幕應顯示電流約 3–5 mA、電壓約 3.3 V。看得到數字就代表 I²C、顯示面板與量測都正常。</p>
+
+<h3>4.3　主程式</h3>
+<div class="box info"><b class="t">程式在 repository 中</b>完整程式在 <code>energy_probe/firmware/probe/probe.ino</code>，用 Arduino IDE 直接開啟即可。<b>不要從這份 PDF 複製程式</b>，縮排和符號可能跑掉。</div>
+<p>這是完整程式，已包含顯示面板。只需改最上面兩處：腳位，以及第 5 章求出的校正值。程式每 100 ms 從序列埠輸出一行 CSV，每 0.5 秒更新一次螢幕；在序列埠送出字元 <code>r</code> 會把能量歸零。</p>
+<pre style="break-inside:auto">// EdgeFHE 能耗探針：ESP32-S3（N16R8）+ INA228（R015）+ ILI9341 顯示面板
+#include &lt;Wire.h&gt;
+#include &lt;SPI.h&gt;
+#include &lt;Adafruit_INA228.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_ILI9341.h&gt;
+
+// ===== 1. 腳位（ESP32-S3 N16R8）=====
+const int SDA_PIN = 17, SCL_PIN = 18;                      // INA228：I2C
+const int TFT_SCK = 12, TFT_MOSI = 11, TFT_MISO = 13;      // ILI9341：SPI
+const int TFT_CS = 10, TFT_DC = 14, TFT_RST = 4;
+// 不可使用：GPIO 26–37（快閃記憶體與 PSRAM）、0／3／45／46（開機設定腳）、
+//          19／20（原生 USB）、43／44（序列埠）、48（板上 RGB LED）
+
+// ===== 2. 校正值：第 5 章求出後填入 =====
+const float K_I = 1.0000;          // 電流增益
+const float K_V = 1.0000;          // 電壓增益
+const float I_OFFSET_mA = 0.0;     // 零點偏移（mA）
+
+Adafruit_INA228 ina228;
+Adafruit_ILI9341 tft(TFT_CS, TFT_DC, TFT_RST);
+
+// ===== 3. 每焦耳筆數：電腦經序列埠送指令 =====
+//   S&lt;文字&gt;               標題下方的狀態列，例如 SIDLE、SRUN V8b (FPGA)
+//   B                     一輪開始：能量歸零
+//   E&lt;列&gt;,&lt;名稱&gt;,&lt;筆數&gt;    一輪結束：用這段期間的能量算「筆/J」，顯示在螢幕底部第 &lt;列&gt; 行（0、1 或 2）
+String cmdBuf;
+
+void tftInit() {                   // 畫出固定的標題與欄位名稱
+  SPI.begin(TFT_SCK, TFT_MISO, TFT_MOSI, TFT_CS);   // 明確指定 SPI 腳位
+  tft.begin();
+  tft.setRotation(1);              // 橫向 320 x 240
+  tft.fillScreen(ILI9341_BLACK);
+  tft.setTextSize(2);
+  tft.setTextColor(ILI9341_CYAN);
+  tft.setCursor(10, 8);
+  tft.print("EdgeFHE Power Probe");
+  const char* labels[] = {"Voltage", "Current", "Power", "Energy"};
+  tft.setTextColor(ILI9341_LIGHTGREY);
+  for (int k = 0; k &lt; 4; k++) { tft.setCursor(10, 50 + k * 40); tft.print(labels[k]); }
+}
+
+void tftShow(float v, float i_mA, float p_mW, float e) {   // 更新四個數值
+  char buf[16];
+  tft.setTextSize(3);
+  tft.setTextColor(ILI9341_WHITE, ILI9341_BLACK);   // 帶背景色：蓋掉舊數字，不閃爍
+  snprintf(buf, sizeof buf, "%7.3f V ", v);           tft.setCursor(130, 45);  tft.print(buf);
+  snprintf(buf, sizeof buf, "%7.1f mA", i_mA);        tft.setCursor(130, 85);  tft.print(buf);
+  snprintf(buf, sizeof buf, "%7.3f W ", p_mW / 1000); tft.setCursor(130, 125); tft.print(buf);
+  snprintf(buf, sizeof buf, "%7.1f J ", e);           tft.setCursor(130, 165); tft.print(buf);
+}
+
+void showState(const String&amp; s) {                  // 標題下方：目前狀態（閒置或正在跑哪一版）
+  char buf[26];
+  snprintf(buf, sizeof buf, "%-25s", s.c_str());
+  tft.setTextSize(2);
+  tft.setTextColor(ILI9341_GREEN, ILI9341_BLACK);
+  tft.setCursor(10, 27);
+  tft.print(buf);
+}
+
+void showResult(int row, const String&amp; label, double recPerJ) {   // 螢幕底部：名稱與每焦耳筆數
+  char buf[32];
+  snprintf(buf, sizeof buf, "%-8s %7.0f rec/J", label.c_str(), recPerJ);
+  tft.setTextSize(2);
+  tft.setTextColor(ILI9341_YELLOW, ILI9341_BLACK);
+  tft.setCursor(10, 192 + row * 16);
+  tft.print(buf);
+}
+
+void handleLine(const String&amp; line) {
+  if (line.startsWith("S")) {                          // 狀態列
+    showState(line.substring(1));
+    return;
+  }
+  if (line == "B") {                                   // 一輪開始
+    ina228.resetAccumulators();
+    Serial.println("# run begin");
+    return;
+  }
+  if (line.startsWith("E")) {                          // 一輪結束：E&lt;列&gt;,&lt;名稱&gt;,&lt;筆數&gt;
+    int c1 = line.indexOf(','), c2 = line.indexOf(',', c1 + 1);
+    if (c1 &lt; 0 || c2 &lt; 0) return;
+    int row = line.substring(1, c1).toInt();
+    String label = line.substring(c1 + 1, c2);
+    double records = line.substring(c2 + 1).toDouble();
+    double e = K_V * K_I * ina228.readEnergy();        // 這一輪的能量（J）
+    double rpj = e &gt; 0 ? records / e : 0;
+    Serial.printf("# result %s records=%.0f E_J=%.3f rec_per_J=%.1f\n", label.c_str(), records, e, rpj);
+    showResult(row &lt; 0 ? 0 : (row &gt; 2 ? 2 : row), label, rpj);
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  delay(500);
+  tftInit();
+  showState("State: --");
+  Wire.begin(SDA_PIN, SCL_PIN);
+  if (!ina228.begin(0x40, &amp;Wire)) {
+    Serial.println("# ERROR: INA228 not found. Check SDA/SCL/VCC/GND.");
+    tft.setTextSize(2);
+    tft.setTextColor(ILI9341_RED, ILI9341_BLACK);
+    tft.setCursor(10, 215);
+    tft.print("INA228 not found");
+    while (true) delay(1000);
+  }
+  ina228.setShunt(0.015, 2.7);                 // R015 = 0.015 Ω，最大 2.7 A
+  ina228.setADCRange(1);                       // ±40.96 mV 量程，解析度約 5 µA
+  ina228.setMode(INA228_MODE_CONT_BUS_SHUNT);  // 連續量測電壓與電流
+  ina228.setCurrentConversionTime(INA228_TIME_540_us);
+  ina228.setVoltageConversionTime(INA228_TIME_540_us);
+  ina228.setAveragingCount(INA228_COUNT_16);   // 每筆約 17 ms
+  ina228.resetAccumulators();                  // 能量歸零
+  Serial.println("# t_ms,V,I_mA,P_mW,E_J");
+}
+
+void loop() {
+  static uint32_t last = 0, lastTft = 0;
+  while (Serial.available()) {                 // 讀電腦送來的指令
+    char c = Serial.read();
+    if (c == 'r' &amp;&amp; cmdBuf.length() == 0) {    // 單一字元 r：能量歸零（probe_log.py 使用）
+      ina228.resetAccumulators();
+      Serial.println("# energy reset");
+    } else if (c == '\n') {
+      cmdBuf.trim();
+      handleLine(cmdBuf);
+      cmdBuf = "";
+    } else if (c != '\r' &amp;&amp; cmdBuf.length() &lt; 40) {
+      cmdBuf += c;
+    }
+  }
+  if (millis() - last &lt; 100) return;          // 每 100 ms 輸出一筆
+  last = millis();
+  float v = K_V * ina228.getBusVoltage_V();                  // V
+  float i = K_I * (ina228.getCurrent_mA() - I_OFFSET_mA);    // mA
+  float p = v * i;                                           // mW
+  float e = K_V * K_I * ina228.readEnergy();                 // J
+  Serial.printf("%lu,%.4f,%.2f,%.1f,%.3f\n", (unsigned long)last, v, i, p, e);
+  if (last - lastTft &gt;= 500) { lastTft = last; tftShow(v, i, p, e); }   // 每 0.5 秒更新螢幕
+}</pre>
+<div class="box info"><b class="t">程式的兩個重點</b>能量用 INA228 晶片內的累加暫存器在硬體裡連續積分，不受 ESP32 讀取間隔影響。能量的修正係數是 <code>K_V × K_I</code>；零點偏移很小時（見第 5.2 節）對能量的影響可以忽略。</div>
+
+<div style="break-inside:avoid"><h3>4.4　顯示面板（ILI9341）</h3>
+<p>4.3 節的程式已包含顯示功能，接線照第 3.3 節即可。螢幕由上到下是：標題、狀態列（綠字）、四行量測值、三行每焦耳筆數（黃字）。</p>
+<figure style="width:62%">
+<svg viewBox="0 0 320 240" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace">
+  <rect x="0" y="0" width="320" height="240" rx="6" fill="#000"/>
+  <text x="10" y="24" font-size="15" fill="#00ffff">EdgeFHE Power Probe</text>
+  <text x="10" y="41" font-size="13" fill="#00ff00">IDLE (default app)</text>
+  <text x="10" y="64" font-size="13" fill="#c6c3c6">Voltage</text>
+  <text x="10" y="104" font-size="13" fill="#c6c3c6">Current</text>
+  <text x="10" y="144" font-size="13" fill="#c6c3c6">Power</text>
+  <text x="10" y="184" font-size="13" fill="#c6c3c6">Energy</text>
+  <text x="130" y="66" font-size="21" fill="#fff">12.003 V</text>
+  <text x="130" y="106" font-size="21" fill="#fff"> 291.4 mA</text>
+  <text x="130" y="146" font-size="21" fill="#fff"> 3.498 W</text>
+  <text x="130" y="186" font-size="21" fill="#fff"> 104.9 J</text>
+  <text x="10" y="205" font-size="13" fill="#ffff00" style="white-space:pre">V8b       179374 rec/J</text>
+  <text x="10" y="221" font-size="13" fill="#ffff00" style="white-space:pre">OpenFHE1    5378 rec/J</text>
+  <text x="10" y="237" font-size="13" fill="#ffff00" style="white-space:pre">OpenFHE4   19063 rec/J</text>
+</svg>
+<figcaption>圖 3　螢幕畫面示意。黃字為 2026-11-23 V8b 與 OpenFHE 量測各自的最後一輪；其餘數值僅為範例。</figcaption>
+</figure>
+</div>
+<table>
+  <tr><th style="width:22%">欄位</th><th>意義</th></tr>
+  <tr><td>Voltage</td><td>12 V 線上的電壓（V）</td></tr>
+  <tr><td>Current</td><td>流進 KV260 的電流（mA）</td></tr>
+  <tr><td>Power</td><td>整板功率（W）＝電壓 × 電流</td></tr>
+  <tr><td>Energy</td><td>從上次歸零起累積的能量（J）；送出 <code>r</code>、<code>B</code> 或執行 4.5 節腳本時歸零</td></tr>
+  <tr><td>狀態列（綠字）</td><td>目前板子在做什麼，例如 <code>IDLE (V8b loaded)</code>、<code>RUN V8b (FPGA)</code>；由電腦送 <code>S</code> 指令更新</td></tr>
+  <tr><td>rec/J（黃字）</td><td>最近一輪的每焦耳處理筆數；第 0 行 V8b、第 1 行 OpenFHE 單執行緒、第 2 行 OpenFHE 4 執行緒（4.7 節）</td></tr>
+</table>
+<p>內建字型只支援英數字，所以欄位名稱用英文。若 INA228 沒有回應，螢幕下方會出現紅字 <code>INA228 not found</code>，依第 7 章檢查 I²C 接線。狀態列與每焦耳筆數都由電腦經序列埠送指令更新（4.7 節）。</p>
+
+<h3>4.5　記錄資料（電腦端）</h3>
+<p>校正時要取一段時間的平均值。腳本在 <code>energy_probe/pc/probe_log.py</code>（需要 Python 與 <code>pyserial</code>）。它會先把能量歸零，記錄指定秒數，存成 CSV，最後印出平均值。<b>不加任何參數執行時，會列出目前的序列埠</b>，方便找出 ESP32 是哪一個 COM。</p>
+<pre>cd energy_probe\pc
+python probe_log.py                    # 列出序列埠
+python probe_log.py COM5 30 idle.csv   # 記錄 30 秒，存成 idle.csv</pre>
+<p>腳本內容如下（僅供閱讀，請直接執行 repository 中的檔案）：</p>
+<pre style="break-inside:auto">"""EdgeFHE 能耗探針：電腦端記錄腳本（手冊第 4.5 節）
+
+用法：python probe_log.py COM5 30 idle.csv
+  COM5      換成 ESP32 的序列埠
+  30        記錄秒數
+  idle.csv  輸出檔名
+
+不加任何參數執行時，會列出這台電腦目前的序列埠。
+"""
+import sys
+import time
+
+import serial
+from serial.tools import list_ports
+
+# 這台 Windows 的預設編碼不是 UTF-8，先統一成 UTF-8，中文輸出才不會出錯
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+
+if len(sys.argv) != 4:
+    print(__doc__)
+    print("目前的序列埠：")
+    for p in list_ports.comports():
+        print(f"  {p.device}  {p.description}")
+    sys.exit(1)
+
+port, secs, out = sys.argv[1], float(sys.argv[2]), sys.argv[3]
+rows = []
+with serial.Serial(port, 115200, timeout=1) as s, open(out, "w") as f:
+    time.sleep(2)
+    s.reset_input_buffer()
+    s.write(b"r")                      # 能量歸零
+    time.sleep(0.3)
+    f.write("t_ms,V,I_mA,P_mW,E_J\n")
+    t0 = time.time()
+    while time.time() - t0 &lt; secs:
+        line = s.readline().decode(errors="ignore").strip()
+        parts = line.split(",")
+        if line.startswith("#") or len(parts) != 5:
+            continue
+        f.write(line + "\n")
+        rows.append([float(x) for x in parts])
+
+if not rows:
+    sys.exit("沒有收到資料：請確認序列埠名稱，以及 ESP32 已上傳 4.3 節的程式")
+
+n = len(rows)
+
+
+def avg(k):
+    return sum(r[k] for r in rows) / n
+
+
+print(f"筆數 {n}｜平均電壓 {avg(1):.4f} V｜平均電流 {avg(2):.2f} mA｜"
+      f"平均功率 {avg(3) / 1000:.4f} W｜累積能量 {rows[-1][4]:.3f} J")</pre>
+
+<h3>4.6　第一次接上 KV260</h3>
+<ol>
+  <li>ESP32 接電腦 USB，打開序列埠監控視窗（115200），確認沒有出現 <code>ERROR</code>。</li>
+  <li><b>公頭先不要插 KV260</b>，插上變壓器：應讀到電壓約 12 V、電流接近 0。這時的電流就是零點偏移，記下來（第 5.2 節）。此時公頭帶有 12 V，不要讓插頭碰到金屬。</li>
+  <li>拔掉變壓器，把公頭插進 KV260，再插上變壓器讓 KV260 開機。</li>
+  <li>待機時應讀到約 <b>12.1 V、約 0.59 A、約 7.1–7.3 W</b>（2026-11-23 實測）。簡報第 9 頁的「約 3.5 W」是板上 INA260 量的 SOM 供電軌，只占整板約一半，兩者量的是不同的點。</li>
+</ol>
+
+<h3>4.7　每焦耳處理筆數：比較兩版加密</h3>
+<p>電腦經序列埠送下面的指令（每行以換行結尾），探針用 INA228 內建的能量累積器算出這段期間的能量，再算每焦耳筆數並顯示在螢幕底部：</p>
+<table>
+  <tr><th style="width:26%">指令</th><th>作用</th></tr>
+  <tr><td><code>S</code>文字</td><td>更新狀態列，例如 <code>SRUN V8b (FPGA)</code></td></tr>
+  <tr><td><code>B</code></td><td>一輪開始：能量歸零</td></tr>
+  <tr><td><code>E</code>列,名稱,筆數</td><td>一輪結束：筆數 ÷ 這一輪的能量，顯示在第 0、1 或 2 行，並在序列埠印出 <code># result …</code></td></tr>
+  <tr><td><code>r</code>（單一字元）</td><td>能量歸零（4.5 節腳本使用）</td></tr>
+</table>
+<p>比較腳本在 <code>energy_probe/kv260/</code>（用法見同一資料夾的 <code>README.md</code>）。<code>enc_compare_v8b_ofhe.py</code> 經 KV260 主控台（COM6）依序載入 V8b、量 30 秒待機與 N 輪 30 秒持續加密，再清空 PL 量 OpenFHE 1.5.1 的單執行緒與 4 執行緒，最後還原成預設的 k26-starter-kits。各設定用相同的定義：</p>
+<ul>
+  <li>只量 FPGA 加密：每個 frame 8 個密文，同一個 frame 連續送進 FPGA，不含 ARM 端的正規化與編碼；第一個與最後一個 frame 都與軟體逐位元比對。</li>
+  <li>筆數＝密文數 × 2048 ÷ 4（每筆 4 個特徵）。</li>
+  <li>總值＝筆數 ÷ 這 30 秒的整板能量；淨值＝筆數 ÷（加密時功率 − 同一版載入後的待機功率）× 秒數。</li>
+</ul>
+<p>2026-11-23 先以同一定義比較了 V8b 與 <code>edgefhe2</code>（未接乙太網路；<code>edgefhe2</code> 與其比較腳本不在 repository）：</p>
+<table>
+  <tr><th>版本</th><th>每秒筆數</th><th>加密時整板功率</th><th>載入後待機</th><th>每焦耳筆數（總值）</th><th>每焦耳筆數（淨值）</th></tr>
+  <tr><td>V8b rev5</td><td>1,786,687</td><td>8.883 W</td><td>7.946 W</td><td>201,141 ± 1,693</td><td>1,907,260</td></tr>
+  <tr><td>edgefhe2</td><td>1,190,518</td><td>8.065 W</td><td>7.727 W</td><td>147,612 ± 71</td><td>3,516,349</td></tr>
+</table>
+<p>各 3 輪，± 為標準差。探針螢幕自己算的每焦耳筆數與電腦分析相差 0.4% 以內。</p>
+<p>同日再以 <code>enc_compare_v8b_ofhe.py</code> 比較 V8b 與 OpenFHE 1.5.1（只用 ARM，PL 清空；參數與 repository 文件的 OpenFHE 對照組相同），每種設定 10 輪。這次 KV260 接上了乙太網路，整板功率約高 1 W，所以 V8b 的數字和上表不同：</p>
+<table>
+  <tr><th>設定</th><th>每秒筆數</th><th>加密時整板功率</th><th>每焦耳筆數（總值）</th><th>CPU</th></tr>
+  <tr><td>V8b rev5</td><td>1,791,652</td><td>9.931 W</td><td>180,411 ± 873</td><td>13%</td></tr>
+  <tr><td>OpenFHE 4 執行緒</td><td>195,710</td><td>10.348 W</td><td>18,913 ± 45</td><td>100%</td></tr>
+  <tr><td>OpenFHE 單執行緒</td><td>49,955</td><td>9.221 W</td><td>5,417 ± 19</td><td>25%</td></tr>
+</table>
+<p>V8b 為 OpenFHE 4 執行緒的 9.54 倍（95% 信賴區間 9.50–9.57）。這個倍數只適用於加密這一步。圖表與報告由 <code>energy_probe/kv260/</code> 的 <code>analyze_compare.py</code>、<code>make_figs.py</code>、<code>make_report.py</code> 產生。</p>
+
+<h2>5　校正</h2>
+<p>校正的目的：讓探針的讀值與一台<b>更準的參考儀器</b>一致，並留下紀錄，證明探針的數字可信。</p>
+<div class="box info"><b class="t">參考儀器要比探針準</b>目標是 1% 以內，參考儀器的準確度最好再好 3–4 倍（約 0.3% 以內），例如實驗室的桌上型電表、直流電源分析儀或 Joulescope JS220。一般手持三用電表只適合做檢查，不適合當正式校正的依據。</div>
+
+<h3>5.1　參考儀器怎麼接</h3>
+<ul>
+  <li><b>量電流：</b>參考儀器的電流檔串在正極線上，例如母座紅線與 Vin+ 之間。這樣參考儀器與 INA228 量的是同一個電流。</li>
+  <li><b>量電壓：</b>參考儀器的電壓檔量 Vin+ 對負極（黑線）。</li>
+  <li>電源分析儀或 JS220 可同時量電壓、電流與功率，依儀器說明串接即可。</li>
+</ul>
+
+<h3>5.2　步驟 1：零點偏移</h3>
+<p>公頭不接 KV260（沒有負載），插上變壓器，記錄 30 秒平均電流，即為 <code>I_OFFSET_mA</code>。若絕對值小於 0.3 mA（約為 KV260 待機電流的 0.1%），可直接當作 0。</p>
+
+<h3>5.3　步驟 2：電壓增益</h3>
+<p>同一個狀態下，比較參考儀器的電壓 V<sub>ref</sub> 與探針的電壓 V<sub>探針</sub>：</p>
+<pre>K_V = V_ref ÷ V_探針</pre>
+
+<h3>5.4　步驟 3：電流增益（穩定負載）</h3>
+<p>電流最好在<b>穩定的負載</b>下校正，數字不會跳動：</p>
+<ul>
+  <li>首選：實驗室的直流電子負載，設定 0.3 A、0.6 A、1.0 A 三個點。</li>
+  <li>替代：大功率水泥電阻，例如 24 Ω／10 W 約 0.5 A（發熱約 6 W，請放在不可燃的表面上，量完立刻斷電）。</li>
+</ul>
+<p>每一點記錄 30 秒平均，計算：</p>
+<pre>K_I = I_ref ÷ (I_探針 − I_OFFSET)　　（各點的 K_I 取平均）</pre>
+<p>各點的 K_I 應該很接近。若彼此差異大於 0.5%，代表接線或接觸有問題，先排除再繼續。</p>
+
+<h3>5.5　步驟 4：用 KV260 實際工作狀態驗證</h3>
+<p>把 K_I、K_V 填入程式並重新上傳，然後量 KV260 的三個狀態，每個狀態用 <code>probe_log.py</code> 記錄 30 秒，並同時讀取參考儀器的 30 秒平均：</p>
+<table>
+  <tr><th style="width:22%">狀態</th><th>怎麼產生</th></tr>
+  <tr><td>待機</td><td>KV260 開機後不執行任何程式，等 2 分鐘讓溫度穩定</td></tr>
+  <tr><td>ARM 全速</td><td><code>sudo apt install stress-ng</code>，再執行 <code>stress-ng --cpu 4 --timeout 90s</code></td></tr>
+  <tr><td>PL 連續加密</td><td>執行 V8b 的連續加密量測（指令請 V8b 作者依 <code>v8b_rev5/README.md</code> 第 7 節提供）</td></tr>
+</table>
+
+<h3>5.6　步驟 5：能量驗證</h3>
+<p>在 PL 連續加密狀態下，用 <code>probe_log.py</code> 記錄 60 秒。探針的累積能量要等於參考儀器的「平均功率 × 60 秒」（或參考儀器直接顯示的能量）。</p>
+
+<h3>5.7　校正紀錄表</h3>
+<table>
+  <tr><th>項目</th><th>參考值</th><th>探針（修正前）</th><th>修正係數</th><th>探針（修正後）</th><th>差距</th></tr>
+  <tr><td>零點電流（mA）</td><td>0</td><td></td><td>I_OFFSET＝</td><td></td><td></td></tr>
+  <tr><td>電壓（V）</td><td></td><td></td><td>K_V＝</td><td></td><td></td></tr>
+  <tr><td>電流 點 1（mA）</td><td></td><td></td><td rowspan="3">K_I＝</td><td></td><td></td></tr>
+  <tr><td>電流 點 2（mA）</td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>電流 點 3（mA）</td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>功率：待機（W）</td><td></td><td></td><td>—</td><td></td><td></td></tr>
+  <tr><td>功率：ARM 全速（W）</td><td></td><td></td><td>—</td><td></td><td></td></tr>
+  <tr><td>功率：PL 加密（W）</td><td></td><td></td><td>—</td><td></td><td></td></tr>
+  <tr><td>能量：60 秒（J）</td><td></td><td></td><td>—</td><td></td><td></td></tr>
+</table>
+<p class="sub">另外記錄：參考儀器型號與序號、探針韌體版本、室溫、日期。紀錄表與 CSV 原始檔一併存進 repository。</p>
+
+<h2>6　驗收標準（提案）</h2>
+<table>
+  <tr><th>項目</th><th>標準</th></tr>
+  <tr><td>零點偏移</td><td>|I_OFFSET| &lt; 0.3 mA，或已在程式中扣除</td></tr>
+  <tr><td>電壓、電流、功率</td><td>修正後與參考值差距 ≤ 1%（待機、ARM 全速、PL 加密三個狀態都要達到）</td></tr>
+  <tr><td>能量（60 秒）</td><td>與參考值差距 ≤ 1%</td></tr>
+  <tr><td>紀錄</td><td>紀錄表、CSV 原始檔、參考儀器資訊全部入庫</td></tr>
+</table>
+
+<h2>7　疑難排解</h2>
+<table>
+  <tr><th style="width:26%">症狀</th><th style="width:32%">可能原因</th><th>處理方式</th></tr>
+  <tr><td>出現 <code>INA228 not found</code></td><td>SDA、SCL 接反或腳位設定錯；模組沒有供電</td><td>核對接線與程式中的 SDA_PIN、SCL_PIN；確認 VCC 有 3.3 V</td></tr>
+  <tr><td>電壓讀到 0、很小或亂跳</td><td>VBus 沒有接到 Vin+；或 INA228 的 GND 沒接到黑線接點</td><td>焊通背面 VBus 跳線或補一條 VBus 到 Vin+ 的線；確認 GND 細線已接上</td></tr>
+  <tr><td>電流是負的</td><td>Vin+、Vin− 接反</td><td>對調綠色端子上的兩條紅線</td></tr>
+  <tr><td>KV260 突然斷電或重開機</td><td>插頭尺寸不合或端子沒鎖緊</td><td>母座 2.1 mm 只配 GST60A12-P1J；公頭必須 2.5 mm；鎖緊端子</td></tr>
+  <tr><td>數字跳動很大</td><td>平均次數太少</td><td>把 <code>INA228_COUNT_16</code> 改成 <code>INA228_COUNT_64</code></td></tr>
+  <tr><td>序列埠監控視窗沒有任何輸出</td><td>USB 線插在 USB 孔，但 USB CDC On Boot 為 Disabled</td><td>改插 COM 孔；或把 USB CDC On Boot 改為 Enabled 後重新上傳</td></tr>
+  <tr><td>腳本開啟 COM5 後收不到資料</td><td>開啟序列埠時 DTR／RTS 讓 ESP32 停在重置</td><td>按一下 ESP32 的 RST；4.7 節的腳本會自動處理</td></tr>
+  <tr><td>螢幕全白（背光有亮、沒有字）</td><td>SPI 訊號沒通：螢幕的 SCL、SDA 接到 I²C 腳位；或 SCL、SDA、CS、DC、RES 接錯、插偏一格</td><td>螢幕 SCL→GPIO 12、SDA→GPIO 11、CS→10、DC→14、RES→4，逐條核對並確認插緊</td></tr>
+  <tr><td>螢幕全黑（背光不亮）</td><td>VCC、GND 或 BL（LED）沒接</td><td>VCC 與 BL 接 3V3，GND 接 GND</td></tr>
+</table>
+
+<h2>8　下一步：接上 Pmod 標記</h2>
+<p>校正完成後，探針就能量「整板平均功率」。要算出<b>每焦耳處理筆數</b>，還需要知道每一批工作從什麼時候開始、什麼時候結束：</p>
+<ol>
+  <li>FPGA 端由冠興把「frame 進行中」「批次標記」「200 MHz ÷ 1,024」三個訊號輸出到 Pmod J2。</li>
+  <li>ESP32 用 GPIO 讀取這些標記（同時把 ESP32 的 GND 接到 Pmod J2 的 GND 腳），在每批開始與結束時記錄 INA228 的累積能量。</li>
+  <li>每焦耳處理筆數 ＝ 處理筆數 ÷ 能量差；CPU 路徑與 PL 路徑各量 10 次，報告 95% 信賴區間。</li>
+</ol>
+<p>這個做法與 MLPerf Tiny 論文的能耗量測方式相同：受測板子用 GPIO 標記開始與結束，外部能量儀同時記錄功率。</p>
+
+<h2>參考資料</h2>
+<ul class="refs">
+  <li>Adafruit INA228 I²C Power Monitor 教學（高側接法、VBus 跳線）：learn.adafruit.com/adafruit-ina228-i2c-power-monitor</li>
+  <li>Adafruit_INA228 程式庫 3.0.0：github.com/adafruit/Adafruit_INA228</li>
+  <li>Adafruit_ILI9341 程式庫 1.6.3：github.com/adafruit/Adafruit_ILI9341</li>
+  <li>TI INA228 產品頁與規格書：ti.com/product/INA228</li>
+  <li>AMD KV260 電源轉接器（12 V、3 A；5.5 × 2.5 mm，中心正極）：amd.com，KV260 power supply adapter</li>
+  <li>MEAN WELL GST60A12 規格：meanwell.com 產品目錄</li>
+  <li>Borras 等，Open-Source FPGA-ML Codesign for the MLPerf Tiny Benchmark，arXiv 2206.11791</li>
+</ul>
+
+</body>
+</html>
