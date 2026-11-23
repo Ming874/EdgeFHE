@@ -46,7 +46,7 @@
 - 新增或修改檔案後，執行 `python tools/update_manifest.py`，再執行 `python tools/verify_repository.py`。修改 `v8b_rev5/` 內的檔案時，另外執行 `v8b_rev5/tools/update_sums.py` 與 `verify_repo.py`，且樹中不能有 `node_modules`。
 - `.gitleaksignore` 以三個指紋排除 `v8b_rev5/software/client/PROFILE_DESCRIPTOR.json` 中的 SHA-256 誤判；指紋依賴 commit `a83fab4`，該 commit 不可 squash 或改寫。
 - dependabot 的 PR 必須更新 `release/SHA256SUMS` 才會通過 CI；V8b 前端沒有 `eslint.config`，`npm run lint` 必定失敗。
-- `docs/EdgeFHE_261014.pptx`、`docs/EdgeFHE_261016.pptx` 與 PUF 分析報告 PDF 尚未加入 git（repository 為公開，是否提交尚未決定）。
+- 過去的簡報 `docs/EdgeFHE_261014.pptx`、`docs/EdgeFHE_261016.pptx` 與 `docs/PUF-EdgeFHE-深度分析報告.pdf` 已加入 repository（2026-11-23 決定），僅作背景參考；新簡報不引用其版本差異。
 
 ## 6. 引用數字時的注意事項
 
@@ -75,7 +75,7 @@
 - 電腦開啟探針的序列埠時，DTR 與 RTS 都要設為 False；切換這兩條線可能讓 ESP32 停在重置狀態。
 - 探針尚未以參考儀器校正（`K_V = K_I = 1`）。INA228 量電壓的誤差上限約 ±0.05%＋2.5 mV；電流誤差主要來自分流電阻公差。手持電表的精度通常不足以校正 INA228，只適合作外部驗證；正式校正需桌上型精密電表或已知阻值的負載。
 - 探針韌體、實作手冊、記錄與分析腳本，以及 V8b／OpenFHE 的比較工具都在 [energy_probe/](../energy_probe/README.md)。
-- V8b 的板上套件（板上 `~/edgefhe-v8b-r5/BOARD_STEPS_zh-TW.md` 步驟 7，不在 repository）另外規劃了 INA226＋ESP32-S3 的整板量測，與本探針重疊；兩者擇一前需與 V8b 作者協調。
+- 整板量測採用本探針（INA228，ESP32 接在量測電腦上，2026-11-23 決定）。V8b 板上套件步驟 7 規劃的 INA226＋ESP32-S3 方案（ESP32 插在 KV260 上、由受測板自己記錄）不採用，以維持量測端與受測系統獨立。
 
 ## 8. 2026-11-23 實測結果（探針未校正；同一次量測內的倍數不受校正影響）
 
@@ -129,6 +129,4 @@ INA260 只看到滿載增量的 62%，因此不能用來校正外接探針，只
 ## 11. 尚待決定的事項
 
 - ESP32 能耗探針模組的負責人。
-- 舊簡報與 PUF 報告是否提交（repository 為公開）。
 - 探針的參考儀器校正（借用系上實驗室的桌上型電表）。
-- 與 V8b 作者協調整板量測方案（INA226 方案與本探針擇一）。
