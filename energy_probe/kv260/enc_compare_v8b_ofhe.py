@@ -53,7 +53,7 @@ time.sleep(1)
 kv = KV("COM6"); kv.login("ubuntu", pw)
 
 def sudo():
-    kv.run(f"echo '{pw}' | sudo -S -v 2>/dev/null; true", 20)
+    kv.run(f"echo '{pw}' | sudo -S -v 2>/dev/null; true", 20, secret=pw)
 
 def stat():
     rc, out = kv.run("head -1 /proc/stat", 10)
@@ -104,7 +104,7 @@ def sustain(label, row, rep, cmd, pass_tag, baseline=None, kind="FPGA"):
         raise RuntimeError(f"{label} run failed:\n" + "\n".join(info["lines"][-15:]))
 
 try:
-    rc, apps = kv.run("sudo -n true 2>/dev/null; echo '" + pw + "' | sudo -S -v 2>/dev/null; sudo xmutil listapps 2>&1 | grep ' 0,'", 30)
+    rc, apps = kv.run("sudo -n true 2>/dev/null; echo '" + pw + "' | sudo -S -v 2>/dev/null; sudo xmutil listapps 2>&1 | grep ' 0,'", 30, secret=pw)
     say("active app before:", apps.strip().splitlines()[-1] if apps.strip() else "?")
     # ---- V8b rev5 ----
     probe_send("SLOADING V8b")

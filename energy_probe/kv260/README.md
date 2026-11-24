@@ -14,17 +14,18 @@
 ## 執行
 
 ```bat
-set KV_PW=<KV260 的 ubuntu 密碼>
+set KV_PW=<KV260 主控台登入帳號的密碼>
 python enc_compare_v8b_ofhe.py <輸出資料夾> 10
 python analyze_compare.py <輸出資料夾>
 python make_figs.py <輸出資料夾>
 python make_report.py <輸出資料夾>
 ```
 
-- `enc_compare_v8b_ofhe.py`：載入 V8b、量 30 秒待機與 N 輪 30 秒持續加密；卸載後在 PL 清空的狀態下量 OpenFHE 單執行緒與 4 執行緒各 N 輪；最後還原成 `k26-starter-kits`。每 10 輪約 18 分鐘。密碼只從環境變數讀取，不寫進任何檔案。
+- `enc_compare_v8b_ofhe.py`：載入 V8b、量 30 秒待機與 N 輪 30 秒持續加密；卸載後在 FPGA 的可程式邏輯（PL）清空的狀態下量 OpenFHE 單執行緒與 4 執行緒各 N 輪；最後還原成 `k26-starter-kits`。每 10 輪約 18 分鐘。密碼只從環境變數讀取，不寫進任何檔案。
 - `analyze_compare.py`：每一輪的總值與淨值每焦耳筆數，產生 `summary.json`。
 - `make_figs.py`：7 張圖與 `figures/summary_table.csv`。
-- `make_report.py`：含 95% 信賴區間、Welch t 檢定與「結論怎麼寫」的 `report.html`；可再用瀏覽器列印成 PDF。
+- `make_report.py`：含 95% 信賴區間、Welch t 檢定與「結論怎麼寫」的 `report.html`；可再用瀏覽器列印成 PDF。加上 `--partition=<資料夾>` 時，報告另含「軟硬體切分」一章（資料由 [partition/](partition/README.md) 的工具產生）。
+- [partition/](partition/README.md)：把客戶端拆成最小模組，實測每個模組在 ARM 的時間與能量，以及 PL 整段加密的時間與能量（PL 各階段依 HLS 原始碼估計），並比較不同的軟硬體切分方式。
 
 ## 定義
 
