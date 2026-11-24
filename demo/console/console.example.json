@@ -1,0 +1,30 @@
+{
+  "_comment": [
+    "EdgeFHE 雲端證據主控台（evidence_console.py）的設定範本。操作人員應複製到 repository 之外（例如 C:\\EdgeFHE_demo\\console.json）再修改。",
+    "iface：dumpcap -D 列出的介面名稱（雲端電腦接到展示路由器的網路卡，例如 USB 乙太網路轉接器）；board_ip：KV260 在路由器上的 DHCP 保留位址。",
+    "192.0.2.20 是 RFC 5737 保留給文件使用的範例位址；全零的介面 GUID 也只是範例。",
+    "server：docker（展示用的雲端映像）、mock（只供電腦上的測試，使用 demo/evidence/tests/mock_efnet.py）或 none（伺服器由操作人員自行啟動）。",
+    "pki_dir：make_demo_pki.sh 建立的 cloud 目錄（唯讀掛載為 /pki），或其上層目錄；image：雲端映像的名稱與標籤。",
+    "即時模式開始前，本主控台以 icacls 將 pki_dir（含其下所有檔案）與新的證據資料夾的存取權限限制為目前使用者與 SYSTEM；無法限制時，本主控台拒絕繼續（PKI_ACL、RUN_ACL）。",
+    "probe_port：能耗探針的序列埠；不使用探針時設為 null。本主控台開啟前把 DTR、RTS 設為 False，且從不傳送任何指令。",
+    "listen 只能是 127.0.0.1；capture_filter 省略時為 host <board_ip>；snaplen 0 表示擷取完整封包。",
+    "在電腦本機迴路介面上測試時（iface 為 \\Device\\NPF_Loopback、board_ip 為 127.0.0.1），操作人員應把 capture_filter 設為 tcp port <port>，否則擷取檔也會收進本主控台自己的 HTTP 流量。"
+  ],
+  "schema": "edgefhe.demo.console-config.v1",
+  "iface": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+  "board_ip": "192.0.2.20",
+  "port": 18443,
+  "server": "docker",
+  "image": "edgefhe-demo-cloud:REPLACE_WITH_COMMIT",
+  "container": "efhe-cloud",
+  "publish": "18443:18443",
+  "pki_dir": "C:\\EdgeFHE_demo\\pki\\cloud",
+  "keylog": true,
+  "evidence_root": "C:\\EdgeFHE_evidence",
+  "probe_port": "COM5",
+  "probe_baud": 115200,
+  "listen": "127.0.0.1:8765",
+  "snaplen": 0,
+  "buffer_mib": 128,
+  "decode_timeout_s": 10
+}

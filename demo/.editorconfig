@@ -1,0 +1,26 @@
+# Editor settings for demo/ (https://editorconfig.org). The repository's .gitattributes ('* -text') stores every byte
+# exactly as written, so the editor itself must write UTF-8 without BOM and LF line endings: a CR in a shell script
+# breaks it inside the Linux containers and on the board.
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+[*.{sh,c,cpp,h,hpp,lua,html,js,mjs,css,json,md}]
+end_of_line = lf
+
+[*.{sh,cpp,h,hpp,lua,html,js,mjs,css,json}]
+indent_size = 2
+
+[*.{py,c}]
+end_of_line = lf
+indent_size = 4
+
+[*.md]
+indent_size = 2
+trim_trailing_whitespace = false
+
+[{Dockerfile,*.dockerignore}]
+end_of_line = lf

@@ -1,0 +1,66 @@
+{
+  "schema": "edgefhe.affine-research.v1",
+  "model_id": "cdc-diabetes-lr4-v1",
+  "profile_sha256": "e5ee653ac4407f3c9d768980186fbb85ae91a497d58f91d82532a93539f739c9",
+  "operation": "public-scalar-affine",
+  "max_depth": 1,
+  "features": [
+    "GenHlth",
+    "HighBP",
+    "BMI",
+    "Age"
+  ],
+  "mean": [
+    2.51113889264315,
+    0.42801392080010814,
+    28.384094697481643,
+    8.028776411226742
+  ],
+  "std": [
+    1.0663602589485628,
+    0.49479086935939603,
+    6.5980653663061455,
+    3.0509583054181006
+  ],
+  "weights": [
+    0.6979414237022599,
+    0.4457087610493119,
+    0.5057933085899435,
+    0.5518502220124103
+  ],
+  "bias": -0.5780604525414647,
+  "weights_int": [
+    749408897,
+    478576138,
+    543091430,
+    592544664
+  ],
+  "bias_int": -666458326697820288,
+  "weight_scale": 1073741824,
+  "output_scale": 1152921504606846976,
+  "input_abs_max": 8,
+  "no_wrap_coefficient_bound": "83163192677284551665411",
+  "task": "classification",
+  "decision_logit": 0.0,
+  "target_mean": 0.0,
+  "target_std": 1.0,
+  "training_source": {
+    "name": "CDC Diabetes Health Indicators",
+    "uci_id": 891,
+    "data_url": "https://archive.ics.uci.edu/static/public/891/data.csv",
+    "doi": "10.24432/C53919",
+    "sha256": "9f71fda9d4ae5f4878c99b9233b6a16accfa9a17c194116a6b78100540934964",
+    "dataset_manifest_sha256": "e439fa6406ebef1390bf8620033a47fd3d024c1f6cc2a0e411595ada49b18afa",
+    "license": "UCI: \"See linked dataset for licensing information\" (Kaggle alexteboul/diabetes-health-indicators-dataset); underlying survey is CDC BRFSS. Verify before publishing.",
+    "label": "Diabetes_binary",
+    "method": "scikit-learn LogisticRegression(class_weight=balanced, max_iter=2000); greedy forward selection of 4 features by validation ROC-AUC (training/train.py)",
+    "v4_model_canonical_sha256": "3991d1fba44ddc1f9657e53dd166c612a32b39571731fcb05204086666fe1a94",
+    "v4_input_clip": 16.0,
+    "probability_note": "sigmoid(logit) of a class-balanced fit; not a calibrated disease probability"
+  },
+  "split_seed": 20261013,
+  "split": "stratified 70/15/15 by label",
+  "deployment_approved": false,
+  "output_policy": "owner_only_no_cloud_feedback",
+  "feature_padding": "groups_of_four_zero_pad_public_extra_features"
+}

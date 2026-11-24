@@ -1,0 +1,985 @@
+{
+ "schema": "edgefhe.demo.ui-fixture.v1",
+ "synthetic": true,
+ "summary": "Development fixture for the owner screen: one form (preset M) on the PL backend. The envelopes come from demo/edge/efgw/runner.py (Gateway.submit) with tests/fake_efnet_client.py in python:3.10-slim; the progress events follow demo/edge/EVENTS.md section 3. Timings, PID, counters and hashes are synthetic placeholders chosen to be plausible for the KV260; they are not measurements.",
+ "preset": "M",
+ "ui": {
+  "submit_to_commitment_ns": 4183250
+ },
+ "status": {
+  "v": 1,
+  "busy": false,
+  "run": null,
+  "stopping": false,
+  "default_backend": "pl",
+  "backends": [
+   "pl",
+   "spec",
+   "cpu"
+  ],
+  "model": {
+   "model_id": "cdc-diabetes-lr4-v1",
+   "sha256": "63cee36f9ac68b8e274dc45b4fa2fee0aeae5c4089b3d18fe51d7cf0c588c106",
+   "features": [
+    "GenHlth",
+    "HighBP",
+    "BMI",
+    "Age"
+   ],
+   "profile_hex": "c01b69cf3da9fb260dbd4ac15080bd6c1c425d90bfb9015c8bacc16c061fa05c"
+  },
+  "cloud": {
+   "host": "192.0.2.10",
+   "port": 18443,
+   "peer_name": "edgefhe-cloud",
+   "protocol": "TLS 1.3",
+   "mutual_authentication": true,
+   "certificate_pinning": true
+  },
+  "sizes": {
+   "request_frame_bytes": 393472,
+   "response_frame_bytes": 98560,
+   "public_key_bytes": 98304
+  },
+  "form": {
+   "schema": "edgefhe.demo.form.v1",
+   "model": {
+    "model_id": "cdc-diabetes-lr4-v1",
+    "file": "cdc-diabetes-lr4-v1.json",
+    "sha256": "63cee36f9ac68b8e274dc45b4fa2fee0aeae5c4089b3d18fe51d7cf0c588c106",
+    "features": [
+     "GenHlth",
+     "HighBP",
+     "BMI",
+     "Age"
+    ],
+    "csv_header": "GenHlth,HighBP,BMI,Age",
+    "normalization_abs_max": 8,
+    "reference_logit": "bias + sum over the features in model order of weights[f] * ((x[f] - mean[f]) / std[f]), with the model JSON doubles (client.cpp:276); a row with any |z| > 8 is refused (normalize.cpp:29)"
+   },
+   "notice": [
+    "本展示為研究與教學用途的原型，並非醫療診斷；本展示的結果不能取代醫療人員的專業評估。",
+    "本原型未經正式的密碼稽核；操作人員僅能填寫虛構的回答，不得輸入任何真實個人的健康資料。",
+    "本畫面僅顯示風險等級，不顯示機率。",
+    "本模型以美國 CDC 的 BRFSS 健康調查資料訓練；風險等級僅表示本模型的分組結果。"
+   ],
+   "fields": [
+    {
+     "name": "GenHlth",
+     "label": "自評健康狀況",
+     "short": "自評健康",
+     "question": "填答者如何評估自己整體的健康狀況？",
+     "kind": "choice",
+     "options": [
+      {
+       "value": 1,
+       "label": "極好"
+      },
+      {
+       "value": 2,
+       "label": "很好"
+      },
+      {
+       "value": 3,
+       "label": "好"
+      },
+      {
+       "value": 4,
+       "label": "普通"
+      },
+      {
+       "value": 5,
+       "label": "很差"
+      }
+     ],
+     "refuse_invalid": "GENHLTH_VALUE",
+     "source": "BRFSS GenHlth (1 = excellent, 2 = very good, 3 = good, 4 = fair, 5 = poor); the end labels 極好 and 很差 follow data/README.md"
+    },
+    {
+     "name": "HighBP",
+     "label": "高血壓",
+     "short": "高血壓",
+     "question": "填答者是否曾被醫療人員告知患有高血壓？",
+     "kind": "choice",
+     "options": [
+      {
+       "value": 0,
+       "label": "否"
+      },
+      {
+       "value": 1,
+       "label": "是"
+      }
+     ],
+     "refuse_invalid": "HIGHBP_VALUE",
+     "source": "BRFSS HighBP (told by a health professional; 0 = no, 1 = yes)"
+    },
+    {
+     "name": "BMI",
+     "label": "BMI",
+     "short": "BMI",
+     "question": "填答者的身體質量指數（BMI）為何？",
+     "kind": "number",
+     "unit": "kg/m²",
+     "minimum": 12.0,
+     "maximum": 81.0,
+     "decimals": 1,
+     "client_normalization_max": 81.1686,
+     "helper": {
+      "label": "以身高與體重計算",
+      "formula": "BMI = 體重（公斤）÷ 身高（公尺）的平方",
+      "rounding": "四捨五入至小數點後一位"
+     },
+     "refuse_invalid": "BMI_FORMAT",
+     "refuse_below": "BMI_BELOW_MIN",
+     "refuse_above": "BMI_ABOVE_MAX",
+     "source": "BRFSS BMI (kg/m2); 12 is the smallest value in the dataset; the maximum keeps |z| <= 8 (normalize.cpp:29)"
+    },
+    {
+     "name": "Age",
+     "label": "年齡層",
+     "short": "年齡",
+     "question": "填答者屬於哪一個年齡層？",
+     "kind": "choice",
+     "options": [
+      {
+       "value": 1,
+       "label": "18–24 歲",
+       "years_min": 18,
+       "years_max": 24
+      },
+      {
+       "value": 2,
+       "label": "25–29 歲",
+       "years_min": 25,
+       "years_max": 29
+      },
+      {
+       "value": 3,
+       "label": "30–34 歲",
+       "years_min": 30,
+       "years_max": 34
+      },
+      {
+       "value": 4,
+       "label": "35–39 歲",
+       "years_min": 35,
+       "years_max": 39
+      },
+      {
+       "value": 5,
+       "label": "40–44 歲",
+       "years_min": 40,
+       "years_max": 44
+      },
+      {
+       "value": 6,
+       "label": "45–49 歲",
+       "years_min": 45,
+       "years_max": 49
+      },
+      {
+       "value": 7,
+       "label": "50–54 歲",
+       "years_min": 50,
+       "years_max": 54
+      },
+      {
+       "value": 8,
+       "label": "55–59 歲",
+       "years_min": 55,
+       "years_max": 59
+      },
+      {
+       "value": 9,
+       "label": "60–64 歲",
+       "years_min": 60,
+       "years_max": 64
+      },
+      {
+       "value": 10,
+       "label": "65–69 歲",
+       "years_min": 65,
+       "years_max": 69
+      },
+      {
+       "value": 11,
+       "label": "70–74 歲",
+       "years_min": 70,
+       "years_max": 74
+      },
+      {
+       "value": 12,
+       "label": "75–79 歲",
+       "years_min": 75,
+       "years_max": 79
+      },
+      {
+       "value": 13,
+       "label": "80 歲以上",
+       "years_min": 80,
+       "years_max": null
+      }
+     ],
+     "refused_options": [
+      {
+       "value": 0,
+       "label": "未滿 18 歲",
+       "years_min": null,
+       "years_max": 17,
+       "code": "AGE_UNDER_18"
+      }
+     ],
+     "refuse_invalid": "AGE_VALUE",
+     "source": "BRFSS _AGEG5YR, 13 age bands (1 = 18-24, 2 = 25-29 ... 12 = 75-79, 13 = 80 or older); data/README.md. The model covers adults only, so the form offers an under-18 choice (value 0) that is always refused"
+    }
+   ],
+   "refuse_fields": "FORM_FIELDS",
+   "refusal_note": "表單檢查未通過時，本系統於本機拒絕此筆輸入，不啟動加密程式，也不傳送任何資料。",
+   "refusals": {
+    "FORM_FIELDS": "表單須包含自評健康狀況、高血壓、BMI 與年齡層四個欄位，且不得包含其他欄位；本系統不進行評估。",
+    "GENHLTH_VALUE": "自評健康狀況須為「極好」、「很好」、「好」、「普通」或「很差」之一；本系統不進行評估。",
+    "HIGHBP_VALUE": "高血壓欄位須為「否」或「是」；本系統不進行評估。",
+    "BMI_FORMAT": "BMI 須為數值，且最多填寫至小數點後一位；本系統不進行評估。",
+    "BMI_BELOW_MIN": "BMI 低於 12.0，超出本展示表單接受的範圍；本系統不進行評估。",
+    "BMI_ABOVE_MAX": "BMI 高於 81.0，超出本模型可處理的範圍（標準化後的絕對值須不超過 8）；本系統不進行評估。",
+    "AGE_UNDER_18": "本模型以 18 歲以上成年人的調查資料訓練；填答者未滿 18 歲時，本系統不進行評估。",
+    "AGE_VALUE": "年齡層須為表單列出的 13 個年齡層之一；本系統不進行評估。"
+   },
+   "verification": {
+    "max_abs_error": 0.002,
+    "compare": "|logit_ckks - logit_plain|",
+    "basis": "client gate for model ids without 'ridge' (client.cpp:268); evidence gate G10",
+    "failed_text": "推論驗證失敗：CKKS 結果與明文參考值的差異超過容許範圍，本系統不顯示風險等級。"
+   },
+   "levels": {
+    "space": "logit",
+    "decide_on": "logit_ckks",
+    "rule": "level = 1 + number of edges e with logit > e; when |logit - e| <= band_abs_logit for some edge e, the result is the boundary between the two adjacent levels and no level is shown",
+    "edges_p_balanced": [
+     0.3,
+     0.5,
+     0.7
+    ],
+    "edges_logit": [
+     -0.8472978603872036,
+     0.0,
+     0.8472978603872036
+    ],
+    "band_abs_logit": 0.002,
+    "p_balanced_note": "p_balanced = sigmoid(logit) of a class-balanced fit (class_weight=balanced); it is not a calibrated probability and the owner screen never shows it as one",
+    "boundary_text": "介於 L{lower}／L{upper}，不判定",
+    "observed_caption": "測試資料中，落在此等級者實際為糖尿病前期或糖尿病的比例",
+    "observed_note": "此為測試資料的群體統計，非填答者的罹病機率或診斷。",
+    "items": [
+     {
+      "level": 1,
+      "code": "L1",
+      "name": "第 1 級",
+      "label": "較低",
+      "logit_lower": null,
+      "logit_upper": -0.8472978603872036,
+      "observed_rows": 16879,
+      "observed_positives": 444,
+      "observed_share": 0.444,
+      "observed_rate": 0.0263
+     },
+     {
+      "level": 2,
+      "code": "L2",
+      "name": "第 2 級",
+      "label": "中低",
+      "logit_lower": -0.8472978603872036,
+      "logit_upper": 0.0,
+      "observed_rows": 7839,
+      "observed_positives": 886,
+      "observed_share": 0.2062,
+      "observed_rate": 0.113
+     },
+     {
+      "level": 3,
+      "code": "L3",
+      "name": "第 3 級",
+      "label": "中高",
+      "logit_lower": 0.0,
+      "logit_upper": 0.8472978603872036,
+      "observed_rows": 6906,
+      "observed_positives": 1484,
+      "observed_share": 0.1816,
+      "observed_rate": 0.2149
+     },
+     {
+      "level": 4,
+      "code": "L4",
+      "name": "第 4 級",
+      "label": "較高",
+      "logit_lower": 0.8472978603872036,
+      "logit_upper": null,
+      "observed_rows": 6395,
+      "observed_positives": 2483,
+      "observed_share": 0.1682,
+      "observed_rate": 0.3883
+     }
+    ],
+    "observed_source": {
+     "split": "test",
+     "file": "data/cdc_diabetes/splits/test.csv",
+     "file_sha256": "8aac108c2d3e3f7f5ddf69c45a8893eece94c5119b65764a63430b1eebc8e304",
+     "manifest": "data/cdc_diabetes/manifest.json",
+     "manifest_sha256": "e439fa6406ebef1390bf8620033a47fd3d024c1f6cc2a0e411595ada49b18afa",
+     "label": "Diabetes_binary (0 = no diabetes, 1 = prediabetes or diabetes)",
+     "logit": "plaintext reference logit (model.reference_logit) on the raw test values",
+     "edges_p_balanced": [
+      0.3,
+      0.5,
+      0.7
+     ],
+     "band_abs_logit": 0.002,
+     "edges_note": "edges fixed before this computation; not tuned on the test split",
+     "command": "python -I -B demo/model/convert_cdc_to_v8b.py --repo . --levels --write",
+     "rows_total": 38052,
+     "rows_refused_abs_z_above_8": 33,
+     "rows_evaluated": 38019,
+     "positives_evaluated": 5297,
+     "rows_in_band": 72
+    }
+   },
+   "presets": [
+    {
+     "id": "A",
+     "role": "example",
+     "label": "年輕且自評健康極好的虛構填答者",
+     "form": {
+      "GenHlth": 1,
+      "HighBP": 0,
+      "BMI": 22.0,
+      "Age": 1
+     },
+     "summary": "自評健康：極好；高血壓：否；BMI：22.0；年齡：18–24 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": -3.713408490835408,
+      "level": 1,
+      "boundary": null,
+      "max_abs_z": 2.3037930078377538
+     }
+    },
+    {
+     "id": "C",
+     "role": "example",
+     "label": "50–54 歲、無高血壓的虛構填答者",
+     "form": {
+      "GenHlth": 3,
+      "HighBP": 0,
+      "BMI": 27.0,
+      "Age": 7
+     },
+     "summary": "自評健康：好；高血壓：否；BMI：27.0；年齡：50–54 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": -0.9358371907916072,
+      "level": 1,
+      "boundary": null,
+      "max_abs_z": 0.8650400549109895
+     }
+    },
+    {
+     "id": "D",
+     "role": "example",
+     "label": "50–54 歲、有高血壓的虛構填答者",
+     "form": {
+      "GenHlth": 3,
+      "HighBP": 1,
+      "BMI": 25.0,
+      "Age": 7
+     },
+     "summary": "自評健康：好；高血壓：是；BMI：25.0；年齡：50–54 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": -0.18835051522405333,
+      "level": 2,
+      "boundary": null,
+      "max_abs_z": 1.1560158333973305
+     }
+    },
+    {
+     "id": "E",
+     "role": "example",
+     "label": "60–64 歲、自評健康很好、有高血壓的虛構填答者",
+     "form": {
+      "GenHlth": 2,
+      "HighBP": 1,
+      "BMI": 30.0,
+      "Age": 9
+     },
+     "summary": "自評健康：很好；高血壓：是；BMI：30.0；年齡：60–64 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": -0.0978141760190869,
+      "level": 2,
+      "boundary": null,
+      "max_abs_z": 1.1560158333973305
+     }
+    },
+    {
+     "id": "M",
+     "role": "main",
+     "label": "主要示範：60–64 歲、有高血壓、BMI 31.2 的虛構填答者",
+     "form": {
+      "GenHlth": 3,
+      "HighBP": 1,
+      "BMI": 31.2,
+      "Age": 9
+     },
+     "summary": "自評健康：好；高血壓：是；BMI：31.2；年齡：60–64 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": 0.6486833051415156,
+      "level": 3,
+      "boundary": null,
+      "max_abs_z": 1.1560158333973305
+     }
+    },
+    {
+     "id": "F",
+     "role": "example",
+     "label": "65–69 歲、自評健康普通、BMI 35.0 的虛構填答者",
+     "form": {
+      "GenHlth": 4,
+      "HighBP": 1,
+      "BMI": 35.0,
+      "Age": 10
+     },
+     "summary": "自評健康：普通；高血壓：是；BMI：35.0；年齡：65–69 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": 1.775368786379462,
+      "level": 4,
+      "boundary": null,
+      "max_abs_z": 1.3962083591007748
+     }
+    },
+    {
+     "id": "G",
+     "role": "example",
+     "label": "80 歲以上、自評健康很差、BMI 45.0 的虛構填答者",
+     "form": {
+      "GenHlth": 5,
+      "HighBP": 1,
+      "BMI": 45.0,
+      "Age": 13
+     },
+     "summary": "自評健康：很差；高血壓：是；BMI：45.0；年齡：80 歲以上",
+     "expected": {
+      "refused": null,
+      "logit_plain": 3.739088087982977,
+      "level": 4,
+      "boundary": null,
+      "max_abs_z": 2.5182995893568405
+     }
+    },
+    {
+     "id": "H",
+     "role": "near_bound",
+     "label": "BMI 為表單上限 81.0 的虛構填答者（標準化值接近 8）",
+     "form": {
+      "GenHlth": 5,
+      "HighBP": 1,
+      "BMI": 81.0,
+      "Age": 13
+     },
+     "summary": "自評健康：很差；高血壓：是；BMI：81.0；年齡：80 歲以上",
+     "expected": {
+      "refused": null,
+      "logit_plain": 6.498769615574727,
+      "level": 4,
+      "boundary": null,
+      "max_abs_z": 7.974444383532198
+     }
+    },
+    {
+     "id": "K",
+     "role": "boundary",
+     "label": "邊界示範：模型分數與等級邊界的距離小於容許誤差",
+     "form": {
+      "GenHlth": 4,
+      "HighBP": 1,
+      "BMI": 26.0,
+      "Age": 4
+     },
+     "summary": "自評健康：普通；高血壓：是；BMI：26.0；年齡：35–39 歲",
+     "expected": {
+      "refused": null,
+      "logit_plain": 0.00018239930722152575,
+      "level": null,
+      "boundary": [
+       2,
+       3
+      ],
+      "max_abs_z": 1.3962083591007748
+     }
+    },
+    {
+     "id": "J",
+     "role": "refused",
+     "label": "拒絕示範：BMI 82.0 超出本模型可處理的範圍，本系統於本機拒絕此筆輸入",
+     "form": {
+      "GenHlth": 3,
+      "HighBP": 0,
+      "BMI": 82.0,
+      "Age": 7
+     },
+     "summary": "自評健康：好；高血壓：否；BMI：82.0；年齡：50–54 歲",
+     "expected": {
+      "refused": "BMI_ABOVE_MAX",
+      "logit_plain": null,
+      "level": null,
+      "boundary": null,
+      "max_abs_z": 8.12600396114818
+     }
+    }
+   ]
+  },
+  "last_seq": 17,
+  "rehearsal": false,
+  "retain_private": false
+ },
+ "events": [
+  {
+   "v": 1,
+   "seq": 1,
+   "run": "r62bcc80b3dcb",
+   "type": "form.accepted",
+   "class": "public",
+   "t_mono_ns": 3912400000000,
+   "data": {
+    "kind": "form",
+    "backend": "pl",
+    "model": "cdc-diabetes-lr4-v1",
+    "model_sha256": "63cee36f9ac68b8e274dc45b4fa2fee0aeae5c4089b3d18fe51d7cf0c588c106",
+    "commitment": "8b07398844abb3c58789509402e53241b67c9b4d3df7a6e68df78ed9807fdfb7"
+   }
+  },
+  {
+   "v": 1,
+   "seq": 2,
+   "run": "r62bcc80b3dcb",
+   "type": "form.accepted",
+   "class": "owner",
+   "t_mono_ns": 3912400041250,
+   "data": {
+    "features": [
+     "GenHlth",
+     "HighBP",
+     "BMI",
+     "Age"
+    ],
+    "values": {
+     "GenHlth": 3,
+     "HighBP": 1,
+     "BMI": 31.2,
+     "Age": 9
+    },
+    "x": [
+     3.0,
+     1.0,
+     31.2,
+     9.0
+    ],
+    "z": [
+     0.45843897806063205,
+     1.1560158333973305,
+     0.4267774182562865,
+     0.3183339434853936
+    ],
+    "contributions": [
+     0.3199635530282466,
+     0.5152463848569119,
+     0.21586116241132133,
+     0.17567265738650054
+    ],
+    "bias": -0.5780604525414647,
+    "commitment": "8b07398844abb3c58789509402e53241b67c9b4d3df7a6e68df78ed9807fdfb7"
+   }
+  },
+  {
+   "v": 1,
+   "seq": 3,
+   "run": "r62bcc80b3dcb",
+   "type": "client.spawned",
+   "class": "public",
+   "t_mono_ns": 3912403412480,
+   "data": {
+    "kind": "form",
+    "backend": "pl",
+    "pid": 4173,
+    "argv": [
+     "/home/ubuntu/edgefhe-demo/build-ID8/net/efnet_client",
+     "--ca",
+     "/home/ubuntu/edgefhe-demo/pki/ca.pem",
+     "--cert",
+     "/home/ubuntu/edgefhe-demo/pki/client.pem",
+     "--key",
+     "/home/ubuntu/edgefhe-demo/pki/client.key",
+     "--peer-name",
+     "edgefhe-cloud",
+     "--peer-sha256",
+     "5367268cc1f7ab04d71a52313f4f6bfe4eeeeddc7f9763f36ae66bf36c45d244",
+     "--host",
+     "192.0.2.10",
+     "--port",
+     "18443",
+     "--timeout-ms",
+     "30000",
+     "--backend",
+     "pl",
+     "--workers",
+     "3",
+     "--plugin",
+     "/home/ubuntu/edgefhe-demo/build-ID8/app/frozen_build/baseline/libedgefhe_os_prng.so",
+     "--model",
+     "cdc-diabetes-lr4-v1",
+     "--mode",
+     "serial",
+     "--input",
+     "/run/edgefhe-demo/r62bcc80b3dcb/in.csv",
+     "--scores-output",
+     "/run/edgefhe-demo/r62bcc80b3dcb/score.txt",
+     "--permit-fd",
+     "4"
+    ],
+    "permit": true,
+    "contract": "a2a592d2133d678ff06f727e36fcd9b65729b6f76648c6d19946de991afb1027",
+    "client_sha256": "400277741934a3f4d88e5c34e435702e43daaa5f51437b2589c85b1a811c4a1f",
+    "overdue_s": 120.0,
+    "rows": 1,
+    "requests": 1,
+    "window_ms": 0,
+    "flags": {
+     "mode": "serial",
+     "slots": 2,
+     "duplex": false,
+     "hash_io": false,
+     "decrypt_thread": false,
+     "inflight": 0,
+     "io_cpu": "none",
+     "io_isolate": false,
+     "read_every": 1
+    },
+    "irq_before": {
+     "61": 1187,
+     "62": 1187
+    },
+    "dma_lines": {
+     "61": "GICv2 121 Level xilinx-dma-controller",
+     "62": "GICv2 136 Level xilinx-dma-controller"
+    }
+   }
+  },
+  {
+   "v": 1,
+   "seq": 4,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3912428585991,
+   "data": {
+    "wchar": 0,
+    "rchar": 6656,
+    "t_ns": 25103511
+   }
+  },
+  {
+   "v": 1,
+   "seq": 5,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3912453694484,
+   "data": {
+    "wchar": 0,
+    "rchar": 13312,
+    "t_ns": 50212004
+   }
+  },
+  {
+   "v": 1,
+   "seq": 6,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3912478770930,
+   "data": {
+    "wchar": 0,
+    "rchar": 16640,
+    "t_ns": 75288450
+   }
+  },
+  {
+   "v": 1,
+   "seq": 7,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3912604179563,
+   "data": {
+    "wchar": 0,
+    "rchar": 17872,
+    "t_ns": 200697083
+   }
+  },
+  {
+   "v": 1,
+   "seq": 8,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.irq",
+   "class": "public",
+   "t_mono_ns": 3913903554384,
+   "data": {
+    "irq": "61",
+    "count": 1188,
+    "delta": 1,
+    "index": 1,
+    "label": "LOAD",
+    "t_ns": 1500071904
+   }
+  },
+  {
+   "v": 1,
+   "seq": 9,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.irq",
+   "class": "public",
+   "t_mono_ns": 3913903554384,
+   "data": {
+    "irq": "62",
+    "count": 1188,
+    "delta": 1,
+    "index": 1,
+    "label": "LOAD",
+    "t_ns": 1500071904
+   }
+  },
+  {
+   "v": 1,
+   "seq": 10,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.irq",
+   "class": "public",
+   "t_mono_ns": 3914003565597,
+   "data": {
+    "irq": "61",
+    "count": 1189,
+    "delta": 2,
+    "index": 2,
+    "label": "ENC",
+    "t_ns": 1600083117
+   }
+  },
+  {
+   "v": 1,
+   "seq": 11,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.irq",
+   "class": "public",
+   "t_mono_ns": 3914003565597,
+   "data": {
+    "irq": "62",
+    "count": 1189,
+    "delta": 2,
+    "index": 2,
+    "label": "ENC",
+    "t_ns": 1600083117
+   }
+  },
+  {
+   "v": 1,
+   "seq": 12,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3914003565597,
+   "data": {
+    "wchar": 34238,
+    "rchar": 19456,
+    "t_ns": 1600083117
+   }
+  },
+  {
+   "v": 1,
+   "seq": 13,
+   "run": "r62bcc80b3dcb",
+   "type": "progress.io",
+   "class": "public",
+   "t_mono_ns": 3914028649310,
+   "data": {
+    "wchar": 396960,
+    "rchar": 119304,
+    "t_ns": 1625166830
+   }
+  },
+  {
+   "v": 1,
+   "seq": 14,
+   "run": "r62bcc80b3dcb",
+   "type": "client.exited",
+   "class": "public",
+   "t_mono_ns": 3914048874997,
+   "data": {
+    "returncode": 0,
+    "wall_ns": 1646233517,
+    "overdue": false,
+    "status": "CPP_E2E_PL_NUMERIC_AND_DRAIN_PASS",
+    "stop": null,
+    "stop_detail": null,
+    "report": {
+     "status": "CPP_E2E_PL_NUMERIC_AND_DRAIN_PASS",
+     "backend": "pl",
+     "model": "cdc-diabetes-lr4-v1",
+     "features": 4,
+     "rows": 1,
+     "mode": "serial",
+     "slots": 1,
+     "duplex": false,
+     "hash_io": false,
+     "decrypt_thread": false,
+     "inflight": 0,
+     "io_cpu": "none",
+     "io_cpu_chosen": -1,
+     "io_isolate": false,
+     "read_every": 1,
+     "io_thread_last_cpu": 2,
+     "net_softirq_start": {
+      "0": 1287345,
+      "1": 342871,
+      "2": 328455,
+      "3": 331902
+     },
+     "net_softirq_delta": {
+      "0": 58,
+      "1": 2,
+      "2": 9,
+      "3": 1
+     },
+     "owner_workers": 3,
+     "input_read_ns": 61240,
+     "cold_context_and_TLS_ns": 1412553901,
+     "completed_requests": 1,
+     "elapsed_ns": 16938190,
+     "admission_limit_ns": 0,
+     "records_per_s": 59.03818530787528,
+     "synthetic_input": false,
+     "checked_public_scores": 0,
+     "max_public_error": null,
+     "requests_over_5e4": null,
+     "spec_frames": 0,
+     "device_calls": 2,
+     "PL_hz": 199999998,
+     "actual_DMA": 2,
+     "real_PL": true,
+     "network_included": true,
+     "formal_campaign": false,
+     "automatic_retries": 0,
+     "trace": [
+      {
+       "admitted_ns": 2310,
+       "completed_ns": 16568421,
+       "prepare_ns": 4876310,
+       "TLS_roundtrip_and_validate_ns": 9816447,
+       "decrypt_ns": 1702118,
+       "request_sha256": "336b1bea1089787fd0d6a49a6d1ef62b7484c3d2788070c7233b988828774ead",
+       "response_payload_sha256": "06fd8942654291392a5f66ee1e0157f458048531fc004551bd24790163229944"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "v": 1,
+   "seq": 15,
+   "run": "r62bcc80b3dcb",
+   "type": "irq.delta",
+   "class": "public",
+   "t_mono_ns": 3914049053397,
+   "data": {
+    "backend": "pl",
+    "delta": {
+     "61": 2,
+     "62": 2
+    },
+    "before": {
+     "61": 1187,
+     "62": 1187
+    },
+    "after": {
+     "61": 1189,
+     "62": 1189
+    },
+    "expected": 2,
+    "passed": true,
+    "lines": {
+     "61": "GICv2 121 Level xilinx-dma-controller",
+     "62": "GICv2 136 Level xilinx-dma-controller"
+    }
+   }
+  },
+  {
+   "v": 1,
+   "seq": 16,
+   "run": "r62bcc80b3dcb",
+   "type": "result",
+   "class": "owner",
+   "t_mono_ns": 3914049696347,
+   "data": {
+    "logit_ckks": 0.6486857051415156,
+    "logit_plain": 0.6486833051415156,
+    "abs_error": 2.3999999999579913e-06,
+    "max_abs_error": 0.002,
+    "passed": true,
+    "p_balanced": 0.6567142282430989,
+    "level": 3,
+    "level_code": "L3",
+    "level_name": "第 3 級",
+    "level_label": "中高",
+    "observed_rate": 0.2149,
+    "observed_caption": "測試資料中，落在此等級者實際為糖尿病前期或糖尿病的比例",
+    "boundary": null,
+    "boundary_text": null,
+    "plain_level": 3,
+    "plain_boundary": null,
+    "message": null,
+    "evidence": {
+     "commitment": "8b07398844abb3c58789509402e53241b67c9b4d3df7a6e68df78ed9807fdfb7",
+     "request_sha256": "336b1bea1089787fd0d6a49a6d1ef62b7484c3d2788070c7233b988828774ead",
+     "response_payload_sha256": "06fd8942654291392a5f66ee1e0157f458048531fc004551bd24790163229944",
+     "device_calls": 2,
+     "PL_hz": 199999998,
+     "irq_delta": {
+      "61": 2,
+      "62": 2
+     },
+     "request_frame_bytes": 393472,
+     "response_frame_bytes": 98560
+    }
+   }
+  },
+  {
+   "v": 1,
+   "seq": 17,
+   "run": "r62bcc80b3dcb",
+   "type": "wiped",
+   "class": "public",
+   "t_mono_ns": 3914050744647,
+   "data": {
+    "files": [
+     "permit",
+     "in.csv",
+     "score.txt"
+    ],
+    "run_dir_removed": true,
+    "problems": [],
+    "retained_private": false
+   }
+  }
+ ]
+}

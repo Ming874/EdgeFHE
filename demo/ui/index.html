@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>糖尿病風險評估：KV260 本機加密推論</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/ui/style.css">
+<script type="module" src="/ui/app.js"></script>
+</head>
+<body>
+<div class="frame" id="frame">
+
+<header class="topbar">
+  <h1 class="title">糖尿病風險評估：KV260 本機加密推論（研究展示，非醫療診斷）</h1>
+  <ul class="chips" aria-label="系統狀態">
+    <li class="chip" id="chip-backend"><span class="chip-key">加密後端</span><span class="chip-value" id="chip-backend-value">—</span></li>
+    <li class="chip"><span class="chip-key">模型</span><span class="chip-value" id="chip-model-value">—</span></li>
+    <li class="chip"><span class="chip-key">雲端</span><span class="chip-value" id="chip-cloud-value">—</span></li>
+    <li class="chip chip-link" id="chip-link" data-state="connecting"><span class="dot" aria-hidden="true"></span><span id="chip-link-text">閘道連線中</span></li>
+  </ul>
+</header>
+
+<p class="banner banner-warn" id="banner-offline" role="alert" hidden></p>
+
+<main class="layout" id="layout">
+
+  <section class="col col-form" aria-labelledby="form-title">
+    <h2 id="form-title">表單</h2>
+    <p class="notice-fictional" id="notice-fictional"><strong>請只填寫虛構的回答。</strong>本原型未經正式的密碼稽核；操作人員僅能填寫虛構的回答，不得輸入任何真實個人的健康資料。</p>
+
+    <div class="presets">
+      <h3>示範表單（虛構填答者）</h3>
+      <div class="preset-grid" id="presets"></div>
+      <p class="preset-note" id="preset-note">請選擇一份示範表單，或自行填寫下列四個欄位。</p>
+    </div>
+
+    <form class="form" id="form" novalidate autocomplete="off">
+      <div class="field" role="radiogroup" aria-labelledby="lg-GenHlth" aria-describedby="q-GenHlth">
+        <span class="field-label" id="lg-GenHlth">自評健康狀況</span>
+        <p class="field-q" id="q-GenHlth"></p>
+        <div class="seg seg-5" id="opt-GenHlth"></div>
+        <p class="field-msg" id="msg-GenHlth" aria-live="polite"></p>
+      </div>
+      <div class="field" role="radiogroup" aria-labelledby="lg-HighBP" aria-describedby="q-HighBP">
+        <div class="field-inline">
+          <span class="field-label" id="lg-HighBP">高血壓</span>
+          <div class="seg seg-2" id="opt-HighBP"></div>
+        </div>
+        <p class="field-q" id="q-HighBP"></p>
+        <p class="field-msg" id="msg-HighBP" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <div class="field-inline">
+          <label class="field-label" for="in-BMI" id="lg-BMI">BMI</label>
+          <div class="bmi-row">
+            <input class="input" id="in-BMI" name="BMI" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="q-BMI msg-BMI">
+            <span class="unit" id="unit-BMI">kg/m²</span>
+          </div>
+        </div>
+        <p class="field-q" id="q-BMI"></p>
+        <p class="field-msg" id="msg-BMI" aria-live="polite"></p>
+        <details class="bmi-helper" id="bmi-helper">
+          <summary>以身高與體重計算</summary>
+          <div class="helper-row">
+            <label class="helper-label">身高（公分）<input class="input input-short" id="bmi-height" type="text" inputmode="decimal" autocomplete="off"></label>
+            <label class="helper-label">體重（公斤）<input class="input input-short" id="bmi-weight" type="text" inputmode="decimal" autocomplete="off"></label>
+            <button type="button" class="btn btn-ghost" id="bmi-apply">計算並填入</button>
+          </div>
+          <p class="helper-note" id="bmi-formula">BMI = 體重（公斤）÷ 身高（公尺）的平方，四捨五入至小數點後一位。</p>
+        </details>
+      </div>
+      <div class="field">
+        <div class="field-inline">
+          <label class="field-label" for="in-Age" id="lg-Age">年齡層</label>
+          <select class="input" id="in-Age" name="Age" aria-describedby="q-Age msg-Age"></select>
+        </div>
+        <p class="field-q" id="q-Age"></p>
+        <p class="field-msg" id="msg-Age" aria-live="polite"></p>
+      </div>
+      <div class="field" role="radiogroup" aria-labelledby="lg-backend">
+        <span class="field-label" id="lg-backend">加密後端</span>
+        <div class="seg seg-backend" id="backend-options"></div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit" disabled>於本機加密並送出</button>
+      <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+    </form>
+
+    <details class="history" id="history">
+      <summary id="history-summary">執行紀錄（含回答與等級，存於閘道記憶體）</summary>
+      <p class="history-note" id="history-note">本清單取自本機閘道記憶體中的事件，重新整理本頁後仍會列出，本機閘道停止後才清除。</p>
+      <ol class="history-list" id="history-list"></ol>
+    </details>
+  </section>
+
+  <section class="col col-flow" aria-labelledby="flow-title">
+    <div class="flow-head">
+      <h2 id="flow-title">加密推論流程（13 個階段）</h2>
+      <div class="flow-tools">
+        <span class="timer" id="timer">尚未開始</span>
+        <button type="button" class="btn btn-ghost" id="replay-all" title="依本次實測時間重播全部階段" disabled>重播全部</button>
+        <button type="button" class="btn btn-ghost" id="replay-detail" title="依本次實測時間重播第 6–12 階段" disabled>重播第 6–12 階段</button>
+        <button type="button" class="btn btn-ghost" id="replay-stop" hidden>停止</button>
+      </div>
+    </div>
+    <p class="replay-banner" id="replay-banner" role="status" hidden></p>
+    <p class="live-note" id="live-note"><span class="live-note-icon" id="live-note-icon"></span><span id="live-note-text">此圖示標示板上核心計數的即時標記（每 25 ms 取樣，自加密程式啟動起算）；「資料量」為協定規格值或計算值。</span></p>
+    <table class="stages" id="stages">
+      <thead>
+        <tr><th scope="col" class="c-n">#</th><th scope="col" class="c-stage">階段</th><th scope="col" class="c-place">位置</th><th scope="col" class="c-state">資料狀態</th><th scope="col" class="c-bytes">資料量</th><th scope="col" class="c-time" id="th-time">實測時間</th></tr>
+      </thead>
+      <tbody id="stage-body"></tbody>
+    </table>
+    <p class="stage-caption" id="stage-caption" role="status" aria-live="polite" hidden><b class="caption-head" id="caption-head"></b><span id="caption-text"></span></p>
+    <p class="time-summary" id="time-summary"></p>
+    <ul class="run-warnings" id="run-warnings" aria-live="polite"></ul>
+  </section>
+
+  <section class="col col-result" aria-labelledby="result-title">
+    <h2 class="sr-only" id="result-title">推論結果</h2>
+    <div class="level-card" id="level-card" data-state="idle" aria-live="polite">
+      <p class="level-kicker"><span id="level-kicker">尚未送出表單</span><span class="level-where">只在本機畫面顯示</span></p>
+      <div class="level-head">
+        <p class="level-main" id="level-main">—</p>
+        <p class="level-sub" id="level-sub"></p>
+      </div>
+      <ol class="level-scale" id="level-scale" aria-label="風險等級"></ol>
+      <p class="level-observed" id="level-observed"></p>
+      <p class="level-observed-note" id="level-observed-note"></p>
+      <p class="level-check" id="level-check"></p>
+      <p class="level-answers" id="level-answers"></p>
+    </div>
+
+    <div class="result-more">
+      <ul class="level-notes" id="level-notes">
+        <li>本展示為研究與教學用途的原型，並非醫療診斷；本展示的結果不能取代醫療人員的專業評估。</li>
+      </ul>
+
+      <details class="tech" id="tech">
+        <summary>技術細節：兩個模型分數與各特徵的貢獻</summary>
+        <dl class="tech-logits" id="tech-logits"></dl>
+        <table class="contrib">
+          <thead><tr><th scope="col">特徵</th><th scope="col">回答</th><th scope="col">z</th><th scope="col">w·z</th><th scope="col"><span class="sr-only">長條</span></th></tr></thead>
+          <tbody id="contrib-body"></tbody>
+        </table>
+        <p class="tech-note" id="tech-note">完成推論後，本區顯示 CKKS 解密分數、明文參考分數與各特徵的貢獻。</p>
+      </details>
+
+      <div class="custody">
+        <h3>誰持有什麼</h3>
+        <table class="custody-table">
+          <tbody>
+            <tr><th scope="row">擁有者畫面</th><td>答案與等級（KV260 或序列主控台筆電）</td></tr>
+            <tr><th scope="row">KV260 ARM</th><td>答案、分數與等級；CKKS 私鑰只在記憶體</td></tr>
+            <tr><th scope="row">FPGA（PL）</th><td id="custody-pl">公鑰；加密期間的明文多項式</td></tr>
+            <tr><th scope="row">網路與路由器</th><td>TLS 1.3 紀錄，內含密文</td></tr>
+            <tr><th scope="row">雲端電腦</th><td>密文、模型權重與 TLS 伺服器金鑰；沒有任何 CKKS 金鑰，無法解密</td></tr>
+            <tr><th scope="row">公開紀錄</th><td>承諾值、雜湊與計數；不含答案與等級</td></tr>
+          </tbody>
+        </table>
+        <h3>雲端看得到／看不到</h3>
+        <div class="cloud-cols">
+          <div class="cloud-can">
+            <h4>看得到</h4>
+            <ul>
+              <li>4 個密文進、1 個出</li>
+              <li>公開標頭與雜湊</li>
+              <li>連線時間與封包大小</li>
+            </ul>
+          </div>
+          <div class="cloud-cannot">
+            <h4>看不到</h4>
+            <ul>
+              <li>答案與標準化值</li>
+              <li>模型分數與風險等級</li>
+              <li>CKKS 私鑰（無法解密）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="evidence" id="evidence" aria-labelledby="evidence-title">
+  <div class="ev-head">
+    <h2 id="evidence-title">公開證據</h2>
+    <p class="ev-compare">請與雲端畫面及 Wireshark 比對</p>
+    <p class="ev-prefix">三個值皆顯示前 16 個十六進位字元</p>
+    <p class="ev-dev" id="banner-dev" hidden></p>
+  </div>
+  <dl class="ev-hashes">
+    <div><dt>承諾值</dt><dd class="hex" id="ev-commitment">—</dd></div>
+    <div><dt>request_sha256</dt><dd class="hex" id="ev-request">—</dd></div>
+    <div><dt>response_payload_sha256</dt><dd class="hex" id="ev-response">—</dd></div>
+  </dl>
+  <dl class="ev-facts">
+    <div><dt>裝置呼叫</dt><dd id="ev-calls">—</dd></div>
+    <div><dt>DMA 中斷增量</dt><dd id="ev-irq">—</dd></div>
+    <div><dt>PL 時脈</dt><dd id="ev-plhz">—</dd></div>
+    <div><dt>上傳／回傳訊框</dt><dd id="ev-frames">—</dd></div>
+    <div><dt>執行</dt><dd id="ev-run">—</dd></div>
+  </dl>
+</footer>
+
+<section class="shot-stage" id="shot-stage" aria-labelledby="ss-title" hidden>
+  <div class="ss-main">
+    <div class="ss-card">
+      <p class="ss-num" id="ss-num">第 1 階段</p>
+      <h2 class="ss-title" id="ss-title">—</h2>
+      <p class="ss-place" id="ss-place"></p>
+      <div class="ss-badges" id="ss-badges"></div>
+      <dl class="ss-facts">
+        <div><dt>資料量</dt><dd><span id="ss-bytes">—</span><span class="ss-bytes-note" id="ss-bytes-note"></span></dd></div>
+        <div><dt id="ss-time-label">實測時間</dt><dd id="ss-time">—</dd></div>
+        <div><dt>即時標記</dt><dd id="ss-live">—</dd></div>
+      </dl>
+      <p class="ss-explain" id="ss-explain"></p>
+    </div>
+    <aside class="ss-side">
+      <h3>誰持有什麼</h3>
+      <ul class="ss-custody">
+        <li><strong>擁有者畫面：</strong>答案與等級（KV260 或以序列主控台連接的擁有者筆電）</li>
+        <li><strong>KV260 ARM：</strong>答案、CKKS 私鑰（只在記憶體）、分數與等級</li>
+        <li><strong>FPGA（PL）：</strong><span id="ss-custody-pl">公鑰；加密期間的明文多項式（只在 KV260 板上）</span></li>
+        <li><strong>雲端電腦：</strong>密文、公開的模型權重與 TLS 伺服器金鑰；雲端沒有任何 CKKS 金鑰，無法解密</li>
+      </ul>
+      <h3>雲端看得到／看不到</h3>
+      <ul class="ss-cloud">
+        <li class="ss-can"><strong>看得到：</strong>4 個輸入密文、1 個輸出密文、公開標頭、連線時間與封包大小</li>
+        <li class="ss-cannot"><strong>看不到：</strong>答案、標準化值、模型分數與風險等級；TLS 伺服器金鑰只保護傳輸，不能解開 CKKS 密文</li>
+      </ul>
+      <p class="ss-run" id="ss-run"></p>
+    </aside>
+  </div>
+  <ol class="ss-strip" id="ss-strip" aria-label="13 個階段"></ol>
+</section>
+
+</div>
+</body>
+</html>

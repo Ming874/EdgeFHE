@@ -1,0 +1,31 @@
+{
+  "schema": "edgefhe.demo.overlay-expected.v1",
+  "generator": "demo/model/convert_cdc_to_v8b.py",
+  "model_id": "cdc-diabetes-lr4-v1",
+  "model_json": "63cee36f9ac68b8e274dc45b4fa2fee0aeae5c4089b3d18fe51d7cf0c588c106",
+  "model_json_bytes": 2247,
+  "model_json_staged_path": "models/zoo19/models_release_v1/cdc-diabetes-lr4-v1.json",
+  "catalog_line": "5617a2d25dca2f4219e38fbfb11ec513f936115e594742024fc44eec98c70dca",
+  "catalog_line_bytes": 486,
+  "catalogue_path": "software/client/models/model_catalog.hpp",
+  "catalogue_before": "f66e4d760b659f2e44bb7fa96b144ab9febac65838a5f3e71113814cdd04850d",
+  "catalogue_after": "840bab207b516e3a36a3bd4407679684b73f2b040c960b4bb4791c5a334d3425",
+  "catalogue_entries_before": 3,
+  "catalogue_index": 3,
+  "profile_option": "P1",
+  "profile": "c01b69cf3da9fb260dbd4ac15080bd6c1c425d90bfb9015c8bacc16c061fa05c",
+  "profile_id_hpp": "01938b185c68248dc3fd8bb98a6a250dcd2fda0efacdc48bddce490aa24be482",
+  "profile_descriptor": "60c6bc7b3bde92903c52d44435ac41108fbff0d0acd467f26595b59fd7b41916",
+  "profile_descriptor_note": "unchanged by the overlay and read by no build or runtime step: in the staged tree it lists the catalogue hash before the overlay, and the base tree already lists owner.cpp with an older hash (known deviation of profile option P1, which keeps the profile id)",
+  "base_tree_files": 281,
+  "base_sums": "7ca13d51fefe53f8006b50501bf362eafd286d8f2410f17db9ef98c9b8f248c0",
+  "staged_tree_files": 282,
+  "staged_tree_id": "2203556c18187e63629c7f0b634a32303d0f5da09db4ca3ec1153d13a12fc890",
+  "staged_tree_id_rule": "SHA-256 of the SHA256SUMS that the staged tools/update_sums.py writes (paths relative to the staged v8b_rev5 root)",
+  "changed": [
+    "software/client/models/model_catalog.hpp"
+  ],
+  "added": [
+    "models/zoo19/models_release_v1/cdc-diabetes-lr4-v1.json"
+  ]
+}
