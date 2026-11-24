@@ -85,7 +85,9 @@ Grad/                                repository 根目錄
 ├── evidence/                        [凍結] 驗收矩陣、索引與原始紀錄
 ├── release/                         [工具維護] 版本、來源、收據、SHA256SUMS
 ├── tools/                           [可改] 檢查、建置、A/B 對照、上板打包；kv260/ 是 Windows 序列埠工具
-├── docs/                            [可改] 六份技術文件（第 5 節）＋提案、進度報告、會議與分析筆記
+├── docs/                            [可改] 六份技術文件（第 5 節）；notes/ 筆記、slides/ 簡報、reports/ 提案與報告（索引：docs/README.md）
+├── v8b_rev5/                        [可改] V8b rev5：CKKS 公鑰加密整段在 PL（亂數、取樣、NTT、相乘、組裝）
+├── energy_probe/                    [可改] 整板能耗探針：ESP32＋INA228 韌體、量測與分析工具、實測資料、實作手冊
 ├── data/                            [可改] CDC 糖尿病資料的說明與 manifest；原始檔與切分不進 git
 ├── training/                        [可改] 訓練 4 特徵邏輯斯迴歸，驗證 CKKS 推論與明文一致
 ├── results/                         [證據] 從 KV260 帶回的量測結果，每次上板一個資料夾
@@ -141,10 +143,9 @@ V5 原樣重用 V4 的數學原始碼（不複製、不修改），結果與 V4 
 | [results/README.md](results/README.md) | 上板結果與電腦上的流程演練、怎麼帶回與合併 |
 | [dashboard/README.md](dashboard/README.md) | 監控頁面的內容與執行方式 |
 | [tools/kv260/README.md](tools/kv260/README.md) | Windows 序列埠：送指令、傳檔、收檔 |
-| [docs/Proposal_01.pdf](docs/Proposal_01.pdf) | 原始提案 |
-| [docs/EdgeFHE_V4_Progress_Analysis.pdf](docs/EdgeFHE_V4_Progress_Analysis.pdf) | 進度報告（V4，2026-10-09） |
-| [docs/2026-10-13_first_meeting.md](docs/2026-10-13_first_meeting.md) | 與指導教授的第一次會議：準備內容、簡報連結、會議紀錄 |
-| [docs/2026-10-13_architecture_analysis.md](docs/2026-10-13_architecture_analysis.md) | 分析筆記：架構、平行化、進度與報告用詞檢查 |
+| [energy_probe/README.md](energy_probe/README.md) | 整板能耗探針：接線、韌體、量測流程、實測資料與實作手冊 |
+| [docs/README.md](docs/README.md) | docs 索引：會議與分析筆記（notes/）、過去的簡報（slides/）、提案與報告（reports/） |
+| [docs/notes/2026-11-23_team_context.md](docs/notes/2026-11-23_team_context.md) | 團隊脈絡：目前狀態、量測結果、引用規則與待辦 |
 
 ## 6. 常用指令 / Quick commands
 

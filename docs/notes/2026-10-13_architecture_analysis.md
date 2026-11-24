@@ -57,7 +57,7 @@
 
 ## 5. 今天完成的程式與整理
 
-- **新增 V5 後端與管線層**（[`software/native_v5`](../software/native_v5/README.md)）：
+- **新增 V5 後端與管線層**（[`software/native_v5`](../../software/native_v5/README.md)）：
   - CPU／FPGA 後端介面、持久執行緒池、雙緩衝 DMA、分段計時、三段有界管線。
   - 模擬 DMA 裝置：檢查規則與驅動相同，可注入故障。
   - `v5_parity`、`v5_bench` 兩個工具。
@@ -67,7 +67,7 @@
   - `verify_repository.py` 會拒絕過期或缺少的 V5 收據。
 - **Repo 整理**：
   - 修正 `.gitignore`：原本會漏掉 10 個 V4 驗收收據（`*.log`），clone 下來的人跑驗證會失敗。
-  - 新增專案總覽（2026-10-14 已併入 [repo README](../README.md)），更新 SHA256 清單（223 個檔案，101 個凍結副本未變）。
+  - 新增專案總覽（2026-10-14 已併入 [repo README](../../README.md)），更新 SHA256 清單（223 個檔案，101 個凍結副本未變）。
 - **刻意保留的「重複」檔案**：
   - 3 份 `paired_public_vectors.cpp`：各被同目錄的凍結程式 `#include`。
   - 2 份 Makefile：核心模組建置規定每個驅動目錄都要有自己的 Makefile。

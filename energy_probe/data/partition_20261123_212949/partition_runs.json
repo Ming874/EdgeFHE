@@ -1,0 +1,698 @@
+{
+ "windows": [
+  {
+   "kind": "idle",
+   "name": "V8b loaded",
+   "t_begin": 1795440717.6504743,
+   "t_end": 1795440747.6511476
+  },
+  {
+   "kind": "ARM1",
+   "name": "normalize",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop normalize 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=normalize seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=normalize seconds=8.000 threads=1 units=785190 ms_per_unit_per_thread=0.01019"
+   ],
+   "t_begin": 1795440748.0741894,
+   "t_end": 1795440756.1009312,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "785190",
+    "ms_per_unit_per_thread": "0.01019"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "encode",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop encode 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=encode seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=encode seconds=8.000 threads=1 units=6367 ms_per_unit_per_thread=1.25654"
+   ],
+   "t_begin": 1795440756.5041583,
+   "t_end": 1795440764.534899,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "6367",
+    "ms_per_unit_per_thread": "1.25654"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "front",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop front 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=front seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=front seconds=8.000 threads=1 units=6309 ms_per_unit_per_thread=1.26810"
+   ],
+   "t_begin": 1795440764.9500132,
+   "t_end": 1795440772.991749,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "6309",
+    "ms_per_unit_per_thread": "1.26810"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "rns_message",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop rns_message 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=rns_message seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=rns_message seconds=8.000 threads=1 units=59641 ms_per_unit_per_thread=0.13414"
+   ],
+   "t_begin": 1795440773.4087613,
+   "t_end": 1795440781.29332,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "59641",
+    "ms_per_unit_per_thread": "0.13414"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "prng_chacha20",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop prng_chacha20 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=prng_chacha20 seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=prng_chacha20 seconds=8.001 threads=1 units=24004 ms_per_unit_per_thread=0.33330"
+   ],
+   "t_begin": 1795440781.708518,
+   "t_end": 1795440789.592709,
+   "parsed": {
+    "seconds": "8.001",
+    "threads": "1",
+    "units": "24004",
+    "ms_per_unit_per_thread": "0.33330"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "sample_cdt63",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop sample_cdt63 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=sample_cdt63 seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=sample_cdt63 seconds=8.001 threads=1 units=6935 ms_per_unit_per_thread=1.15369"
+   ],
+   "t_begin": 1795440790.0006971,
+   "t_end": 1795440798.0538275,
+   "parsed": {
+    "seconds": "8.001",
+    "threads": "1",
+    "units": "6935",
+    "ms_per_unit_per_thread": "1.15369"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "sample_ternary",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop sample_ternary 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=sample_ternary seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=sample_ternary seconds=8.000 threads=1 units=241618 ms_per_unit_per_thread=0.03311"
+   ],
+   "t_begin": 1795440798.4750876,
+   "t_end": 1795440806.5087225,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "241618",
+    "ms_per_unit_per_thread": "0.03311"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "rns_small",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop rns_small 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=rns_small seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=rns_small seconds=8.000 threads=1 units=20199 ms_per_unit_per_thread=0.39608"
+   ],
+   "t_begin": 1795440806.9295957,
+   "t_end": 1795440814.9837155,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "20199",
+    "ms_per_unit_per_thread": "0.39608"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "ntt_mask",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop ntt_mask 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=ntt_mask seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=ntt_mask seconds=8.001 threads=1 units=4474 ms_per_unit_per_thread=1.78834"
+   ],
+   "t_begin": 1795440815.3957405,
+   "t_end": 1795440823.4145105,
+   "parsed": {
+    "seconds": "8.001",
+    "threads": "1",
+    "units": "4474",
+    "ms_per_unit_per_thread": "1.78834"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "pointwise",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop pointwise 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=pointwise seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=pointwise seconds=8.000 threads=1 units=16885 ms_per_unit_per_thread=0.47381"
+   ],
+   "t_begin": 1795440823.8265035,
+   "t_end": 1795440831.8718138,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "16885",
+    "ms_per_unit_per_thread": "0.47381"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "intt",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop intt 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=intt seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=intt seconds=8.003 threads=1 units=2232 ms_per_unit_per_thread=3.58537"
+   ],
+   "t_begin": 1795440832.2939968,
+   "t_end": 1795440840.1672335,
+   "parsed": {
+    "seconds": "8.003",
+    "threads": "1",
+    "units": "2232",
+    "ms_per_unit_per_thread": "3.58537"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "add",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop add 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=add seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=add seconds=8.000 threads=1 units=19070 ms_per_unit_per_thread=0.41952"
+   ],
+   "t_begin": 1795440840.5813916,
+   "t_end": 1795440848.588941,
+   "parsed": {
+    "seconds": "8.000",
+    "threads": "1",
+    "units": "19070",
+    "ms_per_unit_per_thread": "0.41952"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "encrypt_all",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop encrypt_all 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=encrypt_all seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=encrypt_all seconds=8.003 threads=1 units=935 ms_per_unit_per_thread=8.55956"
+   ],
+   "t_begin": 1795440849.00268,
+   "t_end": 1795440857.084012,
+   "parsed": {
+    "seconds": "8.003",
+    "threads": "1",
+    "units": "935",
+    "ms_per_unit_per_thread": "8.55956"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "decrypt",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop decrypt 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=decrypt seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=decrypt seconds=8.002 threads=1 units=1289 ms_per_unit_per_thread=6.20809"
+   ],
+   "t_begin": 1795440857.4988966,
+   "t_end": 1795440865.374442,
+   "parsed": {
+    "seconds": "8.002",
+    "threads": "1",
+    "units": "1289",
+    "ms_per_unit_per_thread": "6.20809"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "decode",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop decode 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=decode seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=decode seconds=8.001 threads=1 units=4941 ms_per_unit_per_thread=1.61939"
+   ],
+   "t_begin": 1795440865.7803254,
+   "t_end": 1795440873.813611,
+   "parsed": {
+    "seconds": "8.001",
+    "threads": "1",
+    "units": "4941",
+    "ms_per_unit_per_thread": "1.61939"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM1",
+   "name": "client_ct",
+   "cmd": "cd ~/partition && taskset -c 2 ./module_bench loop client_ct 8 1",
+   "lines": [
+    "SUSTAIN_BEGIN module=client_ct seconds=8.0 threads=1",
+    "MODULE_SUSTAIN_PASS module=client_ct seconds=8.001 threads=1 units=801 ms_per_unit_per_thread=9.98930"
+   ],
+   "t_begin": 1795440874.2228563,
+   "t_end": 1795440882.238395,
+   "parsed": {
+    "seconds": "8.001",
+    "threads": "1",
+    "units": "801",
+    "ms_per_unit_per_thread": "9.98930"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM4",
+   "name": "front",
+   "cmd": "cd ~/partition && taskset -c 0-3 ./module_bench loop front 10 4",
+   "lines": [
+    "SUSTAIN_BEGIN module=front seconds=10.0 threads=4",
+    "MODULE_SUSTAIN_PASS module=front seconds=10.001 threads=4 units=31305 ms_per_unit_per_thread=1.27792"
+   ],
+   "t_begin": 1795440882.653586,
+   "t_end": 1795440892.759098,
+   "parsed": {
+    "seconds": "10.001",
+    "threads": "4",
+    "units": "31305",
+    "ms_per_unit_per_thread": "1.27792"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM4",
+   "name": "encrypt_all",
+   "cmd": "cd ~/partition && taskset -c 0-3 ./module_bench loop encrypt_all 10 4",
+   "lines": [
+    "SUSTAIN_BEGIN module=encrypt_all seconds=10.0 threads=4",
+    "MODULE_SUSTAIN_PASS module=encrypt_all seconds=10.007 threads=4 units=4528 ms_per_unit_per_thread=8.83994"
+   ],
+   "t_begin": 1795440893.1743839,
+   "t_end": 1795440903.2968576,
+   "parsed": {
+    "seconds": "10.007",
+    "threads": "4",
+    "units": "4528",
+    "ms_per_unit_per_thread": "8.83994"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARM4",
+   "name": "client_ct",
+   "cmd": "cd ~/partition && taskset -c 0-3 ./module_bench loop client_ct 10 4",
+   "lines": [
+    "SUSTAIN_BEGIN module=client_ct seconds=10.0 threads=4",
+    "MODULE_SUSTAIN_PASS module=client_ct seconds=10.007 threads=4 units=3875 ms_per_unit_per_thread=10.33024"
+   ],
+   "t_begin": 1795440903.7125943,
+   "t_end": 1795440913.8340936,
+   "parsed": {
+    "seconds": "10.007",
+    "threads": "4",
+    "units": "3875",
+    "ms_per_unit_per_thread": "10.33024"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "PL",
+   "name": "sustain k8",
+   "cmd": "cd ~/edgefhe-v8b-r5 && sudo taskset -c 0 test/board_enc_check sustain 15 8",
+   "lines": [
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=2 driver_elapsed=133 us",
+    "SUSTAIN_BEGIN k=8 seconds=15 (first frame exact)",
+    "driver phases of the last call (us): copy_in=81.5 check_in=148.5 sync_device=64.3 dma_hls=1074.4 sync_cpu=63.1 check_out=300.5 copy_out=185.3 wipe=273.9  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=15.000 k=8 frames=6670 ciphertexts=53360 ciphertexts_per_s=3557.3 records_per_s_4_features=1821353 mean_ioctl_ms=2.2489 mean_driver_ms=1.4494 first_last_exact=1 device_calls=6672"
+   ],
+   "t_begin": 1795440919.2208784,
+   "t_end": 1795440934.3619862,
+   "parsed": {
+    "seconds": "15.000",
+    "k": "8",
+    "frames": "6670",
+    "ciphertexts": "53360",
+    "ciphertexts_per_s": "3557.3",
+    "records_per_s_4_features": "1821353",
+    "mean_ioctl_ms": "2.2489",
+    "mean_driver_ms": "1.4494",
+    "first_last_exact": "1",
+    "device_calls": "6672"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "PL",
+   "name": "sustain k1",
+   "cmd": "cd ~/edgefhe-v8b-r5 && sudo taskset -c 0 test/board_enc_check sustain 15 1",
+   "lines": [
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=3 driver_elapsed=135 us",
+    "SUSTAIN_BEGIN k=1 seconds=15 (first frame exact)",
+    "driver phases of the last call (us): copy_in=11.1 check_in=18.6 sync_device=8.8 dma_hls=157.5 sync_cpu=8.2 check_out=38.2 copy_out=20.2 wipe=34.8  (k=1 tx=32816 B rx=98336 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=15.000 k=1 frames=48018 ciphertexts=48018 ciphertexts_per_s=3201.2 records_per_s_4_features=1638997 mean_ioctl_ms=0.3124 mean_driver_ms=0.2080 first_last_exact=1 device_calls=48020"
+   ],
+   "t_begin": 1795440934.7787395,
+   "t_end": 1795440949.7823946,
+   "parsed": {
+    "seconds": "15.000",
+    "k": "1",
+    "frames": "48018",
+    "ciphertexts": "48018",
+    "ciphertexts_per_s": "3201.2",
+    "records_per_s_4_features": "1638997",
+    "mean_ioctl_ms": "0.3124",
+    "mean_driver_ms": "0.2080",
+    "first_last_exact": "1",
+    "device_calls": "48020"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "CORUN",
+   "name": "pl+front3",
+   "cmd": "cd ~/edgefhe-v8b-r5 && sudo taskset -c 0 test/board_enc_check sustain 30 8",
+   "lines": [
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=4 driver_elapsed=148 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=128.3 check_in=149.6 sync_device=96.2 dma_hls=1077.0 sync_cpu=63.8 check_out=342.2 copy_out=309.2 wipe=266.3  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=12094 ciphertexts=96752 ciphertexts_per_s=3224.8 records_per_s_4_features=1651111 mean_ioctl_ms=2.4808 mean_driver_ms=1.5024 first_last_exact=1 device_calls=12096"
+   ],
+   "t_begin": 1795440952.2361846,
+   "t_end": 1795440982.273849,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "12094",
+    "ciphertexts": "96752",
+    "ciphertexts_per_s": "3224.8",
+    "records_per_s_4_features": "1651111",
+    "mean_ioctl_ms": "2.4808",
+    "mean_driver_ms": "1.5024",
+    "first_last_exact": "1",
+    "device_calls": "12096"
+   },
+   "rc": 0
+  },
+  {
+   "kind": "ARMSYS",
+   "name": "client_ct x4",
+   "cmd": "cd ~/partition && taskset -c 0-3 ./module_bench loop client_ct 30 4",
+   "lines": [
+    "SUSTAIN_BEGIN module=client_ct seconds=30.0 threads=4",
+    "MODULE_SUSTAIN_PASS module=client_ct seconds=30.009 threads=4 units=11639 ms_per_unit_per_thread=10.31318"
+   ],
+   "t_begin": 1795440987.0958195,
+   "t_end": 1795441017.1465309,
+   "parsed": {
+    "seconds": "30.009",
+    "threads": "4",
+    "units": "11639",
+    "ms_per_unit_per_thread": "10.31318"
+   },
+   "rc": 0
+  }
+ ],
+ "events": [
+  {
+   "t": 1795440716.2088432,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/02_load_pl.sh 2>&1 | tail -n 3",
+   "ok": true,
+   "tail": "lay removed, property: /__symbols__/edgefhe_v8b_afi\r\n[12677.530571] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_dma\r\n[12677.541041] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_proxy\r\n 61:     237665          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:     237665          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_R5_PL_LOADED_AFI_PROVIDER_APPLIED boot_id=3ea11c22-1341-4eb7-a240-76c4e8756b64 log=logs/20261123T133149Z_load"
+  },
+  {
+   "t": 1795440717.6497407,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/04_insmod.sh 2>&1 | tail -n 3",
+   "ok": true,
+   "tail": "61:     237665          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:     237665          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_PROXY_READY boot_id=3ea11c22-1341-4eb7-a240-76c4e8756b64"
+  }
+ ],
+ "bench": [
+  {
+   "module": "normalize",
+   "median_ms": 0.01093,
+   "min_ms": 0.01065,
+   "reps": 40
+  },
+  {
+   "module": "encode",
+   "median_ms": 1.25743,
+   "min_ms": 1.24699,
+   "reps": 40
+  },
+  {
+   "module": "front",
+   "median_ms": 1.26811,
+   "min_ms": 1.25927,
+   "reps": 40
+  },
+  {
+   "module": "rns_message",
+   "median_ms": 0.13419,
+   "min_ms": 0.13291,
+   "reps": 40
+  },
+  {
+   "module": "prng_chacha20",
+   "median_ms": 0.33229,
+   "min_ms": 0.33209,
+   "reps": 40
+  },
+  {
+   "module": "sample_ternary",
+   "median_ms": 0.03302,
+   "min_ms": 0.03301,
+   "reps": 40
+  },
+  {
+   "module": "sample_cdt63",
+   "median_ms": 1.15086,
+   "min_ms": 1.15025,
+   "reps": 40
+  },
+  {
+   "module": "sample_all",
+   "median_ms": 1.52647,
+   "min_ms": 1.5248,
+   "reps": 40
+  },
+  {
+   "module": "rns_small",
+   "median_ms": 0.39467,
+   "min_ms": 0.39355,
+   "reps": 40
+  },
+  {
+   "module": "ntt_mask",
+   "median_ms": 1.78359,
+   "min_ms": 1.77859,
+   "reps": 40
+  },
+  {
+   "module": "pointwise",
+   "median_ms": 0.47305,
+   "min_ms": 0.47242,
+   "reps": 40
+  },
+  {
+   "module": "intt",
+   "median_ms": 3.57755,
+   "min_ms": 3.56684,
+   "reps": 40
+  },
+  {
+   "module": "add",
+   "median_ms": 0.41873,
+   "min_ms": 0.41592,
+   "reps": 40
+  },
+  {
+   "module": "encrypt_all",
+   "median_ms": 8.54276,
+   "min_ms": 8.51247,
+   "reps": 40
+  },
+  {
+   "module": "client_ct",
+   "median_ms": 9.96714,
+   "min_ms": 9.91011,
+   "reps": 40
+  },
+  {
+   "module": "decrypt",
+   "median_ms": 6.17944,
+   "min_ms": 6.17051,
+   "reps": 40
+  },
+  {
+   "module": "decode",
+   "median_ms": 1.6177,
+   "min_ms": 1.61285,
+   "reps": 40
+  },
+  {
+   "module": "sigmoid",
+   "median_ms": 0.15774,
+   "min_ms": 0.15747,
+   "reps": 40
+  }
+ ],
+ "pl_table": [
+  "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=20",
+  "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+  "LOAD ok: lease generation=1 driver_elapsed=184 us",
+  "k   frames   ioctl_ms(p50)  driver_ms(p50)   ms_per_ct      exact_words ",
+  "1   20       0.424          0.281            0.424          491520      ",
+  "2   20       0.732          0.469            0.366          983040      ",
+  "4   20       1.318          0.800            0.330          1966080     ",
+  "8   20       2.493          1.548            0.312          3932160     ",
+  "driver phases of the last call (us): copy_in=151.4 check_in=157.8 sync_device=69.7 dma_hls=1133.7 sync_cpu=64.5 check_out=385.0 copy_out=221.7 wipe=273.7  (k=8 tx=262192 B rx=786464 B)",
+  "V8B_BOARD_ENC_CHECK_PASS frames=80 words=7372800 mismatches=0 decrypt_failures=0 max_abs_noise=1856 (bound 2^20) pl_hz=199999998 device_calls=81"
+ ],
+ "phases": [
+  [
+   "driver phases of the last call (us): copy_in=81.5 check_in=148.5 sync_device=64.3 dma_hls=1074.4 sync_cpu=63.1 check_out=300.5 copy_out=185.3 wipe=273.9  (k=8 tx=262192 B rx=786464 B)"
+  ],
+  [
+   "driver phases of the last call (us): copy_in=11.1 check_in=18.6 sync_device=8.8 dma_hls=157.5 sync_cpu=8.2 check_out=38.2 copy_out=20.2 wipe=34.8  (k=1 tx=32816 B rx=98336 B)"
+  ]
+ ],
+ "bench_raw": "{\"module\":\"normalize\",\"median_ms\":0.01093,\"min_ms\":0.01065,\"reps\":40}\r\n{\"module\":\"encode\",\"median_ms\":1.25743,\"min_ms\":1.24699,\"reps\":40}\r\n{\"module\":\"front\",\"median_ms\":1.26811,\"min_ms\":1.25927,\"reps\":40}\r\n{\"module\":\"rns_message\",\"median_ms\":0.13419,\"min_ms\":0.13291,\"reps\":40}\r\n{\"module\":\"prng_chacha20\",\"median_ms\":0.33229,\"min_ms\":0.33209,\"reps\":40}\r\n{\"module\":\"sample_ternary\",\"median_ms\":0.03302,\"min_ms\":0.03301,\"reps\":40}\r\n{\"module\":\"sample_cdt63\",\"median_ms\":1.15086,\"min_ms\":1.15025,\"reps\":40}\r\n{\"module\":\"sample_all\",\"median_ms\":1.52647,\"min_ms\":1.52480,\"reps\":40}\r\n{\"module\":\"rns_small\",\"median_ms\":0.39467,\"min_ms\":0.39355,\"reps\":40}\r\n{\"module\":\"ntt_mask\",\"median_ms\":1.78359,\"min_ms\":1.77859,\"reps\":40}\r\n{\"module\":\"pointwise\",\"median_ms\":0.47305,\"min_ms\":0.47242,\"reps\":40}\r\n{\"module\":\"intt\",\"median_ms\":3.57755,\"min_ms\":3.56684,\"reps\":40}\r\n{\"module\":\"add\",\"median_ms\":0.41873,\"min_ms\":0.41592,\"reps\":40}\r\n{\"module\":\"encrypt_all\",\"median_ms\":8.54276,\"min_ms\":8.51247,\"reps\":40}\r\n{\"module\":\"client_ct\",\"median_ms\":9.96714,\"min_ms\":9.91011,\"reps\":40}\r\n{\"module\":\"decrypt\",\"median_ms\":6.17944,\"min_ms\":6.17051,\"reps\":40}\r\n{\"module\":\"decode\",\"median_ms\":1.61770,\"min_ms\":1.61285,\"reps\":40}\r\n{\"module\":\"sigmoid\",\"median_ms\":0.15774,\"min_ms\":0.15747,\"reps\":40}\r\nMODULE_BENCH_PASS",
+ "corun_encode": [
+  "SUSTAIN_BEGIN module=front seconds=34.0 threads=3",
+  "MODULE_SUSTAIN_PASS module=front seconds=34.001 threads=3 units=79165 ms_per_unit_per_thread=1.28848"
+ ],
+ "restore": "ware-name\r\n[12981.817225] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\nk26-starter-kits: loaded to slot 0\r\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  0,",
+ "esp": [
+  {
+   "t": 1795440756.1137059,
+   "line": "# result normaliz records=402017280 E_J=73.630 rec_per_J=5459977.3"
+  },
+  {
+   "t": 1795440764.5466962,
+   "line": "# result encode records=3259904 E_J=73.322 rec_per_J=44460.2"
+  },
+  {
+   "t": 1795440773.028582,
+   "line": "# result front records=3230208 E_J=73.736 rec_per_J=43807.5"
+  },
+  {
+   "t": 1795440781.3060858,
+   "line": "# result rns_mess records=30536192 E_J=71.861 rec_per_J=424931.8"
+  },
+  {
+   "t": 1795440789.6066704,
+   "line": "# result prng_cha records=12290048 E_J=72.395 rec_per_J=169764.8"
+  },
+  {
+   "t": 1795440798.0661187,
+   "line": "# result sample_c records=3550720 E_J=73.655 rec_per_J=48207.3"
+  },
+  {
+   "t": 1795440806.528096,
+   "line": "# result sample_t records=123708416 E_J=73.102 rec_per_J=1692265.9"
+  },
+  {
+   "t": 1795440814.9951248,
+   "line": "# result rns_smal records=10341888 E_J=73.230 rec_per_J=141224.5"
+  },
+  {
+   "t": 1795440823.4274144,
+   "line": "# result ntt_mask records=2290688 E_J=72.882 rec_per_J=31430.3"
+  },
+  {
+   "t": 1795440831.883395,
+   "line": "# result pointwis records=8645120 E_J=73.334 rec_per_J=117886.5"
+  },
+  {
+   "t": 1795440840.178936,
+   "line": "# result intt records=1142784 E_J=71.606 rec_per_J=15959.2"
+  },
+  {
+   "t": 1795440848.6003351,
+   "line": "# result add records=9763840 E_J=74.055 rec_per_J=131845.5"
+  },
+  {
+   "t": 1795440857.0962973,
+   "line": "# result encrypt_ records=478720 E_J=74.182 rec_per_J=6453.3"
+  },
+  {
+   "t": 1795440865.3860044,
+   "line": "# result decrypt records=659968 E_J=71.713 rec_per_J=9202.9"
+  },
+  {
+   "t": 1795440873.8250053,
+   "line": "# result decode records=2529792 E_J=73.444 rec_per_J=34445.3"
+  },
+  {
+   "t": 1795440882.2497592,
+   "line": "# result client_c records=410112 E_J=73.677 rec_per_J=5566.3"
+  },
+  {
+   "t": 1795440892.7709715,
+   "line": "# result front records=16028160 E_J=100.834 rec_per_J=158956.4"
+  },
+  {
+   "t": 1795440903.3085575,
+   "line": "# result encrypt_ records=2318336 E_J=103.138 rec_per_J=22478.1"
+  },
+  {
+   "t": 1795440913.844471,
+   "line": "# result client_c records=1984000 E_J=103.266 rec_per_J=19212.5"
+  },
+  {
+   "t": 1795440934.3749938,
+   "line": "# result sustain  records=27320320 E_J=149.632 rec_per_J=182583.2"
+  },
+  {
+   "t": 1795440949.7938123,
+   "line": "# result sustain  records=24585216 E_J=145.826 rec_per_J=168592.7"
+  },
+  {
+   "t": 1795440982.2848263,
+   "line": "# result pl+front records=49537024 E_J=323.866 rec_per_J=152955.5"
+  },
+  {
+   "t": 1795441017.158918,
+   "line": "# result client_c records=5959168 E_J=306.457 rec_per_J=19445.4"
+  }
+ ]
+}
