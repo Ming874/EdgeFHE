@@ -1,0 +1,32 @@
+# Local material of the EdgeFHE demo never enters git. The root .gitignore covers /local/ and /build/ only at the top
+# level, while tools/inventory.py skips every directory named local or build, so both are ignored here at any depth.
+# Evidence runs, PKI and real configuration files belong outside the repository (C:\EdgeFHE_evidence,
+# C:\EdgeFHE_demo, /etc/edgefhe-demo). Before tools/update_manifest.py, remove every ignored file under demo/:
+# the inventory hashes it although git does not commit it (python -B demo/tests/test_hygiene.py reports them).
+local/
+build/
+runs/
+__pycache__/
+*.pyc
+
+# Captures, logs and TLS key logs (the key log of a demo session is secret material).
+*.pcap
+*.pcapng
+*.log
+*keys*.log
+
+# Keys, certificates, signing requests, pins and key stores of the demo PKI.
+*.key
+*.pem
+*.csr
+*.srl
+*.pin
+*.p12
+*.pfx
+
+# Real configuration files, written from the committed templates outside the repository.
+gateway.json
+console.json
+
+# Image archives (docker save).
+*.tar

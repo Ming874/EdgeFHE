@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<title>雲端證據主控台</title>
+<link rel="stylesheet" href="/console.css">
+<script src="/console.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="title">
+    <h1>雲端電腦證據主控台：雲端只處理密文</h1>
+    <p class="sub">本畫面在雲端電腦上執行，只顯示雲端電腦收到、計算與回傳的資料，以及第三方可以如何查核。研究展示，非醫療診斷。</p>
+  </div>
+  <ul class="chips" id="chips" aria-label="系統狀態"></ul>
+</header>
+<p class="notice" id="notice" role="status" aria-live="polite" hidden></p>
+<nav class="sessions" aria-label="連線清單">
+  <span class="nav-label">連線</span>
+  <ol id="session-list"></ol>
+  <button type="button" id="follow" class="follow" aria-pressed="true">跟隨最新連線</button>
+  <span id="other-traffic" class="muted"></span>
+</nav>
+<main class="grid">
+  <section class="panel p-wire" aria-labelledby="h-wire">
+    <h2 id="h-wire">線上封包（無金鑰）</h2>
+    <p class="lead">任何竊聽者皆可看到以下資訊：每一筆 TLS 1.3 紀錄的長度與先後順序。標示「≈」的內容由長度推論，尚未經解密確認。</p>
+    <div id="wire-body"></div>
+  </section>
+  <section class="panel p-tls" aria-labelledby="h-tls">
+    <h2 id="h-tls">解開 TLS 之後</h2>
+    <p class="lead">本主控台以雲端伺服器寫出的示範專用 TLS 金鑰紀錄，解開擷取副本中的此連線。解開之後看到的仍是 CKKS 密文。</p>
+    <div id="tls-body"></div>
+  </section>
+  <section class="panel p-hash" aria-labelledby="h-hash">
+    <h2 id="h-hash">三方雜湊</h2>
+    <p class="lead">同一筆請求與回應的 SHA-256，分別取自擷取檔、雲端紀錄與板端公開紀錄；三者相同，代表各方看到的是同一份密文。</p>
+    <div id="hash-body"></div>
+  </section>
+  <section class="panel p-cloud" aria-labelledby="h-cloud">
+    <h2 id="h-cloud">雲端運算</h2>
+    <div id="cloud-body"></div>
+  </section>
+  <section class="panel p-time" aria-labelledby="h-time">
+    <h2 id="h-time">時序</h2>
+    <div id="time-body"></div>
+  </section>
+  <section class="panel p-energy" aria-labelledby="h-energy">
+    <h2 id="h-energy">能耗</h2>
+    <div id="energy-body"></div>
+  </section>
+  <section class="panel p-gates" aria-labelledby="h-gates">
+    <h2 id="h-gates">驗證項目</h2>
+    <div id="gates-body"></div>
+  </section>
+  <section class="panel p-seal" aria-labelledby="h-seal">
+    <h2 id="h-seal">封存</h2>
+    <div id="seal-body"></div>
+    <div class="actions">
+      <button type="button" id="btn-seal" class="primary">封存</button>
+      <button type="button" id="btn-verify">驗證</button>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <p>雲端持有：TLS 伺服器憑證與私鑰、示範專用的 TLS 金鑰紀錄、公開的模型權重 W 與 B。雲端未持有：任何 CKKS 金鑰（因此無法解密密文）、表單答案、風險等級。TLS 伺服器私鑰只保護傳輸，不能解開 CKKS 密文。</p>
+  <p id="foot-run" class="muted"></p>
+</footer>
+</body>
+</html>

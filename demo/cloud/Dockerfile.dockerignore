@@ -1,0 +1,25 @@
+# Build context of demo/cloud/Dockerfile (docker build -f demo/cloud/Dockerfile . from the repository root): only
+# v8b_rev5/ and demo/ are sent. v8b_rev5/ must arrive byte for byte with nothing extra, because make_overlay.py runs
+# tools/verify_repo.py on it; hence only caches are dropped there. From demo/, local and run directories, build output,
+# captures, logs, keys, certificates, CSRs and pins are dropped as well.
+*
+!v8b_rev5
+!demo
+**/__pycache__
+**/*.pyc
+demo/**/local
+demo/**/runs
+demo/**/build
+demo/**/node_modules
+demo/**/.venv*
+demo/**/.env
+demo/**/*.pcap
+demo/**/*.pcapng
+demo/**/*.log
+demo/**/*.key
+demo/**/*.pem
+demo/**/*.csr
+demo/**/*.srl
+demo/**/*.pin
+demo/**/*.p12
+demo/**/*.tar
