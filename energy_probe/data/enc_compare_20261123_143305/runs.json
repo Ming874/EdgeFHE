@@ -1,0 +1,285 @@
+{
+ "events": [
+  {
+   "t": 1795415641.353211,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/02_load_pl.sh 2>&1 | tail -n 4",
+   "rc": 0,
+   "ok": true,
+   "tail": "91.560745] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\n[ 1994.113671] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_afi\r\n[ 1995.223232] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_dma\r\n[ 1995.233728] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_proxy\r\na0010000.edgefhe-v8b-proxy\r\n 61:          0          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:          0          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_R5_PL_LOADED_AFI_PROVIDER_APPLIED boot_id=29fa03d3-ea53-40e3-ad7c-f00d867cc73c log=logs/20261123T035855Z_load"
+  },
+  {
+   "t": 1795415642.9752116,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/04_insmod.sh 2>&1 | tail -n 4",
+   "rc": 0,
+   "ok": true,
+   "tail": "crw------- 1 root root 10, 120 Nov 23 03:59 /dev/edgefhe_v8b_dma\r\n 61:          0          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:          0          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_PROXY_READY boot_id=29fa03d3-ea53-40e3-ad7c-f00d867cc73c"
+  },
+  {
+   "t": 1795415769.607649,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/99_unload.sh 2>&1 | tail -n 3",
+   "rc": 0,
+   "ok": true,
+   "tail": "edgefhe-v8b-r5            XRT_FLAT                  edgefhe-v8b-r5            XRT_FLAT               (0+0)                  -1\r\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\r\nV8B_R5_UNLOADED (to restore the default app: sudo xmutil loadapp k26-starter-kits)"
+  },
+  {
+   "t": 1795415771.8893447,
+   "cmd": "bash ~/board_v2/load_edgefhe2.sh 2>&1 | tail -n 4",
+   "rc": 0,
+   "ok": true,
+   "tail": "[ 2126.655296] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name\r\n[ 2126.665413] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\n[ 2126.675019] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/afi0\r\n[ 2126.684515] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/clocking0\r\n==> [3/3] create DMA buffer /dev/udmabuf0 (4 MiB)\r\nudmabuf0 phys_addr = 0x0000000036f00000\r\npl0_ref rate       = 99999999\r\nOK. now run:  cd app && bash build.sh && sudo ./edgefhe2_app"
+  }
+ ],
+ "idle": [
+  {
+   "version": "starter-kit",
+   "start": 1795415604.3272374,
+   "end": 1795415634.3276687,
+   "cpu": 0.15651164718560884
+  },
+  {
+   "version": "V8b",
+   "start": 1795415643.1755414,
+   "end": 1795415673.1762197,
+   "cpu": 0.0021541010770504965
+  },
+  {
+   "version": "edgefhe2",
+   "start": 1795415772.0975711,
+   "end": 1795415802.097992,
+   "cpu": 0.002153209109730825
+  }
+ ],
+ "runs": [
+  {
+   "version": "V8b",
+   "rep": 1,
+   "lines": [
+    "[1] 6208",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=1 driver_elapsed=172 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=90.4 check_in=147.1 sync_device=64.0 dma_hls=1123.3 sync_cpu=63.5 check_out=322.2 copy_out=191.0 wipe=273.4  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=12964 ciphertexts=103712 ciphertexts_per_s=3457.0 records_per_s_4_features=1769981 mean_ioctl_ms=2.3141 mean_driver_ms=1.4844 first_last_exact=1 device_calls=12966",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "t_begin": 1795415673.7958963,
+   "t_end": 1795415703.9230745,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "12964",
+    "ciphertexts": "103712",
+    "ciphertexts_per_s": "3457.0",
+    "records_per_s_4_features": "1769981",
+    "mean_ioctl_ms": "2.3141",
+    "mean_driver_ms": "1.4844",
+    "first_last_exact": "1",
+    "device_calls": "12966"
+   },
+   "passed": true,
+   "records": 53100544,
+   "rc": 0,
+   "cpu": 0.13187366301749093
+  },
+  {
+   "version": "V8b",
+   "rep": 2,
+   "lines": [
+    "[1] 6248",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=2 driver_elapsed=168 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=87.7 check_in=146.8 sync_device=64.7 dma_hls=1170.7 sync_cpu=65.0 check_out=299.5 copy_out=197.6 wipe=273.1  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=13124 ciphertexts=104992 ciphertexts_per_s=3499.6 records_per_s_4_features=1791790 mean_ioctl_ms=2.2860 mean_driver_ms=1.4784 first_last_exact=1 device_calls=13126",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "t_begin": 1795415705.5813673,
+   "t_end": 1795415735.7071953,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "13124",
+    "ciphertexts": "104992",
+    "ciphertexts_per_s": "3499.6",
+    "records_per_s_4_features": "1791790",
+    "mean_ioctl_ms": "2.2860",
+    "mean_driver_ms": "1.4784",
+    "first_last_exact": "1",
+    "device_calls": "13126"
+   },
+   "passed": true,
+   "records": 53755904,
+   "rc": 0,
+   "cpu": 0.13066465256797588
+  },
+  {
+   "version": "V8b",
+   "rep": 3,
+   "lines": [
+    "[1] 6284",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=3 driver_elapsed=135 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=90.0 check_in=148.1 sync_device=63.9 dma_hls=1123.1 sync_cpu=63.4 check_out=300.9 copy_out=193.6 wipe=273.6  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=13172 ciphertexts=105376 ciphertexts_per_s=3512.3 records_per_s_4_features=1798319 mean_ioctl_ms=2.2777 mean_driver_ms=1.4743 first_last_exact=1 device_calls=13174",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "t_begin": 1795415737.16549,
+   "t_end": 1795415767.3131084,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "13172",
+    "ciphertexts": "105376",
+    "ciphertexts_per_s": "3512.3",
+    "records_per_s_4_features": "1798319",
+    "mean_ioctl_ms": "2.2777",
+    "mean_driver_ms": "1.4743",
+    "first_last_exact": "1",
+    "device_calls": "13174"
+   },
+   "passed": true,
+   "records": 53952512,
+   "rc": 0,
+   "cpu": 0.13143000880392408
+  },
+  {
+   "version": "edgefhe2",
+   "rep": 1,
+   "lines": [
+    "[1] 6431",
+    "=== EdgeFHE v2 : full-PL RNS-CKKS encryption on KV260 ===",
+    "[param] N=4096, 3 RNS limbs (q = 998244353, 1004535809, 469762049), log2 Q = 88.6, Delta = 2^30, slots = 2048",
+    "[param] secret/mask: uniform ternary, noise: CDT Gaussian sigma=4.5, PRNG: ChaCha20 (in PL)",
+    "[clock] pl_clk0 = 100.000 MHz -> MMCM PL clock = 206.3 MHz",
+    "[hw] edgefhe2 @0xa0000000 DMA @0xa0010000 udmabuf phys=0x36f00000 (cached + manual sync)",
+    "[keygen] 9.11 ms (secret key stays on the board)",
+    "[fpga] public key loaded into PL (24576 words)",
+    "[check] frame of 8 ciphertexts: HW vs SW mismatches = 0 / 196608 words, max slot error = 1.034e-04",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "V2_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=8720 ciphertexts=69760 ciphertexts_per_s=2325.3 records_per_s_4_features=1190535 mean_frame_ms=3.4405 mean_dma_pl_ms=3.3598 last_mismatches=0",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )  (wd: ~/edgefhe-v8b-r5)",
+    "(wd now: ~/edgefhe_power)"
+   ],
+   "t_begin": 1795415802.939097,
+   "t_end": 1795415832.895467,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "8720",
+    "ciphertexts": "69760",
+    "ciphertexts_per_s": "2325.3",
+    "records_per_s_4_features": "1190535",
+    "mean_frame_ms": "3.4405",
+    "mean_dma_pl_ms": "3.3598",
+    "last_mismatches": "0"
+   },
+   "passed": true,
+   "records": 35717120,
+   "rc": 0,
+   "cpu": 0.2523738130934533
+  },
+  {
+   "version": "edgefhe2",
+   "rep": 2,
+   "lines": [
+    "[1] 6469",
+    "=== EdgeFHE v2 : full-PL RNS-CKKS encryption on KV260 ===",
+    "[param] N=4096, 3 RNS limbs (q = 998244353, 1004535809, 469762049), log2 Q = 88.6, Delta = 2^30, slots = 2048",
+    "[param] secret/mask: uniform ternary, noise: CDT Gaussian sigma=4.5, PRNG: ChaCha20 (in PL)",
+    "[clock] pl_clk0 = 100.000 MHz -> MMCM PL clock = 206.3 MHz",
+    "[hw] edgefhe2 @0xa0000000 DMA @0xa0010000 udmabuf phys=0x36f00000 (cached + manual sync)",
+    "[keygen] 9.08 ms (secret key stays on the board)",
+    "[fpga] public key loaded into PL (24576 words)",
+    "[check] frame of 8 ciphertexts: HW vs SW mismatches = 0 / 196608 words, max slot error = 9.516e-05",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "V2_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=8720 ciphertexts=69760 ciphertexts_per_s=2325.3 records_per_s_4_features=1190545 mean_frame_ms=3.4404 mean_dma_pl_ms=3.3598 last_mismatches=0",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "t_begin": 1795415834.5584836,
+   "t_end": 1795415864.4740613,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "8720",
+    "ciphertexts": "69760",
+    "ciphertexts_per_s": "2325.3",
+    "records_per_s_4_features": "1190545",
+    "mean_frame_ms": "3.4404",
+    "mean_dma_pl_ms": "3.3598",
+    "last_mismatches": "0"
+   },
+   "passed": true,
+   "records": 35717120,
+   "rc": 0,
+   "cpu": 0.25249750249750247
+  },
+  {
+   "version": "edgefhe2",
+   "rep": 3,
+   "lines": [
+    "[1] 6509",
+    "=== EdgeFHE v2 : full-PL RNS-CKKS encryption on KV260 ===",
+    "[param] N=4096, 3 RNS limbs (q = 998244353, 1004535809, 469762049), log2 Q = 88.6, Delta = 2^30, slots = 2048",
+    "[param] secret/mask: uniform ternary, noise: CDT Gaussian sigma=4.5, PRNG: ChaCha20 (in PL)",
+    "[clock] pl_clk0 = 100.000 MHz -> MMCM PL clock = 206.3 MHz",
+    "[hw] edgefhe2 @0xa0000000 DMA @0xa0010000 udmabuf phys=0x36f00000 (cached + manual sync)",
+    "[keygen] 9.06 ms (secret key stays on the board)",
+    "[fpga] public key loaded into PL (24576 words)",
+    "[check] frame of 8 ciphertexts: HW vs SW mismatches = 0 / 196608 words, max slot error = 7.766e-05",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "V2_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=8720 ciphertexts=69760 ciphertexts_per_s=2325.1 records_per_s_4_features=1190475 mean_frame_ms=3.4406 mean_dma_pl_ms=3.3598 last_mismatches=0",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "t_begin": 1795415866.3309777,
+   "t_end": 1795415896.379772,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "8720",
+    "ciphertexts": "69760",
+    "ciphertexts_per_s": "2325.1",
+    "records_per_s_4_features": "1190475",
+    "mean_frame_ms": "3.4406",
+    "mean_dma_pl_ms": "3.3598",
+    "last_mismatches": "0"
+   },
+   "passed": true,
+   "records": 35717120,
+   "rc": 0,
+   "cpu": 0.2520010005002501
+  }
+ ],
+ "secs": 30,
+ "reps": 3,
+ "restore": "[ 2254.462787] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name\r\n[ 2254.472909] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\nk26-starter-kits: loaded to slot 0\r\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  0,",
+ "esp_results": [
+  {
+   "t": 1795415703.934667,
+   "line": "# result V8b records=53100544 E_J=267.371 rec_per_J=198602.3"
+  },
+  {
+   "t": 1795415735.7174895,
+   "line": "# result V8b records=53755904 E_J=267.469 rec_per_J=200979.9"
+  },
+  {
+   "t": 1795415767.3234072,
+   "line": "# result V8b records=53952512 E_J=267.624 rec_per_J=201598.5"
+  },
+  {
+   "t": 1795415832.906063,
+   "line": "# result edgefhe2 records=35717120 E_J=241.493 rec_per_J=147901.4"
+  },
+  {
+   "t": 1795415864.4846385,
+   "line": "# result edgefhe2 records=35717120 E_J=241.038 rec_per_J=148180.4"
+  },
+  {
+   "t": 1795415896.3912022,
+   "line": "# result edgefhe2 records=35717120 E_J=242.230 rec_per_J=147451.4"
+  }
+ ]
+}

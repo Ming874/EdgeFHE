@@ -44,7 +44,7 @@
 | 瓶頸（加密上行路徑，以 CPU 規格程式計） | ARM 正規化與編碼：共同執行時 3 核每秒 1.19M 筆，低於同時執行的 PL 路徑（每秒 1.65M 筆）；編碼加速約 1.4 倍即達共同執行時 PL 路徑的速度（PL 路徑單獨執行為每秒 1.82M 筆，對此約 1.5 倍，僅供參考） |
 | 每批 2048 筆的 ARM 時間（規格程式） | 全部在 ARM 47.3 ms；V8b 切分 13.6 ms，其中解密、解碼與 sigmoid 7.99 ms（約 59%）；PL 0.54 ms |
 
-各模組的兩端比較（ARM 實測、PL 估計）與圖表見 [docs/2026-11-23_team_context.md](../../../docs/2026-11-23_team_context.md) 第 8 節，以及由 `make_report.py --partition` 產生的報告。
+各模組的兩端比較（ARM 實測、PL 估計）與圖表見 [docs/notes/2026-11-23_team_context.md](../../../docs/notes/2026-11-23_team_context.md) 第 8 節，以及由 `make_report.py --partition` 產生的報告。
 
 ## 限制
 

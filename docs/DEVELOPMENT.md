@@ -262,7 +262,7 @@ Python（含新寫的）只用標準函式庫，沒有 pip 套件（[requirement
 ### 6.1 原則
 
 - 2026-10-14 起，專題資料夾（`Grad/`）本身就是 repo 根目錄：程式碼、文件、`data/` 說明、`training/`、`results/`、`dashboard/` 都在同一個 repo（之前程式碼在 `EdgeFHE-KV260-GitHub/` 子資料夾）。沒有嵌入其他 `.git` 或原 credentials；撰寫時尚未 commit／push。
-- 上傳前先決定公開範圍：提案、進度報告、會議紀錄（`docs/` 的 PDF 與 `2026-10-13_*.md`）和上板結果也在 repo 裡。不想公開的列進 `.gitignore`，再跑第 4 節的完整性指令。
+- 上傳前先決定公開範圍：提案、進度報告、會議紀錄（`docs/reports/` 的 PDF、`docs/slides/` 的簡報與 `docs/notes/` 的筆記）和上板結果也在 repo 裡。不想公開的列進 `.gitignore`，再跑第 4 節的完整性指令。
 - 在既有 GitHub repo 開分支，整理進本資料夾頂層內容，保留原 `.git`。舊 frontend、datasets、V2 不必全刪；保留就移到明確的 legacy 資料夾或獨立分支並註明不屬目前接受的版本。不要混用舊 README 與本版結果，不要用鏡像刪除清空既有 repo。
 - 提交前完成第 4 節；保留版本邊界（V3 凍結來源與證據原樣、V4 candidate 與 V5 分開），都還不是正式 release。
 

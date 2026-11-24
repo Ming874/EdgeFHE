@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>V8b 與 OpenFHE 能耗比較</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1b1d21; --quiet:#52514e; --rule:#dcdad4; --tint:#f3f2ee; --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; }
+  body { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.65; margin: 0; background: #fff; }
+  h1 { font-size: 19pt; margin: 0 0 2pt; letter-spacing: .02em; }
+  h2 { font-size: 13.5pt; margin: 18pt 0 6pt; padding-bottom: 3pt; border-bottom: 1.5px solid var(--ink); }
+  h3 { font-size: 11.5pt; margin: 14pt 0 4pt; }
+  p { margin: 4pt 0; }
+  .sub { color: var(--quiet); font-size: 10pt; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.8pt; font-variant-numeric: tabular-nums; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 4pt 6pt; text-align: left; vertical-align: top; }
+  th { background: var(--tint); font-weight: 700; }
+  td.n { text-align: right; white-space: nowrap; }
+  .key { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8pt; margin: 8pt 0 4pt; }
+  .key div { background: var(--tint); border-radius: 6px; padding: 7pt 9pt; }
+  .key b { display: block; font-size: 16pt; line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .key span { color: var(--quiet); font-size: 9.3pt; }
+  figure { margin: 10pt 0 4pt; break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  .read { display: grid; grid-template-columns: 4.2em 1fr; gap: 2pt 8pt; margin: 4pt 0 12pt; font-size: 10pt; }
+  .read dt { font-weight: 700; color: var(--quiet); }
+  .read dd { margin: 0; }
+  .fig { break-inside: avoid; }
+  ul { margin: 4pt 0; padding-left: 18pt; } li { margin: 2pt 0; }
+  .swatch { display: inline-block; width: 9pt; height: 9pt; border-radius: 2px; vertical-align: -1pt; margin-right: 3pt; }
+  code { font-family: Consolas, monospace; font-size: 9.2pt; background: var(--tint); padding: 0 3pt; border-radius: 3px; }
+  .pb { break-before: page; }
+</style>
+</head>
+<body>
+
+<h1>V8b 與 OpenFHE 加密能耗比較</h1>
+<p class="sub">量測日期：2026-11-23（UTC 10:41–10:47）　平台：KV260（Ubuntu 22.04，4 × Cortex-A53 1.333 GHz）　量測：ESP32-S3 + INA228 整板探針（12 V 輸入端）</p>
+
+<h2>摘要</h2>
+<div class="key">
+  <div><b>9.4 倍</b><span>V8b 每焦耳處理筆數是 OpenFHE 4 執行緒的倍數（180,152 對 19,075 筆／焦耳）</span></div>
+  <div><b>9.1 倍</b><span>V8b 每秒處理筆數是 OpenFHE 4 執行緒的倍數（179 萬對 19.6 萬筆／秒）</span></div>
+  <div><b>13% 對 100%</b><span>加密時 4 顆 ARM 核心的平均使用率（V8b 對 OpenFHE 4 執行緒）</span></div>
+</div>
+<ul>
+  <li>V8b 以 FPGA 加密，每批 2048 筆資料消耗約 <b>11.4 mJ</b>；OpenFHE 4 執行緒消耗約 107.4 mJ，單執行緒約 379.4 mJ。</li>
+  <li>V8b 與 OpenFHE 4 執行緒的整板功率相近（9.96 W 對 10.29 W），差距主要來自處理速度，而非功率。</li>
+  <li>扣除待機功率後的淨值，排名不變：V8b 約 181 萬筆／焦耳，OpenFHE 兩種設定約 14 萬至 15 萬筆／焦耳。</li>
+  <li>探針螢幕即時算出的每焦耳筆數與電腦分析的差異，9 輪全部在 ±0.5% 內。</li>
+</ul>
+
+<h2>量測方法</h2>
+<table>
+  <tr><th style="width:22%">項目</th><th>內容</th></tr>
+  <tr><td>比較對象</td><td><span class="swatch" style="background:var(--blue)"></span>V8b rev5（FPGA 加密）　<span class="swatch" style="background:var(--aqua)"></span>OpenFHE 1.5.1，4 執行緒　<span class="swatch" style="background:var(--orange)"></span>OpenFHE 1.5.1，單執行緒</td></tr>
+  <tr><td>共同參數</td><td>CKKS，N = 4096，每個密文 2048 個 slot，3 個 RNS 模數（約 88.6 位元），公鑰加密。OpenFHE 實際選出的模數為 1073692673／536813569／536903681，與 repo 文件（docs/NATIVE_V4.md 4.4 節）的 OpenFHE 對照組相同。</td></tr>
+  <tr><td>工作定義</td><td>三種設定相同：每個 frame 8 個密文，8 筆明文事先編碼一次，迴圈內只做加密，連續 30 秒；第一個與最後一個 frame 皆檢查正確性（V8b 逐位元比對；OpenFHE 解密誤差 &lt; 10⁻³，實測約 1×10⁻⁴）。</td></tr>
+  <tr><td>筆數換算</td><td>每筆資料 4 個特徵（CDC 模型），每個密文裝 2048 筆的同一個特徵，故 1 個密文 = 512 筆。</td></tr>
+  <tr><td>能量量測</td><td>INA228 串接於 KV260 的 12 V 輸入（整板），每 0.1 秒一筆；探針未校正（K = 1）。兩種設定的比值不受校正影響。</td></tr>
+  <tr><td>總值與淨值</td><td>總值 = 筆數 ÷ 這 30 秒的整板能量。淨值 = 筆數 ÷［（加密時功率 − 同一狀態的待機功率）× 秒數］。</td></tr>
+  <tr><td>待機狀態</td><td>V8b：載入 V8b 硬體與驅動，不執行加密。OpenFHE：PL 清空（不載入任何 FPGA 設計），代表純 CPU 的部署方式。</td></tr>
+  <tr><td>重複次數</td><td>每種設定 3 輪，每輪 30 秒；表中 ± 為 3 輪的標準差。</td></tr>
+</table>
+
+<div class="fig pb">
+<h2>圖表與說明</h2>
+<figure><img src="figures/fig1_power_timeline.png" alt="整段量測的功率曲線"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>整段約 6 分鐘的量測。灰色底為待機，藍、橘、綠色底分別是 V8b、OpenFHE 單執行緒、OpenFHE 4 執行緒的 30 秒持續加密，每種 3 輪。</dd>
+  <dt>怎麼看</dt><dd>線的高度是 KV260 整塊板子從 12 V 吃進去的功率。每一輪開始時功率跳上去、結束時落回待機，代表量到的是加密本身造成的變化。</dd>
+  <dt>重點</dt><dd>同一種設定的 3 輪高度幾乎相同，重複性良好。V8b 約 9.96 W、OpenFHE 4 執行緒約 10.29 W、單執行緒約 9.26 W；三者的功率差距不大，但處理速度差很多（圖 3）。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig2_records_per_joule.png" alt="每焦耳處理筆數"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>每消耗 1 焦耳的整板能量，可以加密多少筆資料。長條為 3 輪平均，白點為每一輪。</dd>
+  <dt>怎麼看</dt><dd>越長越省電。白點幾乎疊在長條末端，代表 3 輪之間差異很小（V8b 標準差 834，約 0.5%）。</dd>
+  <dt>重點</dt><dd>V8b 為 180,152 筆／焦耳，是 OpenFHE 4 執行緒（19,075）的 9.4 倍、單執行緒（5,398）的 33.4 倍。換算成每筆資料：V8b 約 5.6 µJ，OpenFHE 4 執行緒約 52.4 µJ，單執行緒約 185.3 µJ。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig3_throughput.png" alt="每秒處理筆數"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>每秒能加密的資料筆數。</dd>
+  <dt>怎麼看</dt><dd>越長越快。這張圖與圖 2 的形狀幾乎一樣，因為三種設定的功率相近，每焦耳筆數主要由速度決定。</dd>
+  <dt>重點</dt><dd>V8b 每秒 179 萬筆，是 OpenFHE 4 執行緒（19.6 萬筆）的 9.1 倍。OpenFHE 從單執行緒到 4 執行緒加速 3.9 倍，接近線性，代表 CPU 版已經用滿 4 顆核心。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig4_power_breakdown.png" alt="功率拆解"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>加密時的整板功率拆成兩段：灰色是同一狀態下不加密時的待機功率，彩色是加密多出來的功率。</dd>
+  <dt>怎麼看</dt><dd>灰色段遠長於彩色段：板子本身的待機耗電約 8.9 W，加密只多出 0.3 至 1.4 W。</dd>
+  <dt>重點</dt><dd>V8b 加密時多出 0.99 W，OpenFHE 4 執行緒多出 1.37 W。V8b 用較少的額外功率，完成約 9 倍的工作量。由於待機占大部分，整板總值會低估加密本身的效率差距，因此另外計算淨值（圖 5）。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig5_gross_vs_net.png" alt="總值與淨值"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>左邊是整板總值（同圖 2），右邊是扣掉待機功率後的淨值。兩張圖的橫軸刻度不同。</dd>
+  <dt>怎麼看</dt><dd>總值回答「這塊板子實際每焦耳做多少事」；淨值回答「加密這件事本身每焦耳做多少事」。</dd>
+  <dt>重點</dt><dd>兩種算法都是 V8b 最高。淨值下 V8b 約 181 萬筆／焦耳，是 OpenFHE 4 執行緒（14.4 萬）的 12.6 倍。淨值的分母是較小的差值，誤差會被放大，報告以總值為主要結論。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig6_cpu.png" alt="CPU 使用率"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>加密期間 4 顆 ARM 核心的平均使用率（取每輪第 5 至 25 秒）。</dd>
+  <dt>怎麼看</dt><dd>100% 代表 4 顆核心全滿；25% 約等於 1 顆核心全滿。</dd>
+  <dt>重點</dt><dd>V8b 只用約 13% 的 CPU（約半顆核心，負責搬運資料與處理 DMA 中斷），其餘 CPU 可以做其他工作，例如編碼或網路傳輸。OpenFHE 4 執行緒用滿全部核心，仍只有 V8b 約九分之一的速度。</dd>
+</dl>
+</div>
+
+<div class="fig">
+<figure><img src="figures/fig7_probe_vs_pc.png" alt="探針螢幕與電腦分析的一致性"></figure>
+<dl class="read">
+  <dt>圖說</dt><dd>每一輪的每焦耳筆數，由探針螢幕與電腦分析各算一次，圖上的點是兩者的差異百分比。</dd>
+  <dt>怎麼看</dt><dd>探針螢幕用 INA228 晶片內建的能量累積器（連續累積），電腦分析用每 0.1 秒一筆的功率取平均；兩種算法的取樣方式不同。點越靠近 0，兩者越一致。</dd>
+  <dt>重點</dt><dd>9 輪全部在 ±0.5% 內（最大 0.46%），代表兩種算法互相印證，量測流程沒有漏算或重算能量。</dd>
+</dl>
+</div>
+
+<h2>結果總表</h2>
+<table>
+  <tr><th>設定</th><th class="n">每秒筆數</th><th class="n">加密時功率</th><th class="n">待機功率</th><th class="n">每焦耳筆數（總值）</th><th class="n">每焦耳筆數（淨值）</th><th class="n">每 2048 筆能量</th><th class="n">CPU</th></tr>
+  <tr><td><span class="swatch" style="background:var(--blue)"></span>V8b（FPGA）</td><td class="n">1,793,488</td><td class="n">9.955 W</td><td class="n">8.964 W</td><td class="n">180,152 ± 834</td><td class="n">1,808,261</td><td class="n">11.4 mJ</td><td class="n">13%</td></tr>
+  <tr><td><span class="swatch" style="background:var(--aqua)"></span>OpenFHE 4 執行緒</td><td class="n">196,273</td><td class="n">10.289 W</td><td class="n">8.922 W</td><td class="n">19,075 ± 42</td><td class="n">143,552</td><td class="n">107.4 mJ</td><td class="n">100%</td></tr>
+  <tr><td><span class="swatch" style="background:var(--orange)"></span>OpenFHE 單執行緒</td><td class="n">49,986</td><td class="n">9.260 W</td><td class="n">8.922 W</td><td class="n">5,398 ± 16</td><td class="n">147,815</td><td class="n">379.4 mJ</td><td class="n">25%</td></tr>
+</table>
+
+<h2>限制與注意事項</h2>
+<ul>
+  <li><b>探針未校正。</b>絕對數值可能有約 1% 的偏差（主要來自分流電阻公差）；同一次量測內的比較與倍數不受影響。</li>
+  <li><b>本次整板功率比同日稍早的量測高約 1 W。</b>V8b 的每秒筆數兩次幾乎相同（179.3 萬對 178.7 萬），但待機與加密時的功率都高約 1.0 W，因此本次 V8b 的總值（180,152）低於稍早量到的 201,141。推測主要原因是本次接上了乙太網路；不同時段的絕對數值不宜直接比較。</li>
+  <li><b>只量加密。</b>三種設定都不含 ARM 端的正規化與編碼、雲端計分與解密；端到端的每焦耳筆數會比本表低。</li>
+  <li><b>待機狀態不同。</b>V8b 的待機包含已載入的 FPGA 設計；OpenFHE 的待機為 PL 清空。本次兩者的待機功率只差 0.04 W。</li>
+  <li><b>樣本數。</b>每種設定 3 輪；V8b 套件文件建議至少 10 輪才能當作統計結果。</li>
+  <li><b>OpenFHE 的使用方式。</b>4 執行緒版本以 OpenMP 平行加密不同的密文，OpenFHE 內部的平行區段不再巢狀展開；這是本次採用的設定，不代表 OpenFHE 的所有最佳化方式。</li>
+</ul>
+
+<h2>資料與程式位置</h2>
+<table>
+  <tr><th style="width:30%">內容</th><th>位置（桌面 EdgeFHE_能耗探針\ 底下）</th></tr>
+  <tr><td>原始資料</td><td><code>data\v8b_vs_openfhe_20261123_184118\probe.csv</code>（探針每 0.1 秒一筆）、<code>runs.json</code>（每輪板子輸出與時間點）</td></tr>
+  <tr><td>分析結果與圖表</td><td><code>summary.json</code>、<code>figures\*.png</code>、<code>figures\summary_table.csv</code></td></tr>
+  <tr><td>量測與分析工具</td><td><code>kv260\</code>（見 README.txt）</td></tr>
+  <tr><td>板上程式</td><td>V8b：<code>~/edgefhe-v8b-r5/test/board_enc_check sustain 30 8</code>；OpenFHE：<code>~/openfhe_bench/build/openfhe_sustain 30 8 {1|4}</code>（OpenFHE 1.5.1 安裝於 <code>~/.local/openfhe-v1.5.1</code>）</td></tr>
+</table>
+
+</body>
+</html>

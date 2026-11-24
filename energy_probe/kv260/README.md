@@ -34,6 +34,11 @@ python make_report.py <輸出資料夾>
 - 總值 = 筆數 ÷ 這 30 秒的整板能量；淨值 = 筆數 ÷［（加密時功率 − 同一狀態的待機功率）× 秒數］。
 - 探針螢幕以 INA228 的能量累積器另算一次，作為交叉驗證。
 
+## 其他工具
+
+- `stage_demo.py`：上台用的實機展示，一行指令依序量測 V8b、OpenFHE 4 執行緒與單執行緒各一小段時間，探針螢幕顯示每焦耳筆數，電腦顯示即時功率、結果表與圖表。展示前先執行 `python stage_demo.py --check`。按 Ctrl+C 時，程式等目前這一段結束、還原開發板後才停止。
+- `enc_compare.py`：較早的 V8b rev5 與 edgefhe2 每焦耳筆數比較（資料見 [../data/](../data/README.md) 的 `enc_compare_20261123_143305`）。`edgefhe2_sustain.c` 是板上 edgefhe2 應用程式的副本，只加上 `--sustain` 持續加密模式；板上放在 `~/edgefhe_power/`。
+
 ## 已知限制
 
 - 板上需要 sudo 的步驟都在前景執行；背景工作在主控台登出後會失去 sudo 認證。

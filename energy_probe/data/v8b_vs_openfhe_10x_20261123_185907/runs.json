@@ -1,0 +1,1077 @@
+{
+ "events": [
+  {
+   "t": 1795431570.9709294,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/02_load_pl.sh 2>&1 | tail -n 4",
+   "rc": 0,
+   "ok": true,
+   "tail": "28.713963] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\n[ 3531.290122] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_afi\r\n[ 3532.417597] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_dma\r\n[ 3532.428081] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/edgefhe_v8b_proxy\r\na0010000.edgefhe-v8b-proxy\r\n 61:      39415          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:      39415          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_R5_PL_LOADED_AFI_PROVIDER_APPLIED boot_id=3ea11c22-1341-4eb7-a240-76c4e8756b64 log=logs/20261123T105924Z_load"
+  },
+  {
+   "t": 1795431572.5951936,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/04_insmod.sh 2>&1 | tail -n 4",
+   "rc": 0,
+   "ok": true,
+   "tail": "crw------- 1 root root 10, 120 Nov 23 10:59 /dev/edgefhe_v8b_dma\r\n 61:      39415          0          0          0     GICv2 121 Level     xilinx-dma-controller\r\n 62:      39415          0          0          0     GICv2 136 Level     xilinx-dma-controller\r\nV8B_PROXY_READY boot_id=3ea11c22-1341-4eb7-a240-76c4e8756b64"
+  },
+  {
+   "t": 1795431921.6783144,
+   "cmd": "cd ~/edgefhe-v8b-r5 && bash scripts/99_unload.sh 2>&1 | tail -n 3",
+   "rc": 0,
+   "ok": true,
+   "tail": "edgefhe-v8b-r5            XRT_FLAT                  edgefhe-v8b-r5            XRT_FLAT               (0+0)                  -1\r\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  -1\r\nV8B_R5_UNLOADED (to restore the default app: sudo xmutil loadapp k26-starter-kits)"
+  }
+ ],
+ "idle": [
+  {
+   "version": "V8b",
+   "start": 1795431572.7985036,
+   "end": 1795431602.799237,
+   "cpu": 0.0013260401127134225
+  },
+  {
+   "version": "OpenFHE",
+   "start": 1795431921.8829362,
+   "end": 1795431951.883288,
+   "cpu": 0.001243265644426006
+  }
+ ],
+ "runs": [
+  {
+   "version": "V8b",
+   "rep": 1,
+   "lines": [
+    "[1] 10068",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=1 driver_elapsed=167 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=80.4 check_in=148.5 sync_device=63.9 dma_hls=1075.3 sync_cpu=63.3 check_out=298.8 copy_out=217.3 wipe=272.6  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.000 k=8 frames=13273 ciphertexts=106184 ciphertexts_per_s=3539.5 records_per_s_4_features=1812201 mean_ioctl_ms=2.2602 mean_driver_ms=1.4623 first_last_exact=1 device_calls=13275",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431603.4336178,
+   "t_end": 1795431633.486984,
+   "parsed": {
+    "seconds": "30.000",
+    "k": "8",
+    "frames": "13273",
+    "ciphertexts": "106184",
+    "ciphertexts_per_s": "3539.5",
+    "records_per_s_4_features": "1812201",
+    "mean_ioctl_ms": "2.2602",
+    "mean_driver_ms": "1.4623",
+    "first_last_exact": "1",
+    "device_calls": "13275"
+   },
+   "passed": true,
+   "records": 54366208,
+   "rc": 0,
+   "cpu": 0.1317576062358562
+  },
+  {
+   "version": "V8b",
+   "rep": 2,
+   "lines": [
+    "[1] 10104",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=2 driver_elapsed=172 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=99.8 check_in=147.4 sync_device=64.1 dma_hls=1126.8 sync_cpu=64.8 check_out=302.8 copy_out=222.6 wipe=272.3  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=13227 ciphertexts=105816 ciphertexts_per_s=3526.9 records_per_s_4_features=1805794 mean_ioctl_ms=2.2683 mean_driver_ms=1.4657 first_last_exact=1 device_calls=13229",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431635.1094956,
+   "t_end": 1795431665.2048132,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "13227",
+    "ciphertexts": "105816",
+    "ciphertexts_per_s": "3526.9",
+    "records_per_s_4_features": "1805794",
+    "mean_ioctl_ms": "2.2683",
+    "mean_driver_ms": "1.4657",
+    "first_last_exact": "1",
+    "device_calls": "13229"
+   },
+   "passed": true,
+   "records": 54177792,
+   "rc": 0,
+   "cpu": 0.13199245757385292
+  },
+  {
+   "version": "V8b",
+   "rep": 3,
+   "lines": [
+    "[1] 10140",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=3 driver_elapsed=168 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=85.0 check_in=149.0 sync_device=63.9 dma_hls=1078.4 sync_cpu=62.9 check_out=300.8 copy_out=183.7 wipe=273.7  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=13103 ciphertexts=104824 ciphertexts_per_s=3494.0 records_per_s_4_features=1788907 mean_ioctl_ms=2.2897 mean_driver_ms=1.4704 first_last_exact=1 device_calls=13105",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431666.82252,
+   "t_end": 1795431696.8999863,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "13103",
+    "ciphertexts": "104824",
+    "ciphertexts_per_s": "3494.0",
+    "records_per_s_4_features": "1788907",
+    "mean_ioctl_ms": "2.2897",
+    "mean_driver_ms": "1.4704",
+    "first_last_exact": "1",
+    "device_calls": "13105"
+   },
+   "passed": true,
+   "records": 53669888,
+   "rc": 0,
+   "cpu": 0.13202565069784988
+  },
+  {
+   "version": "V8b",
+   "rep": 4,
+   "lines": [
+    "[1] 10181",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=4 driver_elapsed=171 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=84.5 check_in=147.2 sync_device=63.9 dma_hls=1077.4 sync_cpu=63.1 check_out=300.7 copy_out=185.6 wipe=274.0  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.000 k=8 frames=13083 ciphertexts=104664 ciphertexts_per_s=3488.8 records_per_s_4_features=1786261 mean_ioctl_ms=2.2931 mean_driver_ms=1.4704 first_last_exact=1 device_calls=13085",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431698.5234962,
+   "t_end": 1795431728.5776725,
+   "parsed": {
+    "seconds": "30.000",
+    "k": "8",
+    "frames": "13083",
+    "ciphertexts": "104664",
+    "ciphertexts_per_s": "3488.8",
+    "records_per_s_4_features": "1786261",
+    "mean_ioctl_ms": "2.2931",
+    "mean_driver_ms": "1.4704",
+    "first_last_exact": "1",
+    "device_calls": "13085"
+   },
+   "passed": true,
+   "records": 53587968,
+   "rc": 0,
+   "cpu": 0.13252860555765122
+  },
+  {
+   "version": "V8b",
+   "rep": 5,
+   "lines": [
+    "[1] 10217",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=5 driver_elapsed=166 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=88.9 check_in=147.3 sync_device=95.9 dma_hls=1122.5 sync_cpu=63.5 check_out=300.9 copy_out=200.7 wipe=273.2  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=13068 ciphertexts=104544 ciphertexts_per_s=3484.5 records_per_s_4_features=1784081 mean_ioctl_ms=2.2959 mean_driver_ms=1.4791 first_last_exact=1 device_calls=13070",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431730.217377,
+   "t_end": 1795431760.2488012,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "13068",
+    "ciphertexts": "104544",
+    "ciphertexts_per_s": "3484.5",
+    "records_per_s_4_features": "1784081",
+    "mean_ioctl_ms": "2.2959",
+    "mean_driver_ms": "1.4791",
+    "first_last_exact": "1",
+    "device_calls": "13070"
+   },
+   "passed": true,
+   "records": 53526528,
+   "rc": 0,
+   "cpu": 0.1336260978670013
+  },
+  {
+   "version": "V8b",
+   "rep": 6,
+   "lines": [
+    "[1] 10253",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=6 driver_elapsed=167 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=85.4 check_in=147.6 sync_device=63.8 dma_hls=1126.0 sync_cpu=63.0 check_out=300.1 copy_out=219.9 wipe=273.3  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.001 k=8 frames=13078 ciphertexts=104624 ciphertexts_per_s=3487.3 records_per_s_4_features=1785500 mean_ioctl_ms=2.2940 mean_driver_ms=1.4682 first_last_exact=1 device_calls=13080",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431762.070542,
+   "t_end": 1795431792.1786363,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "frames": "13078",
+    "ciphertexts": "104624",
+    "ciphertexts_per_s": "3487.3",
+    "records_per_s_4_features": "1785500",
+    "mean_ioctl_ms": "2.2940",
+    "mean_driver_ms": "1.4682",
+    "first_last_exact": "1",
+    "device_calls": "13080"
+   },
+   "passed": true,
+   "records": 53567488,
+   "rc": 0,
+   "cpu": 0.13408662900188328
+  },
+  {
+   "version": "V8b",
+   "rep": 7,
+   "lines": [
+    "[1] 10296",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=7 driver_elapsed=183 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=86.2 check_in=146.9 sync_device=64.4 dma_hls=1075.5 sync_cpu=63.3 check_out=300.4 copy_out=188.4 wipe=274.0  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.000 k=8 frames=13143 ciphertexts=105144 ciphertexts_per_s=3504.8 records_per_s_4_features=1794438 mean_ioctl_ms=2.2826 mean_driver_ms=1.4737 first_last_exact=1 device_calls=13145",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431793.7993603,
+   "t_end": 1795431823.9172528,
+   "parsed": {
+    "seconds": "30.000",
+    "k": "8",
+    "frames": "13143",
+    "ciphertexts": "105144",
+    "ciphertexts_per_s": "3504.8",
+    "records_per_s_4_features": "1794438",
+    "mean_ioctl_ms": "2.2826",
+    "mean_driver_ms": "1.4737",
+    "first_last_exact": "1",
+    "device_calls": "13145"
+   },
+   "passed": true,
+   "records": 53833728,
+   "rc": 0,
+   "cpu": 0.13144654088050312
+  },
+  {
+   "version": "V8b",
+   "rep": 8,
+   "lines": [
+    "[1] 10332",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=8 driver_elapsed=133 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=84.0 check_in=147.2 sync_device=64.2 dma_hls=1076.8 sync_cpu=63.0 check_out=300.0 copy_out=179.7 wipe=273.7  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.000 k=8 frames=13013 ciphertexts=104104 ciphertexts_per_s=3470.1 records_per_s_4_features=1776692 mean_ioctl_ms=2.3054 mean_driver_ms=1.4727 first_last_exact=1 device_calls=13015",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431825.538506,
+   "t_end": 1795431855.615772,
+   "parsed": {
+    "seconds": "30.000",
+    "k": "8",
+    "frames": "13013",
+    "ciphertexts": "104104",
+    "ciphertexts_per_s": "3470.1",
+    "records_per_s_4_features": "1776692",
+    "mean_ioctl_ms": "2.3054",
+    "mean_driver_ms": "1.4727",
+    "first_last_exact": "1",
+    "device_calls": "13015"
+   },
+   "passed": true,
+   "records": 53301248,
+   "rc": 0,
+   "cpu": 0.13204934541792546
+  },
+  {
+   "version": "V8b",
+   "rep": 9,
+   "lines": [
+    "[1] 10370",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=9 driver_elapsed=169 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=81.4 check_in=147.0 sync_device=64.0 dma_hls=1075.4 sync_cpu=62.8 check_out=300.0 copy_out=193.3 wipe=307.3  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.002 k=8 frames=13120 ciphertexts=104960 ciphertexts_per_s=3498.5 records_per_s_4_features=1791220 mean_ioctl_ms=2.2867 mean_driver_ms=1.4626 first_last_exact=1 device_calls=13122",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431857.2483037,
+   "t_end": 1795431887.3499238,
+   "parsed": {
+    "seconds": "30.002",
+    "k": "8",
+    "frames": "13120",
+    "ciphertexts": "104960",
+    "ciphertexts_per_s": "3498.5",
+    "records_per_s_4_features": "1791220",
+    "mean_ioctl_ms": "2.2867",
+    "mean_driver_ms": "1.4626",
+    "first_last_exact": "1",
+    "device_calls": "13122"
+   },
+   "passed": true,
+   "records": 53739520,
+   "rc": 0,
+   "cpu": 0.13190685966016358
+  },
+  {
+   "version": "V8b",
+   "rep": 10,
+   "lines": [
+    "[1] 10411",
+    "EdgeFHE V8b rev5 board check: N=4096, q={998244353,1004535809,469762049}, scale 2^30, repetitions=1",
+    "CAPS abi=8 flags=0x3 command_mask=0x3c0 n=4096 limbs=3 lanes_per_limb=4 max_k=8 max_tx=262192 max_rx=786464 pl_hz=199999998 poisoned=0",
+    "LOAD ok: lease generation=10 driver_elapsed=175 us",
+    "SUSTAIN_BEGIN k=8 seconds=30 (first frame exact)",
+    "driver phases of the last call (us): copy_in=85.6 check_in=309.3 sync_device=64.5 dma_hls=1123.1 sync_cpu=63.1 check_out=300.0 copy_out=193.1 wipe=273.5  (k=8 tx=262192 B rx=786464 B)",
+    "V8B_BOARD_SUSTAIN_PASS seconds=30.000 k=8 frames=13120 ciphertexts=104960 ciphertexts_per_s=3498.7 records_per_s_4_features=1791313 mean_ioctl_ms=2.2866 mean_driver_ms=1.4689 first_last_exact=1 device_calls=13122",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "V8b",
+   "t_begin": 1795431888.9698124,
+   "t_end": 1795431919.0222805,
+   "parsed": {
+    "seconds": "30.000",
+    "k": "8",
+    "frames": "13120",
+    "ciphertexts": "104960",
+    "ciphertexts_per_s": "3498.7",
+    "records_per_s_4_features": "1791313",
+    "mean_ioctl_ms": "2.2866",
+    "mean_driver_ms": "1.4689",
+    "first_last_exact": "1",
+    "device_calls": "13122"
+   },
+   "passed": true,
+   "records": 53739520,
+   "rc": 0,
+   "cpu": 0.1331070889894419
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 1,
+   "lines": [
+    "[1] 10505",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.408e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.015 k=8 threads=1 frames=366 ciphertexts=2928 ciphertexts_per_s=97.6 records_per_s_4_features=49947 mean_ct_ms=10.2509 last_decrypt_error=1.109e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )  (wd: ~/edgefhe-v8b-r5)",
+    "(wd now: ~/openfhe_bench)"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795431952.6979558,
+   "t_end": 1795431982.7455924,
+   "parsed": {
+    "seconds": "30.015",
+    "k": "8",
+    "threads": "1",
+    "frames": "366",
+    "ciphertexts": "2928",
+    "ciphertexts_per_s": "97.6",
+    "records_per_s_4_features": "49947",
+    "mean_ct_ms": "10.2509",
+    "last_decrypt_error": "1.109"
+   },
+   "passed": true,
+   "records": 1499136,
+   "rc": 0,
+   "cpu": 0.2536865783554112
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 2,
+   "lines": [
+    "[1] 10543",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.434e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.041 k=8 threads=1 frames=367 ciphertexts=2936 ciphertexts_per_s=97.7 records_per_s_4_features=50040 mean_ct_ms=10.2318 last_decrypt_error=1.025e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795431984.5731606,
+   "t_end": 1795432014.6644213,
+   "parsed": {
+    "seconds": "30.041",
+    "k": "8",
+    "threads": "1",
+    "frames": "367",
+    "ciphertexts": "2936",
+    "ciphertexts_per_s": "97.7",
+    "records_per_s_4_features": "50040",
+    "mean_ct_ms": "10.2318",
+    "last_decrypt_error": "1.025"
+   },
+   "passed": true,
+   "records": 1503232,
+   "rc": 0,
+   "cpu": 0.2527211309896159
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 3,
+   "lines": [
+    "[1] 10577",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.580e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.064 k=8 threads=1 frames=367 ciphertexts=2936 ciphertexts_per_s=97.7 records_per_s_4_features=50001 mean_ct_ms=10.2398 last_decrypt_error=1.163e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432016.4930978,
+   "t_end": 1795432046.722789,
+   "parsed": {
+    "seconds": "30.064",
+    "k": "8",
+    "threads": "1",
+    "frames": "367",
+    "ciphertexts": "2936",
+    "ciphertexts_per_s": "97.7",
+    "records_per_s_4_features": "50001",
+    "mean_ct_ms": "10.2398",
+    "last_decrypt_error": "1.163"
+   },
+   "passed": true,
+   "records": 1503232,
+   "rc": 0,
+   "cpu": 0.25328166020752596
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 4,
+   "lines": [
+    "[1] 10611",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.397e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.034 k=8 threads=1 frames=366 ciphertexts=2928 ciphertexts_per_s=97.5 records_per_s_4_features=49915 mean_ct_ms=10.2574 last_decrypt_error=1.242e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432048.5410197,
+   "t_end": 1795432078.6713889,
+   "parsed": {
+    "seconds": "30.034",
+    "k": "8",
+    "threads": "1",
+    "frames": "366",
+    "ciphertexts": "2928",
+    "ciphertexts_per_s": "97.5",
+    "records_per_s_4_features": "49915",
+    "mean_ct_ms": "10.2574",
+    "last_decrypt_error": "1.242"
+   },
+   "passed": true,
+   "records": 1499136,
+   "rc": 0,
+   "cpu": 0.25247462723969427
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 5,
+   "lines": [
+    "[1] 10651",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.410e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.007 k=8 threads=1 frames=365 ciphertexts=2920 ciphertexts_per_s=97.3 records_per_s_4_features=49822 mean_ct_ms=10.2765 last_decrypt_error=1.133e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432080.499264,
+   "t_end": 1795432110.7136745,
+   "parsed": {
+    "seconds": "30.007",
+    "k": "8",
+    "threads": "1",
+    "frames": "365",
+    "ciphertexts": "2920",
+    "ciphertexts_per_s": "97.3",
+    "records_per_s_4_features": "49822",
+    "mean_ct_ms": "10.2765",
+    "last_decrypt_error": "1.133"
+   },
+   "passed": true,
+   "records": 1495040,
+   "rc": 0,
+   "cpu": 0.25266324100764503
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 6,
+   "lines": [
+    "[1] 10685",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.541e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.060 k=8 threads=1 frames=367 ciphertexts=2936 ciphertexts_per_s=97.7 records_per_s_4_features=50008 mean_ct_ms=10.2383 last_decrypt_error=1.338e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432112.5364926,
+   "t_end": 1795432142.7969856,
+   "parsed": {
+    "seconds": "30.060",
+    "k": "8",
+    "threads": "1",
+    "frames": "367",
+    "ciphertexts": "2936",
+    "ciphertexts_per_s": "97.7",
+    "records_per_s_4_features": "50008",
+    "mean_ct_ms": "10.2383",
+    "last_decrypt_error": "1.338"
+   },
+   "passed": true,
+   "records": 1503232,
+   "rc": 0,
+   "cpu": 0.25240775484677924
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 7,
+   "lines": [
+    "[1] 10723",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.433e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.001 k=8 threads=1 frames=366 ciphertexts=2928 ciphertexts_per_s=97.6 records_per_s_4_features=49969 mean_ct_ms=10.2463 last_decrypt_error=9.329e-05",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432144.6296256,
+   "t_end": 1795432174.7030349,
+   "parsed": {
+    "seconds": "30.001",
+    "k": "8",
+    "threads": "1",
+    "frames": "366",
+    "ciphertexts": "2928",
+    "ciphertexts_per_s": "97.6",
+    "records_per_s_4_features": "49969",
+    "mean_ct_ms": "10.2463",
+    "last_decrypt_error": "9.329"
+   },
+   "passed": true,
+   "records": 1499136,
+   "rc": 0,
+   "cpu": 0.2529698636988871
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 8,
+   "lines": [
+    "[1] 10757",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.296e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.051 k=8 threads=1 frames=367 ciphertexts=2936 ciphertexts_per_s=97.7 records_per_s_4_features=50023 mean_ct_ms=10.2353 last_decrypt_error=1.140e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432176.3417416,
+   "t_end": 1795432206.4022143,
+   "parsed": {
+    "seconds": "30.051",
+    "k": "8",
+    "threads": "1",
+    "frames": "367",
+    "ciphertexts": "2936",
+    "ciphertexts_per_s": "97.7",
+    "records_per_s_4_features": "50023",
+    "mean_ct_ms": "10.2353",
+    "last_decrypt_error": "1.140"
+   },
+   "passed": true,
+   "records": 1503232,
+   "rc": 0,
+   "cpu": 0.2530316289536192
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 9,
+   "lines": [
+    "[1] 10791",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.406e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.079 k=8 threads=1 frames=366 ciphertexts=2928 ciphertexts_per_s=97.3 records_per_s_4_features=49841 mean_ct_ms=10.2727 last_decrypt_error=1.077e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432208.442472,
+   "t_end": 1795432238.691782,
+   "parsed": {
+    "seconds": "30.079",
+    "k": "8",
+    "threads": "1",
+    "frames": "366",
+    "ciphertexts": "2928",
+    "ciphertexts_per_s": "97.3",
+    "records_per_s_4_features": "49841",
+    "mean_ct_ms": "10.2727",
+    "last_decrypt_error": "1.077"
+   },
+   "passed": true,
+   "records": 1499136,
+   "rc": 0,
+   "cpu": 0.2524442216094259
+  },
+  {
+   "version": "OpenFHE1",
+   "rep": 10,
+   "lines": [
+    "[1] 10830",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=1",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=1 (first frame decrypt error 1.253e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.076 k=8 threads=1 frames=367 ciphertexts=2936 ciphertexts_per_s=97.6 records_per_s_4_features=49981 mean_ct_ms=10.2438 last_decrypt_error=1.223e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432240.5267434,
+   "t_end": 1795432270.7805243,
+   "parsed": {
+    "seconds": "30.076",
+    "k": "8",
+    "threads": "1",
+    "frames": "367",
+    "ciphertexts": "2936",
+    "ciphertexts_per_s": "97.6",
+    "records_per_s_4_features": "49981",
+    "mean_ct_ms": "10.2438",
+    "last_decrypt_error": "1.223"
+   },
+   "passed": true,
+   "records": 1503232,
+   "rc": 0,
+   "cpu": 0.2527513756878439
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 1,
+   "lines": [
+    "[1] 10865",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.578e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.072 k=8 threads=4 frames=1436 ciphertexts=11488 ciphertexts_per_s=382.0 records_per_s_4_features=195595 mean_ct_ms=10.4706 last_decrypt_error=1.178e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432272.600022,
+   "t_end": 1795432302.6546195,
+   "parsed": {
+    "seconds": "30.072",
+    "k": "8",
+    "threads": "4",
+    "frames": "1436",
+    "ciphertexts": "11488",
+    "ciphertexts_per_s": "382.0",
+    "records_per_s_4_features": "195595",
+    "mean_ct_ms": "10.4706",
+    "last_decrypt_error": "1.178"
+   },
+   "passed": true,
+   "records": 5881856,
+   "rc": 0,
+   "cpu": 0.9993749218652331
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 2,
+   "lines": [
+    "[1] 10912",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.498e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.078 k=8 threads=4 frames=1432 ciphertexts=11456 ciphertexts_per_s=380.9 records_per_s_4_features=195011 mean_ct_ms=10.5020 last_decrypt_error=1.273e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432304.4853094,
+   "t_end": 1795432334.512348,
+   "parsed": {
+    "seconds": "30.078",
+    "k": "8",
+    "threads": "4",
+    "frames": "1432",
+    "ciphertexts": "11456",
+    "ciphertexts_per_s": "380.9",
+    "records_per_s_4_features": "195011",
+    "mean_ct_ms": "10.5020",
+    "last_decrypt_error": "1.273"
+   },
+   "passed": true,
+   "records": 5865472,
+   "rc": 0,
+   "cpu": 0.9996251874062968
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 3,
+   "lines": [
+    "[1] 10962",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.502e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.082 k=8 threads=4 frames=1439 ciphertexts=11512 ciphertexts_per_s=382.7 records_per_s_4_features=195938 mean_ct_ms=10.4523 last_decrypt_error=1.128e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432336.3346844,
+   "t_end": 1795432366.45448,
+   "parsed": {
+    "seconds": "30.082",
+    "k": "8",
+    "threads": "4",
+    "frames": "1439",
+    "ciphertexts": "11512",
+    "ciphertexts_per_s": "382.7",
+    "records_per_s_4_features": "195938",
+    "mean_ct_ms": "10.4523",
+    "last_decrypt_error": "1.128"
+   },
+   "passed": true,
+   "records": 5894144,
+   "rc": 0,
+   "cpu": 0.9993749218652331
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 4,
+   "lines": [
+    "[1] 11008",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.291e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.071 k=8 threads=4 frames=1434 ciphertexts=11472 ciphertexts_per_s=381.5 records_per_s_4_features=195328 mean_ct_ms=10.4849 last_decrypt_error=1.212e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432368.2764084,
+   "t_end": 1795432398.356129,
+   "parsed": {
+    "seconds": "30.071",
+    "k": "8",
+    "threads": "4",
+    "frames": "1434",
+    "ciphertexts": "11472",
+    "ciphertexts_per_s": "381.5",
+    "records_per_s_4_features": "195328",
+    "mean_ct_ms": "10.4849",
+    "last_decrypt_error": "1.212"
+   },
+   "passed": true,
+   "records": 5873664,
+   "rc": 0,
+   "cpu": 0.9994998124296611
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 5,
+   "lines": [
+    "[1] 11059",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.649e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.078 k=8 threads=4 frames=1438 ciphertexts=11504 ciphertexts_per_s=382.5 records_per_s_4_features=195829 mean_ct_ms=10.4581 last_decrypt_error=1.240e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432400.1892314,
+   "t_end": 1795432430.2259727,
+   "parsed": {
+    "seconds": "30.078",
+    "k": "8",
+    "threads": "4",
+    "frames": "1438",
+    "ciphertexts": "11504",
+    "ciphertexts_per_s": "382.5",
+    "records_per_s_4_features": "195829",
+    "mean_ct_ms": "10.4581",
+    "last_decrypt_error": "1.240"
+   },
+   "passed": true,
+   "records": 5890048,
+   "rc": 0,
+   "cpu": 0.9992502811445708
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 6,
+   "lines": [
+    "[1] 11105",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.303e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.073 k=8 threads=4 frames=1442 ciphertexts=11536 ciphertexts_per_s=383.6 records_per_s_4_features=196403 mean_ct_ms=10.4275 last_decrypt_error=9.977e-05",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432432.060564,
+   "t_end": 1795432462.126855,
+   "parsed": {
+    "seconds": "30.073",
+    "k": "8",
+    "threads": "4",
+    "frames": "1442",
+    "ciphertexts": "11536",
+    "ciphertexts_per_s": "383.6",
+    "records_per_s_4_features": "196403",
+    "mean_ct_ms": "10.4275",
+    "last_decrypt_error": "9.977"
+   },
+   "passed": true,
+   "records": 5906432,
+   "rc": 0,
+   "cpu": 0.9994996873045654
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 7,
+   "lines": [
+    "[1] 11151",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.329e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.075 k=8 threads=4 frames=1442 ciphertexts=11536 ciphertexts_per_s=383.6 records_per_s_4_features=196388 mean_ct_ms=10.4283 last_decrypt_error=1.424e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432463.9586732,
+   "t_end": 1795432494.068483,
+   "parsed": {
+    "seconds": "30.075",
+    "k": "8",
+    "threads": "4",
+    "frames": "1442",
+    "ciphertexts": "11536",
+    "ciphertexts_per_s": "383.6",
+    "records_per_s_4_features": "196388",
+    "mean_ct_ms": "10.4283",
+    "last_decrypt_error": "1.424"
+   },
+   "passed": true,
+   "records": 5906432,
+   "rc": 0,
+   "cpu": 0.9992500937382827
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 8,
+   "lines": [
+    "[1] 11202",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.497e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.069 k=8 threads=4 frames=1435 ciphertexts=11480 ciphertexts_per_s=381.8 records_per_s_4_features=195474 mean_ct_ms=10.4771 last_decrypt_error=1.029e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432495.8918917,
+   "t_end": 1795432525.951909,
+   "parsed": {
+    "seconds": "30.069",
+    "k": "8",
+    "threads": "4",
+    "frames": "1435",
+    "ciphertexts": "11480",
+    "ciphertexts_per_s": "381.8",
+    "records_per_s_4_features": "195474",
+    "mean_ct_ms": "10.4771",
+    "last_decrypt_error": "1.029"
+   },
+   "passed": true,
+   "records": 5877760,
+   "rc": 0,
+   "cpu": 0.9993746091307066
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 9,
+   "lines": [
+    "[1] 11249",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.358e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.080 k=8 threads=4 frames=1436 ciphertexts=11488 ciphertexts_per_s=381.9 records_per_s_4_features=195539 mean_ct_ms=10.4736 last_decrypt_error=1.222e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432527.6039398,
+   "t_end": 1795432557.6630602,
+   "parsed": {
+    "seconds": "30.080",
+    "k": "8",
+    "threads": "4",
+    "frames": "1436",
+    "ciphertexts": "11488",
+    "ciphertexts_per_s": "381.9",
+    "records_per_s_4_features": "195539",
+    "mean_ct_ms": "10.4736",
+    "last_decrypt_error": "1.222"
+   },
+   "passed": true,
+   "records": 5881856,
+   "rc": 0,
+   "cpu": 0.9993745308981736
+  },
+  {
+   "version": "OpenFHE4",
+   "rep": 10,
+   "lines": [
+    "[1] 11295",
+    "OpenFHE 1.5.1 CKKS N=4096 slots=2048 towers=3 q=1073692673 536813569 536903681 omp_max_threads=4",
+    "SUSTAIN_BEGIN k=8 seconds=30 threads=4 (first frame decrypt error 1.361e-04)",
+    "OPENFHE_SUSTAIN_PASS seconds=30.071 k=8 threads=4 frames=1436 ciphertexts=11488 ciphertexts_per_s=382.0 records_per_s_4_features=195601 mean_ct_ms=10.4703 last_decrypt_error=1.093e-04",
+    "[1]+  Done                    ( sleep 5; head -1 /proc/stat > /tmp/cpu_a; sleep 20; head -1 /proc/stat > /tmp/cpu_b )"
+   ],
+   "baseline": "OpenFHE",
+   "t_begin": 1795432559.4905274,
+   "t_end": 1795432589.588718,
+   "parsed": {
+    "seconds": "30.071",
+    "k": "8",
+    "threads": "4",
+    "frames": "1436",
+    "ciphertexts": "11488",
+    "ciphertexts_per_s": "382.0",
+    "records_per_s_4_features": "195601",
+    "mean_ct_ms": "10.4703",
+    "last_decrypt_error": "1.093"
+   },
+   "passed": true,
+   "records": 5881856,
+   "rc": 0,
+   "cpu": 0.9993746091307066
+  }
+ ],
+ "secs": 30,
+ "reps": 10,
+ "restore": "[ 4555.330495] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name\r\n[ 4555.340646] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets\r\nk26-starter-kits: loaded to slot 0\r\n                k26-starter-kits            XRT_FLAT                k26-starter-kits            XRT_FLAT               (0+0)                  0,",
+ "esp_results": [
+  {
+   "t": 1795431633.49705,
+   "line": "# result V8b records=54366208 E_J=299.080 rec_per_J=181778.1"
+  },
+  {
+   "t": 1795431665.2144742,
+   "line": "# result V8b records=54177792 E_J=299.224 rec_per_J=181060.8"
+  },
+  {
+   "t": 1795431696.9091675,
+   "line": "# result V8b records=53669888 E_J=298.642 rec_per_J=179713.3"
+  },
+  {
+   "t": 1795431728.587404,
+   "line": "# result V8b records=53587968 E_J=298.055 rec_per_J=179792.1"
+  },
+  {
+   "t": 1795431760.2870657,
+   "line": "# result V8b records=53526528 E_J=298.024 rec_per_J=179604.7"
+  },
+  {
+   "t": 1795431792.1882772,
+   "line": "# result V8b records=53567488 E_J=298.505 rec_per_J=179452.9"
+  },
+  {
+   "t": 1795431823.927024,
+   "line": "# result V8b records=53833728 E_J=298.719 rec_per_J=180215.0"
+  },
+  {
+   "t": 1795431855.6253724,
+   "line": "# result V8b records=53301248 E_J=298.243 rec_per_J=178717.2"
+  },
+  {
+   "t": 1795431887.359761,
+   "line": "# result V8b records=53739520 E_J=298.436 rec_per_J=180070.4"
+  },
+  {
+   "t": 1795431919.032492,
+   "line": "# result V8b records=53739520 E_J=298.106 rec_per_J=180270.1"
+  },
+  {
+   "t": 1795431982.755465,
+   "line": "# result OpenFHE1 records=1499136 E_J=276.744 rec_per_J=5417.1"
+  },
+  {
+   "t": 1795432014.6746767,
+   "line": "# result OpenFHE1 records=1503232 E_J=276.796 rec_per_J=5430.8"
+  },
+  {
+   "t": 1795432046.7327077,
+   "line": "# result OpenFHE1 records=1503232 E_J=278.070 rec_per_J=5405.9"
+  },
+  {
+   "t": 1795432078.6813395,
+   "line": "# result OpenFHE1 records=1499136 E_J=277.306 rec_per_J=5406.1"
+  },
+  {
+   "t": 1795432110.7234273,
+   "line": "# result OpenFHE1 records=1495040 E_J=278.154 rec_per_J=5374.9"
+  },
+  {
+   "t": 1795432142.827124,
+   "line": "# result OpenFHE1 records=1503232 E_J=278.660 rec_per_J=5394.5"
+  },
+  {
+   "t": 1795432174.7138953,
+   "line": "# result OpenFHE1 records=1499136 E_J=276.909 rec_per_J=5413.8"
+  },
+  {
+   "t": 1795432206.4119325,
+   "line": "# result OpenFHE1 records=1503232 E_J=276.794 rec_per_J=5430.9"
+  },
+  {
+   "t": 1795432238.701992,
+   "line": "# result OpenFHE1 records=1499136 E_J=280.424 rec_per_J=5346.0"
+  },
+  {
+   "t": 1795432270.7904053,
+   "line": "# result OpenFHE1 records=1503232 E_J=279.732 rec_per_J=5373.8"
+  },
+  {
+   "t": 1795432302.6647685,
+   "line": "# result OpenFHE4 records=5881856 E_J=310.397 rec_per_J=18949.5"
+  },
+  {
+   "t": 1795432334.522472,
+   "line": "# result OpenFHE4 records=5865472 E_J=310.293 rec_per_J=18903.0"
+  },
+  {
+   "t": 1795432366.4646184,
+   "line": "# result OpenFHE4 records=5894144 E_J=311.255 rec_per_J=18936.7"
+  },
+  {
+   "t": 1795432398.3659759,
+   "line": "# result OpenFHE4 records=5873664 E_J=310.888 rec_per_J=18893.2"
+  },
+  {
+   "t": 1795432430.2357616,
+   "line": "# result OpenFHE4 records=5890048 E_J=310.401 rec_per_J=18975.6"
+  },
+  {
+   "t": 1795432462.1366556,
+   "line": "# result OpenFHE4 records=5906432 E_J=310.774 rec_per_J=19005.5"
+  },
+  {
+   "t": 1795432494.0784307,
+   "line": "# result OpenFHE4 records=5906432 E_J=311.066 rec_per_J=18987.7"
+  },
+  {
+   "t": 1795432525.962713,
+   "line": "# result OpenFHE4 records=5877760 E_J=310.811 rec_per_J=18911.0"
+  },
+  {
+   "t": 1795432557.6735244,
+   "line": "# result OpenFHE4 records=5881856 E_J=310.678 rec_per_J=18932.3"
+  },
+  {
+   "t": 1795432589.5996754,
+   "line": "# result OpenFHE4 records=5881856 E_J=311.091 rec_per_J=18907.2"
+  }
+ ]
+}
