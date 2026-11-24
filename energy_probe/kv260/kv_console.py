@@ -29,15 +29,18 @@ class KV:
                 raise RuntimeError("login failed: " + buf[-200:])
         elif not m:
             raise RuntimeError("no prompt: " + buf[-200:])
-        # quiet the console: no colour, wide terminal, no kernel messages concern
-        self.run("export TERM=dumb; stty cols 400 -echo", 5)
+        # quiet the console: no colour, no pagers, wide terminal; unset HISTFILE so that commands carrying the sudo
+        # password (echo ... | sudo -S) are never written to ~/.bash_history on the board
+        self.run("unset HISTFILE; export TERM=dumb PAGER=cat GIT_PAGER=cat SYSTEMD_PAGER=cat; stty cols 400 -echo", 5)
 
-    def run(self, cmd, timeout=30):
+    def run(self, cmd, timeout=30, secret=None):
+        """Run one shell command; secret (e.g. the sudo password inside cmd) is masked in any error message."""
         self.s.reset_input_buffer()
         self.s.write((cmd + "; echo __DONE_$?__\r\n").encode())
         buf, m = self.read_until(r"__DONE_(\d+)__", timeout)
         if not m:
-            raise RuntimeError(f"timeout running {cmd!r}: {buf[-300:]}")
+            hide = (lambda s: s.replace(secret, "***")) if secret else (lambda s: s)
+            raise RuntimeError(f"timeout running {hide(cmd)!r}: {hide(buf[-300:])}")
         out = buf[:m.start()]
         out = out.replace(cmd + "; echo __DONE_$?__", "")
         return int(m.group(1)), out.strip("\r\n ")
@@ -61,8 +64,9 @@ def put_file(kv, local, remote, chunk=900):
     return ok
 
 
-def stream(kv, cmd, timeout, on_line):
-    """Run a command and call on_line(text, host_time) for every output line as it arrives."""
+def stream(kv, cmd, timeout, on_line, secret=None):
+    """Run a command and call on_line(text, host_time) for every output line as it arrives.
+    secret, if given, is masked in the timeout message."""
     import re, time
     kv.s.reset_input_buffer()
     kv.s.write((cmd + "; echo __DONE_$?__\r\n").encode())
@@ -77,4 +81,5 @@ def stream(kv, cmd, timeout, on_line):
                 return int(m.group(1))
             if line:
                 on_line(line, time.time())
-    raise RuntimeError(f"timeout streaming {cmd!r}")
+    shown = cmd.replace(secret, "***") if secret else cmd
+    raise RuntimeError(f"timeout streaming {shown!r}")

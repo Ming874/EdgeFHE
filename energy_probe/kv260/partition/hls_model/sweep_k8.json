@@ -1,0 +1,247 @@
+[
+ {
+  "stage": 551,
+  "chacha": 96,
+  "period": 25759.666666666668,
+  "frame_us": 1041.815,
+  "limiter": "limb"
+ },
+ {
+  "stage": 551,
+  "chacha": 104,
+  "period": 25767.666666666668,
+  "frame_us": 1042.175,
+  "limiter": "limb"
+ },
+ {
+  "stage": 551,
+  "chacha": 108,
+  "period": 25771.666666666668,
+  "frame_us": 1042.355,
+  "limiter": "limb"
+ },
+ {
+  "stage": 551,
+  "chacha": 112,
+  "period": 25775.666666666668,
+  "frame_us": 1042.535,
+  "limiter": "limb"
+ },
+ {
+  "stage": 551,
+  "chacha": 116,
+  "period": 26231.333333333332,
+  "frame_us": 1058.48,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 551,
+  "chacha": 120,
+  "period": 26751.333333333332,
+  "frame_us": 1076.72,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 551,
+  "chacha": 124,
+  "period": 27271.333333333332,
+  "frame_us": 1097.205,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 556,
+  "chacha": 96,
+  "period": 25939.666666666668,
+  "frame_us": 1049.015,
+  "limiter": "limb"
+ },
+ {
+  "stage": 556,
+  "chacha": 104,
+  "period": 25947.666666666668,
+  "frame_us": 1049.375,
+  "limiter": "limb"
+ },
+ {
+  "stage": 556,
+  "chacha": 108,
+  "period": 25951.666666666668,
+  "frame_us": 1049.555,
+  "limiter": "limb"
+ },
+ {
+  "stage": 556,
+  "chacha": 112,
+  "period": 25955.666666666668,
+  "frame_us": 1049.735,
+  "limiter": "limb"
+ },
+ {
+  "stage": 556,
+  "chacha": 116,
+  "period": 26231.333333333332,
+  "frame_us": 1059.38,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 556,
+  "chacha": 120,
+  "period": 26751.333333333332,
+  "frame_us": 1077.62,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 556,
+  "chacha": 124,
+  "period": 27271.333333333332,
+  "frame_us": 1097.205,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 561,
+  "chacha": 96,
+  "period": 26119.666666666668,
+  "frame_us": 1056.215,
+  "limiter": "limb"
+ },
+ {
+  "stage": 561,
+  "chacha": 104,
+  "period": 26127.666666666668,
+  "frame_us": 1056.575,
+  "limiter": "limb"
+ },
+ {
+  "stage": 561,
+  "chacha": 108,
+  "period": 26131.666666666668,
+  "frame_us": 1056.755,
+  "limiter": "limb"
+ },
+ {
+  "stage": 561,
+  "chacha": 112,
+  "period": 26135.666666666668,
+  "frame_us": 1056.935,
+  "limiter": "limb"
+ },
+ {
+  "stage": 561,
+  "chacha": 116,
+  "period": 26231.333333333332,
+  "frame_us": 1060.28,
+  "limiter": "both"
+ },
+ {
+  "stage": 561,
+  "chacha": 120,
+  "period": 26751.333333333332,
+  "frame_us": 1078.52,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 561,
+  "chacha": 124,
+  "period": 27271.333333333332,
+  "frame_us": 1097.205,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 566,
+  "chacha": 96,
+  "period": 26299.666666666668,
+  "frame_us": 1063.415,
+  "limiter": "limb"
+ },
+ {
+  "stage": 566,
+  "chacha": 104,
+  "period": 26307.666666666668,
+  "frame_us": 1063.775,
+  "limiter": "limb"
+ },
+ {
+  "stage": 566,
+  "chacha": 108,
+  "period": 26311.666666666668,
+  "frame_us": 1063.955,
+  "limiter": "limb"
+ },
+ {
+  "stage": 566,
+  "chacha": 112,
+  "period": 26315.666666666668,
+  "frame_us": 1064.135,
+  "limiter": "limb"
+ },
+ {
+  "stage": 566,
+  "chacha": 116,
+  "period": 26319.666666666668,
+  "frame_us": 1064.315,
+  "limiter": "limb"
+ },
+ {
+  "stage": 566,
+  "chacha": 120,
+  "period": 26751.333333333332,
+  "frame_us": 1079.42,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 566,
+  "chacha": 124,
+  "period": 27271.333333333332,
+  "frame_us": 1097.66,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 571,
+  "chacha": 96,
+  "period": 26479.666666666668,
+  "frame_us": 1070.615,
+  "limiter": "limb"
+ },
+ {
+  "stage": 571,
+  "chacha": 104,
+  "period": 26487.666666666668,
+  "frame_us": 1070.975,
+  "limiter": "limb"
+ },
+ {
+  "stage": 571,
+  "chacha": 108,
+  "period": 26491.666666666668,
+  "frame_us": 1071.155,
+  "limiter": "limb"
+ },
+ {
+  "stage": 571,
+  "chacha": 112,
+  "period": 26495.666666666668,
+  "frame_us": 1071.335,
+  "limiter": "limb"
+ },
+ {
+  "stage": 571,
+  "chacha": 116,
+  "period": 26499.666666666668,
+  "frame_us": 1071.515,
+  "limiter": "limb"
+ },
+ {
+  "stage": 571,
+  "chacha": 120,
+  "period": 26751.333333333332,
+  "frame_us": 1080.32,
+  "limiter": "sampler"
+ },
+ {
+  "stage": 571,
+  "chacha": 124,
+  "period": 27271.333333333332,
+  "frame_us": 1098.56,
+  "limiter": "sampler"
+ }
+]
